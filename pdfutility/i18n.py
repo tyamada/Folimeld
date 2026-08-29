@@ -1,9 +1,10 @@
 import json
 import locale
 import sys
+import ctypes
 from pathlib import Path
 
-from PySide6.QtCore import QSettings
+from PySide6.QtCore import QLocale, QSettings
 
 
 LANGUAGES = {
@@ -16,12 +17,26 @@ class I18n:
     def __init__(self) -> None:
         settings = QSettings()
         saved = settings.value("language", "system")
-        system = (locale.getlocale()[0] or "en").split("_")[0].lower()
+        system = self._system_language()
         self.language = system if saved == "system" and system in LANGUAGES else saved
         if self.language not in LANGUAGES:
             self.language = "en"
         self._data: dict[str, str] = {}
         self.load(self.language)
+
+    @staticmethod
+    def _system_language() -> str:
+        """Return the Windows UI language, including in a frozen executable."""
+        if sys.platform == "win32":
+            try:
+                language_id = ctypes.windll.kernel32.GetUserDefaultUILanguage()
+                windows_name = locale.windows_locale.get(language_id, "")
+                code = windows_name.split("_")[0].lower()
+                if code:
+                    return code
+            except (AttributeError, OSError):
+                pass
+        return QLocale.system().name().split("_")[0].lower() or "en"
 
     def load(self, language: str) -> None:
         # PyInstaller extracts bundled data under _MEIPASS for one-file builds.
