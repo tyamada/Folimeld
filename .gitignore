@@ -4,3 +4,13 @@ __pycache__/
 *.pdfutility.tmp.pdf
 
 TestPDFView.pdf
+.vscode/settings.json
+build/PDFUtility/Analysis-00.toc
+build/PDFUtility/base_library.zip
+build/PDFUtility/EXE-00.toc
+build/PDFUtility/PDFUtility.pkg
+build/PDFUtility/PKG-00.toc
+build/PDFUtility/PYZ-00.pyz
+build/PDFUtility/PYZ-00.toc
+build/PDFUtility/warn-PDFUtility.txt
+build/PDFUtility/xref-PDFUtility.html
