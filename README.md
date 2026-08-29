@@ -24,3 +24,6 @@ build_exe.bat
 ```
 
 生成物は `dist\PDFUtility.exe` です。PySide6、PyMuPDF、翻訳データを内包するため、配布先にPythonや付属ファイルは不要です。
+
+`PDFUtility.exe` を一度起動すると、WindowsエクスプローラーのPDFファイルの
+「プログラムから開く」にPDF Utilityがユーザー単位で登録されます。
