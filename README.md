@@ -27,3 +27,13 @@ build_exe.bat
 
 `PDFUtility.exe` を一度起動すると、WindowsエクスプローラーのPDFファイルの
 「プログラムから開く」にPDF Utilityがユーザー単位で登録されます。
+
+## 開発について
+
+このアプリは、OpenAI Codexを使用して作成しました。
+
+## ライセンス
+
+このプロジェクトは [MIT License](LICENSE) のもとで公開されています。
+
+PySide6やPyMuPDFなどの第三者ライブラリには、それぞれのライセンスが適用されます。
