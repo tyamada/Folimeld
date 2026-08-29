@@ -1,4 +1,5 @@
 import sys
+from pathlib import Path
 
 import fitz
 from PySide6.QtCore import QSettings, QTimer, Qt
@@ -109,9 +110,21 @@ class MainWindow(QMainWindow):
 
     def open_pdf(self) -> None:
         if not self.confirm_discard(): return
-        path, _ = QFileDialog.getOpenFileName(self, self.tr_("open"), "", "PDF (*.pdf)")
+        path = self.select_pdf(self.tr_("open"))
         if not path: return
         self._open_path(path)
+
+    def select_pdf(self, title: str) -> str:
+        """Select a PDF, starting in and remembering the last-used folder."""
+        settings = QSettings()
+        saved_directory = str(settings.value("last_open_directory", "") or "")
+        initial_directory = saved_directory if Path(saved_directory).is_dir() else ""
+        path, _ = QFileDialog.getOpenFileName(
+            self, title, initial_directory, "PDF (*.pdf)",
+        )
+        if path:
+            settings.setValue("last_open_directory", str(Path(path).parent))
+        return path
 
     def open_path(self, path: str) -> None:
         """Open a PDF path supplied by Explorer or another external caller."""
@@ -134,7 +147,7 @@ class MainWindow(QMainWindow):
                 self.error(exc); return
 
     def insert_pdf(self) -> None:
-        path, _ = QFileDialog.getOpenFileName(self, self.tr_("insert"), "", "PDF (*.pdf)")
+        path = self.select_pdf(self.tr_("insert"))
         if not path: return
         try:
             rows = self.selected_rows()
