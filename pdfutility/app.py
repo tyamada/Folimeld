@@ -4,12 +4,12 @@ import fitz
 from PySide6.QtCore import QSettings, Qt
 from PySide6.QtGui import QAction, QCloseEvent, QIcon, QImage, QPixmap
 from PySide6.QtWidgets import (QApplication, QFileDialog, QMainWindow, QMessageBox,
-                               QToolBar, QListWidgetItem)
+                               QInputDialog, QLineEdit, QToolBar, QListWidgetItem)
 
 from . import __version__
 from .dialogs import PropertiesDialog
 from .i18n import I18n, LANGUAGES
-from .model import PdfDocument
+from .model import PasswordRequiredError, PdfDocument
 from .widgets import ThumbnailList
 
 
@@ -48,8 +48,13 @@ class MainWindow(QMainWindow):
         self.save_as_action = self._action("save_as", self.save_as, "Ctrl+Shift+S")
         self.insert_action = self._action("insert", self.insert_pdf, "Ctrl+I")
         self.properties_action = self._action("properties", self.properties)
+        self.set_password_action = self._action("set_password", self.set_password)
+        self.remove_password_action = self._action("remove_password", self.remove_password)
         for action in (self.open_action, self.save_action, self.save_as_action):
             file_menu.addAction(action)
+        file_menu.addSeparator()
+        file_menu.addAction(self.set_password_action)
+        file_menu.addAction(self.remove_password_action)
         file_menu.addSeparator(); file_menu.addAction(self.properties_action)
         self.up_action = self._action("move_up", lambda: self.move(-1), "Alt+Up")
         self.down_action = self._action("move_down", lambda: self.move(1), "Alt+Down")
@@ -75,8 +80,9 @@ class MainWindow(QMainWindow):
         enabled = self.model.loaded
         for action in (self.save_action, self.save_as_action, self.insert_action,
                        self.properties_action, self.up_action, self.down_action,
-                       self.left_action, self.right_action):
+                       self.left_action, self.right_action, self.set_password_action):
             action.setEnabled(enabled)
+        self.remove_password_action.setEnabled(enabled and self.model.password_protected)
         name = self.model.path.name if self.model.path else self.tr_("untitled")
         dirty = " *" if self.model.dirty else ""
         self.setWindowTitle(f"{name}{dirty} — {self.tr_('app_name')}")
@@ -95,10 +101,19 @@ class MainWindow(QMainWindow):
         if not self.confirm_discard(): return
         path, _ = QFileDialog.getOpenFileName(self, self.tr_("open"), "", "PDF (*.pdf)")
         if not path: return
-        try:
-            self.model.open(path); self.refresh()
-        except Exception as exc:
-            self.error(exc)
+        password = None
+        while True:
+            try:
+                self.model.open(path, password); self.refresh(); return
+            except PasswordRequiredError:
+                password, accepted = QInputDialog.getText(
+                    self, self.tr_("password_required"), self.tr_("enter_password"),
+                    QLineEdit.EchoMode.Password,
+                )
+                if not accepted:
+                    return
+            except Exception as exc:
+                self.error(exc); return
 
     def insert_pdf(self) -> None:
         path, _ = QFileDialog.getOpenFileName(self, self.tr_("insert"), "", "PDF (*.pdf)")
@@ -162,6 +177,39 @@ class MainWindow(QMainWindow):
     def properties(self) -> None:
         dialog = PropertiesDialog(self.model, self.tr_, self)
         if dialog.exec(): self.update_state()
+
+    def set_password(self) -> None:
+        password, accepted = QInputDialog.getText(
+            self, self.tr_("set_password"), self.tr_("new_password"),
+            QLineEdit.EchoMode.Password,
+        )
+        if not accepted:
+            return
+        if not password:
+            QMessageBox.warning(self, self.tr_("set_password"), self.tr_("password_empty"))
+            return
+        confirmation, accepted = QInputDialog.getText(
+            self, self.tr_("set_password"), self.tr_("confirm_password"),
+            QLineEdit.EchoMode.Password,
+        )
+        if not accepted:
+            return
+        if password != confirmation:
+            QMessageBox.warning(self, self.tr_("set_password"), self.tr_("password_mismatch"))
+            return
+        self.model.set_view_password(password)
+        self.update_state()
+        self.statusBar().showMessage(self.tr_("password_set"), 4000)
+
+    def remove_password(self) -> None:
+        answer = QMessageBox.question(
+            self, self.tr_("remove_password"), self.tr_("remove_password_confirm"),
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+        )
+        if answer == QMessageBox.StandardButton.Yes:
+            self.model.set_view_password(None)
+            self.update_state()
+            self.statusBar().showMessage(self.tr_("password_removed"), 4000)
 
     def change_language(self, language: str) -> None:
         QSettings().setValue("language", language)
