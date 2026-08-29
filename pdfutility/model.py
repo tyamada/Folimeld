@@ -49,6 +49,39 @@ class PdfDocument:
             self.doc.insert_pdf(source, start_at=target)
         self.dirty = True
 
+    def insert_blank_after(self, rows: list[int]) -> list[int]:
+        """Insert a same-sized blank page immediately after each selected page."""
+        assert self.doc is not None
+        selected = sorted(set(rows))
+        if not selected:
+            return []
+        if selected[0] < 0 or selected[-1] >= self.doc.page_count:
+            raise IndexError("Page index out of range.")
+
+        # Work backwards so earlier insertions do not change the source indexes.
+        for row in reversed(selected):
+            rect = self.doc[row].rect
+            self.doc.new_page(pno=row + 1, width=rect.width, height=rect.height)
+        self.dirty = True
+        return [row + offset + 1 for offset, row in enumerate(selected)]
+
+    def delete_pages(self, rows: list[int]) -> list[int]:
+        """Delete selected pages and return the row to select afterward."""
+        assert self.doc is not None
+        selected = sorted(set(rows))
+        if not selected:
+            return []
+        if selected[0] < 0 or selected[-1] >= self.doc.page_count:
+            raise IndexError("Page index out of range.")
+        if len(selected) == self.doc.page_count:
+            raise ValueError("At least one page must remain.")
+
+        first = selected[0]
+        for row in reversed(selected):
+            self.doc.delete_page(row)
+        self.dirty = True
+        return [min(first, self.doc.page_count - 1)]
+
     def reorder(self, old: int, new: int) -> None:
         assert self.doc is not None
         if old == new:

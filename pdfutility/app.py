@@ -1,7 +1,7 @@
 import sys
 
 import fitz
-from PySide6.QtCore import QSettings, Qt
+from PySide6.QtCore import QSettings, QTimer, Qt
 from PySide6.QtGui import QAction, QCloseEvent, QIcon, QImage, QPixmap
 from PySide6.QtWidgets import (QApplication, QFileDialog, QMainWindow, QMessageBox,
                                QInputDialog, QLineEdit, QToolBar, QListWidgetItem)
@@ -11,6 +11,7 @@ from .dialogs import PropertiesDialog
 from .i18n import I18n, LANGUAGES
 from .model import PasswordRequiredError, PdfDocument
 from .widgets import ThumbnailList
+from .windows_integration import register_open_with
 
 
 class MainWindow(QMainWindow):
@@ -23,6 +24,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.pages)
         self.resize(1100, 760)
         self._build_ui()
+        self.pages.itemSelectionChanged.connect(self.update_state)
         self.update_state()
 
     def tr_(self, key: str, **values: object) -> str:
@@ -47,6 +49,8 @@ class MainWindow(QMainWindow):
         self.save_action = self._action("save", self.save, "Ctrl+S")
         self.save_as_action = self._action("save_as", self.save_as, "Ctrl+Shift+S")
         self.insert_action = self._action("insert", self.insert_pdf, "Ctrl+I")
+        self.insert_blank_action = self._action("insert_blank", self.insert_blank, "Ctrl+Shift+I")
+        self.delete_action = self._action("delete", self.delete_selected, "Delete")
         self.properties_action = self._action("properties", self.properties)
         self.set_password_action = self._action("set_password", self.set_password)
         self.remove_password_action = self._action("remove_password", self.remove_password)
@@ -60,7 +64,9 @@ class MainWindow(QMainWindow):
         self.down_action = self._action("move_down", lambda: self.move(1), "Alt+Down")
         self.left_action = self._action("rotate_left", lambda: self.rotate(-90), "Ctrl+Left")
         self.right_action = self._action("rotate_right", lambda: self.rotate(90), "Ctrl+Right")
-        for action in (self.insert_action, self.up_action, self.down_action, self.left_action, self.right_action):
+        for action in (self.insert_action, self.insert_blank_action, self.delete_action,
+                       self.up_action, self.down_action,
+                       self.left_action, self.right_action):
             edit_menu.addAction(action)
         language_menu = settings_menu.addMenu(self.tr_("language"))
         for code, name in LANGUAGES.items():
@@ -71,7 +77,9 @@ class MainWindow(QMainWindow):
         help_menu.addAction(self._action("version_info", self.about))
         toolbar = QToolBar(self.tr_("toolbar")); toolbar.setMovable(False)
         self.addToolBar(toolbar)
-        for action in (self.open_action, self.save_action, self.insert_action, self.up_action,
+        for action in (self.open_action, self.save_action, self.insert_action, self.insert_blank_action,
+                       self.delete_action,
+                       self.up_action,
                        self.down_action, self.left_action, self.right_action):
             toolbar.addAction(action)
         self.statusBar().showMessage(self.tr_("ready"))
@@ -82,6 +90,8 @@ class MainWindow(QMainWindow):
                        self.properties_action, self.up_action, self.down_action,
                        self.left_action, self.right_action, self.set_password_action):
             action.setEnabled(enabled)
+        self.insert_blank_action.setEnabled(enabled and bool(self.selected_rows()))
+        self.delete_action.setEnabled(enabled and bool(self.selected_rows()))
         self.remove_password_action.setEnabled(enabled and self.model.password_protected)
         name = self.model.path.name if self.model.path else self.tr_("untitled")
         dirty = " *" if self.model.dirty else ""
@@ -101,6 +111,14 @@ class MainWindow(QMainWindow):
         if not self.confirm_discard(): return
         path, _ = QFileDialog.getOpenFileName(self, self.tr_("open"), "", "PDF (*.pdf)")
         if not path: return
+        self._open_path(path)
+
+    def open_path(self, path: str) -> None:
+        """Open a PDF path supplied by Explorer or another external caller."""
+        if self.confirm_discard():
+            self._open_path(path)
+
+    def _open_path(self, path: str) -> None:
         password = None
         while True:
             try:
@@ -121,6 +139,24 @@ class MainWindow(QMainWindow):
         try:
             rows = self.selected_rows()
             self.model.insert(path, max(rows) if rows else None); self.refresh()
+        except Exception as exc:
+            self.error(exc)
+
+    def insert_blank(self) -> None:
+        try:
+            rows = self.selected_rows()
+            if rows:
+                self.refresh(self.model.insert_blank_after(rows))
+        except Exception as exc:
+            self.error(exc)
+
+    def delete_selected(self) -> None:
+        try:
+            rows = self.selected_rows()
+            if rows:
+                self.refresh(self.model.delete_pages(rows))
+        except ValueError:
+            QMessageBox.warning(self, self.tr_("delete"), self.tr_("cannot_delete_all"))
         except Exception as exc:
             self.error(exc)
 
@@ -231,6 +267,14 @@ def run() -> int:
     app = QApplication(sys.argv)
     app.setOrganizationName("PDFUtility")
     app.setApplicationName("PDF Utility")
+    try:
+        register_open_with()
+    except OSError:
+        # Registry integration must never prevent the editor from starting.
+        pass
     window = MainWindow(); window.show()
+    if len(sys.argv) > 1:
+        path = sys.argv[1]
+        QTimer.singleShot(0, lambda: window.open_path(path))
     return app.exec()
 
