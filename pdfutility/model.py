@@ -1,6 +1,11 @@
 from pathlib import Path
+import secrets
 
 import fitz
+
+
+class PasswordRequiredError(Exception):
+    """Raised when a PDF requires a valid viewing password."""
 
 
 class PdfDocument:
@@ -8,23 +13,34 @@ class PdfDocument:
         self.doc: fitz.Document | None = None
         self.path: Path | None = None
         self.dirty = False
+        self.view_password: str | None = None
+        self.password_protected = False
 
     @property
     def loaded(self) -> bool:
         return self.doc is not None
 
-    def open(self, path: str) -> None:
+    def open(self, path: str, password: str | None = None) -> None:
         new_doc = fitz.open(path)
-        if new_doc.needs_pass:
+        was_protected = bool(new_doc.needs_pass)
+        if was_protected and (password is None or not new_doc.authenticate(password)):
             new_doc.close()
-            raise ValueError("Encrypted PDFs are not supported.")
+            raise PasswordRequiredError()
         self.close()
         self.doc, self.path, self.dirty = new_doc, Path(path), False
+        self.password_protected = was_protected
+        self.view_password = password if was_protected else None
 
     def close(self) -> None:
         if self.doc is not None:
             self.doc.close()
         self.doc = None
+
+    def set_view_password(self, password: str | None) -> None:
+        assert self.doc is not None
+        self.view_password = password or None
+        self.password_protected = bool(password)
+        self.dirty = True
 
     def insert(self, path: str, after: int | None) -> None:
         assert self.doc is not None
@@ -70,16 +86,31 @@ class PdfDocument:
     def save(self, path: str) -> None:
         assert self.doc is not None
         destination = Path(path)
+        options = {"garbage": 4, "deflate": True}
+        if self.view_password:
+            options.update(
+                encryption=fitz.PDF_ENCRYPT_AES_256,
+                user_pw=self.view_password,
+                owner_pw=secrets.token_urlsafe(24),
+                permissions=(fitz.PDF_PERM_ACCESSIBILITY | fitz.PDF_PERM_PRINT |
+                             fitz.PDF_PERM_COPY | fitz.PDF_PERM_ANNOTATE |
+                             fitz.PDF_PERM_FORM | fitz.PDF_PERM_ASSEMBLE |
+                             fitz.PDF_PERM_MODIFY),
+            )
+        else:
+            options["encryption"] = fitz.PDF_ENCRYPT_NONE
         if self.path and destination.resolve() == self.path.resolve():
             temp = destination.with_name(destination.stem + ".pdfutility.tmp.pdf")
-            self.doc.save(str(temp), garbage=4, deflate=True)
+            self.doc.save(str(temp), **options)
             self.doc.close()
             temp.replace(destination)
             self.doc = fitz.open(str(destination))
         else:
-            self.doc.save(str(destination), garbage=4, deflate=True)
+            self.doc.save(str(destination), **options)
             self.doc.close()
             self.doc = fitz.open(str(destination))
+        if self.view_password:
+            self.doc.authenticate(self.view_password)
         self.path, self.dirty = destination, False
 
     def set_metadata(self, title: str, author: str, subject: str, keywords: str) -> None:
