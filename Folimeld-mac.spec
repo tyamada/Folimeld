@@ -33,6 +33,6 @@ exe = EXE(
 app = BUNDLE(
     exe,
     name="Folimeld.app",
-    icon=None,
+    icon="assets/Folimeld.icns",
     bundle_identifier="com.folimeld.Folimeld",
 )

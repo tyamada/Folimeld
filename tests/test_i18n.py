@@ -9,6 +9,11 @@ class SystemLanguageTests(unittest.TestCase):
     def test_system_language_is_a_supported_locale_code(self):
         self.assertIn(I18n._system_language(), LANGUAGES)
 
+    def test_generic_locale_falls_back_to_english(self):
+        with unittest.mock.patch("folimeld.i18n.QLocale.system") as system:
+            system.return_value.name.return_value = "C"
+            self.assertEqual(I18n._system_language(), "en")
+
     def test_all_languages_define_edit_labels(self):
         locales = Path(__file__).resolve().parent.parent / "locales"
         for path in locales.glob("*.json"):

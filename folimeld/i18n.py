@@ -26,17 +26,21 @@ class I18n:
 
     @staticmethod
     def _system_language() -> str:
-        """Return the Windows UI language, including in a frozen executable."""
+        """Return the active UI language, falling back to English on generic locales."""
         if sys.platform == "win32":
             try:
                 language_id = ctypes.windll.kernel32.GetUserDefaultUILanguage()
                 windows_name = locale.windows_locale.get(language_id, "")
                 code = windows_name.split("_")[0].lower()
-                if code:
+                if code and code not in {"c", "posix"}:
                     return code
             except (AttributeError, OSError):
                 pass
-        return QLocale.system().name().split("_")[0].lower() or "en"
+
+        code = QLocale.system().name().split("_")[0].lower()
+        if code and code not in {"c", "posix"}:
+            return code
+        return "en"
 
     def load(self, language: str) -> None:
         # PyInstaller extracts bundled data under _MEIPASS for one-file builds.
