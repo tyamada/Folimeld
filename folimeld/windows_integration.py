@@ -15,7 +15,15 @@ def register_open_with() -> bool:
     if sys.platform != "win32" or not getattr(sys, "frozen", False):
         return False
 
-    import winreg
+    try:
+        import winreg
+    except ImportError:
+        return False
+
+    try:
+        shell32 = ctypes.windll.shell32
+    except AttributeError:
+        return False
 
     executable = str(Path(sys.executable).resolve())
     application_key = r"Software\Classes\Applications\Folimeld.exe"
@@ -29,5 +37,5 @@ def register_open_with() -> bool:
         winreg.SetValueEx(key, "", 0, winreg.REG_SZ, open_command(executable))
 
     # Tell Explorer that file-association information has changed.
-    ctypes.windll.shell32.SHChangeNotify(0x08000000, 0, None, None)
+    shell32.SHChangeNotify(0x08000000, 0, None, None)
     return True

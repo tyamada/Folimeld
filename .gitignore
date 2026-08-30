@@ -5,21 +5,4 @@ __pycache__/
 
 TestPDFView.pdf
 .vscode/settings.json
-build/PDFUtility/Analysis-00.toc
-build/PDFUtility/base_library.zip
-build/PDFUtility/EXE-00.toc
-build/PDFUtility/PDFUtility.pkg
-build/PDFUtility/PKG-00.toc
-build/PDFUtility/PYZ-00.pyz
-build/PDFUtility/PYZ-00.toc
-build/PDFUtility/warn-PDFUtility.txt
-build/PDFUtility/xref-PDFUtility.html
-build/Folimeld/Analysis-00.toc
-build/Folimeld/base_library.zip
-build/Folimeld/EXE-00.toc
-build/Folimeld/Folimeld.pkg
-build/Folimeld/PKG-00.toc
-build/Folimeld/PYZ-00.pyz
-build/Folimeld/PYZ-00.toc
-build/Folimeld/warn-Folimeld.txt
-build/Folimeld/xref-Folimeld.html
+build/

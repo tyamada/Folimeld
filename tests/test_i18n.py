@@ -2,12 +2,12 @@ import unittest
 import json
 from pathlib import Path
 
-from folimeld.i18n import I18n
+from folimeld.i18n import I18n, LANGUAGES
 
 
 class SystemLanguageTests(unittest.TestCase):
-    def test_windows_ui_language_is_japanese(self):
-        self.assertEqual(I18n._system_language(), "ja")
+    def test_system_language_is_a_supported_locale_code(self):
+        self.assertIn(I18n._system_language(), LANGUAGES)
 
     def test_all_languages_define_edit_labels(self):
         locales = Path(__file__).resolve().parent.parent / "locales"
