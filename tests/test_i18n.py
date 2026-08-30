@@ -2,7 +2,7 @@ import unittest
 import json
 from pathlib import Path
 
-from pdfutility.i18n import I18n
+from folimeld.i18n import I18n
 
 
 class SystemLanguageTests(unittest.TestCase):

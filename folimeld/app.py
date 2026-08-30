@@ -2,7 +2,7 @@ import sys
 from pathlib import Path
 
 import fitz
-from PySide6.QtCore import QSettings, QTimer, Qt
+from PySide6.QtCore import QSettings, QStandardPaths, QTimer, Qt
 from PySide6.QtGui import QAction, QCloseEvent, QIcon, QImage, QPixmap
 from PySide6.QtWidgets import (QApplication, QFileDialog, QMainWindow, QMessageBox,
                                QInputDialog, QLineEdit, QToolBar, QListWidgetItem)
@@ -118,7 +118,12 @@ class MainWindow(QMainWindow):
         """Select a PDF, starting in and remembering the last-used folder."""
         settings = QSettings()
         saved_directory = str(settings.value("last_open_directory", "") or "")
-        initial_directory = saved_directory if Path(saved_directory).is_dir() else ""
+        pictures_directory = QStandardPaths.writableLocation(
+            QStandardPaths.StandardLocation.PicturesLocation,
+        )
+        initial_directory = (
+            saved_directory if Path(saved_directory).is_dir() else pictures_directory
+        )
         path, _ = QFileDialog.getOpenFileName(
             self, title, initial_directory, "PDF (*.pdf)",
         )
@@ -278,8 +283,8 @@ class MainWindow(QMainWindow):
 
 def run() -> int:
     app = QApplication(sys.argv)
-    app.setOrganizationName("PDFUtility")
-    app.setApplicationName("PDF Utility")
+    app.setOrganizationName("Folimeld")
+    app.setApplicationName("Folimeld")
     try:
         register_open_with()
     except OSError:

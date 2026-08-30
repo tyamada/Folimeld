@@ -2,7 +2,7 @@ import unittest
 
 import fitz
 
-from pdfutility.model import PdfDocument
+from folimeld.model import PdfDocument
 
 
 class BlankPageTests(unittest.TestCase):

@@ -11,8 +11,8 @@ if not exist "%PYTHON_EXE%" (
 "%PYTHON_EXE%" -m pip install -r requirements.txt pyinstaller
 if errorlevel 1 exit /b %errorlevel%
 
-"%PYTHON_EXE%" -m PyInstaller --noconfirm --clean PDFUtility.spec
+"%PYTHON_EXE%" -m PyInstaller --noconfirm --clean Folimeld.spec
 if errorlevel 1 exit /b %errorlevel%
 
 echo.
-echo Built: dist\PDFUtility.exe
+echo Built: dist\Folimeld.exe

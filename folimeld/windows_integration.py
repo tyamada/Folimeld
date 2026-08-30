@@ -18,9 +18,9 @@ def register_open_with() -> bool:
     import winreg
 
     executable = str(Path(sys.executable).resolve())
-    application_key = r"Software\Classes\Applications\PDFUtility.exe"
+    application_key = r"Software\Classes\Applications\Folimeld.exe"
     with winreg.CreateKey(winreg.HKEY_CURRENT_USER, application_key) as key:
-        winreg.SetValueEx(key, "FriendlyAppName", 0, winreg.REG_SZ, "PDF Utility")
+        winreg.SetValueEx(key, "FriendlyAppName", 0, winreg.REG_SZ, "Folimeld")
     with winreg.CreateKey(winreg.HKEY_CURRENT_USER,
                           application_key + r"\SupportedTypes") as key:
         winreg.SetValueEx(key, ".pdf", 0, winreg.REG_SZ, "")

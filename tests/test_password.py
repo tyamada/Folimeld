@@ -4,7 +4,7 @@ from pathlib import Path
 
 import fitz
 
-from pdfutility.model import PasswordRequiredError, PdfDocument
+from folimeld.model import PasswordRequiredError, PdfDocument
 
 
 class PasswordTests(unittest.TestCase):

@@ -133,7 +133,7 @@ class PdfDocument:
         else:
             options["encryption"] = fitz.PDF_ENCRYPT_NONE
         if self.path and destination.resolve() == self.path.resolve():
-            temp = destination.with_name(destination.stem + ".pdfutility.tmp.pdf")
+            temp = destination.with_name(destination.stem + ".folimeld.tmp.pdf")
             self.doc.save(str(temp), **options)
             self.doc.close()
             temp.replace(destination)
