@@ -1,4 +1,4 @@
-# PDF Utility
+# Folimeld
 
 Windows 11向けの、PySide6とPyMuPDFで作られたPDFページ編集アプリです。
 
@@ -23,10 +23,10 @@ py -m venv .venv
 build_exe.bat
 ```
 
-生成物は `dist\PDFUtility.exe` です。PySide6、PyMuPDF、翻訳データを内包するため、配布先にPythonや付属ファイルは不要です。
+生成物は `dist\Folimeld.exe` です。PySide6、PyMuPDF、翻訳データを内包するため、配布先にPythonや付属ファイルは不要です。
 
-`PDFUtility.exe` を一度起動すると、WindowsエクスプローラーのPDFファイルの
-「プログラムから開く」にPDF Utilityがユーザー単位で登録されます。
+`Folimeld.exe` を一度起動すると、WindowsエクスプローラーのPDFファイルの
+「プログラムから開く」にFolimeldがユーザー単位で登録されます。
 
 ## 開発について
 

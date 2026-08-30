@@ -1,4 +1,4 @@
-from pdfutility.app import run
+from folimeld.app import run
 
 
 if __name__ == "__main__":
