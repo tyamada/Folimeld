@@ -1,6 +1,6 @@
 # Folimeld
 
-Folimeld は、PySide6 と PyMuPDF を使って作成した PDF ページ編集アプリです。Windows、macOS、Ubuntu Linux で動作し、ページの並べ替え・回転・挿入・削除・パスワード保護などを GUI から操作できます。
+Folimeld は、PySide6 と PyMuPDF を使って作成した PDF ページ編集アプリです。Windows、macOS、Ubuntu で動作し、ページの並べ替え・回転・挿入・削除・パスワード保護などを GUI から操作できます。
 
 ## 主要機能
 
@@ -111,7 +111,7 @@ sudo apt install ./dist/folimeld_*.deb
 
 ## 配布時の注意
 
-- 本アプリは Windows、macOS、Ubuntu Linux を想定しており、Windows 専用のレジストリ連携は他OSでは自動的に無効化されます。
+- 本アプリは Windows、macOS、Ubuntu を想定しており、Windows 専用のレジストリ連携は他OSでは自動的に無効化されます。
 - macOS の配布用アプリは ad-hoc 署名を行っているため、ローカル環境ではそのまま起動できます。
 - 署名済みの正式配布を行う場合は、Apple 開発者証明書で署名し直す必要があります。
 
@@ -127,6 +127,7 @@ PySide6 や PyMuPDF などの第三者ライブラリには、それぞれのラ
 
 ## バージョン履歴
 
+- v0.2.4 - 2026/08/31: Ubuntuに対応
 - v0.2.3 - 2026/08/31: PDF バージョンを自動的に変更
 - v0.2.2 - 2026/08/30: macOS 向けのビルド手順とアイコン/署名を整備
 - v0.2.1 - 2026/08/30: macOS 互換の Windows 依存処理を安全に無効化
