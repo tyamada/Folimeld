@@ -160,6 +160,10 @@ class PdfDocument:
         catalog = self.doc.pdf_catalog()
 
         normalized_version = version.strip().upper().removeprefix("PDF-")
+        if layout in ("TwoPageLeft", "TwoPageRight") and normalized_version in {
+            "1.0", "1.1", "1.2", "1.3", "1.4",
+        }:
+            normalized_version = "1.5"
         if normalized_version:
             if not normalized_version.startswith("1.") and normalized_version != "2.0":
                 raise ValueError("PDF version must be 1.0–1.7 or 2.0.")
