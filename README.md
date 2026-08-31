@@ -36,11 +36,13 @@ Ubuntu 22.04以降を想定しています。最初にQtの実行に必要なラ
 
 ```bash
 sudo apt update
-sudo apt install python3-venv libegl1 libgl1 libxkbcommon-x11-0 libxcb-cursor0
+sudo apt install python3-venv libegl1 libgl1 libxkbcommon-x11-0 libxcb-cursor0 fonts-noto-cjk
 python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
+
+`fonts-noto-cjk` は、日本語・中国語・韓国語を正しく表示するために必要です。言語メニューなどで文字が四角形として表示される場合は、このパッケージがインストールされていることを確認してください。
 
 ## 起動
 
