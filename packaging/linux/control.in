@@ -1,0 +1,10 @@
+Package: folimeld
+Version: @VERSION@
+Section: graphics
+Priority: optional
+Architecture: @ARCH@
+Maintainer: Folimeld contributors
+Depends: libc6, libegl1, libgl1, libxkbcommon-x11-0, libxcb-cursor0
+Description: PDF page editor
+ Folimeld is a desktop application for rearranging, rotating, inserting,
+ deleting, and protecting PDF pages.

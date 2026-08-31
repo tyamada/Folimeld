@@ -10,7 +10,8 @@ class SystemLanguageTests(unittest.TestCase):
         self.assertIn(I18n._system_language(), LANGUAGES)
 
     def test_generic_locale_falls_back_to_english(self):
-        with unittest.mock.patch("folimeld.i18n.QLocale.system") as system:
+        with (unittest.mock.patch("folimeld.i18n.sys.platform", "linux"),
+              unittest.mock.patch("folimeld.i18n.QLocale.system") as system):
             system.return_value.name.return_value = "C"
             self.assertEqual(I18n._system_language(), "en")
 

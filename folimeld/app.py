@@ -285,6 +285,13 @@ def run() -> int:
     app = QApplication(sys.argv)
     app.setOrganizationName("Folimeld")
     app.setApplicationName("Folimeld")
+    app.setDesktopFileName("folimeld")
+    resource_root = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent.parent))
+    icon_path = resource_root / "assets" / "icon_256x256.png"
+    if not icon_path.exists():
+        icon_path = resource_root / "assets" / "Folimeld.iconset" / "icon_256x256.png"
+    if icon_path.exists():
+        app.setWindowIcon(QIcon(str(icon_path)))
     try:
         register_open_with()
     except OSError:

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Folimeld
+Comment=Edit and organize PDF pages
+Exec=folimeld %f
+Icon=folimeld
+Terminal=false
+Categories=Office;Graphics;
+MimeType=application/pdf;
+StartupWMClass=Folimeld

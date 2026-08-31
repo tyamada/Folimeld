@@ -1,6 +1,6 @@
 # Folimeld
 
-Folimeld は、PySide6 と PyMuPDF を使って作成した PDF ページ編集アプリです。Windows と macOS の両方で動くことを想定しており、ページの並べ替え・回転・挿入・削除・パスワード保護などを GUI から操作できます。
+Folimeld は、PySide6 と PyMuPDF を使って作成した PDF ページ編集アプリです。Windows、macOS、Ubuntu Linux で動作し、ページの並べ替え・回転・挿入・削除・パスワード保護などを GUI から操作できます。
 
 ## 主要機能
 
@@ -22,9 +22,21 @@ py -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
 ```
 
-### macOS / Linux
+### macOS
 
 ```bash
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+### Ubuntu
+
+Ubuntu 22.04以降を想定しています。最初にQtの実行に必要なライブラリとPython環境を用意します。
+
+```bash
+sudo apt update
+sudo apt install python3-venv libegl1 libgl1 libxkbcommon-x11-0 libxcb-cursor0
 python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -38,7 +50,7 @@ python -m pip install -r requirements.txt
 .venv\Scripts\python main.py
 ```
 
-### macOS / Linux
+### macOS / Ubuntu
 
 ```bash
 . .venv/bin/activate
@@ -79,9 +91,25 @@ open dist/Folimeld.app
 
 macOS では Windows のレジストリ連携は自動的に無効化されます。
 
+### Ubuntu
+
+```bash
+bash build_linux.sh
+```
+
+Pythonを含む単体実行ファイル `dist/folimeld` と、デスクトップメニュー・アイコン・PDF関連付けを含むUbuntuパッケージ `dist/folimeld_<バージョン>_<アーキテクチャ>.deb` が生成されます。ビルドは配布先と同じか、それより古いUbuntu上で行ってください。
+
+パッケージは次のようにインストールできます。
+
+```bash
+sudo apt install ./dist/folimeld_*.deb
+```
+
+インストール後はアプリ一覧から Folimeld を起動でき、ファイルマネージャーの「別のアプリケーションで開く」からPDFを渡せます。インストールせず `./dist/folimeld` を直接起動することもできます。
+
 ## 配布時の注意
 
-- 本アプリは Windows と macOS の両方を想定しており、Windows 専用のレジストリ連携は macOS では自動的に無効化されます。
+- 本アプリは Windows、macOS、Ubuntu Linux を想定しており、Windows 専用のレジストリ連携は他OSでは自動的に無効化されます。
 - macOS の配布用アプリは ad-hoc 署名を行っているため、ローカル環境ではそのまま起動できます。
 - 署名済みの正式配布を行う場合は、Apple 開発者証明書で署名し直す必要があります。
 
