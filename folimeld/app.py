@@ -156,7 +156,8 @@ class MainWindow(QMainWindow):
         if not path: return
         try:
             rows = self.selected_rows()
-            self.model.insert(path, max(rows) if rows else None); self.refresh()
+            self.model.insert(path, max(rows) if rows else None)
+            self.refresh(preserve_scroll=True)
         except Exception as exc:
             self.error(exc)
 
@@ -164,7 +165,7 @@ class MainWindow(QMainWindow):
         try:
             rows = self.selected_rows()
             if rows:
-                self.refresh(self.model.insert_blank_after(rows))
+                self.refresh(self.model.insert_blank_after(rows), preserve_scroll=True)
         except Exception as exc:
             self.error(exc)
 
@@ -172,7 +173,7 @@ class MainWindow(QMainWindow):
         try:
             rows = self.selected_rows()
             if rows:
-                self.refresh(self.model.delete_pages(rows))
+                self.refresh(self.model.delete_pages(rows), preserve_scroll=True)
         except ValueError:
             QMessageBox.warning(self, self.tr_("delete"), self.tr_("cannot_delete_all"))
         except Exception as exc:
@@ -185,7 +186,9 @@ class MainWindow(QMainWindow):
         image = QImage(pix.samples, pix.width, pix.height, pix.stride, QImage.Format.Format_RGB888).copy()
         return QIcon(QPixmap.fromImage(image))
 
-    def refresh(self, selection: list[int] | None = None) -> None:
+    def refresh(self, selection: list[int] | None = None,
+                preserve_scroll: bool = False) -> None:
+        scroll_position = self.pages.verticalScrollBar().value()
         self.pages.clear()
         if self.model.doc:
             for index, page in enumerate(self.model.doc):
@@ -195,6 +198,9 @@ class MainWindow(QMainWindow):
                 self.pages.addItem(item)
             for row in selection or []:
                 if 0 <= row < self.pages.count(): self.pages.item(row).setSelected(True)
+        if preserve_scroll:
+            self.pages.doItemsLayout()
+            self.pages.verticalScrollBar().setValue(scroll_position)
         self.update_state()
         self.statusBar().showMessage(self.tr_("pages_count", count=self.pages.count()))
 
