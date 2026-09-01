@@ -8,3 +8,4 @@ TestPDFView.pdf
 build/
 dist/Folimeld
 dist/Folimeld.app/
+dist/.DS_Store
