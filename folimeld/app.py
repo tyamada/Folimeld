@@ -9,16 +9,16 @@ from PySide6.QtWidgets import (QApplication, QFileDialog, QMainWindow, QMessageB
 
 from . import __version__
 from .dialogs import PropertiesDialog
-from .i18n import I18n, LANGUAGES
+from .i18n import I18n, LANGUAGES, install_qt_translator
 from .model import PasswordRequiredError, PdfDocument
 from .widgets import ThumbnailList
 from .windows_integration import register_open_with
 
 
 class MainWindow(QMainWindow):
-    def __init__(self) -> None:
+    def __init__(self, i18n: I18n | None = None) -> None:
         super().__init__()
-        self.i18n = I18n()
+        self.i18n = i18n or I18n()
         self.model = PdfDocument()
         self.pages = ThumbnailList()
         self.pages.page_moved.connect(self.reorder_page)
@@ -101,9 +101,17 @@ class MainWindow(QMainWindow):
     def confirm_discard(self) -> bool:
         if not self.model.dirty:
             return True
-        answer = QMessageBox.question(self, self.tr_("unsaved_title"), self.tr_("unsaved_message"),
-                                      QMessageBox.StandardButton.Save | QMessageBox.StandardButton.Discard |
-                                      QMessageBox.StandardButton.Cancel)
+        dialog = QMessageBox(QMessageBox.Icon.Question, self.tr_("unsaved_title"),
+                             self.tr_("unsaved_message"),
+                             QMessageBox.StandardButton.Save | QMessageBox.StandardButton.Discard |
+                             QMessageBox.StandardButton.Cancel, self)
+        for button, key in (
+            (QMessageBox.StandardButton.Save, "save"),
+            (QMessageBox.StandardButton.Discard, "discard"),
+            (QMessageBox.StandardButton.Cancel, "cancel"),
+        ):
+            dialog.button(button).setText(self.tr_(key))
+        answer = QMessageBox.StandardButton(dialog.exec())
         if answer == QMessageBox.StandardButton.Save:
             return self.save()
         return answer == QMessageBox.StandardButton.Discard
@@ -125,7 +133,8 @@ class MainWindow(QMainWindow):
             saved_directory if Path(saved_directory).is_dir() else pictures_directory
         )
         path, _ = QFileDialog.getOpenFileName(
-            self, title, initial_directory, "PDF (*.pdf)",
+            self, title, initial_directory, "PDF (*.pdf)", "",
+            QFileDialog.Option.DontUseNativeDialog,
         )
         if path:
             settings.setValue("last_open_directory", str(Path(path).parent))
@@ -223,8 +232,10 @@ class MainWindow(QMainWindow):
         return self._save_to(str(self.model.path))
 
     def save_as(self) -> bool:
-        path, _ = QFileDialog.getSaveFileName(self, self.tr_("save_as"),
-                                              str(self.model.path or ""), "PDF (*.pdf)")
+        path, _ = QFileDialog.getSaveFileName(
+            self, self.tr_("save_as"), str(self.model.path or ""), "PDF (*.pdf)", "",
+            QFileDialog.Option.DontUseNativeDialog,
+        )
         return self._save_to(path) if path else False
 
     def _save_to(self, path: str) -> bool:
@@ -292,6 +303,8 @@ def run() -> int:
     app.setOrganizationName("Folimeld")
     app.setApplicationName("Folimeld")
     app.setDesktopFileName("folimeld")
+    i18n = I18n()
+    qt_translator = install_qt_translator(app, i18n.language)
     resource_root = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent.parent))
     icon_path = resource_root / "assets" / "icon_256x256.png"
     if not icon_path.exists():
@@ -303,7 +316,7 @@ def run() -> int:
     except OSError:
         # Registry integration must never prevent the editor from starting.
         pass
-    window = MainWindow(); window.show()
+    window = MainWindow(i18n); window.show()
     if len(sys.argv) > 1:
         path = sys.argv[1]
         QTimer.singleShot(0, lambda: window.open_path(path))

@@ -4,13 +4,36 @@ import sys
 import ctypes
 from pathlib import Path
 
-from PySide6.QtCore import QLocale, QSettings
+from PySide6.QtCore import QLibraryInfo, QLocale, QSettings, QTranslator
 
 
 LANGUAGES = {
     "ja": "日本語", "en": "English", "zh": "简体中文", "ko": "한국어",
     "de": "Deutsch", "fr": "Français", "es": "Español", "pt": "Português",
 }
+
+STANDARD_BUTTON_LABELS = {
+    "ja": {"discard": "保存しない", "cancel": "キャンセル"},
+    "en": {"discard": "Discard", "cancel": "Cancel"},
+    "zh": {"discard": "不保存", "cancel": "取消"},
+    "ko": {"discard": "저장 안 함", "cancel": "취소"},
+    "de": {"discard": "Nicht speichern", "cancel": "Abbrechen"},
+    "fr": {"discard": "Ne pas enregistrer", "cancel": "Annuler"},
+    "es": {"discard": "No guardar", "cancel": "Cancelar"},
+    "pt": {"discard": "Não guardar", "cancel": "Cancelar"},
+}
+
+QT_LANGUAGE_CODES = {"zh": "zh_CN", "pt": "pt_BR"}
+
+
+def install_qt_translator(app, language: str) -> QTranslator:
+    """Translate standard Qt widgets into the application's selected language."""
+    translator = QTranslator(app)
+    code = QT_LANGUAGE_CODES.get(language, language)
+    translations = QLibraryInfo.path(QLibraryInfo.LibraryPath.TranslationsPath)
+    if translator.load(f"qtbase_{code}", translations):
+        app.installTranslator(translator)
+    return translator
 
 
 class I18n:
@@ -52,6 +75,7 @@ class I18n:
         if path != fallback and path.exists():
             with path.open(encoding="utf-8") as handle:
                 self._data.update(json.load(handle))
+        self._data.update(STANDARD_BUTTON_LABELS[language])
         self.language = language
 
     def tr(self, key: str, **values: object) -> str:
