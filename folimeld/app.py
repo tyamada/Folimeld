@@ -133,8 +133,7 @@ class MainWindow(QMainWindow):
             saved_directory if Path(saved_directory).is_dir() else pictures_directory
         )
         path, _ = QFileDialog.getOpenFileName(
-            self, title, initial_directory, "PDF (*.pdf)", "",
-            QFileDialog.Option.DontUseNativeDialog,
+            self, title, initial_directory, "PDF (*.pdf)",
         )
         if path:
             settings.setValue("last_open_directory", str(Path(path).parent))
@@ -233,8 +232,7 @@ class MainWindow(QMainWindow):
 
     def save_as(self) -> bool:
         path, _ = QFileDialog.getSaveFileName(
-            self, self.tr_("save_as"), str(self.model.path or ""), "PDF (*.pdf)", "",
-            QFileDialog.Option.DontUseNativeDialog,
+            self, self.tr_("save_as"), str(self.model.path or ""), "PDF (*.pdf)",
         )
         return self._save_to(path) if path else False
 

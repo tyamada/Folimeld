@@ -3,8 +3,6 @@ import unittest
 from pathlib import Path
 from unittest.mock import Mock, patch
 
-from PySide6.QtWidgets import QFileDialog
-
 from folimeld.app import MainWindow
 
 
@@ -22,10 +20,7 @@ class FileDialogTests(unittest.TestCase):
                 result = MainWindow.select_pdf(parent, "Open")
 
             self.assertEqual(result, selected)
-            dialog.assert_called_once_with(
-                parent, "Open", directory, "PDF (*.pdf)", "",
-                QFileDialog.Option.DontUseNativeDialog,
-            )
+            dialog.assert_called_once_with(parent, "Open", directory, "PDF (*.pdf)")
             settings.setValue.assert_called_once_with("last_open_directory", directory)
 
     def test_missing_saved_directory_falls_back_to_pictures(self):
@@ -41,10 +36,7 @@ class FileDialogTests(unittest.TestCase):
                 result = MainWindow.select_pdf(parent, "Open")
 
         self.assertEqual(result, "")
-        dialog.assert_called_once_with(
-            parent, "Open", pictures, "PDF (*.pdf)", "",
-            QFileDialog.Option.DontUseNativeDialog,
-        )
+        dialog.assert_called_once_with(parent, "Open", pictures, "PDF (*.pdf)")
         settings.setValue.assert_not_called()
 
 
