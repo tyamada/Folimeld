@@ -6,6 +6,4 @@ __pycache__/
 TestPDFView.pdf
 .vscode/settings.json
 build/
-dist/Folimeld
-dist/Folimeld.app/
-dist/.DS_Store
+dist/

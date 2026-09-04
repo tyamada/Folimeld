@@ -1,5 +1,7 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+from folimeld import __version__
+
 a = Analysis(
     ["main.py"],
     pathex=[],
@@ -27,7 +29,6 @@ exe = EXE(
     strip=False,
     upx=True,
     console=False,
-    version="version_info.txt",
 )
 
 app = BUNDLE(
@@ -35,4 +36,8 @@ app = BUNDLE(
     name="Folimeld.app",
     icon="assets/Folimeld.icns",
     bundle_identifier="com.folimeld.Folimeld",
+    info_plist={
+        "CFBundleShortVersionString": __version__,
+        "CFBundleVersion": __version__,
+    },
 )

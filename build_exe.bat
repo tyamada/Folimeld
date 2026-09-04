@@ -21,6 +21,12 @@ if exist "%OUTPUT_EXE%" (
 "%PYTHON_EXE%" -m pip install -r requirements.txt pyinstaller
 if errorlevel 1 exit /b %errorlevel%
 
+"%PYTHON_EXE%" tools\make_app_icon.py
+if errorlevel 1 exit /b %errorlevel%
+
+"%PYTHON_EXE%" tools\write_version_info.py build\version_info.txt
+if errorlevel 1 exit /b %errorlevel%
+
 "%PYTHON_EXE%" -m PyInstaller --noconfirm --clean Folimeld.spec
 if errorlevel 1 exit /b %errorlevel%
 

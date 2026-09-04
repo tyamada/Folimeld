@@ -1,136 +1,61 @@
 # Folimeld
 
-Folimeld は、PySide6 と PyMuPDF を使って作成した PDF ページ編集アプリです。Windows、macOS、Ubuntu で動作し、ページの並べ替え・回転・挿入・削除・パスワード保護などを GUI から操作できます。
+![Folimeld icon](assets/Folimeld.iconset/icon_128x128.png)
 
-## 主要機能
+Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、削除できるデスクトップアプリです。Windows、macOS、Ubuntu に対応し、編集するファイルを外部サービスへ送信せず、ローカル環境で処理します。
 
-- PDF のページ一覧表示
-- 複数ページ選択による並べ替え
-- 90° 単位の回転
-- ページ挿入と削除
-- 空白ページの追加
-- PDF のプロパティ閲覧・編集（PDF バージョン、ページレイアウト、綴じ方向）
-- パスワード付き PDF の保護/解除
-- 公式の言語切替対応（日本語・英語など）
+![Folimeld main window](docs/screenshots/main-window.png)
 
-## セットアップ
+## 特長
 
-### Windows
+- サムネイルを見ながらPDFページを並べ替え
+- 複数ページをまとめて選択・移動・回転・削除
+- 別のPDFや、同じサイズの空白ページを挿入
+- PDFバージョン、ページレイアウト、綴じ方向を編集
+- 閲覧パスワードの設定と解除
+- 日本語、英語、ドイツ語、スペイン語、フランス語、韓国語、ポルトガル語、中国語に対応
+- Windows、macOS、Ubuntuで利用可能
 
-```bat
-py -m venv .venv
-.venv\Scripts\python -m pip install -r requirements.txt
-```
+## ダウンロード
 
-### macOS
+配布パッケージは [GitHub Releases](https://github.com/tyamada/Folimeld/releases) からダウンロードできます。
 
-```bash
-python3 -m venv .venv
-. .venv/bin/activate
-python -m pip install -r requirements.txt
-```
+| OS | 配布形式 |
+| --- | --- |
+| Windows 10 / 11 | EXE / MSIX（Microsoft Storeでの公開を準備中） |
+| macOS | `.app` |
+| Ubuntu 22.04以降 | `.deb` / 単体実行ファイル |
 
-### Ubuntu
+> [!NOTE]
+> リリースによっては、一部のOS向けパッケージが用意されていない場合があります。
 
-Ubuntu 22.04以降を想定しています。最初にQtの実行に必要なライブラリとPython環境を用意します。
+## 基本的な使い方
 
-```bash
-sudo apt update
-sudo apt install python3-venv libegl1 libgl1 libxkbcommon-x11-0 libxcb-cursor0 fonts-noto-cjk
-python3 -m venv .venv
-. .venv/bin/activate
-python -m pip install -r requirements.txt
-```
+1. Folimeldを起動し、「ファイル」→「開く」からPDFを選択します。
+2. ページをクリックして選択します。複数選択には Ctrl または Shift を使用します。
+3. ツールバー、メニュー、またはドラッグ操作でページを編集します。
+4. 「保存」または「名前を付けて保存」でPDFを書き出します。
 
-`fonts-noto-cjk` は、日本語・中国語・韓国語を正しく表示するために必要です。言語メニューなどで文字が四角形として表示される場合は、このパッケージがインストールされていることを確認してください。
+パスワード付きPDFを開くと、閲覧パスワードの入力画面が表示されます。
 
-## 起動
+![Password dialog](docs/screenshots/password-dialog.png)
 
-### Windows
+### 文書設定
 
-```bat
-.venv\Scripts\python main.py
-```
+「文書のプロパティ」の「詳細」タブでは、PDFバージョンとページレイアウトを変更できます。`TwoPageLeft` または `TwoPageRight` を選択した場合、必要に応じてPDFバージョンが1.5へ引き上げられます。
 
-### macOS / Ubuntu
+### 設定の保存
 
-```bash
-. .venv/bin/activate
-python main.py
-```
+表示言語と最後に開いたフォルダーは端末内に保存されます。Folimeld自体はPDFや個人情報をネットワークへ送信しません。
 
-## 使い方
+## 開発・コントリビューション
 
-- 複数ページは Ctrl または Shift を押しながら選択できます。
-- 選択したページはツールバーまたはドラッグ操作で移動・並べ替えできます。
-- 選択中のページを回転・削除・挿入できます。
-- 文書のプロパティの「詳細」タブでは、PDF バージョンやページレイアウトを変更できます。ページレイアウトに `TwoPageLeft` または `TwoPageRight` を指定した場合、PDF バージョンが 1.5 未満なら、保存時に 1.5 へ自動的に引き上げられます。
-- ローカル設定は QSettings に保存され、最後に開いたフォルダが記憶されます。
+ソースからの実行、テスト、各OS向けパッケージの作成方法は [DEVELOPMENT.md](DEVELOPMENT.md) を参照してください。不具合報告や提案は [Issues](https://github.com/tyamada/Folimeld/issues) で受け付けています。
 
-## 実行ファイルの生成
-
-### Windows
-
-```bat
-build_exe.bat
-```
-
-生成物は `dist\Folimeld.exe` です。PySide6、PyMuPDF、翻訳データを内包するため、配布先に Python や付属ファイルは不要です。
-
-### macOS
-
-```bash
-./build_exe.sh
-```
-
-このスクリプトは `.venv` が無い場合でも自動で作成し、依存関係と PyInstaller を入れてからビルドします。生成物は `dist/Folimeld.app` です。`dist/Folimeld` も併せて作成されますが、通常は `.app` を開いて使用します。
-
-生成後は次のように起動できます。
-
-```bash
-open dist/Folimeld.app
-```
-
-macOS では Windows のレジストリ連携は自動的に無効化されます。
-
-### Ubuntu
-
-```bash
-bash build_linux.sh
-```
-
-Pythonを含む単体実行ファイル `dist/folimeld` と、デスクトップメニュー・アイコン・PDF関連付けを含むUbuntuパッケージ `dist/folimeld_<バージョン>_<アーキテクチャ>.deb` が生成されます。ビルドは配布先と同じか、それより古いUbuntu上で行ってください。
-
-パッケージは次のようにインストールできます。
-
-```bash
-sudo apt install ./dist/folimeld_*.deb
-```
-
-インストール後はアプリ一覧から Folimeld を起動でき、ファイルマネージャーの「別のアプリケーションで開く」からPDFを渡せます。インストールせず `./dist/folimeld` を直接起動することもできます。
-
-## 配布時の注意
-
-- 本アプリは Windows、macOS、Ubuntu を想定しており、Windows 専用のレジストリ連携は他OSでは自動的に無効化されます。
-- macOS の配布用アプリは ad-hoc 署名を行っているため、ローカル環境ではそのまま起動できます。
-- 署名済みの正式配布を行う場合は、Apple 開発者証明書で署名し直す必要があります。
-
-## 開発について
-
-このアプリは、OpenAI Codex を使用して作成しました。
+変更履歴は [CHANGELOG.md](CHANGELOG.md) にまとめています。
 
 ## ライセンス
 
-このプロジェクトは [MIT License](LICENSE) のもとで公開されています。
+Folimeld は [GNU Affero General Public License v3.0](LICENSE) で公開されています。
 
-PySide6 や PyMuPDF などの第三者ライブラリには、それぞれのライセンスが適用されます。
-
-## バージョン履歴
-
-- v0.2.5 - 2026/09/03: スクロール動作を改善
-- v0.2.4 - 2026/08/31: Ubuntuに対応
-- v0.2.3 - 2026/08/31: PDF バージョンを自動的に変更
-- v0.2.2 - 2026/08/30: macOS 向けのビルド手順とアイコン/署名を整備
-- v0.2.1 - 2026/08/30: macOS 互換の Windows 依存処理を安全に無効化
-- v0.2.0 - 2026/08/30: アプリ名を Folimeld に変更
-- v0.1.0 - 2026/08/29: 最初のリリース
+PySide6、PyMuPDFなどの第三者ライブラリには、それぞれのライセンスが適用されます。

@@ -4,6 +4,22 @@ import ctypes
 from pathlib import Path
 import sys
 
+APPMODEL_ERROR_NO_PACKAGE = 15700
+
+
+def is_packaged() -> bool:
+    """Return whether the current process has an MSIX package identity."""
+    if sys.platform != "win32":
+        return False
+    try:
+        length = ctypes.c_uint32()
+        result = ctypes.windll.kernel32.GetCurrentPackageFullName(
+            ctypes.byref(length), None,
+        )
+    except AttributeError:
+        return False
+    return result != APPMODEL_ERROR_NO_PACKAGE
+
 
 def open_command(executable: str) -> str:
     """Return the command stored in the Windows Open With registration."""
@@ -12,7 +28,7 @@ def open_command(executable: str) -> str:
 
 def register_open_with() -> bool:
     """Register the frozen executable in Explorer's Open With application list."""
-    if sys.platform != "win32" or not getattr(sys, "frozen", False):
+    if sys.platform != "win32" or not getattr(sys, "frozen", False) or is_packaged():
         return False
 
     try:

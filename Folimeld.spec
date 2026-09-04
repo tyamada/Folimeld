@@ -4,7 +4,10 @@ a = Analysis(
     ["main.py"],
     pathex=[],
     binaries=[],
-    datas=[("locales", "locales")],
+    datas=[
+        ("locales", "locales"),
+        ("assets/Folimeld.iconset/icon_256x256.png", "assets"),
+    ],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -27,5 +30,6 @@ exe = EXE(
     strip=False,
     upx=True,
     console=False,
-    version="version_info.txt",
+    icon="assets/Folimeld.ico",
+    version="build/version_info.txt",
 )

@@ -1,75 +1,84 @@
+"""Build platform icon assets from the Folimeld chroma-key artwork."""
+
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 ASSET_DIR = ROOT / "assets"
+SOURCE = ASSET_DIR / "Folimeld-icon-source.png"
+MASTER = ASSET_DIR / "Folimeld-icon-master.png"
 ICONSET_DIR = ASSET_DIR / "Folimeld.iconset"
-ICONSET_DIR.mkdir(parents=True, exist_ok=True)
+MSIX_ASSET_DIR = ROOT / "packaging" / "msix" / "Assets"
+PNG_SIZES = (16, 32, 64, 128, 256, 512, 1024)
 
-sizes = [16, 32, 64, 128, 256, 512, 1024]
 
-# Build a simple PDF-style icon: white page with blue accent and folded corner.
-for size in sizes:
-    image = Image.new("RGBA", (size, size), (255, 255, 255, 0))
-    draw = ImageDraw.Draw(image)
+def remove_green_background(image: Image.Image) -> Image.Image:
+    """Turn the generated green backdrop into alpha and suppress green spill."""
+    source = image.convert("RGB")
+    output = Image.new("RGBA", source.size)
+    converted: list[tuple[int, int, int, int]] = []
 
-    page_margin = max(2, size // 16)
-    page_color = (255, 255, 255, 255)
-    accent_color = (27, 117, 219, 255)
-    shadow_color = (220, 230, 245, 255)
+    pixels = source.load()
+    for y in range(source.height):
+        for x in range(source.width):
+            red, green, blue = pixels[x, y]
+            green_excess = green - max(red, blue)
+            alpha = round(255 * (1 - max(0, min(1, (green_excess - 35) / 100))))
+            if alpha == 0:
+                converted.append((0, 0, 0, 0))
+                continue
 
-    # paper shadow
-    draw.rounded_rectangle(
-        [page_margin + 2, page_margin + 2, size - page_margin + 2, size - page_margin + 2],
-        radius=max(8, size // 12),
-        fill=shadow_color,
+            fraction = alpha / 255
+            clean_red = min(255, round(red / fraction))
+            clean_blue = min(255, round(blue / fraction))
+            clean_green = min(255, max(0, round((green - (1 - fraction) * 255) / fraction)))
+            converted.append((clean_red, clean_green, clean_blue, alpha))
+
+    output.putdata(converted)
+    return output
+
+
+def build_icons() -> None:
+    if not SOURCE.exists():
+        raise FileNotFoundError(f"Icon source not found: {SOURCE}")
+
+    ICONSET_DIR.mkdir(parents=True, exist_ok=True)
+    MSIX_ASSET_DIR.mkdir(parents=True, exist_ok=True)
+    master = remove_green_background(Image.open(SOURCE))
+    master.save(MASTER, optimize=True)
+
+    rendered: dict[int, Image.Image] = {}
+    for size in PNG_SIZES:
+        icon = master.resize((size, size), Image.Resampling.LANCZOS)
+        rendered[size] = icon
+        icon.save(ICONSET_DIR / f"icon_{size}x{size}.png", optimize=True)
+
+    rendered[256].save(
+        ASSET_DIR / "Folimeld.ico",
+        format="ICO",
+        sizes=[(size, size) for size in (16, 32, 48, 64, 128, 256)],
     )
-    # paper body
-    draw.rounded_rectangle(
-        [page_margin, page_margin, size - page_margin, size - page_margin],
-        radius=max(8, size // 12),
-        fill=page_color,
+    master.save(
+        ASSET_DIR / "Folimeld.icns",
+        format="ICNS",
+        sizes=[(size, size) for size in PNG_SIZES],
     )
-    # folded corner
-    draw.polygon(
-        [
-            (size - page_margin - size // 6, page_margin),
-            (size - page_margin, page_margin),
-            (size - page_margin, page_margin + size // 6),
-        ],
-        fill=accent_color,
-    )
-    # lower accent bar
-    bar_height = max(8, size // 10)
-    draw.rounded_rectangle(
-        [page_margin + size // 8, size - page_margin - bar_height - size // 12, size - page_margin - size // 8, size - page_margin - size // 12],
-        radius=max(4, size // 20),
-        fill=accent_color,
-    )
-    # horizontal lines to mimic PDF page content
-    for offset in range(3):
-        y = page_margin + size // 8 + offset * (size // 14)
-        draw.rounded_rectangle(
-            [page_margin + size // 6, y, size - page_margin - size // 6, y + max(2, size // 60)],
-            radius=2,
-            fill=(210, 218, 232, 255),
-        )
+    for filename, size in {
+        "StoreLogo.png": (50, 50),
+        "Square44x44Logo.png": (44, 44),
+        "Square71x71Logo.png": (71, 71),
+        "Square150x150Logo.png": (150, 150),
+        "Wide310x150Logo.png": (310, 150),
+        "Square310x310Logo.png": (310, 310),
+    }.items():
+        contained = Image.new("RGBA", size, (0, 0, 0, 0))
+        icon_size = min(size)
+        icon = master.resize((icon_size, icon_size), Image.Resampling.LANCZOS)
+        contained.alpha_composite(icon, ((size[0] - icon_size) // 2, 0))
+        contained.save(MSIX_ASSET_DIR / filename, optimize=True)
+    print(f"Created transparent icon assets from {SOURCE}")
 
-    file_name = f"icon_{size}x{size}.png"
-    image.save(ICONSET_DIR / file_name)
 
-# Store a 1024x1024 icon for fallback if needed
-cover = ICONSET_DIR / "icon_1024x1024.png"
-if not cover.exists():
-    image = Image.new("RGBA", (1024, 1024), (255, 255, 255, 0))
-    draw = ImageDraw.Draw(image)
-    draw.rounded_rectangle([60, 60, 964, 964], radius=100, fill=(255, 255, 255, 255))
-    draw.polygon([(754, 60), (964, 60), (964, 180)], fill=(27, 117, 219, 255))
-    draw.rounded_rectangle([150, 760, 850, 850], radius=50, fill=(27, 117, 219, 255))
-    for offset in range(3):
-        y = 180 + offset * 120
-        draw.rounded_rectangle([180, y, 840, y + 20], radius=10, fill=(210, 218, 232, 255))
-    image.save(cover)
-
-print(f"Created icon set at {ICONSET_DIR}")
+if __name__ == "__main__":
+    build_icons()
