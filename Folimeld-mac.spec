@@ -1,6 +1,6 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-from folimeld import __version__
+from folimeld import __build__, __version__
 
 a = Analysis(
     ["main.py"],
@@ -38,6 +38,16 @@ app = BUNDLE(
     bundle_identifier="com.folimeld.Folimeld",
     info_plist={
         "CFBundleShortVersionString": __version__,
-        "CFBundleVersion": __version__,
+        "CFBundleVersion": __build__,
+        "CFBundleDocumentTypes": [
+            {
+                "CFBundleTypeName": "PDF document",
+                "CFBundleTypeRole": "Editor",
+                "CFBundleTypeExtensions": ["pdf"],
+                "CFBundleTypeMIMETypes": ["application/pdf"],
+                "LSHandlerRank": "Owner",
+                "LSItemContentTypes": ["com.adobe.pdf"],
+            }
+        ],
     },
 )

@@ -71,7 +71,7 @@ Windowsで仮想環境を直接指定する場合：
 
 ## バージョン管理
 
-アプリのバージョンは `folimeld/__init__.py` の `__version__` で一元管理しています。リリース時はこの値だけを更新してください。
+アプリの表示バージョンは `folimeld/__init__.py` の `__version__`、App Store用のビルド番号は `__build__` で管理しています。新しいApp Store提出ごとに、表示バージョンまたはビルド番号を更新してください。特に同じ表示バージョンで再提出する場合は、ビルド番号を増やします。
 
 Windowsの実行ファイル用バージョン情報は `tools/write_version_info.py` によりビルド時に生成されます。Ubuntuパッケージ、macOS App Bundle、MSIXも同じ値を参照します。
 
@@ -148,6 +148,21 @@ open dist/Folimeld.app
 ```
 
 ローカル確認用としてad-hoc署名を行います。正式配布ではApple Developer証明書による署名と、公証の手続きを行ってください。
+
+### Mac App Store向けビルド
+
+Apple Developerで、Bundle ID `com.folimeld.Folimeld` に対応するApp Store用アプリ署名証明書、インストーラ署名証明書、App Sandboxを有効にしたプロビジョニングプロファイルを用意してください。
+
+```bash
+./build_appstore.sh \
+  --application-identity "アプリ署名証明書のCommon Name" \
+  --installer-identity "インストーラ署名証明書のCommon Name" \
+  --provisioning-profile "/path/to/Folimeld.provisionprofile"
+```
+
+生成物は `dist/Folimeld_<表示バージョン>.pkg` です。スクリプトはApp Sandbox entitlementsを適用し、アプリとインストーラに署名します。提出前にアプリ署名、Info.plist、Bundle ID、表示バージョンとビルド番号の分離、PDFのドキュメントタイプ、Sandbox entitlements、インストーラ署名を自動検証します。TestFlightで確認した後、TransporterまたはXcodeからApp Store Connectへアップロードしてください。
+
+App Storeへアップロードするたびに、`folimeld/__init__.py` のバージョンを更新してください。ユーザーがファイルダイアログで選択したPDFだけを読み書きするため、現在のentitlementsにはネットワーク権限を含めていません。
 
 ## Ubuntuビルド
 
