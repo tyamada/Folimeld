@@ -8,7 +8,7 @@ a = Analysis(
         ("locales", "locales"),
         ("assets/Folimeld.iconset/icon_256x256.png", "assets"),
     ],
-    hiddenimports=[],
+    hiddenimports=["winrt.windows.foundation", "winrt.windows.foundation.collections"],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],

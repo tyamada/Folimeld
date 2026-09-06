@@ -12,7 +12,9 @@ from .dialogs import PropertiesDialog
 from .i18n import I18n, LANGUAGES, install_qt_translator
 from .model import PasswordRequiredError, PdfDocument
 from .widgets import ThumbnailList
-from .windows_integration import register_open_with
+from .windows_integration import register_open_with, is_packaged
+from .store_support import StoreSupport
+from .support_dialog import SupportDialog, supporter_icon
 
 
 class MainWindow(QMainWindow):
@@ -24,7 +26,12 @@ class MainWindow(QMainWindow):
         self.pages.page_moved.connect(self.reorder_page)
         self.setCentralWidget(self.pages)
         self.resize(1100, 760)
+        self.support = StoreSupport(self) if is_packaged() else None
+        self.support_dialog = None
         self._build_ui()
+        if self.support:
+            self.support.changed.connect(self._update_support)
+            QTimer.singleShot(0, self.support.refresh)
         self.pages.itemSelectionChanged.connect(self.update_state)
         self.update_state()
 
@@ -76,6 +83,10 @@ class MainWindow(QMainWindow):
             action.triggered.connect(lambda checked=False, lang=code: self.change_language(lang))
             language_menu.addAction(action)
         help_menu.addAction(self._action("version_info", self.about))
+        if self.support:
+            self.support_action = self._action("support_title", self.show_support)
+            self.support_action.setIconVisibleInMenu(True)
+            help_menu.addAction(self.support_action)
         toolbar = QToolBar(self.tr_("toolbar")); toolbar.setMovable(False)
         self.addToolBar(toolbar)
         for action in (self.open_action, self.save_action, self.insert_action, self.insert_blank_action,
@@ -84,6 +95,18 @@ class MainWindow(QMainWindow):
                        self.down_action, self.left_action, self.right_action):
             toolbar.addAction(action)
         self.statusBar().showMessage(self.tr_("ready"))
+
+    def _update_support(self):
+        self.support_action.setText(self.tr_("supporter" if self.support.owned else "support_title"))
+        self.support_action.setIcon(supporter_icon() if self.support.owned else QIcon())
+
+    def show_support(self):
+        if self.support_dialog is None:
+            self.support_dialog = SupportDialog(self.support, self.tr_, self)
+        self.support_dialog.show()
+        self.support_dialog.raise_()
+        self.support_dialog.activateWindow()
+        self.support.refresh()
 
     def update_state(self) -> None:
         enabled = self.model.loaded

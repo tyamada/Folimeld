@@ -4,6 +4,7 @@ __pycache__/
 *.pdfutility.tmp.pdf
 
 TestPDFView.pdf
+TestPDFView-long.pdf
 .vscode/settings.json
 build/
 dist/
