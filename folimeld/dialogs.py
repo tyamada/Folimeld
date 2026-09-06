@@ -1,5 +1,8 @@
+from html import escape
+
+from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (QCheckBox, QComboBox, QDialog, QDialogButtonBox,
-                               QFormLayout, QLineEdit, QTabWidget, QVBoxLayout,
+                               QFormLayout, QLabel, QLineEdit, QTabWidget, QVBoxLayout,
                                QWidget)
 
 
@@ -41,15 +44,44 @@ class PropertiesDialog(QDialog):
         self.scroll_direction.addItem(tr("left_to_right"), False)
         self.scroll_direction.addItem(tr("right_to_left"), True)
         self.scroll_direction.setCurrentIndex(1 if self._is_right_to_left() else 0)
+        self.page_display = QLabel()
+        self.page_display.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignTop)
+        self.page_display.setTextFormat(Qt.TextFormat.RichText)
+        self.page_display.setWordWrap(True)
+        self.page_layout.currentTextChanged.connect(self._update_page_display)
+        self.cover_page.toggled.connect(
+            lambda _checked: self._update_page_display(self.page_layout.currentText())
+        )
+        self._update_page_display(self.page_layout.currentText())
         for key, widget in (("pdf_version", self.pdf_version),
                             ("page_layout", self.page_layout),
                             ("cover_page", self.cover_page),
-                            ("scroll_direction", self.scroll_direction)):
+                            ("scroll_direction", self.scroll_direction),
+                            ("page_display", self.page_display)):
             details_form.addRow(tr(key), widget)
+        page_display_label = details_form.labelForField(self.page_display)
+        page_display_label.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignTop)
+        details_form.setAlignment(page_display_label, Qt.AlignmentFlag.AlignTop)
         tabs.addTab(summary, tr("summary")); tabs.addTab(details, tr("details"))
         buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel)
         buttons.accepted.connect(self.accept); buttons.rejected.connect(self.reject)
         layout_box = QVBoxLayout(self); layout_box.addWidget(tabs); layout_box.addWidget(buttons)
+
+    def _update_page_display(self, page_layout: str) -> None:
+        cover_layout = {
+            "TwoColumnLeft": "TwoColumnRight", "TwoPageLeft": "TwoPageRight",
+        }.get(page_layout) if self.cover_page.isChecked() else None
+        descriptions = [self.tr("single_page_display" if page_layout in
+                                ("SinglePage", "OneColumn") else "two_page_display")]
+        if cover_layout or page_layout in ("TwoColumnRight", "TwoPageRight"):
+            descriptions.append(self.tr("show_cover_page"))
+        if page_layout in ("OneColumn", "TwoColumnLeft", "TwoColumnRight"):
+            descriptions.append(self.tr("scrolling_enabled"))
+        descriptions = [escape(text) for text in descriptions]
+        if cover_layout:
+            notice = self.tr("change_page_layout", layout=cover_layout)
+            descriptions.append(f"<b>{escape(notice)}</b>")
+        self.page_display.setText("<br>".join(descriptions))
 
     def _is_right_to_left(self) -> bool:
         catalog = self.model.doc.pdf_catalog()
