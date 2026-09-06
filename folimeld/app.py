@@ -11,7 +11,7 @@ from . import __version__
 from .dialogs import PropertiesDialog
 from .i18n import I18n, LANGUAGES, install_qt_translator
 from .model import PasswordRequiredError, PdfDocument
-from .widgets import ThumbnailList
+from .widgets import THUMBNAIL_SIZES, ThumbnailList
 from .windows_integration import register_open_with, is_packaged
 from .store_support import StoreSupport
 from .support_dialog import SupportDialog, supporter_icon
@@ -23,6 +23,12 @@ class MainWindow(QMainWindow):
         self.i18n = i18n or I18n()
         self.model = PdfDocument()
         self.pages = ThumbnailList()
+        try:
+            size = int(QSettings().value("thumbnail_size", 288))
+        except (TypeError, ValueError):
+            size = 288
+        self.thumbnail_size = size if size in THUMBNAIL_SIZES else 288
+        self.pages.set_thumbnail_size(self.thumbnail_size)
         self.pages.page_moved.connect(self.reorder_page)
         self.setCentralWidget(self.pages)
         self.resize(1100, 760)
@@ -77,6 +83,7 @@ class MainWindow(QMainWindow):
                        self.left_action, self.right_action):
             edit_menu.addAction(action)
         language_menu = settings_menu.addMenu(self.tr_("language"))
+        settings_menu.addAction(self._action("image_size", self.change_image_size))
         for code, name in LANGUAGES.items():
             action = QAction(name, self); action.setCheckable(True)
             action.setChecked(code == self.i18n.language)
@@ -212,10 +219,27 @@ class MainWindow(QMainWindow):
 
     def render_icon(self, page: fitz.Page) -> QIcon:
         rect = page.rect
-        scale = min(288 / rect.width, 288 / rect.height, 2.0)
+        scale = min(self.thumbnail_size / rect.width, self.thumbnail_size / rect.height)
         pix = page.get_pixmap(matrix=fitz.Matrix(scale, scale), alpha=False)
         image = QImage(pix.samples, pix.width, pix.height, pix.stride, QImage.Format.Format_RGB888).copy()
         return QIcon(QPixmap.fromImage(image))
+
+    def change_image_size(self) -> None:
+        choices = [f"{size} px" for size in THUMBNAIL_SIZES]
+        choice, accepted = QInputDialog.getItem(
+            self, self.tr_("image_size"), self.tr_("image_size"), choices,
+            THUMBNAIL_SIZES.index(self.thumbnail_size), False,
+        )
+        if not accepted:
+            return
+        size = THUMBNAIL_SIZES[choices.index(choice)]
+        if size == self.thumbnail_size:
+            return
+        selection = self.selected_rows()
+        self.thumbnail_size = size
+        self.pages.set_thumbnail_size(size)
+        QSettings().setValue("thumbnail_size", size)
+        self.refresh(selection, preserve_scroll=True)
 
     def refresh(self, selection: list[int] | None = None,
                 preserve_scroll: bool = False) -> None:

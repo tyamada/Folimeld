@@ -8,6 +8,7 @@ from PySide6.QtWidgets import QApplication, QAbstractItemView, QListWidget
 
 SPI_GETWHEELSCROLLLINES = 0x0068
 WHEEL_PAGESCROLL = 0xFFFFFFFF
+THUMBNAIL_SIZES = (144, 288, 432)
 
 
 def windows_wheel_scroll_lines() -> int | None:
@@ -37,11 +38,14 @@ class ThumbnailList(QListWidget):
         self.setSelectionMode(QListWidget.SelectionMode.ExtendedSelection)
         self.setDragDropMode(QListWidget.DragDropMode.InternalMove)
         self.setDefaultDropAction(Qt.DropAction.MoveAction)
-        self.setIconSize(QSize(288, 288))
-        self.setGridSize(QSize(312, 332))
+        self.set_thumbnail_size(288)
         self.setSpacing(8)
         self._drag_row = -1
         self._wheel_angle_remainder = 0
+
+    def set_thumbnail_size(self, size: int) -> None:
+        self.setIconSize(QSize(size, size))
+        self.setGridSize(QSize(size + 24, size + 44))
 
     def wheelEvent(self, event: QWheelEvent) -> None:
         # Preserve Qt's smooth pixel scrolling for touchpads and the native
