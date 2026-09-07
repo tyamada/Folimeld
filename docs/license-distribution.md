@@ -2,7 +2,7 @@
 
 Folimeld は AGPL-3.0-only です。`LICENSE` はプロジェクトの告知、
 `licenses/AGPL-3.0.txt` は GNU から取得したライセンス全文です。
-バージョン情報から、これらの文書と第三者ライブラリの告知を閲覧できます。
+「ヘルプ → ライセンス」から、これらの文書と第三者ライブラリの告知を閲覧できます。
 
 Windows / Linux / macOS の PyInstaller spec は `tools/license_bundle.py` を使い、
 全文・告知・ビルド環境の依存パッケージのバージョンと付属ライセンス・Python の

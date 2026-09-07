@@ -64,5 +64,5 @@ Folimeld は [GNU Affero General Public License v3.0](LICENSE) で公開され�
 
 PySide6、PyMuPDFなどの第三者ライブラリには、それぞれのライセンスが適用されます。
 
-ライセンス全文と第三者の告知は「ヘルプ → バージョン情報」で閲覧できます。
+ライセンス全文と第三者の告知は「ヘルプ → ライセンス」で閲覧できます。
 配布時の確認事項は [ライセンスと配布](docs/license-distribution.md) を参照してください。

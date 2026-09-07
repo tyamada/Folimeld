@@ -91,6 +91,7 @@ class MainWindow(QMainWindow):
             action.triggered.connect(lambda checked=False, lang=code: self.change_language(lang))
             language_menu.addAction(action)
         help_menu.addAction(self._action("version_info", self.about))
+        help_menu.addAction(self._action("licenses", self.show_licenses))
         if self.support:
             self.support_action = self._action("support_title", self.show_support)
             self.support_action.setIconVisibleInMenu(True)
@@ -333,16 +334,19 @@ class MainWindow(QMainWindow):
         QMessageBox.information(self, self.tr_("language"), self.tr_("restart_required"))
 
     def about(self) -> None:
+        text = self.tr_("version_text", version=__version__)
+        text += "\n\nCopyright (C) 2026 Takuma Yamada"
+        QMessageBox.about(self, self.tr_("version_info"), text)
+
+    def show_licenses(self) -> None:
         from PySide6.QtWidgets import (QDialog, QDialogButtonBox, QLabel,
                                        QTabWidget, QTextBrowser, QVBoxLayout)
 
         dialog = QDialog(self)
-        dialog.setWindowTitle(self.tr_("version_info"))
+        dialog.setWindowTitle(self.tr_("licenses"))
         dialog.resize(680, 520)
         layout = QVBoxLayout(dialog)
-        text = self.tr_("version_text", version=__version__)
-        text += "\n\nCopyright (C) 2026 Takuma Yamada"
-        layout.addWidget(QLabel(text))
+        layout.addWidget(QLabel("Folimeld\nCopyright (C) 2026 Takuma Yamada"))
         notice = QLabel(self.tr_("license_summary"))
         notice.setWordWrap(True)
         layout.addWidget(notice)
