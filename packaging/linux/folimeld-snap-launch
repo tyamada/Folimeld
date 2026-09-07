@@ -1,0 +1,5 @@
+#!/bin/sh
+# Apply after the GNOME command chain, which selects wayland-egl on Wayland.
+# Qt Widgets uses X11/XWayland consistently on Ubuntu and WSLg.
+export QT_QPA_PLATFORM=xcb
+exec "$SNAP/bin/folimeld" "$@"

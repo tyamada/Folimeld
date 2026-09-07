@@ -23,11 +23,29 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 | OS | 配布形式 |
 | --- | --- |
 | Windows 10 / 11 | EXE / MSIX（Microsoft Storeでの公開を準備中） |
-| macOS | `.app` |
-| Ubuntu 22.04以降 | `.deb` / 単体実行ファイル |
+| macOS | `.app` (App Storeでの公開を準備中) |
+| Ubuntu | `.deb` / `.snap` / 単体実行ファイル（対応バージョンは各リリースを参照） |
 
 > [!NOTE]
 > リリースによっては、一部のOS向けパッケージが用意されていない場合があります。
+
+### Ubuntu版を直接ダウンロード
+
+バージョン **0.3.2 / amd64（x86-64）**：
+
+- [debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_amd64.deb?raw=true)（Ubuntu 24.04以降）
+- [Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_amd64.snap?raw=true)（snapdが必要）
+- [SHA-256チェックサム](releases/ubuntu/folimeld_0.3.2_SHA256SUMS.txt?raw=true)
+
+ダウンロード先のフォルダーで、使用するパッケージのインストールコマンドを実行してください。
+
+```bash
+# deb版
+sudo apt install ./folimeld_0.3.2_amd64.deb
+
+# Snap版
+sudo snap install --dangerous ./folimeld_0.3.2_amd64.snap
+```
 
 ## 基本的な使い方
 

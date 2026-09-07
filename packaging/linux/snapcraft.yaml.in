@@ -1,0 +1,31 @@
+name: folimeld
+version: '@VERSION@'
+summary: Edit and organize PDF pages
+description: |
+  Rearrange, rotate, insert, delete, and protect PDF pages locally.
+  Folimeld includes a thumbnail preview and a multilingual desktop interface.
+base: core24
+grade: stable
+confinement: strict
+license: AGPL-3.0-only
+
+apps:
+  folimeld:
+    command: bin/folimeld-launch
+    extensions: [gnome]
+    plugs: [home, removable-media, opengl]
+
+parts:
+  folimeld:
+    plugin: dump
+    source: payload
+    stage-packages:
+      - libxkbcommon-x11-0
+      - libxcb-cursor0
+      - libxcb-icccm4
+      - libxcb-keysyms1
+      - libxcb-image0
+      - libxcb-render-util0
+      - libxcb-xinerama0
+      - libxcb-xkb1
+      - libopengl0

@@ -176,15 +176,44 @@ bash build_linux.sh
 次のファイルが生成されます。
 
 - `dist/folimeld`
-- `dist/folimeld_<バージョン>_<アーキテクチャ>.deb`
+- `releases/ubuntu/folimeld_<バージョン>_<アーキテクチャ>.deb`
 
 互換性を確保するため、配布先と同じか、それより古いUbuntu上でビルドしてください。
 
 ```bash
-sudo apt install ./dist/folimeld_*.deb
+sudo apt install ./releases/ubuntu/folimeld_*.deb
 ```
 
 DEBパッケージにはデスクトップメニュー、アイコン、PDF関連付けが含まれます。
+
+Linux専用の仮想環境 `.venv-linux` を使用します。`FOLIMELD_LINUX_VENV` で保存先を変更できます。
+WSLではLinux側のパス（例：`/tmp/folimeld-build-venv`）を指定すると高速にビルドできます。
+debの `libc6` 最低バージョンはビルド環境から設定します。Ubuntu 24.04で作成したdebはUbuntu 24.04以降が対象です。
+
+### Snapパッケージ
+
+Ubuntu 24.04で `build_linux.sh` を実行した後、次を実行します。
+
+```bash
+sudo snap install snapcraft --classic
+bash build_snap.sh
+```
+
+生成物は `releases/ubuntu/folimeld_<バージョン>_<アーキテクチャ>.snap` です。
+Snapcraftの既定の隔離ビルド環境を使用します。専用のUbuntu 24.04ビルド環境やWSLで、
+ホストへビルド依存をインストールしてよい場合は `sudo bash build_snap.sh --destructive-mode` でも作成できます。
+`core24` とGNOME拡張を使い、QtのX11ライブラリ、アイコン、PDF関連付けを同梱します。
+
+ローカルパッケージのインストールと起動：
+
+```bash
+sudo snap install --dangerous ./releases/ubuntu/folimeld_0.3.2_amd64.snap
+snap run folimeld
+```
+
+Snapはstrict confinementで動作し、ホームフォルダー内の通常のファイルにアクセスできます。
+外付けドライブのPDFを編集する場合は `sudo snap connect folimeld:removable-media` を実行してください。
+Snap Storeへの公開は、このローカルビルドとは別の手順です。
 
 ## リリース前チェック
 
