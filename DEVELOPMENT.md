@@ -198,6 +198,8 @@ wsl -d Ubuntu-22.04 -- bash -lc 'cd /path/to/Folimeld && FOLIMELD_LINUX_VENV=~/.
 
 パスは自分の環境に合わせて変更してください。配布前にUbuntu 22.04・24.04・26.04でdebのインストール、PDFの表示・編集・保存を確認し、パッケージを差し替えたら `releases/ubuntu/folimeld_<バージョン>_SHA256SUMS.txt` も更新してください。
 
+Debian 13（amd64）にも同じdebを配布します。配布前の動作確認にはDebian 13も含めてください。0.3.2はDebian 13.6のWSL2 / WSLg（X11）で基本動作を確認しています。確認範囲と最小構成でのFontconfig設定不足については[検証記録](docs/debian-wsl-verification.md)を参照してください。
+
 ### Snapパッケージ
 
 Ubuntu 24.04で `build_linux.sh` を実行した後、次を実行します。

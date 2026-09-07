@@ -2,7 +2,7 @@
 
 ![Folimeld icon](assets/Folimeld.iconset/icon_128x128.png)
 
-Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、削除できるデスクトップアプリです。Windows、macOS、Ubuntu に対応し、編集するファイルを外部サービスへ送信せず、ローカル環境で処理します。
+Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、削除できるデスクトップアプリです。Windows、macOS、Ubuntu、Debian に対応し、編集するファイルを外部サービスへ送信せず、ローカル環境で処理します。
 
 ![Folimeld main window](docs/screenshots/main-window.png)
 
@@ -14,7 +14,7 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 - PDFバージョン、ページレイアウト、綴じ方向を編集
 - 閲覧パスワードの設定と解除
 - 日本語、英語、ドイツ語、スペイン語、フランス語、韓国語、ポルトガル語、中国語に対応
-- Windows、macOS、Ubuntuで利用可能
+- Windows、macOS、Ubuntu、Debianで利用可能
 
 ## ダウンロード
 
@@ -25,15 +25,16 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 | Windows 10 / 11 | EXE / MSIX（Microsoft Storeでの公開を準備中） |
 | macOS | `.app` (App Storeでの公開を準備中) |
 | Ubuntu | `.deb` / `.snap` / 単体実行ファイル（対応バージョンは各リリースを参照） |
+| Debian 13 | `.deb`（amd64、WSL2で基本動作確認済み） |
 
 > [!NOTE]
 > リリースによっては、一部のOS向けパッケージが用意されていない場合があります。
 
-### Ubuntu版を直接ダウンロード
+### Ubuntu / Debian版を直接ダウンロード
 
 バージョン **0.3.2 / amd64（x86-64）**：
 
-- [debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_amd64.deb?raw=true)（Ubuntu 22.04以降）
+- [debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_amd64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
 - [Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_amd64.snap?raw=true)（snapdが必要）
 - [SHA-256チェックサム](releases/ubuntu/folimeld_0.3.2_SHA256SUMS.txt?raw=true)
 
@@ -46,6 +47,8 @@ sudo apt install ./folimeld_0.3.2_amd64.deb
 # Snap版
 sudo snap install --dangerous ./folimeld_0.3.2_amd64.snap
 ```
+
+Debian 13ではUbuntu版と同じdebパッケージを使用します。最小構成の環境で `Fontconfig error: Cannot load default config file` が表示される場合は、`sudo apt install fontconfig-config` を実行してください。Debian 13.6（WSL2 / WSLg、X11）でPDFの表示・ページ移動・回転・保存・再読込を確認しています。詳しくは[Debianでの検証記録](docs/debian-wsl-verification.md)を参照してください。
 
 ## 基本的な使い方
 
