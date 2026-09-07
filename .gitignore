@@ -9,3 +9,4 @@ TestPDFView-long.pdf
 .vscode/settings.json
 build/
 dist/
+/testdata/load_test_1100_pages.pdf
