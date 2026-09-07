@@ -1,5 +1,9 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+import sys
+sys.path.insert(0, SPECPATH)
+from tools.license_bundle import license_datas
+
 a = Analysis(
     ["main.py"],
     pathex=[],
@@ -7,7 +11,7 @@ a = Analysis(
     datas=[
         ("locales", "locales"),
         ("assets/Folimeld.iconset/icon_256x256.png", "assets"),
-    ],
+    ] + license_datas(SPECPATH),
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

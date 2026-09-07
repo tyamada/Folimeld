@@ -75,6 +75,9 @@ Windowsで仮想環境を直接指定する場合：
 
 Windowsの実行ファイル用バージョン情報は `tools/write_version_info.py` によりビルド時に生成されます。Ubuntuパッケージ、macOS App Bundle、MSIXも同じ値を参照します。
 
+ライセンス文書は各specの `tools/license_bundle.py` 呼び出しで同梱します。
+配布前に [ライセンスと配布](docs/license-distribution.md) を確認してください。
+
 ## アイコン
 
 `assets/Folimeld-icon-source.png` を元に、次のコマンドで透過PNG、ICO、ICNS、MSIX用画像を生成します。

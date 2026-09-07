@@ -1,12 +1,16 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+import sys
+sys.path.insert(0, SPECPATH)
+from tools.license_bundle import license_datas
+
 from folimeld import __build__, __version__
 
 a = Analysis(
     ["main.py"],
     pathex=[],
     binaries=[],
-    datas=[("locales", "locales")],
+    datas=[("locales", "locales")] + license_datas(SPECPATH),
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

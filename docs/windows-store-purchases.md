@@ -12,7 +12,7 @@ Storeの商品情報を取得できない限り購入できません。PDF編集
 リポジトリルートで実行します。最新MSIXを指定してください。
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\sign_dev_msix.ps1 -PackagePath .\dist\Folimeld_0.3.1.0_x64.msix
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\sign_dev_msix.ps1 -PackagePath .\dist\Folimeld_0.3.2.0_x64.msix
 ```
 
 マニフェストのPublisherに一致する有効期間1年の開発用証明書を作成し、署名済みコピーを

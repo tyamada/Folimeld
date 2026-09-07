@@ -1,0 +1,30 @@
+Folimeld third-party software notices
+
+Folimeld uses Qt and Qt for Python (PySide6 and Shiboken6), available under
+GNU LGPL v3 and alternative licenses. Copyright The Qt Company Ltd. and
+other contributors. LGPL-3.0.txt and GPL-3.0.txt are included here.
+The open-source licensing option is used; inclusion of a vendor's commercial
+license notice does not mean that Folimeld has a commercial Qt license.
+https://doc.qt.io/qt-6/licensing.html
+https://doc.qt.io/qtforpython-6/licenses.html
+https://doc.qt.io/qt-6/licenses-used-in-qt.html
+Source: https://download.qt.io/official_releases/QtForPython/
+Source: https://download.qt.io/official_releases/qt/
+
+PyMuPDF and MuPDF are used under GNU AGPL v3, not an Artifex commercial
+license. Copyright Artifex Software, Inc. and other contributors.
+See AGPL-3.0.txt and the installed package notices.
+Source: https://github.com/pymupdf/PyMuPDF
+Source: https://github.com/ArtifexSoftware/mupdf
+
+Python and Pillow retain their own licenses and copyright notices.
+Their notices, together with the versions from the build environment, are
+included in Installed-packages. Pillow is also used to build the app icons.
+Source: https://www.python.org/downloads/source/
+Source: https://github.com/python-pillow/Pillow
+
+Windows builds use PyWinRT under the MIT license; see PyWinRT.txt.
+Source: https://github.com/pywinrt/pywinrt
+
+These projects may incorporate additional third-party components under
+their own terms. The notices above do not replace those component licenses.

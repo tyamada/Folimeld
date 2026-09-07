@@ -63,3 +63,6 @@ Windows MSIX版では「ヘルプ → 開発を応援する…」から、サポ
 Folimeld は [GNU Affero General Public License v3.0](LICENSE) で公開されています。
 
 PySide6、PyMuPDFなどの第三者ライブラリには、それぞれのライセンスが適用されます。
+
+ライセンス全文と第三者の告知は「ヘルプ → バージョン情報」で閲覧できます。
+配布時の確認事項は [ライセンスと配布](docs/license-distribution.md) を参照してください。

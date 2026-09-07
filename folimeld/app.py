@@ -15,6 +15,7 @@ from .widgets import THUMBNAIL_SIZES, ThumbnailList
 from .windows_integration import register_open_with, is_packaged
 from .store_support import StoreSupport
 from .support_dialog import SupportDialog, supporter_icon
+from .license_info import SOURCE_URL, license_documents
 
 
 class MainWindow(QMainWindow):
@@ -332,7 +333,32 @@ class MainWindow(QMainWindow):
         QMessageBox.information(self, self.tr_("language"), self.tr_("restart_required"))
 
     def about(self) -> None:
-        QMessageBox.about(self, self.tr_("version_info"), self.tr_("version_text", version=__version__))
+        from PySide6.QtWidgets import (QDialog, QDialogButtonBox, QLabel,
+                                       QTabWidget, QTextBrowser, QVBoxLayout)
+
+        dialog = QDialog(self)
+        dialog.setWindowTitle(self.tr_("version_info"))
+        dialog.resize(680, 520)
+        layout = QVBoxLayout(dialog)
+        text = self.tr_("version_text", version=__version__)
+        text += "\n\nCopyright (C) 2026 Takuma Yamada"
+        layout.addWidget(QLabel(text))
+        notice = QLabel(self.tr_("license_summary"))
+        notice.setWordWrap(True)
+        layout.addWidget(notice)
+        source = QLabel(f'<a href="{SOURCE_URL}">{self.tr_("source_code")}</a>')
+        source.setOpenExternalLinks(True)
+        layout.addWidget(source)
+        tabs = QTabWidget()
+        for title, document in license_documents():
+            browser = QTextBrowser()
+            browser.setPlainText(document)
+            tabs.addTab(browser, title)
+        layout.addWidget(tabs)
+        buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Close)
+        buttons.rejected.connect(dialog.reject)
+        layout.addWidget(buttons)
+        dialog.exec()
 
     def error(self, error: Exception) -> None:
         QMessageBox.critical(self, self.tr_("error"), str(error))
