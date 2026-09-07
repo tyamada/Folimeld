@@ -34,7 +34,7 @@ Ubuntu 22.04以降を想定しています。
 
 ```bash
 sudo apt update
-sudo apt install python3-venv libegl1 libgl1 libxkbcommon-x11-0 libxcb-cursor0 fonts-noto-cjk
+sudo apt install python3-venv libegl1 libgl1 libxkbcommon-x11-0 libxcb-cursor0 libxcb-icccm4 libxcb-keysyms1 libxcb-shape0 fonts-noto-cjk
 python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install -r requirements-dev.txt
@@ -178,7 +178,7 @@ bash build_linux.sh
 - `dist/folimeld`
 - `releases/ubuntu/folimeld_<バージョン>_<アーキテクチャ>.deb`
 
-互換性を確保するため、配布先と同じか、それより古いUbuntu上でビルドしてください。
+Ubuntu 22.04以降に対応する配布用debは、Ubuntu 22.04上でビルドしてください。新しいUbuntu上でビルドすると、同梱Pythonや共有ライブラリが新しいglibcを要求し、22.04で起動できなくなる場合があります。
 
 ```bash
 sudo apt install ./releases/ubuntu/folimeld_*.deb
@@ -188,7 +188,15 @@ DEBパッケージにはデスクトップメニュー、アイコン、PDF関�
 
 Linux専用の仮想環境 `.venv-linux` を使用します。`FOLIMELD_LINUX_VENV` で保存先を変更できます。
 WSLではLinux側のパス（例：`/tmp/folimeld-build-venv`）を指定すると高速にビルドできます。
-debの `libc6` 最低バージョンはビルド環境から設定します。Ubuntu 24.04で作成したdebはUbuntu 24.04以降が対象です。
+debの `libc6` 最低バージョンはビルド環境から設定します。Ubuntu 22.04で作成したdebは `libc6 >= 2.35` が対象です。依存バージョンの表記だけを下げず、必ず22.04上で実行ファイルごとビルドしてください。
+
+WSLから配布用debをビルドする例（必要な依存関係をインストールした後）：
+
+```powershell
+wsl -d Ubuntu-22.04 -- bash -lc 'cd /path/to/Folimeld && FOLIMELD_LINUX_VENV=~/.cache/folimeld-build-venv bash build_linux.sh'
+```
+
+パスは自分の環境に合わせて変更してください。配布前にUbuntu 22.04・24.04・26.04でdebのインストール、PDFの表示・編集・保存を確認し、パッケージを差し替えたら `releases/ubuntu/folimeld_<バージョン>_SHA256SUMS.txt` も更新してください。
 
 ### Snapパッケージ
 

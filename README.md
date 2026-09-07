@@ -33,7 +33,7 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 
 バージョン **0.3.2 / amd64（x86-64）**：
 
-- [debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_amd64.deb?raw=true)（Ubuntu 24.04以降）
+- [debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_amd64.deb?raw=true)（Ubuntu 22.04以降）
 - [Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_amd64.snap?raw=true)（snapdが必要）
 - [SHA-256チェックサム](releases/ubuntu/folimeld_0.3.2_SHA256SUMS.txt?raw=true)
 
