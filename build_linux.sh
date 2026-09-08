@@ -50,6 +50,7 @@ OUTPUT_DIR="$SCRIPT_DIR/releases/ubuntu"
 mkdir -p "$OUTPUT_DIR"
 PACKAGE="$OUTPUT_DIR/folimeld_${VERSION}_${ARCH}.deb"
 dpkg-deb --root-owner-group --build "$PACKAGE_ROOT" "$PACKAGE"
+"$PYTHON_EXE" tools/source_bundle.py --executable dist/folimeld --artifact "$PACKAGE"
 
 echo
 echo "Built standalone executable: dist/folimeld"

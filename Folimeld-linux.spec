@@ -1,8 +1,10 @@
 # -*- mode: python ; coding: utf-8 -*-
 
 import sys
+from pathlib import Path
 sys.path.insert(0, SPECPATH)
 from tools.license_bundle import license_datas
+from tools.source_bundle import source_datas, record_artifact
 
 a = Analysis(
     ["main.py"],
@@ -12,7 +14,7 @@ a = Analysis(
         ("locales", "locales"),
         ("assets/folimeld-supporter-maid.png", "assets"),
         ("assets/Folimeld.iconset/icon_256x256.png", "assets"),
-    ] + license_datas(SPECPATH),
+    ] + license_datas(SPECPATH) + source_datas(SPECPATH, "linux"),
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -36,3 +38,5 @@ exe = EXE(
     upx=False,
     console=False,
 )
+
+record_artifact(exe.name, exe.name, Path(SPECPATH) / "dist" / "source", project_root=SPECPATH)

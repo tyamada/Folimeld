@@ -130,6 +130,7 @@ productbuild --component "$APP_PATH" /Applications \
   --sign "$INSTALLER_IDENTITY" "$PKG_PATH"
 
 pkgutil --check-signature "$PKG_PATH"
+"$PYTHON_EXE" tools/source_bundle.py --executable "$APP_PATH/Contents/MacOS/Folimeld" --artifact "$PKG_PATH"
 
 echo
 echo "Built: $PKG_PATH"

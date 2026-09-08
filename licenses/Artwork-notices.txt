@@ -1,0 +1,7 @@
+Folimeld supporter artwork
+
+Asset: assets/folimeld-supporter-maid.png
+This image was generated using AI by the Folimeld project maintainer.
+
+This notice records the image's provenance; it does not grant a separate
+license or change the project's existing license terms.

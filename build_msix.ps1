@@ -82,6 +82,8 @@ if (-not $MakeAppx) {
 $OutputPackage = Join-Path $OutputDirectory "Folimeld_${Version}_${Architecture}.msix"
 & $MakeAppx.FullName pack /o /h SHA256 /d $ResolvedStage /p $OutputPackage
 if ($LASTEXITCODE -ne 0) { throw "MakeAppx failed with exit code $LASTEXITCODE." }
+& $PythonExe (Join-Path $ProjectRoot "tools\source_bundle.py") --executable $Executable --artifact $OutputPackage --source-dir (Join-Path $ProjectRoot "dist\source")
+if ($LASTEXITCODE -ne 0) { throw "Source association failed. Rebuild the executable and package." }
 
 Write-Host ""
 Write-Host "Built unsigned $Architecture package: $OutputPackage"

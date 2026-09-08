@@ -29,4 +29,8 @@ sed 's|^Icon=.*|Icon=${SNAP}/meta/gui/icon.png|' \
 sed "s/@VERSION@/$VERSION/" packaging/linux/snapcraft.yaml.in > "$WORK_DIR/snap/snapcraft.yaml"
 cd "$WORK_DIR"
 snapcraft pack "$@" --output "$OUTPUT_DIR/folimeld_${VERSION}_${ARCH}.snap"
+"${FOLIMELD_LINUX_VENV:-$SCRIPT_DIR/.venv-linux}/bin/python" "$SCRIPT_DIR/tools/source_bundle.py" \
+  --executable "$SCRIPT_DIR/dist/folimeld" \
+  --artifact "$OUTPUT_DIR/folimeld_${VERSION}_${ARCH}.snap" \
+  --source-dir "$SCRIPT_DIR/dist/source"
 echo "Built Snap package: releases/ubuntu/folimeld_${VERSION}_${ARCH}.snap"

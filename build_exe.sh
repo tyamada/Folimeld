@@ -37,4 +37,5 @@ fi
 echo
 
 echo "Built: dist/Folimeld.app"
+"$PYTHON_EXE" tools/source_bundle.py --executable "$SCRIPT_DIR/dist/Folimeld.app/Contents/MacOS/Folimeld"
 echo "Open the app bundle to run Folimeld on macOS."
