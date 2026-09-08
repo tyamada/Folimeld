@@ -10,7 +10,10 @@ a = Analysis(
     ["main.py"],
     pathex=[],
     binaries=[],
-    datas=[("locales", "locales")] + license_datas(SPECPATH),
+    datas=[
+        ("locales", "locales"),
+        ("assets/folimeld-supporter-maid.png", "assets"),
+    ] + license_datas(SPECPATH),
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

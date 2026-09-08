@@ -10,6 +10,7 @@ a = Analysis(
     binaries=[],
     datas=[
         ("locales", "locales"),
+        ("assets/folimeld-supporter-maid.png", "assets"),
         ("assets/Folimeld.iconset/icon_256x256.png", "assets"),
     ] + license_datas(SPECPATH),
     hiddenimports=["winrt.windows.foundation", "winrt.windows.foundation.collections"],

@@ -73,7 +73,7 @@ Under **Settings → Image Size**, choose a thumbnail size of 144, 288, or 432 p
 
 The display language, image size, and last opened folder are saved on your device. PDFs are processed locally. Support purchases in the Windows MSIX edition use Microsoft Store to retrieve product information, check purchase status, and process payments. PDFs are never sent to the Store.
 
-In the Windows MSIX edition, **Help → Support Development…** lets you make a one-time purchase with a supporter icon (once the product is published in the Store). Purchasing adds a heart icon to the Help menu. PDF editing features are the same whether or not you make a purchase. For developer setup instructions, see [Windows support purchases](docs/windows-store-purchases.md) (in Japanese).
+In the Windows MSIX edition, **Help → Support Development…** lets you make a one-time purchase with a supporter icon (once the product is published in the Store). Purchasing adds a supporter icon to the Help menu. PDF editing features are the same whether or not you make a purchase. For developer setup instructions, see [Windows support purchases](docs/windows-store-purchases.md) (in Japanese).
 
 ## Development and contributions
 

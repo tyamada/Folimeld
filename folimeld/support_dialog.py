@@ -1,25 +1,15 @@
+import sys
+from pathlib import Path
+
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QColor, QIcon, QPainter, QPainterPath, QPixmap
+from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QDialog, QLabel, QPushButton, QVBoxLayout
 
 
 def supporter_icon():
-    """Resolution-independent heart drawing; no emoji/font dependency."""
-    pixmap = QPixmap(64, 64)
-    pixmap.fill(Qt.GlobalColor.transparent)
-    painter = QPainter(pixmap)
-    painter.setRenderHint(QPainter.RenderHint.Antialiasing)
-    painter.setPen(Qt.PenStyle.NoPen)
-    painter.setBrush(QColor("#d64b75"))
-    heart = QPainterPath()
-    heart.moveTo(32, 55)
-    heart.cubicTo(0, 34, 2, 5, 21, 10)
-    heart.cubicTo(27, 11, 30, 15, 32, 19)
-    heart.cubicTo(34, 15, 37, 11, 43, 10)
-    heart.cubicTo(62, 5, 64, 34, 32, 55)
-    painter.drawPath(heart)
-    painter.end()
-    return QIcon(pixmap)
+    """Load the supporter artwork from source or bundled assets."""
+    root = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent.parent))
+    return QIcon(str(root / "assets" / "folimeld-supporter-maid.png"))
 
 
 class SupportDialog(QDialog):
