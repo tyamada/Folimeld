@@ -4,9 +4,6 @@
 
 ## 技術構成
 
-ChromeOS / Android向けの実験的な最小画面と移植状況は、[Android最小試作](docs/android-prototype.md)を参照してください。
-APKの生成とAndroid実機での動作確認は未完了です。
-
 - Python 3
 - PySide6 / Qt Widgets
 - PyMuPDF
