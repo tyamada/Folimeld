@@ -9,6 +9,7 @@ from PySide6.QtWidgets import (QApplication, QFileDialog, QMainWindow, QMessageB
 
 from . import __version__
 from .dialogs import PropertiesDialog
+from .help_dialog import HelpDialog
 from .i18n import I18n, LANGUAGES, install_qt_translator
 from .model import PasswordRequiredError, PdfDocument
 from .widgets import THUMBNAIL_SIZES, ThumbnailList
@@ -35,6 +36,7 @@ class MainWindow(QMainWindow):
         self.resize(1100, 760)
         self.support = StoreSupport(self) if is_packaged() else None
         self.support_dialog = None
+        self.help_dialog = None
         self._build_ui()
         if self.support:
             self.support.changed.connect(self._update_support)
@@ -90,6 +92,9 @@ class MainWindow(QMainWindow):
             action.setChecked(code == self.i18n.language)
             action.triggered.connect(lambda checked=False, lang=code: self.change_language(lang))
             language_menu.addAction(action)
+        self.help_action = self._action("help_usage", self.show_help, "F1")
+        help_menu.addAction(self.help_action)
+        help_menu.addSeparator()
         help_menu.addAction(self._action("version_info", self.about))
         help_menu.addAction(self._action("licenses", self.show_licenses))
         if self.support:
@@ -332,6 +337,18 @@ class MainWindow(QMainWindow):
     def change_language(self, language: str) -> None:
         QSettings().setValue("language", language)
         QMessageBox.information(self, self.tr_("language"), self.tr_("restart_required"))
+
+    def show_help(self) -> None:
+        if self.help_dialog is None:
+            self.help_dialog = HelpDialog(self.tr_, (
+                self.open_action, self.save_action, self.save_as_action,
+                self.insert_action, self.insert_blank_action, self.delete_action,
+                self.up_action, self.down_action, self.left_action,
+                self.right_action, self.help_action,
+            ), self)
+        self.help_dialog.show()
+        self.help_dialog.raise_()
+        self.help_dialog.activateWindow()
 
     def about(self) -> None:
         text = self.tr_("version_text", version=__version__)

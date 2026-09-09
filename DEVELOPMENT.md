@@ -1,5 +1,7 @@
 # Folimeld 開発ガイド
 
+[日本語](DEVELOPMENT.md) | [English](DEVELOPMENT_en.md)
+
 この文書では、開発環境の構築、テスト、ビルド、リリース用パッケージの作成方法を説明します。
 
 ## 技術構成
@@ -14,6 +16,8 @@
 ## 開発環境のセットアップ
 
 ### Windows
+
+Windows版はIntel/AMD（x64）とARM（ARM64）の両方に対応しています。
 
 ```bat
 py -m venv .venv
@@ -106,7 +110,7 @@ build_exe.bat
 
 ## Microsoft Store向けMSIX
 
-### x64
+### Intel/AMD（x64）
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\build_msix.ps1
@@ -125,7 +129,7 @@ powershell -ExecutionPolicy Bypass -File .\build_msix.ps1 `
 
 引数を省略すると開発用Identityで未署名パッケージを生成します。Store外でインストールする場合は、マニフェストのPublisherと一致する証明書で署名してください。
 
-### ARM64
+### ARM（ARM64）
 
 ARM64版は、Windows on ARM実機またはARM64 Windows仮想環境で作成します。PyInstallerはx64からARM64へのクロスビルドを行わないため、ARM64版Pythonで仮想環境を作り直し、PySide6、PyMuPDF、Pillow、PyInstallerのARM64対応パッケージをインストールしてください。
 
