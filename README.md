@@ -34,20 +34,21 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 
 ### Ubuntu / Debian版を直接ダウンロード
 
-バージョン **0.3.2 / amd64（x86-64）**：
+バージョン **0.3.3 / amd64（x86-64）**：
 
-- [debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_amd64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
-- [Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_amd64.snap?raw=true)（snapdが必要）
-- [SHA-256チェックサム](releases/ubuntu/folimeld_0.3.2_SHA256SUMS.txt?raw=true)
+- [debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_amd64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
+- [Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_amd64.snap?raw=true)（snapdが必要）
+- [SHA-256チェックサム](releases/ubuntu/folimeld_0.3.3_SHA256SUMS.txt?raw=true)
+- [ビルド時のソースと対応記録](releases/ubuntu/source/0.3.3-amd64/)
 
 ダウンロード先のフォルダーで、使用するパッケージのインストールコマンドを実行してください。
 
 ```bash
 # deb版
-sudo apt install ./folimeld_0.3.2_amd64.deb
+sudo apt install ./folimeld_0.3.3_amd64.deb
 
 # Snap版
-sudo snap install --dangerous ./folimeld_0.3.2_amd64.snap
+sudo snap install --dangerous ./folimeld_0.3.3_amd64.snap
 ```
 
 バージョン **0.3.2 / arm64（AArch64）**：

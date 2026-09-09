@@ -34,20 +34,21 @@ Download release packages from [GitHub Releases](https://github.com/tyamada/Foli
 
 ### Direct downloads for Ubuntu / Debian
 
-Version **0.3.2 / amd64 (x86-64)**:
+Version **0.3.3 / amd64 (x86-64)**:
 
-- [Download the deb package](releases/ubuntu/folimeld_0.3.2_amd64.deb?raw=true) (Ubuntu 22.04 or later / Debian 13)
-- [Download the Snap package](releases/ubuntu/folimeld_0.3.2_amd64.snap?raw=true) (requires snapd)
-- [SHA-256 checksums](releases/ubuntu/folimeld_0.3.2_SHA256SUMS.txt?raw=true)
+- [Download the deb package](releases/ubuntu/folimeld_0.3.3_amd64.deb?raw=true) (Ubuntu 22.04 or later / Debian 13)
+- [Download the Snap package](releases/ubuntu/folimeld_0.3.3_amd64.snap?raw=true) (requires snapd)
+- [SHA-256 checksums](releases/ubuntu/folimeld_0.3.3_SHA256SUMS.txt?raw=true)
+- [Build source snapshots and artifact records](releases/ubuntu/source/0.3.3-amd64/)
 
 Run the installation command for your chosen package from the download folder.
 
 ```bash
 # deb package
-sudo apt install ./folimeld_0.3.2_amd64.deb
+sudo apt install ./folimeld_0.3.3_amd64.deb
 
 # Snap package
-sudo snap install --dangerous ./folimeld_0.3.2_amd64.snap
+sudo snap install --dangerous ./folimeld_0.3.3_amd64.snap
 ```
 
 Version **0.3.2 / arm64 (AArch64)**:
