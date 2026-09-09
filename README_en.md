@@ -16,7 +16,7 @@ Folimeld is a desktop application for visually rearranging, rotating, inserting,
 - Edit the PDF version, page layout, and binding direction
 - Set or remove a password required to open a PDF
 - Available in Japanese, English, German, Spanish, French, Korean, Portuguese, and Chinese
-- Runs on Windows, macOS, Ubuntu, and Debian
+- Runs on Windows (both Intel/AMD (x64) and ARM (ARM64) editions), macOS, Ubuntu, and Debian
 
 ## Downloads
 
@@ -24,7 +24,7 @@ Download release packages from [GitHub Releases](https://github.com/tyamada/Foli
 
 | OS | Package formats |
 | --- | --- |
-| Windows 10 / 11 | EXE / MSIX (Microsoft Store release in preparation) |
+| Windows 10 / 11 (Intel/AMD (x64) / ARM (ARM64)) | EXE / MSIX (Microsoft Store release in preparation) |
 | macOS | `.app` (App Store release in preparation) |
 | Ubuntu | `.deb` / `.snap` / standalone executable (see each release for supported versions) |
 | Debian 13 | `.deb` (amd64 / arm64; basic functionality verified on WSL2) |
@@ -91,7 +91,7 @@ In the Windows MSIX edition, **Help → Support Development…** lets you make a
 
 ## Development and contributions
 
-See [DEVELOPMENT.md](DEVELOPMENT.md) (in Japanese) for instructions on running from source, testing, and building packages for each operating system. Report bugs and suggest improvements through [Issues](https://github.com/tyamada/Folimeld/issues).
+See [DEVELOPMENT_en.md](DEVELOPMENT_en.md) for instructions on running from source, testing, and building packages for each operating system. Report bugs and suggest improvements through [Issues](https://github.com/tyamada/Folimeld/issues).
 
 Release history is available in [CHANGELOG_en.md](CHANGELOG_en.md).
 

@@ -16,7 +16,7 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 - PDFバージョン、ページレイアウト、綴じ方向を編集
 - 閲覧パスワードの設定と解除
 - 日本語、英語、ドイツ語、スペイン語、フランス語、韓国語、ポルトガル語、中国語に対応
-- Windows、macOS、Ubuntu、Debianで利用可能
+- Windows（Intel/AMD（x64）版・ARM（ARM64）版の両方）、macOS、Ubuntu、Debianで利用可能
 
 ## ダウンロード
 
@@ -24,7 +24,7 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 
 | OS | 配布形式 |
 | --- | --- |
-| Windows 10 / 11 | EXE / MSIX（Microsoft Storeでの公開を準備中） |
+| Windows 10 / 11（Intel/AMD（x64） / ARM（ARM64）） | EXE / MSIX（Microsoft Storeでの公開を準備中） |
 | macOS | `.app` (App Storeでの公開を準備中) |
 | Ubuntu | `.deb` / `.snap` / 単体実行ファイル（対応バージョンは各リリースを参照） |
 | Debian 13 | `.deb`（amd64 / arm64、WSL2で基本動作確認済み） |
