@@ -68,6 +68,8 @@ Debian 13 uses the same deb package as Ubuntu. If a minimal installation display
 
 ## Basic usage
 
+Open **Help → User guide** or press F1 to view basic operations, settings, and keyboard shortcuts. You can keep the guide open while working on a PDF.
+
 1. Launch Folimeld and select a PDF using **File → Open**.
 2. Click a page to select it. Use Ctrl or Shift to select multiple pages.
 3. Edit pages using the toolbar, menus, or drag and drop.
