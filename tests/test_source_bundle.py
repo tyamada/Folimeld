@@ -80,6 +80,7 @@ def test_association_verifies_archive_and_changed_sources(source_tree):
     with patch("PyInstaller.archive.readers.CArchiveReader", return_value=reader):
         path = record_artifact(exe, exe, source_tree / "dist/source", project_root=source_tree)
         assert json.loads(path.read_text())["artifact_sha256"] == hashlib.sha256(b"executable").hexdigest()
+        assert json.loads(path.read_text())["source_archive"] == record["source_archive"]
         (source_tree / "main.py").write_bytes(b"changed during build")
         with pytest.raises(ValueError, match="Source changed"):
             record_artifact(exe, exe, source_tree / "dist/source", project_root=source_tree)

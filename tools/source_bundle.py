@@ -180,7 +180,7 @@ The package association is recorded by the build script, not inferred by hash.
         "executable": executable.name,
         "executable_sha256": digest(executable),
         "association": "embedded record" if artifact.resolve() == executable.resolve() else "packaging script supplied executable; verify package contents before publication",
-        "source_archive": name,
+        "source_archive": record["source_archive"],
         "source_sha256": record["source_sha256"],
         "git_commit": record["git_commit"],
         "working_tree_changed": record["working_tree_changed"],
