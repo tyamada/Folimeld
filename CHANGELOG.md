@@ -1,5 +1,7 @@
 # 変更履歴
 
+[日本語](CHANGELOG.md) | [English](CHANGELOG_en.md)
+
 ## 0.3.3 - 2026-09-09
 
 - 配布用debをUbuntu 22.04でビルドし、Ubuntu 22.04以降に対応。X11依存ライブラリの指定も補完

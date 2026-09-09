@@ -27,7 +27,7 @@ Download release packages from [GitHub Releases](https://github.com/tyamada/Foli
 | Windows 10 / 11 | EXE / MSIX (Microsoft Store release in preparation) |
 | macOS | `.app` (App Store release in preparation) |
 | Ubuntu | `.deb` / `.snap` / standalone executable (see each release for supported versions) |
-| Debian 13 | `.deb` (amd64; basic functionality verified on WSL2) |
+| Debian 13 | `.deb` (amd64 / arm64; basic functionality verified on WSL2) |
 
 > [!NOTE]
 > Packages for some operating systems may not be available in every release.
@@ -50,7 +50,21 @@ sudo apt install ./folimeld_0.3.2_amd64.deb
 sudo snap install --dangerous ./folimeld_0.3.2_amd64.snap
 ```
 
-Debian 13 uses the same deb package as Ubuntu. If a minimal installation displays `Fontconfig error: Cannot load default config file`, run `sudo apt install fontconfig-config`. PDF display, page movement, rotation, saving, and reopening have been verified on Debian 13.6 (WSL2 / WSLg, X11). See the [Debian verification record](docs/debian-wsl-verification.md) (in Japanese) for details.
+Version **0.3.2 / arm64 (AArch64)**:
+
+- [Download the ARM64 deb package](releases/ubuntu/folimeld_0.3.2_arm64.deb?raw=true) (Ubuntu 22.04 or later / Debian 13)
+- [Download the ARM64 Snap package](releases/ubuntu/folimeld_0.3.2_arm64.snap?raw=true) (requires snapd)
+- [SHA-256 checksums](releases/ubuntu/folimeld_0.3.2_SHA256SUMS.txt?raw=true)
+
+```bash
+# ARM64 deb package
+sudo apt install ./folimeld_0.3.2_arm64.deb
+
+# ARM64 Snap package
+sudo snap install --dangerous ./folimeld_0.3.2_arm64.snap
+```
+
+Debian 13 uses the same deb package as Ubuntu. If a minimal installation displays `Fontconfig error: Cannot load default config file`, run `sudo apt install fontconfig-config`. PDF display, page movement, rotation, saving, and reopening have been verified on Debian 13.6 amd64 (WSL2 / WSLg, X11). See the [Debian verification record](docs/debian-wsl-verification.md) (in Japanese) for details. Installation of the deb package and startup with a PDF have also been verified on arm64 (WSL2).
 
 ## Basic usage
 
@@ -79,7 +93,7 @@ In the Windows MSIX edition, **Help → Support Development…** lets you make a
 
 See [DEVELOPMENT.md](DEVELOPMENT.md) (in Japanese) for instructions on running from source, testing, and building packages for each operating system. Report bugs and suggest improvements through [Issues](https://github.com/tyamada/Folimeld/issues).
 
-Release history is available in [CHANGELOG.md](CHANGELOG.md) (in Japanese).
+Release history is available in [CHANGELOG_en.md](CHANGELOG_en.md).
 
 ## License
 
