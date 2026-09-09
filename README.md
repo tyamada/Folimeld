@@ -34,10 +34,10 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 
 ### Ubuntu / Debian版を直接ダウンロード
 
-バージョン **0.3.2 / amd64（x86-64）**：
+バージョン **0.3.2 / x86_64（amd64）**：
 
-- [debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_amd64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
-- [Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_amd64.snap?raw=true)（snapdが必要）
+- [x86_64版debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_amd64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
+- [x86_64版Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_amd64.snap?raw=true)（snapdが必要）
 - [SHA-256チェックサム](releases/ubuntu/folimeld_0.3.2_SHA256SUMS.txt?raw=true)
 
 ダウンロード先のフォルダーで、使用するパッケージのインストールコマンドを実行してください。
@@ -52,15 +52,15 @@ sudo snap install --dangerous ./folimeld_0.3.2_amd64.snap
 
 バージョン **0.3.2 / arm64（AArch64）**：
 
-- [ARM64版debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_arm64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
-- [ARM64版Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_arm64.snap?raw=true)（snapdが必要）
+- [arm64版debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_arm64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
+- [arm64版Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_arm64.snap?raw=true)（snapdが必要）
 - [SHA-256チェックサム](releases/ubuntu/folimeld_0.3.2_SHA256SUMS.txt?raw=true)
 
 ```bash
-# ARM64 deb版
+# arm64 deb版
 sudo apt install ./folimeld_0.3.2_arm64.deb
 
-# ARM64 Snap版
+# arm64 Snap版
 sudo snap install --dangerous ./folimeld_0.3.2_arm64.snap
 ```
 
