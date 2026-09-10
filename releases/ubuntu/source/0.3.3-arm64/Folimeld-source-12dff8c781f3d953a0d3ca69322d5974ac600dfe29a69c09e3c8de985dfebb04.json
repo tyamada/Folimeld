@@ -1,0 +1,193 @@
+{
+  "format": 1,
+  "target": "linux",
+  "created_utc": "2026-09-10T03:57:36.330877+00:00",
+  "git_commit": "9102573dc45b70393bed716dd5c9f9f7f9e5a35f",
+  "working_tree_changed": true,
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-aarch64-with-glibc2.35",
+  "machine": "aarch64",
+  "packages": [
+    {
+      "name": "PySide6",
+      "version": "6.8.0.2"
+    },
+    {
+      "name": "PySide6_Addons",
+      "version": "6.8.0.2"
+    },
+    {
+      "name": "PySide6_Essentials",
+      "version": "6.8.0.2"
+    },
+    {
+      "name": "Pygments",
+      "version": "2.21.0"
+    },
+    {
+      "name": "altgraph",
+      "version": "0.17.5"
+    },
+    {
+      "name": "exceptiongroup",
+      "version": "1.3.1"
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.0"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3"
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0"
+    },
+    {
+      "name": "pip",
+      "version": "26.2.1"
+    },
+    {
+      "name": "pluggy",
+      "version": "1.6.0"
+    },
+    {
+      "name": "pyinstaller",
+      "version": "6.22.2"
+    },
+    {
+      "name": "pyinstaller-hooks-contrib",
+      "version": "2026.7"
+    },
+    {
+      "name": "pymupdf",
+      "version": "1.28.2"
+    },
+    {
+      "name": "pytest",
+      "version": "9.1.1"
+    },
+    {
+      "name": "setuptools",
+      "version": "59.6.0"
+    },
+    {
+      "name": "shiboken6",
+      "version": "6.8.0.2"
+    },
+    {
+      "name": "tomli",
+      "version": "2.4.1"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0"
+    }
+  ],
+  "files": {
+    ".gitattributes": "88c68bc848e302dab62d8ebc13461364d56de5a55fcefaefe6cfec446fb161b6",
+    ".gitignore": "f11895b783e1e44239d30f3ca2b1e637d2c6c7c5c6014211899bcda1ae47f00d",
+    "AGENTS.md": "84faf1978d34948a96bc724ace6dfb292a2686c2be8df2b09aa92b059da23435",
+    "CHANGELOG.md": "55a32f0ed359e7dc0c4ea0a5b2e80dafc002636c982752baf2f7f6d8af66aa85",
+    "CHANGELOG_en.md": "3c6d741c9ff5ddc42cdca87d6c05fb51f6eda196fe1c93200a4e3dd7aacab613",
+    "DEVELOPMENT.md": "7dce8efc7771515e3352b15fe2320ca8c906e5324baaec8e09a988fb32eff8a5",
+    "DEVELOPMENT_en.md": "40532d3962eb82a6e6dd4041ffbb9ea6912e649d1930576391697c89aeea7ea4",
+    "Folimeld-linux.spec": "f1f90550502fab23f4211a4ab278b2ba94108ced4d203828ba0a5df7c0e9568f",
+    "Folimeld-mac.spec": "ecfcf5fe9ad82d0fa08ab9e68031e61850e4a3fa70d944504e7cad034aa9312a",
+    "Folimeld.spec": "629fbb4c7045909d5d1c52abc3ea84d7235ddd675aae3148c2ec3177eea10277",
+    "LICENSE": "a195a6a9c736ffd457c87a451b70b7a3da15869fcb16bb5bbc27d6d961b1cc27",
+    "README.md": "ac9e66498c4c6a5bb77a9abd5a5d5b98c62adab087972310eb5747fda2fcf817",
+    "README_en.md": "083bd2d7701f75e5ed007f91b18153b1dfa9125b83622f5f21c12bd5450fb7f9",
+    "assets/Folimeld-icon-master.png": "271c0410b2089e8fbff61f8f9af1724488b2eb410a67152a54d7161038d11c1d",
+    "assets/Folimeld-icon-source.png": "b42071ddf1385faee996dc15b989be7d63db3a1404d862755e68f55c9d47e81a",
+    "assets/Folimeld.icns": "869c29954251dca39ca82ea2f19c7b7851cd5ca27b8b0ea2aa99c34163340e22",
+    "assets/Folimeld.ico": "e9c5529d926786826808237dddcf4e799f2230b191d2f188328d8114fd07c0fc",
+    "assets/Folimeld.iconset/icon_1024x1024.png": "b3351c6c84fb40deb9384c2449913dbc6965ba2404a9a52a30157b12d76b5b2c",
+    "assets/Folimeld.iconset/icon_128x128.png": "9da39dcc466d95d827ed510d3fd03d50aafd5be6cbed622dcfc8260e2f973f47",
+    "assets/Folimeld.iconset/icon_16x16.png": "619c0bd5db18929a14c1746a0ec26adf8ffd15ccf36e56481452c0c53e0bebb9",
+    "assets/Folimeld.iconset/icon_256x256.png": "e3ee064eec6215d101b1ff4c2e0815c1d6e717b4dc5f5d7278e8ba67658575d4",
+    "assets/Folimeld.iconset/icon_32x32.png": "2eeb94cdcdc7c82d62028c77af8aecc679cc0a2588f690a6693a9c0da20a20c4",
+    "assets/Folimeld.iconset/icon_512x512.png": "3ae266305c7bc176eaabcc045f20fc3d834b30a6880e4720cdb223b3f0338187",
+    "assets/Folimeld.iconset/icon_64x64.png": "ec856814333fa88bdbc2be5601fe5bef61da6740d9a948d247a3c21a23149e24",
+    "assets/folimeld-supporter-maid.png": "96ce8663c754668e903ff8909665c39141bbe53fd6cb0849ac18577ec664e4eb",
+    "build_appstore.sh": "b687fd7e13c2fe7d3904f3f120d0eefee3c0784e537f3d0fd7fb16b9e7e262cb",
+    "build_exe.bat": "6812fc20a2faeab4eed951484f0b79a92f5a92ecb968eb6dd0222678c78e20fd",
+    "build_exe.sh": "5830c401892363bed651198a0251877d40a7b75c04d3bef9319b8e24d0c95721",
+    "build_linux.sh": "e8bc83a135105904090085ec9402caccead0143c7864b6b163f794e7e71ccdda",
+    "build_msix.ps1": "253dcfdbffcb1fe249129ca6cef33bafe812bbea1f2c82eecdda7f3553923b96",
+    "build_snap.sh": "557f381877c629e4af2c7df8dfcb609f6514adec69fdcc601b24aced5431abfe",
+    "docs/debian-wsl-verification.md": "a0db28053153b19b087a2d89f00eb19c1e71635f200b1742071827726fa3b91d",
+    "docs/license-distribution.md": "767fd90323e83d99259d9862d3826a48fcd7e83dd7d2e072613c7aa167ec0eea",
+    "docs/screenshots/main-window.png": "bc04098bd4e825767e60a021709f0fbd2c3d79f8c4896cb48d9d109353a75cdb",
+    "docs/screenshots/password-dialog.png": "6349ede59d6eea427db7a07f4003d0bd4f2e8c44af6576dddfc00b20e5fc6a03",
+    "docs/source-audit-0.3.2.md": "d5652a3a4a3b4881ddcadb4d7987ddc612620b3857d4ef5845c39c961268f3bf",
+    "docs/source-downloads-0.3.2.json": "4a41781b8c36d58c4c3d5edbf882a44dfa60a1976db0859abcfc72dc23663b20",
+    "docs/windows-load-test.md": "3a77265bbf6e0cce8808ab28a6a4f0f3d7bb346b4a57fe02622320631c504d76",
+    "docs/windows-store-purchases.md": "529c55e755c25741e330b26c2bc29c4739ad78901f7a8389eec6a5e18741bab3",
+    "folimeld/__init__.py": "2de6bb7aebfe621be18ca2827ed643771c80af7ffb304a627ce53226a64e46e0",
+    "folimeld/app.py": "4ba19cd128b145b56bb249a5496b9b0e8319a5918323375e025471264032e81b",
+    "folimeld/dialogs.py": "16a968f906e7631eb257e3d1097c8b1204f80b4ad9fa6ed5e17eead8e132ce3c",
+    "folimeld/help_dialog.py": "9fd8945c5b854b8c8ee0b3227987b9c09d84eeda067c9961a31911bc92452533",
+    "folimeld/i18n.py": "28f16e39719421ea2f06a88ac6c32e674e2c8a7f834f2660e2459d40e0d7b155",
+    "folimeld/license_info.py": "a822f0e62bdc0f409a9f0346fced4d13f585ff1d0131e3b820288bafafb08953",
+    "folimeld/model.py": "7b7c66feb261d941e34e552456db020bc19e39144eacb904a17907bb72850820",
+    "folimeld/store_support.py": "aff05647244b3dff81237097c685d272f3b02091727a86819806223cf43921be",
+    "folimeld/support_dialog.py": "a462d00cc98ba46a11b5c1faa9f9e3797db199bc1f26ed2d8c7f5a7210a1388d",
+    "folimeld/widgets.py": "c28fbd48d97b01180f251a71a6bb3c4339329e0d419701dbfb11e4f743496cdc",
+    "folimeld/windows_integration.py": "06aad02c1b697a9c761acfadf37a974e56e3389b2bb5db40fc826dae5c477b69",
+    "licenses/AGPL-3.0.txt": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e",
+    "licenses/Artwork-notices.txt": "9f15c3960eca4435de5f16fdaa1e3f55fe4a5b333238e3c8723e56caa45672ed",
+    "licenses/GPL-3.0.txt": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
+    "licenses/LGPL-3.0.txt": "7d3a95e5e06978064ed3f8e2b7c8f845e7fd8a405294727cc708f94cb83b8059",
+    "licenses/PyWinRT.txt": "6ee431d0ca3db6b3f9a646457d0da5907d968bfb1a986ab3e69cce0b2350dfa5",
+    "licenses/Third-party-notices.txt": "c3834dde66fc8356f5c245d722c0640aae2c68b7220cef6373bb6c1224c52d70",
+    "locales/de.json": "79097074c980fa4b8a189c3d5bb92dde5e9b8944c5ff24ceeb0bbe92e0d7f6ca",
+    "locales/en.json": "6ff7e92d29313b98732866460fc12165e484c4acfe2f727282fdb96065394444",
+    "locales/es.json": "99e98c30c18056f433287ac31545e1afa62ddf5c92e2481ab9f874ad6a07196d",
+    "locales/fr.json": "f9355b371166a67959a97e0375fc4c5f095b30f8f1b826b4199ff19970e57b8a",
+    "locales/ja.json": "69d556af251f9ac84553dc1087dc7d5fc83415eeeb3e3dd528e7d8064ec9abd6",
+    "locales/ko.json": "b9404bd32609dea19ff9342c926bc88029cc27f49513b37db0da4fcabde5288e",
+    "locales/pt.json": "45acfbd519b6f6884526fc521b1be851ac4c342628186b70af8cc36a54ba5af8",
+    "locales/zh.json": "54268cc04c03924e3fefef2f76556eb36873aec25ce31cdfe76767173102e988",
+    "main.py": "a17b85b34f599666c4d25f5ca675b28195fdbbc6fb9025ce4dd29a4cb419cc3e",
+    "packaging/linux/control.in": "eb8e24d234cedcab6564fbd81ec1d45ad477836997752b5a9e529bbfba077417",
+    "packaging/linux/folimeld-snap-launch": "fb5420c3e9353ba24d3b8d73a02352e84f26723149f61ab659e76e21517bbc75",
+    "packaging/linux/folimeld.desktop": "142656b70d999ef4391d758bd52aedbc248b1d2bde6be0a3413dec9e65348512",
+    "packaging/linux/snapcraft.yaml.in": "8a99bd086a1f8f3c0d75d239deef980a9c8a163c50e81ba08f2a4f28eb28b6dc",
+    "packaging/macos/Folimeld.entitlements": "7def68afd82637cc18b6e050ff18819d06b4c14d682c3504e57ccf26e32f3f2c",
+    "packaging/msix/AppxManifest.xml.in": "c96b334183b56ce9b1375d01ff4a431fe347a4d98eaa0784504bd3cfa79b9bb0",
+    "packaging/msix/Assets/Square150x150Logo.png": "65626b2c61d1fb0d7baaa3a8f5dbab7ee15b2173c91a21092ec7956fc22d1496",
+    "packaging/msix/Assets/Square310x310Logo.png": "357db301cc2169c314fb9971a0efa564d0dba83d50f0c823c377ad7b964b13fe",
+    "packaging/msix/Assets/Square44x44Logo.png": "c894682573946ef3e82a3f60137972391abad65c116c851486ba502d65ae5161",
+    "packaging/msix/Assets/Square71x71Logo.png": "c4c987f8433b24778785ac298d21d09457567be71244e8d86605030093c2370a",
+    "packaging/msix/Assets/StoreLogo.png": "8bc4c8e228bd3df8bfcacefec9c3bbd714ca7729a123f7601e88f023d4f2486d",
+    "packaging/msix/Assets/Wide310x150Logo.png": "9bd98199d6f7995ef5e80ffef4adf3d414ad058fa5e659c36bac0e058451cd99",
+    "requirements-dev.txt": "d6d15d5653cf1b21a83741afe84d0f8603bdfbc751a360f99ca526b5ebf2ed8e",
+    "requirements.txt": "66b4c09705edfbecf8b9fd3bf783facfcd313ee75dd43cf4296f0d0e83da9d93",
+    "run.bat": "aa879c4ba4b4e00f1518d6ee0d2bd371316fbe0334b65b7971f28629d38e484d",
+    "tests/test_blank_page.py": "d7bdc9363bb450c18eb1016968ffc74df88c069ed887c218106e083aaa66ec40",
+    "tests/test_details.py": "d8601aa791b8bb8a71be70bfb3c757cadbf7dd230265062030bc7eba38f3fc30",
+    "tests/test_file_dialog.py": "ea31e183c4f253e6a3ef6ab135214ac8e18359bd8c11c89489b6e1a8141a6c36",
+    "tests/test_help.py": "60a22b9f17210e61473c3c6a1bf1779f59fcc708e7819b61d40566e620c6ce3d",
+    "tests/test_i18n.py": "533eca40f0ec841be925260a85a3b2b33a38a2dc09e99c2fb685d3d4e3be49d6",
+    "tests/test_license_info.py": "e81529cea4a46575a4627e0924a141fde941691ac8c6d871592ec0ffa3fe3bf8",
+    "tests/test_password.py": "720d7c8d699e693ad8098cb1f9bf3038c6c9926891b4db1357706de6f7384fdd",
+    "tests/test_source_bundle.py": "795c9a0853607d9dce601f2aa41cdace8bb9334c40665a55577b5cbf3e8e40e1",
+    "tests/test_store_support.py": "1dc0ebceb6c156e62992ca8ce7d12254b06e509de3e16fbf6651aaa7e1ea27bd",
+    "tests/test_version.py": "f195da3d26f4299b04437b6abfd49bb3017ac079fabdd824cce2e050a246a8aa",
+    "tests/test_windows_integration.py": "9c7a5357a71fb5bbe06ae2695161002aaada0261e356fa98287d8f05b338c5e5",
+    "tools/fetch_dependency_sources.py": "baa429ba94bb6edb74ea4d7a954656c204700b867ad678b080db5ee1d90f3744",
+    "tools/license_bundle.py": "02b4cbfd88a608fd2fdac92e59e7a498b6718bade35b851d0b5fc41ffa4e6eda",
+    "tools/make_app_icon.py": "a1c53b2767541bc9ba1938dc506088dd10d92e689a8fcb5e98bb97ad207c710d",
+    "tools/sign_dev_msix.ps1": "27523fb949444a3af9bd732a4eeff7aa0e7ab11997b07615b59b60b7299dfd74",
+    "tools/source_bundle.py": "168a18701cef38f14da42b44ea28aeeeb09f724a0a8a6a472e614cb1df0e1eff",
+    "tools/storekit_probe/README.md": "0f6913c89e93295e207a55f2f0f4f80602f6b7ba3d61e0e8244375c4b4f1994c",
+    "tools/storekit_probe/StoreKitProbe.swift": "3ea327ec57a955cbb4d2e62b42c76f0899a220b3fe0aaea133dbb785cb531f44",
+    "tools/storekit_probe/probe.py": "3c7d4f292cd0a49b0bca2845ea68aba6c914412a3cccd4d1b0332af5b91be85d",
+    "tools/write_version_info.py": "2eda49908f2820339e20ceb34330c5c86b0a5c5cce029630edad4f77d9a7e085"
+  },
+  "dependency_sources": "NOT INCLUDED: obtain matching dependency sources and review bundled native components before distribution",
+  "source_archive": "Folimeld-source-12dff8c781f3d953a0d3ca69322d5974ac600dfe29a69c09e3c8de985dfebb04.zip",
+  "source_sha256": "12dff8c781f3d953a0d3ca69322d5974ac600dfe29a69c09e3c8de985dfebb04"
+}

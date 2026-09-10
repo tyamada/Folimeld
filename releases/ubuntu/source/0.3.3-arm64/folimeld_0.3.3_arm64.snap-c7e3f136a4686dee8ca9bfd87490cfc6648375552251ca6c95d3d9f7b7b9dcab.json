@@ -1,0 +1,12 @@
+{
+  "artifact": "folimeld_0.3.3_arm64.snap",
+  "artifact_sha256": "c7e3f136a4686dee8ca9bfd87490cfc6648375552251ca6c95d3d9f7b7b9dcab",
+  "executable": "folimeld",
+  "executable_sha256": "342fbcbc2e6754f9d903ab9c5b56f089897a8ee4b4cfd79f4cecbe49f13c7a62",
+  "association": "packaging script supplied executable; verify package contents before publication",
+  "source_archive": "Folimeld-source-dc872a9a74e523a83a7b65f6b2e4a89a89f17e1c7dc2ae62677dec00bb5804f6.zip",
+  "source_sha256": "dc872a9a74e523a83a7b65f6b2e4a89a89f17e1c7dc2ae62677dec00bb5804f6",
+  "git_commit": "9102573dc45b70393bed716dd5c9f9f7f9e5a35f",
+  "working_tree_changed": true,
+  "dependency_sources": "NOT INCLUDED: obtain matching dependency sources and review bundled native components before distribution"
+}

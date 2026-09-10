@@ -51,18 +51,19 @@ sudo apt install ./folimeld_0.3.3_amd64.deb
 sudo snap install --dangerous ./folimeld_0.3.3_amd64.snap
 ```
 
-Version **0.3.2 / arm64 (AArch64)**:
+Version **0.3.3 / arm64 (AArch64)**:
 
-- [Download the arm64 deb package](releases/ubuntu/folimeld_0.3.2_arm64.deb?raw=true) (Ubuntu 22.04 or later / Debian 13)
-- [Download the arm64 Snap package](releases/ubuntu/folimeld_0.3.2_arm64.snap?raw=true) (requires snapd)
-- [SHA-256 checksums](releases/ubuntu/folimeld_0.3.2_SHA256SUMS.txt?raw=true)
+- [Download the arm64 deb package](releases/ubuntu/folimeld_0.3.3_arm64.deb?raw=true) (Ubuntu 22.04 or later / Debian 13)
+- [Download the arm64 Snap package](releases/ubuntu/folimeld_0.3.3_arm64.snap?raw=true) (requires snapd)
+- [SHA-256 checksums](releases/ubuntu/folimeld_0.3.3_SHA256SUMS.txt?raw=true)
+- [Build source snapshots and artifact records](releases/ubuntu/source/0.3.3-arm64/)
 
 ```bash
 # arm64 deb package
-sudo apt install ./folimeld_0.3.2_arm64.deb
+sudo apt install ./folimeld_0.3.3_arm64.deb
 
 # arm64 Snap package
-sudo snap install --dangerous ./folimeld_0.3.2_arm64.snap
+sudo snap install --dangerous ./folimeld_0.3.3_arm64.snap
 ```
 
 Debian 13 uses the same deb package as Ubuntu. If a minimal installation displays `Fontconfig error: Cannot load default config file`, run `sudo apt install fontconfig-config`. PDF display, page movement, rotation, saving, and reopening have been verified on Debian 13.6 amd64 (WSL2 / WSLg, X11). See the [Debian verification record](docs/debian-wsl-verification.md) (in Japanese) for details. Installation of the deb package and startup with a PDF have also been verified on arm64 (WSL2).

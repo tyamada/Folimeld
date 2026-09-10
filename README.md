@@ -51,18 +51,19 @@ sudo apt install ./folimeld_0.3.3_amd64.deb
 sudo snap install --dangerous ./folimeld_0.3.3_amd64.snap
 ```
 
-バージョン **0.3.2 / arm64（AArch64）**：
+バージョン **0.3.3 / arm64（AArch64）**：
 
-- [arm64版debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_arm64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
-- [arm64版Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_arm64.snap?raw=true)（snapdが必要）
-- [SHA-256チェックサム](releases/ubuntu/folimeld_0.3.2_SHA256SUMS.txt?raw=true)
+- [arm64版debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_arm64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
+- [arm64版Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_arm64.snap?raw=true)（snapdが必要）
+- [SHA-256チェックサム](releases/ubuntu/folimeld_0.3.3_SHA256SUMS.txt?raw=true)
+- [ビルド時のソースと対応記録](releases/ubuntu/source/0.3.3-arm64/)
 
 ```bash
 # arm64 deb版
-sudo apt install ./folimeld_0.3.2_arm64.deb
+sudo apt install ./folimeld_0.3.3_arm64.deb
 
 # arm64 Snap版
-sudo snap install --dangerous ./folimeld_0.3.2_arm64.snap
+sudo snap install --dangerous ./folimeld_0.3.3_arm64.snap
 ```
 
 Debian 13ではUbuntu版と同じdebパッケージを使用します。最小構成の環境で `Fontconfig error: Cannot load default config file` が表示される場合は、`sudo apt install fontconfig-config` を実行してください。Debian 13.6のamd64環境（WSL2 / WSLg、X11）でPDFの表示・ページ移動・回転・保存・再読込を確認しています。詳しくは[Debianでの検証記録](docs/debian-wsl-verification.md)を参照してください。arm64環境（WSL2）でもdebのインストールとPDFを指定した起動を確認済みです。

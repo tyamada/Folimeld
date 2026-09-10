@@ -1,0 +1,12 @@
+{
+  "artifact": "folimeld_0.3.3_arm64.deb",
+  "artifact_sha256": "e1e6d424524077f01b917f169190c427ed7dfc86d813454e765b004f90b3c117",
+  "executable": "folimeld",
+  "executable_sha256": "0e70a40afd0a3617f1de4705de2fe7cd3fb7a0cebe7bd8455351f465dc52d7d8",
+  "association": "packaging script supplied executable; verify package contents before publication",
+  "source_archive": "Folimeld-source-12dff8c781f3d953a0d3ca69322d5974ac600dfe29a69c09e3c8de985dfebb04.zip",
+  "source_sha256": "12dff8c781f3d953a0d3ca69322d5974ac600dfe29a69c09e3c8de985dfebb04",
+  "git_commit": "9102573dc45b70393bed716dd5c9f9f7f9e5a35f",
+  "working_tree_changed": true,
+  "dependency_sources": "NOT INCLUDED: obtain matching dependency sources and review bundled native components before distribution"
+}
