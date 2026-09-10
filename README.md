@@ -1,6 +1,6 @@
 # Folimeld
 
-[日本語](README.md) | [English](README_en.md)
+[English](README_en.md) | [日本語](README.md)
 
 ![Folimeld icon](assets/Folimeld.iconset/icon_128x128.png)
 
