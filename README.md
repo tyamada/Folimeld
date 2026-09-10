@@ -16,7 +16,7 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 - PDFバージョン、ページレイアウト、綴じ方向を編集
 - 閲覧パスワードの設定と解除
 - 日本語、英語、ドイツ語、スペイン語、フランス語、韓国語、ポルトガル語、中国語に対応
-- Windows（Intel/AMD（x64）版・ARM（ARM64）版の両方）、macOS、Ubuntu、Debianで利用可能
+- Windows（Intel/AMD（x64）版・ARM（arm64）版の両方）、macOS、Ubuntu、Debianで利用可能
 
 ## ダウンロード
 
@@ -24,7 +24,7 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 
 | OS | 配布形式 |
 | --- | --- |
-| Windows 10 / 11（Intel/AMD（x64） / ARM（ARM64）） | EXE / MSIX（Microsoft Storeでの公開を準備中） |
+| Windows 10 / 11（Intel/AMD（x64） / ARM（arm64）） | EXE / MSIX（Microsoft Storeでの公開を準備中） |
 | macOS | `.app` (App Storeでの公開を準備中) |
 | Ubuntu | `.deb` / `.snap` / 単体実行ファイル（対応バージョンは各リリースを参照） |
 | Debian 13 | `.deb`（amd64 / arm64、WSL2で基本動作確認済み） |
@@ -34,10 +34,10 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 
 ### Ubuntu / Debian版を直接ダウンロード
 
-バージョン **0.3.3 / amd64（x86-64）**：
+バージョン **0.3.3 / x86_64（amd64）**：
 
-- [debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_amd64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
-- [Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_amd64.snap?raw=true)（snapdが必要）
+- [x86_64版debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_amd64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
+- [x86_64版Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_amd64.snap?raw=true)（snapdが必要）
 - [SHA-256チェックサム](releases/ubuntu/folimeld_0.3.3_SHA256SUMS.txt?raw=true)
 - [ビルド時のソースと対応記録](releases/ubuntu/source/0.3.3-amd64/)
 
@@ -51,18 +51,19 @@ sudo apt install ./folimeld_0.3.3_amd64.deb
 sudo snap install --dangerous ./folimeld_0.3.3_amd64.snap
 ```
 
-バージョン **0.3.2 / arm64（AArch64）**：
+バージョン **0.3.3 / arm64（AArch64）**：
 
-- [ARM64版debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_arm64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
-- [ARM64版Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.2_arm64.snap?raw=true)（snapdが必要）
-- [SHA-256チェックサム](releases/ubuntu/folimeld_0.3.2_SHA256SUMS.txt?raw=true)
+- [arm64版debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_arm64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
+- [arm64版Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_arm64.snap?raw=true)（snapdが必要）
+- [SHA-256チェックサム](releases/ubuntu/folimeld_0.3.3_SHA256SUMS.txt?raw=true)
+- [ビルド時のソースと対応記録](releases/ubuntu/source/0.3.3-arm64/)
 
 ```bash
-# ARM64 deb版
-sudo apt install ./folimeld_0.3.2_arm64.deb
+# arm64 deb版
+sudo apt install ./folimeld_0.3.3_arm64.deb
 
-# ARM64 Snap版
-sudo snap install --dangerous ./folimeld_0.3.2_arm64.snap
+# arm64 Snap版
+sudo snap install --dangerous ./folimeld_0.3.3_arm64.snap
 ```
 
 Debian 13ではUbuntu版と同じdebパッケージを使用します。最小構成の環境で `Fontconfig error: Cannot load default config file` が表示される場合は、`sudo apt install fontconfig-config` を実行してください。Debian 13.6のamd64環境（WSL2 / WSLg、X11）でPDFの表示・ページ移動・回転・保存・再読込を確認しています。詳しくは[Debianでの検証記録](docs/debian-wsl-verification.md)を参照してください。arm64環境（WSL2）でもdebのインストールとPDFを指定した起動を確認済みです。
