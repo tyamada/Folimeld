@@ -92,9 +92,10 @@ class PropertiesDialog(QDialog):
         return self.model.doc.xref_get_key(preferences, "Direction")[1] == "/R2L"
 
     def accept(self) -> None:
-        self.model.set_metadata(self.title.text(), self.author.text(), self.subtitle.text(), self.keywords.text())
-        self.model.set_details(
-            self.pdf_version.currentText(), self.page_layout.currentText(),
-            self.cover_page.isChecked(), bool(self.scroll_direction.currentData()),
-        )
+        with self.model.transaction():
+            self.model.set_metadata(self.title.text(), self.author.text(), self.subtitle.text(), self.keywords.text())
+            self.model.set_details(
+                self.pdf_version.currentText(), self.page_layout.currentText(),
+                self.cover_page.isChecked(), bool(self.scroll_direction.currentData()),
+            )
         super().accept()

@@ -1,3 +1,4 @@
 *.pdf binary
 *.sh text eol=lf
 packaging/linux/folimeld-snap-launch text eol=lf
+* text=auto eol=lf

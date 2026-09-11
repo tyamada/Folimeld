@@ -1,11 +1,21 @@
 from pathlib import Path
 import secrets
+from contextlib import contextmanager
+from functools import wraps
 
 import fitz
 
 
 class PasswordRequiredError(Exception):
     """Raised when a PDF requires a valid viewing password."""
+
+
+def undoable(method):
+    @wraps(method)
+    def wrapped(self, *args, **kwargs):
+        with self.transaction():
+            return method(self, *args, **kwargs)
+    return wrapped
 
 
 class PdfDocument:
@@ -15,6 +25,76 @@ class PdfDocument:
         self.dirty = False
         self.view_password: str | None = None
         self.password_protected = False
+        self._undo = []
+        self._redo = []
+        self._revision = 0
+        self._next_revision = 0
+        self._saved_revision = 0
+        self._transaction_depth = 0
+
+    def _snapshot(self):
+        return (self.doc.tobytes(encryption=fitz.PDF_ENCRYPT_NONE, no_new_id=True),
+                self.view_password, self.password_protected, self._revision)
+
+    def _restore(self, state):
+        data, password, protected, revision = state
+        restored = fitz.open(stream=data, filetype="pdf")
+        self.doc.close()
+        self.doc = restored
+        self.view_password = password
+        self.password_protected = protected
+        self._revision = revision
+        self.dirty = revision != self._saved_revision
+
+    @contextmanager
+    def transaction(self):
+        """Group edits into one history entry and roll back failed edits."""
+        if self._transaction_depth:
+            yield
+            return
+        assert self.doc is not None
+        before = self._snapshot()
+        self._transaction_depth += 1
+        try:
+            yield
+            after = self._snapshot()
+            if before[:3] != after[:3]:
+                self._undo.append(before)
+                self._redo.clear()
+                self._next_revision += 1
+                self._revision = self._next_revision
+            self.dirty = self._revision != self._saved_revision
+        except Exception:
+            self._restore(before)
+            raise
+        finally:
+            self._transaction_depth -= 1
+
+    @property
+    def can_undo(self) -> bool:
+        return self.loaded and bool(self._undo)
+
+    @property
+    def can_redo(self) -> bool:
+        return self.loaded and bool(self._redo)
+
+    def undo(self) -> bool:
+        if not self.can_undo:
+            return False
+        current = self._snapshot()
+        self._restore(self._undo[-1])
+        self._undo.pop()
+        self._redo.append(current)
+        return True
+
+    def redo(self) -> bool:
+        if not self.can_redo:
+            return False
+        current = self._snapshot()
+        self._restore(self._redo[-1])
+        self._redo.pop()
+        self._undo.append(current)
+        return True
 
     @property
     def loaded(self) -> bool:
@@ -35,13 +115,22 @@ class PdfDocument:
         if self.doc is not None:
             self.doc.close()
         self.doc = None
+        self._undo.clear()
+        self._redo.clear()
+        self._revision = self._next_revision = self._saved_revision = 0
+        self.dirty = False
+        self.path = None
+        self.view_password = None
+        self.password_protected = False
 
+    @undoable
     def set_view_password(self, password: str | None) -> None:
         assert self.doc is not None
         self.view_password = password or None
         self.password_protected = bool(password)
         self.dirty = True
 
+    @undoable
     def insert(self, path: str, after: int | None) -> None:
         assert self.doc is not None
         with fitz.open(path) as source:
@@ -49,6 +138,7 @@ class PdfDocument:
             self.doc.insert_pdf(source, start_at=target)
         self.dirty = True
 
+    @undoable
     def insert_blank_after(self, rows: list[int]) -> list[int]:
         """Insert a same-sized blank page immediately after each selected page."""
         assert self.doc is not None
@@ -65,6 +155,7 @@ class PdfDocument:
         self.dirty = True
         return [row + offset + 1 for offset, row in enumerate(selected)]
 
+    @undoable
     def delete_pages(self, rows: list[int]) -> list[int]:
         """Delete selected pages and return the row to select afterward."""
         assert self.doc is not None
@@ -82,6 +173,7 @@ class PdfDocument:
         self.dirty = True
         return [min(first, self.doc.page_count - 1)]
 
+    @undoable
     def reorder(self, old: int, new: int) -> None:
         assert self.doc is not None
         if old == new:
@@ -92,6 +184,7 @@ class PdfDocument:
         self.doc.select(order)
         self.dirty = True
 
+    @undoable
     def move_selected(self, rows: list[int], direction: int) -> list[int]:
         assert self.doc is not None
         selected = set(rows)
@@ -108,6 +201,7 @@ class PdfDocument:
             self.dirty = True
         return sorted(selected)
 
+    @undoable
     def rotate(self, rows: list[int], degrees: int) -> None:
         assert self.doc is not None
         for row in rows:
@@ -145,7 +239,9 @@ class PdfDocument:
         if self.view_password:
             self.doc.authenticate(self.view_password)
         self.path, self.dirty = destination, False
+        self._saved_revision = self._revision
 
+    @undoable
     def set_metadata(self, title: str, author: str, subject: str, keywords: str) -> None:
         assert self.doc is not None
         metadata = dict(self.doc.metadata)
@@ -153,6 +249,7 @@ class PdfDocument:
         self.doc.set_metadata(metadata)
         self.dirty = True
 
+    @undoable
     def set_details(self, version: str, layout: str, cover: bool,
                     right_to_left: bool) -> None:
         """Update PDF catalog viewer preferences shown on the Details tab."""

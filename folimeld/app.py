@@ -3,7 +3,7 @@ from pathlib import Path
 
 import fitz
 from PySide6.QtCore import QSettings, QStandardPaths, QTimer, Qt
-from PySide6.QtGui import QAction, QCloseEvent, QIcon, QImage, QPixmap
+from PySide6.QtGui import QAction, QCloseEvent, QIcon, QImage, QPixmap, QKeySequence
 from PySide6.QtWidgets import (QApplication, QFileDialog, QMainWindow, QMessageBox,
                                QInputDialog, QLineEdit, QToolBar, QListWidgetItem)
 
@@ -65,6 +65,13 @@ class MainWindow(QMainWindow):
         self.open_action = self._action("open", self.open_pdf, "Ctrl+O")
         self.save_action = self._action("save", self.save, "Ctrl+S")
         self.save_as_action = self._action("save_as", self.save_as, "Ctrl+Shift+S")
+        self.undo_action = self._action("undo", self.undo)
+        self.undo_action.setShortcuts(QKeySequence.StandardKey.Undo)
+        self.redo_action = self._action("redo", self.redo)
+        self.redo_action.setShortcuts(QKeySequence.StandardKey.Redo)
+        edit_menu.addAction(self.undo_action)
+        edit_menu.addAction(self.redo_action)
+        edit_menu.addSeparator()
         self.insert_action = self._action("insert", self.insert_pdf, "Ctrl+I")
         self.insert_blank_action = self._action("insert_blank", self.insert_blank, "Ctrl+Shift+I")
         self.delete_action = self._action("delete", self.delete_selected, "Delete")
@@ -103,7 +110,7 @@ class MainWindow(QMainWindow):
             help_menu.addAction(self.support_action)
         toolbar = QToolBar(self.tr_("toolbar")); toolbar.setMovable(False)
         self.addToolBar(toolbar)
-        for action in (self.open_action, self.save_action, self.insert_action, self.insert_blank_action,
+        for action in (self.open_action, self.save_action, self.undo_action, self.redo_action, self.insert_action, self.insert_blank_action,
                        self.delete_action,
                        self.up_action,
                        self.down_action, self.left_action, self.right_action):
@@ -123,6 +130,8 @@ class MainWindow(QMainWindow):
         self.support.refresh()
 
     def update_state(self) -> None:
+        self.undo_action.setEnabled(self.model.can_undo)
+        self.redo_action.setEnabled(self.model.can_redo)
         enabled = self.model.loaded
         for action in (self.save_action, self.save_as_action, self.insert_action,
                        self.properties_action, self.up_action, self.down_action,
@@ -269,6 +278,20 @@ class MainWindow(QMainWindow):
     def selected_rows(self) -> list[int]:
         return sorted(self.pages.row(item) for item in self.pages.selectedItems())
 
+    def undo(self) -> None:
+        try:
+            if self.model.undo():
+                self.refresh(self.selected_rows(), preserve_scroll=True)
+        except Exception as exc:
+            self.error(exc)
+
+    def redo(self) -> None:
+        try:
+            if self.model.redo():
+                self.refresh(self.selected_rows(), preserve_scroll=True)
+        except Exception as exc:
+            self.error(exc)
+
     def reorder_page(self, old: int, new: int) -> None:
         self.model.reorder(old, new); self.refresh([new])
 
@@ -342,6 +365,7 @@ class MainWindow(QMainWindow):
         if self.help_dialog is None:
             self.help_dialog = HelpDialog(self.tr_, (
                 self.open_action, self.save_action, self.save_as_action,
+                self.undo_action, self.redo_action,
                 self.insert_action, self.insert_blank_action, self.delete_action,
                 self.up_action, self.down_action, self.left_action,
                 self.right_action, self.help_action,
