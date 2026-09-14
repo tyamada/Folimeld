@@ -94,6 +94,8 @@ Debian 13ではUbuntu版と同じdebパッケージを使用します。最小�
 
 Windows MSIX版では「ヘルプ → 開発を応援する…」から、サポーターアイコン付きの買い切り商品を購入できます（Storeでの商品公開後）。購入するとヘルプメニューにサポーターアイコンが追加されます。PDF編集機能は購入の有無で変わりません。開発者向けの設定手順は [Windows応援購入](docs/windows-store-purchases.md) を参照してください。
 
+Linux版では「ヘルプ → 開発を応援する…」に [GitHub Sponsors](https://github.com/sponsors/tyamada) への案内を表示します。案内画面のボタンからブラウザーで支援ページを開けます。支援は任意であり、利用できる機能は支援の有無で変わりません。
+
 ## 開発・コントリビューション
 
 ソースからの実行、テスト、各OS向けパッケージの作成方法は [DEVELOPMENT.md](DEVELOPMENT.md) を参照してください。不具合報告や提案は [Issues](https://github.com/tyamada/Folimeld/issues) で受け付けています。

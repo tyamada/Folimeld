@@ -1,9 +1,36 @@
 import sys
 from pathlib import Path
 
-from PySide6.QtCore import Qt
-from PySide6.QtGui import QIcon
+from PySide6.QtCore import Qt, QUrl
+from PySide6.QtGui import QDesktopServices, QIcon
 from PySide6.QtWidgets import QDialog, QLabel, QPushButton, QVBoxLayout
+
+
+SPONSORS_URL = "https://github.com/sponsors/tyamada"
+
+
+class SponsorsDialog(QDialog):
+    def __init__(self, tr, parent):
+        super().__init__(parent)
+        self.setWindowTitle(tr("support_title"))
+        self.setMinimumWidth(380)
+        layout = QVBoxLayout(self)
+        description = QLabel(tr("sponsors_description"))
+        description.setWordWrap(True)
+        layout.addWidget(description)
+        self.open_button = QPushButton(tr("sponsors_open"))
+        self.open_button.clicked.connect(self.open_sponsors)
+        layout.addWidget(self.open_button)
+        self.error = QLabel(tr("sponsors_open_error"))
+        self.error.setWordWrap(True)
+        self.error.hide()
+        layout.addWidget(self.error)
+        close = QPushButton(tr("support_close"))
+        close.clicked.connect(self.close)
+        layout.addWidget(close)
+
+    def open_sponsors(self):
+        self.error.setVisible(not QDesktopServices.openUrl(QUrl(SPONSORS_URL)))
 
 
 def supporter_icon():

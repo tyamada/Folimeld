@@ -15,7 +15,7 @@ from .model import PasswordRequiredError, PdfDocument
 from .widgets import THUMBNAIL_SIZES, ThumbnailList
 from .windows_integration import register_open_with, is_packaged
 from .store_support import StoreSupport
-from .support_dialog import SupportDialog, supporter_icon
+from .support_dialog import SponsorsDialog, SupportDialog, supporter_icon
 from .license_info import SOURCE_URL, license_documents
 
 
@@ -36,6 +36,7 @@ class MainWindow(QMainWindow):
         self.resize(1100, 760)
         self.support = StoreSupport(self) if is_packaged() else None
         self.support_dialog = None
+        self.sponsors_dialog = None
         self.help_dialog = None
         self._build_ui()
         if self.support:
@@ -108,6 +109,9 @@ class MainWindow(QMainWindow):
             self.support_action = self._action("support_title", self.show_support)
             self.support_action.setIconVisibleInMenu(True)
             help_menu.addAction(self.support_action)
+        if sys.platform == "linux":
+            self.sponsors_action = self._action("support_title", self.show_sponsors)
+            help_menu.addAction(self.sponsors_action)
         toolbar = QToolBar(self.tr_("toolbar")); toolbar.setMovable(False)
         self.addToolBar(toolbar)
         for action in (self.open_action, self.save_action, self.undo_action, self.redo_action, self.insert_action, self.insert_blank_action,
@@ -116,6 +120,13 @@ class MainWindow(QMainWindow):
                        self.down_action, self.left_action, self.right_action):
             toolbar.addAction(action)
         self.statusBar().showMessage(self.tr_("ready"))
+
+    def show_sponsors(self):
+        if self.sponsors_dialog is None:
+            self.sponsors_dialog = SponsorsDialog(self.tr_, self)
+        self.sponsors_dialog.show()
+        self.sponsors_dialog.raise_()
+        self.sponsors_dialog.activateWindow()
 
     def _update_support(self):
         self.support_action.setText(self.tr_("supporter" if self.support.owned else "support_title"))
