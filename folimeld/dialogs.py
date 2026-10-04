@@ -31,6 +31,9 @@ class PropertiesDialog(QDialog):
             get_layout = getattr(model.doc, "get_page_layout", None)
         page_layout = get_layout() if callable(get_layout) else getattr(model.doc, "pagelayout", "")
         version = metadata.get("format", "PDF 1.7").replace("PDF ", "")
+        kind, catalog_version = model.doc.xref_get_key(model.doc.pdf_catalog(), "Version")
+        if kind == "name":
+            version = catalog_version.removeprefix("/")
         self.pdf_version = QComboBox()
         self.pdf_version.addItems(["1.0", "1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "1.7", "2.0"])
         self.pdf_version.setCurrentText(version)

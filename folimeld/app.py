@@ -77,6 +77,11 @@ class MainWindow(QMainWindow):
         self.insert_blank_action = self._action("insert_blank", self.insert_blank, "Ctrl+Shift+I")
         self.delete_action = self._action("delete", self.delete_selected, "Delete")
         self.properties_action = self._action("properties", self.properties)
+        self.properties_action.setIconText(self.tr_("properties_short"))
+        self.right_binding_action = self._action(
+            "right_binding", lambda: self.set_right_binding(False))
+        self.right_binding_cover_action = self._action(
+            "right_binding_cover", lambda: self.set_right_binding(True))
         self.set_password_action = self._action("set_password", self.set_password)
         self.remove_password_action = self._action("remove_password", self.remove_password)
         for action in (self.open_action, self.save_action, self.save_as_action):
@@ -119,6 +124,10 @@ class MainWindow(QMainWindow):
                        self.up_action,
                        self.down_action, self.left_action, self.right_action):
             toolbar.addAction(action)
+        toolbar.addSeparator()
+        for action in (self.properties_action, self.right_binding_action,
+                       self.right_binding_cover_action):
+            toolbar.addAction(action)
         self.statusBar().showMessage(self.tr_("ready"))
 
     def show_sponsors(self):
@@ -145,7 +154,8 @@ class MainWindow(QMainWindow):
         self.redo_action.setEnabled(self.model.can_redo)
         enabled = self.model.loaded
         for action in (self.save_action, self.save_as_action, self.insert_action,
-                       self.properties_action, self.up_action, self.down_action,
+                       self.properties_action, self.right_binding_action,
+                       self.right_binding_cover_action, self.up_action, self.down_action,
                        self.left_action, self.right_action, self.set_password_action):
             action.setEnabled(enabled)
         self.insert_blank_action.setEnabled(enabled and bool(self.selected_rows()))
@@ -334,6 +344,21 @@ class MainWindow(QMainWindow):
     def properties(self) -> None:
         dialog = PropertiesDialog(self.model, self.tr_, self)
         if dialog.exec(): self.update_state()
+
+    def set_right_binding(self, cover: bool) -> None:
+        if not self.model.loaded:
+            return
+        try:
+            version = self.model.doc.metadata.get("format", "PDF 1.7").replace("PDF ", "")
+            kind, catalog_version = self.model.doc.xref_get_key(self.model.doc.pdf_catalog(), "Version")
+            if kind == "name":
+                version = catalog_version.removeprefix("/")
+            self.model.set_details(
+                version, "TwoPageRight" if cover else "TwoPageLeft", cover, True,
+            )
+            self.update_state()
+        except Exception as exc:
+            self.error(exc)
 
     def set_password(self) -> None:
         password, accepted = QInputDialog.getText(
