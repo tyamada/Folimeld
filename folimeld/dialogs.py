@@ -88,11 +88,7 @@ class PropertiesDialog(QDialog):
 
     def _is_right_to_left(self) -> bool:
         catalog = self.model.doc.pdf_catalog()
-        value_type, value = self.model.doc.xref_get_key(catalog, "ViewerPreferences")
-        if value_type != "xref":
-            return False
-        preferences = int(value.split()[0])
-        return self.model.doc.xref_get_key(preferences, "Direction")[1] == "/R2L"
+        return self.model.doc.xref_get_key(catalog, "ViewerPreferences/Direction")[1] == "/R2L"
 
     def accept(self) -> None:
         with self.model.transaction():

@@ -181,7 +181,7 @@ class PdfDocument:
         order = list(range(self.doc.page_count))
         page = order.pop(old)
         order.insert(new, page)
-        self.doc.select(order)
+        self._reorder_pages(order)
         self.dirty = True
 
     @undoable
@@ -197,9 +197,18 @@ class PdfDocument:
                 selected.remove(i)
                 selected.add(neighbor)
         if order != list(range(self.doc.page_count)):
-            self.doc.select(order)
+            self._reorder_pages(order)
             self.dirty = True
         return sorted(selected)
+
+    def _reorder_pages(self, order: list[int]) -> None:
+        """Move existing pages without rebuilding and stripping the catalog."""
+        current = list(range(self.doc.page_count))
+        for target, original in enumerate(order):
+            source = current.index(original)
+            if source != target:
+                self.doc.move_page(source, target)
+                current.insert(target, current.pop(source))
 
     @undoable
     def rotate(self, rows: list[int], degrees: int) -> None:
@@ -281,7 +290,7 @@ class PdfDocument:
             preferences = int(value.split()[0])
         else:
             preferences = self.doc.get_new_xref()
-            self.doc.update_object(preferences, "<<>>")
+            self.doc.update_object(preferences, value if value_type == "dict" else "<<>>")
             self.doc.xref_set_key(catalog, "ViewerPreferences", f"{preferences} 0 R")
         self.doc.xref_set_key(preferences, "Direction", "/R2L" if right_to_left else "/L2R")
         self.dirty = True
