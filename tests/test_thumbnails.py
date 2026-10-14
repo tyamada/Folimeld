@@ -19,7 +19,8 @@ def test_thumbnail_reuse_rotation_reorder_and_document_replacement():
         window.model.doc = fitz.open()
         for _ in range(12):
             window.model.doc.new_page()
-        with patch.object(window, 'render_icon', wraps=window.render_icon) as render:
+        with patch('folimeld.app.perf_counter', return_value=0), \
+             patch.object(window, 'render_icon', wraps=window.render_icon) as render:
             window.refresh([0])
             assert render.call_count == 0
             window._render_thumbnail_batch()
@@ -65,6 +66,29 @@ def test_pending_renders_are_cancelled_when_document_changes():
         assert not window._pending_thumbnails
         assert not window._thumbnail_timer.isActive()
     finally:
+        window.close()
+        window.deleteLater()
+        app.processEvents()
+
+
+def test_slow_thumbnail_yields_before_rendering_four_pages():
+    app = QApplication.instance() or QApplication([])
+    with patch('folimeld.app.is_packaged', return_value=False):
+        window = MainWindow()
+    try:
+        window.model.doc = fitz.open()
+        for _ in range(5):
+            window.model.doc.new_page()
+        window.refresh()
+        with patch('folimeld.app.perf_counter', side_effect=[0, 0.020]), \
+             patch.object(window, 'render_icon', wraps=window.render_icon) as render:
+            window._render_thumbnail_batch()
+            assert render.call_count == 1
+        assert len(window._pending_thumbnails) == 4
+        drain(window)
+        assert not window._thumbnail_timer.isActive()
+    finally:
+        window.model.dirty = False
         window.close()
         window.deleteLater()
         app.processEvents()

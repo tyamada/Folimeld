@@ -4,8 +4,16 @@ import tempfile
 from contextlib import contextmanager
 from functools import wraps
 from pathlib import Path
+from typing import NamedTuple
 
 import fitz
+
+
+class HistoryState(NamedTuple):
+    pdf: bytes
+    password: str | None
+    protected: bool
+    revision: int
 
 
 class PasswordRequiredError(Exception):
@@ -35,8 +43,8 @@ class PdfDocument:
         self.dirty = False
         self.view_password: str | None = None
         self.password_protected = False
-        self._undo = []
-        self._redo = []
+        self._undo: list[HistoryState] = []
+        self._redo: list[HistoryState] = []
         self._revision = 0
         self._next_revision = 0
         self._saved_revision = 0
@@ -44,7 +52,7 @@ class PdfDocument:
 
     @property
     def history_bytes(self) -> int:
-        return sum(len(state[0]) for stack in (self._undo, self._redo) for state in stack)
+        return sum(len(state.pdf) for stack in (self._undo, self._redo) for state in stack)
 
     def _trim_history(self) -> None:
         # Stack bottoms are the farthest reachable states. Keep the nearest
@@ -52,13 +60,16 @@ class PdfDocument:
         size = self.history_bytes
         for stack in (self._undo, self._redo):
             while stack and size > self.history_limit_bytes:
-                size -= len(stack.pop(0)[0])
+                size -= len(stack.pop(0).pdf)
 
-    def _snapshot(self):
-        return (self.doc.tobytes(encryption=fitz.PDF_ENCRYPT_NONE, no_new_id=True),
-                self.view_password, self.password_protected, self._revision)
+    def _snapshot(self) -> HistoryState:
+        assert self.doc is not None
+        return HistoryState(
+            self.doc.tobytes(encryption=fitz.PDF_ENCRYPT_NONE, no_new_id=True),
+            self.view_password, self.password_protected, self._revision,
+        )
 
-    def _restore(self, state):
+    def _restore(self, state: HistoryState) -> None:
         data, password, protected, revision = state
         restored = fitz.open(stream=data, filetype="pdf")
         self.doc.close()
@@ -74,7 +85,8 @@ class PdfDocument:
         if self._transaction_depth:
             yield
             return
-        assert self.doc is not None
+        if not self.loaded:
+            raise RuntimeError("No PDF is loaded.")
         before = self._snapshot()
         self._transaction_depth += 1
         try:
@@ -148,9 +160,20 @@ class PdfDocument:
         self.view_password = None
         self.password_protected = False
 
+    def _validate_rows(self, rows: list[int]) -> list[int]:
+        assert self.doc is not None
+        for row in rows:
+            if type(row) is not int:
+                raise TypeError("Page indexes must be integers.")
+            if not 0 <= row < self.doc.page_count:
+                raise IndexError("Page index out of range.")
+        return sorted(set(rows))
+
     @undoable
     def set_view_password(self, password: str | None) -> None:
         assert self.doc is not None
+        if password is not None and not isinstance(password, str):
+            raise TypeError("Password must be a string or None.")
         self.view_password = password or None
         self.password_protected = bool(password)
         self.dirty = True
@@ -158,6 +181,8 @@ class PdfDocument:
     @undoable
     def insert(self, path: str, after: int | None) -> None:
         assert self.doc is not None
+        if after is not None:
+            self._validate_rows([after])
         with fitz.open(path) as source:
             target = self.doc.page_count if after is None else after + 1
             self.doc.insert_pdf(source, start_at=target)
@@ -167,11 +192,9 @@ class PdfDocument:
     def insert_blank_after(self, rows: list[int]) -> list[int]:
         """Insert a same-sized blank page immediately after each selected page."""
         assert self.doc is not None
-        selected = sorted(set(rows))
+        selected = self._validate_rows(rows)
         if not selected:
             return []
-        if selected[0] < 0 or selected[-1] >= self.doc.page_count:
-            raise IndexError("Page index out of range.")
 
         # Work backwards so earlier insertions do not change the source indexes.
         for row in reversed(selected):
@@ -184,11 +207,9 @@ class PdfDocument:
     def delete_pages(self, rows: list[int]) -> list[int]:
         """Delete selected pages and return the row to select afterward."""
         assert self.doc is not None
-        selected = sorted(set(rows))
+        selected = self._validate_rows(rows)
         if not selected:
             return []
-        if selected[0] < 0 or selected[-1] >= self.doc.page_count:
-            raise IndexError("Page index out of range.")
         if len(selected) == self.doc.page_count:
             raise ValueError("At least one page must remain.")
 
@@ -201,18 +222,20 @@ class PdfDocument:
     @undoable
     def reorder(self, old: int, new: int) -> None:
         assert self.doc is not None
+        self._validate_rows([old, new])
         if old == new:
             return
-        order = list(range(self.doc.page_count))
-        page = order.pop(old)
-        order.insert(new, page)
-        self._reorder_pages(order)
+        # move_page inserts before its destination; -1 appends at the end.
+        target = -1 if new == self.doc.page_count - 1 else new + (old < new)
+        self.doc.move_page(old, target)
         self.dirty = True
 
     @undoable
     def move_selected(self, rows: list[int], direction: int) -> list[int]:
         assert self.doc is not None
-        selected = set(rows)
+        selected = set(self._validate_rows(rows))
+        if type(direction) is not int or direction not in (-1, 1):
+            raise ValueError("Move direction must be -1 or 1.")
         order = list(range(self.doc.page_count))
         scan = range(1, len(order)) if direction < 0 else range(len(order) - 2, -1, -1)
         for i in scan:
@@ -238,7 +261,10 @@ class PdfDocument:
     @undoable
     def rotate(self, rows: list[int], degrees: int) -> None:
         assert self.doc is not None
-        for row in rows:
+        selected = self._validate_rows(rows)
+        if type(degrees) is not int or degrees % 90:
+            raise ValueError("Rotation must be an integer multiple of 90 degrees.")
+        for row in selected:
             page = self.doc[row]
             page.set_rotation((page.rotation + degrees) % 360)
         if rows:
@@ -306,10 +332,13 @@ class PdfDocument:
         }:
             normalized_version = "1.5"
         if normalized_version:
-            if not normalized_version.startswith("1.") and normalized_version != "2.0":
+            if normalized_version not in {f"1.{minor}" for minor in range(8)} | {"2.0"}:
                 raise ValueError("PDF version must be 1.0–1.7 or 2.0.")
             self.doc.xref_set_key(catalog, "Version", f"/{normalized_version}")
 
+        if layout not in {"", "SinglePage", "OneColumn", "TwoColumnLeft",
+                          "TwoColumnRight", "TwoPageLeft", "TwoPageRight"}:
+            raise ValueError("Unsupported PDF page layout.")
         layout = layout_with_cover(layout, cover)
         if layout:
             set_layout = getattr(self.doc, "set_pagelayout", None)

@@ -73,6 +73,22 @@ Windowsで仮想環境を直接指定する場合：
 .venv\Scripts\python -m pytest -q
 ```
 
+## 品質チェックと性能計測
+
+GitHub Actions の [Checks](.github/workflows/checks.yml) は Python 3.12 を使い、Windows・Ubuntu 22.04・macOSで Ruff と pytest を実行します。Ruff は構文エラーと未定義名の検出から導入しています。各ジョブのテスト結果と `pip freeze` を成果物として保存します。依存バージョンは更新され得るため、過去の検証環境の再現にはこの記録を使用してください。CIの追加自体は、各OSでの成功や配布物の動作確認を意味しません。
+
+```bash
+python -m ruff check .
+python -m pytest -q -p no:cacheprovider
+python -m tools.benchmark_pdf --pages 100 --output build/benchmarks/text-100.json
+python -m tools.benchmark_pdf --pages 100 --image-size 256 --output build/benchmarks/images-100.json
+python -m tools.benchmark_pdf --pages 1000 --output build/benchmarks/text-1000.json
+```
+
+計測はケースごとに新しいプロセスで行います。既存PDFは `--input path/to/document.pdf` で指定でき、保存先は一時ディレクトリになります。暗号化PDFはこのツールの対象外です。ページ数・画像量・ファイルサイズの異なる入力で各ケースを3回以上実行し、中央値とばらつきを比較してください。JSONには操作時間、サムネイル1バッチの最大時間、5ms間隔で標本化したプロセスRSS、依存バージョンを記録します。RSSはネイティブ領域を含みますが、短いピークを取り逃す可能性があります。画像生成とウィンドウ初期化は操作時間の対象外です。
+
+初回の測定値と配布前の確認項目は [性能と配布検証](docs/performance-and-release.md) を参照してください。
+
 ## バージョン管理
 
 アプリの表示バージョンは `folimeld/__init__.py` の `__version__`、App Store用のビルド番号は `__build__` で管理しています。新しいApp Store提出ごとに、表示バージョンまたはビルド番号を更新してください。特に同じ表示バージョンで再提出する場合は、ビルド番号を増やします。

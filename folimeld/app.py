@@ -1,4 +1,5 @@
 import sys
+from time import perf_counter
 from pathlib import Path
 
 import fitz
@@ -373,9 +374,12 @@ class MainWindow(QMainWindow):
         if len(rows) < 4:
             rows += [row for row in self._pending_thumbnails if row not in rows][:4 - len(rows)]
         try:
+            started = perf_counter()
             for row in rows:
                 item = self._pending_thumbnails.pop(row)
                 item.setIcon(self.render_icon(self.model.doc[row]))
+                if perf_counter() - started >= 0.016:
+                    break
         except Exception as exc:
             self._thumbnail_timer.stop()
             self._pending_thumbnails.clear()
@@ -401,15 +405,28 @@ class MainWindow(QMainWindow):
             self.error(exc)
 
     def reorder_page(self, old: int, new: int) -> None:
-        self.model.reorder(old, new); self.refresh([new])
+        try:
+            self.model.reorder(old, new)
+            self.refresh([new])
+        except Exception as exc:
+            self.refresh()
+            self.error(exc)
 
     def move(self, direction: int) -> None:
         rows = self.selected_rows()
-        if rows: self.refresh(self.model.move_selected(rows, direction))
+        try:
+            if rows:
+                self.refresh(self.model.move_selected(rows, direction))
+        except Exception as exc:
+            self.error(exc)
 
     def rotate(self, degrees: int) -> None:
         rows = self.selected_rows()
-        self.model.rotate(rows, degrees); self.refresh(rows)
+        try:
+            self.model.rotate(rows, degrees)
+            self.refresh(rows)
+        except Exception as exc:
+            self.error(exc)
 
     def save(self) -> bool:
         if not self.model.path: return self.save_as()
@@ -466,9 +483,12 @@ class MainWindow(QMainWindow):
         if password != confirmation:
             QMessageBox.warning(self, self.tr_("set_password"), self.tr_("password_mismatch"))
             return
-        self.model.set_view_password(password)
-        self.update_state()
-        self.statusBar().showMessage(self.tr_("password_set"), 4000)
+        try:
+            self.model.set_view_password(password)
+            self.update_state()
+            self.statusBar().showMessage(self.tr_("password_set"), 4000)
+        except Exception as exc:
+            self.error(exc)
 
     def remove_password(self) -> None:
         answer = QMessageBox.question(
@@ -476,9 +496,12 @@ class MainWindow(QMainWindow):
             QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
         )
         if answer == QMessageBox.StandardButton.Yes:
-            self.model.set_view_password(None)
-            self.update_state()
-            self.statusBar().showMessage(self.tr_("password_removed"), 4000)
+            try:
+                self.model.set_view_password(None)
+                self.update_state()
+                self.statusBar().showMessage(self.tr_("password_removed"), 4000)
+            except Exception as exc:
+                self.error(exc)
 
     def change_language(self, language: str) -> None:
         QSettings().setValue("language", language)

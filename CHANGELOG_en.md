@@ -4,6 +4,9 @@
 
 ## Unreleased
 
+- Strengthen PDF operation validation and edit error reporting, and verify history and save-state preservation after failures
+- Reorder a single page with one move and yield between thumbnail renders after approximately 16 ms
+- Add test CI for Windows, Linux, and macOS, static checks, a PDF performance measurement tool, and pre-release verification instructions
 - Preserve edits and Undo/Redo history after save failures so saving can be retried; prevent temporary filename collisions and clean up temporary files on failure
 - Fix inconsistencies between Document Properties and saved cover settings for continuous two-column layouts
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation

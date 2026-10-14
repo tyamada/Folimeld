@@ -73,6 +73,22 @@ To use the virtual environment directly on Windows:
 .venv\Scripts\python -m pytest -q
 ```
 
+## Quality checks and performance measurements
+
+The GitHub Actions [Checks](.github/workflows/checks.yml) workflow runs Ruff and pytest on Windows, Ubuntu 22.04, and macOS using Python 3.12. Ruff initially checks syntax errors and undefined names. Each job uploads test results and `pip freeze` as artifacts. Dependency versions can change; use these records to reproduce a previous validation environment. Adding CI does not itself verify success on each OS or the behavior of distribution packages.
+
+```bash
+python -m ruff check .
+python -m pytest -q -p no:cacheprovider
+python -m tools.benchmark_pdf --pages 100 --output build/benchmarks/text-100.json
+python -m tools.benchmark_pdf --pages 100 --image-size 256 --output build/benchmarks/images-100.json
+python -m tools.benchmark_pdf --pages 1000 --output build/benchmarks/text-1000.json
+```
+
+Run each case in a fresh process. Use `--input path/to/document.pdf` for an existing PDF; saved PDFs go to a temporary directory. Encrypted PDFs are outside this tool's scope. Run each case at least three times with inputs that vary in page count, image content, and file size, then compare medians and variation. JSON reports record operation times, the longest thumbnail batch, process RSS sampled every 5 ms, and dependency versions. RSS includes native memory but sampling can miss short peaks. Fixture generation and window initialization are excluded from operation times.
+
+See [Performance and release verification](docs/performance-and-release.md) (in Japanese) for initial measurements and pre-release checks.
+
 ## Version management
 
 The application's display version is managed by `__version__` in `folimeld/__init__.py`, and the App Store build number by `__build__`. Update either the display version or the build number for every new App Store submission. In particular, increment the build number when resubmitting the same display version.

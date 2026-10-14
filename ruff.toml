@@ -1,0 +1,3 @@
+# Start with syntax errors and undefined names; expand without unrelated churn.
+[lint]
+select = ["E9", "F821", "F822", "F823"]

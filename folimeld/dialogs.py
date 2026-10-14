@@ -4,7 +4,7 @@ from .model import layout_with_cover
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (QCheckBox, QComboBox, QDialog, QDialogButtonBox,
                                QFormLayout, QLabel, QLineEdit, QTabWidget, QVBoxLayout,
-                               QWidget)
+                               QWidget, QMessageBox)
 
 
 class PropertiesDialog(QDialog):
@@ -91,10 +91,14 @@ class PropertiesDialog(QDialog):
         return self.model.doc.xref_get_key(catalog, "ViewerPreferences/Direction")[1] == "/R2L"
 
     def accept(self) -> None:
-        with self.model.transaction():
-            self.model.set_metadata(self.title.text(), self.author.text(), self.subtitle.text(), self.keywords.text())
-            self.model.set_details(
-                self.pdf_version.currentText(), self.page_layout.currentText(),
-                self.cover_page.isChecked(), bool(self.scroll_direction.currentData()),
-            )
+        try:
+            with self.model.transaction():
+                self.model.set_metadata(self.title.text(), self.author.text(), self.subtitle.text(), self.keywords.text())
+                self.model.set_details(
+                    self.pdf_version.currentText(), self.page_layout.currentText(),
+                    self.cover_page.isChecked(), bool(self.scroll_direction.currentData()),
+                )
+        except Exception as exc:
+            QMessageBox.critical(self, self.tr("error"), str(exc))
+            return
         super().accept()
