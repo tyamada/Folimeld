@@ -1,4 +1,9 @@
 {
+  "button_display": "Affichage des boutons",
+  "button_display_icon_text": "Icône + texte",
+  "button_display_icon": "Icône",
+  "button_display_text": "Texte",
+
   "properties_short": "Propriétés",
   "right_binding": "Reliure à droite",
   "right_binding_cover": "Reliure à droite avec couverture",

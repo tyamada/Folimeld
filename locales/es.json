@@ -1,4 +1,9 @@
 {
+  "button_display": "Visualización de botones",
+  "button_display_icon_text": "Icono + texto",
+  "button_display_icon": "Icono",
+  "button_display_text": "Texto",
+
   "properties_short": "Propiedades",
   "right_binding": "Encuadernación derecha",
   "right_binding_cover": "Encuadernación derecha con portada",

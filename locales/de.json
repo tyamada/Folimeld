@@ -1,4 +1,9 @@
 {
+  "button_display": "Schaltflächenanzeige",
+  "button_display_icon_text": "Symbol + Text",
+  "button_display_icon": "Symbol",
+  "button_display_text": "Text",
+
   "properties_short": "Eigenschaften",
   "right_binding": "Rechtsbindung",
   "right_binding_cover": "Rechtsbindung mit Deckblatt",

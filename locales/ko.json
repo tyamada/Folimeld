@@ -1,4 +1,9 @@
 {
+  "button_display": "버튼 표시",
+  "button_display_icon_text": "아이콘 + 텍스트",
+  "button_display_icon": "아이콘",
+  "button_display_text": "텍스트",
+
   "properties_short": "속성",
   "right_binding": "오른쪽 제본",
   "right_binding_cover": "오른쪽 제본・표지",

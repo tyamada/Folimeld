@@ -1,4 +1,9 @@
 {
+  "button_display": "Button display",
+  "button_display_icon_text": "Icon + text",
+  "button_display_icon": "Icon",
+  "button_display_text": "Text",
+
   "properties_short": "Properties",
   "right_binding": "Right Binding",
   "right_binding_cover": "Right Binding with Cover",

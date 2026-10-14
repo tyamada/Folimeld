@@ -1,4 +1,9 @@
 {
+  "button_display": "ボタン表示",
+  "button_display_icon_text": "アイコン＋テキスト",
+  "button_display_icon": "アイコン",
+  "button_display_text": "テキスト",
+
   "properties_short": "プロパティ",
   "right_binding": "右綴じ",
   "right_binding_cover": "右綴じ・表紙",

@@ -3,9 +3,9 @@ from pathlib import Path
 
 import fitz
 from PySide6.QtCore import QSettings, QStandardPaths, QTimer, Qt
-from PySide6.QtGui import QAction, QCloseEvent, QIcon, QImage, QPixmap, QKeySequence
+from PySide6.QtGui import QAction, QCloseEvent, QIcon, QImage, QPixmap, QKeySequence, QTransform
 from PySide6.QtWidgets import (QApplication, QFileDialog, QMainWindow, QMessageBox,
-                               QInputDialog, QLineEdit, QToolBar, QListWidgetItem)
+                               QInputDialog, QLineEdit, QToolBar, QListWidgetItem, QStyle)
 
 from . import __version__
 from .dialogs import PropertiesDialog
@@ -19,10 +19,19 @@ from .support_dialog import SponsorsDialog, SupportDialog, supporter_icon
 from .license_info import SOURCE_URL, license_documents
 
 
+BUTTON_STYLES = {
+    "icon_text": Qt.ToolButtonStyle.ToolButtonTextBesideIcon,
+    "icon": Qt.ToolButtonStyle.ToolButtonIconOnly,
+    "text": Qt.ToolButtonStyle.ToolButtonTextOnly,
+}
+
+
 class MainWindow(QMainWindow):
     def __init__(self, i18n: I18n | None = None) -> None:
         super().__init__()
         self.i18n = i18n or I18n()
+        saved_style = QSettings().value("button_display", "text")
+        self.button_display = saved_style if saved_style in BUTTON_STYLES else "text"
         self.model = PdfDocument()
         self.pages = ThumbnailList()
         try:
@@ -100,6 +109,7 @@ class MainWindow(QMainWindow):
             edit_menu.addAction(action)
         language_menu = settings_menu.addMenu(self.tr_("language"))
         settings_menu.addAction(self._action("image_size", self.change_image_size))
+        settings_menu.addAction(self._action("button_display", self.change_button_display))
         for code, name in LANGUAGES.items():
             action = QAction(name, self); action.setCheckable(True)
             action.setChecked(code == self.i18n.language)
@@ -118,6 +128,24 @@ class MainWindow(QMainWindow):
             self.sponsors_action = self._action("support_title", self.show_sponsors)
             help_menu.addAction(self.sponsors_action)
         toolbar = QToolBar(self.tr_("toolbar")); toolbar.setMovable(False)
+        self.toolbar = toolbar
+        toolbar.setToolButtonStyle(BUTTON_STYLES[self.button_display])
+        icons = {
+            "open": "SP_DialogOpenButton", "save": "SP_DialogSaveButton",
+            "undo": "SP_ArrowBack", "redo": "SP_ArrowForward",
+            "insert": "SP_FileDialogNewFolder", "insert_blank": "SP_FileIcon",
+            "delete": "SP_TrashIcon", "move_up": "SP_ArrowUp",
+            "move_down": "SP_ArrowDown", "rotate_left": "SP_BrowserReload",
+            "rotate_right": "SP_BrowserReload", "properties": "SP_FileDialogDetailedView",
+            "right_binding": "SP_ArrowLeft", "right_binding_cover": "SP_FileDialogContentsView",
+        }
+        for key, icon_name in icons.items():
+            action = self.findChild(QAction, key)
+            icon = self.style().standardIcon(getattr(QStyle.StandardPixmap, icon_name))
+            if key == "rotate_left":
+                icon = QIcon(icon.pixmap(32, 32).transformed(QTransform().scale(-1, 1)))
+            action.setIcon(icon)
+            action.setToolTip(action.text())
         self.addToolBar(toolbar)
         for action in (self.open_action, self.save_action, self.undo_action, self.redo_action, self.insert_action, self.insert_blank_action,
                        self.delete_action,
@@ -260,6 +288,18 @@ class MainWindow(QMainWindow):
         pix = page.get_pixmap(matrix=fitz.Matrix(scale, scale), alpha=False)
         image = QImage(pix.samples, pix.width, pix.height, pix.stride, QImage.Format.Format_RGB888).copy()
         return QIcon(QPixmap.fromImage(image))
+
+    def change_button_display(self) -> None:
+        modes = list(BUTTON_STYLES)
+        choices = [self.tr_("button_display_" + mode) for mode in modes]
+        choice, accepted = QInputDialog.getItem(
+            self, self.tr_("button_display"), self.tr_("button_display"), choices,
+            modes.index(self.button_display), False,
+        )
+        if accepted:
+            self.button_display = modes[choices.index(choice)]
+            self.toolbar.setToolButtonStyle(BUTTON_STYLES[self.button_display])
+            QSettings().setValue("button_display", self.button_display)
 
     def change_image_size(self) -> None:
         choices = [f"{size} px" for size in THUMBNAIL_SIZES]

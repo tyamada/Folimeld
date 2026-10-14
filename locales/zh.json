@@ -1,4 +1,9 @@
 {
+  "button_display": "按钮显示",
+  "button_display_icon_text": "图标＋文字",
+  "button_display_icon": "图标",
+  "button_display_text": "文字",
+
   "properties_short": "属性",
   "right_binding": "右侧装订",
   "right_binding_cover": "右侧装订・封面",
