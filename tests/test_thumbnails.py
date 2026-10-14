@@ -92,3 +92,71 @@ def test_slow_thumbnail_yields_before_rendering_four_pages():
         window.close()
         window.deleteLater()
         app.processEvents()
+
+
+def test_large_document_renders_near_viewport_and_releases_scrolled_out_icons(tmp_path):
+    app = QApplication.instance() or QApplication([])
+    with patch('folimeld.app.is_packaged', return_value=False):
+        window = MainWindow()
+    try:
+        window.model.doc = fitz.open()
+        for _ in range(200):
+            window.model.doc.new_page()
+        window.show()
+        app.processEvents()
+        window.refresh([0])
+        drain(window)
+        first = window.pages.item(0)
+        assert not first.icon().isNull()
+        assert window.pages.item(199).icon().isNull()
+        assert 0 < len(window._resident_thumbnails) <= 64
+
+        assert window._save_to(str(tmp_path / 'saved.pdf'))
+        assert window._thumbnail_document is window.model.doc
+        drain(window)
+        first = window.pages.item(0)
+
+        window.pages.scrollToItem(window.pages.item(199))
+        app.processEvents()
+        window._update_thumbnail_viewport()
+        drain(window)
+        assert first.icon().isNull()
+        assert not window.pages.item(199).icon().isNull()
+        assert len(window._resident_thumbnails) <= 64
+        assert window.selected_rows() == [0]
+
+        window.pages.scrollToItem(first)
+        app.processEvents()
+        window._update_thumbnail_viewport()
+        drain(window)
+        assert not first.icon().isNull()
+        assert window.pages.item(199).icon().isNull()
+        window.resize(700, 500)
+        app.processEvents()
+        window._update_thumbnail_viewport()
+        drain(window)
+        viewport = window.pages.viewport().rect()
+        for row in range(window.pages.count()):
+            item = window.pages.item(row)
+            if window.pages.visualItemRect(item).intersects(viewport):
+                assert not item.icon().isNull()
+        assert len(window._resident_thumbnails) <= 64
+
+        # A pending render for the previous document must never touch the new one.
+        window.pages.scrollToItem(window.pages.item(199))
+        window._update_thumbnail_viewport()
+        window.model.close()
+        window.model.doc = fitz.open()
+        window.model.doc.new_page()
+        with patch.object(window, 'render_icon') as render:
+            window._render_thumbnail_batch()
+            render.assert_not_called()
+        window.refresh()
+        drain(window)
+        assert window.pages.count() == 1
+        assert not window.pages.item(0).icon().isNull()
+    finally:
+        window.model.dirty = False
+        window.close()
+        window.deleteLater()
+        app.processEvents()

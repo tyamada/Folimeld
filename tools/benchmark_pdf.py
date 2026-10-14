@@ -72,6 +72,7 @@ def benchmark(input_path, output_path):
     app.processEvents()
     timings = {}
     max_batch_ms = 0.0
+    peak_resident_thumbnails = 0
 
     def measure(name, operation):
         started = perf_counter()
@@ -79,7 +80,7 @@ def benchmark(input_path, output_path):
         timings[name] = (perf_counter() - started) * 1000
 
     def render():
-        nonlocal max_batch_ms
+        nonlocal max_batch_ms, peak_resident_thumbnails
         # Explicit ticks avoid mixing scheduled and measured thumbnail batches.
         window._thumbnail_timer.stop()
         while window._pending_thumbnails:
@@ -87,6 +88,18 @@ def benchmark(input_path, output_path):
             window._render_thumbnail_batch()
             max_batch_ms = max(max_batch_ms, (perf_counter() - started) * 1000)
             app.processEvents()
+        peak_resident_thumbnails = max(peak_resident_thumbnails, sum(
+            not window.pages.item(row).icon().isNull() for row in range(window.pages.count())
+        ))
+
+    def scroll_document():
+        grid = window.pages.gridSize()
+        viewport = window.pages.viewport().size()
+        stride = max(1, viewport.width() // grid.width()) * max(1, viewport.height() // grid.height())
+        for row in list(range(0, window.pages.count(), stride)) + [window.pages.count() - 1, 0]:
+            window.pages.scrollToItem(window.pages.item(row))
+            app.processEvents()
+            render()
 
     try:
         gc.collect()
@@ -94,6 +107,7 @@ def benchmark(input_path, output_path):
             measure("open", lambda: window.model.open(str(input_path)))
             measure("refresh", window.refresh)
             measure("initial_thumbnails", render)
+            measure("scroll_thumbnails", scroll_document)
             measure("rotate", lambda: window.model.rotate([0], 90))
             measure("refresh_after_rotation", window.refresh)
             measure("rotation_thumbnails", render)
@@ -108,6 +122,7 @@ def benchmark(input_path, output_path):
                 "thumbnail_size": window.thumbnail_size,
                 "milliseconds": timings,
                 "max_thumbnail_batch_ms": max_batch_ms,
+                "peak_resident_thumbnails": peak_resident_thumbnails,
                 "rss_baseline_bytes": baseline,
                 "sampled_peak_rss_bytes": max(samples),
                 "history_bytes": window.model.history_bytes,

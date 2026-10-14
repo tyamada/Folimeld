@@ -4,6 +4,9 @@
 
 ## Unreleased
 
+- Limit thumbnails for large PDFs to the viewport and nearby pages, releasing off-screen images and rendering them again when scrolling; normally retain up to 64 thumbnails and retain all pages for documents with 64 pages or fewer
+- Resynchronize thumbnails with the replacement PDF after saving, edit rollback, or closing Document Properties
+- Add document scrolling and retained thumbnail counts to performance measurements, comparing a 1,000-page PDF before and after the changes with three runs each
 - Strengthen PDF operation validation and edit error reporting, and verify history and save-state preservation after failures
 - Reorder a single page with one move and yield between thumbnail renders after approximately 16 ms
 - Add test CI for Windows, Linux, and macOS, static checks, a PDF performance measurement tool, and pre-release verification instructions

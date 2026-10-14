@@ -89,6 +89,8 @@ python -m tools.benchmark_pdf --pages 1000 --output build/benchmarks/text-1000.j
 
 初回の測定値と配布前の確認項目は [性能と配布検証](docs/performance-and-release.md) を参照してください。
 
+計測ツールは初期表示に加えて文書全体をスクロールし、最大保持サムネイル数も記録します。大きなPDFでは表示範囲と前後のみ描画するため、`initial_thumbnails` は全ページの描画時間ではありません。`scroll_thumbnails` とメモリ使用量を合わせて比較してください。通常は最大64枚を保持しますが、非常に大きな画面で64枚を超えるページが見える場合は表示中の全ページを優先します。
+
 ## バージョン管理
 
 アプリの表示バージョンは `folimeld/__init__.py` の `__version__`、App Store用のビルド番号は `__build__` で管理しています。新しいApp Store提出ごとに、表示バージョンまたはビルド番号を更新してください。特に同じ表示バージョンで再提出する場合は、ビルド番号を増やします。

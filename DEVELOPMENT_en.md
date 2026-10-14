@@ -89,6 +89,8 @@ Run each case in a fresh process. Use `--input path/to/document.pdf` for an exis
 
 See [Performance and release verification](docs/performance-and-release.md) (in Japanese) for initial measurements and pre-release checks.
 
+The measurement tool also scrolls through the document and records the maximum retained thumbnail count. Large PDFs render only the viewport and nearby pages, so `initial_thumbnails` does not measure rendering every page. Compare it together with `scroll_thumbnails` and memory usage. Normally up to 64 thumbnails are retained; if an exceptionally large screen shows more than 64 pages, all visible pages take priority.
+
 ## Version management
 
 The application's display version is managed by `__version__` in `folimeld/__init__.py`, and the App Store build number by `__build__`. Update either the display version or the build number for every new App Store submission. In particular, increment the build number when resubmitting the same display version.

@@ -58,3 +58,28 @@ def test_properties_failure_rolls_back_and_keeps_dialog_open():
         window.close()
         window.deleteLater()
         app.processEvents()
+
+
+def test_rollback_reconnects_thumbnails_to_restored_document():
+    app = QApplication.instance() or QApplication([])
+    with patch('folimeld.app.is_packaged', return_value=False):
+        window = MainWindow()
+    try:
+        window.model.doc = fitz.open()
+        window.model.doc.new_page()
+        window.refresh([0])
+        original = window.model.doc
+        with patch('folimeld.app.QMessageBox.critical') as report:
+            window.rotate(45)
+        report.assert_called_once()
+        assert window.model.doc is not original
+        assert window._thumbnail_document is window.model.doc
+        assert window.selected_rows() == [0]
+        while window._pending_thumbnails:
+            window._render_thumbnail_batch()
+        assert not window.pages.item(0).icon().isNull()
+        assert window.model.doc[0].rotation == 0 and not window.model.dirty
+    finally:
+        window.close()
+        window.deleteLater()
+        app.processEvents()
