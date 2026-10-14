@@ -76,8 +76,9 @@ def benchmark(input_path, output_path):
 
     def measure(name, operation):
         started = perf_counter()
-        operation()
+        result = operation()
         timings[name] = (perf_counter() - started) * 1000
+        return result
 
     def render():
         nonlocal max_batch_ms, peak_resident_thumbnails
@@ -111,8 +112,8 @@ def benchmark(input_path, output_path):
             measure("rotate", lambda: window.model.rotate([0], 90))
             measure("refresh_after_rotation", window.refresh)
             measure("rotation_thumbnails", render)
-            measure("undo", window.model.undo)
-            measure("redo", window.model.redo)
+            undo_performed = measure("undo", window.model.undo)
+            redo_performed = measure("redo", window.model.redo)
             if window.model.doc.page_count > 1:
                 measure("reorder", lambda: window.model.reorder(0, window.model.doc.page_count - 1))
             measure("save", lambda: window.model.save(str(output_path)))
@@ -126,6 +127,8 @@ def benchmark(input_path, output_path):
                 "rss_baseline_bytes": baseline,
                 "sampled_peak_rss_bytes": max(samples),
                 "history_bytes": window.model.history_bytes,
+                "undo_performed": undo_performed,
+                "redo_performed": redo_performed,
             }
         # The final memory sample is appended when leaving the context.
         result["sampled_peak_rss_bytes"] = max(samples)

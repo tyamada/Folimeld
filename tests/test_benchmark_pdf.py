@@ -1,19 +1,25 @@
 import hashlib
+from unittest.mock import patch
 
 import fitz
 import pytest
 
 from tools.benchmark_pdf import benchmark, create_fixture, main
+from folimeld.model import PdfDocument
 
 
-def test_image_benchmark_keeps_input_unchanged(tmp_path):
+@pytest.mark.parametrize("history_limit", [0, 128 * 1024 * 1024])
+def test_image_benchmark_keeps_input_unchanged(tmp_path, history_limit):
     source = tmp_path / "source.pdf"
     saved = tmp_path / "saved.pdf"
     create_fixture(source, pages=2, image_size=16)
     original = hashlib.sha256(source.read_bytes()).digest()
-    result = benchmark(source, saved)
+    with patch("folimeld.app.PdfDocument", side_effect=lambda: PdfDocument(history_limit)):
+        result = benchmark(source, saved)
     assert hashlib.sha256(source.read_bytes()).digest() == original
     assert result["pages"] == 2
+    assert result["undo_performed"] is (history_limit > 0)
+    assert result["redo_performed"] is (history_limit > 0)
     assert result["sampled_peak_rss_bytes"] >= result["rss_baseline_bytes"] > 0
     assert all(value >= 0 for value in result["milliseconds"].values())
     with fitz.open(saved) as doc:

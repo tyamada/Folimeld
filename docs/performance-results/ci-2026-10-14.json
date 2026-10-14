@@ -1,0 +1,61 @@
+{
+  "id": 38546428729,
+  "url": "https://github.com/tyamada/Folimeld/actions/runs/38546428729",
+  "head_sha": "ccb27aa41a7a13b0cf04c45435ffd114ab768e13",
+  "branch": "codex/ci-validation-ccb27aa",
+  "status": "completed",
+  "conclusion": "success",
+  "created_at": "2026-10-14T09:59:57Z",
+  "updated_at": "2026-10-14T10:01:32Z",
+  "python": "3.12",
+  "jobs": [
+    {
+      "os": "Ubuntu 22.04",
+      "id": 115793525767,
+      "conclusion": "success",
+      "tests_passed": 145,
+      "subtests_passed": 32,
+      "seconds": 4.14,
+      "ruff": "success"
+    },
+    {
+      "os": "macOS",
+      "id": 115793526107,
+      "conclusion": "success",
+      "tests_passed": 145,
+      "subtests_passed": 32,
+      "seconds": 7.05,
+      "warnings": 5,
+      "ruff": "success"
+    },
+    {
+      "os": "Windows",
+      "id": 115793526241,
+      "conclusion": "success",
+      "tests_passed": 145,
+      "subtests_passed": 32,
+      "seconds": 6.01,
+      "ruff": "success"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 11885095433,
+      "name": "checks-macos-latest",
+      "digest": "sha256:98bc81d420fa3c0ef5cf634f8b1734b64e606513fd105ee6d0583d62001f3daa",
+      "expires_at": "2027-01-12T09:59:57Z"
+    },
+    {
+      "id": 11883849801,
+      "name": "checks-ubuntu-22.04",
+      "digest": "sha256:c846bccaeb1b3479630d81ba37441944807f0d8f524664f307154c669a028028",
+      "expires_at": "2027-01-12T09:59:57Z"
+    },
+    {
+      "id": 11883799806,
+      "name": "checks-windows-latest",
+      "digest": "sha256:ae13eaaf13aa5d8eb214abf2f3d631aa88042f8f242efa332628b465804351cd",
+      "expires_at": "2027-01-12T09:59:57Z"
+    }
+  ]
+}

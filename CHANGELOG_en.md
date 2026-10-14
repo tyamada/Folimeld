@@ -4,6 +4,7 @@
 
 ## Unreleased
 
+- Record whether Undo/Redo actually ran in performance measurements, and document three runs each for three image PDFs and successful CI on all three operating systems
 - Limit thumbnails for large PDFs to the viewport and nearby pages, releasing off-screen images and rendering them again when scrolling; normally retain up to 64 thumbnails and retain all pages for documents with 64 pages or fewer
 - Resynchronize thumbnails with the replacement PDF after saving, edit rollback, or closing Document Properties
 - Add document scrolling and retained thumbnail counts to performance measurements, comparing a 1,000-page PDF before and after the changes with three runs each
