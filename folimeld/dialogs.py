@@ -1,4 +1,5 @@
 from html import escape
+from .model import layout_with_cover
 
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (QCheckBox, QComboBox, QDialog, QDialogButtonBox,
@@ -42,7 +43,7 @@ class PropertiesDialog(QDialog):
                                    "TwoColumnRight", "TwoPageLeft", "TwoPageRight"])
         self.page_layout.setCurrentText(page_layout or "SinglePage")
         self.cover_page = QCheckBox(tr("yes"))
-        self.cover_page.setChecked(page_layout == "TwoPageRight")
+        self.cover_page.setChecked(page_layout in ("TwoColumnRight", "TwoPageRight"))
         self.scroll_direction = QComboBox()
         self.scroll_direction.addItem(tr("left_to_right"), False)
         self.scroll_direction.addItem(tr("right_to_left"), True)
@@ -71,12 +72,11 @@ class PropertiesDialog(QDialog):
         layout_box = QVBoxLayout(self); layout_box.addWidget(tabs); layout_box.addWidget(buttons)
 
     def _update_page_display(self, page_layout: str) -> None:
-        cover_layout = {
-            "TwoColumnLeft": "TwoColumnRight", "TwoPageLeft": "TwoPageRight",
-        }.get(page_layout) if self.cover_page.isChecked() else None
+        effective_layout = layout_with_cover(page_layout, self.cover_page.isChecked())
+        cover_layout = effective_layout if effective_layout != page_layout else None
         descriptions = [self.tr("single_page_display" if page_layout in
                                 ("SinglePage", "OneColumn") else "two_page_display")]
-        if cover_layout or page_layout in ("TwoColumnRight", "TwoPageRight"):
+        if effective_layout in ("TwoColumnRight", "TwoPageRight"):
             descriptions.append(self.tr("show_cover_page"))
         if page_layout in ("OneColumn", "TwoColumnLeft", "TwoColumnRight"):
             descriptions.append(self.tr("scrolling_enabled"))

@@ -10,7 +10,7 @@ Folimeld is a desktop application for visually rearranging, rotating, inserting,
 
 ## Features
 
-- Multi-step Undo and Redo from the Edit menu or toolbar for page operations, properties, and viewing password changes. History remains available after saving and resets when another PDF is opened. History is kept in memory, so large PDFs increase memory usage.
+- Multi-step Undo and Redo from the Edit menu or toolbar for page operations, properties, and viewing password changes. History remains available after saving and resets when another PDF is opened. PDF data in Undo and Redo history is limited to a combined 128 MiB in memory, with older history removed when the limit is exceeded. A single history entry larger than the limit is not retained. Temporary data used during editing and saving, and thumbnails, are outside this limit.
 - Rearrange PDF pages using thumbnail previews
 - Select, move, rotate, or delete multiple pages at once
 - Insert another PDF or a blank page of the same size

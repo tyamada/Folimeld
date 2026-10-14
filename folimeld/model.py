@@ -1,13 +1,22 @@
-from pathlib import Path
+import os
 import secrets
+import tempfile
 from contextlib import contextmanager
 from functools import wraps
+from pathlib import Path
 
 import fitz
 
 
 class PasswordRequiredError(Exception):
     """Raised when a PDF requires a valid viewing password."""
+
+
+def layout_with_cover(layout: str, cover: bool) -> str:
+    for family in ("TwoColumn", "TwoPage"):
+        if layout in (family + "Left", family + "Right"):
+            return family + ("Right" if cover else "Left")
+    return layout
 
 
 def undoable(method):
@@ -19,7 +28,8 @@ def undoable(method):
 
 
 class PdfDocument:
-    def __init__(self) -> None:
+    def __init__(self, history_limit_bytes: int = 128 * 1024 * 1024) -> None:
+        self.history_limit_bytes = max(0, history_limit_bytes)
         self.doc: fitz.Document | None = None
         self.path: Path | None = None
         self.dirty = False
@@ -31,6 +41,18 @@ class PdfDocument:
         self._next_revision = 0
         self._saved_revision = 0
         self._transaction_depth = 0
+
+    @property
+    def history_bytes(self) -> int:
+        return sum(len(state[0]) for stack in (self._undo, self._redo) for state in stack)
+
+    def _trim_history(self) -> None:
+        # Stack bottoms are the farthest reachable states. Keep the nearest
+        # states; a snapshot larger than the budget cannot be retained.
+        size = self.history_bytes
+        for stack in (self._undo, self._redo):
+            while stack and size > self.history_limit_bytes:
+                size -= len(stack.pop(0)[0])
 
     def _snapshot(self):
         return (self.doc.tobytes(encryption=fitz.PDF_ENCRYPT_NONE, no_new_id=True),
@@ -61,6 +83,7 @@ class PdfDocument:
             if before[:3] != after[:3]:
                 self._undo.append(before)
                 self._redo.clear()
+                self._trim_history()
                 self._next_revision += 1
                 self._revision = self._next_revision
             self.dirty = self._revision != self._saved_revision
@@ -85,6 +108,7 @@ class PdfDocument:
         self._restore(self._undo[-1])
         self._undo.pop()
         self._redo.append(current)
+        self._trim_history()
         return True
 
     def redo(self) -> bool:
@@ -94,6 +118,7 @@ class PdfDocument:
         self._restore(self._redo[-1])
         self._redo.pop()
         self._undo.append(current)
+        self._trim_history()
         return True
 
     @property
@@ -235,18 +260,28 @@ class PdfDocument:
             )
         else:
             options["encryption"] = fitz.PDF_ENCRYPT_NONE
-        if self.path and destination.resolve() == self.path.resolve():
-            temp = destination.with_name(destination.stem + ".folimeld.tmp.pdf")
+        descriptor, name = tempfile.mkstemp(prefix=".folimeld-", suffix=".pdf", dir=destination.parent)
+        os.close(descriptor)
+        temp = Path(name)
+        try:
             self.doc.save(str(temp), **options)
+            # Prepare an independent editable document before releasing the
+            # source file handle (required for replacement on Windows).
+            backup = fitz.open(stream=self._snapshot()[0], filetype="pdf")
             self.doc.close()
+            self.doc = backup
             temp.replace(destination)
-            self.doc = fitz.open(str(destination))
-        else:
-            self.doc.save(str(destination), **options)
-            self.doc.close()
-            self.doc = fitz.open(str(destination))
-        if self.view_password:
-            self.doc.authenticate(self.view_password)
+            reopened = fitz.open(str(destination))
+            try:
+                if self.view_password and not reopened.authenticate(self.view_password):
+                    raise PasswordRequiredError()
+            except Exception:
+                reopened.close()
+                raise
+            self.doc = reopened
+            backup.close()
+        finally:
+            temp.unlink(missing_ok=True)
         self.path, self.dirty = destination, False
         self._saved_revision = self._revision
 
@@ -275,8 +310,7 @@ class PdfDocument:
                 raise ValueError("PDF version must be 1.0–1.7 or 2.0.")
             self.doc.xref_set_key(catalog, "Version", f"/{normalized_version}")
 
-        if layout in ("TwoPageLeft", "TwoPageRight"):
-            layout = "TwoPageRight" if cover else "TwoPageLeft"
+        layout = layout_with_cover(layout, cover)
         if layout:
             set_layout = getattr(self.doc, "set_pagelayout", None)
             if set_layout is None:

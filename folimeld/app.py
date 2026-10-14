@@ -34,6 +34,11 @@ class MainWindow(QMainWindow):
         self.button_display = saved_style if saved_style in BUTTON_STYLES else "text"
         self.model = PdfDocument()
         self.pages = ThumbnailList()
+        self._thumbnail_document = None
+        self._pending_thumbnails = {}
+        self._thumbnail_timer = QTimer(self)
+        self._thumbnail_timer.setInterval(1)
+        self._thumbnail_timer.timeout.connect(self._render_thumbnail_batch)
         try:
             size = int(QSettings().value("thumbnail_size", 288))
         except (TypeError, ValueError):
@@ -321,20 +326,62 @@ class MainWindow(QMainWindow):
     def refresh(self, selection: list[int] | None = None,
                 preserve_scroll: bool = False) -> None:
         scroll_position = self.pages.verticalScrollBar().value()
-        self.pages.clear()
+        self._thumbnail_timer.stop()
+        self._pending_thumbnails.clear()
+        reusable = {}
+        self.pages.blockSignals(True)
+        while self.pages.count():
+            item = self.pages.takeItem(self.pages.count() - 1)
+            if self._thumbnail_document is self.model.doc:
+                reusable[item.data(Qt.ItemDataRole.UserRole)] = item
+        self._thumbnail_document = self.model.doc
         if self.model.doc:
             for index, page in enumerate(self.model.doc):
-                item = QListWidgetItem(self.render_icon(page), self.tr_("page", number=index + 1))
+                key = (page.xref, page.rotation, self.thumbnail_size)
+                item = reusable.pop(key, None)
+                if item is None:
+                    item = QListWidgetItem()
+                item.setText(self.tr_("page", number=index + 1))
                 item.setTextAlignment(Qt.AlignmentFlag.AlignHCenter)
-                item.setData(Qt.ItemDataRole.UserRole, index)
+                item.setData(Qt.ItemDataRole.UserRole, key)
+                item.setSelected(False)
                 self.pages.addItem(item)
+                if item.icon().isNull():
+                    self._pending_thumbnails[index] = item
             for row in selection or []:
                 if 0 <= row < self.pages.count(): self.pages.item(row).setSelected(True)
+        self.pages.blockSignals(False)
         if preserve_scroll:
             self.pages.doItemsLayout()
             self.pages.verticalScrollBar().setValue(scroll_position)
+        if self._pending_thumbnails:
+            self._thumbnail_timer.start()
         self.update_state()
         self.statusBar().showMessage(self.tr_("pages_count", count=self.pages.count()))
+
+    def _render_thumbnail_batch(self) -> None:
+        if self._thumbnail_document is not self.model.doc or not self.model.loaded:
+            self._thumbnail_timer.stop()
+            self._pending_thumbnails.clear()
+            return
+        # Prioritize the viewport, then fill the rest in small batches so Qt
+        # can handle input between renders. All PDF access stays on this thread.
+        viewport = self.pages.viewport().rect()
+        visible = [row for row, item in self._pending_thumbnails.items()
+                   if self.pages.visualItemRect(item).intersects(viewport)]
+        rows = visible[:4]
+        if len(rows) < 4:
+            rows += [row for row in self._pending_thumbnails if row not in rows][:4 - len(rows)]
+        try:
+            for row in rows:
+                item = self._pending_thumbnails.pop(row)
+                item.setIcon(self.render_icon(self.model.doc[row]))
+        except Exception as exc:
+            self._thumbnail_timer.stop()
+            self._pending_thumbnails.clear()
+            self.error(exc)
+        if not self._pending_thumbnails:
+            self._thumbnail_timer.stop()
 
     def selected_rows(self) -> list[int]:
         return sorted(self.pages.row(item) for item in self.pages.selectedItems())
@@ -486,6 +533,9 @@ class MainWindow(QMainWindow):
 
     def closeEvent(self, event: QCloseEvent) -> None:
         if self.confirm_discard():
+            self._thumbnail_timer.stop()
+            self._pending_thumbnails.clear()
+            self._thumbnail_document = None
             self.model.close(); event.accept()
         else: event.ignore()
 

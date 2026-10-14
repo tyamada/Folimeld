@@ -1,4 +1,5 @@
 import unittest
+import pytest
 
 import fitz
 from PySide6.QtWidgets import QApplication
@@ -6,6 +7,34 @@ from PySide6.QtWidgets import QApplication
 from folimeld.dialogs import PropertiesDialog
 from folimeld.i18n import I18n, LANGUAGES
 from folimeld.model import PdfDocument
+
+
+@pytest.mark.parametrize('layout', ['TwoColumnLeft', 'TwoColumnRight', 'TwoPageLeft', 'TwoPageRight'])
+@pytest.mark.parametrize('cover', [False, True])
+def test_cover_dialog_saved_layout_and_history(layout, cover, tmp_path):
+    app = QApplication.instance() or QApplication([])
+    model = PdfDocument()
+    model.doc = fitz.open()
+    model.doc.new_page()
+    model.doc.set_pagelayout(layout)
+    dialog = PropertiesDialog(model, lambda key, **kwargs: key)
+    try:
+        assert dialog.cover_page.isChecked() == layout.endswith('Right')
+        dialog.cover_page.setChecked(cover)
+        dialog.accept()
+        expected = layout.removesuffix('Left').removesuffix('Right') + ('Right' if cover else 'Left')
+        assert model.doc.pagelayout == expected
+        if expected != layout:
+            assert model.undo() and model.doc.pagelayout == layout
+            assert model.redo() and model.doc.pagelayout == expected
+        path = tmp_path / 'cover.pdf'
+        model.save(str(path))
+        with fitz.open(path) as saved:
+            assert saved.pagelayout == expected
+    finally:
+        model.close()
+        dialog.deleteLater()
+        app.processEvents()
 
 
 class DetailsTest(unittest.TestCase):

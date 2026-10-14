@@ -2,6 +2,13 @@
 
 [日本語](CHANGELOG.md) | [English](CHANGELOG_en.md)
 
+## Unreleased
+
+- Preserve edits and Undo/Redo history after save failures so saving can be retried; prevent temporary filename collisions and clean up temporary files on failure
+- Fix inconsistencies between Document Properties and saved cover settings for continuous two-column layouts
+- Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
+- Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
+
 ## 0.3.3 - 2026-09-09
 
 - Build distribution deb packages on Ubuntu 22.04 to support Ubuntu 22.04 and later, and complete the X11 dependency declarations

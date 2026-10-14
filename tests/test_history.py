@@ -100,6 +100,36 @@ def test_failed_group_rolls_back(model):
     assert not model.can_undo and not model.dirty
 
 
+def test_history_budget_prunes_old_states_and_preserves_save_point(model, tmp_path):
+    model.history_limit_bytes = len(model._snapshot()[0]) * 2 + 200
+    model.rotate([0], 90)
+    model.save(str(tmp_path / 'saved.pdf'))
+    for _ in range(5):
+        model.rotate([1], 90)
+        assert model.history_bytes <= model.history_limit_bytes
+    final = state(model)
+    assert len(model._undo) < 6
+    while model.can_undo:
+        assert model.undo() and model.dirty
+        assert model.history_bytes <= model.history_limit_bytes
+    while model.can_redo:
+        assert model.redo() and model.dirty
+        assert model.history_bytes <= model.history_limit_bytes
+    assert state(model) == final
+    model.save(str(tmp_path / 'saved.pdf'))
+    assert model.undo() and model.dirty
+    assert model.redo() and not model.dirty
+
+
+def test_snapshot_larger_than_budget_does_not_block_editing(model):
+    model.history_limit_bytes = 1
+    model.rotate([0], 90)
+    assert model.doc[0].rotation == 90 and model.dirty
+    assert model.history_bytes == 0 and not model.can_undo
+    model.close()
+    assert model.history_bytes == 0
+
+
 def test_ui_and_grouped_properties(model):
     app = QApplication.instance() or QApplication([])
     with patch('folimeld.app.is_packaged', return_value=False):
