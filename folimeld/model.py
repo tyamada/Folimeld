@@ -148,6 +148,14 @@ class PdfDocument:
         self.password_protected = was_protected
         self.view_password = password if was_protected else None
 
+    def open_generated(self, path: str) -> None:
+        # Detach from the temporary file before replacing the current document.
+        new_doc = fitz.open(stream=Path(path).read_bytes(), filetype="pdf")
+        self.close()
+        self.doc = new_doc
+        self._revision = self._next_revision = 1
+        self.dirty = True
+
     def close(self) -> None:
         if self.doc is not None:
             self.doc.close()

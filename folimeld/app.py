@@ -10,6 +10,9 @@ from PySide6.QtWidgets import (QApplication, QFileDialog, QMainWindow, QMessageB
 
 from . import __version__
 from .dialogs import PropertiesDialog
+from .folder_dialog import select_image_folder
+from .image_import import inventory
+from .image_import_dialog import ImageImportDialog
 from .help_dialog import HelpDialog
 from .i18n import I18n, LANGUAGES, install_qt_translator
 from .model import PasswordRequiredError, PdfDocument
@@ -111,10 +114,16 @@ class MainWindow(QMainWindow):
         self.remove_password_action = self._action("remove_password", self.remove_password)
         for action in (self.open_action, self.save_action, self.save_as_action):
             file_menu.addAction(action)
+        file_menu.addAction(self._action("import_images", self.import_image_folder))
         file_menu.addSeparator()
         file_menu.addAction(self.set_password_action)
         file_menu.addAction(self.remove_password_action)
         file_menu.addSeparator(); file_menu.addAction(self.properties_action)
+        file_menu.addSeparator()
+        self.exit_action = self._action("exit", self.close)
+        self.exit_action.setShortcuts(QKeySequence.StandardKey.Quit)
+        self.exit_action.setMenuRole(QAction.MenuRole.QuitRole)
+        file_menu.addAction(self.exit_action)
         self.up_action = self._action("move_up", lambda: self.move(-1), "Alt+Up")
         self.down_action = self._action("move_down", lambda: self.move(1), "Alt+Down")
         self.left_action = self._action("rotate_left", lambda: self.rotate(-90), "Ctrl+Left")
@@ -232,6 +241,30 @@ class MainWindow(QMainWindow):
         path = self.select_pdf(self.tr_("open"))
         if not path: return
         self._open_path(path)
+
+    def import_image_folder(self) -> None:
+        settings = QSettings()
+        initial = str(settings.value("last_image_directory", "") or "")
+        if not Path(initial).is_dir():
+            initial = QStandardPaths.writableLocation(QStandardPaths.StandardLocation.PicturesLocation)
+        folder = select_image_folder(self, self.tr_("import_images"), initial)
+        if not folder:
+            return
+        settings.setValue("last_image_directory", folder)
+        try:
+            entries = inventory(folder)
+            if not entries:
+                QMessageBox.information(self, self.tr_("import_images"), self.tr_("image_empty"))
+                return
+            dialog = ImageImportDialog(entries, self.tr_, self)
+            while dialog.exec():
+                if not self.confirm_discard():
+                    return
+                if dialog.convert(self.model):
+                    self.refresh()
+                    return
+        except Exception as exc:
+            self.error(exc)
 
     def select_pdf(self, title: str) -> str:
         """Select a PDF, starting in and remembering the last-used folder."""

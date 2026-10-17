@@ -8,6 +8,13 @@ Folimeld is a desktop application for visually rearranging, rotating, inserting,
 
 ![Folimeld main window](docs/screenshots/main-window.png)
 
+### Create a PDF from an image folder
+
+Choose “File → Create PDF from image folder…” to list JPEG, PNG, BMP, TIFF, and WebP files directly in a folder. Sort by name, creation time, or modification time in ascending or descending order; the default is natural name order, ascending. Exclude unwanted images. Images are not decoded until you press Load. Each image becomes one page (each multipage TIFF frame becomes a page) in a new unsaved PDF for editing and saving. Choose image-sized pages or A4. Image orientation is applied and transparency is flattened onto white. Image-sized pages use image DPI, falling back to 300 DPI for missing or invalid values. Subfolders and animated WebP are excluded. Unavailable creation times sort last; equal timestamps use ascending name order. Conversion can be cancelled, and failures preserve the current document.
+
+
+Choose File → Exit to close the app, with a save prompt for unsaved changes. On Windows, the image folder picker provides sidebar shortcuts to configured personal and work OneDrive folders. The initial folder picker displays all file types while accepting folders only.
+
 ## Features
 
 - Multi-step Undo and Redo from the Edit menu or toolbar for page operations, properties, and viewing password changes. History remains available after saving and resets when another PDF is opened. PDF data in Undo and Redo history is limited to a combined 128 MiB in memory, with older history removed when the limit is exceeded. A single history entry larger than the limit is not retained. Temporary data used during editing and saving, and thumbnails, are outside this limit.

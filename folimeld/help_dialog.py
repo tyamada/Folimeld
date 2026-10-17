@@ -26,6 +26,7 @@ class HelpDialog(QDialog):
         add_tab("help_basics", "".join(
             section(title, body) for title, body in (
                 ("open", "help_open_text"),
+                ("import_images", "help_images_text"),
                 ("edit", "help_edit_text"),
                 ("insert", "help_insert_text"),
                 ("save", "help_save_text"),
