@@ -45,13 +45,17 @@ def properties(doc):
     (lambda m: m.move_selected([1, 3], -1), [1, 0, 3, 2]),
 ])
 @pytest.mark.parametrize('overwrite', [False, True])
-def test_reorder_preserves_properties(model, tmp_path, operation, expected, overwrite):
+@pytest.mark.parametrize('disk_history', [False, True])
+def test_reorder_preserves_properties(model, tmp_path, operation, expected, overwrite, disk_history):
+    if disk_history:
+        model.history_limit_bytes = 0
     before = properties(model.doc)
     operation(model)
     assert properties(model.doc) == before
     assert [int(page.get_text().strip()) for page in model.doc] == expected
     assert model.doc.get_toc() == [[1, 'First page', expected.index(0) + 1]]
     assert model.undo()
+    assert bool(model.history_disk_bytes) == disk_history
     assert properties(model.doc) == before
     assert [int(page.get_text().strip()) for page in model.doc] == list(range(4))
     assert model.redo()

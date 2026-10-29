@@ -73,10 +73,10 @@ def test_rollback_reconnects_thumbnails_to_restored_document():
             window.rotate(45)
         report.assert_called_once()
         assert window.model.doc is not original
-        assert window._thumbnail_document is window.model.doc
+        assert window.thumbnails.document is window.model.doc
         assert window.selected_rows() == [0]
-        while window._pending_thumbnails:
-            window._render_thumbnail_batch()
+        while window.thumbnails.pending:
+            window.thumbnails.render_batch()
         assert not window.pages.item(0).icon().isNull()
         assert window.model.doc[0].rotation == 0 and not window.model.dirty
     finally:

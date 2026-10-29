@@ -75,10 +75,12 @@ To use the virtual environment directly on Windows:
 
 ## Quality checks and performance measurements
 
-The GitHub Actions [Checks](.github/workflows/checks.yml) workflow runs Ruff and pytest on Windows, Ubuntu 22.04, and macOS using Python 3.12. Ruff initially checks syntax errors and undefined names. Each job uploads test results and `pip freeze` as artifacts. Dependency versions can change; use these records to reproduce a previous validation environment. Adding CI does not itself verify success on each OS or the behavior of distribution packages.
+The GitHub Actions [Checks](.github/workflows/checks.yml) workflow runs Ruff, mypy, and pytest on Windows, Ubuntu 22.04, and macOS using Python 3.12. Ruff checks syntax errors, undefined names, unused code, and related issues; mypy checks the model and history layers. Distribution builds and CI use `constraints-release.txt` to constrain major dependency versions. These versions have been checked on Windows; the constraints do not guarantee OS-specific dependencies or distribution behavior. When updating dependencies, update the constraints and run CI on all three operating systems and the pre-release checks. Each job uploads test results and `pip freeze` as artifacts. Adding or changing CI does not itself verify success on each OS or the behavior of distribution packages.
 
 ```bash
+python -m pip install -r requirements-dev.txt -c constraints-release.txt
 python -m ruff check .
+python -m mypy
 python -m pytest -q -p no:cacheprovider
 python -m tools.benchmark_pdf --pages 100 --output build/benchmarks/text-100.json
 python -m tools.benchmark_pdf --pages 100 --image-size 256 --output build/benchmarks/images-100.json
@@ -90,6 +92,14 @@ Run each case in a fresh process. Use `--input path/to/document.pdf` for an exis
 See [Performance and release verification](docs/performance-and-release.md) (in Japanese) for initial measurements and pre-release checks.
 
 The measurement tool also scrolls through the document and records the maximum retained thumbnail count. Large PDFs render only the viewport and nearby pages, so `initial_thumbnails` does not measure rendering every page. Compare it together with `scroll_thumbnails` and memory usage. Normally up to 64 thumbnails are retained; if an exceptionally large screen shows more than 64 pages, all visible pages take priority.
+
+## Saving, history, and diagnostics
+
+Normal saving uses `garbage=3`, skipping stream deduplication. In the GUI, a separate process owns an independent document and writes temporary output; the model replaces the destination after success. Preparation and final switching remain synchronous; editing and cancellation are unavailable during saving. The benchmark tool measures the synchronous model API and excludes GUI process startup time.
+
+History is bounded by 128 MiB in memory and 1 GiB in temporary files. `history_bytes` counts in-memory PDF data and `history_disk_bytes` counts PDF data on disk. Snapshot creation and restoration process the whole PDF, so these limits do not bound temporary memory usage or edit latency. Temporary history files and temporary input for the save process contain decrypted PDF data. Unused history is explicitly closed, and the save staging directory is removed when processing ends.
+
+Error tracebacks are recorded in `logs/folimeld.log` under Qt's `AppLocalDataLocation` (up to three files of 1 MiB each). On Windows this is normally `%LOCALAPPDATA%/Folimeld/Folimeld/logs/`. No code explicitly logs PDF contents or passwords, but exception messages may contain filenames and similar information. Failure to initialize logging does not prevent startup.
 
 ## Version management
 

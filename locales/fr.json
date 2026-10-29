@@ -28,5 +28,6 @@
   "image_empty": "Aucune image compatible trouvée.",
   "help_images_text": "Choisissez un dossier et triez par nom, date de création ou de modification, par ordre croissant ou décroissant. Par défaut : nom croissant. Charger crée un nouveau PDF à modifier et enregistrer."
 ,
-  "exit": "Quitter"
+  "exit": "Quitter",
+  "saving": "Enregistrement du PDF…"
 }

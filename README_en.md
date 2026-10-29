@@ -17,7 +17,8 @@ Choose File → Exit to close the app, with a save prompt for unsaved changes. O
 
 ## Features
 
-- Multi-step Undo and Redo from the Edit menu or toolbar for page operations, properties, and viewing password changes. History remains available after saving and resets when another PDF is opened. PDF data in Undo and Redo history is limited to a combined 128 MiB in memory, with older history removed when the limit is exceeded. A single history entry larger than the limit is not retained. Temporary data used during editing and saving, and thumbnails, are outside this limit.
+- Multi-step Undo and Redo from the Edit menu or toolbar for page operations, properties, and viewing password changes. History remains available after saving and resets when another PDF is opened. PDF data in Undo and Redo history is kept in memory up to a combined 128 MiB; overflow is stored in local temporary files up to a combined 1 GiB. Older history is removed when both limits are exceeded or spilling fails; a single entry larger than the disk limit is not retained. Temporary history is released when the document is closed. Temporary data used during editing and saving, and thumbnails, are outside these limits, and whole-document processing can temporarily increase memory usage.
+- Saving shows a progress dialog and compresses and writes the PDF in a separate process. Editing and cancellation are unavailable during saving. Preparing the document for the worker and switching documents after saving remain synchronous.
 - Rearrange PDF pages using thumbnail previews
 - Select, move, rotate, or delete multiple pages at once
 - Insert another PDF or a blank page of the same size

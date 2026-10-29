@@ -20,6 +20,7 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 SOURCE_DIRS = {"folimeld", "tools", "assets", "locales", "licenses", "packaging", "tests"}
 ROOT_SUFFIXES = {".py", ".spec", ".sh", ".bat", ".ps1", ".md"}
+ROOT_CONFIG_FILES = {"constraints-release.txt", "mypy.ini", "ruff.toml"}
 
 
 def digest(path):
@@ -42,7 +43,7 @@ def source_paths(root):
         candidates = set(tracked) | {
             name for name in other if name and (
                 Path(name).parts[0] in SOURCE_DIRS or
-                len(Path(name).parts) == 1 and Path(name).suffix in ROOT_SUFFIXES
+                len(Path(name).parts) == 1 and (Path(name).suffix in ROOT_SUFFIXES or name in ROOT_CONFIG_FILES)
             )
         }
         # Keep newly added documentation reachable from tracked Markdown, without
@@ -80,7 +81,8 @@ def source_paths(root):
         include = relative.parts[0] in SOURCE_DIRS | {"docs"} or (
             len(relative.parts) == 1 and (
                 relative.suffix in ROOT_SUFFIXES or
-                name in {"LICENSE", ".gitignore", ".gitattributes", "requirements.txt", "requirements-dev.txt"}
+                name in {"LICENSE", ".gitignore", ".gitattributes", "requirements.txt", "requirements-dev.txt",
+                         "constraints-release.txt", "mypy.ini", "ruff.toml"}
             )
         )
         if not include or "__pycache__" in relative.parts or relative.suffix in {".pyc", ".pyo"}:

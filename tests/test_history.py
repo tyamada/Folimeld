@@ -101,6 +101,7 @@ def test_failed_group_rolls_back(model):
 
 
 def test_history_budget_prunes_old_states_and_preserves_save_point(model, tmp_path):
+    model.history_disk_limit_bytes = 0
     model.history_limit_bytes = len(model._snapshot()[0]) * 2 + 200
     model.rotate([0], 90)
     model.save(str(tmp_path / 'saved.pdf'))
@@ -122,12 +123,71 @@ def test_history_budget_prunes_old_states_and_preserves_save_point(model, tmp_pa
 
 
 def test_snapshot_larger_than_budget_does_not_block_editing(model):
+    model.history_disk_limit_bytes = 0
     model.history_limit_bytes = 1
     model.rotate([0], 90)
     assert model.doc[0].rotation == 90 and model.dirty
     assert model.history_bytes == 0 and not model.can_undo
     model.close()
     assert model.history_bytes == 0
+
+
+def test_disk_history_round_trip_branch_cleanup_and_save_point(model, tmp_path):
+    model.history_limit_bytes = 1
+    model.rotate([0], 90)
+    first = model._undo[0].pdf
+    assert model.history_bytes == 0 and model.history_disk_bytes > 0
+    assert not first.in_memory
+    model.save(str(tmp_path / 'saved.pdf'))
+    model.set_view_password('secret')
+    assert model.undo() and not model.dirty and model.view_password is None
+    discarded = model._redo[0].pdf
+    model.rotate([1], 180)
+    assert not model.can_redo
+    with pytest.raises(RuntimeError, match='closed'):
+        discarded.read()
+    assert model.undo() and not model.dirty
+    assert model.undo() and model.doc[0].rotation == 0 and model.dirty
+    assert model.redo() and model.doc[0].rotation == 90 and not model.dirty
+    retained = [state.pdf for stack in (model._undo, model._redo) for state in stack]
+    model.close()
+    assert model.history_disk_bytes == 0
+    for snapshot in retained:
+        with pytest.raises(RuntimeError, match='closed'):
+            snapshot.read()
+
+
+def test_disk_history_budget_prunes_old_states(model):
+    model.history_limit_bytes = 0
+    model.history_disk_limit_bytes = len(model._snapshot().pdf) * 2 + 200
+    for _ in range(6):
+        model.rotate([0], 90)
+        assert model.history_bytes == 0
+        assert model.history_disk_bytes <= model.history_disk_limit_bytes
+    assert 0 < len(model._undo) < 6
+    assert model.undo() and model.doc[0].rotation == 90
+    assert model.redo() and model.doc[0].rotation == 180
+
+
+def test_disk_full_does_not_lose_edit_or_existing_history(model):
+    model.rotate([0], 90)
+    model.history_limit_bytes = 0
+    with patch('folimeld.history.TemporaryFile', side_effect=OSError('disk full')):
+        model.rotate([1], 90)
+    assert model.doc[0].rotation == model.doc[1].rotation == 90
+    assert model.dirty and not model.can_undo
+    assert model.history_bytes == model.history_disk_bytes == 0
+
+
+def test_unreadable_disk_history_does_not_change_current_document(model):
+    model.history_limit_bytes = 0
+    model.rotate([0], 90)
+    before = state(model)
+    with patch.object(model._undo[-1].pdf, 'read', side_effect=OSError('read failed')):
+        with pytest.raises(OSError, match='read failed'):
+            model.undo()
+    assert state(model) == before and model.can_undo and model.dirty
+    assert model.undo() and model.doc[0].rotation == 0
 
 
 def test_ui_and_grouped_properties(model):

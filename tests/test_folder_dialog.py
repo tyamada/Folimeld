@@ -26,7 +26,7 @@ def test_onedrive_not_added_on_other_platforms():
 
 
 def test_folder_picker_adds_onedrive_sidebar_and_returns_folder(tmp_path):
-    app = QApplication.instance() or QApplication([])
+    _app = QApplication.instance() or QApplication([])
     observed = []
 
     def accept(dialog):
@@ -42,7 +42,7 @@ def test_folder_picker_adds_onedrive_sidebar_and_returns_folder(tmp_path):
 
 
 def test_exit_action_preserves_unsaved_confirmation():
-    app = QApplication.instance() or QApplication([])
+    _app = QApplication.instance() or QApplication([])
     window = MainWindow()
     window.show()
     with patch.object(window, 'confirm_discard', return_value=False) as confirm:

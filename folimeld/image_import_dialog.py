@@ -100,7 +100,7 @@ class ImageImportDialog(QDialog):
                             result.append((kind, value))
                             progress.accept()
                             return
-                except EOFError:
+                except (EOFError, OSError):
                     pass
                 if not process.is_alive() and not result:
                     result.append(('error', self.tr('image_worker_failed')))

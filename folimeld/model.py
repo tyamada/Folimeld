@@ -1,12 +1,16 @@
 import os
+import logging
 import secrets
 import tempfile
+from collections.abc import Callable, Iterator
 from contextlib import contextmanager
 from functools import wraps
 from pathlib import Path
-from typing import NamedTuple
+from typing import Any, NamedTuple, ParamSpec, TypeVar
 
 import fitz
+
+from .history import Snapshot
 
 
 class HistoryState(NamedTuple):
@@ -14,6 +18,16 @@ class HistoryState(NamedTuple):
     password: str | None
     protected: bool
     revision: int
+
+
+class StoredHistory(NamedTuple):
+    pdf: Snapshot
+    password: str | None
+    protected: bool
+    revision: int
+
+    def close(self) -> None:
+        self.pdf.close()
 
 
 class PasswordRequiredError(Exception):
@@ -27,24 +41,33 @@ def layout_with_cover(layout: str, cover: bool) -> str:
     return layout
 
 
-def undoable(method):
+P = ParamSpec('P')
+R = TypeVar('R')
+PdfWriter = Callable[[Any, Path, dict[str, Any]], None]
+
+
+def undoable(method: Callable[P, R]) -> Callable[P, R]:
     @wraps(method)
-    def wrapped(self, *args, **kwargs):
-        with self.transaction():
-            return method(self, *args, **kwargs)
+    def wrapped(*args: P.args, **kwargs: P.kwargs) -> R:
+        model = args[0]
+        assert isinstance(model, PdfDocument)
+        with model.transaction():
+            return method(*args, **kwargs)
     return wrapped
 
 
 class PdfDocument:
-    def __init__(self, history_limit_bytes: int = 128 * 1024 * 1024) -> None:
+    def __init__(self, history_limit_bytes: int = 128 * 1024 * 1024,
+                 history_disk_limit_bytes: int = 1024 * 1024 * 1024) -> None:
         self.history_limit_bytes = max(0, history_limit_bytes)
+        self.history_disk_limit_bytes = max(0, history_disk_limit_bytes)
         self.doc: fitz.Document | None = None
         self.path: Path | None = None
         self.dirty = False
         self.view_password: str | None = None
         self.password_protected = False
-        self._undo: list[HistoryState] = []
-        self._redo: list[HistoryState] = []
+        self._undo: list[StoredHistory] = []
+        self._redo: list[StoredHistory] = []
         self._revision = 0
         self._next_revision = 0
         self._saved_revision = 0
@@ -52,15 +75,53 @@ class PdfDocument:
 
     @property
     def history_bytes(self) -> int:
-        return sum(len(state.pdf) for stack in (self._undo, self._redo) for state in stack)
+        return sum(state.pdf.size for stack in (self._undo, self._redo)
+                   for state in stack if state.pdf.in_memory)
+
+    @property
+    def history_disk_bytes(self) -> int:
+        return sum(state.pdf.size for stack in (self._undo, self._redo)
+                   for state in stack if not state.pdf.in_memory)
+
+    @staticmethod
+    def _clear_stack(stack: list[StoredHistory]) -> None:
+        for state in stack:
+            state.close()
+        stack.clear()
+
+    def _store(self, state: HistoryState) -> StoredHistory:
+        return StoredHistory(Snapshot(state.pdf), state.password, state.protected, state.revision)
 
     def _trim_history(self) -> None:
-        # Stack bottoms are the farthest reachable states. Keep the nearest
-        # states; a snapshot larger than the budget cannot be retained.
+        # Spill distant states first. A failed spill only drops that history
+        # entry; disk exhaustion must not make a successful edit fail.
         size = self.history_bytes
+        disk_size = self.history_disk_bytes
         for stack in (self._undo, self._redo):
-            while stack and size > self.history_limit_bytes:
-                size -= len(stack.pop(0).pdf)
+            for state in list(stack):
+                if size <= self.history_limit_bytes:
+                    break
+                if not state.pdf.in_memory:
+                    continue
+                if state.pdf.size <= self.history_disk_limit_bytes:
+                    try:
+                        state.pdf.spill()
+                    except OSError:
+                        logging.getLogger(__name__).warning('Cannot retain PDF history on disk', exc_info=True)
+                        stack.remove(state)
+                        state.close()
+                    else:
+                        disk_size += state.pdf.size
+                else:
+                    stack.remove(state)
+                    state.close()
+                size -= state.pdf.size
+        for stack in (self._undo, self._redo):
+            while stack and disk_size > self.history_disk_limit_bytes:
+                state = stack.pop(0)
+                if not state.pdf.in_memory:
+                    disk_size -= state.pdf.size
+                state.close()
 
     def _snapshot(self) -> HistoryState:
         assert self.doc is not None
@@ -69,9 +130,12 @@ class PdfDocument:
             self.view_password, self.password_protected, self._revision,
         )
 
-    def _restore(self, state: HistoryState) -> None:
+    def _restore(self, state: HistoryState | StoredHistory) -> None:
         data, password, protected, revision = state
+        if isinstance(data, Snapshot):
+            data = data.read()
         restored = fitz.open(stream=data, filetype="pdf")
+        assert self.doc is not None
         self.doc.close()
         self.doc = restored
         self.view_password = password
@@ -80,7 +144,7 @@ class PdfDocument:
         self.dirty = revision != self._saved_revision
 
     @contextmanager
-    def transaction(self):
+    def transaction(self) -> Iterator[None]:
         """Group edits into one history entry and roll back failed edits."""
         if self._transaction_depth:
             yield
@@ -93,8 +157,8 @@ class PdfDocument:
             yield
             after = self._snapshot()
             if before[:3] != after[:3]:
-                self._undo.append(before)
-                self._redo.clear()
+                self._undo.append(self._store(before))
+                self._clear_stack(self._redo)
                 self._trim_history()
                 self._next_revision += 1
                 self._revision = self._next_revision
@@ -118,8 +182,8 @@ class PdfDocument:
             return False
         current = self._snapshot()
         self._restore(self._undo[-1])
-        self._undo.pop()
-        self._redo.append(current)
+        self._undo.pop().close()
+        self._redo.append(self._store(current))
         self._trim_history()
         return True
 
@@ -128,8 +192,8 @@ class PdfDocument:
             return False
         current = self._snapshot()
         self._restore(self._redo[-1])
-        self._redo.pop()
-        self._undo.append(current)
+        self._redo.pop().close()
+        self._undo.append(self._store(current))
         self._trim_history()
         return True
 
@@ -160,8 +224,8 @@ class PdfDocument:
         if self.doc is not None:
             self.doc.close()
         self.doc = None
-        self._undo.clear()
-        self._redo.clear()
+        self._clear_stack(self._undo)
+        self._clear_stack(self._redo)
         self._revision = self._next_revision = self._saved_revision = 0
         self.dirty = False
         self.path = None
@@ -241,30 +305,30 @@ class PdfDocument:
     @undoable
     def move_selected(self, rows: list[int], direction: int) -> list[int]:
         assert self.doc is not None
-        selected = set(self._validate_rows(rows))
+        selected = self._validate_rows(rows)
         if type(direction) is not int or direction not in (-1, 1):
             raise ValueError("Move direction must be -1 or 1.")
-        order = list(range(self.doc.page_count))
-        scan = range(1, len(order)) if direction < 0 else range(len(order) - 2, -1, -1)
-        for i in scan:
-            neighbor = i + direction
-            if i in selected and neighbor not in selected:
-                order[i], order[neighbor] = order[neighbor], order[i]
-                selected.remove(i)
-                selected.add(neighbor)
-        if order != list(range(self.doc.page_count)):
-            self._reorder_pages(order)
-            self.dirty = True
-        return sorted(selected)
-
-    def _reorder_pages(self, order: list[int]) -> None:
-        """Move existing pages without rebuilding and stripping the catalog."""
-        current = list(range(self.doc.page_count))
-        for target, original in enumerate(order):
-            source = current.index(original)
-            if source != target:
-                self.doc.move_page(source, target)
-                current.insert(target, current.pop(source))
+        groups: list[tuple[int, int]] = []
+        for row in selected:
+            if groups and groups[-1][1] == row - 1:
+                groups[-1] = (groups[-1][0], row)
+            else:
+                groups.append((row, row))
+        result: list[int] = []
+        count = self.doc.page_count
+        for first, last in (groups if direction < 0 else reversed(groups)):
+            can_move = first > 0 if direction < 0 else last < count - 1
+            if can_move:
+                # Move the one unselected neighbor around the entire selected
+                # run. Keep existing PDF objects and catalog references intact.
+                if direction < 0:
+                    self.doc.move_page(first - 1, -1 if last == count - 1 else last + 1)
+                else:
+                    self.doc.move_page(last + 1, first)
+                self.dirty = True
+            offset = direction if can_move else 0
+            result.extend(row + offset for row in range(first, last + 1))
+        return sorted(result)
 
     @undoable
     def rotate(self, rows: list[int], degrees: int) -> None:
@@ -278,10 +342,12 @@ class PdfDocument:
         if rows:
             self.dirty = True
 
-    def save(self, path: str) -> None:
+    def save(self, path: str, *, writer: PdfWriter | None = None) -> None:
         assert self.doc is not None
         destination = Path(path)
-        options = {"garbage": 4, "deflate": True}
+        # Collect unused objects and merge duplicate objects, without the
+        # expensive stream comparison performed by garbage=4 on image PDFs.
+        options: dict[str, Any] = {"garbage": 3, "deflate": True}
         if self.view_password:
             options.update(
                 encryption=fitz.PDF_ENCRYPT_AES_256,
@@ -298,7 +364,10 @@ class PdfDocument:
         os.close(descriptor)
         temp = Path(name)
         try:
-            self.doc.save(str(temp), **options)
+            if writer is None:
+                self.doc.save(str(temp), **options)
+            else:
+                writer(self.doc, temp, options)
             # Prepare an independent editable document before releasing the
             # source file handle (required for replacement on Windows).
             backup = fitz.open(stream=self._snapshot()[0], filetype="pdf")

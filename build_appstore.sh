@@ -69,7 +69,7 @@ if [[ ! -x "$PYTHON_EXE" ]]; then
   exit 1
 fi
 
-"$PYTHON_EXE" -m pip install -r requirements.txt pyinstaller
+"$PYTHON_EXE" -m pip install -r requirements.txt -c constraints-release.txt pyinstaller
 "$PYTHON_EXE" "$SCRIPT_DIR/tools/make_app_icon.py"
 
 if ! command -v iconutil >/dev/null 2>&1; then

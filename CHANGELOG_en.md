@@ -4,6 +4,12 @@
 
 ## Unreleased
 
+- Speed up saving large image PDFs by skipping stream deduplication; add a progress dialog and a separate writing process, verifying preservation of edits and history on failure and protection of existing destinations on write failure
+- Spill Undo/Redo history exceeding the 128 MiB memory budget to local temporary files up to 1 GiB, enabling history for large documents; release unused temporary history on document close and history branching
+- Separate thumbnail management into a dedicated class and optimize viewport searches and movement of contiguous page selections
+- Add dependency version constraints for distribution builds and CI, unused-code checks, type checks for the model and history layers, and bounded local error logs
+- Detect broken pipes when image conversion exits without returning a result on Windows, avoiding an indefinite wait
+
 - Add File → Exit; show all file types in the image folder picker and add shortcuts to configured OneDrive folders on Windows
 
 - Import image folders as new PDFs with ascending or descending name, creation-time, or modification-time sorting, exclusions, page sizes, progress, and cancellation

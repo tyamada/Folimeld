@@ -18,7 +18,7 @@ if exist "%OUTPUT_EXE%" (
     )
 )
 
-"%PYTHON_EXE%" -m pip install -r requirements.txt pyinstaller
+"%PYTHON_EXE%" -m pip install -r requirements.txt -c constraints-release.txt pyinstaller
 if errorlevel 1 exit /b %errorlevel%
 
 "%PYTHON_EXE%" tools\make_app_icon.py

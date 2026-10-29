@@ -28,5 +28,6 @@
   "image_empty": "Nenhuma imagem compatível encontrada.",
   "help_images_text": "Selecione uma pasta e ordene por nome, data de criação ou modificação em ordem crescente ou decrescente. O padrão é nome crescente. Carregar cria um novo PDF para editar e salvar."
 ,
-  "exit": "Sair"
+  "exit": "Sair",
+  "saving": "A guardar PDF…"
 }

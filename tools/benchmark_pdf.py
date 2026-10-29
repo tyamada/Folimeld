@@ -6,6 +6,7 @@ RSS is sampled every 5 ms and can miss short peaks. Use one process per case.
 import argparse
 from contextlib import contextmanager
 import gc
+import hashlib
 from importlib.metadata import version
 import json
 from io import BytesIO
@@ -83,10 +84,10 @@ def benchmark(input_path, output_path):
     def render():
         nonlocal max_batch_ms, peak_resident_thumbnails
         # Explicit ticks avoid mixing scheduled and measured thumbnail batches.
-        window._thumbnail_timer.stop()
-        while window._pending_thumbnails:
+        window.thumbnails.timer.stop()
+        while window.thumbnails.pending:
             started = perf_counter()
-            window._render_thumbnail_batch()
+            window.thumbnails.render_batch()
             max_batch_ms = max(max_batch_ms, (perf_counter() - started) * 1000)
             app.processEvents()
         peak_resident_thumbnails = max(peak_resident_thumbnails, sum(
@@ -120,6 +121,7 @@ def benchmark(input_path, output_path):
             result = {
                 "input_bytes": input_path.stat().st_size,
                 "pages": window.model.doc.page_count,
+                "output_bytes": output_path.stat().st_size,
                 "thumbnail_size": window.thumbnail_size,
                 "milliseconds": timings,
                 "max_thumbnail_batch_ms": max_batch_ms,
@@ -127,6 +129,7 @@ def benchmark(input_path, output_path):
                 "rss_baseline_bytes": baseline,
                 "sampled_peak_rss_bytes": max(samples),
                 "history_bytes": window.model.history_bytes,
+                "history_disk_bytes": window.model.history_disk_bytes,
                 "undo_performed": undo_performed,
                 "redo_performed": redo_performed,
             }
@@ -156,7 +159,15 @@ def main():
         source = args.input or root / "source.pdf"
         if not args.input:
             create_fixture(source, args.pages, args.image_size)
+        with source.open('rb') as stream:
+            before = hashlib.file_digest(stream, 'sha256').hexdigest()
         result = benchmark(source, root / "saved.pdf")
+        with source.open('rb') as stream:
+            after = hashlib.file_digest(stream, 'sha256').hexdigest()
+        if before != after:
+            raise RuntimeError('Benchmark input changed during measurement.')
+        result['input_sha256'] = before
+        result['input_unchanged'] = True
     result["environment"] = {
         "python": platform.python_version(), "platform": platform.platform(),
         "dependencies": {name: version(name) for name in ("PyMuPDF", "PySide6", "Pillow", "psutil")},

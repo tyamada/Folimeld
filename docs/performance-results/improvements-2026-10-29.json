@@ -1,0 +1,177 @@
+{
+  "date_jst": "2026-10-29",
+  "mode": "synchronous model API; excludes GUI worker startup",
+  "input_name": "load_test_1100_pages.pdf",
+  "source_sha256": {
+    "folimeld/model.py": "609fa766e5d6977b6f048c80c0b34dc8fe9f5a634be5f49b0aa058965f3307fd",
+    "folimeld/history.py": "86631c12fa897c709de03591e4f346961e2dc343639817891977745efa4472eb",
+    "folimeld/pdf_save.py": "70b256bde87aaa8ffdb95b056d7107a598427a3ff9966ca0aa94cbe38c3bf4e0",
+    "folimeld/thumbnails.py": "918f2b26ada664934e3d4393685ef53078b589bdc35d081a5600b130a94f7025",
+    "folimeld/app.py": "443dba4f43e560ee7318363aaf8f56cdae922f05fd03fbe92ad27584a8df0624",
+    "tools/benchmark_pdf.py": "994f1aed586ab7fa4ba8c51ece20959357b906fee9ebdeb06d97c6bed6a2e911",
+    "constraints-release.txt": "1940e248205cf1cc7dda8a6ee4e27514c24dbe419b737ecda35e55f19e908252"
+  },
+  "summary": {
+    "save": {
+      "median_ms": 612.9936999998336,
+      "min_ms": 612.7928999999313,
+      "max_ms": 617.9615999999442
+    },
+    "rotate": {
+      "median_ms": 1163.3039000000736,
+      "min_ms": 1155.8189999998376,
+      "max_ms": 1168.555200000128
+    },
+    "undo": {
+      "median_ms": 960.4841000000306,
+      "min_ms": 960.482200000115,
+      "max_ms": 963.2560000000012
+    },
+    "redo": {
+      "median_ms": 821.8989000001784,
+      "min_ms": 818.3354000000236,
+      "max_ms": 833.0667000000176
+    },
+    "reorder": {
+      "median_ms": 914.5842000000357,
+      "min_ms": 913.9873000001444,
+      "max_ms": 933.2104000000072
+    },
+    "scroll_thumbnails": {
+      "median_ms": 1838.037500000155,
+      "min_ms": 1829.739199999949,
+      "max_ms": 1842.9810000000089
+    }
+  },
+  "runs": [
+    {
+      "input_bytes": 153434540,
+      "pages": 1100,
+      "output_bytes": 153374675,
+      "thumbnail_size": 288,
+      "milliseconds": {
+        "open": 1.2323999999352964,
+        "refresh": 94.54749999986234,
+        "initial_thumbnails": 32.10009999997965,
+        "scroll_thumbnails": 1842.9810000000089,
+        "rotate": 1163.3039000000736,
+        "refresh_after_rotation": 54.13350000003447,
+        "rotation_thumbnails": 4.765299999917261,
+        "undo": 963.2560000000012,
+        "redo": 818.3354000000236,
+        "reorder": 913.9873000001444,
+        "save": 617.9615999999442
+      },
+      "max_thumbnail_batch_ms": 7.2466999999960535,
+      "peak_resident_thumbnails": 24,
+      "rss_baseline_bytes": 93261824,
+      "sampled_peak_rss_bytes": 727101440,
+      "history_bytes": 0,
+      "history_disk_bytes": 306749349,
+      "undo_performed": true,
+      "redo_performed": true,
+      "input_sha256": "84b5b3a15bd86bae94d8cba671b0d2cd6dc99535cfc9d44cf4767a1aca119e38",
+      "input_unchanged": true,
+      "environment": {
+        "python": "3.14.7",
+        "platform": "Windows-11-10.0.26300-SP0",
+        "dependencies": {
+          "PyMuPDF": "1.28.2",
+          "PySide6": "6.11.2",
+          "Pillow": "12.3.0",
+          "psutil": "7.2.2"
+        }
+      },
+      "fixture": {
+        "generated": false,
+        "image_size": null
+      }
+    },
+    {
+      "input_bytes": 153434540,
+      "pages": 1100,
+      "output_bytes": 153374675,
+      "thumbnail_size": 288,
+      "milliseconds": {
+        "open": 1.2042999999266613,
+        "refresh": 93.38630000002013,
+        "initial_thumbnails": 31.403499999896667,
+        "scroll_thumbnails": 1838.037500000155,
+        "rotate": 1155.8189999998376,
+        "refresh_after_rotation": 53.32980000002863,
+        "rotation_thumbnails": 4.510100000061357,
+        "undo": 960.482200000115,
+        "redo": 833.0667000000176,
+        "reorder": 933.2104000000072,
+        "save": 612.9936999998336
+      },
+      "max_thumbnail_batch_ms": 7.119399999965026,
+      "peak_resident_thumbnails": 24,
+      "rss_baseline_bytes": 93380608,
+      "sampled_peak_rss_bytes": 727826432,
+      "history_bytes": 0,
+      "history_disk_bytes": 306749349,
+      "undo_performed": true,
+      "redo_performed": true,
+      "input_sha256": "84b5b3a15bd86bae94d8cba671b0d2cd6dc99535cfc9d44cf4767a1aca119e38",
+      "input_unchanged": true,
+      "environment": {
+        "python": "3.14.7",
+        "platform": "Windows-11-10.0.26300-SP0",
+        "dependencies": {
+          "PyMuPDF": "1.28.2",
+          "PySide6": "6.11.2",
+          "Pillow": "12.3.0",
+          "psutil": "7.2.2"
+        }
+      },
+      "fixture": {
+        "generated": false,
+        "image_size": null
+      }
+    },
+    {
+      "input_bytes": 153434540,
+      "pages": 1100,
+      "output_bytes": 153374675,
+      "thumbnail_size": 288,
+      "milliseconds": {
+        "open": 1.1858999998821673,
+        "refresh": 93.97039999998924,
+        "initial_thumbnails": 30.072700000118857,
+        "scroll_thumbnails": 1829.739199999949,
+        "rotate": 1168.555200000128,
+        "refresh_after_rotation": 55.26259999987815,
+        "rotation_thumbnails": 4.180000000133077,
+        "undo": 960.4841000000306,
+        "redo": 821.8989000001784,
+        "reorder": 914.5842000000357,
+        "save": 612.7928999999313
+      },
+      "max_thumbnail_batch_ms": 6.986600000118415,
+      "peak_resident_thumbnails": 24,
+      "rss_baseline_bytes": 93630464,
+      "sampled_peak_rss_bytes": 729128960,
+      "history_bytes": 0,
+      "history_disk_bytes": 306749349,
+      "undo_performed": true,
+      "redo_performed": true,
+      "input_sha256": "84b5b3a15bd86bae94d8cba671b0d2cd6dc99535cfc9d44cf4767a1aca119e38",
+      "input_unchanged": true,
+      "environment": {
+        "python": "3.14.7",
+        "platform": "Windows-11-10.0.26300-SP0",
+        "dependencies": {
+          "PyMuPDF": "1.28.2",
+          "PySide6": "6.11.2",
+          "Pillow": "12.3.0",
+          "psutil": "7.2.2"
+        }
+      },
+      "fixture": {
+        "generated": false,
+        "image_size": null
+      }
+    }
+  ]
+}

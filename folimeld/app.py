@@ -1,29 +1,28 @@
 import sys
-from time import perf_counter
+import logging
 from pathlib import Path
 
-import fitz
-from PySide6.QtCore import QEvent, QSettings, QStandardPaths, QTimer, Qt
-from PySide6.QtGui import QAction, QCloseEvent, QIcon, QImage, QPixmap, QKeySequence, QTransform
+from PySide6.QtCore import QSettings, QStandardPaths, QTimer, Qt
+from PySide6.QtGui import QAction, QCloseEvent, QIcon, QKeySequence, QTransform
 from PySide6.QtWidgets import (QApplication, QFileDialog, QMainWindow, QMessageBox,
-                               QInputDialog, QLineEdit, QToolBar, QListWidgetItem, QStyle)
+                               QInputDialog, QLineEdit, QToolBar, QStyle)
 
 from . import __version__
 from .dialogs import PropertiesDialog
+from .diagnostics import configure_logging
 from .folder_dialog import select_image_folder
 from .image_import import inventory
 from .image_import_dialog import ImageImportDialog
 from .help_dialog import HelpDialog
 from .i18n import I18n, LANGUAGES, install_qt_translator
 from .model import PasswordRequiredError, PdfDocument
+from .pdf_save import save_with_progress
+from .thumbnails import ThumbnailController
 from .widgets import THUMBNAIL_SIZES, ThumbnailList
 from .windows_integration import register_open_with, is_packaged
 from .store_support import StoreSupport
 from .support_dialog import SponsorsDialog, SupportDialog, supporter_icon
 from .license_info import SOURCE_URL, license_documents
-
-
-THUMBNAIL_CACHE_LIMIT = 64
 
 
 BUTTON_STYLES = {
@@ -40,19 +39,12 @@ class MainWindow(QMainWindow):
         saved_style = QSettings().value("button_display", "text")
         self.button_display = saved_style if saved_style in BUTTON_STYLES else "text"
         self.model = PdfDocument()
+        self._saving = False
         self.pages = ThumbnailList()
-        self._thumbnail_document = None
-        self._pending_thumbnails = {}
-        self._resident_thumbnails = {}
-        self._viewport_timer = QTimer(self)
-        self._viewport_timer.setSingleShot(True)
-        self._viewport_timer.timeout.connect(self._update_thumbnail_viewport)
-        self.pages.viewport().installEventFilter(self)
-        for scrollbar in (self.pages.verticalScrollBar(), self.pages.horizontalScrollBar()):
-            scrollbar.valueChanged.connect(lambda _value: self._viewport_timer.start(0))
-        self._thumbnail_timer = QTimer(self)
-        self._thumbnail_timer.setInterval(1)
-        self._thumbnail_timer.timeout.connect(self._render_thumbnail_batch)
+        self.thumbnails = ThumbnailController(
+            self.pages, lambda: self.model.doc, lambda: self.thumbnail_size,
+            lambda number: self.tr_("page", number=number), self.error,
+        )
         try:
             size = int(QSettings().value("thumbnail_size", 288))
         except (TypeError, ValueError):
@@ -219,6 +211,8 @@ class MainWindow(QMainWindow):
         self.setWindowTitle(f"{name}{dirty} — {self.tr_('app_name')}")
 
     def confirm_discard(self) -> bool:
+        if self._saving:
+            return False
         if not self.model.dirty:
             return True
         dialog = QMessageBox(QMessageBox.Icon.Question, self.tr_("unsaved_title"),
@@ -331,13 +325,6 @@ class MainWindow(QMainWindow):
         except Exception as exc:
             self.error(exc)
 
-    def render_icon(self, page: fitz.Page) -> QIcon:
-        rect = page.rect
-        scale = min(self.thumbnail_size / rect.width, self.thumbnail_size / rect.height)
-        pix = page.get_pixmap(matrix=fitz.Matrix(scale, scale), alpha=False)
-        image = QImage(pix.samples, pix.width, pix.height, pix.stride, QImage.Format.Format_RGB888).copy()
-        return QIcon(QPixmap.fromImage(image))
-
     def change_button_display(self) -> None:
         modes = list(BUTTON_STYLES)
         choices = [self.tr_("button_display_" + mode) for mode in modes]
@@ -369,110 +356,9 @@ class MainWindow(QMainWindow):
 
     def refresh(self, selection: list[int] | None = None,
                 preserve_scroll: bool = False) -> None:
-        scroll_position = self.pages.verticalScrollBar().value()
-        self._thumbnail_timer.stop()
-        self._pending_thumbnails.clear()
-        reusable = {}
-        self.pages.blockSignals(True)
-        while self.pages.count():
-            item = self.pages.takeItem(self.pages.count() - 1)
-            if self._thumbnail_document is self.model.doc:
-                reusable[item.data(Qt.ItemDataRole.UserRole)] = item
-        self._thumbnail_document = self.model.doc
-        if self.model.doc:
-            for index, page in enumerate(self.model.doc):
-                key = (page.xref, page.rotation, self.thumbnail_size)
-                item = reusable.pop(key, None)
-                if item is None:
-                    item = QListWidgetItem()
-                item.setText(self.tr_("page", number=index + 1))
-                item.setTextAlignment(Qt.AlignmentFlag.AlignHCenter)
-                item.setData(Qt.ItemDataRole.UserRole, key)
-                item.setSelected(False)
-                self.pages.addItem(item)
-                if item.icon().isNull():
-                    self._pending_thumbnails[index] = item
-            for row in selection or []:
-                if 0 <= row < self.pages.count(): self.pages.item(row).setSelected(True)
-        self.pages.blockSignals(False)
-        self.pages.doItemsLayout()
-        if preserve_scroll:
-            self.pages.verticalScrollBar().setValue(scroll_position)
-        self._resident_thumbnails = {
-            row: self.pages.item(row) for row in range(self.pages.count())
-            if not self.pages.item(row).icon().isNull()
-        }
-        self._update_thumbnail_viewport()
+        self.thumbnails.refresh(selection, preserve_scroll)
         self.update_state()
         self.statusBar().showMessage(self.tr_("pages_count", count=self.pages.count()))
-
-    def eventFilter(self, watched, event) -> bool:
-        if watched is self.pages.viewport() and event.type() in (QEvent.Type.Resize, QEvent.Type.Show):
-            self._viewport_timer.start(0)
-        return super().eventFilter(watched, event)
-
-    def _update_thumbnail_viewport(self) -> None:
-        self._viewport_timer.stop()
-        if self._thumbnail_document is not self.model.doc or not self.model.loaded:
-            self._thumbnail_timer.stop()
-            self._pending_thumbnails.clear()
-            return
-        count = self.pages.count()
-        if count <= THUMBNAIL_CACHE_LIMIT:
-            targets = set(range(count))
-        else:
-            viewport = self.pages.viewport().rect()
-            nearby = viewport.adjusted(0, -viewport.height(), 0, viewport.height())
-            visible = set()
-            neighbors = []
-            for row in range(count):
-                rect = self.pages.visualItemRect(self.pages.item(row))
-                if rect.intersects(viewport):
-                    visible.add(row)
-                elif rect.intersects(nearby):
-                    neighbors.append((abs(rect.center().y() - viewport.center().y()), row))
-            # Always retain every visible page, even on exceptionally large screens.
-            neighbors.sort()
-            targets = visible | {row for _, row in neighbors[:max(0, THUMBNAIL_CACHE_LIMIT - len(visible))]}
-        for row in list(self._resident_thumbnails):
-            if row not in targets:
-                self._resident_thumbnails.pop(row).setIcon(QIcon())
-        self._pending_thumbnails = {
-            row: self.pages.item(row) for row in sorted(targets)
-            if self.pages.item(row).icon().isNull()
-        }
-        if self._pending_thumbnails:
-            self._thumbnail_timer.start()
-        else:
-            self._thumbnail_timer.stop()
-
-    def _render_thumbnail_batch(self) -> None:
-        if self._thumbnail_document is not self.model.doc or not self.model.loaded:
-            self._thumbnail_timer.stop()
-            self._pending_thumbnails.clear()
-            return
-        # Prioritize the viewport, then nearby pages in small batches so Qt
-        # can handle input between renders. All PDF access stays on this thread.
-        viewport = self.pages.viewport().rect()
-        visible = [row for row, item in self._pending_thumbnails.items()
-                   if self.pages.visualItemRect(item).intersects(viewport)]
-        rows = visible[:4]
-        if len(rows) < 4:
-            rows += [row for row in self._pending_thumbnails if row not in rows][:4 - len(rows)]
-        try:
-            started = perf_counter()
-            for row in rows:
-                item = self._pending_thumbnails.pop(row)
-                item.setIcon(self.render_icon(self.model.doc[row]))
-                self._resident_thumbnails[row] = item
-                if perf_counter() - started >= 0.016:
-                    break
-        except Exception as exc:
-            self._thumbnail_timer.stop()
-            self._pending_thumbnails.clear()
-            self.error(exc)
-        if not self._pending_thumbnails:
-            self._thumbnail_timer.stop()
 
     def selected_rows(self) -> list[int]:
         return sorted(self.pages.row(item) for item in self.pages.selectedItems())
@@ -526,17 +412,25 @@ class MainWindow(QMainWindow):
         return self._save_to(path) if path else False
 
     def _save_to(self, path: str) -> bool:
+        if self._saving:
+            return False
+        self._saving = True
+        self.thumbnails.pause()
         try:
-            self.model.save(path)
+            self.model.save(path, writer=lambda document, destination, options:
+                            save_with_progress(document, destination, options, self, self.tr_("saving")))
             self.refresh(self.selected_rows(), preserve_scroll=True)
             self.statusBar().showMessage(self.tr_("saved"), 4000); return True
         except Exception as exc:
             self.error(exc); return False
+        finally:
+            self._saving = False
+            self.thumbnails.resume()
 
     def properties(self) -> None:
         dialog = PropertiesDialog(self.model, self.tr_, self)
         accepted = dialog.exec()
-        if self._thumbnail_document is not self.model.doc:
+        if self.thumbnails.document is not self.model.doc:
             self.refresh(self.selected_rows(), preserve_scroll=True)
         elif accepted:
             self.update_state()
@@ -644,18 +538,16 @@ class MainWindow(QMainWindow):
         dialog.exec()
 
     def error(self, error: Exception) -> None:
+        logging.getLogger(__name__).error('PDF operation failed',
+                                         exc_info=(type(error), error, error.__traceback__))
         # Rollback replaces the PDF object; rebuild pending previews as well.
-        if self._thumbnail_document is not self.model.doc:
+        if self.thumbnails.document is not self.model.doc:
             self.refresh(self.selected_rows(), preserve_scroll=True)
         QMessageBox.critical(self, self.tr_("error"), str(error))
 
     def closeEvent(self, event: QCloseEvent) -> None:
         if self.confirm_discard():
-            self._thumbnail_timer.stop()
-            self._viewport_timer.stop()
-            self._pending_thumbnails.clear()
-            self._resident_thumbnails.clear()
-            self._thumbnail_document = None
+            self.thumbnails.clear()
             self.model.close(); event.accept()
         else: event.ignore()
 
@@ -664,9 +556,11 @@ def run() -> int:
     app = QApplication(sys.argv)
     app.setOrganizationName("Folimeld")
     app.setApplicationName("Folimeld")
+    configure_logging(Path(QStandardPaths.writableLocation(
+        QStandardPaths.StandardLocation.AppLocalDataLocation)) / 'logs')
     app.setDesktopFileName("folimeld")
     i18n = I18n()
-    qt_translator = install_qt_translator(app, i18n.language)
+    _qt_translator = install_qt_translator(app, i18n.language)
     resource_root = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent.parent))
     icon_path = resource_root / "assets" / "icon_256x256.png"
     if not icon_path.exists():

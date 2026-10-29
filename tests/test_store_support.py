@@ -9,7 +9,7 @@ from folimeld.support_dialog import SupportDialog
 
 @pytest.fixture
 def service():
-    app = QApplication.instance() or QApplication([])
+    _app = QApplication.instance() or QApplication([])
     parent = QWidget()
     store = StoreSupport(parent, Mock())
     yield store
@@ -91,7 +91,7 @@ def test_unpublished_product_disables_purchase(service):
 
 def test_non_store_build_has_no_purchase_menu():
     from folimeld.app import MainWindow
-    app = QApplication.instance() or QApplication([])
+    _app = QApplication.instance() or QApplication([])
     with patch('folimeld.app.is_packaged', return_value=False):
         window = MainWindow()
         assert window.support is None

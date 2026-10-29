@@ -1,4 +1,5 @@
 from html import escape
+import logging
 from .model import layout_with_cover
 
 from PySide6.QtCore import Qt
@@ -99,6 +100,7 @@ class PropertiesDialog(QDialog):
                     self.cover_page.isChecked(), bool(self.scroll_direction.currentData()),
                 )
         except Exception as exc:
+            logging.getLogger(__name__).exception('Cannot update PDF properties')
             QMessageBox.critical(self, self.tr("error"), str(exc))
             return
         super().accept()

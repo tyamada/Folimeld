@@ -1,3 +1,3 @@
-# Start with syntax errors and undefined names; expand without unrelated churn.
+# Keep Qt objects alive explicitly even when their references are otherwise unused.
 [lint]
-select = ["E9", "F821", "F822", "F823"]
+select = ["E9", "F"]

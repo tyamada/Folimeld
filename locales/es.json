@@ -28,5 +28,6 @@
   "image_empty": "No se encontraron imágenes compatibles.",
   "help_images_text": "Seleccione una carpeta y ordene por nombre, fecha de creación o modificación en orden ascendente o descendente. El valor inicial es nombre ascendente. Cargar crea un PDF nuevo para editar y guardar."
 ,
-  "exit": "Salir"
+  "exit": "Salir",
+  "saving": "Guardando PDF…"
 }

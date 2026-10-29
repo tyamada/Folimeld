@@ -28,5 +28,6 @@
   "image_empty": "No supported images found.",
   "help_images_text": "Select an image folder and choose name, creation time, or modification time in ascending or descending order. The default is name ascending. Load creates a new PDF for editing and saving."
 ,
-  "exit": "Exit"
+  "exit": "Exit",
+  "saving": "Saving PDF…"
 }

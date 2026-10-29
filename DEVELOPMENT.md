@@ -75,10 +75,12 @@ Windowsで仮想環境を直接指定する場合：
 
 ## 品質チェックと性能計測
 
-GitHub Actions の [Checks](.github/workflows/checks.yml) は Python 3.12 を使い、Windows・Ubuntu 22.04・macOSで Ruff と pytest を実行します。Ruff は構文エラーと未定義名の検出から導入しています。各ジョブのテスト結果と `pip freeze` を成果物として保存します。依存バージョンは更新され得るため、過去の検証環境の再現にはこの記録を使用してください。CIの追加自体は、各OSでの成功や配布物の動作確認を意味しません。
+GitHub Actions の [Checks](.github/workflows/checks.yml) は Python 3.12 を使い、Windows・Ubuntu 22.04・macOSで Ruff・mypy・pytest を実行します。Ruff は構文エラー・未定義名・未使用コードなどを検査し、mypy はモデル・履歴層を検査します。配布ビルドとCIは `constraints-release.txt` の主要依存バージョン制約を使用します。これはWindowsで確認したバージョンの記録で、他OS固有の依存や配布物の動作を保証するものではありません。依存更新時は制約ファイルも更新し、3 OSのCIと配布前の確認を行ってください。各ジョブのテスト結果と `pip freeze` を成果物として保存します。CIの追加・変更自体は、各OSでの成功や配布物の動作確認を意味しません。
 
 ```bash
+python -m pip install -r requirements-dev.txt -c constraints-release.txt
 python -m ruff check .
+python -m mypy
 python -m pytest -q -p no:cacheprovider
 python -m tools.benchmark_pdf --pages 100 --output build/benchmarks/text-100.json
 python -m tools.benchmark_pdf --pages 100 --image-size 256 --output build/benchmarks/images-100.json
@@ -90,6 +92,14 @@ python -m tools.benchmark_pdf --pages 1000 --output build/benchmarks/text-1000.j
 初回の測定値と配布前の確認項目は [性能と配布検証](docs/performance-and-release.md) を参照してください。
 
 計測ツールは初期表示に加えて文書全体をスクロールし、最大保持サムネイル数も記録します。大きなPDFでは表示範囲と前後のみ描画するため、`initial_thumbnails` は全ページの描画時間ではありません。`scroll_thumbnails` とメモリ使用量を合わせて比較してください。通常は最大64枚を保持しますが、非常に大きな画面で64枚を超えるページが見える場合は表示中の全ページを優先します。
+
+## 保存・履歴・診断
+
+通常保存は `garbage=3` を使い、ストリームの重複検査を省きます。GUIでは独立した文書を所有する別プロセスが一時出力を書き、成功後にモデルが保存先を置き換えます。準備・最終切替は同期処理で、保存中の編集・キャンセルはできません。性能計測ツールの保存時間は同期のモデルAPIを測定し、GUIのプロセス起動時間を含みません。
+
+履歴はメモリ128 MiBと一時ファイル1 GiBを上限に保持します。`history_bytes` はメモリ内、`history_disk_bytes` はディスク上のPDFデータ量です。スナップショットの生成・復元はPDF全体を扱い、一時メモリ使用量や編集待ち時間はこの上限では制限されません。履歴の一時ファイルと保存プロセス用の一時入力には暗号化解除後のPDFデータが含まれます。不要になった履歴は明示的に閉じ、保存用の一時ディレクトリは処理終了時に削除します。
+
+エラーのスタックトレースはQtの `AppLocalDataLocation` 配下の `logs/folimeld.log` に記録します（1 MiB×最大3ファイル）。Windowsでは通常 `%LOCALAPPDATA%/Folimeld/Folimeld/logs/` です。PDF本文やパスワードを明示的に記録する処理はありませんが、例外メッセージにはファイル名などが含まれる場合があります。ログの初期化に失敗しても起動を継続します。
 
 ## バージョン管理
 

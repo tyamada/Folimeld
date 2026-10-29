@@ -14,7 +14,7 @@ def test_image_benchmark_keeps_input_unchanged(tmp_path, history_limit):
     saved = tmp_path / "saved.pdf"
     create_fixture(source, pages=2, image_size=16)
     original = hashlib.sha256(source.read_bytes()).digest()
-    with patch("folimeld.app.PdfDocument", side_effect=lambda: PdfDocument(history_limit)):
+    with patch("folimeld.app.PdfDocument", side_effect=lambda: PdfDocument(history_limit, 0)):
         result = benchmark(source, saved)
     assert hashlib.sha256(source.read_bytes()).digest() == original
     assert result["pages"] == 2

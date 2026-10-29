@@ -28,5 +28,6 @@
   "image_empty": "Keine unterstützten Bilder gefunden.",
   "help_images_text": "Wählen Sie einen Bilderordner und sortieren Sie nach Name, Erstellungs- oder Änderungszeit auf- oder absteigend. Standard: Name aufsteigend. Laden erstellt eine neue PDF zum Bearbeiten und Speichern."
 ,
-  "exit": "Beenden"
+  "exit": "Beenden",
+  "saving": "PDF wird gespeichert…"
 }
