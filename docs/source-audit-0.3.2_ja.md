@@ -61,4 +61,4 @@ deb内の実行ファイルは現在の`dist/folimeld`と一致します。Snap�
 3. 依存ソースとFolimeldソースからのビルド手順を検証し、各配布物の横に取得リンクを公開する。
 4. Windows/macOSおよびStoreにある配布物は別途調査する。この調査の対象に含めない。
 
-今後のビルド記録・ソースZIP生成は [ライセンスと配布](license-distribution.md) を参照してください。
+今後のビルド記録・ソースZIP生成は [ライセンスと配布](license-distribution_ja.md) を参照してください。

@@ -1,120 +1,120 @@
 # Folimeld
 
-[English](README_en.md) | [日本語](README.md)
+[English](README.md) | [日本語](README_ja.md)
 
 ![Folimeld icon](assets/Folimeld.iconset/icon_128x128.png)
 
-Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、削除できるデスクトップアプリです。Windows、macOS、Ubuntu、Debian に対応し、編集するファイルを外部サービスへ送信せず、ローカル環境で処理します。
+Folimeld is a desktop application for visually rearranging, rotating, inserting, and deleting PDF pages. It supports Windows, macOS, Ubuntu, and Debian, and processes files locally without sending them to external services.
 
 ![Folimeld main window](docs/screenshots/main-window.png)
 
-### 画像フォルダからPDFを作成
+### Create a PDF from an image folder
 
-「ファイル → 画像フォルダからPDFを作成…」でフォルダ直下のJPEG・PNG・BMP・TIFF・WebPを一覧表示し、名前・作成日時・更新日時の昇順／降順を選択できます。初期値は名前の自然順・昇順です。不要な画像は除外できます。「読み込み」を押すまで画像のデコードは行いません。1画像を1ページ（複数ページTIFFは各フレームを1ページ）に変換し、新規の未保存PDFとして編集・保存できます。ページサイズは画像に合わせるかA4を選択できます。画像の向きを反映し、透明部分は白背景にします。画像サイズはDPI（不明・異常時は300 DPI）から決定します。サブフォルダとアニメーションWebPは対象外です。作成日時を取得できない画像は末尾に配置し、同一日時は名前の昇順です。変換はキャンセルでき、失敗時は現在の文書を保持します。
+Choose “File → Create PDF from image folder…” to list JPEG, PNG, BMP, TIFF, and WebP files directly in a folder. Sort by name, creation time, or modification time in ascending or descending order; the default is natural name order, ascending. Exclude unwanted images. Images are not decoded until you press Load. Each image becomes one page (each multipage TIFF frame becomes a page) in a new unsaved PDF for editing and saving. Choose image-sized pages or A4. Image orientation is applied and transparency is flattened onto white. Image-sized pages use image DPI, falling back to 300 DPI for missing or invalid values. Subfolders and animated WebP are excluded. Unavailable creation times sort last; equal timestamps use ascending name order. Conversion can be cancelled, and failures preserve the current document.
 
 
-「ファイル → 終了」でアプリを終了できます。未保存の変更があれば保存を確認します。Windows版の画像フォルダ選択画面では、設定済みの個人用・職場用OneDriveフォルダを左側のショートカットから選択できます。最初のフォルダ選択画面でもすべての種類のファイル名を表示し、選択対象はフォルダに限定します。
+Choose File → Exit to close the app, with a save prompt for unsaved changes. On Windows, the image folder picker provides sidebar shortcuts to configured personal and work OneDrive folders. The initial folder picker displays all file types while accepting folders only.
 
-## 特長
+## Features
 
-- 編集メニューまたはツールバーから複数回のUndo（元に戻す）・Redo（やり直す）。ページ操作、プロパティ、閲覧パスワードの変更に対応。保存後も履歴を保持し、別のPDFを開くとリセットします。Undo・Redo履歴のPDFデータは合計128 MiBまでメモリに保持し、超過分は合計1 GiBまでローカルの一時ファイルへ退避します。両方の上限を超えた場合や退避に失敗した場合は古い履歴から削除し、1件がディスク上限を超える場合は保持しません。一時履歴は文書を閉じる際に解放します。編集・保存中の一時データやサムネイルはこの上限に含まれず、文書全体の一時的なメモリ使用量は増える場合があります。
-- 保存中は進捗画面を表示し、PDFの圧縮・書き出しを別プロセスで処理します。保存中の編集とキャンセルはできません。別プロセスへ渡す文書の準備と保存完了時の文書切替は同期処理です。
-- サムネイルを見ながらPDFページを並べ替え
-- 複数ページをまとめて選択・移動・回転・削除
-- 別のPDFや、同じサイズの空白ページを挿入
-- PDFバージョン、ページレイアウト、綴じ方向を編集
-- 閲覧パスワードの設定と解除
-- 日本語、英語、ドイツ語、スペイン語、フランス語、韓国語、ポルトガル語、中国語に対応
-- Windows（Intel/AMD（x64）版・ARM（arm64）版の両方）、macOS、Ubuntu、Debianで利用可能
+- Multi-step Undo and Redo from the Edit menu or toolbar for page operations, properties, and viewing password changes. History remains available after saving and resets when another PDF is opened. PDF data in Undo and Redo history is kept in memory up to a combined 128 MiB; overflow is stored in local temporary files up to a combined 1 GiB. Older history is removed when both limits are exceeded or spilling fails; a single entry larger than the disk limit is not retained. Temporary history is released when the document is closed. Temporary data used during editing and saving, and thumbnails, are outside these limits, and whole-document processing can temporarily increase memory usage.
+- Saving shows a progress dialog and compresses and writes the PDF in a separate process. Editing and cancellation are unavailable during saving. Preparing the document for the worker and switching documents after saving remain synchronous.
+- Rearrange PDF pages using thumbnail previews
+- Select, move, rotate, or delete multiple pages at once
+- Insert another PDF or a blank page of the same size
+- Edit the PDF version, page layout, and binding direction
+- Set or remove a password required to open a PDF
+- Available in Japanese, English, German, Spanish, French, Korean, Portuguese, and Chinese
+- Runs on Windows (both Intel/AMD (x64) and ARM (arm64) editions), macOS, Ubuntu, and Debian
 
-## ダウンロード
+## Downloads
 
-配布パッケージは [GitHub Releases](https://github.com/tyamada/Folimeld/releases) からダウンロードできます。
+Download release packages from [GitHub Releases](https://github.com/tyamada/Folimeld/releases).
 
-| OS | 配布形式 |
+| OS | Package formats |
 | --- | --- |
-| Windows 10 / 11（Intel/AMD（x64） / ARM（arm64）） | EXE / MSIX（Microsoft Storeでの公開を準備中） |
-| macOS | `.app` (App Storeでの公開を準備中) |
-| Ubuntu | `.deb` / `.snap` / 単体実行ファイル（対応バージョンは各リリースを参照） |
-| Debian 13 | `.deb`（amd64 / arm64、WSL2で基本動作確認済み） |
+| Windows 10 / 11 (Intel/AMD (x64) / ARM (arm64)) | EXE / MSIX (Microsoft Store release in preparation) |
+| macOS | `.app` (App Store release in preparation) |
+| Ubuntu | `.deb` / `.snap` / standalone executable (see each release for supported versions) |
+| Debian 13 | `.deb` (amd64 / arm64; basic functionality verified on WSL2) |
 
 > [!NOTE]
-> リリースによっては、一部のOS向けパッケージが用意されていない場合があります。
+> Packages for some operating systems may not be available in every release.
 
-### Ubuntu / Debian版を直接ダウンロード
+### Direct downloads for Ubuntu / Debian
 
-バージョン **0.3.3 / x86_64（amd64）**：
+Version **0.3.3 / x86_64 (amd64)**:
 
-- [x86_64版debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_amd64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
-- [x86_64版Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_amd64.snap?raw=true)（snapdが必要）
-- [SHA-256チェックサム](releases/ubuntu/folimeld_0.3.3_SHA256SUMS.txt?raw=true)
-- [ビルド時のソースと対応記録](releases/ubuntu/source/0.3.3-amd64/)
+- [Download the x86_64 deb package](releases/ubuntu/folimeld_0.3.3_amd64.deb?raw=true) (Ubuntu 22.04 or later / Debian 13)
+- [Download the x86_64 Snap package](releases/ubuntu/folimeld_0.3.3_amd64.snap?raw=true) (requires snapd)
+- [SHA-256 checksums](releases/ubuntu/folimeld_0.3.3_SHA256SUMS.txt?raw=true)
+- [Build source snapshots and artifact records](releases/ubuntu/source/0.3.3-amd64/)
 
-ダウンロード先のフォルダーで、使用するパッケージのインストールコマンドを実行してください。
+Run the installation command for your chosen package from the download folder.
 
 ```bash
-# deb版
+# deb package
 sudo apt install ./folimeld_0.3.3_amd64.deb
 
-# Snap版
+# Snap package
 sudo snap install --dangerous ./folimeld_0.3.3_amd64.snap
 ```
 
-バージョン **0.3.3 / arm64（AArch64）**：
+Version **0.3.3 / arm64 (AArch64)**:
 
-- [arm64版debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_arm64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
-- [arm64版Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_arm64.snap?raw=true)（snapdが必要）
-- [SHA-256チェックサム](releases/ubuntu/folimeld_0.3.3_SHA256SUMS.txt?raw=true)
-- [ビルド時のソースと対応記録](releases/ubuntu/source/0.3.3-arm64/)
+- [Download the arm64 deb package](releases/ubuntu/folimeld_0.3.3_arm64.deb?raw=true) (Ubuntu 22.04 or later / Debian 13)
+- [Download the arm64 Snap package](releases/ubuntu/folimeld_0.3.3_arm64.snap?raw=true) (requires snapd)
+- [SHA-256 checksums](releases/ubuntu/folimeld_0.3.3_SHA256SUMS.txt?raw=true)
+- [Build source snapshots and artifact records](releases/ubuntu/source/0.3.3-arm64/)
 
 ```bash
-# arm64 deb版
+# arm64 deb package
 sudo apt install ./folimeld_0.3.3_arm64.deb
 
-# arm64 Snap版
+# arm64 Snap package
 sudo snap install --dangerous ./folimeld_0.3.3_arm64.snap
 ```
 
-Debian 13ではUbuntu版と同じdebパッケージを使用します。最小構成の環境で `Fontconfig error: Cannot load default config file` が表示される場合は、`sudo apt install fontconfig-config` を実行してください。Debian 13.6のamd64環境（WSL2 / WSLg、X11）でPDFの表示・ページ移動・回転・保存・再読込を確認しています。詳しくは[Debianでの検証記録](docs/debian-wsl-verification.md)を参照してください。arm64環境（WSL2）でもdebのインストールとPDFを指定した起動を確認済みです。
+Debian 13 uses the same deb package as Ubuntu. If a minimal installation displays `Fontconfig error: Cannot load default config file`, run `sudo apt install fontconfig-config`. PDF display, page movement, rotation, saving, and reopening have been verified on Debian 13.6 amd64 (WSL2 / WSLg, X11). See the [Debian verification record](docs/debian-wsl-verification_ja.md) (in Japanese) for details. Installation of the deb package and startup with a PDF have also been verified on arm64 (WSL2).
 
-## 基本的な使い方
+## Basic usage
 
-「ヘルプ → 使い方」またはF1キーで、基本操作・設定・ショートカットを確認できます。ヘルプ画面を開いたままPDFを操作できます。
+Open **Help → User guide** or press F1 to view basic operations, settings, and keyboard shortcuts. You can keep the guide open while working on a PDF.
 
-1. Folimeldを起動し、「ファイル」→「開く」からPDFを選択します。
-2. ページをクリックして選択します。複数選択には Ctrl または Shift を使用します。
-3. ツールバー、メニュー、またはドラッグ操作でページを編集します。
-4. 「保存」または「名前を付けて保存」でPDFを書き出します。
+1. Launch Folimeld and select a PDF using **File → Open**.
+2. Click a page to select it. Use Ctrl or Shift to select multiple pages.
+3. Edit pages using the toolbar, menus, or drag and drop.
+4. Export the PDF using **Save** or **Save As**.
 
-パスワード付きPDFを開くと、閲覧パスワードの入力画面が表示されます。
+Opening a password-protected PDF displays a prompt for the password required to open it.
 
 ![Password dialog](docs/screenshots/password-dialog.png)
 
-### 文書設定
+### Document settings
 
-「文書のプロパティ」の「詳細」タブでは、PDFバージョンとページレイアウトを変更できます。`TwoPageLeft` または `TwoPageRight` を選択した場合、必要に応じてPDFバージョンが1.5へ引き上げられます。
+The **Details** tab in **Document Properties** lets you change the PDF version and page layout. Selecting `TwoPageLeft` or `TwoPageRight` raises the PDF version to 1.5 if necessary.
 
-### 設定の保存
+### Saved preferences
 
-「設定 > 画像サイズ」からサムネイルの長辺のサイズを144 / 288 / 432 pxから選択できます（初期値288 px）。変更はすぐに反映されます。
+Under **Settings → Image Size**, choose a thumbnail size of 144, 288, or 432 px for the longer edge (default: 288 px). Changes take effect immediately.
 
-表示言語、画像サイズ、最後に開いたフォルダーは端末内に保存されます。PDFは端末内で処理されます。Windows MSIX版の応援購入では、商品情報・購入状態の確認と決済にMicrosoft Storeを利用します。PDFをStoreへ送信することはありません。
+The display language, image size, and last opened folder are saved on your device. PDFs are processed locally. Support purchases in the Windows MSIX edition use Microsoft Store to retrieve product information, check purchase status, and process payments. PDFs are never sent to the Store.
 
-Windows MSIX版では「ヘルプ → 開発を応援する…」から、サポーターアイコン付きの買い切り商品を購入できます（Storeでの商品公開後）。購入するとヘルプメニューにサポーターアイコンが追加されます。PDF編集機能は購入の有無で変わりません。開発者向けの設定手順は [Windows応援購入](docs/windows-store-purchases.md) を参照してください。
+In the Windows MSIX edition, **Help → Support Development…** lets you make a one-time purchase with a supporter icon (once the product is published in the Store). Purchasing adds a supporter icon to the Help menu. PDF editing features are the same whether or not you make a purchase. For developer setup instructions, see [Windows support purchases](docs/windows-store-purchases_ja.md) (in Japanese).
 
-Linux版では「ヘルプ → 開発を応援する…」に [GitHub Sponsors](https://github.com/sponsors/tyamada) への案内を表示します。案内画面のボタンからブラウザーで支援ページを開けます。支援は任意であり、利用できる機能は支援の有無で変わりません。
+In the Linux edition, **Help → Support development…** displays information about [GitHub Sponsors](https://github.com/sponsors/tyamada). The button in the dialog opens the support page in your browser. Support is optional, and all features remain available whether or not you contribute.
 
-## 開発・コントリビューション
+## Development and contributions
 
-ソースからの実行、テスト、各OS向けパッケージの作成方法は [DEVELOPMENT.md](DEVELOPMENT.md) を参照してください。不具合報告や提案は [Issues](https://github.com/tyamada/Folimeld/issues) で受け付けています。
+See [DEVELOPMENT.md](DEVELOPMENT.md) for instructions on running from source, testing, and building packages for each operating system. Report bugs and suggest improvements through [Issues](https://github.com/tyamada/Folimeld/issues).
 
-変更履歴は [CHANGELOG.md](CHANGELOG.md) にまとめています。
+Release history is available in [CHANGELOG.md](CHANGELOG.md).
 
-## ライセンス
+## License
 
-Folimeld は [GNU Affero General Public License v3.0](LICENSE) で公開されています。
+Folimeld is released under the [GNU Affero General Public License v3.0](LICENSE).
 
-PySide6、PyMuPDFなどの第三者ライブラリには、それぞれのライセンスが適用されます。
+Third-party libraries, including PySide6 and PyMuPDF, are covered by their respective licenses.
 
-ライセンス全文と第三者の告知は「ヘルプ → ライセンス」で閲覧できます。
-配布時の確認事項は [ライセンスと配布](docs/license-distribution.md) を参照してください。
+The full license texts and third-party notices are available under **Help → Licenses**.
+See [Licensing and distribution](docs/license-distribution_ja.md) (in Japanese) for distribution requirements.

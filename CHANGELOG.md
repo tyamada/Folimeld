@@ -1,85 +1,86 @@
-# 変更履歴
+# Changelog
 
-[日本語](CHANGELOG.md) | [English](CHANGELOG_en.md)
+[日本語](CHANGELOG_ja.md) | [English](CHANGELOG.md)
 
-## 未リリース
+## Unreleased
 
-- PDF保存時のストリーム重複検査を省き、大きな画像PDFの保存を高速化。保存中の進捗画面と別プロセスでの書き出しを追加し、失敗時の編集内容・履歴の保持と、書き出し失敗時の既存保存先の保護を検証
-- メモリ上限128 MiBを超えるUndo・Redo履歴をローカルの一時ファイルへ最大1 GiB退避し、大きな文書でも履歴を利用可能に変更。文書終了・履歴分岐時に不要な一時履歴を解放
-- サムネイル管理を専用クラスへ分離し、スクロール時の表示範囲探索と連続選択ページの移動を効率化
-- 配布・CI用の依存バージョン制約、未使用コード検査、モデル・履歴層の型検査、容量制限付きローカルエラーログを追加
-- Windowsで画像変換プロセスが結果を返さず終了した場合のパイプ切断も検知し、待ち続ける問題を修正
+- Standardize documentation filenames as `<base>.md` for English and `<base>_ja.md` for Japanese, updating cross-document links and translation synchronization rules
+- Speed up saving large image PDFs by skipping stream deduplication; add a progress dialog and a separate writing process, verifying preservation of edits and history on failure and protection of existing destinations on write failure
+- Spill Undo/Redo history exceeding the 128 MiB memory budget to local temporary files up to 1 GiB, enabling history for large documents; release unused temporary history on document close and history branching
+- Separate thumbnail management into a dedicated class and optimize viewport searches and movement of contiguous page selections
+- Add dependency version constraints for distribution builds and CI, unused-code checks, type checks for the model and history layers, and bounded local error logs
+- Detect broken pipes when image conversion exits without returning a result on Windows, avoiding an indefinite wait
 
-- ファイルメニューに「終了」を追加。画像フォルダ選択で全種類のファイル名を表示し、Windowsでは設定済みOneDriveフォルダへのショートカットを追加
+- Add File → Exit; show all file types in the image folder picker and add shortcuts to configured OneDrive folders on Windows
 
-- 画像フォルダを一覧表示し、名前・作成日時・更新日時の昇順／降順で新規PDFへ一括取り込み。画像の除外、ページサイズ選択、進捗表示とキャンセルに対応
+- Import image folders as new PDFs with ascending or descending name, creation-time, or modification-time sorting, exclusions, page sizes, progress, and cancellation
 
-- 性能計測でUndo/Redoの実行有無を記録し、画像PDF3件の各3回の計測と3 OSのCI成功を記録
-- 大きなPDFではサムネイルを表示範囲と前後に限定し、画面外の画像を解放してスクロール時に再描画。通常は最大64枚を保持し、64ページ以下の文書は全ページを保持
-- 保存後、編集失敗時のロールバック後、プロパティ画面を閉じた際に、差し替えられたPDFとサムネイルを再同期
-- 性能計測に全体スクロールと保持サムネイル数を追加し、1,000ページPDFで改善前後を各3回比較
-- PDF操作の入力検証と編集エラー表示を強化し、失敗時の履歴・保存状態の保持を検証
-- 単一ページの並べ替えを1回の移動に変更し、サムネイルの連続描画を約16msで区切る
-- Windows・Linux・macOS向けのテストCI、静的チェック、PDF性能計測ツール、配布前の検証手順を追加
-- 保存失敗後も編集内容とUndo・Redo履歴を保持し、再保存できるよう修正。一時ファイル名の衝突と失敗時の残留を防止
-- スクロールする見開きレイアウトの表紙設定について、プロパティ画面と保存内容の不整合を修正
-- サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
-- Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
+- Record whether Undo/Redo actually ran in performance measurements, and document three runs each for three image PDFs and successful CI on all three operating systems
+- Limit thumbnails for large PDFs to the viewport and nearby pages, releasing off-screen images and rendering them again when scrolling; normally retain up to 64 thumbnails and retain all pages for documents with 64 pages or fewer
+- Resynchronize thumbnails with the replacement PDF after saving, edit rollback, or closing Document Properties
+- Add document scrolling and retained thumbnail counts to performance measurements, comparing a 1,000-page PDF before and after the changes with three runs each
+- Strengthen PDF operation validation and edit error reporting, and verify history and save-state preservation after failures
+- Reorder a single page with one move and yield between thumbnail renders after approximately 16 ms
+- Add test CI for Windows, Linux, and macOS, static checks, a PDF performance measurement tool, and pre-release verification instructions
+- Preserve edits and Undo/Redo history after save failures so saving can be retried; prevent temporary filename collisions and clean up temporary files on failure
+- Fix inconsistencies between Document Properties and saved cover settings for continuous two-column layouts
+- Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
+- Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
 ## 0.3.3 - 2026-09-09
 
-- 配布用debをUbuntu 22.04でビルドし、Ubuntu 22.04以降に対応。X11依存ライブラリの指定も補完
-- ライセンス全文と第三者の告知をバージョン情報から専用画面へ移動し、ヘルプメニューに「ライセンス」を追加
-- ARM64環境でWindows EXE / MSIX、Linux deb / Snapのビルドを検証
-- Linux用スクリプトの改行、Snapの出力先、Debian最小構成でのフォント設定依存を修正
-- ビルド時のソース保存と配布物の対応記録を追加し、ソースZIP名の記録を修正
+- Build distribution deb packages on Ubuntu 22.04 to support Ubuntu 22.04 and later, and complete the X11 dependency declarations
+- Move full license texts and third-party notices from the About dialog to a dedicated dialog, and add Licenses to the Help menu
+- Verify Windows EXE / MSIX and Linux deb / Snap builds on ARM64
+- Fix line endings in Linux scripts, the Snap output location, and the font configuration dependency on minimal Debian installations
+- Add build-time source snapshots and records linking distribution artifacts to their sources, and fix the recorded source ZIP filename
 
 ## 0.3.2 - 2026-09-07
 
-- 通常起動時、WinRTなどのパッケージ情報がなくてもバージョン情報を表示できるよう修正
-- バージョン情報に著作権、ライセンス全文、第三者の告知、ソースコードへのリンクを追加
-- 各OSのビルドにライセンス文書と依存パッケージの告知を同梱
+- Fix the About dialog so it works during normal startup even when package metadata for WinRT or other dependencies is unavailable
+- Add copyright information, full license texts, third-party notices, and a source code link to the About dialog
+- Bundle license documents and dependency notices in builds for all operating systems
 
 ## 0.3.1 - 2026-09-06
 
-- 表紙のチェック状態に応じてページ表示の説明とレイアウト変更案内を即時更新
-- 文書のプロパティの詳細に「ページを表示」を追加し、選択中のページレイアウトの説明をリアルタイムに表示
-- ページ表示の説明を上端揃えに変更し、表紙選択時の翻訳エラーを修正
+- Immediately update the page display description and layout change guidance when the cover page checkbox changes
+- Add Page display to the Details tab in Document Properties and display a live explanation of the selected page layout
+- Align the page display description to the top and fix a translation error when selecting a cover page
 
 ## 0.3.0 - 2026-09-04
 
-- プロジェクトのライセンスをGNU Affero General Public License v3.0へ変更
-- アプリのバージョンを一元管理し、各配布形式のメタデータへ自動反映
-- Folimeldの新しいアプリアイコンと、各OS・Microsoft Store向け画像を追加
-- PDFファイルの関連付けをMSIXマニフェストへ移行
-- Microsoft Store向けx64 MSIXのビルドに対応
-- ARM64 MSIXのビルド手順と、アーキテクチャ誤指定の検出を追加
-- READMEをGitHub公開向けに再構成し、開発手順と変更履歴を別文書へ分離
+- Change the project license to GNU Affero General Public License v3.0
+- Centralize the application version and automatically apply it to metadata for each package format
+- Add a new Folimeld application icon and images for each operating system and Microsoft Store
+- Move PDF file associations to the MSIX manifest
+- Support building x64 MSIX packages for Microsoft Store
+- Add ARM64 MSIX build instructions and detection of architecture mismatches
+- Reorganize the README for publication on GitHub and move development instructions and the changelog into separate documents
 
 ## 0.2.5 - 2026-09-03
 
-- スクロール動作を改善
+- Improve scrolling behavior
 
 ## 0.2.4 - 2026-08-31
 
-- Ubuntuに対応
+- Add Ubuntu support
 
 ## 0.2.3 - 2026-08-31
 
-- PDFバージョンの自動変更に対応
+- Support automatic PDF version changes
 
 ## 0.2.2 - 2026-08-30
 
-- macOS向けビルド手順、アイコン、署名を整備
+- Set up macOS build instructions, icons, and signing
 
 ## 0.2.1 - 2026-08-30
 
-- macOS上でWindows依存処理を安全に無効化
+- Safely disable Windows-specific operations on macOS
 
 ## 0.2.0 - 2026-08-30
 
-- アプリ名をFolimeldへ変更
+- Rename the application to Folimeld
 
 ## 0.1.0 - 2026-08-29
 
-- 最初のリリース
+- Initial release
