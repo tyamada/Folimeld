@@ -16,7 +16,7 @@ Windows / Linux / macOS の PyInstaller spec は `tools/license_bundle.py` を�
 
 - `dist/source/Folimeld-source-<SHA256>.zip`: ビルド時点の Folimeld のファイル。
   Pythonコード、画像、翻訳、ライセンス、ビルドスクリプト、spec、テスト、追跡済みの文書を含みます。
-  そのMarkdownから参照する`docs/`内の新規文書・画像も含みます。
+  そのMarkdownから参照する`documentation/`内の新規文書・画像も含みます。
   `.git`、仮想環境、ビルド出力、配布バイナリ、`testdata/` は含めません。
   ソース用ディレクトリ内の未追跡ファイルも含むため、公開前にZIPの内容を確認してください。
 - ZIP内の `SOURCE-MANIFEST.json`: 各ファイルのSHA256、ビルド元コミット、

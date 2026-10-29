@@ -89,8 +89,8 @@ python -m tools.benchmark_pdf --pages 1000 --output build/benchmarks/text-1000.j
 
 計測はケースごとに新しいプロセスで行います。既存PDFは `--input path/to/document.pdf` で指定でき、保存先は一時ディレクトリになります。暗号化PDFはこのツールの対象外です。ページ数・画像量・ファイルサイズの異なる入力で各ケースを3回以上実行し、中央値とばらつきを比較してください。JSONには操作時間、サムネイル1バッチの最大時間、5ms間隔で標本化したプロセスRSS、依存バージョンを記録します。RSSはネイティブ領域を含みますが、短いピークを取り逃す可能性があります。画像生成とウィンドウ初期化は操作時間の対象外です。
 
-初回の測定値と配布前の確認項目は [性能と配布検証](docs/performance-and-release_ja.md) を参照してください。
-Windows負荷テストの事前確認は [確認記録](docs/windows-load-test_ja.md) にあります（当時は負荷テスト自体を未実施）。
+初回の測定値と配布前の確認項目は [性能と配布検証](documentation/performance-and-release_ja.md) を参照してください。
+Windows負荷テストの事前確認は [確認記録](documentation/windows-load-test_ja.md) にあります（当時は負荷テスト自体を未実施）。
 
 計測ツールは初期表示に加えて文書全体をスクロールし、最大保持サムネイル数も記録します。大きなPDFでは表示範囲と前後のみ描画するため、`initial_thumbnails` は全ページの描画時間ではありません。`scroll_thumbnails` とメモリ使用量を合わせて比較してください。通常は最大64枚を保持しますが、非常に大きな画面で64枚を超えるページが見える場合は表示中の全ページを優先します。
 
@@ -109,7 +109,7 @@ Windows負荷テストの事前確認は [確認記録](docs/windows-load-test_j
 Windowsの実行ファイル用バージョン情報は `tools/write_version_info.py` によりビルド時に生成されます。Ubuntuパッケージ、macOS App Bundle、MSIXも同じ値を参照します。
 
 ライセンス文書は各specの `tools/license_bundle.py` 呼び出しで同梱します。
-配布前に [ライセンスと配布](docs/license-distribution_ja.md) を確認してください。
+配布前に [ライセンスと配布](documentation/license-distribution_ja.md) を確認してください。
 
 ## アイコン
 
@@ -231,7 +231,7 @@ wsl -d Ubuntu-22.04 -- bash -lc 'cd /path/to/Folimeld && FOLIMELD_LINUX_VENV=~/.
 
 パスは自分の環境に合わせて変更してください。配布前にUbuntu 22.04・24.04・26.04でdebのインストール、PDFの表示・編集・保存を確認し、パッケージを差し替えたら `releases/ubuntu/folimeld_<バージョン>_SHA256SUMS.txt` も更新してください。
 
-Debian 13（amd64）にも同じdebを配布します。配布前の動作確認にはDebian 13も含めてください。0.3.2はDebian 13.6のWSL2 / WSLg（X11）で基本動作を確認しています。確認範囲と最小構成でのFontconfig設定不足については[検証記録](docs/debian-wsl-verification_ja.md)を参照してください。
+Debian 13（amd64）にも同じdebを配布します。配布前の動作確認にはDebian 13も含めてください。0.3.2はDebian 13.6のWSL2 / WSLg（X11）で基本動作を確認しています。確認範囲と最小構成でのFontconfig設定不足については[検証記録](documentation/debian-wsl-verification_ja.md)を参照してください。
 
 ### Snapパッケージ
 

@@ -21,6 +21,7 @@ from zipfile import ZIP_DEFLATED, ZipFile
 SOURCE_DIRS = {"folimeld", "tools", "assets", "locales", "licenses", "packaging", "tests"}
 ROOT_SUFFIXES = {".py", ".spec", ".sh", ".bat", ".ps1", ".md"}
 ROOT_CONFIG_FILES = {"constraints-release.txt", "mypy.ini", "ruff.toml"}
+DOCUMENTATION_DIR = "documentation"
 
 
 def digest(path):
@@ -63,7 +64,7 @@ def source_paths(root):
                 if not path.is_file() or not path.resolve().is_relative_to(root.resolve()):
                     continue
                 relative = path.resolve().relative_to(root.resolve())
-                if relative.parts[0] == "docs":
+                if relative.parts[0] == DOCUMENTATION_DIR:
                     candidates.add(relative.as_posix())
                     if relative.suffix == ".md":
                         pending.append(relative.as_posix())
@@ -78,7 +79,7 @@ def source_paths(root):
         relative = Path(name)
         if relative.is_absolute() or ".." in relative.parts:
             raise ValueError(f"Unsafe source path: {name}")
-        include = relative.parts[0] in SOURCE_DIRS | {"docs"} or (
+        include = relative.parts[0] in SOURCE_DIRS | {DOCUMENTATION_DIR} or (
             len(relative.parts) == 1 and (
                 relative.suffix in ROOT_SUFFIXES or
                 name in {"LICENSE", ".gitignore", ".gitattributes", "requirements.txt", "requirements-dev.txt",

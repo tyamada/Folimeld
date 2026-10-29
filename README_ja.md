@@ -6,7 +6,7 @@
 
 Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、削除できるデスクトップアプリです。Windows、macOS、Ubuntu、Debian に対応し、編集するファイルを外部サービスへ送信せず、ローカル環境で処理します。
 
-![Folimeld main window](docs/screenshots/main-window.png)
+![Folimeld main window](documentation/screenshots/main-window.png)
 
 ### 画像フォルダからPDFを作成
 
@@ -75,7 +75,7 @@ sudo apt install ./folimeld_0.3.3_arm64.deb
 sudo snap install --dangerous ./folimeld_0.3.3_arm64.snap
 ```
 
-Debian 13ではUbuntu版と同じdebパッケージを使用します。最小構成の環境で `Fontconfig error: Cannot load default config file` が表示される場合は、`sudo apt install fontconfig-config` を実行してください。Debian 13.6のamd64環境（WSL2 / WSLg、X11）でPDFの表示・ページ移動・回転・保存・再読込を確認しています。詳しくは[Debianでの検証記録](docs/debian-wsl-verification_ja.md)を参照してください。arm64環境（WSL2）でもdebのインストールとPDFを指定した起動を確認済みです。
+Debian 13ではUbuntu版と同じdebパッケージを使用します。最小構成の環境で `Fontconfig error: Cannot load default config file` が表示される場合は、`sudo apt install fontconfig-config` を実行してください。Debian 13.6のamd64環境（WSL2 / WSLg、X11）でPDFの表示・ページ移動・回転・保存・再読込を確認しています。詳しくは[Debianでの検証記録](documentation/debian-wsl-verification_ja.md)を参照してください。arm64環境（WSL2）でもdebのインストールとPDFを指定した起動を確認済みです。
 
 ## 基本的な使い方
 
@@ -88,7 +88,7 @@ Debian 13ではUbuntu版と同じdebパッケージを使用します。最小�
 
 パスワード付きPDFを開くと、閲覧パスワードの入力画面が表示されます。
 
-![Password dialog](docs/screenshots/password-dialog.png)
+![Password dialog](documentation/screenshots/password-dialog.png)
 
 ### 文書設定
 
@@ -100,7 +100,7 @@ Debian 13ではUbuntu版と同じdebパッケージを使用します。最小�
 
 表示言語、画像サイズ、最後に開いたフォルダーは端末内に保存されます。PDFは端末内で処理されます。Windows MSIX版の応援購入では、商品情報・購入状態の確認と決済にMicrosoft Storeを利用します。PDFをStoreへ送信することはありません。
 
-Windows MSIX版では「ヘルプ → 開発を応援する…」から、サポーターアイコン付きの買い切り商品を購入できます（Storeでの商品公開後）。購入するとヘルプメニューにサポーターアイコンが追加されます。PDF編集機能は購入の有無で変わりません。開発者向けの設定手順は [Windows応援購入](docs/windows-store-purchases_ja.md) を参照してください。
+Windows MSIX版では「ヘルプ → 開発を応援する…」から、サポーターアイコン付きの買い切り商品を購入できます（Storeでの商品公開後）。購入するとヘルプメニューにサポーターアイコンが追加されます。PDF編集機能は購入の有無で変わりません。開発者向けの設定手順は [Windows応援購入](documentation/windows-store-purchases_ja.md) を参照してください。
 
 Linux版では「ヘルプ → 開発を応援する…」に [GitHub Sponsors](https://github.com/sponsors/tyamada) への案内を表示します。案内画面のボタンからブラウザーで支援ページを開けます。支援は任意であり、利用できる機能は支援の有無で変わりません。
 
@@ -117,4 +117,4 @@ Folimeld は [GNU Affero General Public License v3.0](LICENSE) で公開され�
 PySide6、PyMuPDFなどの第三者ライブラリには、それぞれのライセンスが適用されます。
 
 ライセンス全文と第三者の告知は「ヘルプ → ライセンス」で閲覧できます。
-配布時の確認事項は [ライセンスと配布](docs/license-distribution_ja.md) を参照してください。
+配布時の確認事項は [ライセンスと配布](documentation/license-distribution_ja.md) を参照してください。

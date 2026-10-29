@@ -6,7 +6,7 @@
 
 Folimeld is a desktop application for visually rearranging, rotating, inserting, and deleting PDF pages. It supports Windows, macOS, Ubuntu, and Debian, and processes files locally without sending them to external services.
 
-![Folimeld main window](docs/screenshots/main-window.png)
+![Folimeld main window](documentation/screenshots/main-window.png)
 
 ### Create a PDF from an image folder
 
@@ -75,7 +75,7 @@ sudo apt install ./folimeld_0.3.3_arm64.deb
 sudo snap install --dangerous ./folimeld_0.3.3_arm64.snap
 ```
 
-Debian 13 uses the same deb package as Ubuntu. If a minimal installation displays `Fontconfig error: Cannot load default config file`, run `sudo apt install fontconfig-config`. PDF display, page movement, rotation, saving, and reopening have been verified on Debian 13.6 amd64 (WSL2 / WSLg, X11). See the [Debian verification record](docs/debian-wsl-verification_ja.md) (in Japanese) for details. Installation of the deb package and startup with a PDF have also been verified on arm64 (WSL2).
+Debian 13 uses the same deb package as Ubuntu. If a minimal installation displays `Fontconfig error: Cannot load default config file`, run `sudo apt install fontconfig-config`. PDF display, page movement, rotation, saving, and reopening have been verified on Debian 13.6 amd64 (WSL2 / WSLg, X11). See the [Debian verification record](documentation/debian-wsl-verification_ja.md) (in Japanese) for details. Installation of the deb package and startup with a PDF have also been verified on arm64 (WSL2).
 
 ## Basic usage
 
@@ -88,7 +88,7 @@ Open **Help → User guide** or press F1 to view basic operations, settings, and
 
 Opening a password-protected PDF displays a prompt for the password required to open it.
 
-![Password dialog](docs/screenshots/password-dialog.png)
+![Password dialog](documentation/screenshots/password-dialog.png)
 
 ### Document settings
 
@@ -100,7 +100,7 @@ Under **Settings → Image Size**, choose a thumbnail size of 144, 288, or 432 p
 
 The display language, image size, and last opened folder are saved on your device. PDFs are processed locally. Support purchases in the Windows MSIX edition use Microsoft Store to retrieve product information, check purchase status, and process payments. PDFs are never sent to the Store.
 
-In the Windows MSIX edition, **Help → Support Development…** lets you make a one-time purchase with a supporter icon (once the product is published in the Store). Purchasing adds a supporter icon to the Help menu. PDF editing features are the same whether or not you make a purchase. For developer setup instructions, see [Windows support purchases](docs/windows-store-purchases_ja.md) (in Japanese).
+In the Windows MSIX edition, **Help → Support Development…** lets you make a one-time purchase with a supporter icon (once the product is published in the Store). Purchasing adds a supporter icon to the Help menu. PDF editing features are the same whether or not you make a purchase. For developer setup instructions, see [Windows support purchases](documentation/windows-store-purchases_ja.md) (in Japanese).
 
 In the Linux edition, **Help → Support development…** displays information about [GitHub Sponsors](https://github.com/sponsors/tyamada). The button in the dialog opens the support page in your browser. Support is optional, and all features remain available whether or not you contribute.
 
@@ -117,4 +117,4 @@ Folimeld is released under the [GNU Affero General Public License v3.0](LICENSE)
 Third-party libraries, including PySide6 and PyMuPDF, are covered by their respective licenses.
 
 The full license texts and third-party notices are available under **Help → Licenses**.
-See [Licensing and distribution](docs/license-distribution_ja.md) (in Japanese) for distribution requirements.
+See [Licensing and distribution](documentation/license-distribution_ja.md) (in Japanese) for distribution requirements.

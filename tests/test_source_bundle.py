@@ -52,20 +52,20 @@ def test_missing_required_source_fails(source_tree):
 
 def test_includes_linked_new_docs_but_excludes_unrelated_work(source_tree):
     (source_tree / ".git").mkdir()
-    (source_tree / "docs").mkdir()
-    (source_tree / "README.md").write_text("[Audit](docs/audit.md)")
-    (source_tree / "docs/audit.md").write_text("Audit")
-    (source_tree / "docs/unrelated.md").write_text("Unrelated work")
+    (source_tree / "documentation").mkdir()
+    (source_tree / "README.md").write_text("[Audit](documentation/audit.md)")
+    (source_tree / "documentation/audit.md").write_text("Audit")
+    (source_tree / "documentation/unrelated.md").write_text("Unrelated work")
     for name in ('constraints-release.txt', 'mypy.ini', 'ruff.toml'):
         (source_tree / name).write_text('build configuration')
     tracked = list(json.loads((source_tree / "SOURCE-MANIFEST.json").read_text())["files"]) + ["README.md"]
     with patch("tools.source_bundle.git", side_effect=[
         "\0".join(tracked).encode(),
-        b"docs/audit.md\0docs/unrelated.md\0constraints-release.txt\0mypy.ini\0ruff.toml\0"
+        b"documentation/audit.md\0documentation/unrelated.md\0constraints-release.txt\0mypy.ini\0ruff.toml\0"
     ]):
         paths = source_paths(source_tree)
-    assert "docs/audit.md" in paths
-    assert "docs/unrelated.md" not in paths
+    assert "documentation/audit.md" in paths
+    assert "documentation/unrelated.md" not in paths
     assert {'constraints-release.txt', 'mypy.ini', 'ruff.toml'} <= set(paths)
 
 

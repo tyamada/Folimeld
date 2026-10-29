@@ -5,6 +5,7 @@
 - English documentation uses `<base>.md`; Japanese documentation uses `<base>_ja.md`, including Japanese-only documents.
 - Keep `AGENTS.md` under its standard filename so repository instructions remain discoverable.
 - When renaming documents, update incoming references, relative links, and language-switch links together.
+- Store supplementary documentation, verification records, and README screenshots in `documentation/`; reserve `docs/` for a future GitHub Pages site.
 
 ## README translation synchronization
 

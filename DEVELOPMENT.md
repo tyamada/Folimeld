@@ -89,8 +89,8 @@ python -m tools.benchmark_pdf --pages 1000 --output build/benchmarks/text-1000.j
 
 Run each case in a fresh process. Use `--input path/to/document.pdf` for an existing PDF; saved PDFs go to a temporary directory. Encrypted PDFs are outside this tool's scope. Run each case at least three times with inputs that vary in page count, image content, and file size, then compare medians and variation. JSON reports record operation times, the longest thumbnail batch, process RSS sampled every 5 ms, and dependency versions. RSS includes native memory but sampling can miss short peaks. Fixture generation and window initialization are excluded from operation times.
 
-See [Performance and release verification](docs/performance-and-release_ja.md) (in Japanese) for initial measurements and pre-release checks.
-See the [Windows load-test preflight record](docs/windows-load-test_ja.md) (in Japanese); the load test itself was not performed at that time.
+See [Performance and release verification](documentation/performance-and-release_ja.md) (in Japanese) for initial measurements and pre-release checks.
+See the [Windows load-test preflight record](documentation/windows-load-test_ja.md) (in Japanese); the load test itself was not performed at that time.
 
 The measurement tool also scrolls through the document and records the maximum retained thumbnail count. Large PDFs render only the viewport and nearby pages, so `initial_thumbnails` does not measure rendering every page. Compare it together with `scroll_thumbnails` and memory usage. Normally up to 64 thumbnails are retained; if an exceptionally large screen shows more than 64 pages, all visible pages take priority.
 
@@ -109,7 +109,7 @@ The application's display version is managed by `__version__` in `folimeld/__ini
 Version information for the Windows executable is generated at build time by `tools/write_version_info.py`. Ubuntu packages, the macOS App Bundle, and MSIX use the same values.
 
 License documents are bundled through calls to `tools/license_bundle.py` in each spec file.
-Review [Licensing and distribution](docs/license-distribution_ja.md) (in Japanese) before distributing the application.
+Review [Licensing and distribution](documentation/license-distribution_ja.md) (in Japanese) before distributing the application.
 
 ## Icons
 
@@ -233,7 +233,7 @@ wsl -d Ubuntu-22.04 -- bash -lc 'cd /path/to/Folimeld && FOLIMELD_LINUX_VENV=~/.
 
 Adjust the path for your environment. Before distribution, verify deb installation and PDF display, editing, and saving on Ubuntu 22.04, 24.04, and 26.04. When replacing packages, also update `releases/ubuntu/folimeld_<バージョン>_SHA256SUMS.txt`.
 
-The same deb package is distributed for Debian 13 (amd64). Include Debian 13 in testing before distribution. Basic functionality of 0.3.2 has been verified on Debian 13.6 with WSL2 / WSLg (X11). See the [verification record](docs/debian-wsl-verification_ja.md) (in Japanese) for the scope of testing and missing Fontconfig configuration on minimal installations.
+The same deb package is distributed for Debian 13 (amd64). Include Debian 13 in testing before distribution. Basic functionality of 0.3.2 has been verified on Debian 13.6 with WSL2 / WSLg (X11). See the [verification record](documentation/debian-wsl-verification_ja.md) (in Japanese) for the scope of testing and missing Fontconfig configuration on minimal installations.
 
 ### Snap package
 

@@ -4,6 +4,7 @@
 
 ## Unreleased
 
+- Move supplementary documentation, verification records, and README images from `docs/` to `documentation/`, updating document links and source ZIP collection
 - Standardize documentation filenames as `<base>.md` for English and `<base>_ja.md` for Japanese, updating cross-document links and translation synchronization rules
 - Speed up saving large image PDFs by skipping stream deduplication; add a progress dialog and a separate writing process, verifying preservation of edits and history on failure and protection of existing destinations on write failure
 - Spill Undo/Redo history exceeding the 128 MiB memory budget to local temporary files up to 1 GiB, enabling history for large documents; release unused temporary history on document close and history branching
