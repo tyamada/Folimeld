@@ -1,6 +1,7 @@
 @echo off
 setlocal
 set "PYTHON_EXE=%~dp0.venv\Scripts\python.exe"
+if not "%~1"=="" set "PYTHON_EXE=%~1"
 set "OUTPUT_EXE=%~dp0dist\Folimeld.exe"
 
 if not exist "%PYTHON_EXE%" (

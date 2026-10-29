@@ -1,7 +1,9 @@
 # Versions validated locally on Windows; other platforms are checked by CI.
 # Constraints do not install packages and do not lock unnamed platform dependencies.
 altgraph==0.17.5
+cffi==2.1.1
 colorama==0.4.6
+cryptography==50.0.2
 iniconfig==2.3.0
 librt==0.16.0
 mypy==1.20.2
@@ -11,6 +13,7 @@ pathspec==1.1.1
 pefile==2024.8.26
 pillow==12.3.0
 pluggy==1.6.0
+pycparser==3.12
 psutil==7.2.2
 Pygments==2.21.0
 pyinstaller==6.22.2

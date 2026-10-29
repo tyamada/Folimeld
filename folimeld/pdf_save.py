@@ -9,6 +9,8 @@ import fitz
 from PySide6.QtCore import QTimer, Qt
 from PySide6.QtWidgets import QProgressDialog
 
+from .temporary_data import decrypt_from, encrypt_to, new_key
+
 
 class SaveProgressDialog(QProgressDialog):
     """The model must finish writing or handle failure before leaving save."""
@@ -19,9 +21,11 @@ class SaveProgressDialog(QProgressDialog):
         event.ignore()
 
 
-def save_worker(source, destination, options, connection):
+def save_worker(source, destination, options, connection, key):
     try:
-        with fitz.open(source) as document:
+        with open(source, 'rb') as stream:
+            data = decrypt_from(stream, key)
+        with fitz.open(stream=data, filetype='pdf') as document:
             document.save(destination, **options)
         connection.send(('done', None))
     except Exception as exc:
@@ -34,12 +38,14 @@ def save_with_progress(document, destination, options, parent, label):
     # Only staging is synchronous. The worker owns a separate PDF and writes
     # only to the model's temporary output; the model commits it afterwards.
     with tempfile.TemporaryDirectory(prefix='folimeld-save-') as directory:
-        source = Path(directory) / 'source.pdf'
-        source.write_bytes(document.tobytes(encryption=fitz.PDF_ENCRYPT_NONE, no_new_id=True))
+        source = Path(directory) / 'source.encrypted'
+        key = new_key()
+        with source.open('wb') as stream:
+            encrypt_to(stream, document.tobytes(encryption=fitz.PDF_ENCRYPT_NONE, no_new_id=True), key)
         context = multiprocessing.get_context('spawn')
         receiver, sender = context.Pipe(duplex=False)
         process = context.Process(target=save_worker,
-                                  args=(str(source), str(destination), options, sender))
+                                  args=(str(source), str(destination), options, sender, key))
         progress = SaveProgressDialog(label, '', 0, 0, parent)
         progress.setWindowTitle(label)
         progress.setWindowModality(Qt.WindowModality.ApplicationModal)

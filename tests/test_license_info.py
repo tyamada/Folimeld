@@ -21,6 +21,9 @@ class LicenseInfoTests(unittest.TestCase):
             documents = dict(license_documents())
         self.assertIn("AGPL-3.0", documents)
         self.assertIn("PySide6 1.2", documents["Installed-packages"])
+        self.assertIn("cryptography 1.2", documents["Installed-packages"])
+        self.assertIn("cffi 1.2", documents["Installed-packages"])
+        self.assertIn("pycparser 1.2", documents["Installed-packages"])
         self.assertIn("winrt-runtime: package metadata is not available", documents["Installed-packages"])
 
     def test_packaging_still_rejects_missing_metadata(self):

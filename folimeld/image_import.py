@@ -8,6 +8,8 @@ from pathlib import Path
 import fitz
 from PIL import Image, ImageOps
 
+from .temporary_data import encrypt_to
+
 
 EXTENSIONS = {'.jpg', '.jpeg', '.png', '.bmp', '.tif', '.tiff', '.webp'}
 
@@ -50,7 +52,7 @@ def sort_entries(entries, field='name', descending=False):
     return sorted(known, key=lambda entry: getattr(entry, field), reverse=descending) + missing
 
 
-def convert_images(paths, destination, page_size='image', progress=None):
+def convert_images(paths, destination, page_size='image', progress=None, *, key=None):
     """Build a PDF one frame at a time; callers own temporary-file cleanup."""
     with fitz.open() as document:
         for index, path in enumerate(paths):
@@ -87,12 +89,16 @@ def convert_images(paths, destination, page_size='image', progress=None):
                 raise ValueError(f'{Path(path).name}: {exc}') from exc
         if not document.page_count:
             raise ValueError('No images selected')
-        document.save(str(destination), deflate=True)
+        if key is None:
+            document.save(str(destination), deflate=True)
+        else:
+            with open(destination, 'wb') as stream:
+                encrypt_to(stream, document.tobytes(deflate=True), key)
 
 
-def conversion_worker(paths, destination, page_size, connection):
+def conversion_worker(paths, destination, page_size, connection, key):
     try:
-        convert_images(paths, destination, page_size, lambda count: connection.send(('progress', count)))
+        convert_images(paths, destination, page_size, lambda count: connection.send(('progress', count)), key=key)
         connection.send(('done', None))
     except Exception as exc:
         connection.send(('error', str(exc)))

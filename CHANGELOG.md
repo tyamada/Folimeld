@@ -4,6 +4,13 @@
 
 ## Unreleased
 
+- Add Japanese/English Store listing drafts, screenshot plans, publication decisions, and arrival-day Dynabook test instructions with a result template
+- Add short-lived signed development MSIX test bundles with source/payload hash verification and separate-PC installation, reporting and scoped cleanup scripts
+- Collect checksum-verified OpenSSL/Rust sources and native dependency notices for Windows x64 encryption; add a reproducible collector, integrity tests, and review records
+- Encrypt intermediate image-conversion PDFs directly and authenticate them before opening from memory; preserve the current document on authentication or conversion failure and verify temporary-file cleanup
+- Encrypt spilled history and temporary save input with AES-256-GCM, keep keys out of files/settings, and release plaintext to PDF processing only after authentication. Test tampering, short writes, abnormal termination, and save-failure recovery; account for encryption metadata in history budgets and update dependency notices
+- Add implementation-based Japanese/English privacy policy drafts and pre-publication temporary-data/log checks as work to proceed with while awaiting Microsoft's migration response
+- Record MSIX as the Microsoft Store publishing approach; separate development/Store builds and add identity/version preflight validation and static checks of generated MSIX packages. Migration/name handling for the existing EXE/MSI registration and actual MSIX identity details await confirmation
 - Move supplementary documentation, verification records, and README images from `docs/` to `documentation/`, updating document links and source ZIP collection
 - Standardize documentation filenames as `<base>.md` for English and `<base>_ja.md` for Japanese, updating cross-document links and translation synchronization rules
 - Speed up saving large image PDFs by skipping stream deduplication; add a progress dialog and a separate writing process, verifying preservation of edits and history on failure and protection of existing destinations on write failure

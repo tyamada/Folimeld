@@ -80,7 +80,7 @@ class PdfDocument:
 
     @property
     def history_disk_bytes(self) -> int:
-        return sum(state.pdf.size for stack in (self._undo, self._redo)
+        return sum(state.pdf.disk_size for stack in (self._undo, self._redo)
                    for state in stack if not state.pdf.in_memory)
 
     @staticmethod
@@ -103,7 +103,7 @@ class PdfDocument:
                     break
                 if not state.pdf.in_memory:
                     continue
-                if state.pdf.size <= self.history_disk_limit_bytes:
+                if state.pdf.encrypted_size <= self.history_disk_limit_bytes:
                     try:
                         state.pdf.spill()
                     except OSError:
@@ -111,7 +111,7 @@ class PdfDocument:
                         stack.remove(state)
                         state.close()
                     else:
-                        disk_size += state.pdf.size
+                        disk_size += state.pdf.disk_size
                 else:
                     stack.remove(state)
                     state.close()
@@ -120,7 +120,7 @@ class PdfDocument:
             while stack and disk_size > self.history_disk_limit_bytes:
                 state = stack.pop(0)
                 if not state.pdf.in_memory:
-                    disk_size -= state.pdf.size
+                    disk_size -= state.pdf.disk_size
                 state.close()
 
     def _snapshot(self) -> HistoryState:
@@ -212,9 +212,9 @@ class PdfDocument:
         self.password_protected = was_protected
         self.view_password = password if was_protected else None
 
-    def open_generated(self, path: str) -> None:
+    def open_generated(self, path: str | bytes) -> None:
         # Detach from the temporary file before replacing the current document.
-        new_doc = fitz.open(stream=Path(path).read_bytes(), filetype="pdf")
+        new_doc = fitz.open(stream=path if isinstance(path, bytes) else Path(path).read_bytes(), filetype="pdf")
         self.close()
         self.doc = new_doc
         self._revision = self._next_revision = 1

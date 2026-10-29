@@ -98,7 +98,9 @@ The measurement tool also scrolls through the document and records the maximum r
 
 Normal saving uses `garbage=3`, skipping stream deduplication. In the GUI, a separate process owns an independent document and writes temporary output; the model replaces the destination after success. Preparation and final switching remain synchronous; editing and cancellation are unavailable during saving. The benchmark tool measures the synchronous model API and excludes GUI process startup time.
 
-History is bounded by 128 MiB in memory and 1 GiB in temporary files. `history_bytes` counts in-memory PDF data and `history_disk_bytes` counts PDF data on disk. Snapshot creation and restoration process the whole PDF, so these limits do not bound temporary memory usage or edit latency. Temporary history files and temporary input for the save process contain decrypted PDF data. Unused history is explicitly closed, and the save staging directory is removed when processing ends.
+History is bounded by 128 MiB in memory and 1 GiB in temporary files. `history_bytes` counts in-memory PDF data; `history_disk_bytes` counts encrypted-container bytes on disk, including authentication metadata. Snapshot creation and restoration process the whole PDF, so these limits do not bound temporary memory usage or edit latency. Spilled history, temporary save-process input, and intermediate image-conversion PDFs use AES-256-GCM in `folimeld/temporary_data.py`, which authenticates the entire input before returning plaintext. Each file gets a random key and nonce. Keys are not saved to files or settings: history keys remain in memory, and save/image-worker keys are passed through interprocess communication. Encryption processes large data in chunks, and decrypted results remain in memory until authenticated. Unused history is explicitly closed and key references released; save/image-conversion staging directories are removed when processing ends.
+
+Automatic recovery of encrypted containers left by main-process termination or OS shutdown, and complete erasure from memory, pagefiles, or crash dumps are not guaranteed. Image conversion writes ciphertext directly, then the parent authenticates and opens the PDF from memory before replacing the current document. Serialization and decryption require memory for the complete PDF. Output PDFs use the encryption settings selected by the user. Do not conflate these scopes by claiming all temporary data is encrypted. Distribution notices also collect versions and licenses for `cryptography`, `cffi`, and `pycparser`.
 
 Error tracebacks are recorded in `logs/folimeld.log` under Qt's `AppLocalDataLocation` (up to three files of 1 MiB each). On Windows this is normally `%LOCALAPPDATA%/Folimeld/Folimeld/logs/`. No code explicitly logs PDF contents or passwords, but exception messages may contain filenames and similar information. Failure to initialize logging does not prevent startup.
 
@@ -106,7 +108,7 @@ Error tracebacks are recorded in `logs/folimeld.log` under Qt's `AppLocalDataLoc
 
 The application's display version is managed by `__version__` in `folimeld/__init__.py`, and the App Store build number by `__build__`. Update either the display version or the build number for every new App Store submission. In particular, increment the build number when resubmitting the same display version.
 
-Version information for the Windows executable is generated at build time by `tools/write_version_info.py`. Ubuntu packages, the macOS App Bundle, and MSIX use the same values.
+Version information for the Windows executable is generated at build time by `tools/write_version_info.py`. Ubuntu packages and the macOS App Bundle also use the application's display version. Store-submission MSIX versions are managed separately in a dedicated configuration file.
 
 License documents are bundled through calls to `tools/license_bundle.py` in each spec file.
 Review [Licensing and distribution](documentation/license-distribution_ja.md) (in Japanese) before distributing the application.
@@ -139,7 +141,11 @@ The unpackaged edition registers Folimeld in Windows **Open with** at startup. T
 
 ## MSIX for Microsoft Store
 
+The user reports that the existing Folimeld registration is an EXE or MSI app. MSIX has been selected for publication, but migration/name handling and MSIX identity information await confirmation. The [release plan](documentation/windows-store-release-plan.md) records the status and requirements for each submission type.
+
 ### Intel/AMD (x64)
+
+Unsigned development MSIX:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\build_msix.ps1
@@ -147,16 +153,17 @@ powershell -ExecutionPolicy Bypass -File .\build_msix.ps1
 
 The output is `dist\Folimeld_<バージョン>_x64.msix`, where `<バージョン>` is the version.
 
-For Store submissions, specify the values exactly as shown on the **Product identity** page in Partner Center. These values are case-sensitive. In the examples below, replace the Japanese placeholders with the Package/Identity/Name and Publisher from Partner Center, and the publisher display name.
+For Store submissions, copy `packaging/msix/store-config.example.json` to `build/store-config.json` and configure the MSIX registration's identity, publisher, publisher display name, and submission version. Do not use the EXE/MSI application ID. Blank settings, the development identity, and invalid versions are rejected before rebuilding the EXE. Validate the configuration first.
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\build_msix.ps1 `
-  -IdentityName "Partner CenterのPackage/Identity/Name" `
-  -Publisher "Partner CenterのPublisher" `
-  -PublisherDisplayName "公開者表示名"
+  -Store -StoreConfig .\build\store-config.json -ValidateOnly
+
+powershell -ExecutionPolicy Bypass -File .\build_msix.ps1 `
+  -Store -StoreConfig .\build\store-config.json
 ```
 
-Omitting these arguments generates an unsigned package with a development identity. To install outside the Store, sign it with a certificate that matches the Publisher in the manifest.
+Omitting `-Store` selects development mode. The existing `-IdentityName`, `-Publisher`, and `-PublisherDisplayName` parameters remain available for development; Store mode uses only its configuration file. Generated MSIX packages are statically checked for identity, version, executable architecture, bundled images, and related settings, with results saved in `build/msix-preflight/`. For updates, `-PreviousPackage` checks that the version increases relative to the previous MSIX for the same Store product. Static checks do not replace WACK, installed-app tests, or Partner Center validation. To install outside the Store, sign it with a certificate that matches the Publisher in the manifest.
 
 ### ARM (ARM64)
 
@@ -164,9 +171,7 @@ Build the ARM64 edition on a physical Windows on ARM device or an ARM64 Windows 
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\build_msix.ps1 -Architecture arm64 `
-  -IdentityName "Partner CenterのPackage/Identity/Name" `
-  -Publisher "Partner CenterのPublisher" `
-  -PublisherDisplayName "公開者表示名"
+  -Store -StoreConfig .\build\store-config.json
 ```
 
 The build script checks the architecture of the Python/PyInstaller environment and stops if it does not match the requested architecture.

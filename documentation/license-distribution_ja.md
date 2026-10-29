@@ -65,6 +65,8 @@ OSライブラリ、SDK、署名、ネイティブライブラリのビルド条
 
 ## 依存ライブラリのソース収集
 
+暗号化機能に追加したWindows x64依存の確認結果・再収集コマンド・未確認範囲は、[暗号化のネイティブ依存調査](crypto-dependency-audit_ja.md) に記録しています。
+
 FolimeldのZIPだけで対応ソース全体が揃ったとは扱いません。
 各記録の`dependency_sources`は未収集を明示します。対象のビルド記録または配布物内の
 `Installed-packages`から版を確認し、PyPIのソース配布物は次のように取得できます。
@@ -82,6 +84,7 @@ PyMuPDFのソース内`setup.py`が指定するMuPDFの版・ソース取得先�
 PyMuPDFのソース配布物にMuPDF全体が含まれるとは限りません。
 Qt / PySide / Shiboken、MuPDFに内包される第三者コード、Pillowの画像ライブラリ、
 PyInstallerのブートローダー等についても実際のバイナリとの対応・変更点・必要な告知を確認します。
+一時データの暗号化に追加した `cryptography`・CFFI・pycparserも、配布物に採用した版のソースと告知を確認します。cryptographyのwheelに内包されるOpenSSL等やCFFIの依存コードについても、Pythonパッケージのライセンス収集だけで完了とせず、実バイナリとの対応と告知を確認してください。
 Snapの`stage-packages`等はPythonのパッケージ一覧には出ないため、別途扱います。
 
 ## 既存0.3.2配布物

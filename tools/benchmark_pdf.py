@@ -170,7 +170,7 @@ def main():
         result['input_unchanged'] = True
     result["environment"] = {
         "python": platform.python_version(), "platform": platform.platform(),
-        "dependencies": {name: version(name) for name in ("PyMuPDF", "PySide6", "Pillow", "psutil")},
+        "dependencies": {name: version(name) for name in ("PyMuPDF", "PySide6", "Pillow", "psutil", "cryptography")},
     }
     result["fixture"] = {"generated": args.input is None, "image_size": args.image_size if not args.input else None}
     report = json.dumps(result, indent=2) + "\n"

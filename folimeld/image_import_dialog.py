@@ -10,6 +10,7 @@ from PySide6.QtWidgets import (QAbstractItemView, QComboBox, QDialog, QDialogBut
                                QTableWidgetItem, QVBoxLayout)
 
 from .image_import import conversion_worker, sort_entries
+from .temporary_data import decrypt_from, new_key
 
 
 class ImageImportDialog(QDialog):
@@ -77,12 +78,13 @@ class ImageImportDialog(QDialog):
     def convert(self, model):
         """Poll a spawned worker without sharing PyMuPDF objects with the UI."""
         with tempfile.TemporaryDirectory(prefix='folimeld-images-') as directory:
-            destination = Path(directory) / 'images.pdf'
+            destination = Path(directory) / 'images.encrypted'
+            key = new_key()
             context = multiprocessing.get_context('spawn')
             receiver, sender = context.Pipe(duplex=False)
             process = context.Process(target=conversion_worker,
                                       args=([str(e.path) for e in self.entries], str(destination),
-                                            self.size.currentData(), sender))
+                                            self.size.currentData(), sender, key))
             progress = QProgressDialog(self.tr('image_converting'), self.tr('cancel'), 0, len(self.entries), self)
             progress.setWindowTitle(self.tr('import_images'))
             progress.setAutoClose(False)
@@ -121,7 +123,13 @@ class ImageImportDialog(QDialog):
                 if result[0][0] == 'error':
                     QMessageBox.warning(self, self.tr('error'), str(result[0][1]))
                     return False
-                model.open_generated(str(destination))
+                try:
+                    with destination.open('rb') as stream:
+                        data = decrypt_from(stream, key)
+                    model.open_generated(data)
+                except Exception as exc:
+                    QMessageBox.warning(self, self.tr('error'), str(exc))
+                    return False
                 return True
             finally:
                 timer.stop()

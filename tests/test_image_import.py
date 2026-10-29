@@ -117,3 +117,69 @@ def test_dialog_defaults_order_worker_and_cancel(tmp_path):
     assert len(dialog.entries) == 1
     model.close()
     dialog.close()
+
+
+@pytest.mark.parametrize('tamper', [False, True])
+def test_dialog_encrypted_result_and_cleanup(tmp_path, tamper):
+    from folimeld.temporary_data import MAGIC, decrypt_from
+
+    app = QApplication.instance() or QApplication([])
+    Image.new('RGB', (20, 30), 'blue').save(tmp_path / 'image.png')
+    dialog = ImageImportDialog(inventory(tmp_path), lambda key, **kwargs: key)
+    model = PdfDocument()
+    model.doc = fitz.open()
+    model.doc.new_page()
+    model.rotate([0], 90)
+    previous = model.doc
+    paths = []
+
+    def inspect(stream, key):
+        path = Path(stream.name)
+        paths.append(path)
+        assert list(path.parent.iterdir()) == [path]
+        raw = stream.read()
+        assert raw.startswith(MAGIC) and b'%PDF-' not in raw
+        if tamper:
+            from io import BytesIO
+            raw = raw[:-1] + bytes([raw[-1] ^ 1])
+            return decrypt_from(BytesIO(raw), key)
+        return decrypt_from(stream, key)
+
+    with patch('folimeld.image_import_dialog.decrypt_from', side_effect=inspect), \
+            patch('folimeld.image_import_dialog.QMessageBox.warning') as warning:
+        assert dialog.convert(model) is (not tamper)
+    assert paths and not paths[0].parent.exists()
+    if tamper:
+        assert warning.call_count == 1
+        assert model.doc is previous and model.dirty and model.can_undo
+        assert model.undo()
+    else:
+        assert not warning.called
+        assert model.path is None and model.dirty and not model.can_undo
+        assert model.doc[0].get_pixmap().pixel(1, 1) == (0, 0, 255)
+    assert not multiprocessing.active_children()
+    model.close()
+    dialog.close()
+    app.processEvents()
+
+
+def test_encrypted_conversion_write_failure(tmp_path):
+    from unittest.mock import Mock
+    from folimeld.image_import import conversion_worker
+    from folimeld.temporary_data import MAGIC, new_key
+
+    image = tmp_path / 'image.png'
+    Image.new('RGB', (20, 30), 'red').save(image)
+    destination = tmp_path / 'images.encrypted'
+    connection = Mock()
+
+    def fail(stream, data, key):
+        assert data.startswith(b'%PDF-')
+        stream.write(MAGIC)
+        raise OSError('disk full')
+
+    with patch('folimeld.image_import.encrypt_to', side_effect=fail):
+        conversion_worker([str(image)], str(destination), 'image', connection, new_key())
+    assert connection.send.call_args.args[0] == ('error', 'disk full')
+    connection.close.assert_called_once()
+    assert destination.read_bytes() == MAGIC

@@ -1,0 +1,43 @@
+{
+  "run_id": null,
+  "date_jst": null,
+  "tester": null,
+  "machine": {
+    "manufacturer": "Dynabook",
+    "model": null,
+    "cpu": null,
+    "memory_gib": null,
+    "ssd_gib": null,
+    "windows_edition": null,
+    "windows_build": null,
+    "architecture": null,
+    "activation_confirmed": null,
+    "baseline": "not_recorded"
+  },
+  "candidate": {
+    "app_version": null,
+    "package_version": null,
+    "package_sha256": null,
+    "source_sha256": null,
+    "certificate_expires_utc": null
+  },
+  "normal_tests": [
+    {"id": "T01", "status": "not_run", "actual": null, "evidence": []},
+    {"id": "T02", "status": "not_run", "actual": null, "evidence": []},
+    {"id": "T03", "status": "not_run", "actual": null, "evidence": []},
+    {"id": "T04", "status": "not_run", "actual": null, "evidence": []},
+    {"id": "T05", "status": "not_run", "actual": null, "evidence": []},
+    {"id": "T06", "status": "not_run", "actual": null, "evidence": []},
+    {"id": "T07", "status": "not_run", "actual": null, "evidence": []},
+    {"id": "T08", "status": "not_run", "actual": null, "evidence": []},
+    {"id": "T09", "status": "not_run", "actual": null, "evidence": []},
+    {"id": "T10", "status": "not_run", "actual": null, "evidence": []}
+  ],
+  "deferred": {
+    "update": "not_run",
+    "wack": "not_run",
+    "store_purchases": "not_run",
+    "forced_shutdown": "not_run",
+    "final_store_package": "not_run"
+  }
+}

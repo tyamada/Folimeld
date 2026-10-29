@@ -2,3 +2,7 @@
 *.sh text eol=lf
 packaging/linux/folimeld-snap-launch text eol=lf
 * text=auto eol=lf
+# Preserve generated notice bytes; crypto-native-sources.json records their hashes.
+licenses/CFFI-libffi-x64.txt -text
+licenses/Cryptography-Rust.txt -text
+licenses/OpenSSL.txt -text

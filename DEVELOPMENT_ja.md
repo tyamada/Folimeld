@@ -98,7 +98,9 @@ Windows負荷テストの事前確認は [確認記録](documentation/windows-lo
 
 通常保存は `garbage=3` を使い、ストリームの重複検査を省きます。GUIでは独立した文書を所有する別プロセスが一時出力を書き、成功後にモデルが保存先を置き換えます。準備・最終切替は同期処理で、保存中の編集・キャンセルはできません。性能計測ツールの保存時間は同期のモデルAPIを測定し、GUIのプロセス起動時間を含みません。
 
-履歴はメモリ128 MiBと一時ファイル1 GiBを上限に保持します。`history_bytes` はメモリ内、`history_disk_bytes` はディスク上のPDFデータ量です。スナップショットの生成・復元はPDF全体を扱い、一時メモリ使用量や編集待ち時間はこの上限では制限されません。履歴の一時ファイルと保存プロセス用の一時入力には暗号化解除後のPDFデータが含まれます。不要になった履歴は明示的に閉じ、保存用の一時ディレクトリは処理終了時に削除します。
+履歴はメモリ128 MiBと一時ファイル1 GiBを上限に保持します。`history_bytes` はメモリ内のPDFデータ量、`history_disk_bytes` は認証情報などを含むディスク上の暗号コンテナのバイト数です。スナップショットの生成・復元はPDF全体を扱い、一時メモリ使用量や編集待ち時間はこの上限では制限されません。履歴の退避、保存プロセス用の一時入力、画像変換の中間PDFは `folimeld/temporary_data.py` でAES-256-GCM暗号化し、読み込み時に全体の認証を完了してから平文を返します。ファイルごとにランダムな鍵とnonceを作り、鍵はファイルや設定には保存せず、履歴ではメモリ内、保存・画像変換ワーカーではプロセス間通信で渡します。大きなデータの暗号化は分割処理し、復号結果は認証完了までメモリ内に留めます。不要になった履歴は明示的に閉じて鍵への参照も解放し、保存・画像変換用の一時ディレクトリは処理終了時に削除します。
+
+本体の強制終了やOS停止などで残留した暗号コンテナの自動回収、メモリ・ページファイル・クラッシュダンプからの完全消去は保証しません。画像変換は暗号文を直接書き出し、親プロセスで認証してメモリからPDFを開いた後に現在の文書を置き換えます。シリアライズと復号にはPDF全体分のメモリが必要です。保存先PDFには利用者が指定した暗号化設定を適用します。これらの範囲を混同して「すべての一時データが暗号化される」と説明しないでください。暗号化依存 `cryptography` と `cffi`・`pycparser` の版とライセンスも配布時に収集します。
 
 エラーのスタックトレースはQtの `AppLocalDataLocation` 配下の `logs/folimeld.log` に記録します（1 MiB×最大3ファイル）。Windowsでは通常 `%LOCALAPPDATA%/Folimeld/Folimeld/logs/` です。PDF本文やパスワードを明示的に記録する処理はありませんが、例外メッセージにはファイル名などが含まれる場合があります。ログの初期化に失敗しても起動を継続します。
 
@@ -106,7 +108,7 @@ Windows負荷テストの事前確認は [確認記録](documentation/windows-lo
 
 アプリの表示バージョンは `folimeld/__init__.py` の `__version__`、App Store用のビルド番号は `__build__` で管理しています。新しいApp Store提出ごとに、表示バージョンまたはビルド番号を更新してください。特に同じ表示バージョンで再提出する場合は、ビルド番号を増やします。
 
-Windowsの実行ファイル用バージョン情報は `tools/write_version_info.py` によりビルド時に生成されます。Ubuntuパッケージ、macOS App Bundle、MSIXも同じ値を参照します。
+Windowsの実行ファイル用バージョン情報は `tools/write_version_info.py` によりビルド時に生成されます。UbuntuパッケージとmacOS App Bundleもアプリの表示バージョンを参照します。Store提出用MSIXの版番号は専用の設定ファイルで分けて管理します。
 
 ライセンス文書は各specの `tools/license_bundle.py` 呼び出しで同梱します。
 配布前に [ライセンスと配布](documentation/license-distribution_ja.md) を確認してください。
@@ -139,7 +141,11 @@ build_exe.bat
 
 ## Microsoft Store向けMSIX
 
+ユーザーによる確認では既存のFolimeld登録は「EXE または MSI アプリ」です。公開方式はMSIXを選択していますが、MSIX登録への移行・名前の扱いとIdentity情報は確認待ちです。[公開計画](documentation/windows-store-release-plan_ja.md) に状況と提出方式ごとの要件を記録しています。
+
 ### Intel/AMD（x64）
+
+開発用の未署名MSIX：
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\build_msix.ps1
@@ -147,16 +153,17 @@ powershell -ExecutionPolicy Bypass -File .\build_msix.ps1
 
 生成物は `dist\Folimeld_<バージョン>_x64.msix` です。
 
-Storeへ提出するときは、Partner Centerの「製品ID」ページに表示される値を正確に指定します。値は大文字・小文字を区別します。
+Store提出用は `packaging/msix/store-config.example.json` を `build/store-config.json` へコピーし、MSIX登録のIdentity・Publisher・公開者表示名と提出版番号を設定します。EXE/MSI側のアプリケーションIDは使いません。空欄・開発用Identity・不正な版番号はEXEの再ビルド前に拒否します。まず設定だけを検証してください。
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\build_msix.ps1 `
-  -IdentityName "Partner CenterのPackage/Identity/Name" `
-  -Publisher "Partner CenterのPublisher" `
-  -PublisherDisplayName "公開者表示名"
+  -Store -StoreConfig .\build\store-config.json -ValidateOnly
+
+powershell -ExecutionPolicy Bypass -File .\build_msix.ps1 `
+  -Store -StoreConfig .\build\store-config.json
 ```
 
-引数を省略すると開発用Identityで未署名パッケージを生成します。Store外でインストールする場合は、マニフェストのPublisherと一致する証明書で署名してください。
+`-Store` を省略すると開発用モードです。従来の `-IdentityName`・`-Publisher`・`-PublisherDisplayName` は開発用で利用でき、Storeモードでは設定ファイルのみを使用します。生成後のMSIXはIdentity・版番号・CPU種類・同梱画像などを静的検査し、結果を `build/msix-preflight/` に保存します。更新版では `-PreviousPackage` で前回の同じStore製品のMSIXを指定すると、版番号の増加も検証します。静的検査はWACK・実機試験・Partner Centerの検証の代わりにはなりません。Store外でインストールする場合は、マニフェストのPublisherと一致する証明書で署名してください。
 
 ### ARM（ARM64）
 
@@ -164,9 +171,7 @@ ARM64版は、Windows on ARM実機またはARM64 Windows仮想環境で作成し
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\build_msix.ps1 -Architecture arm64 `
-  -IdentityName "Partner CenterのPackage/Identity/Name" `
-  -Publisher "Partner CenterのPublisher" `
-  -PublisherDisplayName "公開者表示名"
+  -Store -StoreConfig .\build\store-config.json
 ```
 
 ビルドスクリプトはPython/PyInstaller環境のアーキテクチャを検査し、指定と一致しない場合は処理を停止します。

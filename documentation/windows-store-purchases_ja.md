@@ -1,5 +1,7 @@
 # Windows 応援購入
 
+この手順はMSIX版が対象です。現在ユーザーが確認したEXE/MSI登録からMSIX登録への移行・名前の扱いとIdentityの取得は確認待ちです。[Microsoft Store公開計画](windows-store-release-plan_ja.md) を先に確認してください。
+
 Windows MSIX版の「ヘルプ → 開発を応援する…」から、Microsoft Storeの購入画面を開きます。
 非消耗型商品を購入すると、Storeライセンス確認後にメニューがサポーターアイコン付き「サポーター…」になります。
 通常EXE・macOS・Linuxではこの購入入口を表示しません。サイドロードMSIXでも入口は表示されますが、
