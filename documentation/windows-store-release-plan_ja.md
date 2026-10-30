@@ -64,9 +64,11 @@ MSIX提出ではStoreによる署名・ホスティング・更新配信を利�
 
 ## 名前確保手順の追加回答待ちの間に進める作業
 
-2026-10-29、日英の[Store掲載文下書き](windows-store-listing_ja.md)、[スクリーンショット計画](windows-store-screenshot-plan_ja.md)、[公開情報の確認表](windows-store-publication-decisions_ja.md)、[Dynabook到着後の初回試験手順](windows11-test-day_ja.md)を準備しました。注文済みPCは2026-10-30到着予定です。到着・実機試験・画像撮影・公開情報の確定は未完了です。
+2026-10-29、日英の[Store掲載文下書き](windows-store-listing_ja.md)、[スクリーンショット計画](windows-store-screenshot-plan_ja.md)、[公開情報の確認表](windows-store-publication-decisions_ja.md)、[Dynabook到着後の初回試験手順](windows11-test-day_ja.md)を準備しました。2026-10-30にDynabook B65/DN（Core i5-8250U、Windows 11 Pro 25H2、26200.9818、x64）で初回試験を実施しました。掲載用画像撮影と公開情報の確定は未完了です。
 
-インストール試験は別のWindows 11 x64試験用PC／VMで行います。[署名済み試験用一式の準備・導入・削除手順](windows-store-test-bundle_ja.md) を用意しました。ビルドPCでは信頼登録・導入をせず、試験先での実行結果は未取得です。
+別の試験用PCで[署名済み試験用一式の準備・導入・削除手順](windows-store-test-bundle_ja.md)を使用しました。対象は `Folimeld.Dev` 0.3.3.0 x64、MSIXのSHA-256は `b3025711dbb3bdfdee9728ef6790c801232570949ddc76302a658e34a4a44646` です。試験用PCのチャット「Microsoft Storeテスト環境を設定」の記録を確認し、導入・起動、日本語パスのPDF読込、回転・移動・Undo/Redo、別名保存・再読込、パスワード変更後の再読込、日英切替の保持、ライセンス表示、Explorerから開く、InspectとRemoveの完了を確認しました。パスワード変更と管理者操作の成功には利用者の報告を含みます。削除後の状態ファイルは `removed`、今回追加した証明書の信頼は解除済みです。削除後のアプリ登録の直接照会は実行環境のアクセス制限により未確認です。ビルドPCへの信頼登録・導入は行っていません。
+
+画像取り込みは4ページ生成、並べ替え・除外、A4指定、設定画面でのキャンセルまで確認しました。2026-10-30に開発PCへ成果物を回収し、アプリの操作経路から独立した検査31項目がすべて成功しました。編集後のページ順・回転・描画、目次と内部リンクの移動先・リンク領域、注釈、フォームのフィールド参照と値、添付の内容、メタデータを照合しました。変更後のPDFは新パスワードで開き、旧パスワードを拒否します。画像PDFは全4ページがA4相当（各辺1 pt以内）で、EXIF補正・透過の白背景合成・TIFFの2フレームを元画像と画素比較して一致しました。検査はアプリと同じPyMuPDFエンジンとPillowを使用しており、別エンジンとの互換性の証明ではありません。記録・ハッシュ・描画確認画像は `build/store-acceptance/dynabook-20261030/` に保管しました。受領データの構造は `outputs/outputs/` です。試験用PCの原記録は変更していません。変換処理中のキャンセル、クリーンインストール済みであること、メモリ・ディスク・画面の詳細、WACK・更新・実Store購入・強制停止・最終Store版は引き続き未確認です。
 
 [暗号化のネイティブ依存調査](crypto-dependency-audit_ja.md) でOpenSSL 4.0.3とCargo.lockのRust依存32件のソースを照合し、OpenSSL・Rust依存・CFFI内libffiの告知を収集しました。全体の依存調査とwheelのビルド来歴確認は継続します。
 
