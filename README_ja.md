@@ -30,7 +30,7 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 
 ## ダウンロード
 
-公開対象はLinux用パッケージです。Windows・macOS用バイナリは非公開とし、手元で開発・検証します。現在公開中のLinuxパッケージは、以下の直接ダウンロードを使用してください。[GitHub Releases](https://github.com/tyamada/Folimeld/releases) への移行は[Linux配布物の移行計画](documentation/linux-release-migration_ja.md)にまとめています。現時点ではアップロード・移行は行っていません。
+公開対象はLinux用パッケージです。Windows・macOS用バイナリは非公開とし、手元で開発・検証します。Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビルド記録は[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)から取得できます。以下のダウンロードリンクもReleaseを参照しています。[移行計画と実施記録](documentation/linux-release-migration_ja.md)を参照してください。互換性のため従来のリポジトリ内のダウンロードURLも維持しています。
 
 | OS | 配布形式 |
 | --- | --- |
@@ -46,10 +46,10 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 
 バージョン **0.3.3 / x86_64（amd64）**：
 
-- [x86_64版debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_amd64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
-- [x86_64版Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_amd64.snap?raw=true)（snapdが必要）
-- [SHA-256チェックサム](releases/ubuntu/folimeld_0.3.3_SHA256SUMS.txt?raw=true)
-- [ビルド時のソースと対応記録](releases/ubuntu/source/0.3.3-amd64/)
+- [x86_64版debパッケージをダウンロード](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.3/folimeld_0.3.3_amd64.deb)（Ubuntu 22.04以降 / Debian 13）
+- [x86_64版Snapパッケージをダウンロード](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.3/folimeld_0.3.3_amd64.snap)（snapdが必要）
+- [SHA-256チェックサム](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.3/folimeld_0.3.3_SHA256SUMS.txt)
+- [ビルド時のソースと対応記録](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)
 
 ダウンロード先のフォルダーで、使用するパッケージのインストールコマンドを実行してください。
 
@@ -63,10 +63,10 @@ sudo snap install --dangerous ./folimeld_0.3.3_amd64.snap
 
 バージョン **0.3.3 / arm64（AArch64）**：
 
-- [arm64版debパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_arm64.deb?raw=true)（Ubuntu 22.04以降 / Debian 13）
-- [arm64版Snapパッケージをダウンロード](releases/ubuntu/folimeld_0.3.3_arm64.snap?raw=true)（snapdが必要）
-- [SHA-256チェックサム](releases/ubuntu/folimeld_0.3.3_SHA256SUMS.txt?raw=true)
-- [ビルド時のソースと対応記録](releases/ubuntu/source/0.3.3-arm64/)
+- [arm64版debパッケージをダウンロード](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.3/folimeld_0.3.3_arm64.deb)（Ubuntu 22.04以降 / Debian 13）
+- [arm64版Snapパッケージをダウンロード](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.3/folimeld_0.3.3_arm64.snap)（snapdが必要）
+- [SHA-256チェックサム](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.3/folimeld_0.3.3_SHA256SUMS.txt)
+- [ビルド時のソースと対応記録](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)
 
 ```bash
 # arm64 deb版

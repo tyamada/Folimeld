@@ -30,7 +30,7 @@ Choose File → Exit to close the app, with a save prompt for unsaved changes. O
 
 ## Downloads
 
-Only Linux packages are publicly distributed. Windows and macOS binaries remain private for local development and verification. Use the direct Linux downloads below for the currently published files. The proposed move to [GitHub Releases](https://github.com/tyamada/Folimeld/releases) is described in the [Linux release migration plan](documentation/linux-release-migration.md). No upload or migration has been performed yet.
+Only Linux packages are publicly distributed. Windows and macOS binaries remain private for local development and verification. Linux 0.3.3 packages, matching source ZIPs, checksums and build records are available in the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3). The download links below now point to that Release. See the [migration plan and implementation record](documentation/linux-release-migration.md). Existing repository download URLs remain available for compatibility.
 
 | OS | Package formats |
 | --- | --- |
@@ -46,10 +46,10 @@ Only Linux packages are publicly distributed. Windows and macOS binaries remain 
 
 Version **0.3.3 / x86_64 (amd64)**:
 
-- [Download the x86_64 deb package](releases/ubuntu/folimeld_0.3.3_amd64.deb?raw=true) (Ubuntu 22.04 or later / Debian 13)
-- [Download the x86_64 Snap package](releases/ubuntu/folimeld_0.3.3_amd64.snap?raw=true) (requires snapd)
-- [SHA-256 checksums](releases/ubuntu/folimeld_0.3.3_SHA256SUMS.txt?raw=true)
-- [Build source snapshots and artifact records](releases/ubuntu/source/0.3.3-amd64/)
+- [Download the x86_64 deb package](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.3/folimeld_0.3.3_amd64.deb) (Ubuntu 22.04 or later / Debian 13)
+- [Download the x86_64 Snap package](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.3/folimeld_0.3.3_amd64.snap) (requires snapd)
+- [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.3/folimeld_0.3.3_SHA256SUMS.txt)
+- [Build source snapshots and artifact records](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)
 
 Run the installation command for your chosen package from the download folder.
 
@@ -63,10 +63,10 @@ sudo snap install --dangerous ./folimeld_0.3.3_amd64.snap
 
 Version **0.3.3 / arm64 (AArch64)**:
 
-- [Download the arm64 deb package](releases/ubuntu/folimeld_0.3.3_arm64.deb?raw=true) (Ubuntu 22.04 or later / Debian 13)
-- [Download the arm64 Snap package](releases/ubuntu/folimeld_0.3.3_arm64.snap?raw=true) (requires snapd)
-- [SHA-256 checksums](releases/ubuntu/folimeld_0.3.3_SHA256SUMS.txt?raw=true)
-- [Build source snapshots and artifact records](releases/ubuntu/source/0.3.3-arm64/)
+- [Download the arm64 deb package](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.3/folimeld_0.3.3_arm64.deb) (Ubuntu 22.04 or later / Debian 13)
+- [Download the arm64 Snap package](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.3/folimeld_0.3.3_arm64.snap) (requires snapd)
+- [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.3/folimeld_0.3.3_SHA256SUMS.txt)
+- [Build source snapshots and artifact records](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)
 
 ```bash
 # arm64 deb package
