@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+- Restrict the Windows build DLL search path to required Python, Windows and Git locations; validate native binary provenance and stop builds that collect binaries from unrelated tools
+- Embed a Per-Monitor V2 DPI-awareness manifest in the Windows executable; subsequent hardware tests still report a WACK DPI warning, which remains under investigation
 - Add Japanese/English Store listing drafts, screenshot plans, publication decisions, and arrival-day Dynabook test instructions with a result template
 - Add short-lived signed development MSIX test bundles with source/payload hash verification and separate-PC installation, reporting and scoped cleanup scripts
 - Collect checksum-verified OpenSSL/Rust sources and native dependency notices for Windows x64 encryption; add a reproducible collector, integrity tests, and review records

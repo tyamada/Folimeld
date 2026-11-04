@@ -1,10 +1,12 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+import os
 import sys
 from pathlib import Path
 sys.path.insert(0, SPECPATH)
 from tools.license_bundle import license_datas
 from tools.source_bundle import source_datas, record_artifact
+from tools.windows_build_environment import validate_binary_sources
 
 a = Analysis(
     ["main.py"],
@@ -23,6 +25,7 @@ a = Analysis(
     noarchive=False,
     optimize=0,
 )
+validate_binary_sources(a.binaries, [sys.prefix, sys.base_prefix, os.environ["SystemRoot"]])
 pyz = PYZ(a.pure)
 
 exe = EXE(
@@ -39,6 +42,7 @@ exe = EXE(
     console=False,
     icon="assets/Folimeld.ico",
     version="build/version_info.txt",
+    manifest=str(Path(SPECPATH) / "packaging" / "windows" / "Folimeld.manifest"),
 )
 
 record_artifact(exe.name, exe.name, Path(SPECPATH) / "dist" / "source", project_root=SPECPATH)

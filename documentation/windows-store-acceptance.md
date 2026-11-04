@@ -36,7 +36,25 @@ Run on a clean Windows 11 x64 test environment without Python installed. Use cop
 
 Certificate trust changes, installation and WACK belong in the test environment. ARM64 requires its own native build and hardware results. Repeat affected tests after fixes, and retest the Store-delivered package before general availability.
 
+## Remaining test priorities (2026-10-30)
+
+Initial hardware tests and inspection of returned PDFs are recorded in the [release plan](windows-store-release-plan.md). Twenty additional cross-engine checks passed. Continue in this order:
+
+| Priority | Test | Prerequisites and current state |
+| --- | --- | --- |
+| 1 | Active-conversion cancellation and document/destination protection on failure | Completed: cancellation at 31% of 72-image conversion retained the document. Invalid-image failure and a busy save destination also preserved the document and existing destination |
+| 2 | Disk-backed history, temporary data, settings and logs | Verified disk-backed Undo/Redo, encrypted headers, actual storage paths and cleanup after normal exit, failure and removal. History-limit pruning, log rotation and app forced termination remain untested; do not force an OS shutdown |
+| 3 | WACK precertification | WACK 10.0.28000.2957 tested 0.3.3.0: 22 PASS, one optional FAIL, one required DPI WARNING; overall WARNING. 0.3.3.2 failed to launch QtCore, so WACK was deferred. Verify startup first with DLL-isolated version 0.3.3.3, then repeat WACK and high-DPI checks. Distinguish development-candidate results from final Store-candidate results |
+| 4 | Update, reinstallation and removal | The 0.3.3.0→0.3.3.2 update preserved originals and the default app, but startup failure prevented GUI settings verification. DLL-isolated version 0.3.3.3 is prepared; transfer/update/startup checks remain pending. Preserve previous ownership records. Finalize trust handling for the different test certificate and cleanup targeting the updated version before execution |
+| 5 | Final Store package, purchases/restoration/refunds, ARM64 | Run after actual Identity, Store candidate, purchase configuration and target hardware are established |
+
+Preserve the previous test directory and original reports; use a separate directory and state file for the next run. Baseline records established about 16 GiB RAM, a 237 GiB SSD, 176 GiB free and a 1366×768 display. A clean OS installation remains unverified. Distinguish user reports of manual certificate/elevated operations from directly obtained state evidence.
+
 ## References
 
 - [Microsoft: run, debug and test an MSIX package](https://learn.microsoft.com/en-us/windows/msix/desktop/desktop-to-uwp-debug)
 - [Microsoft: Windows App Certification Kit](https://learn.microsoft.com/en-us/windows/uwp/debug-test-perf/windows-app-certification-kit)
+
+## Current diagnostic status (2026-11-04)
+
+The October 30 priorities above are historical. See the [diagnostic follow-up](windows-store-release-plan.md#diagnostic-follow-up-updated-2026-11-04) for completed 0.3.3.3–0.3.3.13 trials and the unresolved DPI/TEST88 findings. WACK remains WARNING; no rerun or Hosted API comparison is authorized by this document. High-DPI 150%/200%, the final Store package and other outstanding acceptance work remain unverified.

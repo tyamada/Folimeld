@@ -28,7 +28,7 @@ if errorlevel 1 exit /b %errorlevel%
 "%PYTHON_EXE%" tools\write_version_info.py build\version_info.txt
 if errorlevel 1 exit /b %errorlevel%
 
-"%PYTHON_EXE%" -m PyInstaller --noconfirm --clean Folimeld.spec
+"%PYTHON_EXE%" tools\windows_build_environment.py
 if errorlevel 1 exit /b %errorlevel%
 
 echo.
