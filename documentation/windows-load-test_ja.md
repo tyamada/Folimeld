@@ -11,7 +11,7 @@
 - 実行ファイルサイズ: 74,065,754 bytes
 - 実行ファイルSHA-256: `E3690616CCE522A457C93F5C15D2002B8354A79C84A299BF50597A25B58D8880`
 - 指定入力: `C:\Users\takum\Downloads\source\Folimeld\testdata\load\_test\_1100\_pages.pdf`
-- 出力先: [build/load-test/](../build/load-test/)（作成済み。保存PDFは未生成）
+- 出力先: `build/load-test/`（当時の開発機で作成済み。保存PDFは未生成。公開リポジトリには含めない）
 
 ## 事前確認の方法と結果
 

@@ -15,3 +15,36 @@ dist/
 .pytest_cache/
 .ruff_cache/
 .mypy_cache/
+
+# Local diagnostics and verification output
+*.log
+/test-results.xml
+/build-requirements.txt
+.coverage
+htmlcov/
+
+# Windows/macOS binaries are private; Linux release assets remain explicit
+*.exe
+*.msix
+*.msixbundle
+*.appx
+*.appxbundle
+*.app/
+*.pkg
+*.dmg
+
+# Local signing keys and service credentials
+*.pfx
+*.p12
+*.p8
+*.key
+*.pem
+*.mobileprovision
+*.provisionprofile
+.env
+.env.*
+!.env.example
+client_secret*.json
+service-account*.json
+credentials.json
+token.json

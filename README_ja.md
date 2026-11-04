@@ -30,17 +30,17 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 
 ## ダウンロード
 
-配布パッケージは [GitHub Releases](https://github.com/tyamada/Folimeld/releases) からダウンロードできます。
+公開対象はLinux用パッケージです。Windows・macOS用バイナリは非公開とし、手元で開発・検証します。現在公開中のLinuxパッケージは、以下の直接ダウンロードを使用してください。[GitHub Releases](https://github.com/tyamada/Folimeld/releases) への移行は[Linux配布物の移行計画](documentation/linux-release-migration_ja.md)にまとめています。現時点ではアップロード・移行は行っていません。
 
 | OS | 配布形式 |
 | --- | --- |
-| Windows 10 / 11（Intel/AMD（x64） / ARM（arm64）） | EXE / MSIX（Microsoft Storeでの公開を準備中） |
-| macOS | `.app` (App Storeでの公開を準備中) |
+| Windows 10 / 11（Intel/AMD（x64） / ARM（arm64）） | EXE / MSIX（バイナリ非公開） |
+| macOS | `.app`（バイナリ非公開） |
 | Ubuntu | `.deb` / `.snap` / 単体実行ファイル（対応バージョンは各リリースを参照） |
 | Debian 13 | `.deb`（amd64 / arm64、WSL2で基本動作確認済み） |
 
 > [!NOTE]
-> リリースによっては、一部のOS向けパッケージが用意されていない場合があります。
+> Windows・macOSの検証用成果物は、公開リポジトリやGitHub Releasesへ追加しません。
 
 ### Ubuntu / Debian版を直接ダウンロード
 

@@ -21,7 +21,7 @@ The Windows edition supports both Intel/AMD (x64) and ARM (ARM64).
 
 ```bat
 py -m venv .venv
-.venv\Scripts\python -m pip install -r requirements-dev.txt
+.venv\Scripts\python -m pip install -r requirements-dev.txt -c constraints-release.txt
 ```
 
 ### macOS
@@ -29,7 +29,7 @@ py -m venv .venv
 ```bash
 python3 -m venv .venv
 . .venv/bin/activate
-python -m pip install -r requirements-dev.txt
+python -m pip install -r requirements-dev.txt -c constraints-release.txt
 ```
 
 ### Ubuntu
@@ -41,10 +41,20 @@ sudo apt update
 sudo apt install python3-venv libegl1 libgl1 libxkbcommon-x11-0 libxcb-cursor0 libxcb-icccm4 libxcb-keysyms1 libxcb-shape0 fonts-noto-cjk
 python3 -m venv .venv
 . .venv/bin/activate
-python -m pip install -r requirements-dev.txt
+python -m pip install -r requirements-dev.txt -c constraints-release.txt
 ```
 
 `fonts-noto-cjk` is used to display Japanese, Chinese, and Korean text.
+
+## Public and private distribution policy
+
+Windows and macOS binaries stay private and are built and verified locally. Linux deb/Snap packages are public. The [migration plan](documentation/linux-release-migration.md) groups Linux packages, SHA-256 checksums, corresponding source ZIPs and build records in one Release. Run the following offline asset check before publication; it does not upload files or create tags.
+
+```bash
+python -m tools.prepare_linux_release --version 0.3.3
+```
+
+CI uses Python 3.12. This macOS review verified dependency installation, tests and packaging with Python 3.14.6 and the constrained dependency versions. Start new environments with those constraints rather than installing unrestricted versions.
 
 ## Running from source
 

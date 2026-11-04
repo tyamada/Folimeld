@@ -21,7 +21,7 @@ Windows版はIntel/AMD（x64）とARM（ARM64）の両方に対応していま�
 
 ```bat
 py -m venv .venv
-.venv\Scripts\python -m pip install -r requirements-dev.txt
+.venv\Scripts\python -m pip install -r requirements-dev.txt -c constraints-release.txt
 ```
 
 ### macOS
@@ -29,7 +29,7 @@ py -m venv .venv
 ```bash
 python3 -m venv .venv
 . .venv/bin/activate
-python -m pip install -r requirements-dev.txt
+python -m pip install -r requirements-dev.txt -c constraints-release.txt
 ```
 
 ### Ubuntu
@@ -41,10 +41,20 @@ sudo apt update
 sudo apt install python3-venv libegl1 libgl1 libxkbcommon-x11-0 libxcb-cursor0 libxcb-icccm4 libxcb-keysyms1 libxcb-shape0 fonts-noto-cjk
 python3 -m venv .venv
 . .venv/bin/activate
-python -m pip install -r requirements-dev.txt
+python -m pip install -r requirements-dev.txt -c constraints-release.txt
 ```
 
 `fonts-noto-cjk` は日本語、中国語、韓国語の表示に使用します。
+
+## 公開・非公開の配布方針
+
+Windows・macOSのバイナリは非公開とし、ビルド・検証は手元で行います。Linuxのdeb/Snapは公開します。Linuxパッケージ、SHA-256一覧、対応ソースZIP、ビルド記録を同じReleaseにまとめる移行案は[こちら](documentation/linux-release-migration_ja.md)です。公開前の資材検査は以下で行えます。アップロードやタグ作成は行いません。
+
+```bash
+python -m tools.prepare_linux_release --version 0.3.3
+```
+
+CIの基準はPython 3.12です。今回のmacOS確認ではPython 3.14.6と制約ファイルの版で依存導入・テスト・ビルドを確認しました。新しい環境でもまず制約付きで導入してください。
 
 ## ソースから起動
 

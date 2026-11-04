@@ -30,17 +30,17 @@ Choose File → Exit to close the app, with a save prompt for unsaved changes. O
 
 ## Downloads
 
-Download release packages from [GitHub Releases](https://github.com/tyamada/Folimeld/releases).
+Only Linux packages are publicly distributed. Windows and macOS binaries remain private for local development and verification. Use the direct Linux downloads below for the currently published files. The proposed move to [GitHub Releases](https://github.com/tyamada/Folimeld/releases) is described in the [Linux release migration plan](documentation/linux-release-migration.md). No upload or migration has been performed yet.
 
 | OS | Package formats |
 | --- | --- |
-| Windows 10 / 11 (Intel/AMD (x64) / ARM (arm64)) | EXE / MSIX (Microsoft Store release in preparation) |
-| macOS | `.app` (App Store release in preparation) |
+| Windows 10 / 11 (Intel/AMD (x64) / ARM (arm64)) | EXE / MSIX (binaries private) |
+| macOS | `.app` (binaries private) |
 | Ubuntu | `.deb` / `.snap` / standalone executable (see each release for supported versions) |
 | Debian 13 | `.deb` (amd64 / arm64; basic functionality verified on WSL2) |
 
 > [!NOTE]
-> Packages for some operating systems may not be available in every release.
+> Windows and macOS verification artifacts are not added to this public repository or GitHub Releases.
 
 ### Direct downloads for Ubuntu / Debian
 
