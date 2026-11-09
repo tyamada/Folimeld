@@ -2,108 +2,33 @@
 
 [日本語](windows-store-release-plan_ja.md) | [English](windows-store-release-plan.md)
 
-## Registration type and current status
+## Folimeld 1.0.1.0 publication
 
-On 2026-10-29 (Japan time), Partner Center was checked in Chrome and Folimeld was confirmed to be registered as an EXE or MSI app, unpublished, with application setup in the draft stage. MSIX identity details have not been obtained.
+The initial Windows 11 x64 MSIX release, Submission 1, passed Microsoft Store certification and was published on 2026-11-09 (Japan time). The free listing is live in [Japan](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) and the [United States](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US) under Store product ID `9P5X2JFZRJC3`. The first release ships with support purchases disabled.
 
-MSIX has been selected as the publishing approach. On the same day, checking the availability of Folimeld under New product → MSIX or PWA app returned “This name is not available.” An inquiry was sent to the Microsoft contact provided on that screen, requesting the official procedure for moving from EXE/MSI to MSIX while retaining the existing registration and name reservation.
+The Store-delivered package passed the recorded installation and normal-use checks. Its main window was confirmed to use Per-Monitor V2. See the [Windows 11 MSIX acceptance record](windows-store-acceptance.md) for the checks performed and their scope.
 
-Microsoft replied at 21:19 on 2026-10-29 (Japan time) that the submission type cannot be changed once started and a new product registration is required. Support offered assistance releasing the name, but did not guarantee a transfer that preserves the reservation or prevents another developer from reserving it. At 07:37 on 2026-10-30 (Japan time), a reply confirmed the product name Folimeld and the intent to reserve it for a new MSIX product under the same existing developer account, requesting clarification of the exact procedure. That follow-up is now awaiting a response. The existing product has not been renamed/deleted, the name has not been released, no new name reservation has been created, and actual identity details remain unavailable.
+The cause of the earlier local WACK DPI warning remains unconfirmed. The Store submission passed overall with `runFullTrust` declared. The individual Store certification outcomes for TEST92 (DPI awareness), TEST88 (blocked executables) and `runFullTrust` remain unconfirmed.
 
-EXE/MSI submissions require an offline installer with silent installation, code signing that chains to a trusted CA, and a versioned HTTPS URL whose binary remains unchanged after submission. Updates for existing users are also the application's responsibility. The standalone executable produced by `build_exe.bat` is not this installer.
+## Registration and update checklist
 
-MSIX submissions can use Store signing, hosting, and update delivery. Obtain the following values for the MSIX registration before filling in the Store configuration. Do not substitute the EXE/MSI application's application ID.
+Use the published MSIX product registration for updates. Verify these values in Partner Center before configuring a build.
 
 | Partner Center field | Store configuration key |
-|---|---|
+| --- | --- |
 | `Package/Identity/Name` | `identity_name` |
 | `Package/Identity/Publisher` | `publisher` |
 | `Package/Properties/PublisherDisplayName` | `publisher_display_name` |
 
-## Partner Center findings and next steps
-
-1. On 2026-10-29 (Japan time), opened Apps and games → New product → MSIX or PWA app, entered Folimeld, and checked availability. Partner Center reported “This name is not available.”
-2. On the same day, sent an English inquiry to Microsoft through Outlook and verified it in Sent Items. It asked whether the existing registration could be converted to MSIX, how to transfer or associate the reserved name if a separate MSIX registration was required, and whether Microsoft could assist while preserving the existing registration and name reservation.
-3. The 21:19 reply confirmed that changing the submission type is unavailable and a new product registration is required. Microsoft requested confirmation of the product name and offered help releasing it. The reply also described a general rename/release/re-reservation approach and reference steps for deleting an unpublished EXE/MSI draft when deletion is unavailable. Applicability to the current draft is unverified; no rename, resubmission, certification cancellation or deletion has been performed.
-4. At 07:37 on 2026-10-30, sent the user-reviewed reply to `reportap@microsoft.com`, verifying recipient, body and timestamp in Sent Items. It explicitly specifies the same existing developer account and asks the three questions below. It requests that the name not be released until the procedure is confirmed and agreed; this reply is not authorization to release it.
-5. Review the follow-up response for the sequence, responsibilities and risks of securing the name, and agree on the procedure with the user before registration actions. Retain the existing product/name reservation meanwhile. Once the new MSIX registration and name reservation are ready, obtain the three identity values above from Product management → Product Identity.
-
-The three follow-up questions:
-
-- Can the name be transferred/associated directly with a new MSIX product under the same developer account without making it available to other developers?
-- If release/re-reservation is necessary, what is the exact sequence, including when to create the new MSIX product, which steps Microsoft/developer handle, and how to avoid another developer reserving it?
-- Must the unpublished EXE/MSI draft be renamed/deleted, and if so at what point?
-
-Deleting a name reservation makes the name available for other developers to reserve, so do not assume deletion is a safe transfer mechanism even for an unpublished product. The existing registration and name reservation remain intact.
-
-Inquiry record:
-
-- Sent: 2026-10-29 (Japan time)
-- From: takumayamada22@outlook.jp (Outlook)
-- To: reportapp@microsoft.com
-- Subject: Guidance requested: Moving Folimeld from EXE/MSI to MSIX while retaining its reserved name
-- Initial inquiry status: Response received; changing submission type is unavailable and a new product registration is required
-- Microsoft response: Received from Microsoft Store Report App Team at 21:19 on 2026-10-29 (Japan time)
-- Follow-up reply: Sent to `reportap@microsoft.com` at 07:37 on 2026-10-30 (Japan time)
-- Follow-up subject: Re: Guidance requested: Moving Folimeld from EXE/MSI to MSIX while retaining its reserved name
-- Current status: Awaiting clarification of the same-account name-reservation procedure, responsibilities and risks. Name release is neither authorized nor performed
-
-The initial recipient was `reportapp@microsoft.com`; the responding address and follow-up recipient are `reportap@microsoft.com`. These distinct addresses reflect the actual messages.
-
-## Sequence and completion criteria
-
-| Order | Work | Status / completion criteria |
-|---|---|---|
-| 1 | Registration type, name, and identity | Microsoft confirmed that changing submission type is unavailable and a new product registration is required. Follow-up sent on 2026-10-30 about securing Folimeld under the same developer account; response pending. Existing registration/name retained; release neither authorized nor performed; actual identity unavailable |
-| 2 | Submission build and static checks | Development/Store modes and version, configuration, and generated-MSIX checks implemented; no build with actual Store identity yet |
-| 3 | Privacy, support, and corresponding source | Drafted Japanese/English privacy policies and implemented encryption for history/save input and intermediate image PDFs. Publisher, support channel, public URLs, dependency sources, OS-shutdown residues and deletion tests for actual MSIX remain outstanding |
-| 4 | Windows 11 x64 acceptance tests | Verify clean installation, PDF association, editing, saving, child processes, updates, and removal |
-| 5 | WACK, listing materials, and limited distribution | Prepare WACK results, Japanese/English descriptions and screenshots, age ratings, and runFullTrust justification; retest the Store-delivered app |
-| 6 | Supporter purchases and ARM64 | Test purchases, restoration, refunds, failures with a Store license, and physical ARM64 hardware; do not treat untested configurations as released |
-| 7 | General availability and maintenance | Confirm release decisions, support handling, and delivery of corrective updates |
-
-## Work while awaiting clarification of name reservation
-
-On 2026-10-29, Japanese/English [listing drafts](windows-store-listing.md), [screenshot plans](windows-store-screenshot-plan.md), a [publication decision register](windows-store-publication-decisions.md) and [first-test instructions for the Dynabook](windows11-test-day.md) were prepared. Initial tests ran on 2026-10-30 on a Dynabook B65/DN (Core i5-8250U, Windows 11 Pro 25H2, 26200.9818, x64). Store screenshot capture and publication decisions remain pending.
-
-The separate test PC used the [signed test-bundle preparation, installation and cleanup instructions](windows-store-test-bundle.md). The candidate was `Folimeld.Dev` 0.3.3.0 x64, with MSIX SHA-256 `b3025711dbb3bdfdee9728ef6790c801232570949ddc76302a658e34a4a44646`. Review of the test PC chat “Microsoft Storeテスト環境を設定” confirmed installation and launch, PDF opening with a Japanese path, rotation, movement, Undo/Redo, Save As and reopening, reopening after a password change, language persistence, license display, Explorer Open with, and completion of Inspect and Remove. Password changes and elevated operations include user-reported success. Cleanup state is `removed`, and the newly added certificate trust is absent. Direct post-removal package enumeration remains unverified because of execution-environment access restrictions. No trust registration or installation was performed on the build PC.
-
-Image import verified four-page generation, sorting and exclusion, A4 selection, and cancellation from the setup dialog. Artifacts were collected onto the development PC on 2026-10-30, and all 31 checks independent of the application workflow passed. These covered edited page order, rotation and rendering, bookmark and internal-link targets and link geometry, annotations, canonical form references and values, attachment contents and metadata. The changed-password PDF accepts the new password and rejects the old one. All four image pages are A4-equivalent (within 1 pt per dimension); pixel comparisons matched EXIF correction, transparency composited onto white, and both TIFF frames. Inspection used PyMuPDF, the same PDF engine as the application, and Pillow; it does not establish compatibility with another engine. Records, hashes and a rendering review image are stored in `build/store-acceptance/dynabook-20261030/`. Received files are nested under `outputs/outputs/`. Original test-PC reports were not modified. Additional tests for items outstanding when these artifacts were first collected are described below. A clean OS installation, WACK of the DPI-corrected candidate, updates, real Store purchases, forced termination and the final Store package remain unverified.
-
-A further cross-engine review passed 20 checks, including structural parsing with pypdf 6.10.0 and rendering all ten pages with Poppler. Visual review and the separate parser checked form values, annotations, bookmark/link targets, attachments, page order, rotation and encryption. Poppler's Symbol and ArialUnicode display-font warnings also occur on the original fixture; no visible loss was observed in these samples. This does not establish arbitrary font coverage or compatibility with every reader. Evidence is saved under `cross-engine-review.json` and `poppler/` in the same test directory.
-
-Additional hardware tests completed after reinstallation into a separate directory. Cancellation at 31% of a 72-image conversion (about 486 MiB of disposable inputs) retained the original 24-page document and baseline PDF hash. An invalid-image worker failure retained the document. A save failure caused by a busy destination preserved both the existing file hash and unsaved document; alternate saving and reopening succeeded. Undo/Redo restored disk-backed history of about 162 MiB. Observed history/image/save temporary inputs had the encrypted-format marker and no PDF header; this was header observation, not cryptographic verification. No residue remained in the observed temporary locations after normal exit, cancellation and failure. History-limit pruning, log rotation and application forced termination remain untested.
-
-Additional baseline records show about 16 GiB RAM, a 237 GiB SSD, 176 GiB free after installation, and a 1366×768 display. Settings were backed by package `SystemAppData/Helium/User.dat`; logs were under `LocalCache/Local/Folimeld/Folimeld/logs/folimeld.log`. The 561-byte log had one error entry and no known test passwords or fixture text strings. Settings values were not published; key-name presence was confirmed. Baseline records after elevated cleanup showed no registered app, no package storage folder, no added certificate trust, and preserved output PDFs. Additional original reports remain in `outputs/remaining-tests-20261030/` on the test PC and have not been collected onto the development PC. A reviewed summary is saved as `remaining-tests-review.json` in the development PC test directory.
-
-Remaining tests follow the [priority and prerequisite list](windows-store-acceptance.md#remaining-test-priorities-2026-10-30). WACK 10.0.28000.2957 tested development candidate 0.3.3.0. Exit code 0 was not treated as a pass: the XML overall result is `WARNING`, with 22 PASS, one optional FAIL and one required WARNING, and `PARTIAL_RUN=FALSE`. The optional blocked-executables test flagged CreateProcessW and executable-like strings; the required DPI test reported inability to process the binary and lack of DPI awareness. Original XML and display HTML are stored on the test PC under `outputs/remaining-tests-20261030/wack-0.3.3.0-20261030-204447/`. ChatGPT remains normally launched; only WACK runs from elevated PowerShell. The 0.3.3.0 registration and ownership state are retained as the update-test baseline.
-
-The actual EXE lacked DPI declarations, so `packaging/windows/Folimeld.manifest` and the Windows spec now declare Per-Monitor V2 awareness. Rebuilt version 0.3.3.2 passed six checks of its embedded manifest (PerMonitorV2, true/pm, asInvoker, long paths, existing OS declarations and Common Controls), all 22 MSIX tests, static/source-association checks, CMS signature validation and ZIP integrity. The bundle is `build/store-test-bundles/Folimeld-Windows11-x64-wack-dpi-test.zip`, SHA-256 `76d18eff4ba9b9f34d2c27c845bef079432c9edd275abd9c15425b409bf237e5`; MSIX SHA-256 is `a2256a1d1ec1f86d36bef6d515e17333386eca3f6c13daf7bcec001e80864b8a`. Its different short-term test certificate expires at 2026-11-06 12:06:48 UTC. Version 0.3.3.1 predates the DPI correction and will not be used for further tests. Transfer of the 0.3.3.2 ZIP to the test PC, matching size/SHA-256 and extraction into a new trial directory are confirmed. The update from 0.3.3.0 to 0.3.3.2 preserved four original PDFs, the default PDF application and original ownership records. However, startup failed while loading QtCore with a missing-procedure error. GUI preference retention, saving/reopening, high-DPI display and WACK retesting remain unverified. Do not reuse the old version-specific Install/Remove/WACK scripts unchanged; separate steps are being prepared on the test PC to verify versions, ownership and only certificate trust added by these trials.
-
-Startup investigation found ICU, OpenSSL and UCRT/API-set DLLs from Poppler/libheif collected through the build environment PATH. All 20 ICU functions imported by QtCore are missing from the unrelated ICU and present in Windows ICU. An independent loader probe on the development PC reproduced error 127 with the 0.3.3.2 native payload. `tools/windows_build_environment.py` now restricts the build subprocess PATH to Python, Windows and Git, and the spec rejects native binaries collected outside Python/Windows roots. Corrected version 0.3.3.3 has exactly the same native DLL names and contents as working 0.3.3.0; QtCore loads using Windows ICU. All 32 related tests, DPI declaration checks, static checks, signing, source association and ZIP integrity passed. Test-PC startup and WACK success remain unverified.
-
-The next bundle is `build/store-test-bundles/Folimeld-Windows11-x64-runtime-0.3.3.3-test.zip` (85,312,153 bytes, SHA-256 `8cac5f76fce06a3aa52da7a264eaec8d480e8230fa3678ef834644cd1d9d10cf`). MSIX SHA-256 is `f3297505bde1fe694c43af875614815e19b3ada5c4fbdad16be0cb611b3365c3`; the short-term test certificate expires at 2026-11-06 12:45:01 UTC. Transfer, update from 0.3.3.2, startup and WACK on the test PC have not run. Preserve current 0.3.3.2 and original 0.3.3.0 ownership records while preparing separate update steps. Evidence is saved in `runtime-comparison.json`, `qt-icu-diagnosis.json` and `native-loader-review.json`.
-
-For the optional executable references, application source inspection found no external-shell or listed-program launch calls. Literal strings matching the report were located inside the original EXE's compressed archive; the remaining `cmD` occurrence was in an icon resource. This locates bytes but does not fully identify which matches WACK evaluated or establish all runtime behavior. The result is recorded in `blocked-executable-review.json` without asserting a false positive. Microsoft's [Desktop Bridge test guidance](https://learn.microsoft.com/en-us/windows/uwp/debug-test-perf/windows-desktop-bridge-app-tests) classifies optional tests as informational; the findings remain recorded.
-
-The [native encryption dependency review](crypto-dependency-audit.md) verified sources for OpenSSL 4.0.3 and 32 Cargo.lock Rust dependencies, and collected OpenSSL, Rust dependency, and CFFI/libffi notices. Overall dependency review and wheel build provenance remain outstanding.
-
-The [Windows 11 MSIX acceptance checklist](windows-store-acceptance.md) defines candidate records and installation, worker, update, deletion, and certification tests. Unexecuted tests remain pending.
-
-A [privacy policy draft](privacy-policy.md) and [Japanese version](privacy-policy_ja.md) have been prepared. They describe the current implementation and must not yet be used as the published policy URL.
-
-- Spilled history, save input, and intermediate image PDFs now use AES-256-GCM. Automated tests check rejection of tampering, wrong keys, and short writes; preservation of documents after encryption failures; cleanup of staged input after worker failures; and absence of plaintext/key files in an encrypted container left after abrupt process exit. This does not establish reliable erasure on OS shutdown or automatic recovery of residual files.
-- Verify actual settings/log locations and manual deletion/uninstallation behavior with the submission candidate MSIX. Existing unit tests for normal saving/image conversion and worker failures do not establish deletion under all abnormal exits.
-- Confirm the official publisher, support contact, support information retention/handling, and effective date. Do not automatically adopt the migration inquiry's sender address as the public support contact.
-- Compare the final package with the documents, resolve outstanding items, and prepare a public policy URL. The existence of a privacy document alone does not establish Store policy compliance.
-
-Reviewed implementations: settings/Store queries in `folimeld/app.py` and `folimeld/store_support.py`; history in `folimeld/model.py` and `folimeld/history.py`; save/image conversion temporary data in `folimeld/pdf_save.py` and `folimeld/image_import_dialog.py`; encrypted containers in `folimeld/temporary_data.py`; logs in `folimeld/diagnostics.py`. Pre-publication dependency-source work must also verify corresponding sources/notices for actual `cryptography`/CFFI binaries and bundled components such as OpenSSL.
+1. Verify the package version, signing and source association for the candidate.
+2. Review the [listing](windows-store-listing.md), [screenshots](windows-store-screenshot-plan.md) and the [published privacy policy](https://tyamada.github.io/Folimeld/privacy/).
+3. Record the certification result and confirm publication in the intended markets. Verify the Store-delivered version and affected workflows separately from development builds.
 
 ## Preparing a Store build
 
 Copy `packaging/msix/store-config.example.json` to `build/store-config.json` and enter verified MSIX registration values in the first three fields. The blanks are intentional: the unchanged example fails Store validation. Do not put credentials or private keys in this file.
 
-`package_version` is the four-component MSIX version, managed separately from the application's display version, `__version__` in `folimeld/__init__.py`. Store mode requires a first component of at least 1, a final component of 0, and components no greater than 65535. The example `1.0.0.0` has not been submitted. An update must be greater than the previous MSIX version with the same Identity/Publisher. Do not pass a previous EXE/MSI product or development MSIX as `-PreviousPackage`.
+`package_version` is the four-component MSIX version, managed separately from the application's display version, `__version__` in `folimeld/__init__.py`. Store mode requires a first component of at least 1, a final component of 0, and components no greater than 65535. An update must be greater than the previous MSIX version with the same Identity/Publisher. Do not pass a previous EXE/MSI product or development MSIX as `-PreviousPackage`.
 
 The Store release targets Windows 11. The example uses `10.0.22000.0` for `minimum_windows_version` and `10.0.26100.0` for `maximum_tested_windows_version`. Example settings are not evidence of hardware testing; update them to reflect supported operating systems and actual test results. Development mode retains the previous default minimum OS.
 
@@ -124,19 +49,10 @@ Configuration and manifest files are written to `build/msix-preflight/<channel>/
 ## Official references
 
 - [Distribution path comparison](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/choose-distribution-path)
-- [EXE/MSI package requirements](https://learn.microsoft.com/en-us/windows/apps/publish/publish-your-app/msi/app-package-requirements)
-- [EXE/MSI updates](https://learn.microsoft.com/en-us/windows/apps/publish/publish-your-app/msi/publish-update-to-your-app-on-store)
 - [MSIX package requirements and versioning](https://learn.microsoft.com/en-us/windows/apps/publish/publish-your-app/msix/app-package-requirements)
 - [Store policies](https://learn.microsoft.com/en-us/windows/apps/publish/store-policies)
 - [MSIX name reservations](https://learn.microsoft.com/en-us/windows/apps/publish/publish-your-app/msix/reserve-your-apps-name)
-- [EXE/MSI name reservation management](https://learn.microsoft.com/en-us/windows/apps/publish/partner-center/msi/manage-app-name-reservations)
 
 ## Diagnostic follow-up (updated 2026-11-04)
 
-This update supersedes the pending states in the dated October 30 records above. Version 0.3.3.3 passed update, startup, PDF saving/reopening, Explorer Open with and clean reinstallation on the test PC. Original documents, the default PDF app and previous evidence were retained. Versions 0.3.3.4 (one-file) and 0.3.3.5 (one-folder), both with UPX disabled, passed normal operation and worker checks. Both produced the same WACK results: 22 PASS, optional TEST88 FAIL and required TEST92 WARNING. Exit code 0 is not treated as a pass. The executable's DPI declarations and runtime awareness value 2 coexist with the warning; that value alone does not prove Per-Monitor V2 behavior. The 150%/200% display checks remain unperformed.
-
-An independent 0.3.3.13 r2 Hosted Probe comparison used the same external host, installed target path and DACL. Matching package context succeeded where a control context received access denied for execute access and CreateActCtx, and E_FAIL for manifest-dependent queries; identical-hash copies succeeded in both contexts and both measurement orders agreed. This supports an access-context hypothesis, but package graphs and uncollected token claims may differ. It does not trace the original WACK token or failed open and does not establish a WACK defect. No later WACK run or Hosted API comparison was performed as part of the subsequent module observation or support-document preparation.
-
-For TEST88, the original 0.3.3.5 XML contains 40 messages mapped to 16 files: 10 API-reference messages and 30 short-string messages. The product's required multiprocessing spawn path is supported by bundled-code/source correspondence and worker observations. Qt launch references and OpenGL's conditional graph-visualization path are static findings, not proof of execution. Five main-process snapshots in a later 0.3.3.13 r2 trial listed Qt6Core, Qt6Gui, Qt6Widgets and qwindows; opengl32sw and qdirect2d were absent from those snapshots. All 16 original target-file hashes match the later payload records, but the later OS record differs from the original WACK environment. Point-in-time absence does not prove lifetime absence, worker module state or absence of external launches. WACK match offsets and complete detection rules remain unknown; no false-positive or Store-pass claim is made.
-
-The trial's owned packages, added certificate trust and package storage were removed, with protected-file hash/ACL checks recorded separately. Raw logs, diagnostic archives and machine-specific records remain outside the public repository. Product DACLs, detection strings and necessary spawn workers were not changed to bypass the findings. Microsoft support routing and the separate reserved-name migration inquiry remain awaiting follow-up; the combined DPI/TEST88 explanation is an unsent draft as of this update. Store-delivered package validation, purchases, ARM64 and the other unfinished acceptance items remain separate work.
+The earlier local WACK checks on development builds 0.3.3.4 and 0.3.3.5 reported optional TEST88 FAIL and required TEST92 WARNING. The historical diagnostics identified an access-context hypothesis for the DPI warning. They did not directly trace the original WACK process or establish the cause. The TEST88 analysis identified API references and string matches. Those findings do not establish that a flagged external executable was launched during normal use.

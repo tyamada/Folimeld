@@ -36,25 +36,34 @@ Run on a clean Windows 11 x64 test environment without Python installed. Use cop
 
 Certificate trust changes, installation and WACK belong in the test environment. ARM64 requires its own native build and hardware results. Repeat affected tests after fixes, and retest the Store-delivered package before general availability.
 
-## Remaining test priorities (2026-10-30)
+## Historical development checks
 
-Initial hardware tests and inspection of returned PDFs are recorded in the [release plan](windows-store-release-plan.md). Twenty additional cross-engine checks passed. Continue in this order:
-
-| Priority | Test | Prerequisites and current state |
-| --- | --- | --- |
-| 1 | Active-conversion cancellation and document/destination protection on failure | Completed: cancellation at 31% of 72-image conversion retained the document. Invalid-image failure and a busy save destination also preserved the document and existing destination |
-| 2 | Disk-backed history, temporary data, settings and logs | Verified disk-backed Undo/Redo, encrypted headers, actual storage paths and cleanup after normal exit, failure and removal. History-limit pruning, log rotation and app forced termination remain untested; do not force an OS shutdown |
-| 3 | WACK precertification | WACK 10.0.28000.2957 tested 0.3.3.0: 22 PASS, one optional FAIL, one required DPI WARNING; overall WARNING. 0.3.3.2 failed to launch QtCore, so WACK was deferred. Verify startup first with DLL-isolated version 0.3.3.3, then repeat WACK and high-DPI checks. Distinguish development-candidate results from final Store-candidate results |
-| 4 | Update, reinstallation and removal | The 0.3.3.0→0.3.3.2 update preserved originals and the default app, but startup failure prevented GUI settings verification. DLL-isolated version 0.3.3.3 is prepared; transfer/update/startup checks remain pending. Preserve previous ownership records. Finalize trust handling for the different test certificate and cleanup targeting the updated version before execution |
-| 5 | Final Store package, purchases/restoration/refunds, ARM64 | Run after actual Identity, Store candidate, purchase configuration and target hardware are established |
-
-Preserve the previous test directory and original reports; use a separate directory and state file for the next run. Baseline records established about 16 GiB RAM, a 237 GiB SSD, 176 GiB free and a 1366×768 display. A clean OS installation remains unverified. Distinguish user reports of manual certificate/elevated operations from directly obtained state evidence.
+Earlier development builds were checked for conversion cancellation, write failures, disk-backed history and local WACK behavior. Keep their results separate from the Store-delivered checks below. The general test matrix remains a checklist for future candidates.
 
 ## References
 
 - [Microsoft: run, debug and test an MSIX package](https://learn.microsoft.com/en-us/windows/msix/desktop/desktop-to-uwp-debug)
 - [Microsoft: Windows App Certification Kit](https://learn.microsoft.com/en-us/windows/uwp/debug-test-perf/windows-app-certification-kit)
 
-## Current diagnostic status (2026-11-04)
+## Store-delivered 1.0.1.0 acceptance record (2026-11-09)
 
-The October 30 priorities above are historical. See the [diagnostic follow-up](windows-store-release-plan.md#diagnostic-follow-up-updated-2026-11-04) for completed 0.3.3.3–0.3.3.13 trials and the unresolved DPI/TEST88 findings. WACK remains WARNING; no rerun or Hosted API comparison is authorized by this document. High-DPI 150%/200%, the final Store package and other outstanding acceptance work remain unverified.
+Submission 1 passed Microsoft Store certification. Folimeld 1.0.1.0 was published in Japan and the United States on 2026-11-09 (Japan time). The test PC received Store-signed `TakumaYamada.Folimeld` 1.0.1.0 x64.
+
+| Check | Result |
+| --- | --- |
+| Store installation, startup and normal exit | Passed |
+| PDF display and Save As | Passed |
+| Convert two images to PDF and save | Passed |
+| PDF save, image conversion and image PDF save workers | Startup and exit confirmed for all three |
+| Support purchases | Menu absent in the initial release |
+| Main-window DPI context | Per-Monitor V2 confirmed |
+
+The DPI check used `GetWindowDpiAwarenessContext` on the main window and compared the result using `AreDpiAwarenessContextsEqual`. The Per-Monitor V2 comparison returned true and the Per-Monitor V1 comparison returned false. This records the main window’s runtime context. Visual scaling checks at 150% and 200% remain unperformed.
+
+### Open certification questions
+
+| Item | Status |
+| --- | --- |
+| Earlier local WACK DPI warning | Cause unconfirmed. See the [historical diagnostic summary](windows-store-release-plan.md#diagnostic-follow-up-updated-2026-11-04). |
+| TEST92 and TEST88 | Individual Store certification outcomes unconfirmed. |
+| `runFullTrust` | Declared in the submission that passed overall. A separate capability decision or review comment remains unconfirmed. |
