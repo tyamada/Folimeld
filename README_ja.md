@@ -41,6 +41,7 @@ OpenBSD 8.0 / amd64では、1 vCPU・16 GiBのVirtualBox VMでソース実行を
 | Ubuntu | `.deb` / `.snap` / 単体実行ファイル（対応バージョンは各リリースを参照） |
 | Debian 13 | `.deb`（amd64 / arm64、WSL2で基本動作確認済み） |
 | FreeBSD 15.1 / amd64 | ネイティブ `.pkg` と対応ソース（試験配布） |
+| NetBSD 11.1 / amd64 | ネイティブ `.tgz` と対応ソース（公開準備中） |
 
 > [!NOTE]
 > Windows・macOSの検証用成果物は、公開リポジトリやGitHub Releasesへ追加しません。
@@ -100,6 +101,19 @@ pkg add ./folimeld-0.3.3_1.pkg
 ```
 
 一般ユーザーで `folimeld` または `folimeld /path/to/file.pdf` を実行します。削除はrootで `pkg delete folimeld`。フォーム読み込みの不具合を修正したPyMuPDF/MuPDF 1.28.2をアプリ専用領域に同梱し、システムのPyMuPDFは置き換えません。別のFreeBSD版・CPUは未検証です。[GUI検証](documentation/freebsd-gui-verification_ja.md)と[画像取り込み・保存失敗・負荷試験](documentation/freebsd-extended-verification_ja.md)の記録も参照してください。
+
+### NetBSD版のソース・パッケージ・インストール
+
+NetBSD 11.1 / amd64向けパッケージ `folimeld-0.3.3.tgz` を公開準備中です。PySide6/shiboken6とPyMuPDF/MuPDFをアプリ専用領域に同梱し、Python・Qtなどは公式パッケージに依存します。[インストール・ソースビルド手順](documentation/netbsd-install_ja.md)を参照してください。
+
+パッケージ入手後、X11デスクトップを構成したNetBSDでrootとして実行します。
+
+```sh
+export PKG_PATH=https://cdn.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/11.0_2026Q3/All
+/usr/pkg/sbin/pkg_add ./folimeld-0.3.3.tgz
+```
+
+一般ユーザーで `/usr/pkg/bin/folimeld` または `/usr/pkg/bin/folimeld /path/to/file.pdf` を実行します。削除はrootで `/usr/pkg/sbin/pkg_delete folimeld`。他のNetBSD版・CPUは未検証です。
 
 ## 基本的な使い方
 

@@ -1,0 +1,5 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+{"passed": true, "pymupdf": "1.28.2", "module": "/usr/pkg/share/folimeld/vendor/pymupdf/__init__.py", "form_save": true, "undo_redo": true, "image_worker_pages": 3, "save_worker": true}
