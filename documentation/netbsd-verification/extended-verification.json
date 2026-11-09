@@ -1,0 +1,139 @@
+{
+  "passed": true,
+  "results": {
+    "gui-forms.pdf": {
+      "passed": true,
+      "encrypted": false,
+      "rotation": 90,
+      "fields": [
+        {
+          "name": "text",
+          "type": 7,
+          "value": "NetBSD preserved value",
+          "choices": null,
+          "rect": [
+            50.0,
+            50.0,
+            240.0,
+            80.0
+          ]
+        },
+        {
+          "name": "check",
+          "type": 2,
+          "value": "Yes",
+          "choices": null,
+          "rect": [
+            50.0,
+            110.0,
+            240.0,
+            140.0
+          ]
+        },
+        {
+          "name": "combo",
+          "type": 3,
+          "value": "Alpha",
+          "choices": [
+            "Alpha",
+            "Beta"
+          ],
+          "rect": [
+            50.0,
+            170.0,
+            240.0,
+            200.0
+          ]
+        },
+        {
+          "name": "empty_combo",
+          "type": 3,
+          "value": "",
+          "choices": null,
+          "rect": [
+            50.0,
+            230.0,
+            240.0,
+            260.0
+          ]
+        }
+      ],
+      "sha256": "9cea259fb42a617c636375c0a81d07fefb75cf2d34734dfc0a55a091be4bb372"
+    },
+    "gui-encrypted.pdf": {
+      "passed": true,
+      "encrypted": true,
+      "rotation": 90,
+      "fields": [
+        {
+          "name": "text",
+          "type": 7,
+          "value": "NetBSD preserved value",
+          "choices": null,
+          "rect": [
+            50.0,
+            50.0,
+            240.0,
+            80.0
+          ]
+        },
+        {
+          "name": "check",
+          "type": 2,
+          "value": "Yes",
+          "choices": null,
+          "rect": [
+            50.0,
+            110.0,
+            240.0,
+            140.0
+          ]
+        },
+        {
+          "name": "combo",
+          "type": 3,
+          "value": "Alpha",
+          "choices": [
+            "Alpha",
+            "Beta"
+          ],
+          "rect": [
+            50.0,
+            170.0,
+            240.0,
+            200.0
+          ]
+        },
+        {
+          "name": "empty_combo",
+          "type": 3,
+          "value": "",
+          "choices": null,
+          "rect": [
+            50.0,
+            230.0,
+            240.0,
+            260.0
+          ]
+        }
+      ],
+      "sha256": "6bae39d37a5779fc28d01f9c8cd76c8eb24f00aa5f03370bf2cb7f0081986dce"
+    },
+    "gui-images.pdf": {
+      "passed": true,
+      "images": [
+        {
+          "page": 1,
+          "source": "image 1.png",
+          "matched": "decoded RGB pixels"
+        },
+        {
+          "page": 2,
+          "source": "image 2.jpg",
+          "matched": "decoded RGB pixels"
+        }
+      ],
+      "sha256": "698000c878e5332e3bd719edc1e77a19af87892273d1c12145bc4031ede2902e"
+    }
+  }
+}

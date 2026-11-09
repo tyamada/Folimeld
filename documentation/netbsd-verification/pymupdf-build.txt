@@ -1,0 +1,13 @@
+Processing ./pymupdf-1.28.2
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: pymupdf
+  Building wheel for pymupdf (pyproject.toml): started
+  Building wheel for pymupdf (pyproject.toml): finished with status 'done'
+  Created wheel for pymupdf: filename=pymupdf-1.28.2-cp312-abi3-netbsd_11_1_amd64.whl size=25297007 sha256=97559195934646c03579a9fe00eaa22a18104389b6500e797529c66329e64012
+  Stored in directory: /home/folimeld/.cache/pip/wheels/ca/cb/3e/e11e1109a0da08212d257922fb3daa306f1c28bd4a3e04e0e1
+Successfully built pymupdf
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: /home/folimeld/Folimeld/.venv-netbsd/bin/python -m pip install --upgrade pip
+PYMUPDF_BUILD_OK

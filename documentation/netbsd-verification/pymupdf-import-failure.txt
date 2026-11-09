@@ -1,0 +1,284 @@
+FFFFFFFF                                                                 [100%]
+=================================== FAILURES ===================================
+____________ test_widget_reading_survives_native_boundary[text-no] _____________
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-0/test_widget_reading_survives_n0')
+kind = 'text', reopen = 'no'
+
+    @pytest.mark.parametrize('reopen', ['no', 'yes'])
+    @pytest.mark.parametrize('kind', ['text', 'checkbox', 'combo', 'empty_combo'])
+    def test_widget_reading_survives_native_boundary(tmp_path, kind, reopen):
+        result = subprocess.run(
+            [sys.executable, '-c', FORM_READER, kind, reopen],
+            cwd=tmp_path,
+            env={**os.environ, 'PYTHONFAULTHANDLER': '1'},
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+>       assert result.returncode == 0, (
+            f'Widget reader exited with {result.returncode}:\n'
+            f'{result.stdout}\n{result.stderr}'
+        )
+E       AssertionError: Widget reader exited with 1:
+E
+E         Traceback (most recent call last):
+E           File "<string>", line 12, in <module>
+E           File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py", line 33, in <module>
+E             from . import extra
+E           File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/extra.py", line 10, in <module>
+E             from . import _extra
+E         ImportError: cannot import name '_extra' from partially initialized module 'pymupdf' (most likely due to a circular import) (/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py)
+E
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/home/folimeld/Folimeld/.venv-netbsd/bin/python', '-c', "\nimport json\nimport sys\n\ntry:\n  ...y due to a circular import) (/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py)\n').returncode
+
+tests/test_pdf_forms.py:68: AssertionError
+____________ test_widget_reading_survives_native_boundary[text-yes] ____________
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-0/test_widget_reading_survives_n1')
+kind = 'text', reopen = 'yes'
+
+    @pytest.mark.parametrize('reopen', ['no', 'yes'])
+    @pytest.mark.parametrize('kind', ['text', 'checkbox', 'combo', 'empty_combo'])
+    def test_widget_reading_survives_native_boundary(tmp_path, kind, reopen):
+        result = subprocess.run(
+            [sys.executable, '-c', FORM_READER, kind, reopen],
+            cwd=tmp_path,
+            env={**os.environ, 'PYTHONFAULTHANDLER': '1'},
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+>       assert result.returncode == 0, (
+            f'Widget reader exited with {result.returncode}:\n'
+            f'{result.stdout}\n{result.stderr}'
+        )
+E       AssertionError: Widget reader exited with 1:
+E
+E         Traceback (most recent call last):
+E           File "<string>", line 12, in <module>
+E           File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py", line 33, in <module>
+E             from . import extra
+E           File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/extra.py", line 10, in <module>
+E             from . import _extra
+E         ImportError: cannot import name '_extra' from partially initialized module 'pymupdf' (most likely due to a circular import) (/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py)
+E
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/home/folimeld/Folimeld/.venv-netbsd/bin/python', '-c', "\nimport json\nimport sys\n\ntry:\n  ...y due to a circular import) (/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py)\n').returncode
+
+tests/test_pdf_forms.py:68: AssertionError
+__________ test_widget_reading_survives_native_boundary[checkbox-no] ___________
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-0/test_widget_reading_survives_n2')
+kind = 'checkbox', reopen = 'no'
+
+    @pytest.mark.parametrize('reopen', ['no', 'yes'])
+    @pytest.mark.parametrize('kind', ['text', 'checkbox', 'combo', 'empty_combo'])
+    def test_widget_reading_survives_native_boundary(tmp_path, kind, reopen):
+        result = subprocess.run(
+            [sys.executable, '-c', FORM_READER, kind, reopen],
+            cwd=tmp_path,
+            env={**os.environ, 'PYTHONFAULTHANDLER': '1'},
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+>       assert result.returncode == 0, (
+            f'Widget reader exited with {result.returncode}:\n'
+            f'{result.stdout}\n{result.stderr}'
+        )
+E       AssertionError: Widget reader exited with 1:
+E
+E         Traceback (most recent call last):
+E           File "<string>", line 12, in <module>
+E           File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py", line 33, in <module>
+E             from . import extra
+E           File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/extra.py", line 10, in <module>
+E             from . import _extra
+E         ImportError: cannot import name '_extra' from partially initialized module 'pymupdf' (most likely due to a circular import) (/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py)
+E
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/home/folimeld/Folimeld/.venv-netbsd/bin/python', '-c', "\nimport json\nimport sys\n\ntry:\n  ...y due to a circular import) (/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py)\n').returncode
+
+tests/test_pdf_forms.py:68: AssertionError
+__________ test_widget_reading_survives_native_boundary[checkbox-yes] __________
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-0/test_widget_reading_survives_n3')
+kind = 'checkbox', reopen = 'yes'
+
+    @pytest.mark.parametrize('reopen', ['no', 'yes'])
+    @pytest.mark.parametrize('kind', ['text', 'checkbox', 'combo', 'empty_combo'])
+    def test_widget_reading_survives_native_boundary(tmp_path, kind, reopen):
+        result = subprocess.run(
+            [sys.executable, '-c', FORM_READER, kind, reopen],
+            cwd=tmp_path,
+            env={**os.environ, 'PYTHONFAULTHANDLER': '1'},
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+>       assert result.returncode == 0, (
+            f'Widget reader exited with {result.returncode}:\n'
+            f'{result.stdout}\n{result.stderr}'
+        )
+E       AssertionError: Widget reader exited with 1:
+E
+E         Traceback (most recent call last):
+E           File "<string>", line 12, in <module>
+E           File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py", line 33, in <module>
+E             from . import extra
+E           File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/extra.py", line 10, in <module>
+E             from . import _extra
+E         ImportError: cannot import name '_extra' from partially initialized module 'pymupdf' (most likely due to a circular import) (/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py)
+E
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/home/folimeld/Folimeld/.venv-netbsd/bin/python', '-c', "\nimport json\nimport sys\n\ntry:\n  ...y due to a circular import) (/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py)\n').returncode
+
+tests/test_pdf_forms.py:68: AssertionError
+____________ test_widget_reading_survives_native_boundary[combo-no] ____________
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-0/test_widget_reading_survives_n4')
+kind = 'combo', reopen = 'no'
+
+    @pytest.mark.parametrize('reopen', ['no', 'yes'])
+    @pytest.mark.parametrize('kind', ['text', 'checkbox', 'combo', 'empty_combo'])
+    def test_widget_reading_survives_native_boundary(tmp_path, kind, reopen):
+        result = subprocess.run(
+            [sys.executable, '-c', FORM_READER, kind, reopen],
+            cwd=tmp_path,
+            env={**os.environ, 'PYTHONFAULTHANDLER': '1'},
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+>       assert result.returncode == 0, (
+            f'Widget reader exited with {result.returncode}:\n'
+            f'{result.stdout}\n{result.stderr}'
+        )
+E       AssertionError: Widget reader exited with 1:
+E
+E         Traceback (most recent call last):
+E           File "<string>", line 12, in <module>
+E           File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py", line 33, in <module>
+E             from . import extra
+E           File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/extra.py", line 10, in <module>
+E             from . import _extra
+E         ImportError: cannot import name '_extra' from partially initialized module 'pymupdf' (most likely due to a circular import) (/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py)
+E
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/home/folimeld/Folimeld/.venv-netbsd/bin/python', '-c', "\nimport json\nimport sys\n\ntry:\n  ...y due to a circular import) (/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py)\n').returncode
+
+tests/test_pdf_forms.py:68: AssertionError
+___________ test_widget_reading_survives_native_boundary[combo-yes] ____________
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-0/test_widget_reading_survives_n5')
+kind = 'combo', reopen = 'yes'
+
+    @pytest.mark.parametrize('reopen', ['no', 'yes'])
+    @pytest.mark.parametrize('kind', ['text', 'checkbox', 'combo', 'empty_combo'])
+    def test_widget_reading_survives_native_boundary(tmp_path, kind, reopen):
+        result = subprocess.run(
+            [sys.executable, '-c', FORM_READER, kind, reopen],
+            cwd=tmp_path,
+            env={**os.environ, 'PYTHONFAULTHANDLER': '1'},
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+>       assert result.returncode == 0, (
+            f'Widget reader exited with {result.returncode}:\n'
+            f'{result.stdout}\n{result.stderr}'
+        )
+E       AssertionError: Widget reader exited with 1:
+E
+E         Traceback (most recent call last):
+E           File "<string>", line 12, in <module>
+E           File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py", line 33, in <module>
+E             from . import extra
+E           File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/extra.py", line 10, in <module>
+E             from . import _extra
+E         ImportError: cannot import name '_extra' from partially initialized module 'pymupdf' (most likely due to a circular import) (/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py)
+E
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/home/folimeld/Folimeld/.venv-netbsd/bin/python', '-c', "\nimport json\nimport sys\n\ntry:\n  ...y due to a circular import) (/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py)\n').returncode
+
+tests/test_pdf_forms.py:68: AssertionError
+_________ test_widget_reading_survives_native_boundary[empty_combo-no] _________
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-0/test_widget_reading_survives_n6')
+kind = 'empty_combo', reopen = 'no'
+
+    @pytest.mark.parametrize('reopen', ['no', 'yes'])
+    @pytest.mark.parametrize('kind', ['text', 'checkbox', 'combo', 'empty_combo'])
+    def test_widget_reading_survives_native_boundary(tmp_path, kind, reopen):
+        result = subprocess.run(
+            [sys.executable, '-c', FORM_READER, kind, reopen],
+            cwd=tmp_path,
+            env={**os.environ, 'PYTHONFAULTHANDLER': '1'},
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+>       assert result.returncode == 0, (
+            f'Widget reader exited with {result.returncode}:\n'
+            f'{result.stdout}\n{result.stderr}'
+        )
+E       AssertionError: Widget reader exited with 1:
+E
+E         Traceback (most recent call last):
+E           File "<string>", line 12, in <module>
+E           File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py", line 33, in <module>
+E             from . import extra
+E           File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/extra.py", line 10, in <module>
+E             from . import _extra
+E         ImportError: cannot import name '_extra' from partially initialized module 'pymupdf' (most likely due to a circular import) (/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py)
+E
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/home/folimeld/Folimeld/.venv-netbsd/bin/python', '-c', "\nimport json\nimport sys\n\ntry:\n  ...y due to a circular import) (/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py)\n').returncode
+
+tests/test_pdf_forms.py:68: AssertionError
+________ test_widget_reading_survives_native_boundary[empty_combo-yes] _________
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-0/test_widget_reading_survives_n7')
+kind = 'empty_combo', reopen = 'yes'
+
+    @pytest.mark.parametrize('reopen', ['no', 'yes'])
+    @pytest.mark.parametrize('kind', ['text', 'checkbox', 'combo', 'empty_combo'])
+    def test_widget_reading_survives_native_boundary(tmp_path, kind, reopen):
+        result = subprocess.run(
+            [sys.executable, '-c', FORM_READER, kind, reopen],
+            cwd=tmp_path,
+            env={**os.environ, 'PYTHONFAULTHANDLER': '1'},
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+>       assert result.returncode == 0, (
+            f'Widget reader exited with {result.returncode}:\n'
+            f'{result.stdout}\n{result.stderr}'
+        )
+E       AssertionError: Widget reader exited with 1:
+E
+E         Traceback (most recent call last):
+E           File "<string>", line 12, in <module>
+E           File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py", line 33, in <module>
+E             from . import extra
+E           File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/extra.py", line 10, in <module>
+E             from . import _extra
+E         ImportError: cannot import name '_extra' from partially initialized module 'pymupdf' (most likely due to a circular import) (/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py)
+E
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/home/folimeld/Folimeld/.venv-netbsd/bin/python', '-c', "\nimport json\nimport sys\n\ntry:\n  ...y due to a circular import) (/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/pymupdf/__init__.py)\n').returncode
+
+tests/test_pdf_forms.py:68: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_pdf_forms.py::test_widget_reading_survives_native_boundary[text-no]
+FAILED tests/test_pdf_forms.py::test_widget_reading_survives_native_boundary[text-yes]
+FAILED tests/test_pdf_forms.py::test_widget_reading_survives_native_boundary[checkbox-no]
+FAILED tests/test_pdf_forms.py::test_widget_reading_survives_native_boundary[checkbox-yes]
+FAILED tests/test_pdf_forms.py::test_widget_reading_survives_native_boundary[combo-no]
+FAILED tests/test_pdf_forms.py::test_widget_reading_survives_native_boundary[combo-yes]
+FAILED tests/test_pdf_forms.py::test_widget_reading_survives_native_boundary[empty_combo-no]
+FAILED tests/test_pdf_forms.py::test_widget_reading_survives_native_boundary[empty_combo-yes]
+8 failed in 0.97s

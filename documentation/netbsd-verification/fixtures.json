@@ -1,0 +1,7 @@
+{
+  "source": "testdata/tameshibu_episode3_ja.pdf",
+  "source_sha256": "4abfe0f4a028bbac280c7629cd64c72e5df1faac8348695e0277dfc5a9154558",
+  "encrypted_user_password": "netbsd-user-test",
+  "encrypted_owner_password": "netbsd-owner-test",
+  "purpose": "Disposable test fixtures; passwords are not credentials."
+}

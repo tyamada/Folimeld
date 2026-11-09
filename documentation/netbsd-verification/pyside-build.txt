@@ -1,0 +1,1161 @@
+-- SHIBOKEN_IS_CROSS_BUILD: FALSE
+-- BUILD_TESTS: OFF
+-- Using Qt 6
+-- CLANG: /usr/pkg/lib/cmake/clang, /usr/pkg/lib/libclang.so.21.1.8 detected
+-- Found LibXml2: /usr/pkg/lib/libxml2.so (found suitable version "2.15.4", minimum required is "2.6.32")
+-- Could NOT find LibXslt (missing: LIBXSLT_LIBRARIES LIBXSLT_INCLUDE_DIR) (Required is at least version "1.1.19")
+CMake Warning at sources/shiboken6_generator/ApiExtractor/CMakeLists.txt:101 (message):
+  Documentation will not be built due to missing dependency (libxslt not
+  found).
+
+
+-- Found LibXml2: /usr/pkg/lib/libxml2.so (found version "2.15.4")
+-- SHIBOKEN_IS_CROSS_BUILD: FALSE
+-- BUILD_TESTS: OFF
+-- Using Qt 6
+-- Python_Development_FOUND:       FALSE
+-- Python_LIBRARIES:
+-- Python_INCLUDE_DIRS:    /usr/pkg/include/python3.12
+-- Python_Interpreter_FOUND:     TRUE
+-- Python_EXECUTABLE:      /home/folimeld/Folimeld/.venv-netbsd/bin/python
+-- Python_VERSION:         3.12.14
+Unable to determine PYTHON_EXTENSION_SUFFIX from EXT_SUFFIX: ".so"
+-- PYTHON_EXTENSION_SUFFIX:
+-- PYTHON_LIMITED_LIBRARIES:
+-- ******************************************************
+-- ** Limited API enabled
+-- ******************************************************
+-- PYTHON_EXTENSION_SUFFIX:      .abi3
+-- PYTHON_CONFIG_SUFFIX:         .abi3
+-- PYTHON_SHARED_LIBRARY_SUFFIX: .abi3
+-- NUMPY not found
+-- SHIBOKEN_PYTHON_INCLUDE_DIRS computed to value: '/usr/pkg/include/python3.12'
+-- SHIBOKEN_PYTHON_LIBRARIES computed to value: ''
+CMake Warning at sources/shiboken6/doc/CMakeLists.txt:57 (message):
+  sphinx-build - not found! doc target disabled
+
+
+-- PYSIDE_IS_CROSS_BUILD:
+-- Shiboken6Config: Using default python: .abi3
+-- libshiboken built for Release
+-- ******************************************************
+-- ** PySide6 Limited API enabled.
+-- ******************************************************
+-- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR)
+-- *** computed QT_INCLUDE_DIR as /usr/pkg/qt6/include
+CMake Warning at sources/pyside6/cmake/PySideHelpers.cmake:125 (find_package):
+  By not providing "FindQt6UiTools.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "Qt6UiTools", but CMake did not find one.
+
+  Could not find a package configuration file provided by "Qt6UiTools" with
+  any of the following names:
+
+    Qt6UiTools.cps
+    qt6uitools.cps
+    Qt6UiToolsConfig.cmake
+    qt6uitools-config.cmake
+
+  Add the installation prefix of "Qt6UiTools" to CMAKE_PREFIX_PATH or set
+  "Qt6UiTools_DIR" to a directory containing one of the above files.  If
+  "Qt6UiTools" provides a separate development package or SDK, be sure it has
+  been installed.
+Call Stack (most recent call first):
+  sources/pyside6/cmake/PySideSetup.cmake:170 (collect_optional_modules)
+  sources/pyside6/CMakeLists.txt:14 (include)
+
+
+CMake Warning at sources/pyside6/cmake/PySideHelpers.cmake:136 (find_package):
+  By not providing "FindQt6WebEngineQuick.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "Qt6WebEngineQuick", but CMake did not find one.
+
+  Could not find a package configuration file provided by "Qt6WebEngineQuick"
+  with any of the following names:
+
+    Qt6WebEngineQuick.cps
+    qt6webenginequick.cps
+    Qt6WebEngineQuickConfig.cmake
+    qt6webenginequick-config.cmake
+
+  Add the installation prefix of "Qt6WebEngineQuick" to CMAKE_PREFIX_PATH or
+  set "Qt6WebEngineQuick_DIR" to a directory containing one of the above
+  files.  If "Qt6WebEngineQuick" provides a separate development package or
+  SDK, be sure it has been installed.
+Call Stack (most recent call first):
+  sources/pyside6/cmake/PySideSetup.cmake:170 (collect_optional_modules)
+  sources/pyside6/CMakeLists.txt:14 (include)
+
+
+-- CORE_ABS_DIR:/usr/pkg/qt6/lib/cmake
+-- essential module Qt6Core found (). Looked in: /usr/pkg/qt6/lib/cmake/Qt6Core
+-- essential module Qt6Gui found (). Looked in: /usr/pkg/qt6/lib/cmake/Qt6Gui
+-- essential module Qt6Widgets found (). Looked in: /usr/pkg/qt6/lib/cmake/Qt6Widgets
+-- Could NOT find Qt6Qml (missing: Qt6Qml_DIR)
+CMake Warning at sources/pyside6/cmake/PySideSetup.cmake:215 (find_package):
+  Found package configuration file:
+
+    /usr/pkg/qt6/lib/cmake/Qt6/Qt6Config.cmake
+
+  but it set Qt6_FOUND to FALSE so package "Qt6" is considered to be NOT
+  FOUND.  Reason given by package:
+
+  Failed to find required Qt component "Qml".
+
+  Expected Config file at "/usr/pkg/qt6/lib/cmake/Qt6Qml/Qt6QmlConfig.cmake"
+  does NOT exist
+
+
+
+  Configuring with --debug-find-pkg=Qt6Qml might reveal details why the
+  package was not found.
+
+  Configuring with -DQT_DEBUG_FIND_PACKAGE=ON will print the values of some
+  of the path variables that find_package uses to try and find the package.
+
+Call Stack (most recent call first):
+  sources/pyside6/CMakeLists.txt:14 (include)
+
+
+-- Could NOT find Qt6RemoteObjects (missing: Qt6RemoteObjects_DIR)
+CMake Warning at sources/pyside6/cmake/PySideSetup.cmake:218 (find_package):
+  Found package configuration file:
+
+    /usr/pkg/qt6/lib/cmake/Qt6/Qt6Config.cmake
+
+  but it set Qt6_FOUND to FALSE so package "Qt6" is considered to be NOT
+  FOUND.  Reason given by package:
+
+  Failed to find required Qt component "RemoteObjects".
+
+  Expected Config file at
+  "/usr/pkg/qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsConfig.cmake" does
+  NOT exist
+
+
+
+  Configuring with --debug-find-pkg=Qt6RemoteObjects might reveal details why
+  the package was not found.
+
+  Configuring with -DQT_DEBUG_FIND_PACKAGE=ON will print the values of some
+  of the path variables that find_package uses to try and find the package.
+
+Call Stack (most recent call first):
+  sources/pyside6/CMakeLists.txt:14 (include)
+
+
+-- PySide will be generated using the protected hack!
+-- Could NOT find Qt6Designer (missing: Qt6Designer_DIR)
+CMake Warning at sources/pyside6/cmake/PySideSetup.cmake:277 (find_package):
+  Found package configuration file:
+
+    /usr/pkg/qt6/lib/cmake/Qt6/Qt6Config.cmake
+
+  but it set Qt6_FOUND to FALSE so package "Qt6" is considered to be NOT
+  FOUND.  Reason given by package:
+
+  Failed to find required Qt component "Designer".
+
+  Expected Config file at
+  "/usr/pkg/qt6/lib/cmake/Qt6Designer/Qt6DesignerConfig.cmake" does NOT exist
+
+
+
+  Configuring with --debug-find-pkg=Qt6Designer might reveal details why the
+  package was not found.
+
+  Configuring with -DQT_DEBUG_FIND_PACKAGE=ON will print the values of some
+  of the path variables that find_package uses to try and find the package.
+
+Call Stack (most recent call first):
+  sources/pyside6/CMakeLists.txt:14 (include)
+
+
+-- apidoc generation targets disabled due to the following reasons:
+    QT_SRC_DIR variable not set
+    sphinx-build command not found
+    graphviz not found
+    BUILD_DOCS was set to FALSE (default)
+
+-- PYSIDE_TOOLS_IS_CROSS_BUILD:
+-- Installing tool: /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/pyside_tool.py
+-- Installing tool: /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/metaobjectdump.py
+-- Installing tool: /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/project.py
+-- Installing tool: /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/qml.py
+-- Installing tool: /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/qtpy2cpp.py
+-- Installing tool: /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/deploy.py
+-- Installing tool: /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/android_deploy.py
+-- Installing tool: /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/requirements-android.txt
+-- Installing tool: /usr/pkg/qt6/libexec/uic
+-- Installing tool: /usr/pkg/qt6/libexec/rcc
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/libexec/qmltyperegistrar does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/libexec/qmltyperegistrar will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/libexec/qmlimportscanner does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/libexec/qmlimportscanner will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/libexec/qmlcachegen does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/libexec/qmlcachegen will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/lrelease does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/lrelease will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/lupdate does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/lupdate will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/qmllint does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/qmllint will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/qmlformat does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/qmlformat will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/qmlls does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/qmlls will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/qsb does not exist.  Hence, pyside6-/usr/pkg/qt6/bin/qsb
+  will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/balsam does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/balsam will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/balsamui does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/balsamui will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/svgtoqml does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/svgtoqml will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/assistant does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/assistant will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/designer does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/designer will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/linguist does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/linguist will not work
+
+
+-- Installing /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/../../tools/cross_compile_android/android_utilities.py
+-- Configuring done (3.7s)
+-- Generating done (0.8s)
+-- Build files have been written to: /home/folimeld/native-build/pyside-build
+[1/593] Linking CXX shared library sources/shiboken6/libshiboken/libshiboken6.abi3.so.6.11.2
+[2/593] Creating library symlink sources/shiboken6/libshiboken/libshiboken6.abi3.so.6.11 sources/shiboken6/libshiboken/libshiboken6.abi3.so
+[3/593] Linking CXX shared library sources/pyside6/libpyside/libpyside6.abi3.so.6.11
+[4/593] Creating library symlink sources/pyside6/libpyside/libpyside6.abi3.so
+[5/593] Running generator for 'Shiboken'...
+qt.shiboken: (shiboken) CLANG v21/0.64 targeting "x86_64-unknown-netbsd11.0"/gnu, 64bit.
+(shiboken) [1875ms] Generated class model (0).                                  [OK]
+(shiboken) [1875ms] Generated enum model (0).                                   [OK]
+(shiboken) [1875ms] Generated namespace model (0).                              [OK]
+(shiboken) [1875ms] Resolved typedefs (0).                                      [OK]
+(shiboken) [1875ms] Fixed class inheritance.                                    [OK]
+(shiboken) [1875ms] Checked for inconsistencies in class model.                 [OK]
+(shiboken) [1876ms] Checked for inconsistencies in typesystem (60).             [OK]
+(shiboken) [1877ms] Checked for inconsistencies in function modifications.      [OK]
+(shiboken) [1899ms] Wrote log files.                                            [OK]
+qt.shiboken: (shiboken) No C++ classes found!
+(shiboken) [1938ms] Ran Source generator.                                       [WARNING]
+(shiboken) [1940ms] Ran Header generator.                                       [OK]
+Done, (shiboken) 1940ms, 1 warnings
+[6/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qloggingcategory_wrapper.cpp.o
+[7/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qlockfile_wrapper.cpp.o
+[8/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmargins_wrapper.cpp.o
+[9/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmessageauthenticationcode_wrapper.cpp.o
+[10/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmessagelogcontext_wrapper.cpp.o
+[11/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmetaclassinfo_wrapper.cpp.o
+[12/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmarginsf_wrapper.cpp.o
+[13/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmetaenum_wrapper.cpp.o
+[14/593] Running generator for QtWidgets...
+qt.shiboken: (widgets) CLANG v21/0.64 targeting "x86_64-unknown-netbsd11.0"/gnu, 64bit.
+(widgets)    [14s] Generated class model (1127).                               [OK]
+(widgets)    [14s] Generated enum model (6).                                   [OK]
+(widgets)    [14s] Generated namespace model (226).                            [OK]
+(widgets)    [16s] Resolved typedefs (2752).                                   [OK]
+(widgets)    [16s] Fixed class inheritance.                                    [OK]
+(widgets)    [16s] Checked for inconsistencies in class model.                 [OK]
+(widgets)    [16s] Checked for inconsistencies in typesystem (7923).           [OK]
+(widgets)    [16s] Checked for inconsistencies in function modifications.      [OK]
+(widgets)    [16s] Wrote log files.                                            [OK]
+qt.shiboken: (widgets) Object type "QStyleOption" has default and copy constructors; consider using value-type.
+(widgets)    [18s] Ran Source generator.                                       [WARNING]
+(widgets)    [19s] Ran Header generator.                                       [OK]
+Done, (widgets) 19s, 1 warnings (186 known issues)
+[15/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmetamethod_wrapper.cpp.o
+[16/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmetaobject_wrapper.cpp.o
+[17/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmetaobject_connection_wrapper.cpp.o
+[18/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmetaproperty_wrapper.cpp.o
+[19/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmimedata_wrapper.cpp.o
+[20/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmimetype_wrapper.cpp.o
+[21/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmimedatabase_wrapper.cpp.o
+[22/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmetatype_wrapper.cpp.o
+[23/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmodelindex_wrapper.cpp.o
+[24/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmodelroledata_wrapper.cpp.o
+[25/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmodelroledataspan_wrapper.cpp.o
+[26/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmutex_wrapper.cpp.o
+[27/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qnativeipckey_wrapper.cpp.o
+[28/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qobject_wrapper.cpp.o
+[29/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qoperatingsystemversionbase_wrapper.cpp.o
+[30/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qoperatingsystemversion_wrapper.cpp.o
+[31/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qparallelanimationgroup_wrapper.cpp.o
+[32/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qpersistentmodelindex_wrapper.cpp.o
+[33/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qpauseanimation_wrapper.cpp.o
+[34/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qpluginloader_wrapper.cpp.o
+[35/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qpoint_wrapper.cpp.o
+[36/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qpropertyanimation_wrapper.cpp.o
+[37/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qpointf_wrapper.cpp.o
+[38/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qrandomgenerator_wrapper.cpp.o
+[39/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qrandomgenerator64_wrapper.cpp.o
+[40/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qreadlocker_wrapper.cpp.o
+[41/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qreadwritelock_wrapper.cpp.o
+[42/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qrect_wrapper.cpp.o
+[43/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qrecursivemutex_wrapper.cpp.o
+[44/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qrectf_wrapper.cpp.o
+[45/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qregularexpression_wrapper.cpp.o
+[46/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qregularexpressionmatchiterator_wrapper.cpp.o
+[47/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qregularexpressionmatch_wrapper.cpp.o
+[48/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qresource_wrapper.cpp.o
+[49/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qrunnable_wrapper.cpp.o
+[50/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qsemaphore_wrapper.cpp.o
+[51/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qsemaphorereleaser_wrapper.cpp.o
+[52/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qsavefile_wrapper.cpp.o
+[53/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qsequentialanimationgroup_wrapper.cpp.o
+[54/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qsignalblocker_wrapper.cpp.o
+[55/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qsignalmapper_wrapper.cpp.o
+[56/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qsettings_wrapper.cpp.o
+[57/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qsize_wrapper.cpp.o
+[58/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qsocketdescriptor_wrapper.cpp.o
+[59/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qsizef_wrapper.cpp.o
+[60/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qsocketnotifier_wrapper.cpp.o
+[61/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qsortfilterproxymodel_wrapper.cpp.o
+[62/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qstandardpaths_wrapper.cpp.o
+[63/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qstorageinfo_wrapper.cpp.o
+[64/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qstringconverter_wrapper.cpp.o
+[65/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qstringconverterbase_state_wrapper.cpp.o
+[66/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qstringconverterbase_wrapper.cpp.o
+[67/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qstringdecoder_wrapper.cpp.o
+[68/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qstringencoder_wrapper.cpp.o
+[69/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qstringlistmodel_wrapper.cpp.o
+[70/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qsysinfo_wrapper.cpp.o
+[71/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qsystemsemaphore_wrapper.cpp.o
+[72/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtcorehelper_qdirlistingiterator_wrapper.cpp.o
+[73/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtcorehelper_qgenericargumentholder_wrapper.cpp.o
+[74/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtcorehelper_qgenericreturnargumentholder_wrapper.cpp.o
+[75/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qt_wrapper.cpp.o
+[76/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtcorehelper_qiopipe_wrapper.cpp.o
+[77/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtcorehelper_qmutexlocker_wrapper.cpp.o
+[78/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtemporarydir_wrapper.cpp.o
+[79/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtemporaryfile_wrapper.cpp.o
+[80/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtextboundaryfinder_wrapper.cpp.o
+[81/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtextstream_wrapper.cpp.o
+[82/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtextstreammanipulator_wrapper.cpp.o
+[83/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qthread_wrapper.cpp.o
+[84/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qthreadpool_wrapper.cpp.o
+[85/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtime_wrapper.cpp.o
+[86/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtimeline_wrapper.cpp.o
+[87/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtimer_wrapper.cpp.o
+[88/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtimerevent_wrapper.cpp.o
+[89/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtimezone_offsetdata_wrapper.cpp.o
+[90/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtimezone_wrapper.cpp.o
+[91/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtranslator_wrapper.cpp.o
+[92/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtransposeproxymodel_wrapper.cpp.o
+[93/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qurlquery_wrapper.cpp.o
+[94/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qurl_wrapper.cpp.o
+[95/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/quuid_wrapper.cpp.o
+[96/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qvariantanimation_wrapper.cpp.o
+[97/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qwaitcondition_wrapper.cpp.o
+[98/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qversionnumber_wrapper.cpp.o
+[99/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qwritelocker_wrapper.cpp.o
+[100/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qxmlstreamattribute_wrapper.cpp.o
+[101/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qxmlstreamentitydeclaration_wrapper.cpp.o
+[102/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qxmlstreamentityresolver_wrapper.cpp.o
+[103/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qxmlstreamattributes_wrapper.cpp.o
+[104/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qxmlstreamnamespacedeclaration_wrapper.cpp.o
+[105/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qxmlstreamnotationdeclaration_wrapper.cpp.o
+[106/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qxmlstreamwriter_wrapper.cpp.o
+[107/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qxmlstreamreader_wrapper.cpp.o
+[108/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmessagelogger_wrapper.cpp.o
+[109/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qbluetoothpermission_wrapper.cpp.o
+[110/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qcalendarpermission_wrapper.cpp.o
+[111/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qcamerapermission_wrapper.cpp.o
+[112/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qcontactspermission_wrapper.cpp.o
+[113/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qlocationpermission_wrapper.cpp.o
+[114/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qmicrophonepermission_wrapper.cpp.o
+[115/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qtcore_module_wrapper.cpp.o
+/home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcore_module_wrapper.cpp: In function 'void Enum_PythonToCpp_QtMsgType(PyObject*, void*)':
+/home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcore_module_wrapper.cpp:2480:21: warning: 'QtSystemMsg' is deprecated: Use QtCriticalMsg instead. [-Wdeprecated-declarations]
+ 2480 |     case QtMsgType::QtSystemMsg:
+      |                     ^~~~~~~~~~~
+In file included from /usr/pkg/qt6/include/QtCore/qglobal.h:48,
+                 from /usr/pkg/qt6/include/QtCore/qcompare.h:13,
+                 from /usr/pkg/qt6/include/QtCore/qdebug.h:13,
+                 from /usr/pkg/qt6/include/QtCore/QDebug:1,
+                 from /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcore_module_wrapper.cpp:17:
+/usr/pkg/qt6/include/QtCore/qlogging.h:38:5: note: declared here
+   38 |     QtSystemMsg Q_DECL_ENUMERATOR_DEPRECATED_X("Use QtCriticalMsg instead.") = QtCriticalMsg
+      |     ^~~~~~~~~~~
+/home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcore_module_wrapper.cpp:2480:21: warning: 'QtSystemMsg' is deprecated: Use QtCriticalMsg instead. [-Wdeprecated-declarations]
+ 2480 |     case QtMsgType::QtSystemMsg:
+      |                     ^~~~~~~~~~~
+/usr/pkg/qt6/include/QtCore/qlogging.h:38:5: note: declared here
+   38 |     QtSystemMsg Q_DECL_ENUMERATOR_DEPRECATED_X("Use QtCriticalMsg instead.") = QtCriticalMsg
+      |     ^~~~~~~~~~~
+/home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcore_module_wrapper.cpp: In function 'void registerEnums_QtCore(PyObject*)':
+/home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcore_module_wrapper.cpp:6393:28: warning: 'QtSystemMsg' is deprecated: Use QtCriticalMsg instead. [-Wdeprecated-declarations]
+ 6393 |         uint8_t(QtMsgType::QtSystemMsg)    //  0x02  2
+      |                            ^~~~~~~~~~~
+/usr/pkg/qt6/include/QtCore/qlogging.h:38:5: note: declared here
+   38 |     QtSystemMsg Q_DECL_ENUMERATOR_DEPRECATED_X("Use QtCriticalMsg instead.") = QtCriticalMsg
+      |     ^~~~~~~~~~~
+/home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcore_module_wrapper.cpp:6393:28: warning: 'QtSystemMsg' is deprecated: Use QtCriticalMsg instead. [-Wdeprecated-declarations]
+ 6393 |         uint8_t(QtMsgType::QtSystemMsg)    //  0x02  2
+      |                            ^~~~~~~~~~~
+/usr/pkg/qt6/include/QtCore/qlogging.h:38:5: note: declared here
+   38 |     QtSystemMsg Q_DECL_ENUMERATOR_DEPRECATED_X("Use QtCriticalMsg instead.") = QtCriticalMsg
+      |     ^~~~~~~~~~~
+[116/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qpermission_wrapper.cpp.o
+[117/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qsharedmemory_wrapper.cpp.o
+[118/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/glue/qeasingcurve_glue.cpp.o
+[119/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qprocess_unixprocessparameters_wrapper.cpp.o
+[120/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qprocess_wrapper.cpp.o
+[121/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/PySide6/QtCore/qprocessenvironment_wrapper.cpp.o
+[122/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/glue/qtcorehelper.cpp.o
+[123/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/glue/core_snippets.cpp.o
+[124/593] Building CXX object sources/shiboken6/shibokenmodule/CMakeFiles/shibokenmodule.dir/Shiboken/shiboken_module_wrapper.cpp.o
+[125/593] Linking CXX shared module sources/shiboken6/Shiboken.abi3.so
+[126/593] Building CXX object sources/pyside6/PySide6/QtCore/CMakeFiles/QtCore.dir/glue/qiopipe.cpp.o
+[127/593] Linking CXX shared module sources/pyside6/PySide6/QtCore.abi3.so
+[128/593] Generating __/moc_qpytextobject.cpp
+[129/593] cd /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore && /usr/pkg/bin/cmake -E env LD_LIBRARY_PATH=/home/folimeld/native-build/pyside-build/sources/pyside6/libpyside:/home/folimeld/native-build/pyside-build/sources/pyside6/libpysideqml:/home/folimeld/native-build/pyside-build/sources/pyside6/libpysideremoteobjects::/home/folimeld/native-build/pyside-build/sources/pyside6/../shiboken6/libshiboken /home/folimeld/Folimeld/.venv-netbsd/bin/python /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside6/PySide6/QtCore/../support/generate_pyi.py QtCore --sys-path /home/folimeld/native-build/pyside-build/sources/pyside6 /home/folimeld/native-build/pyside-build/sources/pyside6/.. /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6/.. /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6/../../..
+INFO:generate_pyi:Generated: /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore.pyi
+[130/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextblock_iterator_wrapper.cpp.o
+[131/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextframe_iterator_wrapper.cpp.o
+[132/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qshaderversion_wrapper.cpp.o
+[133/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qabstractfileiconprovider_wrapper.cpp.o
+[134/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qabstracttextdocumentlayout_selection_wrapper.cpp.o
+[135/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qabstracttextdocumentlayout_paintcontext_wrapper.cpp.o
+[136/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qabstracttextdocumentlayout_wrapper.cpp.o
+[137/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibilityhints_wrapper.cpp.o
+[138/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibleactioninterface_wrapper.cpp.o
+[139/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessible_wrapper.cpp.o
+[140/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibleannouncementevent_wrapper.cpp.o
+[141/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibleattributesinterface_wrapper.cpp.o
+[142/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibleeditabletextinterface_wrapper.cpp.o
+[143/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibleevent_wrapper.cpp.o
+[144/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibleobject_wrapper.cpp.o
+[145/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibleselectioninterface_wrapper.cpp.o
+[146/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessiblestatechangeevent_wrapper.cpp.o
+[147/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibletablecellinterface_wrapper.cpp.o
+[148/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibletablemodelchangeevent_wrapper.cpp.o
+[149/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibletextcursorevent_wrapper.cpp.o
+[150/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibletextinsertevent_wrapper.cpp.o
+[151/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibletextinterface_wrapper.cpp.o
+[152/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibletextremoveevent_wrapper.cpp.o
+[153/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibletextselectionevent_wrapper.cpp.o
+[154/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibletextupdateevent_wrapper.cpp.o
+[155/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessiblevaluechangeevent_wrapper.cpp.o
+[156/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessiblevalueinterface_wrapper.cpp.o
+[157/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaction_wrapper.cpp.o
+[158/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qactionevent_wrapper.cpp.o
+[159/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qbackingstore_wrapper.cpp.o
+[160/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qactiongroup_wrapper.cpp.o
+[161/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qbitmap_wrapper.cpp.o
+[162/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qbrush_wrapper.cpp.o
+[163/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qchildwindowevent_wrapper.cpp.o
+[164/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qclipboard_wrapper.cpp.o
+[165/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qcloseevent_wrapper.cpp.o
+[166/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qcolorconstants_wrapper.cpp.o
+[167/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qcolor_wrapper.cpp.o
+[168/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qcolorspace_wrapper.cpp.o
+[169/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qcolorconstants_svg_wrapper.cpp.o
+[170/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qcolortransform_wrapper.cpp.o
+[171/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qconicalgradient_wrapper.cpp.o
+[172/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qcontextmenuevent_wrapper.cpp.o
+[173/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qcursor_wrapper.cpp.o
+[174/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qdesktopservices_wrapper.cpp.o
+[175/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qdoublevalidator_wrapper.cpp.o
+[176/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qdrag_wrapper.cpp.o
+[177/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qdragenterevent_wrapper.cpp.o
+[178/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qdragleaveevent_wrapper.cpp.o
+[179/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qdragmoveevent_wrapper.cpp.o
+[180/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qdropevent_wrapper.cpp.o
+[181/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qenterevent_wrapper.cpp.o
+[182/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qeventpoint_wrapper.cpp.o
+[183/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qexposeevent_wrapper.cpp.o
+[184/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qfileopenevent_wrapper.cpp.o
+[185/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qfocusevent_wrapper.cpp.o
+[186/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qfont_tag_wrapper.cpp.o
+[187/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qfontdatabase_wrapper.cpp.o
+[188/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qfont_wrapper.cpp.o
+[189/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qfontinfo_wrapper.cpp.o
+[190/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qfontmetrics_wrapper.cpp.o
+[191/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qfontvariableaxis_wrapper.cpp.o
+[192/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qfontmetricsf_wrapper.cpp.o
+[193/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qglyphrun_wrapper.cpp.o
+[194/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qgradient_wrapper.cpp.o
+[195/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qhelpevent_wrapper.cpp.o
+[196/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qguiapplication_wrapper.cpp.o
+[197/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qhideevent_wrapper.cpp.o
+[198/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qhoverevent_wrapper.cpp.o
+[199/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qicondragevent_wrapper.cpp.o
+[200/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qiconengine_scaledpixmapargument_wrapper.cpp.o
+[201/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qicon_wrapper.cpp.o
+[202/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qiconengine_wrapper.cpp.o
+[203/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qimageiohandler_wrapper.cpp.o
+[204/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qimagereader_wrapper.cpp.o
+[205/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qimage_wrapper.cpp.o
+[206/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qimagewriter_wrapper.cpp.o
+[207/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qinputdevice_wrapper.cpp.o
+[208/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qinputevent_wrapper.cpp.o
+[209/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qinputmethod_wrapper.cpp.o
+[210/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qinputmethodevent_attribute_wrapper.cpp.o
+[211/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qinputmethodqueryevent_wrapper.cpp.o
+[212/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qinputmethodevent_wrapper.cpp.o
+[213/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qintvalidator_wrapper.cpp.o
+[214/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qkeyevent_wrapper.cpp.o
+[215/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qlineargradient_wrapper.cpp.o
+[216/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qkeysequence_wrapper.cpp.o
+[217/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qmatrix2x2_wrapper.cpp.o
+[218/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qmatrix2x3_wrapper.cpp.o
+[219/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qmatrix2x4_wrapper.cpp.o
+[220/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qmatrix3x2_wrapper.cpp.o
+[221/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qmatrix3x3_wrapper.cpp.o
+[222/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qmatrix3x4_wrapper.cpp.o
+[223/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qmatrix4x2_wrapper.cpp.o
+[224/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qmatrix4x3_wrapper.cpp.o
+[225/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qmatrix4x4_wrapper.cpp.o
+[226/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qmouseevent_wrapper.cpp.o
+[227/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qmoveevent_wrapper.cpp.o
+[228/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qmovie_wrapper.cpp.o
+[229/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qnativegestureevent_wrapper.cpp.o
+[230/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qnativeinterface_wrapper.cpp.o
+[231/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qoffscreensurface_wrapper.cpp.o
+[232/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpagedpaintdevice_wrapper.cpp.o
+[233/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpagelayout_wrapper.cpp.o
+[234/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpageranges_wrapper.cpp.o
+[235/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpageranges_range_wrapper.cpp.o
+[236/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpagesize_wrapper.cpp.o
+[237/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpaintdevice_wrapper.cpp.o
+[238/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpaintdevicewindow_wrapper.cpp.o
+[239/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpaintengine_wrapper.cpp.o
+[240/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpaintenginestate_wrapper.cpp.o
+[241/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpainter_pixmapfragment_wrapper.cpp.o
+[242/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpainterpath_element_wrapper.cpp.o
+[243/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpainter_wrapper.cpp.o
+[244/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpainterpath_wrapper.cpp.o
+[245/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpainterpathstroker_wrapper.cpp.o
+[246/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpainterstateguard_wrapper.cpp.o
+[247/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpaintevent_wrapper.cpp.o
+[248/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpalette_wrapper.cpp.o
+[249/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpdfoutputintent_wrapper.cpp.o
+[250/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpdfwriter_wrapper.cpp.o
+[251/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpen_wrapper.cpp.o
+[252/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpicture_wrapper.cpp.o
+[253/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpixmap_wrapper.cpp.o
+[254/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpixmapcache_key_wrapper.cpp.o
+[255/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpixmapcache_wrapper.cpp.o
+[256/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpixelformat_wrapper.cpp.o
+[257/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qplatformsurfaceevent_wrapper.cpp.o
+[258/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpointerevent_wrapper.cpp.o
+[259/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpointingdevice_wrapper.cpp.o
+[260/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpointingdeviceuniqueid_wrapper.cpp.o
+[261/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpolygon_wrapper.cpp.o
+[262/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpolygonf_wrapper.cpp.o
+[263/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qpytextobject_wrapper.cpp.o
+[264/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qquaternion_wrapper.cpp.o
+[265/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qquaternion_axes_wrapper.cpp.o
+[266/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qradialgradient_wrapper.cpp.o
+[267/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qregularexpressionvalidator_wrapper.cpp.o
+[268/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrgba64_wrapper.cpp.o
+[269/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qregion_wrapper.cpp.o
+[270/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qresizeevent_wrapper.cpp.o
+[271/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qsessionmanager_wrapper.cpp.o
+[272/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qshortcutevent_wrapper.cpp.o
+[273/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qshowevent_wrapper.cpp.o
+[274/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qsinglepointevent_wrapper.cpp.o
+[275/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qstandarditem_wrapper.cpp.o
+[276/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qstandarditemmodel_wrapper.cpp.o
+[277/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qstatustipevent_wrapper.cpp.o
+[278/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessible_state_wrapper.cpp.o
+[279/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qaccessibleinterface_wrapper.cpp.o
+[280/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qscreen_wrapper.cpp.o
+[281/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qshortcut_wrapper.cpp.o
+[282/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrasterwindow_wrapper.cpp.o
+[283/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrawfont_wrapper.cpp.o
+[284/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhiadapter_wrapper.cpp.o
+[285/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhi_wrapper.cpp.o
+[286/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhibuffer_wrapper.cpp.o
+[287/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhicolorattachment_wrapper.cpp.o
+[288/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhicommandbuffer_wrapper.cpp.o
+[289/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhicomputepipeline_wrapper.cpp.o
+[290/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhidepthstencilclearvalue_wrapper.cpp.o
+[291/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhidriverinfo_wrapper.cpp.o
+[292/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhigraphicspipeline_targetblend_wrapper.cpp.o
+[293/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhigraphicspipeline_wrapper.cpp.o
+[294/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhigraphicspipeline_stencilopstate_wrapper.cpp.o
+[295/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhiinitparams_wrapper.cpp.o
+[296/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhinativehandles_wrapper.cpp.o
+[297/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhinullinitparams_wrapper.cpp.o
+[298/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhireadbackdescription_wrapper.cpp.o
+[299/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhireadbackresult_wrapper.cpp.o
+[300/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhirenderbuffer_wrapper.cpp.o
+[301/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhirenderpassdescriptor_wrapper.cpp.o
+[302/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhirendertarget_wrapper.cpp.o
+[303/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhiresource_wrapper.cpp.o
+[304/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhiresourceupdatebatch_wrapper.cpp.o
+[305/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhisampler_wrapper.cpp.o
+[306/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhiscissor_wrapper.cpp.o
+[307/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhishaderresourcebinding_textureandsampler_wrapper.cpp.o
+[308/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhishaderresourcebinding_data_storagebufferdata_wrapper.cpp.o
+[309/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhishaderresourcebinding_data_storageimagedata_wrapper.cpp.o
+[310/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhishaderresourcebinding_data_wrapper.cpp.o
+[311/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhishaderresourcebinding_wrapper.cpp.o
+[312/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhishaderresourcebindings_wrapper.cpp.o
+[313/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhishaderstage_wrapper.cpp.o
+[314/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhistats_wrapper.cpp.o
+[315/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhiswapchain_wrapper.cpp.o
+[316/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhiswapchainrendertarget_wrapper.cpp.o
+[317/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhitexturecopydescription_wrapper.cpp.o
+[318/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhitexture_wrapper.cpp.o
+[319/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhitexturerendertarget_wrapper.cpp.o
+[320/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhitexturerendertargetdescription_wrapper.cpp.o
+[321/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhitexturesubresourceuploaddescription_wrapper.cpp.o
+[322/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhitextureuploaddescription_wrapper.cpp.o
+[323/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhitextureuploadentry_wrapper.cpp.o
+[324/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhitexture_viewformat_wrapper.cpp.o
+[325/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhivertexinputattribute_wrapper.cpp.o
+[326/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhivertexinputbinding_wrapper.cpp.o
+[327/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhivertexinputlayout_wrapper.cpp.o
+[328/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhiviewport_wrapper.cpp.o
+[329/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qshadercode_wrapper.cpp.o
+[330/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qshader_wrapper.cpp.o
+[331/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qshaderkey_wrapper.cpp.o
+[332/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qscrollevent_wrapper.cpp.o
+[333/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qscrollprepareevent_wrapper.cpp.o
+[334/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qstatictext_wrapper.cpp.o
+[335/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qstylehints_wrapper.cpp.o
+[336/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qsurface_wrapper.cpp.o
+[337/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qsyntaxhighlighter_wrapper.cpp.o
+[338/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qsurfaceformat_wrapper.cpp.o
+[339/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtabletevent_wrapper.cpp.o
+[340/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextblock_wrapper.cpp.o
+[341/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextblockformat_wrapper.cpp.o
+[342/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextblockgroup_wrapper.cpp.o
+[343/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextblockuserdata_wrapper.cpp.o
+[344/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextcharformat_wrapper.cpp.o
+[345/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextcursor_wrapper.cpp.o
+[346/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextdocument_wrapper.cpp.o
+[347/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextdocumentfragment_wrapper.cpp.o
+[348/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextdocumentwriter_wrapper.cpp.o
+[349/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextformat_wrapper.cpp.o
+[350/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextfragment_wrapper.cpp.o
+[351/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextframe_wrapper.cpp.o
+[352/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextframeformat_wrapper.cpp.o
+[353/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextimageformat_wrapper.cpp.o
+[354/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextinlineobject_wrapper.cpp.o
+[355/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextitem_wrapper.cpp.o
+[356/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextlayout_formatrange_wrapper.cpp.o
+[357/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextlength_wrapper.cpp.o
+[358/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextlayout_wrapper.cpp.o
+[359/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextline_wrapper.cpp.o
+[360/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextlist_wrapper.cpp.o
+[361/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextobject_wrapper.cpp.o
+[362/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextlistformat_wrapper.cpp.o
+[363/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextobjectinterface_wrapper.cpp.o
+[364/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextoption_tab_wrapper.cpp.o
+[365/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtexttable_wrapper.cpp.o
+[366/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtextoption_wrapper.cpp.o
+[367/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtexttablecell_wrapper.cpp.o
+[368/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtexttablecellformat_wrapper.cpp.o
+[369/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtguihelper_qoverridecursorguard_wrapper.cpp.o
+[370/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtexttableformat_wrapper.cpp.o
+[371/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtoolbarchangeevent_wrapper.cpp.o
+[372/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtouchevent_wrapper.cpp.o
+[373/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qt_wrapper.cpp.o
+[374/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qundocommand_wrapper.cpp.o
+[375/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtransform_wrapper.cpp.o
+[376/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qundogroup_wrapper.cpp.o
+[377/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qundostack_wrapper.cpp.o
+[378/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qvalidator_wrapper.cpp.o
+[379/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qvector2d_wrapper.cpp.o
+[380/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qvector3d_wrapper.cpp.o
+[381/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qvector4d_wrapper.cpp.o
+[382/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qwhatsthisclickedevent_wrapper.cpp.o
+[383/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qwheelevent_wrapper.cpp.o
+[384/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qwindow_wrapper.cpp.o
+[385/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qwindowstatechangeevent_wrapper.cpp.o
+[386/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qnativeinterface_qx11application_wrapper.cpp.o
+[387/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qnativeinterface_qwaylandapplication_wrapper.cpp.o
+[388/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qopenglcontextgroup_wrapper.cpp.o
+[389/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qopenglextrafunctions_wrapper.cpp.o
+[390/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qopenglcontext_wrapper.cpp.o
+[391/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qopenglfunctions_wrapper.cpp.o
+[392/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qtgui_module_wrapper.cpp.o
+[393/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhigles2initparams_wrapper.cpp.o
+[394/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/__/moc_qpytextobject.cpp.o
+[395/593] Building CXX object sources/pyside6/PySide6/QtGui/CMakeFiles/QtGui.dir/PySide6/QtGui/qrhigles2nativehandles_wrapper.cpp.o
+[396/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qaccessiblewidget_wrapper.cpp.o
+[397/593] Linking CXX shared module sources/pyside6/PySide6/QtGui.abi3.so
+[398/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qabstractgraphicsshapeitem_wrapper.cpp.o
+[399/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qabstractbutton_wrapper.cpp.o
+[400/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qabstractitemdelegate_wrapper.cpp.o
+[401/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qabstractslider_wrapper.cpp.o
+[402/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qabstractscrollarea_wrapper.cpp.o
+[403/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qabstractitemview_wrapper.cpp.o
+[404/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qabstractspinbox_wrapper.cpp.o
+[405/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qapplication_wrapper.cpp.o
+[406/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qboxlayout_wrapper.cpp.o
+[407/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qbuttongroup_wrapper.cpp.o
+[408/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qcalendarwidget_wrapper.cpp.o
+[409/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qcheckbox_wrapper.cpp.o
+[410/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qcolormap_wrapper.cpp.o
+[411/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qcolordialog_wrapper.cpp.o
+[412/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qcommandlinkbutton_wrapper.cpp.o
+[413/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qcolumnview_wrapper.cpp.o
+[414/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qcommonstyle_wrapper.cpp.o
+[415/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qcombobox_wrapper.cpp.o
+[416/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qdatawidgetmapper_wrapper.cpp.o
+[417/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qcompleter_wrapper.cpp.o
+[418/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qdateedit_wrapper.cpp.o
+[419/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qdatetimeedit_wrapper.cpp.o
+[420/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qdial_wrapper.cpp.o
+[421/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qdialog_wrapper.cpp.o
+[422/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qdialogbuttonbox_wrapper.cpp.o
+[423/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qdockwidget_wrapper.cpp.o
+[424/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qdoublespinbox_wrapper.cpp.o
+[425/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qfileiconprovider_wrapper.cpp.o
+[426/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qerrormessage_wrapper.cpp.o
+[427/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qfiledialog_wrapper.cpp.o
+[428/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qfocusframe_wrapper.cpp.o
+[429/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qfontcombobox_wrapper.cpp.o
+[430/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qfilesystemmodel_wrapper.cpp.o
+[431/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qfontdialog_wrapper.cpp.o
+[432/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qformlayout_takerowresult_wrapper.cpp.o
+[433/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qformlayout_wrapper.cpp.o
+[434/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgesture_wrapper.cpp.o
+[435/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qframe_wrapper.cpp.o
+[436/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgestureevent_wrapper.cpp.o
+[437/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsanchor_wrapper.cpp.o
+[438/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgesturerecognizer_wrapper.cpp.o
+[439/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsanchorlayout_wrapper.cpp.o
+[440/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsblureffect_wrapper.cpp.o
+[441/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicscolorizeeffect_wrapper.cpp.o
+[442/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsdropshadoweffect_wrapper.cpp.o
+[443/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicseffect_wrapper.cpp.o
+[444/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsellipseitem_wrapper.cpp.o
+[445/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsgridlayout_wrapper.cpp.o
+[446/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsitemanimation_wrapper.cpp.o
+[447/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsitem_wrapper.cpp.o
+[448/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsitemgroup_wrapper.cpp.o
+[449/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicslayout_wrapper.cpp.o
+[450/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicslayoutitem_wrapper.cpp.o
+[451/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicslinearlayout_wrapper.cpp.o
+[452/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicslineitem_wrapper.cpp.o
+[453/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsobject_wrapper.cpp.o
+[454/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsopacityeffect_wrapper.cpp.o
+[455/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicspathitem_wrapper.cpp.o
+[456/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicspolygonitem_wrapper.cpp.o
+[457/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicspixmapitem_wrapper.cpp.o
+[458/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsproxywidget_wrapper.cpp.o
+[459/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsrectitem_wrapper.cpp.o
+[460/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsrotation_wrapper.cpp.o
+[461/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsscale_wrapper.cpp.o
+[462/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsscenecontextmenuevent_wrapper.cpp.o
+[463/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsscene_wrapper.cpp.o
+[464/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsscenedragdropevent_wrapper.cpp.o
+[465/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicssceneevent_wrapper.cpp.o
+[466/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsscenehelpevent_wrapper.cpp.o
+[467/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsscenehoverevent_wrapper.cpp.o
+[468/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsscenemouseevent_wrapper.cpp.o
+[469/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsscenemoveevent_wrapper.cpp.o
+[470/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicssceneresizeevent_wrapper.cpp.o
+[471/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsscenewheelevent_wrapper.cpp.o
+[472/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicssimpletextitem_wrapper.cpp.o
+[473/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicstextitem_wrapper.cpp.o
+[474/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicstransform_wrapper.cpp.o
+[475/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicsview_wrapper.cpp.o
+[476/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgridlayout_wrapper.cpp.o
+[477/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgraphicswidget_wrapper.cpp.o
+[478/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qgroupbox_wrapper.cpp.o
+[479/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qhboxlayout_wrapper.cpp.o
+[480/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qinputdialog_wrapper.cpp.o
+[481/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qheaderview_wrapper.cpp.o
+[482/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qitemdelegate_wrapper.cpp.o
+[483/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qitemeditorcreatorbase_wrapper.cpp.o
+[484/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qitemeditorfactory_wrapper.cpp.o
+[485/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qkeysequenceedit_wrapper.cpp.o
+[486/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qlabel_wrapper.cpp.o
+[487/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qlayout_wrapper.cpp.o
+[488/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qlayoutitem_wrapper.cpp.o
+[489/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qlcdnumber_wrapper.cpp.o
+[490/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qlineedit_wrapper.cpp.o
+[491/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qlistview_wrapper.cpp.o
+[492/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qlistwidget_wrapper.cpp.o
+[493/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qlistwidgetitem_wrapper.cpp.o
+[494/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qmainwindow_wrapper.cpp.o
+[495/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qmdiarea_wrapper.cpp.o
+[496/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qmdisubwindow_wrapper.cpp.o
+[497/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qmenu_wrapper.cpp.o
+[498/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qmenubar_wrapper.cpp.o
+[499/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qmessagebox_wrapper.cpp.o
+[500/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qpangesture_wrapper.cpp.o
+[501/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qpinchgesture_wrapper.cpp.o
+[502/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qplaintextdocumentlayout_wrapper.cpp.o
+[503/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qplaintextedit_wrapper.cpp.o
+[504/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qprogressbar_wrapper.cpp.o
+[505/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qprogressdialog_wrapper.cpp.o
+[506/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qproxystyle_wrapper.cpp.o
+[507/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qpushbutton_wrapper.cpp.o
+[508/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qradiobutton_wrapper.cpp.o
+[509/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qrhiwidget_wrapper.cpp.o
+[510/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qrubberband_wrapper.cpp.o
+[511/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qscrollarea_wrapper.cpp.o
+[512/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qscrollbar_wrapper.cpp.o
+[513/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qscroller_wrapper.cpp.o
+[514/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qscrollerproperties_wrapper.cpp.o
+[515/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qsizegrip_wrapper.cpp.o
+[516/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qsizepolicy_wrapper.cpp.o
+[517/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qslider_wrapper.cpp.o
+[518/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qspaceritem_wrapper.cpp.o
+[519/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qspinbox_wrapper.cpp.o
+[520/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qsplashscreen_wrapper.cpp.o
+[521/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qsplitter_wrapper.cpp.o
+[522/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qsplitterhandle_wrapper.cpp.o
+[523/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstackedlayout_wrapper.cpp.o
+[524/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstackedwidget_wrapper.cpp.o
+[525/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstatusbar_wrapper.cpp.o
+[526/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyle_wrapper.cpp.o
+[527/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstylefactory_wrapper.cpp.o
+[528/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleditemdelegate_wrapper.cpp.o
+[529/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstylehintreturn_wrapper.cpp.o
+[530/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstylehintreturnmask_wrapper.cpp.o
+[531/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstylehintreturnvariant_wrapper.cpp.o
+[532/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoption_wrapper.cpp.o
+[533/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptionbutton_wrapper.cpp.o
+[534/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptioncombobox_wrapper.cpp.o
+[535/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptioncomplex_wrapper.cpp.o
+[536/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptiondockwidget_wrapper.cpp.o
+[537/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptionfocusrect_wrapper.cpp.o
+[538/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptionframe_wrapper.cpp.o
+[539/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptiongraphicsitem_wrapper.cpp.o
+[540/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptiongroupbox_wrapper.cpp.o
+[541/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptionheader_wrapper.cpp.o
+[542/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptionheaderv2_wrapper.cpp.o
+[543/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptionmenuitem_wrapper.cpp.o
+[544/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptionmenuitemv2_wrapper.cpp.o
+[545/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptionprogressbar_wrapper.cpp.o
+[546/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptionrubberband_wrapper.cpp.o
+[547/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptionsizegrip_wrapper.cpp.o
+[548/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptionslider_wrapper.cpp.o
+[549/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptionspinbox_wrapper.cpp.o
+[550/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptiontab_wrapper.cpp.o
+[551/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptiontabbarbase_wrapper.cpp.o
+[552/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptiontabwidgetframe_wrapper.cpp.o
+[553/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptiontitlebar_wrapper.cpp.o
+[554/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptiontoolbar_wrapper.cpp.o
+[555/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptiontoolbox_wrapper.cpp.o
+[556/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptiontoolbutton_wrapper.cpp.o
+[557/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstyleoptionviewitem_wrapper.cpp.o
+[558/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qstylepainter_wrapper.cpp.o
+[559/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qswipegesture_wrapper.cpp.o
+[560/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qsystemtrayicon_wrapper.cpp.o
+[561/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtabbar_wrapper.cpp.o
+[562/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtableview_wrapper.cpp.o
+[563/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtablewidgetitem_wrapper.cpp.o
+[564/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtablewidget_wrapper.cpp.o
+[565/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtablewidgetselectionrange_wrapper.cpp.o
+[566/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtabwidget_wrapper.cpp.o
+[567/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtapandholdgesture_wrapper.cpp.o
+[568/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtapgesture_wrapper.cpp.o
+[569/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtextbrowser_wrapper.cpp.o
+[570/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtextedit_extraselection_wrapper.cpp.o
+[571/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtilerules_wrapper.cpp.o
+[572/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtextedit_wrapper.cpp.o
+[573/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtimeedit_wrapper.cpp.o
+[574/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtoolbar_wrapper.cpp.o
+[575/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtoolbox_wrapper.cpp.o
+[576/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtoolbutton_wrapper.cpp.o
+[577/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtooltip_wrapper.cpp.o
+[578/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtreeview_wrapper.cpp.o
+[579/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtreewidget_wrapper.cpp.o
+[580/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtreewidgetitemiterator_wrapper.cpp.o
+[581/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtreewidgetitem_wrapper.cpp.o
+[582/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qundoview_wrapper.cpp.o
+[583/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qvboxlayout_wrapper.cpp.o
+[584/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qwhatsthis_wrapper.cpp.o
+[585/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qwidget_wrapper.cpp.o
+[586/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qwidgetaction_wrapper.cpp.o
+[587/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qwidgetitem_wrapper.cpp.o
+[588/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qwizard_wrapper.cpp.o
+[589/593] cd /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtGui && /usr/pkg/bin/cmake -E env LD_LIBRARY_PATH=/home/folimeld/native-build/pyside-build/sources/pyside6/libpyside:/home/folimeld/native-build/pyside-build/sources/pyside6/libpysideqml:/home/folimeld/native-build/pyside-build/sources/pyside6/libpysideremoteobjects::/home/folimeld/native-build/pyside-build/sources/pyside6/../shiboken6/libshiboken /home/folimeld/Folimeld/.venv-netbsd/bin/python /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside6/PySide6/QtGui/../support/generate_pyi.py QtGui --sys-path /home/folimeld/native-build/pyside-build/sources/pyside6 /home/folimeld/native-build/pyside-build/sources/pyside6/.. /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6/.. /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6/../../..
+INFO:generate_pyi:Generated: /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtGui.pyi
+[590/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qwizardpage_wrapper.cpp.o
+[591/593] Building CXX object sources/pyside6/PySide6/QtWidgets/CMakeFiles/QtWidgets.dir/PySide6/QtWidgets/qtwidgets_module_wrapper.cpp.o
+[592/593] Linking CXX shared module sources/pyside6/PySide6/QtWidgets.abi3.so
+[593/593] cd /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtWidgets && /usr/pkg/bin/cmake -E env LD_LIBRARY_PATH=/home/folimeld/native-build/pyside-build/sources/pyside6/libpyside:/home/folimeld/native-build/pyside-build/sources/pyside6/libpysideqml:/home/folimeld/native-build/pyside-build/sources/pyside6/libpysideremoteobjects::/home/folimeld/native-build/pyside-build/sources/pyside6/../shiboken6/libshiboken /home/folimeld/Folimeld/.venv-netbsd/bin/python /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside6/PySide6/QtWidgets/../support/generate_pyi.py QtWidgets --sys-path /home/folimeld/native-build/pyside-build/sources/pyside6 /home/folimeld/native-build/pyside-build/sources/pyside6/.. /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6/.. /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6/../../..
+INFO:generate_pyi:Generated: /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtWidgets.pyi
+-- Install configuration: "Release"
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/shiboken6
+-- Set non-toolchain portion of runtime path of "/home/folimeld/Folimeld/.venv-netbsd/bin/shiboken6" to "$ORIGIN/:/usr/pkg/qt6/lib:/usr/pkg/lib"
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/cmake/Shiboken6Tools/Shiboken6ToolsTargets.cmake
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/cmake/Shiboken6Tools/Shiboken6ToolsTargets-release.cmake
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6_generator/_config.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6_generator/__init__.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/shiboken_tool.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6_generator/_git_shiboken_generator_version.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/cmake/Shiboken6Tools/Shiboken6ToolsConfig.cmake
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/cmake/Shiboken6Tools/Shiboken6ToolsConfigVersion.cmake
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/cmake/Shiboken6Tools/Shiboken6ToolsMacros.cmake
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/autodecref.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/basewrapper.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/basewrapper_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/bindingmanager.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/gilstate.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/helper.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/pyobjectholder.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkarrayconverter.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkbindingutils.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkcontainer.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkconverter.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkcpptonumpy.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkdestructorentry.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkenum.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkenum_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkerrors.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkfeature_base.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkmodule.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkmodule_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbknumpycheck.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbknumpyview.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkstring.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkcppstring.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbksmartpointer.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkstaticstrings.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbktypefactory.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/shiboken.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/shibokenmacros.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/threadstatesaver.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/shibokenbuffer.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkpep.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkpepbuffer.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkpython.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkwindows.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/pep384impl.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/pep384ext.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/voidptr.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/bufferprocs_py37.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/sbkversion.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/signature.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/shiboken6/include/signature_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/libshiboken6.abi3.so.6.11.2
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/libshiboken6.abi3.so.6.11
+-- Set non-toolchain portion of runtime path of "/home/folimeld/Folimeld/.venv-netbsd/lib/libshiboken6.abi3.so.6.11.2" to "$ORIGIN/"
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/libshiboken6.abi3.so
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/cmake/Shiboken6/Shiboken6Targets.cmake
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/cmake/Shiboken6/Shiboken6Targets-release.cmake
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6/Shiboken.abi3.so
+-- Set non-toolchain portion of runtime path of "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6/Shiboken.abi3.so" to "$ORIGIN/"
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6/_config.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6/Shiboken.pyi
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6/py.typed
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6/__init__.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6/_git_shiboken_module_version.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/cmake/Shiboken6/Shiboken6Config.cmake
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/cmake/Shiboken6/Shiboken6Config.abi3.cmake
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/cmake/Shiboken6/Shiboken6ConfigVersion.cmake
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/cmake/Shiboken6/ShibokenHelpers.cmake
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/pkgconfig/shiboken6.pc
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/class_property.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/dynamicqmetaobject.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/dynamicslot_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/feature_select.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysideclassdecorator_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysideclassinfo.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysideclassinfo_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysidecleanup.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pyside.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysideinit.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysidelogging_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysidemacros.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysidemetafunction.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysidemetafunction_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysidemetatype.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pyside_numpy.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pyside_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysideglobals_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysideproperty.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysidepropertybase_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysideproperty_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysideqapp.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysideqenum.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysideqhash.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysideqobject.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysideqobject_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysideqslotobject_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysidesignal.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysidesignal_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysideslot_p.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysidestaticstrings.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysideutils.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysidevariantutils.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pysideweakref.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/qobjectconnect.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/signalmanager.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/libpyside6.abi3.so.6.11
+-- Set non-toolchain portion of runtime path of "/home/folimeld/Folimeld/.venv-netbsd/lib/libpyside6.abi3.so.6.11" to "$ORIGIN/:/usr/pkg/qt6/lib:$ORIGIN/../shiboken6/"
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/libpyside6.abi3.so
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/pkgconfig/pyside6.pc
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/cmake/PySide6/PySide6Config.cmake
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/cmake/PySide6/PySide6Config.abi3.cmake
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/cmake/PySide6/PySide6ConfigVersion.cmake
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/cmake/PySide6/PySide6Targets.cmake
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/cmake/PySide6/PySide6Targets-release.cmake
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/glue/qtcore.cpp
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/doc/qtcore.rst
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/glue/qeasingcurve_glue.cpp
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/glue/qeasingcurve_glue.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/QtCore.pyi
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/QtCore.abi3.so
+-- Set non-toolchain portion of runtime path of "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/QtCore.abi3.so" to "$ORIGIN/:/usr/pkg/qt6/lib:$ORIGIN/../shiboken6/"
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/QtCore/pyside6_qtcore_python.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/typesystem_core.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/typesystem_core_common.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/typesystem_core_win.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/QtCore/qtcorehelper.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/QtCore/qiopipe.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/glue/qtgui.cpp
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/doc/qtgui.rst
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/QtGui.pyi
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/QtGui.abi3.so
+-- Set non-toolchain portion of runtime path of "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/QtGui.abi3.so" to "$ORIGIN/:/usr/pkg/qt6/lib:$ORIGIN/../shiboken6/"
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/QtGui/pyside6_qtgui_python.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/typesystem_gui.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/typesystem_gui_common.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/typesystem_gui_mac.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/typesystem_gui_nativeinterface.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/typesystem_gui_rhi.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/typesystem_gui_wayland.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/typesystem_gui_win.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/typesystem_gui_x11.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/QtGui/qpytextobject.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/QtGui/qtguihelper.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/glue/qtwidgets.cpp
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/QtWidgets.pyi
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/QtWidgets.abi3.so
+-- Set non-toolchain portion of runtime path of "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/QtWidgets.abi3.so" to "$ORIGIN/:/usr/pkg/qt6/lib:$ORIGIN/../shiboken6/"
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/QtWidgets/pyside6_qtwidgets_python.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/typesystem_widgets.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/typesystem_widgets_common.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/__init__.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/_config.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/_git_pyside_version.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/support
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/support/__init__.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/support/deprecated.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/support/generate_pyi.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/common.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/core_common.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/gui_common.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/widgets_common.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/share/PySide6/typesystems/datavisualization_common.xml
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/PySide6/include/pyside6_global.h
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/QtAsyncio
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/QtAsyncio/__init__.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/QtAsyncio/events.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/QtAsyncio/futures.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/QtAsyncio/tasks.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/pyside_tool.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/metaobjectdump.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/project.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/qml.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/qtpy2cpp.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/android_deploy.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/requirements-android.txt
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/uic
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/rcc
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/__init__.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/android
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/android/__init__.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/android/android_config.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/android/android_helper.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/android/buildozer.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/android/recipes
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/android/recipes/PySide6
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/android/recipes/PySide6/__init__.tmpl.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/android/recipes/shiboken6
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/android/recipes/shiboken6/__init__.tmpl.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/commands.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/config.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/default.spec
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/dependency_util.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/deploy_util.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/nuitka_helper.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/pyside_icon.icns
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/pyside_icon.ico
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/pyside_icon.jpg
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/python_helper.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/project_lib
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/project_lib/__init__.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/project_lib/design_studio_project.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/project_lib/newproject.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/project_lib/project_data.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/project_lib/pyproject_json.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/project_lib/pyproject_parse_result.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/project_lib/pyproject_toml.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/project_lib/utils.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/qtpy2cpp_lib
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/qtpy2cpp_lib/astdump.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/qtpy2cpp_lib/formatter.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/qtpy2cpp_lib/nodedump.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/qtpy2cpp_lib/qt.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/qtpy2cpp_lib/tests
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/qtpy2cpp_lib/tests/baseline
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/qtpy2cpp_lib/tests/baseline/basic_test.cpp
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/qtpy2cpp_lib/tests/baseline/basic_test.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/qtpy2cpp_lib/tests/test_qtpy2cpp.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/qtpy2cpp_lib/tokenizer.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/qtpy2cpp_lib/visitor.py
+-- Installing: /home/folimeld/Folimeld/.venv-netbsd/bin/deploy_lib/android/android_utilities.py
+PySide6/__init__.py: Unable to import Shiboken from , /usr/pkg/lib/python312.zip, /usr/pkg/lib/python3.12, /usr/pkg/lib/python3.12/lib-dynload, /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages, /usr/pkg/lib/python3.12/site-packages: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6/Shiboken.abi3.so: Shared object "libshiboken6.abi3.so.6.11" not found
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/__init__.py", line 143, in <module>
+    _setupQtDirectories()
+  File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/PySide6/__init__.py", line 66, in _setupQtDirectories
+    from shiboken6 import Shiboken
+  File "/home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6/__init__.py", line 27, in <module>
+    from shiboken6.Shiboken import *
+ImportError: /home/folimeld/Folimeld/.venv-netbsd/lib/python3.12/site-packages/shiboken6/Shiboken.abi3.so: Shared object "libshiboken6.abi3.so.6.11" not found
+Runtime_import_with_documented_library_path
+6.11.2
+PYSIDE_RUNTIME_IMPORT_OK

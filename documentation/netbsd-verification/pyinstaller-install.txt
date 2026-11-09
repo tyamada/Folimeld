@@ -1,0 +1,28 @@
+Collecting pyinstaller>=6.0
+  Downloading pyinstaller-6.22.2.tar.gz (4.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.1/4.1 MB 8.8 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting altgraph (from pyinstaller>=6.0)
+  Downloading altgraph-0.17.5-py2.py3-none-any.whl.metadata (7.5 kB)
+Requirement already satisfied: packaging>=22.0 in ./.venv-netbsd/lib/python3.12/site-packages (from pyinstaller>=6.0) (26.3)
+Collecting pyinstaller-hooks-contrib>=2026.6 (from pyinstaller>=6.0)
+  Downloading pyinstaller_hooks_contrib-2026.7-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: setuptools>=42.0.0 in /usr/pkg/lib/python3.12/site-packages (from pyinstaller>=6.0) (84.0.0)
+Downloading pyinstaller_hooks_contrib-2026.7-py3-none-any.whl (459 kB)
+Downloading altgraph-0.17.5-py2.py3-none-any.whl (21 kB)
+Building wheels for collected packages: pyinstaller
+  Building wheel for pyinstaller (pyproject.toml): started
+  Building wheel for pyinstaller (pyproject.toml): finished with status 'done'
+  Created wheel for pyinstaller: filename=pyinstaller-6.22.2-py3-none-any.whl size=2375000 sha256=fe248923a700aa70afebe9f519f3ee9b90d3549973894c645421dcda1505bbd0
+  Stored in directory: /home/folimeld/.cache/pip/wheels/d6/e7/a5/3c604c5ebb65dc79a10c6a082c2416fa9fcc9e6f7b23def13d
+Successfully built pyinstaller
+Installing collected packages: altgraph, pyinstaller-hooks-contrib, pyinstaller
+Successfully installed altgraph-0.17.5 pyinstaller-6.22.2 pyinstaller-hooks-contrib-2026.7
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: /home/folimeld/Folimeld/.venv-netbsd/bin/python -m pip install --upgrade pip

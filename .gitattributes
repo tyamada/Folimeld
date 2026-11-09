@@ -2,6 +2,8 @@
 *.sh text eol=lf
 packaging/linux/folimeld-snap-launch text eol=lf
 * text=auto eol=lf
+# Unified patch context preserves blank-line markers and tab-indented source.
+documentation/netbsd-verification/patches/*.patch whitespace=-blank-at-eol,-space-before-tab
 # Preserve generated notice bytes; crypto-native-sources.json records their hashes.
 licenses/CFFI-libffi-x64.txt -text
 licenses/Cryptography-Rust.txt -text

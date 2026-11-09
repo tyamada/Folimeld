@@ -1,0 +1,87 @@
+........................................s............... [ 14%]
+........................................................ [ 28%]
+........................................................................ [ 46%]
+........................................................................ [ 64%]
+..............ssssssss.................................................. [ 83%]
+.........FF........................................................      [100%]
+=================================== FAILURES ===================================
+____________________ test_rejects_old_binary_without_record ____________________
+
+source_tree = PosixPath('/tmp/pytest-of-folimeld/pytest-2/test_rejects_old_binary_withou0')
+
+    def test_rejects_old_binary_without_record(source_tree):
+>       with patch("PyInstaller.archive.readers.CArchiveReader", return_value=SimpleNamespace(toc={})), \
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                pytest.raises(ValueError, match="no build source record"):
+
+tests/test_source_bundle.py:73:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+/usr/pkg/lib/python3.12/unittest/mock.py:1451: in __enter__
+    self.target = self.getter()
+                  ^^^^^^^^^^^^^
+/usr/pkg/lib/python3.12/pkgutil.py:513: in resolve_name
+    mod = importlib.import_module(modname)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/pkg/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'PyInstaller', import_ = <function _gcd_import at 0x751eb3044430>
+
+>   ???
+E   ModuleNotFoundError: No module named 'PyInstaller'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+____________ test_association_verifies_archive_and_changed_sources _____________
+
+source_tree = PosixPath('/tmp/pytest-of-folimeld/pytest-2/test_association_verifies_arch0')
+
+    def test_association_verifies_archive_and_changed_sources(source_tree):
+        record = capture(source_tree)
+        exe = source_tree / "app.exe"
+        exe.write_bytes(b"executable")
+        reader = SimpleNamespace(toc={"licenses/Build-source.txt": None},
+                                 extract=lambda key: json.dumps(record).encode())
+>       with patch("PyInstaller.archive.readers.CArchiveReader", return_value=reader):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_source_bundle.py:84:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+/usr/pkg/lib/python3.12/unittest/mock.py:1451: in __enter__
+    self.target = self.getter()
+                  ^^^^^^^^^^^^^
+/usr/pkg/lib/python3.12/pkgutil.py:513: in resolve_name
+    mod = importlib.import_module(modname)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/pkg/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'PyInstaller', import_ = <function _gcd_import at 0x751eb3044430>
+
+>   ???
+E   ModuleNotFoundError: No module named 'PyInstaller'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+----------------------------- Captured stdout call -----------------------------
+Folimeld source snapshot: /tmp/pytest-of-folimeld/pytest-2/test_association_verifies_arch0/dist/source/Folimeld-source-8a6277d9a1f41cdd42c73e39f176a1020b16a83ac1a03a1727ce19ebdc90e37a.zip
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_folder_dialog.py:13: Windows registry integration
+SKIPPED [1] tests/test_msix_preflight.py:119: Windows PowerShell build entry point
+SKIPPED [3] tests/test_msix_test_bundle.py:27: Windows PowerShell packaging helpers
+SKIPPED [1] tests/test_msix_test_bundle.py:38: Windows PowerShell packaging helpers
+SKIPPED [1] tests/test_msix_test_bundle.py:51: Windows PowerShell packaging helpers
+SKIPPED [2] tests/test_msix_test_bundle.py:59: Windows PowerShell packaging helpers
+FAILED tests/test_source_bundle.py::test_rejects_old_binary_without_record - ...
+FAILED tests/test_source_bundle.py::test_association_verifies_archive_and_changed_sources
+2 failed, 384 passed, 9 skipped, 32 subtests passed in 25.42s

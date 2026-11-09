@@ -1,0 +1,19 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+qt.svg.draw: The requested buffer size is too big, ignoring
+qt.svg.draw: The requested buffer size is too big, ignoring
+qt.svg.draw: The requested buffer size is too big, ignoring
+qt.svg.draw: The requested buffer size is too big, ignoring
+qt.xkb.compose: failed to create compose table
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+qt.svg.draw: The requested buffer size is too big, ignoring
+qt.svg.draw: The requested buffer size is too big, ignoring
+qt.svg.draw: The requested buffer size is too big, ignoring
+qt.svg.draw: The requested buffer size is too big, ignoring
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+pure virtual method called
+terminate called without an active exception

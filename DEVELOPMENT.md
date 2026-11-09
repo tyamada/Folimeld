@@ -46,6 +46,17 @@ python -m pip install -r requirements-dev.txt -c constraints-release.txt
 
 `fonts-noto-cjk` is used to display Japanese, Chinese, and Korean text.
 
+### NetBSD (verified configuration)
+
+Source execution was verified on NetBSD 11.1 / amd64 with Python 3.12.14, PySide6 / Qt 6.11.2, and PyMuPDF / MuPDF 1.28.2. PySide6, PyMuPDF, and the build tools require NetBSD-specific changes. See the [verification record (Japanese)](documentation/netbsd-verification_ja.md) for setup instructions, patches, and the full test and GUI results. No NetBSD distribution package has been created.
+
+After building the dependencies and `.venv-netbsd` as described in the record, launch from the repository root within an X11 session.
+
+```sh
+export LD_LIBRARY_PATH="$PWD/.venv-netbsd/lib:/usr/pkg/lib:/usr/X11R7/lib"
+.venv-netbsd/bin/python main.py
+```
+
 ## Public and private distribution policy
 
 Windows and macOS binaries stay private and are built and verified locally. Linux deb/Snap packages are public. The [migration plan](documentation/linux-release-migration.md) groups Linux packages, SHA-256 checksums, corresponding source ZIPs and build records in one Release. Run the following offline asset check before publication; it does not upload files or create tags.

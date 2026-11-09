@@ -1,0 +1,240 @@
+pkg_install-20260227 Package management and administration tools for pkgsrc
+sqlite3-3.53.4      SQL Database Engine in a C Library
+pkgin-26.4.0        Apt / yum like tool for managing pkgsrc binary packages
+libduktape-2.7.0    Embeddable Javascript engine library
+libffi-3.8.0        Foreign function interface
+pcre2-10.49         Perl Compatible Regular Expressions library (major version 2)
+glib2-2.88.3nb1     Some useful routines for C programming (glib2)
+gsettings-desktop-schemas-50.1nb1 Collection of GSettings schemas for the GNOME desktop
+expat-2.10.0        XML parser library written in C
+libuuid-2.42.3      Generate unique identifiers for objects
+mpdecimal-4.0.1     C/C++ arbitrary precision decimal floating point libraries
+readline-8.3nb1     GNU library that can recall and edit previous input
+python313-3.13.15   Interpreted, interactive, object-oriented programming language
+py313-setuptools-84.0.0 New Python packaging system
+gobject-introspection-1.86.0nb4 GObject Introspection
+libunistring-1.4.2  Unicode string library
+curl-8.23.0         Client that groks URLs
+libidn2-2.3.7       Convert internationalized domain names to/from ASCII Encoding
+xmlcatmgr-2.2nb1    XML and SGML catalog manager
+libxml2-2.15.4      XML parser library from the GNOME project
+nghttp2-1.70.0      Implementation of HTTP/2 in C
+popt-1.19           Command line option parsing library
+mozilla-rootcerts-1.1.20260908nb2 Root CA certificates from the Mozilla Project
+gmp-6.3.0           Library for arbitrary precision arithmetic
+libtasn1-4.21.0     ASN.1 structure parser library
+nettle-4.0          Cryptographic library
+p11-kit-0.26.5      PKCS#11 module manager
+gnutls-3.8.13nb1    Transport Layer Security library
+libgpg-error-1.61   Definitions of common error values for all GnuPG components
+libassuan-3.0.2     IPC library used by some of the other GnuPG related packages
+libgcrypt-1.12.4    GNU cryptographic library
+libksba-1.8.1       X.509 library
+pinentry-1.3.3      Applications for entering PINs or Passphrases
+libusb1-1.0.30nb1   USB Access Library (version 1)
+npth-1.8            New Portable Threads Library (nPth)
+gnupg2-2.5.22       GnuPG with OpenPGP and S/MIME capabilities
+lz4-1.10.0          Extremely Fast Compression algorithm
+cmocka-2.0.2        Unit testing framework for C supporting mock objects
+libcddb-1.3.2nb1    Library to access data on a CDDB server
+py313-idna-3.19     Python module for Internationalized Domain Names in Applications (IDNA)
+libogg-1.3.6        Ogg project codecs library
+libvorbis-1.3.7     Library for the Ogg Vorbis audio encoding format
+giflib-6.1.3        GIF image format library
+libproxy-0.5.12nb4  Library that provides automatic proxy configuration management
+talloc-2.5.0        Hierarchical pool based memory allocator with destructors
+jbigkit-2.1nb1      JBIG-KIT lossless image compression library
+lerc-4.3.0          Limited Error Raster Compression library
+libjpeg-turbo-3.2.0nb2 Accelerated libjpeg with SIMD instructions
+tiff-4.7.2          Library and tools for reading and writing TIFF data files
+brotli-1.2.1        Generic-purpose lossless compression algorithm
+png-1.6.59          Library for manipulating PNG images
+freetype2-2.14.3    Font rendering engine and library API
+graphite2-1.3.15    Cross-platform rendering for complex writing systems
+harfbuzz-14.4.0nb1  OpenType text shaping engine
+fontconfig-2.18.3   Library for configuring and customizing font access
+perl-5.44.0nb2      Practical Extraction and Report Language
+enca-1.22           Extremely Naive Charset Analyser
+gsl-2.8             The GNU Scientific Library
+mpg123-1.33.7       MPEG layer 1, 2, and 3 audio player
+fribidi-1.0.16      Free Implementation of the Unicode Bidirectional Algorithm
+libwebp-1.6.0nb3    WebP image format library and tools
+gpgme-2.2.0         GnuPG Made Easy
+py313-markdown-3.10.3 XHTML generator using a simple markup
+p5-Parse-Yapp-1.21nb9 Perl5 LALR parser
+libaom-3.15.0       Library for using AV1, video coding format
+libcdio-2.4.0       CD-ROM access library
+libtheora-1.2.0nb1  Video codec for Ogg multimedia streaming
+p5-MIME-Base32-1.303nb10 Perl5 module for Base32 encoding
+py313-iso8601-2.1.0nb2 Simple Python module to parse ISO 8601 dates
+dbus-1.16.2nb3      Message bus system
+gdbm-1.26           The GNU database manager
+libdaemon-0.14nb2   C library that eases the writing of UNIX daemons
+avahi-0.8nb9        Facilitate service discovery on a local network
+hunspell-1.7.3      Improved spellchecker
+jansson-2.15.1      C library for encoding, decoding and manipulating JSON data
+libopus-1.6.1nb1    Totally open, royalty-free, highly versatile audio codec library
+nspr-4.39           Platform-neutral API for system level and libc like functions
+zstd-1.5.7          Fast real-time compression algorithm
+libsecret-0.20.5nb4 GObject based library for accessing the Secret Service API
+lmdb-1.0.2          Symas Lightning Memory-Mapped Database
+libpsl-0.23.3       Library to handle the Public Suffix List
+p5-JSON-4.11nb1     Perl module converts between JSON and Perl data structure
+hunspell-en_US-20060207 US American English dictionaries for hunspell
+py313-dns-2.8.0     Python DNS toolkit
+lame-4.0nb1         Fast, high quality MP3 encoder
+libbluray-1.5.0     Library for Blu-Ray Discs playback for media players
+ndevd-25.12.09      NetBSD devpubd + event forwarding to clients
+libudev-bsd-0.6.0.5 Libudev compatible interface for BSD systems
+libvpx-1.16.0nb1    On2 VP8/VP9 video codec library from Google
+tevent-0.17.2       Event system based on the talloc
+tdb-1.4.15          Small database system which uses files to store data
+libass-0.17.5nb1    Portable subtitle renderer for the ASS/SSA subtitle format
+xvidcore-1.3.7nb1   ISO MPEG-4 compliant video codec
+speex-1.2.1         Open-source, patent-free voice codec
+glib-networking-2.80.1nb4 Network-related giomodules for glib
+icu-78.3            Robust and full-featured Unicode services
+libva-2.24.1        Video Acceleration API
+x264-20250608       GPL licensed H.264 encoder
+x265-4.2nb1         High Efficiency Video Coding (HEVC)
+gettext-lib-1.0     Internationalized Message Handling Library (libintl)
+dav1d-1.5.4         AV1 decoder library
+libiconv-1.19       Character set conversion library
+shared-mime-info-2.4nb8 Core database of common types
+gdk-pixbuf2-2.44.8nb1 Library for image loading and manipulation
+libsoup3-3.6.6nb2   HTTP library implementation in C (major version 3)
+nss-3.131.1         Libraries to support development of security-enabled applications
+gstreamer1-1.28.6nb1 Open source multimedia framework
+libdisplay-info-0.3.0 EDID and DisplayID library
+xcb-util-0.4.1      XCB Utilities
+at-spi2-core-2.60.6nb1 Assistive Technology Service Provider Interface Core
+lzo-2.10            Portable lossless data compression library
+cairo-1.18.4nb4     Vector graphics library with cross-device output support
+hicolor-icon-theme-0.18 Standard icon theme called hicolor
+libXft-2.3.9        Library for configuring and customizing font access
+libpaper-2.2.8      Paper size handling library
+libcups-2.4.19nb2   Common UNIX Printing System library
+libxkbcommon-1.13.2 Library to handle keyboard descriptions
+pango-1.58.2nb1     Library for layout and rendering of text
+libepoll-shim-0.0.20240608 Small epoll implemented using kevent
+wayland-1.25.0      Display server protocol - development libraries
+wayland-protocols-1.49 Additional wayland functionality
+gtk3+-3.24.52nb3    GIMP Toolkit v3 - libraries for building X11 user interfaces
+libxfce4util-4.20.1nb7 Xfce basic library
+startup-notification-0.12nb3 X11 application startup notification library
+dbus-glib-0.114nb2  GLib bindings for the D-BUS message bus system
+xfce4-conf-4.20.0nb7 Xfce client-server configuration storage and query system
+libxfce4ui-4.20.2nb3 Xfce widget library
+gpgmepp-2.1.0       C++ library for OpenPGP using GnuPG
+polkit-127nb2       Authorization Manager
+enchant2-2.8.21     Generic spell checking library
+libnfs-6.0.2nb2     NFS client library
+xcb-util-renderutil-0.3.10 Convenience functions for the Render extension
+gle-3.1.0nb4        GL subroutines for drawing tubing and extrusions
+p5-URI-5.37         Perl5 Uniform Resource Identifiers class (URI, RFC 2396)
+python312-3.12.14   Interpreted, interactive, object-oriented programming language
+libwnck3-3.36.0nb20 Library to write pagers and tasklists
+bash-5.3.20         The GNU Bourne Again Shell
+samba-4.24.7        SMB/CIFS protocol server suite
+libdbusmenu-glib-16.04.0nb4 Glib2 library created by pulling some code from indicator-applet
+libcdio-paranoia-2.0.2 CD-ROM access library: CDDA support
+gcr4-4.4.0.1nb2     Library for crypto UI and related tasks
+xcb-util-image-0.4.1 XCB port of Xlib's XImage and XShmImage
+lcms2-2.19.1        Little Color Management System - a color management library
+libmtp-1.1.23       Implementation of Media Transfer Protocol (MTP)
+libgudev-238nb5     GObject bindings to libudev
+boost-libs-1.92.0   Free, peer-reviewed portable C++ source libraries (binary libraries)
+iso-codes-4.16.0    List of country, language and currency names
+libltdl-2.4.7       Generic shared library support (libltdl abstraction library)
+ffmpeg4-4.4.8nb3    Decoding, encoding and streaming software (v4.x)
+openjpeg-2.5.4      JPEG 2000 library
+libxklavier-5.4nb20 High-level API for the X Keyboard Extension (XKB)
+libb2-0.98.1nb1     C library providing BLAKE2b, BLAKE2s, BLAKE2bp, BLAKE2sp
+gvfs-1.60.0nb5      Userspace virtual filesystem
+libgsf-1.14.58nb1   GNOME structured file library
+gsed-4.10           GNU implementation of sed, the POSIX stream editor
+libyaml-0.2.5       YAML 1.1 parser and emitter written in C
+adwaita-icon-theme-50.0 Standard GNOME icons
+libcanberra-0.30nb24 Desktop event sound library
+desktop-file-utils-0.28nb1 Utilities to manage desktop entries
+libexif-0.6.26      EXIF file library
+libnotify-0.8.4nb7  Desktop notification framework
+xfce4-exo-4.20.0nb7 Xfce extension library
+libdbusmenu-gtk3-16.04.0nb14 GTK3+ library created by pulling some code from indicator-applet
+libxfce4windowing-4.20.6nb2 Xfce window management library
+xfce4-garcon-4.20.0nb7 Xfce menu library
+xfce4-panel-4.20.7nb2 Xfce panel
+xfce4-thunar-4.20.9nb1 Xfce file manager
+librsvg-2.62.3nb2   SVG library for GNOME
+xcb-util-wm-0.4.2nb1 Client and window-manager helpers for ICCCM and EWMH
+py312-cparser-3.0   C parser in Python
+gtksourceview4-4.8.4nb22 Text widget that extends GTK3's GtkTextView widget (v4)
+md4c-0.5.3          Markdown for C library and parser
+double-conversion-3.4.0 Conversion routines for IEEE doubles
+poppler-26.06.0nb3  PDF rendering library
+consolekit-1.2.6nb2 Framework for defining and tracking users, login sessions, and seats
+upower-1.91.2nb3    Power management system message bus service
+gnome-icon-theme-3.12.0nb8 Theme consisting of a set of icons for GNOME
+xscreensaver-6.15nb2 Screen saver and locker for the X window system
+mate-polkit-1.26.1nb17 MATE desktop environment Authentication Agent for PolicyKit
+xcb-util-keysyms-0.4.1 XCB Utilities
+gtk2+-2.24.33nb39   GIMP Toolkit v2 - libraries for building X11 user interfaces
+xcb-util-cursor-0.1.6 XCB port of Xlib's libXcursor
+vte3-0.80.5nb6      Terminal widget with improved accessibility and I18N support
+gspell-1.14.4nb1    Spell checking API for GTK+ applications
+ffmpegthumbnailer-2.2.2nb9 Lightweight video thumbnailer that can be used by file managers
+xfce4-appfinder-4.20.0nb7 Xfce application finder
+raqm-0.11.0nb1      Library for complex text layout
+xfce4-terminal-1.2.0nb2 Xfce terminal emulator
+py312-cffi-2.1.1    Foreign Function Interface for Python calling C code
+xfce4-wm-themes-4.10.0nb34 Xfce window manager themes
+xfce4-tumbler-4.20.1nb7 D-Bus thumbnailing service
+libimagequant-4.4.1 High-quality conversion of RGBA images to 8-bit indexed-color
+gnome-themes-standard-3.20.2nb43 Default themes for the GNOME desktop
+qt6-qtbase-6.11.2nb2 C++ X GUI toolkit
+xfce4-mousepad-0.6.5nb7 Xfce text editor
+xfce4-session-4.20.4nb1 Xfce session manager
+ttmkfdir2-20021109nb9 Tool that creates a fonts.scale file
+py312-pluggy-1.6.0  Plugin and hook calling mechanisms for python
+xfce4-wm-4.20.0nb8  Xfce window manager
+py312-packaging-26.3 Core utilities for Python packages
+llvm-21.1.8nb1      Low Level Virtual Machine compiler infrastructure
+py312-pygments-2.21.0 Python syntax highlighter
+py312-iniconfig-2.3.0 Brain-dead simple config-ini parsing
+xfce4-settings-4.20.4nb1 Xfce settings manager
+elementary-xfce-icon-theme-0.21 Elementary icons forked, extended and maintained for Xfce
+xfce4-desktop-4.20.2nb2 Xfce desktop background manager
+libuv-1.52.1nb1     Cross-platform asynchronous I/O
+rhash-1.4.6         Calculate/check CRC32, MD5, SHA1, GOST, TTH, BTIH or other hash sums
+xfce4-power-manager-4.20.0nb10 Xfce power manager
+libavif-1.4.2nb1    AV1 image file format library
+xdg-utils-1.2.1     Tools to assist applications with various desktop integration tasks
+ninja-build-1.13.2  Small build system with a focus on speed
+noto-cjk-fonts-20240508 Google Noto CJK fonts
+cmake-4.4.3         Cross platform make
+gmake-4.4.1         GNU version of 'make' utility
+clang-21.1.8nb1     C language family frontend for LLVM
+pkgconf-3.0.7       API-driven pkg-config replacement
+git-base-2.55.0nb1  GIT Tree History Storage Tool (base package)
+swig4-4.4.1nb1      Simplified Wrapper and Interface Generator (version 4)
+py312-pip-26.2.1    Installs Python packages as an easy_install replacement
+py312-psutil-7.2.2nb3 Cross-platform process and system utilities module for Python
+py312-cryptography-50.0.1 Cryptographic recipes and primitives for Python
+xfce4-4.20.0nb20    Meta-package for the Xfce desktop environment
+py312-wheel-0.48.0  Tool for manipulating Python wheel files
+py312-Pillow-12.3.0nb1 Python Imaging Library (Fork)
+py312-setuptools-84.0.0 New Python packaging system
+qt6-qtsvg-6.11.2nb1 Qt6 module for SVG
+dejavu-ttf-2.37     DejaVu family of TrueType fonts
+py312-test-9.1.1    Python testing tool
+mng-2.0.3nb1        Multiple-image Network Graphics (MNG) reference library
+jasper-4.2.9        Software-based reference implementation of the JPEG-2000 codec
+qt6-qtlanguageserver-6.11.2nb1 Qt6 language server implementation
+gumbo-parser-0.14.0 HTML5 parsing library in pure C99
+qt6-qtshadertools-6.11.2nb1 Qt6 shadertools
+qt6-qtimageformats-6.11.2nb1 Additional image handlers for Qt6
+litehtml-0.9nb2     Fast and lightweight HTML/CSS rendering engine
+qt6-qtdeclarative-6.11.2nb1 Qt6 module for the QML language
+qt6-qttools-6.11.2nb1 Qt6 development tools
+qt6-qttranslations-6.11.2nb1 Qt6 translations
+xdotool-3.20211022.1nb1 Simulate keyboard input and mouse activity using X11 xtest extension

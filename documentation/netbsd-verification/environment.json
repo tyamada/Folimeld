@@ -1,0 +1,21 @@
+{
+  "platform": "NetBSD-11.1-amd64-x86_64-64bit-ELF",
+  "python": "3.12.14 (main, Nov  7 2026, 23:05:29) [GCC 12.5.0]",
+  "source_commit": "98de4104c93a525147f9bd39f0944249ff89c8bc",
+  "dependencies": {
+    "PySide6": "6.11.2",
+    "Qt": "6.11.2",
+    "shiboken6": "6.11.2",
+    "PyMuPDF": "1.28.2",
+    "MuPDF": [
+      1,
+      28,
+      2
+    ],
+    "Pillow": "12.3.0",
+    "cryptography": "50.0.1",
+    "psutil": "7.2.2"
+  },
+  "extension_suffix": ".so",
+  "library_path": "/home/folimeld/Folimeld/.venv-netbsd/lib:/usr/pkg/lib:/usr/X11R7/lib"
+}

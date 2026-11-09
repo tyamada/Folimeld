@@ -1,0 +1,9 @@
+--- pipcl/__init__.py.orig
++++ pipcl/__init__.py
+@@ -4483,7 +4483,7 @@
+     ret = sysconfig.get_config_var('EXT_SUFFIX')
+     if not use_so_versioning:
+         # Use last component only.
+-        ret = os.path.splitext(ret)[1]
++        ret = os.path.splitext('extension' + ret)[1]
+     return ret

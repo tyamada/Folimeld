@@ -46,6 +46,17 @@ python -m pip install -r requirements-dev.txt -c constraints-release.txt
 
 `fonts-noto-cjk` は日本語、中国語、韓国語の表示に使用します。
 
+### NetBSD（検証済み構成）
+
+NetBSD 11.1 / amd64で、Python 3.12.14、PySide6 / Qt 6.11.2、PyMuPDF / MuPDF 1.28.2を使ったソース実行を確認しました。PySide6・PyMuPDFとビルド工具にはNetBSD向けの修正が必要です。構築方法、パッチ、全件テスト・GUI操作の結果は[検証記録](documentation/netbsd-verification_ja.md)を参照してください。NetBSD用の配布パッケージは作成していません。
+
+検証記録に従って依存と `.venv-netbsd` を構築した後、リポジトリーのルートからX11セッション内で起動します。
+
+```sh
+export LD_LIBRARY_PATH="$PWD/.venv-netbsd/lib:/usr/pkg/lib:/usr/X11R7/lib"
+.venv-netbsd/bin/python main.py
+```
+
 ## 公開・非公開の配布方針
 
 Windows・macOSのバイナリは非公開とし、ビルド・検証は手元で行います。Linuxのdeb/Snapは公開します。Linuxパッケージ、SHA-256一覧、対応ソースZIP、ビルド記録を同じReleaseにまとめる移行案は[こちら](documentation/linux-release-migration_ja.md)です。公開前の資材検査は以下で行えます。アップロードやタグ作成は行いません。

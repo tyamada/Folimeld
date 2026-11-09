@@ -1,0 +1,464 @@
+-- The C compiler identification is GNU 12.5.0
+-- The CXX compiler identification is GNU 12.5.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- SHIBOKEN_IS_CROSS_BUILD: FALSE
+-- BUILD_TESTS: OFF
+-- Using Qt 6
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+-- Found Threads: TRUE
+-- Performing Test HAVE_STDATOMIC
+-- Performing Test HAVE_STDATOMIC - Success
+-- Found WrapAtomic: TRUE
+-- Found Python: /home/folimeld/Folimeld/.venv-netbsd/bin/python (found version "3.12.14") found components: Interpreter Development.Module
+-- Looking for histedit.h
+-- Looking for histedit.h - found
+-- Found LibEdit: /usr/include (found version "2.11")
+-- Found ZLIB: /usr/lib/libz.so (found version "1.3.1")
+-- Found zstd: /usr/pkg/lib/libzstd.so
+-- Found LibXml2: /usr/pkg/lib/libxml2.so (found version "2.15.4")
+-- CLANG: /usr/pkg/lib/cmake/clang, /usr/pkg/lib/libclang.so.21.1.8 detected
+-- Found Git: /usr/pkg/bin/git (found version "2.55.0")
+-- Found LibXml2: /usr/pkg/lib/libxml2.so (found suitable version "2.15.4", minimum required is "2.6.32")
+-- Could NOT find LibXslt (missing: LIBXSLT_LIBRARIES LIBXSLT_INCLUDE_DIR) (Required is at least version "1.1.19")
+CMake Warning at sources/shiboken6_generator/ApiExtractor/CMakeLists.txt:101 (message):
+  Documentation will not be built due to missing dependency (libxslt not
+  found).
+
+
+-- Found LibXml2: /usr/pkg/lib/libxml2.so (found version "2.15.4")
+-- SHIBOKEN_IS_CROSS_BUILD: FALSE
+-- BUILD_TESTS: OFF
+-- Could NOT find Shiboken6Tools (missing: Shiboken6Tools_DIR)
+-- Using Qt 6
+-- Python_Development_FOUND:       FALSE
+-- Python_LIBRARIES:
+-- Python_INCLUDE_DIRS:    /usr/pkg/include/python3.12
+-- Python_Interpreter_FOUND:     TRUE
+-- Python_EXECUTABLE:      /home/folimeld/Folimeld/.venv-netbsd/bin/python
+-- Python_VERSION:         3.12.14
+Unable to determine PYTHON_EXTENSION_SUFFIX from EXT_SUFFIX: ".so"
+-- PYTHON_EXTENSION_SUFFIX:
+-- PYTHON_LIMITED_LIBRARIES:
+-- ******************************************************
+-- ** Limited API enabled
+-- ******************************************************
+-- PYTHON_EXTENSION_SUFFIX:      .abi3
+-- PYTHON_CONFIG_SUFFIX:         .abi3
+-- PYTHON_SHARED_LIBRARY_SUFFIX: .abi3
+-- NUMPY not found
+-- SHIBOKEN_PYTHON_INCLUDE_DIRS computed to value: '/usr/pkg/include/python3.12'
+-- SHIBOKEN_PYTHON_LIBRARIES computed to value: ''
+CMake Warning at sources/shiboken6/doc/CMakeLists.txt:57 (message):
+  sphinx-build - not found! doc target disabled
+
+
+-- PYSIDE_IS_CROSS_BUILD:
+-- Shiboken6Config: Using default python: .abi3
+-- libshiboken built for Release
+-- ******************************************************
+-- ** PySide6 Limited API enabled.
+-- ******************************************************
+-- Found OpenGL: /usr/X11R7/lib/libGL.so
+-- Found WrapOpenGL: TRUE
+-- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR)
+-- Found XKB: /usr/pkg/lib/libxkbcommon.so (found suitable version "1.13.2", minimum required is "0.9.0")
+-- *** computed QT_INCLUDE_DIR as /usr/pkg/qt6/include
+CMake Warning at sources/pyside6/cmake/PySideHelpers.cmake:125 (find_package):
+  By not providing "FindQt6UiTools.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "Qt6UiTools", but CMake did not find one.
+
+  Could not find a package configuration file provided by "Qt6UiTools" with
+  any of the following names:
+
+    Qt6UiTools.cps
+    qt6uitools.cps
+    Qt6UiToolsConfig.cmake
+    qt6uitools-config.cmake
+
+  Add the installation prefix of "Qt6UiTools" to CMAKE_PREFIX_PATH or set
+  "Qt6UiTools_DIR" to a directory containing one of the above files.  If
+  "Qt6UiTools" provides a separate development package or SDK, be sure it has
+  been installed.
+Call Stack (most recent call first):
+  sources/pyside6/cmake/PySideSetup.cmake:170 (collect_optional_modules)
+  sources/pyside6/CMakeLists.txt:14 (include)
+
+
+CMake Warning at sources/pyside6/cmake/PySideHelpers.cmake:136 (find_package):
+  By not providing "FindQt6WebEngineQuick.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "Qt6WebEngineQuick", but CMake did not find one.
+
+  Could not find a package configuration file provided by "Qt6WebEngineQuick"
+  with any of the following names:
+
+    Qt6WebEngineQuick.cps
+    qt6webenginequick.cps
+    Qt6WebEngineQuickConfig.cmake
+    qt6webenginequick-config.cmake
+
+  Add the installation prefix of "Qt6WebEngineQuick" to CMAKE_PREFIX_PATH or
+  set "Qt6WebEngineQuick_DIR" to a directory containing one of the above
+  files.  If "Qt6WebEngineQuick" provides a separate development package or
+  SDK, be sure it has been installed.
+Call Stack (most recent call first):
+  sources/pyside6/cmake/PySideSetup.cmake:170 (collect_optional_modules)
+  sources/pyside6/CMakeLists.txt:14 (include)
+
+
+-- CORE_ABS_DIR:/usr/pkg/qt6/lib/cmake
+-- essential module Qt6Core found (). Looked in: /usr/pkg/qt6/lib/cmake/Qt6Core
+-- essential module Qt6Gui found (). Looked in: /usr/pkg/qt6/lib/cmake/Qt6Gui
+-- essential module Qt6Widgets found (). Looked in: /usr/pkg/qt6/lib/cmake/Qt6Widgets
+-- Could NOT find Qt6Qml (missing: Qt6Qml_DIR)
+CMake Warning at sources/pyside6/cmake/PySideSetup.cmake:215 (find_package):
+  Found package configuration file:
+
+    /usr/pkg/qt6/lib/cmake/Qt6/Qt6Config.cmake
+
+  but it set Qt6_FOUND to FALSE so package "Qt6" is considered to be NOT
+  FOUND.  Reason given by package:
+
+  Failed to find required Qt component "Qml".
+
+  Expected Config file at "/usr/pkg/qt6/lib/cmake/Qt6Qml/Qt6QmlConfig.cmake"
+  does NOT exist
+
+
+
+  Configuring with --debug-find-pkg=Qt6Qml might reveal details why the
+  package was not found.
+
+  Configuring with -DQT_DEBUG_FIND_PACKAGE=ON will print the values of some
+  of the path variables that find_package uses to try and find the package.
+
+Call Stack (most recent call first):
+  sources/pyside6/CMakeLists.txt:14 (include)
+
+
+-- Could NOT find Qt6RemoteObjects (missing: Qt6RemoteObjects_DIR)
+CMake Warning at sources/pyside6/cmake/PySideSetup.cmake:218 (find_package):
+  Found package configuration file:
+
+    /usr/pkg/qt6/lib/cmake/Qt6/Qt6Config.cmake
+
+  but it set Qt6_FOUND to FALSE so package "Qt6" is considered to be NOT
+  FOUND.  Reason given by package:
+
+  Failed to find required Qt component "RemoteObjects".
+
+  Expected Config file at
+  "/usr/pkg/qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsConfig.cmake" does
+  NOT exist
+
+
+
+  Configuring with --debug-find-pkg=Qt6RemoteObjects might reveal details why
+  the package was not found.
+
+  Configuring with -DQT_DEBUG_FIND_PACKAGE=ON will print the values of some
+  of the path variables that find_package uses to try and find the package.
+
+Call Stack (most recent call first):
+  sources/pyside6/CMakeLists.txt:14 (include)
+
+
+-- PySide will be generated using the protected hack!
+-- Could NOT find Qt6Designer (missing: Qt6Designer_DIR)
+CMake Warning at sources/pyside6/cmake/PySideSetup.cmake:277 (find_package):
+  Found package configuration file:
+
+    /usr/pkg/qt6/lib/cmake/Qt6/Qt6Config.cmake
+
+  but it set Qt6_FOUND to FALSE so package "Qt6" is considered to be NOT
+  FOUND.  Reason given by package:
+
+  Failed to find required Qt component "Designer".
+
+  Expected Config file at
+  "/usr/pkg/qt6/lib/cmake/Qt6Designer/Qt6DesignerConfig.cmake" does NOT exist
+
+
+
+  Configuring with --debug-find-pkg=Qt6Designer might reveal details why the
+  package was not found.
+
+  Configuring with -DQT_DEBUG_FIND_PACKAGE=ON will print the values of some
+  of the path variables that find_package uses to try and find the package.
+
+Call Stack (most recent call first):
+  sources/pyside6/CMakeLists.txt:14 (include)
+
+
+-- apidoc generation targets disabled due to the following reasons:
+    QT_SRC_DIR variable not set
+    sphinx-build command not found
+    graphviz not found
+    BUILD_DOCS was set to FALSE (default)
+
+-- PYSIDE_TOOLS_IS_CROSS_BUILD:
+-- Installing tool: /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/pyside_tool.py
+-- Installing tool: /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/metaobjectdump.py
+-- Installing tool: /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/project.py
+-- Installing tool: /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/qml.py
+-- Installing tool: /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/qtpy2cpp.py
+-- Installing tool: /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/deploy.py
+-- Installing tool: /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/android_deploy.py
+-- Installing tool: /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/requirements-android.txt
+-- Installing tool: /usr/pkg/qt6/libexec/uic
+-- Installing tool: /usr/pkg/qt6/libexec/rcc
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/libexec/qmltyperegistrar does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/libexec/qmltyperegistrar will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/libexec/qmlimportscanner does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/libexec/qmlimportscanner will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/libexec/qmlcachegen does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/libexec/qmlcachegen will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/lrelease does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/lrelease will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/lupdate does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/lupdate will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/qmllint does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/qmllint will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/qmlformat does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/qmlformat will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/qmlls does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/qmlls will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/qsb does not exist.  Hence, pyside6-/usr/pkg/qt6/bin/qsb
+  will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/balsam does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/balsam will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/balsamui does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/balsamui will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/svgtoqml does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/svgtoqml will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/assistant does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/assistant will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/designer does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/designer will not work
+
+
+CMake Warning at sources/pyside-tools/CMakeLists.txt:77 (message):
+  /usr/pkg/qt6/bin/linguist does not exist.  Hence,
+  pyside6-/usr/pkg/qt6/bin/linguist will not work
+
+
+-- Installing /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside-tools/../../tools/cross_compile_android/android_utilities.py
+-- Configuring done (5.2s)
+-- Generating done (0.4s)
+CMake Warning (unused-cli):
+  Manually-specified variables were not used by the project:
+
+    CLANG_INSTALL_DIR
+    LLVM_INSTALL_DIR
+
+
+-- Build files have been written to: /home/folimeld/native-build/pyside-build
+[1/794] Generating embed/signature_bootstrap_inc.h, embed/signature_inc.h
+++++ Current contents of
++ /home/folimeld/native-build/pyside-build/sources/shiboken6/libshiboken/embed
+    + shibokensupport
+        + __init__.py
+        + feature.py
+        + signature
+            + __init__.py
+            + errorhandler.py
+            + importhandler.py
+            + layout.py
+            + lib
+                + __init__.py
+                + enum_sig.py
+                + pyi_generator.py
+                + tool.py
+            + loader.py
+            + mapping.py
+            + parser.py
+    + signature.zip
+    + signature_bootstrap.py
+    + signature_bootstrap_inc.h
+    + signature_inc.h
+++++
+[2/794] Automatic MOC for target apiextractor
+[3/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/bindingmanager.cpp.o
+[4/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/bufferprocs_py37.cpp.o
+[5/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/basewrapper.cpp.o
+[6/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/gilstate.cpp.o
+[7/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/debugfreehook.cpp.o
+[8/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/pep384ext.cpp.o
+[9/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/pep384impl.cpp.o
+[10/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/helper.cpp.o
+[11/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/sbkbindingutils.cpp.o
+[12/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/sbkcontainer.cpp.o
+[13/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/sbkarrayconverter.cpp.o
+[14/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/sbkcppstring.cpp.o
+[15/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/sbkenum.cpp.o
+[16/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/sbkerrors.cpp.o
+[17/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/sbkfeature_base.cpp.o
+[18/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/sbkconverter.cpp.o
+[19/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/sbknumpy.cpp.o
+[20/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/sbksmartpointer.cpp.o
+[21/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/sbkstaticstrings.cpp.o
+[22/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/sbkstring.cpp.o
+[23/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/sbktypefactory.cpp.o
+[24/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/shibokenbuffer.cpp.o
+[25/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/sbkmodule.cpp.o
+[26/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/threadstatesaver.cpp.o
+[27/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/voidptr.cpp.o
+[28/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/signature/signature.cpp.o
+[29/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/signature/signature_globals.cpp.o
+[30/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/signature/signature_helper.cpp.o
+[31/794] Building CXX object sources/shiboken6/libshiboken/CMakeFiles/libshiboken.dir/signature/signature_extend.cpp.o
+[32/794] Linking CXX shared library sources/shiboken6/libshiboken/libshiboken6.abi3.so.6.11.2
+[33/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/abstractmetaargument.cpp.o
+[34/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/apiextractor_autogen/mocs_compilation.cpp.o
+[35/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/abstractmetabuilder_helpers.cpp.o
+[36/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/abstractmetabuilder_testutil.cpp.o
+[37/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/abstractmetaenum.cpp.o
+[38/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/abstractmetabuilder.cpp.o
+[39/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/abstractmetafield.cpp.o
+[40/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/abstractmetafunction.cpp.o
+[41/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/abstractmetalang.cpp.o
+[42/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/addedfunction.cpp.o
+[43/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/abstractmetatype.cpp.o
+[44/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/anystringview_helpers.cpp.o
+[45/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/apiextractorresult.cpp.o
+[46/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/apiextractor.cpp.o
+[47/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/classdocumentation.cpp.o
+[48/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/codesnip.cpp.o
+[49/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/codesniphelpers.cpp.o
+[50/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/conditionalstreamreader.cpp.o
+[51/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/customconversion.cpp.o
+[52/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/documentation.cpp.o
+[53/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/dotview.cpp.o
+[54/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/enclosingclassmixin.cpp.o
+[55/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/filecache.cpp.o
+[56/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/fileout.cpp.o
+[57/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/include.cpp.o
+[58/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/modifications.cpp.o
+[59/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/messages.cpp.o
+[60/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/predefined_templates.cpp.o
+[61/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/optionsparser.cpp.o
+[62/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/pymethoddefentry.cpp.o
+[63/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/propertyspec.cpp.o
+[64/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/reporthandler.cpp.o
+[65/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/sourcelocation.cpp.o
+[66/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/textstream.cpp.o
+[67/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/typeparser.cpp.o
+[68/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/typesystem.cpp.o
+[69/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/typedatabase.cpp.o
+[70/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/xmlutils.cpp.o
+[71/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/clangparser/clangbuilder.cpp.o
+[72/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/clangparser/clangdebugutils.cpp.o
+[73/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/typesystemparser.cpp.o
+[74/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/clangparser/clangparser.cpp.o
+[75/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/clangparser/clangtype.cpp.o
+[76/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/clangparser/clangutils.cpp.o
+[77/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/clangparser/compilersupport.cpp.o
+[78/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/clangparser/triplet.cpp.o
+[79/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/parser/enumvalue.cpp.o
+[80/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/parser/typeinfo.cpp.o
+[81/794] Creating library symlink sources/shiboken6/libshiboken/libshiboken6.abi3.so.6.11 sources/shiboken6/libshiboken/libshiboken6.abi3.so
+[82/794] Automatic MOC for target pyside6
+[83/794] Generating qrc_libpyside.cpp
+Detected locale "C" with character encoding "646", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[84/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/pyside6_autogen/mocs_compilation.cpp.o
+[85/794] Building CXX object sources/shiboken6_generator/ApiExtractor/CMakeFiles/apiextractor.dir/parser/codemodel.cpp.o
+[86/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/class_property.cpp.o
+[87/794] Linking CXX static library sources/shiboken6_generator/ApiExtractor/libapiextractor.a
+[88/794] Automatic MOC for target shiboken6
+[89/794] Building CXX object sources/shiboken6_generator/generator/CMakeFiles/shiboken6.dir/shiboken6_autogen/mocs_compilation.cpp.o
+[90/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/dynamicqmetaobject.cpp.o
+[91/794] Building CXX object sources/shiboken6_generator/generator/CMakeFiles/shiboken6.dir/defaultvalue.cpp.o
+[92/794] Building CXX object sources/shiboken6_generator/generator/CMakeFiles/shiboken6.dir/generatorcontext.cpp.o
+[93/794] Building CXX object sources/shiboken6_generator/generator/CMakeFiles/shiboken6.dir/generator.cpp.o
+[94/794] Building CXX object sources/shiboken6_generator/generator/CMakeFiles/shiboken6.dir/main.cpp.o
+[95/794] Building CXX object sources/shiboken6_generator/generator/CMakeFiles/shiboken6.dir/shiboken/cppgenerator_container.cpp.o
+[96/794] Building CXX object sources/shiboken6_generator/generator/CMakeFiles/shiboken6.dir/shiboken/cppgenerator_smartpointer.cpp.o
+[97/794] Building CXX object sources/shiboken6_generator/generator/CMakeFiles/shiboken6.dir/shiboken/overridecacheentry.cpp.o
+[98/794] Building CXX object sources/shiboken6_generator/generator/CMakeFiles/shiboken6.dir/shiboken/generatorargument.cpp.o
+[99/794] Building CXX object sources/shiboken6_generator/generator/CMakeFiles/shiboken6.dir/shiboken/cppgenerator.cpp.o
+[100/794] Building CXX object sources/shiboken6_generator/generator/CMakeFiles/shiboken6.dir/shiboken/headergenerator.cpp.o
+[101/794] Building CXX object sources/shiboken6_generator/generator/CMakeFiles/shiboken6.dir/shiboken/overloaddata.cpp.o
+[102/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/dynamicslot.cpp.o
+[103/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/feature_select.cpp.o
+[104/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/signalmanager.cpp.o
+[105/794] Building CXX object sources/shiboken6_generator/generator/CMakeFiles/shiboken6.dir/shiboken/shibokengenerator.cpp.o
+[106/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/pysideclassdecorator.cpp.o
+[107/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/pysideglobals.cpp.o
+[108/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/pysideclassinfo.cpp.o
+[109/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/pysideqenum.cpp.o
+[110/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/pysideqslotobject_p.cpp.o
+[111/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/pysidemetafunction.cpp.o
+[112/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/pysidesignal.cpp.o
+[113/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/pysideslot.cpp.o
+[114/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/pysideproperty.cpp.o
+[115/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/pysidevariantutils.cpp.o
+[116/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/pysideweakref.cpp.o
+[117/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/pyside_numpy.cpp.o
+[118/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/pysidestaticstrings.cpp.o
+[119/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/pyside.cpp.o
+[120/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/qrc_libpyside.cpp.o
+[121/794] Building CXX object sources/pyside6/libpyside/CMakeFiles/pyside6.dir/qobjectconnect.cpp.o
+[122/794] Linking CXX shared library sources/pyside6/libpyside/libpyside6.abi3.so.6.11
+[123/794] Linking CXX executable sources/shiboken6_generator/generator/shiboken6
+[124/794] Running generator for QtCore...
+FAILED: [code=127] sources/pyside6/PySide6/QtCore/mjb_rejected_classes.log sources/pyside6/PySide6/QtCore/PySide6/QtCore/qabstractanimation_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qabstracteventdispatcher_timerinfo_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qabstracteventdispatcher_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qabstractitemmodel_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qabstractlistmodel_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qabstractnativeeventfilter_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qabstractproxymodel_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qabstracttablemodel_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qanimationgroup_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbasicmutex_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbasicreadwritelock_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbasictimer_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbitarray_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbuffer_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbytearray_frombase64result_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbytearray_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbytearraymatcher_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcalendar_systemid_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcalendar_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcalendar_yearmonthday_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcborarray_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcborerror_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcbormap_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcborparsererror_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcborstreamreader_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcborstreamwriter_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcborstringresultbytearray_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcborstringresultstring_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcborvalue_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qchildevent_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcollator_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcollatorsortkey_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcommandlineoption_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcommandlineparser_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qconcatenatetablesproxymodel_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcoreapplication_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcryptographichash_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdatastream_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdate_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdatetime_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdeadlinetimer_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdir_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdiriterator_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdirlisting_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdirlisting_direntry_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdynamicpropertychangeevent_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qeasingcurve_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qelapsedtimer_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qevent_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qeventloop_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qfactoryinterface_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qfile_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qfiledevice_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qfileinfo_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qfileselector_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qfilesystemwatcher_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qfutureinterfacebase_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qgenericargument_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qrangemodel_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qgenericreturnargument_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qhashseed_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qidentityproxymodel_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qiodevice_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qiodevicebase_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qitemselection_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qitemselectionmodel_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qitemselectionrange_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qjsonarray_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qjsondocument_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qjsonparseerror_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qjsonvalue_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qkeycombination_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qlibrary_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qlibraryinfo_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qline_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qlinef_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qlocale_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qlockfile_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qloggingcategory_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmargins_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmarginsf_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmessageauthenticationcode_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmessagelogcontext_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmetaclassinfo_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmetaenum_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmetamethod_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmetaobject_connection_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmetaobject_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmetaproperty_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmetatype_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmimedata_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmimedatabase_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmimetype_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmodelindex_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmodelroledata_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmodelroledataspan_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmutex_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qnativeipckey_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qobject_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qoperatingsystemversion_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qoperatingsystemversionbase_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qparallelanimationgroup_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qpauseanimation_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qpersistentmodelindex_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qpluginloader_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qpoint_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qpointf_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qpropertyanimation_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qrandomgenerator64_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qrandomgenerator_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qreadlocker_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qreadwritelock_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qrect_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qrectf_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qrecursivemutex_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qregularexpression_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qregularexpressionmatch_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qregularexpressionmatchiterator_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qresource_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qrunnable_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsavefile_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsemaphore_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsemaphorereleaser_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsequentialanimationgroup_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsettings_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsignalblocker_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsignalmapper_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsize_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsizef_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsocketdescriptor_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsocketnotifier_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsortfilterproxymodel_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qstandardpaths_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qstorageinfo_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qstringconverter_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qstringconverterbase_state_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qstringconverterbase_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qstringdecoder_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qstringencoder_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qstringlistmodel_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsysinfo_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsystemsemaphore_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qt_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcorehelper_qdirlistingiterator_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcorehelper_qgenericargumentholder_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcorehelper_qgenericreturnargumentholder_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcorehelper_qiopipe_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcorehelper_qmutexlocker_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtemporarydir_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtemporaryfile_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtextboundaryfinder_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtextstream_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtextstreammanipulator_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qthread_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qthreadpool_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtime_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtimeline_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtimer_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtimerevent_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtimezone_offsetdata_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtimezone_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtranslator_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtransposeproxymodel_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qurl_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qurlquery_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/quuid_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qvariantanimation_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qversionnumber_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qwaitcondition_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qwritelocker_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qxmlstreamattribute_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qxmlstreamattributes_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qxmlstreamentitydeclaration_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qxmlstreamentityresolver_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qxmlstreamnamespacedeclaration_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qxmlstreamnotationdeclaration_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qxmlstreamreader_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qxmlstreamwriter_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmessagelogger_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcore_module_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbluetoothpermission_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcalendarpermission_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcamerapermission_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcontactspermission_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qlocationpermission_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmicrophonepermission_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qpermission_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsharedmemory_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qprocess_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qprocess_unixprocessparameters_wrapper.cpp sources/pyside6/PySide6/QtCore/PySide6/QtCore/qprocessenvironment_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/mjb_rejected_classes.log /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qabstractanimation_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qabstracteventdispatcher_timerinfo_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qabstracteventdispatcher_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qabstractitemmodel_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qabstractlistmodel_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qabstractnativeeventfilter_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qabstractproxymodel_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qabstracttablemodel_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qanimationgroup_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbasicmutex_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbasicreadwritelock_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbasictimer_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbitarray_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbuffer_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbytearray_frombase64result_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbytearray_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbytearraymatcher_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcalendar_systemid_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcalendar_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcalendar_yearmonthday_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcborarray_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcborerror_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcbormap_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcborparsererror_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcborstreamreader_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcborstreamwriter_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcborstringresultbytearray_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcborstringresultstring_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcborvalue_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qchildevent_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcollator_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcollatorsortkey_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcommandlineoption_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcommandlineparser_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qconcatenatetablesproxymodel_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcoreapplication_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcryptographichash_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdatastream_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdate_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdatetime_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdeadlinetimer_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdir_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdiriterator_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdirlisting_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdirlisting_direntry_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qdynamicpropertychangeevent_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qeasingcurve_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qelapsedtimer_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qevent_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qeventloop_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qfactoryinterface_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qfile_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qfiledevice_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qfileinfo_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qfileselector_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qfilesystemwatcher_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qfutureinterfacebase_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qgenericargument_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qrangemodel_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qgenericreturnargument_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qhashseed_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qidentityproxymodel_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qiodevice_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qiodevicebase_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qitemselection_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qitemselectionmodel_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qitemselectionrange_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qjsonarray_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qjsondocument_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qjsonparseerror_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qjsonvalue_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qkeycombination_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qlibrary_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qlibraryinfo_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qline_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qlinef_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qlocale_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qlockfile_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qloggingcategory_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmargins_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmarginsf_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmessageauthenticationcode_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmessagelogcontext_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmetaclassinfo_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmetaenum_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmetamethod_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmetaobject_connection_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmetaobject_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmetaproperty_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmetatype_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmimedata_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmimedatabase_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmimetype_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmodelindex_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmodelroledata_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmodelroledataspan_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmutex_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qnativeipckey_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qobject_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qoperatingsystemversion_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qoperatingsystemversionbase_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qparallelanimationgroup_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qpauseanimation_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qpersistentmodelindex_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qpluginloader_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qpoint_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qpointf_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qpropertyanimation_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qrandomgenerator64_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qrandomgenerator_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qreadlocker_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qreadwritelock_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qrect_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qrectf_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qrecursivemutex_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qregularexpression_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qregularexpressionmatch_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qregularexpressionmatchiterator_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qresource_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qrunnable_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsavefile_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsemaphore_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsemaphorereleaser_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsequentialanimationgroup_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsettings_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsignalblocker_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsignalmapper_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsize_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsizef_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsocketdescriptor_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsocketnotifier_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsortfilterproxymodel_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qstandardpaths_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qstorageinfo_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qstringconverter_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qstringconverterbase_state_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qstringconverterbase_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qstringdecoder_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qstringencoder_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qstringlistmodel_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsysinfo_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsystemsemaphore_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qt_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcorehelper_qdirlistingiterator_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcorehelper_qgenericargumentholder_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcorehelper_qgenericreturnargumentholder_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcorehelper_qiopipe_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcorehelper_qmutexlocker_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtemporarydir_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtemporaryfile_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtextboundaryfinder_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtextstream_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtextstreammanipulator_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qthread_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qthreadpool_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtime_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtimeline_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtimer_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtimerevent_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtimezone_offsetdata_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtimezone_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtranslator_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtransposeproxymodel_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qurl_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qurlquery_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/quuid_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qvariantanimation_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qversionnumber_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qwaitcondition_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qwritelocker_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qxmlstreamattribute_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qxmlstreamattributes_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qxmlstreamentitydeclaration_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qxmlstreamentityresolver_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qxmlstreamnamespacedeclaration_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qxmlstreamnotationdeclaration_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qxmlstreamreader_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qxmlstreamwriter_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmessagelogger_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qtcore_module_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qbluetoothpermission_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcalendarpermission_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcamerapermission_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qcontactspermission_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qlocationpermission_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qmicrophonepermission_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qpermission_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qsharedmemory_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qprocess_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qprocess_unixprocessparameters_wrapper.cpp /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore/PySide6/QtCore/qprocessenvironment_wrapper.cpp
+cd /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside6/PySide6/QtCore && /home/folimeld/native-build/pyside-build/.qfp/bin/shiboken_wrapper.sh /home/folimeld/native-build/pyside-build/sources/shiboken6_generator/generator/shiboken6 --generator-set=shiboken --enable-parent-ctor-heuristic --enable-pyside-extensions --enable-return-value-heuristic --use-isnull-as-nb-bool --include-paths=/home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside6/PySide6:/usr/pkg/qt6/mkspecs/netbsd-g++:/usr/pkg/qt6/include:/usr/pkg/qt6/include/QtCore:/usr/X11R7/include --typesystem-paths=/home/folimeld/native-build/pyside-build/sources/pyside6/PySide6:/home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside6/PySide6:/home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside6/PySide6/QtCore --output-directory=/home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore --license-file=/home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside6/PySide6/QtCore/../licensecomment.txt --lean-headers --api-version=6.11.2 /home/folimeld/native-build/pyside-build/sources/pyside6/PySide6/QtCore_global.h /home/folimeld/native-build/pyside-setup-everywhere-src-6.11.2/sources/pyside6/PySide6/QtCore/typesystem_core.xml
+sh: /home/folimeld/native-build/pyside-build/.qfp/bin/shiboken_wrapper.sh: not found
+[125/794] Creating library symlink sources/pyside6/libpyside/libpyside6.abi3.so
+ninja: build stopped: subcommand failed.

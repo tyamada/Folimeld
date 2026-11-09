@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "pages": [
+    {
+      "saved_page": 1,
+      "original_page": 2,
+      "rotation": 0,
+      "content_matches": true
+    },
+    {
+      "saved_page": 2,
+      "original_page": 1,
+      "rotation": 90,
+      "content_matches": true
+    },
+    {
+      "saved_page": 3,
+      "original_page": 3,
+      "rotation": 0,
+      "content_matches": true
+    },
+    {
+      "saved_page": 4,
+      "original_page": 4,
+      "rotation": 0,
+      "content_matches": true
+    },
+    {
+      "saved_page": 5,
+      "original_page": 5,
+      "rotation": 0,
+      "content_matches": true
+    },
+    {
+      "saved_page": 6,
+      "original_page": 6,
+      "rotation": 0,
+      "content_matches": true
+    },
+    {
+      "saved_page": 7,
+      "original_page": 7,
+      "rotation": 0,
+      "content_matches": true
+    },
+    {
+      "saved_page": 8,
+      "original_page": 8,
+      "rotation": 0,
+      "content_matches": true
+    }
+  ],
+  "source_unchanged": true,
+  "saved_sha256": "d1d3ee2982a4a46faa3cf47a5247b9158ced9361f87372d52542e7fb1883ec6b",
+  "recovery": {
+    "passed": true,
+    "rotations": [
+      90,
+      90,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "readonly_directory_empty": true,
+    "sha256": "d55524f581e3d1ff7731a5a9572c22709b55f037e6a06b8c79c51224a15f9cd8"
+  }
+}

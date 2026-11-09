@@ -1,0 +1,23 @@
+altgraph==0.17.5
+cffi==2.1.1
+clang==21.1.7
+cryptography==50.0.1
+iniconfig==2.3.0
+librt==0.16.0
+mypy==1.20.2
+mypy_extensions==1.1.0
+packaging==26.3
+pathspec==1.1.1
+pillow==12.3.0
+pipcl==13
+pluggy==1.6.0
+psutil==7.2.2
+pycparser==3.0
+Pygments==2.21.0
+pyinstaller==6.22.2
+pyinstaller-hooks-contrib==2026.7
+pymupdf @ file:///home/folimeld/native-build/wheels/pymupdf-1.28.2-cp312-abi3-netbsd_11_1_amd64.whl#sha256=97559195934646c03579a9fe00eaa22a18104389b6500e797529c66329e64012
+pytest==9.1.1
+setuptools==84.0.0
+typing_extensions==4.16.0
+wheel==0.48.0
