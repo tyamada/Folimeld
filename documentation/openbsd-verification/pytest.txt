@@ -1,0 +1,16 @@
+........................................s............... [ 14%]
+........................................................ [ 28%]
+........................................................................ [ 46%]
+........................................................................ [ 64%]
+..............ssssssss.................................................. [ 83%]
+...................................................................      [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_folder_dialog.py:13: Windows registry integration
+SKIPPED [1] tests/test_msix_preflight.py:119: Windows PowerShell build entry point
+SKIPPED [3] tests/test_msix_test_bundle.py:27: Windows PowerShell packaging helpers
+SKIPPED [1] tests/test_msix_test_bundle.py:38: Windows PowerShell packaging helpers
+SKIPPED [1] tests/test_msix_test_bundle.py:51: Windows PowerShell packaging helpers
+SKIPPED [2] tests/test_msix_test_bundle.py:59: Windows PowerShell packaging helpers
+386 passed, 9 skipped, 32 subtests passed in 34.62s
+
+(process:63709): GLib-CRITICAL **: 14:39:20.323: g_main_context_pop_thread_default: assertion 'stack != NULL' failed

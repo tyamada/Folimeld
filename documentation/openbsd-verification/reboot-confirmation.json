@@ -1,0 +1,11 @@
+{
+  "platform": "OpenBSD-8.0-amd64-64bit-ELF",
+  "python": "3.14.9",
+  "PyMuPDF": "1.28.2",
+  "PySide6": "6.11.2",
+  "output_hashes_preserved": 11,
+  "original_sample_preserved": true,
+  "language": "ja",
+  "thumbnail_size": 288,
+  "active_window": "gui-manual-after.pdf — Folimeld"
+}

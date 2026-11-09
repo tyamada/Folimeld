@@ -28,6 +28,8 @@ Choose File → Exit to close the app, with a save prompt for unsaved changes. O
 - Available in Japanese, English, German, Spanish, French, Korean, Portuguese, and Chinese
 - Runs on Windows (both Intel/AMD (x64) and ARM (arm64) editions), macOS, Ubuntu, and Debian
 
+Source execution has been verified on OpenBSD 8.0 / amd64 in a VirtualBox VM with 1 vCPU and 16 GiB RAM. Building the dependencies requires a patch. No distribution package has been created. See the [OpenBSD verification record (Japanese)](documentation/openbsd-verification_ja.md) for setup instructions and the scope of verification.
+
 ## Downloads
 
 Only Linux packages are publicly distributed. Windows and macOS binaries remain private for local development and verification. Linux 0.3.3 packages, matching source ZIPs, checksums and build records are available in the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3). The download links below now point to that Release. See the [migration plan and implementation record](documentation/linux-release-migration.md). Existing repository download URLs remain available for compatibility.

@@ -1,0 +1,128 @@
+File: gui-manual-after.pdf
+checking /home/folimeld/Folimeld/build/openbsd-verification/gui-manual-after.pdf
+PDF Version: 1.5
+File is not encrypted
+File is not linearized
+No syntax or stream encoding errors found; the file may still contain
+errors that qpdf cannot detect
+
+
+File: gui-properties.pdf
+checking /home/folimeld/Folimeld/build/openbsd-verification/gui-properties.pdf
+PDF Version: 1.7
+File is not encrypted
+File is not linearized
+No syntax or stream encoding errors found; the file may still contain
+errors that qpdf cannot detect
+
+
+File: gui-forms.pdf
+checking /home/folimeld/Folimeld/build/openbsd-verification/gui-forms.pdf
+PDF Version: 1.7
+File is not encrypted
+File is not linearized
+No syntax or stream encoding errors found; the file may still contain
+errors that qpdf cannot detect
+
+
+File: gui-encrypted.pdf
+checking /home/folimeld/Folimeld/build/openbsd-verification/gui-encrypted.pdf
+PDF Version: 1.7
+R = 6
+P = -2052
+User password = OpenBSD-test-only
+Supplied password is user password
+extract for accessibility: allowed
+extract for any purpose: allowed
+print low resolution: allowed
+print high resolution: not allowed
+modify document assembly: allowed
+modify forms: allowed
+modify annotations: allowed
+modify other: allowed
+modify anything: allowed
+stream encryption method: AESv3
+string encryption method: AESv3
+file encryption method: AESv3
+File is not linearized
+No syntax or stream encoding errors found; the file may still contain
+errors that qpdf cannot detect
+
+
+File: gui-password-changed.pdf
+checking /home/folimeld/Folimeld/build/openbsd-verification/gui-password-changed.pdf
+PDF Version: 1.7
+R = 6
+P = -2052
+User password = OpenBSD-changed-only
+Supplied password is user password
+extract for accessibility: allowed
+extract for any purpose: allowed
+print low resolution: allowed
+print high resolution: not allowed
+modify document assembly: allowed
+modify forms: allowed
+modify annotations: allowed
+modify other: allowed
+modify anything: allowed
+stream encryption method: AESv3
+string encryption method: AESv3
+file encryption method: AESv3
+File is not linearized
+No syntax or stream encoding errors found; the file may still contain
+errors that qpdf cannot detect
+
+
+File: gui-password-removed.pdf
+checking /home/folimeld/Folimeld/build/openbsd-verification/gui-password-removed.pdf
+PDF Version: 1.7
+File is not encrypted
+File is not linearized
+No syntax or stream encoding errors found; the file may still contain
+errors that qpdf cannot detect
+
+
+File: gui-images.pdf
+checking /home/folimeld/Folimeld/build/openbsd-verification/gui-images.pdf
+PDF Version: 1.7
+File is not encrypted
+File is not linearized
+No syntax or stream encoding errors found; the file may still contain
+errors that qpdf cannot detect
+
+
+File: gui-recovered.pdf
+checking /home/folimeld/Folimeld/build/openbsd-verification/gui-recovered.pdf
+PDF Version: 1.7
+File is not encrypted
+File is not linearized
+No syntax or stream encoding errors found; the file may still contain
+errors that qpdf cannot detect
+
+
+File: 日本語 sample.pdf
+checking /home/folimeld/Folimeld/build/openbsd-verification/日本語 sample.pdf
+PDF Version: 1.5
+File is not encrypted
+File is not linearized
+No syntax or stream encoding errors found; the file may still contain
+errors that qpdf cannot detect
+
+
+File: gui-load-1000.pdf
+checking /home/folimeld/Folimeld/build/openbsd-verification/gui-load-1000.pdf
+PDF Version: 1.7
+File is not encrypted
+File is not linearized
+No syntax or stream encoding errors found; the file may still contain
+errors that qpdf cannot detect
+
+
+File: gui-history-restored.pdf
+checking /home/folimeld/Folimeld/build/openbsd-verification/gui-history-restored.pdf
+PDF Version: 1.7
+File is not encrypted
+File is not linearized
+No syntax or stream encoding errors found; the file may still contain
+errors that qpdf cannot detect
+

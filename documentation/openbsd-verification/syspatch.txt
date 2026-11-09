@@ -1,0 +1,20 @@
+Get/Verify syspatch80-001_ppp.tgz
+Installing patch 001_ppp
+Get/Verify syspatch80-002_nsd.tgz
+Installing patch 002_nsd
+Get/Verify syspatch80-003_aesgmac.tgz
+Installing patch 003_aesgmac
+Get/Verify syspatch80-004_video.tgz
+Installing patch 004_video
+Get/Verify syspatch80-005_dbupdate.tgz
+Installing patch 005_dbupdate
+Get/Verify syspatch80-006_isakmpd.tgz
+Installing patch 006_isakmpd
+Get/Verify syspatch80-007_xlibs.tgz
+Installing patch 007_xlibs
+Get/Verify syspatch80-008_pffq.tgz
+Installing patch 008_pffq
+Get/Verify syspatch80-009_unveil.tgz
+Installing patch 009_unveil
+Relinking to create unique kernel... done; reboot to load the new kernel
+Errata can be reviewed under /var/syspatch

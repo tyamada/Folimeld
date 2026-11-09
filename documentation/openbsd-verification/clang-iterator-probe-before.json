@@ -1,0 +1,249 @@
+{
+  "diagnostics": [],
+  "types": {
+    "fz_stext_line": {
+      "typedef_location": "<SourceLocation file 'include/mupdf/fitz/structured-text.h', line 93, column 30>",
+      "canonical": "fz_stext_line",
+      "declaration": "<SourceLocation file 'include/mupdf/fitz/structured-text.h', line 93, column 16>",
+      "is_definition": false,
+      "fields": [
+        "wmode",
+        "flags",
+        "dir",
+        "bbox",
+        "first_char",
+        "last_char",
+        "prev",
+        "next"
+      ],
+      "definition": "<SourceLocation file 'include/mupdf/fitz/structured-text.h', line 468, column 8>",
+      "definition_fields": [
+        "wmode",
+        "flags",
+        "dir",
+        "bbox",
+        "first_char",
+        "last_char",
+        "prev",
+        "next"
+      ]
+    },
+    "fz_stext_block": {
+      "typedef_location": "<SourceLocation file 'include/mupdf/fitz/structured-text.h', line 94, column 31>",
+      "canonical": "fz_stext_block",
+      "declaration": "<SourceLocation file 'include/mupdf/fitz/structured-text.h', line 94, column 16>",
+      "is_definition": false,
+      "fields": [
+        "type",
+        "id",
+        "bbox",
+        "u",
+        "prev",
+        "next"
+      ],
+      "definition": "<SourceLocation file 'include/mupdf/fitz/structured-text.h', line 445, column 8>",
+      "definition_fields": [
+        "type",
+        "id",
+        "bbox",
+        "u",
+        "prev",
+        "next"
+      ]
+    },
+    "fz_stext_page": {
+      "typedef_location": "<SourceLocation file 'include/mupdf/fitz/structured-text.h', line 359, column 3>",
+      "canonical": "fz_stext_page",
+      "declaration": "<SourceLocation file 'include/mupdf/fitz/structured-text.h', line 343, column 9>",
+      "is_definition": true,
+      "fields": [
+        "refs",
+        "pool",
+        "mediabox",
+        "first_block",
+        "last_block",
+        "last_struct",
+        "id_list"
+      ],
+      "definition": "<SourceLocation file 'include/mupdf/fitz/structured-text.h', line 343, column 9>",
+      "definition_fields": [
+        "refs",
+        "pool",
+        "mediabox",
+        "first_block",
+        "last_block",
+        "last_struct",
+        "id_list"
+      ]
+    }
+  },
+  "iterators": {
+    "fz_stext_line": {
+      "name": "first_char",
+      "found": "<SourceLocation file 'include/mupdf/fitz/structured-text.h', line 474, column 17>",
+      "members": [
+        [
+          "wmode",
+          "CursorKind.FIELD_DECL",
+          "uint8_t"
+        ],
+        [
+          "flags",
+          "CursorKind.FIELD_DECL",
+          "uint8_t"
+        ],
+        [
+          "dir",
+          "CursorKind.FIELD_DECL",
+          "fz_point"
+        ],
+        [
+          "bbox",
+          "CursorKind.FIELD_DECL",
+          "fz_rect"
+        ],
+        [
+          "first_char",
+          "CursorKind.FIELD_DECL",
+          "fz_stext_char *"
+        ],
+        [
+          "last_char",
+          "CursorKind.FIELD_DECL",
+          "fz_stext_char *"
+        ],
+        [
+          "prev",
+          "CursorKind.FIELD_DECL",
+          "fz_stext_line *"
+        ],
+        [
+          "next",
+          "CursorKind.FIELD_DECL",
+          "fz_stext_line *"
+        ]
+      ]
+    },
+    "fz_stext_block": {
+      "name": "u.t.first_line",
+      "found": null,
+      "members": [
+        [
+          "type",
+          "CursorKind.FIELD_DECL",
+          "int"
+        ],
+        [
+          "id",
+          "CursorKind.FIELD_DECL",
+          "int"
+        ],
+        [
+          "bbox",
+          "CursorKind.FIELD_DECL",
+          "fz_rect"
+        ],
+        [
+          "(unnamed union at include/mupdf/fitz/structured-text.h:450:2)",
+          "CursorKind.UNION_DECL",
+          "fz_stext_block::(unnamed union at include/mupdf/fitz/structured-text.h:450:2)"
+        ],
+        [
+          "u",
+          "CursorKind.FIELD_DECL",
+          "union (unnamed at include/mupdf/fitz/structured-text.h:450:2)"
+        ],
+        [
+          "prev",
+          "CursorKind.FIELD_DECL",
+          "fz_stext_block *"
+        ],
+        [
+          "next",
+          "CursorKind.FIELD_DECL",
+          "fz_stext_block *"
+        ]
+      ]
+    },
+    "fz_stext_page": {
+      "name": "first_block",
+      "found": "<SourceLocation file 'include/mupdf/fitz/structured-text.h', line 348, column 18>",
+      "members": [
+        [
+          "refs",
+          "CursorKind.FIELD_DECL",
+          "int"
+        ],
+        [
+          "pool",
+          "CursorKind.FIELD_DECL",
+          "fz_pool *"
+        ],
+        [
+          "mediabox",
+          "CursorKind.FIELD_DECL",
+          "fz_rect"
+        ],
+        [
+          "first_block",
+          "CursorKind.FIELD_DECL",
+          "fz_stext_block *"
+        ],
+        [
+          "last_block",
+          "CursorKind.FIELD_DECL",
+          "fz_stext_block *"
+        ],
+        [
+          "last_struct",
+          "CursorKind.FIELD_DECL",
+          "fz_stext_struct *"
+        ],
+        [
+          "id_list",
+          "CursorKind.FIELD_DECL",
+          "fz_pool_array *"
+        ]
+      ]
+    }
+  },
+  "nested": {
+    "u": {
+      "location": "<SourceLocation file 'include/mupdf/fitz/structured-text.h', line 456, column 4>",
+      "kind": "CursorKind.FIELD_DECL",
+      "type_kind": "TypeKind.RECORD",
+      "type": "union (unnamed at include/mupdf/fitz/structured-text.h:450:2)",
+      "members": [
+        [
+          "(unnamed union at include/mupdf/fitz/structured-text.h:450:2)",
+          "CursorKind.UNION_DECL",
+          "fz_stext_block::(unnamed union at include/mupdf/fitz/structured-text.h:450:2)"
+        ]
+      ],
+      "fields": [
+        [
+          "t",
+          "CursorKind.FIELD_DECL"
+        ],
+        [
+          "i",
+          "CursorKind.FIELD_DECL"
+        ],
+        [
+          "s",
+          "CursorKind.FIELD_DECL"
+        ],
+        [
+          "v",
+          "CursorKind.FIELD_DECL"
+        ],
+        [
+          "b",
+          "CursorKind.FIELD_DECL"
+        ]
+      ]
+    },
+    "u.t": null,
+    "u.t.first_line": null
+  }
+}

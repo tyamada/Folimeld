@@ -1,0 +1,1413 @@
+FF.....FFFF..................F..FFFFF...s..FFF..........F....... [ 16%]
+........................................................................ [ 34%]
+........................................................................ [ 52%]
+..............................................................ssssssss.. [ 70%]
+.......FF..................................................FFFF........F [ 89%]
+...................FFFFFFFFFFFF............                              [100%]
+=================================== FAILURES ===================================
+________________ test_image_benchmark_keeps_input_unchanged[0] _________________
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_image_benchmark_keeps_inp0')
+history_limit = 0
+
+    @pytest.mark.parametrize("history_limit", [0, 128 * 1024 * 1024])
+    def test_image_benchmark_keeps_input_unchanged(tmp_path, history_limit):
+        source = tmp_path / "source.pdf"
+        saved = tmp_path / "saved.pdf"
+        create_fixture(source, pages=2, image_size=16)
+        original = hashlib.sha256(source.read_bytes()).digest()
+        with patch("folimeld.app.PdfDocument", side_effect=lambda: PdfDocument(history_limit, 0)):
+>           result = benchmark(source, saved)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_benchmark_pdf.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tools/benchmark_pdf.py:73: in benchmark
+    window = MainWindow()
+             ^^^^^^^^^^^^
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+____________ test_image_benchmark_keeps_input_unchanged[134217728] _____________
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_image_benchmark_keeps_inp1')
+history_limit = 134217728
+
+    @pytest.mark.parametrize("history_limit", [0, 128 * 1024 * 1024])
+    def test_image_benchmark_keeps_input_unchanged(tmp_path, history_limit):
+        source = tmp_path / "source.pdf"
+        saved = tmp_path / "saved.pdf"
+        create_fixture(source, pages=2, image_size=16)
+        original = hashlib.sha256(source.read_bytes()).digest()
+        with patch("folimeld.app.PdfDocument", side_effect=lambda: PdfDocument(history_limit, 0)):
+>           result = benchmark(source, saved)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_benchmark_pdf.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tools/benchmark_pdf.py:73: in benchmark
+    window = MainWindow()
+             ^^^^^^^^^^^^
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+_____________ test_button_display_applies_and_persists[icon_text] ______________
+
+mode = 'icon_text'
+
+    @pytest.mark.parametrize("mode", BUTTON_STYLES)
+    def test_button_display_applies_and_persists(mode):
+        app = QApplication.instance() or QApplication([])
+        settings = {}
+        with (patch("folimeld.app.QSettings") as factory,
+              patch("folimeld.app.is_packaged", return_value=False)):
+            factory.return_value.value.side_effect = lambda key, default=None: settings.get(key, default)
+            factory.return_value.setValue.side_effect = settings.__setitem__
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_button_display.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+________________ test_button_display_applies_and_persists[icon] ________________
+
+mode = 'icon'
+
+    @pytest.mark.parametrize("mode", BUTTON_STYLES)
+    def test_button_display_applies_and_persists(mode):
+        app = QApplication.instance() or QApplication([])
+        settings = {}
+        with (patch("folimeld.app.QSettings") as factory,
+              patch("folimeld.app.is_packaged", return_value=False)):
+            factory.return_value.value.side_effect = lambda key, default=None: settings.get(key, default)
+            factory.return_value.setValue.side_effect = settings.__setitem__
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_button_display.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+________________ test_button_display_applies_and_persists[text] ________________
+
+mode = 'text'
+
+    @pytest.mark.parametrize("mode", BUTTON_STYLES)
+    def test_button_display_applies_and_persists(mode):
+        app = QApplication.instance() or QApplication([])
+        settings = {}
+        with (patch("folimeld.app.QSettings") as factory,
+              patch("folimeld.app.is_packaged", return_value=False)):
+            factory.return_value.value.side_effect = lambda key, default=None: settings.get(key, default)
+            factory.return_value.setValue.side_effect = settings.__setitem__
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_button_display.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+________________ test_invalid_button_display_falls_back_to_text ________________
+
+    def test_invalid_button_display_falls_back_to_text():
+        app = QApplication.instance() or QApplication([])
+        with (patch("folimeld.app.QSettings") as factory,
+              patch("folimeld.app.is_packaged", return_value=False)):
+            factory.return_value.value.side_effect = lambda key, default=None: "unknown" if key == "button_display" else default
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_button_display.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+_ PageDisplayTest.test_cover_notice_uses_real_translator_and_restores_display __
+
+self = <test_details.PageDisplayTest testMethod=test_cover_notice_uses_real_translator_and_restores_display>
+
+    def test_cover_notice_uses_real_translator_and_restores_display(self) -> None:
+        model = PdfDocument()
+        model.doc = fitz.open()
+        model.doc.new_page()
+        self.addCleanup(model.close)
+>       translator = I18n()
+                     ^^^^^^
+
+tests/test_details.py:85: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+_________________ test_edit_errors_are_reported[rotate-args0] __________________
+
+method = 'rotate', args = (90,)
+
+    @pytest.mark.parametrize("method,args", [
+        ("rotate", (90,)), ("move", (1,)), ("reorder_page", (0, 1)),
+    ])
+    def test_edit_errors_are_reported(method, args):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_edit_errors.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+__________________ test_edit_errors_are_reported[move-args1] ___________________
+
+method = 'move', args = (1,)
+
+    @pytest.mark.parametrize("method,args", [
+        ("rotate", (90,)), ("move", (1,)), ("reorder_page", (0, 1)),
+    ])
+    def test_edit_errors_are_reported(method, args):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_edit_errors.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+______________ test_edit_errors_are_reported[reorder_page-args2] _______________
+
+method = 'reorder_page', args = (0, 1)
+
+    @pytest.mark.parametrize("method,args", [
+        ("rotate", (90,)), ("move", (1,)), ("reorder_page", (0, 1)),
+    ])
+    def test_edit_errors_are_reported(method, args):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_edit_errors.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+___________ test_properties_failure_rolls_back_and_keeps_dialog_open ___________
+
+    def test_properties_failure_rolls_back_and_keeps_dialog_open():
+        from folimeld.dialogs import PropertiesDialog
+    
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_edit_errors.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+___________ test_rollback_reconnects_thumbnails_to_restored_document ___________
+
+    def test_rollback_reconnects_thumbnails_to_restored_document():
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_edit_errors.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+_______________ test_exit_action_preserves_unsaved_confirmation ________________
+
+    def test_exit_action_preserves_unsaved_confirmation():
+        _app = QApplication.instance() or QApplication([])
+>       window = MainWindow()
+                 ^^^^^^^^^^^^
+
+tests/test_folder_dialog.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+______________ test_help_available_without_pdf_and_reuses_window _______________
+
+    def test_help_available_without_pdf_and_reuses_window():
+        app = QApplication.instance() or QApplication([])
+        with patch("folimeld.app.is_packaged", return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_help.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+__________________ test_help_is_translated_in_every_language ___________________
+
+    def test_help_is_translated_in_every_language():
+        root = Path(__file__).resolve().parent.parent / "locales"
+>       english = json.loads((root / "en.json").read_text(encoding="utf-8"))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_help.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/local/lib/python3.14/pathlib/__init__.py:787: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+________________________ test_ui_and_grouped_properties ________________________
+
+model = <folimeld.model.PdfDocument object at 0x646b10bd3d0>
+
+    def test_ui_and_grouped_properties(model):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_history.py:196: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+______ test_spawned_save_keeps_qt_responsive_and_preserves_editing[False] ______
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_spawned_save_keeps_qt_res0')
+failure = False
+
+    @pytest.mark.parametrize('failure', [False, True])
+    def test_spawned_save_keeps_qt_responsive_and_preserves_editing(tmp_path, failure):
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_pdf_save.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+______ test_spawned_save_keeps_qt_responsive_and_preserves_editing[True] _______
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_spawned_save_keeps_qt_res1')
+failure = True
+
+    @pytest.mark.parametrize('failure', [False, True])
+    def test_spawned_save_keeps_qt_responsive_and_preserves_editing(tmp_path, failure):
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_pdf_save.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+___________________ test_sponsors_entry_is_linux_only[linux] ___________________
+
+platform = 'linux'
+
+    @pytest.mark.parametrize("platform", ["linux", "win32", "darwin"])
+    def test_sponsors_entry_is_linux_only(platform):
+        app = QApplication.instance() or QApplication([])
+        with patch("folimeld.app.sys.platform", platform), patch("folimeld.app.is_packaged", return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_sponsors.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+___________________ test_sponsors_entry_is_linux_only[win32] ___________________
+
+platform = 'win32'
+
+    @pytest.mark.parametrize("platform", ["linux", "win32", "darwin"])
+    def test_sponsors_entry_is_linux_only(platform):
+        app = QApplication.instance() or QApplication([])
+        with patch("folimeld.app.sys.platform", platform), patch("folimeld.app.is_packaged", return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_sponsors.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+__________________ test_sponsors_entry_is_linux_only[darwin] ___________________
+
+platform = 'darwin'
+
+    @pytest.mark.parametrize("platform", ["linux", "win32", "darwin"])
+    def test_sponsors_entry_is_linux_only(platform):
+        app = QApplication.instance() or QApplication([])
+        with patch("folimeld.app.sys.platform", platform), patch("folimeld.app.is_packaged", return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_sponsors.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+__________________________ test_sponsors_translations __________________________
+
+    def test_sponsors_translations():
+>       translator = I18n()
+                     ^^^^^^
+
+tests/test_sponsors.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+__________________ test_non_store_build_has_no_purchase_menu ___________________
+
+    def test_non_store_build_has_no_purchase_menu():
+        from folimeld.app import MainWindow
+        _app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_store_support.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+_ test_viewport_search_matches_full_scan_without_visiting_every_page[144-700] __
+
+size = 144, width = 700
+
+    @pytest.mark.parametrize('size,width', [(144, 700), (288, 700), (432, 700), (288, 1400)])
+    def test_viewport_search_matches_full_scan_without_visiting_every_page(size, width):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_thumbnails.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+_ test_viewport_search_matches_full_scan_without_visiting_every_page[288-700] __
+
+size = 288, width = 700
+
+    @pytest.mark.parametrize('size,width', [(144, 700), (288, 700), (432, 700), (288, 1400)])
+    def test_viewport_search_matches_full_scan_without_visiting_every_page(size, width):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_thumbnails.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+_ test_viewport_search_matches_full_scan_without_visiting_every_page[432-700] __
+
+size = 432, width = 700
+
+    @pytest.mark.parametrize('size,width', [(144, 700), (288, 700), (432, 700), (288, 1400)])
+    def test_viewport_search_matches_full_scan_without_visiting_every_page(size, width):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_thumbnails.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+_ test_viewport_search_matches_full_scan_without_visiting_every_page[288-1400] _
+
+size = 288, width = 1400
+
+    @pytest.mark.parametrize('size,width', [(144, 700), (288, 700), (432, 700), (288, 1400)])
+    def test_viewport_search_matches_full_scan_without_visiting_every_page(size, width):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_thumbnails.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+________ test_thumbnail_reuse_rotation_reorder_and_document_replacement ________
+
+    def test_thumbnail_reuse_rotation_reorder_and_document_replacement():
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_thumbnails.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+___________ test_pending_renders_are_cancelled_when_document_changes ___________
+
+    def test_pending_renders_are_cancelled_when_document_changes():
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_thumbnails.py:88: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+____________ test_slow_thumbnail_yields_before_rendering_four_pages ____________
+
+    def test_slow_thumbnail_yields_before_rendering_four_pages():
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_thumbnails.py:108: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+__ test_large_document_renders_near_viewport_and_releases_scrolled_out_icons ___
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_large_document_renders_ne0')
+
+    def test_large_document_renders_near_viewport_and_releases_scrolled_out_icons(tmp_path):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_thumbnails.py:131: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+__________________ test_toolbar_binding_round_trip[1.4-False] __________________
+
+cover = False, version = '1.4'
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_toolbar_binding_round_tri0')
+
+    @pytest.mark.parametrize('cover', [False, True])
+    @pytest.mark.parametrize('version', ['1.4', '1.7'])
+    def test_toolbar_binding_round_trip(cover, version, tmp_path):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_toolbar_properties.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+__________________ test_toolbar_binding_round_trip[1.4-True] ___________________
+
+cover = True, version = '1.4'
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_toolbar_binding_round_tri1')
+
+    @pytest.mark.parametrize('cover', [False, True])
+    @pytest.mark.parametrize('version', ['1.4', '1.7'])
+    def test_toolbar_binding_round_trip(cover, version, tmp_path):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_toolbar_properties.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+__________________ test_toolbar_binding_round_trip[1.7-False] __________________
+
+cover = False, version = '1.7'
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_toolbar_binding_round_tri2')
+
+    @pytest.mark.parametrize('cover', [False, True])
+    @pytest.mark.parametrize('version', ['1.4', '1.7'])
+    def test_toolbar_binding_round_trip(cover, version, tmp_path):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_toolbar_properties.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+__________________ test_toolbar_binding_round_trip[1.7-True] ___________________
+
+cover = True, version = '1.7'
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_toolbar_binding_round_tri3')
+
+    @pytest.mark.parametrize('cover', [False, True])
+    @pytest.mark.parametrize('version', ['1.4', '1.7'])
+    def test_toolbar_binding_round_trip(cover, version, tmp_path):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+>           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_toolbar_properties.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_folder_dialog.py:13: Windows registry integration
+SKIPPED [1] tests/test_msix_preflight.py:119: Windows PowerShell build entry point
+SKIPPED [3] tests/test_msix_test_bundle.py:27: Windows PowerShell packaging helpers
+SKIPPED [1] tests/test_msix_test_bundle.py:38: Windows PowerShell packaging helpers
+SKIPPED [1] tests/test_msix_test_bundle.py:51: Windows PowerShell packaging helpers
+SKIPPED [2] tests/test_msix_test_bundle.py:59: Windows PowerShell packaging helpers
+FAILED tests/test_benchmark_pdf.py::test_image_benchmark_keeps_input_unchanged[0]
+FAILED tests/test_benchmark_pdf.py::test_image_benchmark_keeps_input_unchanged[134217728]
+FAILED tests/test_button_display.py::test_button_display_applies_and_persists[icon_text]
+FAILED tests/test_button_display.py::test_button_display_applies_and_persists[icon]
+FAILED tests/test_button_display.py::test_button_display_applies_and_persists[text]
+FAILED tests/test_button_display.py::test_invalid_button_display_falls_back_to_text
+FAILED tests/test_details.py::PageDisplayTest::test_cover_notice_uses_real_translator_and_restores_display
+FAILED tests/test_edit_errors.py::test_edit_errors_are_reported[rotate-args0]
+FAILED tests/test_edit_errors.py::test_edit_errors_are_reported[move-args1]
+FAILED tests/test_edit_errors.py::test_edit_errors_are_reported[reorder_page-args2]
+FAILED tests/test_edit_errors.py::test_properties_failure_rolls_back_and_keeps_dialog_open
+FAILED tests/test_edit_errors.py::test_rollback_reconnects_thumbnails_to_restored_document
+FAILED tests/test_folder_dialog.py::test_exit_action_preserves_unsaved_confirmation
+FAILED tests/test_help.py::test_help_available_without_pdf_and_reuses_window
+FAILED tests/test_help.py::test_help_is_translated_in_every_language - FileNo...
+FAILED tests/test_history.py::test_ui_and_grouped_properties - FileNotFoundEr...
+FAILED tests/test_pdf_save.py::test_spawned_save_keeps_qt_responsive_and_preserves_editing[False]
+FAILED tests/test_pdf_save.py::test_spawned_save_keeps_qt_responsive_and_preserves_editing[True]
+FAILED tests/test_sponsors.py::test_sponsors_entry_is_linux_only[linux] - Fil...
+FAILED tests/test_sponsors.py::test_sponsors_entry_is_linux_only[win32] - Fil...
+FAILED tests/test_sponsors.py::test_sponsors_entry_is_linux_only[darwin] - Fi...
+FAILED tests/test_sponsors.py::test_sponsors_translations - FileNotFoundError...
+FAILED tests/test_store_support.py::test_non_store_build_has_no_purchase_menu
+FAILED tests/test_thumbnails.py::test_viewport_search_matches_full_scan_without_visiting_every_page[144-700]
+FAILED tests/test_thumbnails.py::test_viewport_search_matches_full_scan_without_visiting_every_page[288-700]
+FAILED tests/test_thumbnails.py::test_viewport_search_matches_full_scan_without_visiting_every_page[432-700]
+FAILED tests/test_thumbnails.py::test_viewport_search_matches_full_scan_without_visiting_every_page[288-1400]
+FAILED tests/test_thumbnails.py::test_thumbnail_reuse_rotation_reorder_and_document_replacement
+FAILED tests/test_thumbnails.py::test_pending_renders_are_cancelled_when_document_changes
+FAILED tests/test_thumbnails.py::test_slow_thumbnail_yields_before_rendering_four_pages
+FAILED tests/test_thumbnails.py::test_large_document_renders_near_viewport_and_releases_scrolled_out_icons
+FAILED tests/test_toolbar_properties.py::test_toolbar_binding_round_trip[1.4-False]
+FAILED tests/test_toolbar_properties.py::test_toolbar_binding_round_trip[1.4-True]
+FAILED tests/test_toolbar_properties.py::test_toolbar_binding_round_trip[1.7-False]
+FAILED tests/test_toolbar_properties.py::test_toolbar_binding_round_trip[1.7-True]
+35 failed, 351 passed, 9 skipped, 8 subtests passed in 49.17s
+
+(process:14103): GLib-CRITICAL **: 14:38:08.851: g_main_context_pop_thread_default: assertion 'stack != NULL' failed

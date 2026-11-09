@@ -1,0 +1,37 @@
+{
+  "platform": "OpenBSD-8.0-amd64-64bit-ELF",
+  "uname": [
+    "OpenBSD",
+    "folimeld-openbsd.lan",
+    "8.0",
+    "GENERIC.MP#4",
+    "amd64",
+    "amd64"
+  ],
+  "python": "3.14.9 (main, Oct 24 2026, 11:43:31) [Clang 22.1.6 ]",
+  "executable": "/home/folimeld/Folimeld/.venv-openbsd/bin/python",
+  "qt": "6.11.2",
+  "qt_plugins": "/usr/local/lib/qt6/plugins",
+  "modules": {
+    "PySide6": {
+      "version": "6.11.2",
+      "file": "/usr/local/lib/python3.14/site-packages/PySide6/__init__.py"
+    },
+    "pymupdf": {
+      "version": "1.28.2",
+      "file": "/home/folimeld/Folimeld/.venv-openbsd/lib/python3.14/site-packages/pymupdf/__init__.py"
+    },
+    "PIL": {
+      "version": "13.0.0",
+      "file": "/usr/local/lib/python3.14/site-packages/PIL/__init__.py"
+    },
+    "cryptography": {
+      "version": "49.0.0",
+      "file": "/usr/local/lib/python3.14/site-packages/cryptography/__init__.py"
+    },
+    "psutil": {
+      "version": "7.2.2",
+      "file": "/usr/local/lib/python3.14/site-packages/psutil/__init__.py"
+    }
+  }
+}

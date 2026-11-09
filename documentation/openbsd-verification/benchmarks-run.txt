@@ -1,0 +1,433 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+This plugin does not support propagateSizeHints()
+
+(process:26599): GLib-CRITICAL **: 15:11:42.191: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+{
+  "input_bytes": 32953,
+  "pages": 100,
+  "output_bytes": 29018,
+  "thumbnail_size": 288,
+  "milliseconds": {
+    "open": 0.6942340000932745,
+    "refresh": 16.036959999837563,
+    "initial_thumbnails": 52.44865800023035,
+    "scroll_thumbnails": 794.6424659999138,
+    "rotate": 27.98533800023506,
+    "refresh_after_rotation": 12.487562999922375,
+    "rotation_thumbnails": 49.449340000137454,
+    "undo": 17.314519000137807,
+    "redo": 18.494578000172623,
+    "reorder": 33.31180800023503,
+    "save": 29.798729000049207
+  },
+  "max_thumbnail_batch_ms": 11.7259999997259,
+  "peak_resident_thumbnails": 24,
+  "rss_baseline_bytes": 148045824,
+  "sampled_peak_rss_bytes": 162779136,
+  "history_bytes": 65907,
+  "history_disk_bytes": 0,
+  "undo_performed": true,
+  "redo_performed": true,
+  "input_sha256": "66ef88cbd8731a8506d6349d7218293f6ef1213e916fd913d9b3fa08388c1cc6",
+  "input_unchanged": true,
+  "environment": {
+    "python": "3.14.9",
+    "platform": "OpenBSD-8.0-amd64-64bit-ELF",
+    "dependencies": {
+      "PyMuPDF": "1.28.2",
+      "PySide6": "6.11.2",
+      "Pillow": "13.0.0",
+      "psutil": "7.2.2",
+      "cryptography": "49.0.0"
+    }
+  },
+  "fixture": {
+    "generated": true,
+    "image_size": 0
+  }
+}
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+This plugin does not support propagateSizeHints()
+
+(process:91146): GLib-CRITICAL **: 15:11:53.764: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+{
+  "input_bytes": 19728289,
+  "pages": 100,
+  "output_bytes": 290702,
+  "thumbnail_size": 288,
+  "milliseconds": {
+    "open": 0.6847360000392655,
+    "refresh": 13.779090999832988,
+    "initial_thumbnails": 110.65289699990899,
+    "scroll_thumbnails": 933.0949210002473,
+    "rotate": 164.96802699975888,
+    "refresh_after_rotation": 14.340624999931606,
+    "rotation_thumbnails": 52.59337200004666,
+    "undo": 62.113187000250036,
+    "redo": 92.13457399982872,
+    "reorder": 158.59000799991918,
+    "save": 234.17190500003926
+  },
+  "max_thumbnail_batch_ms": 15.359207000074093,
+  "peak_resident_thumbnails": 24,
+  "rss_baseline_bytes": 158433280,
+  "sampled_peak_rss_bytes": 287031296,
+  "history_bytes": 39456579,
+  "history_disk_bytes": 0,
+  "undo_performed": true,
+  "redo_performed": true,
+  "input_sha256": "961a2cceb199d48a20cca64a30545c1a043c17bdb13e1afe1c8789047ae17e16",
+  "input_unchanged": true,
+  "environment": {
+    "python": "3.14.9",
+    "platform": "OpenBSD-8.0-amd64-64bit-ELF",
+    "dependencies": {
+      "PyMuPDF": "1.28.2",
+      "PySide6": "6.11.2",
+      "Pillow": "13.0.0",
+      "psutil": "7.2.2",
+      "cryptography": "49.0.0"
+    }
+  },
+  "fixture": {
+    "generated": true,
+    "image_size": 256
+  }
+}
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+This plugin does not support propagateSizeHints()
+
+(process:78582): GLib-CRITICAL **: 15:12:04.358: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+{
+  "input_bytes": 333065,
+  "pages": 1000,
+  "output_bytes": 291015,
+  "thumbnail_size": 288,
+  "milliseconds": {
+    "open": 0.7850300003156008,
+    "refresh": 116.43837300016457,
+    "initial_thumbnails": 124.58229000003485,
+    "scroll_thumbnails": 6742.251929000304,
+    "rotate": 355.8462309997594,
+    "refresh_after_rotation": 102.63441799997963,
+    "rotation_thumbnails": 51.38258200031487,
+    "undo": 178.26268999988315,
+    "redo": 182.6138789997458,
+    "reorder": 347.38662700010536,
+    "save": 343.614293000428
+  },
+  "max_thumbnail_batch_ms": 10.29674299979888,
+  "peak_resident_thumbnails": 24,
+  "rss_baseline_bytes": 148840448,
+  "sampled_peak_rss_bytes": 167641088,
+  "history_bytes": 666131,
+  "history_disk_bytes": 0,
+  "undo_performed": true,
+  "redo_performed": true,
+  "input_sha256": "5829390545cbe46318609839559d89c746281d79f5d67275bc647ed3fb23155f",
+  "input_unchanged": true,
+  "environment": {
+    "python": "3.14.9",
+    "platform": "OpenBSD-8.0-amd64-64bit-ELF",
+    "dependencies": {
+      "PyMuPDF": "1.28.2",
+      "PySide6": "6.11.2",
+      "Pillow": "13.0.0",
+      "psutil": "7.2.2",
+      "cryptography": "49.0.0"
+    }
+  },
+  "fixture": {
+    "generated": true,
+    "image_size": 0
+  }
+}
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+This plugin does not support propagateSizeHints()
+
+(process:35338): GLib-CRITICAL **: 15:12:06.264: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+{
+  "input_bytes": 32953,
+  "pages": 100,
+  "output_bytes": 29018,
+  "thumbnail_size": 288,
+  "milliseconds": {
+    "open": 0.6556819998877472,
+    "refresh": 13.03708400018877,
+    "initial_thumbnails": 120.22719000015059,
+    "scroll_thumbnails": 558.6105150000549,
+    "rotate": 32.58684299999004,
+    "refresh_after_rotation": 12.208472000111215,
+    "rotation_thumbnails": 50.57911299991247,
+    "undo": 17.94086600011724,
+    "redo": 16.02075699975103,
+    "reorder": 34.11387900041518,
+    "save": 28.232302000105847
+  },
+  "max_thumbnail_batch_ms": 9.74359000019831,
+  "peak_resident_thumbnails": 24,
+  "rss_baseline_bytes": 148553728,
+  "sampled_peak_rss_bytes": 163303424,
+  "history_bytes": 65907,
+  "history_disk_bytes": 0,
+  "undo_performed": true,
+  "redo_performed": true,
+  "input_sha256": "0a91c3aa5aa1a742c3184c10d505aabee13783d8b286c0c12e33b93dc912e5e1",
+  "input_unchanged": true,
+  "environment": {
+    "python": "3.14.9",
+    "platform": "OpenBSD-8.0-amd64-64bit-ELF",
+    "dependencies": {
+      "PyMuPDF": "1.28.2",
+      "PySide6": "6.11.2",
+      "Pillow": "13.0.0",
+      "psutil": "7.2.2",
+      "cryptography": "49.0.0"
+    }
+  },
+  "fixture": {
+    "generated": true,
+    "image_size": 0
+  }
+}
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+This plugin does not support propagateSizeHints()
+
+(process:41428): GLib-CRITICAL **: 15:12:18.043: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+{
+  "input_bytes": 19728289,
+  "pages": 100,
+  "output_bytes": 290702,
+  "thumbnail_size": 288,
+  "milliseconds": {
+    "open": 0.6847360000392655,
+    "refresh": 15.061678999700234,
+    "initial_thumbnails": 66.8063240000265,
+    "scroll_thumbnails": 683.2483999996839,
+    "rotate": 164.43331200025568,
+    "refresh_after_rotation": 13.001045000237355,
+    "rotation_thumbnails": 51.32056100001137,
+    "undo": 53.9891040002658,
+    "redo": 85.27575900006923,
+    "reorder": 136.90418600026533,
+    "save": 226.8222370003059
+  },
+  "max_thumbnail_batch_ms": 15.471793999950023,
+  "peak_resident_thumbnails": 24,
+  "rss_baseline_bytes": 157900800,
+  "sampled_peak_rss_bytes": 286392320,
+  "history_bytes": 39456579,
+  "history_disk_bytes": 0,
+  "undo_performed": true,
+  "redo_performed": true,
+  "input_sha256": "b5bcc2f9f6780965d25de691447210391e18a9536eade382b5eea9f3b5063028",
+  "input_unchanged": true,
+  "environment": {
+    "python": "3.14.9",
+    "platform": "OpenBSD-8.0-amd64-64bit-ELF",
+    "dependencies": {
+      "PyMuPDF": "1.28.2",
+      "PySide6": "6.11.2",
+      "Pillow": "13.0.0",
+      "psutil": "7.2.2",
+      "cryptography": "49.0.0"
+    }
+  },
+  "fixture": {
+    "generated": true,
+    "image_size": 256
+  }
+}
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+This plugin does not support propagateSizeHints()
+
+(process:70588): GLib-CRITICAL **: 15:12:30.306: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+{
+  "input_bytes": 333065,
+  "pages": 1000,
+  "output_bytes": 291015,
+  "thumbnail_size": 288,
+  "milliseconds": {
+    "open": 0.7632390002072498,
+    "refresh": 121.97520800009443,
+    "initial_thumbnails": 62.038873999881616,
+    "scroll_thumbnails": 8437.82935199988,
+    "rotate": 355.9445699997923,
+    "refresh_after_rotation": 103.86755800027458,
+    "rotation_thumbnails": 53.38873800019428,
+    "undo": 181.99172200002067,
+    "redo": 180.07524299991928,
+    "reorder": 347.1265319999475,
+    "save": 344.5957190001536
+  },
+  "max_thumbnail_batch_ms": 11.191006999979436,
+  "peak_resident_thumbnails": 24,
+  "rss_baseline_bytes": 148762624,
+  "sampled_peak_rss_bytes": 167661568,
+  "history_bytes": 666131,
+  "history_disk_bytes": 0,
+  "undo_performed": true,
+  "redo_performed": true,
+  "input_sha256": "155b3c75fc7d4db3ac22ade2b90594ce2a43166453e65ad84270343105709803",
+  "input_unchanged": true,
+  "environment": {
+    "python": "3.14.9",
+    "platform": "OpenBSD-8.0-amd64-64bit-ELF",
+    "dependencies": {
+      "PyMuPDF": "1.28.2",
+      "PySide6": "6.11.2",
+      "Pillow": "13.0.0",
+      "psutil": "7.2.2",
+      "cryptography": "49.0.0"
+    }
+  },
+  "fixture": {
+    "generated": true,
+    "image_size": 0
+  }
+}
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+This plugin does not support propagateSizeHints()
+
+(process:42279): GLib-CRITICAL **: 15:12:32.319: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+{
+  "input_bytes": 32953,
+  "pages": 100,
+  "output_bytes": 29018,
+  "thumbnail_size": 288,
+  "milliseconds": {
+    "open": 0.6973069998821302,
+    "refresh": 13.13290699999925,
+    "initial_thumbnails": 65.77181700004076,
+    "scroll_thumbnails": 699.4054879996838,
+    "rotate": 36.00661200016475,
+    "refresh_after_rotation": 11.77572799997506,
+    "rotation_thumbnails": 51.03532400016775,
+    "undo": 18.737350999799673,
+    "redo": 18.127206999906775,
+    "reorder": 34.76900299983754,
+    "save": 29.49561300010828
+  },
+  "max_thumbnail_batch_ms": 10.669143000086478,
+  "peak_resident_thumbnails": 24,
+  "rss_baseline_bytes": 148537344,
+  "sampled_peak_rss_bytes": 163143680,
+  "history_bytes": 65907,
+  "history_disk_bytes": 0,
+  "undo_performed": true,
+  "redo_performed": true,
+  "input_sha256": "09db0213056bf1308c338deed54812973b630af76f3fac537d147c06035b2d27",
+  "input_unchanged": true,
+  "environment": {
+    "python": "3.14.9",
+    "platform": "OpenBSD-8.0-amd64-64bit-ELF",
+    "dependencies": {
+      "PyMuPDF": "1.28.2",
+      "PySide6": "6.11.2",
+      "Pillow": "13.0.0",
+      "psutil": "7.2.2",
+      "cryptography": "49.0.0"
+    }
+  },
+  "fixture": {
+    "generated": true,
+    "image_size": 0
+  }
+}
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+This plugin does not support propagateSizeHints()
+
+(process:44784): GLib-CRITICAL **: 15:12:43.383: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+{
+  "input_bytes": 19728289,
+  "pages": 100,
+  "output_bytes": 290702,
+  "thumbnail_size": 288,
+  "milliseconds": {
+    "open": 0.6942350000826991,
+    "refresh": 13.912071000049764,
+    "initial_thumbnails": 110.3467080001792,
+    "scroll_thumbnails": 665.9076189998814,
+    "rotate": 118.62695800027723,
+    "refresh_after_rotation": 12.237247000030038,
+    "rotation_thumbnails": 50.75344099986978,
+    "undo": 67.00467699965884,
+    "redo": 46.881650000159425,
+    "reorder": 147.00984000000972,
+    "save": 222.71465900030307
+  },
+  "max_thumbnail_batch_ms": 15.590806000091106,
+  "peak_resident_thumbnails": 24,
+  "rss_baseline_bytes": 158429184,
+  "sampled_peak_rss_bytes": 287690752,
+  "history_bytes": 39456579,
+  "history_disk_bytes": 0,
+  "undo_performed": true,
+  "redo_performed": true,
+  "input_sha256": "66ba7cae791e0d36ac60a7f7e7240158b32343e6bb20efe835ad159eb8cd94c9",
+  "input_unchanged": true,
+  "environment": {
+    "python": "3.14.9",
+    "platform": "OpenBSD-8.0-amd64-64bit-ELF",
+    "dependencies": {
+      "PyMuPDF": "1.28.2",
+      "PySide6": "6.11.2",
+      "Pillow": "13.0.0",
+      "psutil": "7.2.2",
+      "cryptography": "49.0.0"
+    }
+  },
+  "fixture": {
+    "generated": true,
+    "image_size": 256
+  }
+}
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+This plugin does not support propagateSizeHints()
+
+(process:54092): GLib-CRITICAL **: 15:12:53.915: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+{
+  "input_bytes": 333065,
+  "pages": 1000,
+  "output_bytes": 291015,
+  "thumbnail_size": 288,
+  "milliseconds": {
+    "open": 1.1644149999483489,
+    "refresh": 119.69024100017123,
+    "initial_thumbnails": 61.0406839996358,
+    "scroll_thumbnails": 6785.883108999769,
+    "rotate": 335.9383200004231,
+    "refresh_after_rotation": 101.47307700026431,
+    "rotation_thumbnails": 53.38873799973953,
+    "undo": 177.961249999953,
+    "redo": 172.5149309995686,
+    "reorder": 343.15835999996125,
+    "save": 338.77225100013675
+  },
+  "max_thumbnail_batch_ms": 9.481540999786375,
+  "peak_resident_thumbnails": 24,
+  "rss_baseline_bytes": 148844544,
+  "sampled_peak_rss_bytes": 167624704,
+  "history_bytes": 666131,
+  "history_disk_bytes": 0,
+  "undo_performed": true,
+  "redo_performed": true,
+  "input_sha256": "84e048dde6c06873831e0a4ab5b334cef310e218c4f1dd5ead4d2a418979ae23",
+  "input_unchanged": true,
+  "environment": {
+    "python": "3.14.9",
+    "platform": "OpenBSD-8.0-amd64-64bit-ELF",
+    "dependencies": {
+      "PyMuPDF": "1.28.2",
+      "PySide6": "6.11.2",
+      "Pillow": "13.0.0",
+      "psutil": "7.2.2",
+      "cryptography": "49.0.0"
+    }
+  },
+  "fixture": {
+    "generated": true,
+    "image_size": 0
+  }
+}
+OPENBSD_BENCHMARKS_OK

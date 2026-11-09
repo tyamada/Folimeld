@@ -1,0 +1,4 @@
+
+(process:13553): GLib-CRITICAL **: 14:14:04.981: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:13553): GLib-CRITICAL **: 14:14:05.042: g_main_context_pop_thread_default: assertion 'stack != NULL' failed

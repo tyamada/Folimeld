@@ -8,3 +8,8 @@ documentation/netbsd-verification/patches/*.patch whitespace=-blank-at-eol,-spac
 licenses/CFFI-libffi-x64.txt -text
 licenses/Cryptography-Rust.txt -text
 licenses/OpenSSL.txt -text
+# Preserve verification evidence bytes recorded in SHA256SUMS.txt.
+documentation/openbsd-verification/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+# Captured logs retain the original command output, including trailing spaces.
+documentation/openbsd-verification/*.txt whitespace=-blank-at-eol,-blank-at-eof
+documentation/openbsd-verification/*.patch whitespace=-blank-at-eol,-space-before-tab

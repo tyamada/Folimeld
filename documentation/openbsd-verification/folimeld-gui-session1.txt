@@ -1,0 +1,101 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+(process:30257): GLib-CRITICAL **: 14:43:01.475: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:43:57.595: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:45:15.715: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:46:14.709: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+(process:30257): GLib-CRITICAL **: 14:46:51.015: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:47:12.068: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:48:13.905: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:49:40.085: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:50:11.913: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+(process:30257): GLib-CRITICAL **: 14:50:48.007: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:50:57.531: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:51:22.787: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+(process:30257): GLib-CRITICAL **: 14:51:39.112: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:51:54.792: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:52:20.645: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:52:50.205: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:53:00.976: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+(process:30257): GLib-CRITICAL **: 14:53:32.585: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:54:00.547: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+(process:30257): GLib-CRITICAL **: 14:54:31.865: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:54:41.363: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+(process:30257): GLib-CRITICAL **: 14:55:13.446: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:55:43.107: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:56:01.420: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+(process:30257): GLib-CRITICAL **: 14:56:47.025: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+(process:30257): GLib-CRITICAL **: 14:57:25.825: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+(process:30257): GLib-CRITICAL **: 14:58:31.328: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+(process:30257): GLib-CRITICAL **: 14:59:19.053: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:59:33.225: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 14:59:40.450: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+(process:30257): GLib-CRITICAL **: 15:01:01.379: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 15:01:19.618: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+(process:30257): GLib-CRITICAL **: 15:02:21.156: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 15:02:42.776: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 15:03:11.905: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+(process:30257): GLib-CRITICAL **: 15:03:36.729: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 15:03:55.407: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 15:04:35.635: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 15:04:54.974: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+(process:30257): GLib-CRITICAL **: 15:05:29.055: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+
+(process:30257): GLib-CRITICAL **: 15:07:05.032: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+(process:30257): GLib-CRITICAL **: 15:07:28.224: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+python(30257) in free(): double free 0x38c4ba0e300

@@ -1,0 +1,222 @@
+{
+  "platform": "OpenBSD-8.0-amd64-64bit-ELF",
+  "source_sha256_unchanged": "4abfe0f4a028bbac280c7629cd64c72e5df1faac8348695e0277dfc5a9154558",
+  "manual_edit": {
+    "pages": 8,
+    "order": [
+      2,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "rotations": [
+      0,
+      90,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "content_streams_match": true
+  },
+  "properties": {
+    "format": "PDF 1.7",
+    "layout": "SinglePage",
+    "direction": "L2R"
+  },
+  "forms": {
+    "count": 3,
+    "values_and_attributes_preserved": true,
+    "rotation": 270
+  },
+  "password": {
+    "cancel_retained_document": "observed GUI",
+    "wrong_password_reprompt": "observed GUI",
+    "change_old_rejected_new_accepted": true,
+    "removal_confirmed": true
+  },
+  "images": {
+    "files_after_gui_exclusion": [
+      "image1.jpg",
+      "image3.png",
+      "image4.tiff",
+      "image5.webp",
+      "image10.bmp"
+    ],
+    "pages": 6,
+    "page_sizes": [
+      [
+        595.0,
+        842.0
+      ],
+      [
+        595.0,
+        842.0
+      ],
+      [
+        595.0,
+        842.0
+      ],
+      [
+        595.0,
+        842.0
+      ],
+      [
+        595.0,
+        842.0
+      ],
+      [
+        595.0,
+        842.0
+      ]
+    ],
+    "center_rgb": [
+      [
+        20,
+        100,
+        159
+      ],
+      [
+        255,
+        155,
+        155
+      ],
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        0,
+        128,
+        0
+      ],
+      [
+        0,
+        0,
+        255
+      ],
+      [
+        200,
+        100,
+        160
+      ]
+    ],
+    "invalid_image_and_cancel_retained_document": "observed GUI"
+  },
+  "save_error": {
+    "permission_error": "observed GUI",
+    "protected_existing_sha256": "7c87f63c22879cfca13b6ae6ab3a845466dfd231057061d2de5f7194e2332967",
+    "recovered_pages": 6,
+    "rotations": [
+      90,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "japanese_space_path": {
+    "pages": 8,
+    "rotations": [
+      90,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "load_1000": {
+    "pages": 1000,
+    "last_rotation": 90,
+    "last_text": "OpenBSD load page 1000"
+  },
+  "history": {
+    "pages": 100,
+    "streams_restored": true,
+    "all_rotations_zero": true,
+    "render_samples_restored": [
+      1,
+      97,
+      100
+    ],
+    "large_tmp_before": [],
+    "large_tmp_after": [
+      19728334,
+      19728335,
+      19728336
+    ],
+    "large_tmp_after_document_switch": []
+  },
+  "settings": {
+    "english_432_after_restart": "observed GUI, gui-settings-persisted.png",
+    "restored_config": "[General]\nlanguage=ja\nlast_image_directory=/home/folimeld/Folimeld/build/openbsd-verification/images\nlast_open_directory=/home/folimeld/Folimeld/build/openbsd-verification\nthumbnail_size=288\n"
+  },
+  "outputs": {
+    "gui-manual-after.pdf": {
+      "sha256": "c56634c3f703fc13ae9fc82ebb95b235156eadcd4fb9e63273b49f5aee3cb212",
+      "bytes": 23237163,
+      "qpdf_exit_code": 0
+    },
+    "gui-properties.pdf": {
+      "sha256": "bfeac13a575cc5237af7eb31098c421ce46a22c69785f83baddc46d5cfa1e5b8",
+      "bytes": 23237208,
+      "qpdf_exit_code": 0
+    },
+    "gui-forms.pdf": {
+      "sha256": "868c06ba308ee05bc33f1853d83d9e5820c689f163f9111fd71a4165899af19e",
+      "bytes": 2541,
+      "qpdf_exit_code": 0
+    },
+    "gui-encrypted.pdf": {
+      "sha256": "f3e399231ca38423bc1d04317486c5c38688ff91c5002122acd716c3d801222f",
+      "bytes": 3896,
+      "qpdf_exit_code": 0
+    },
+    "gui-password-changed.pdf": {
+      "sha256": "c2dbf01e6c8ab50e5fe7e2e15d5ffee3d53e58b6054a65bcd304131969d7977f",
+      "bytes": 3896,
+      "qpdf_exit_code": 0
+    },
+    "gui-password-removed.pdf": {
+      "sha256": "39278b60eb8001867c7c33a9ff12d1c5ca0c62f31ebac66a9964f128279a83f3",
+      "bytes": 2539,
+      "qpdf_exit_code": 0
+    },
+    "gui-images.pdf": {
+      "sha256": "7c87f63c22879cfca13b6ae6ab3a845466dfd231057061d2de5f7194e2332967",
+      "bytes": 7500,
+      "qpdf_exit_code": 0
+    },
+    "gui-recovered.pdf": {
+      "sha256": "5c4c7aa616fe4553a85316dbe0dc337293f0b57aadcf128f028a086f3526a673",
+      "bytes": 7501,
+      "qpdf_exit_code": 0
+    },
+    "日本語 sample.pdf": {
+      "sha256": "3ba1cd813be130d80dffe96d6ee736aa4baebba590f186ec71dc07da2b585f31",
+      "bytes": 23237163,
+      "qpdf_exit_code": 0
+    },
+    "gui-load-1000.pdf": {
+      "sha256": "f716dd5c5824441ac8f466af14ed6b3eec5fd6c966d04f020e6b72433359e2fe",
+      "bytes": 322124,
+      "qpdf_exit_code": 0
+    },
+    "gui-history-restored.pdf": {
+      "sha256": "948315ed86cba1525b7de0bc14063abff3ac36b23507486dc8225177d10f2ceb",
+      "bytes": 290701,
+      "qpdf_exit_code": 0
+    }
+  }
+}

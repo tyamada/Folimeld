@@ -1,0 +1,7 @@
+{
+  "signature": "Ed25519 verified",
+  "key_source": "https://raw.githubusercontent.com/openbsd/src/master/etc/signify/openbsd-80-base.pub",
+  "iso": "install80.iso",
+  "sha256": "bc85d747c6ee4354d14fbfeee38087500386a2e9d86fa7b5ab13d840d902aa33",
+  "checksum_match": true
+}

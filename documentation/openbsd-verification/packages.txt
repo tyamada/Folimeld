@@ -1,0 +1,277 @@
+adwaita-icon-theme-50.0 base icon theme for GNOME
+adwaita-icon-theme-legacy-46.2p0 legacy icon theme for GNOME
+aom-3.14.1p0        Alliance for Open Media AV1 video codec
+aspell-0.60.8.2     spell checker with multi-language support
+assimp-5.4.3p0      open asset import library
+at-spi2-core-2.60.6 service interface for assistive technologies
+avahi-glib-0.9rc5p0 GLib and GObject integration libraries for avahi
+avahi-libs-0.9rc5p0 libraries and common data files for avahi
+bash-5.3.20         GNU Bourne Again Shell
+boost-1.91.0p1v0    free peer-reviewed portable C++ source libraries
+brotli-1.2.1        generic lossless compressor
+bzip2-1.0.8p0       block-sorting file compressor, unencumbered
+cairo-1.18.6        vector graphics library
+cdparanoia-3.a9.8p5 CDDA reading utility with extra data verification features
+consolekit2-1.2.7p0 framework for defining and tracking users, sessions & seats
+cups-libs-2.4.20    CUPS libraries and headers
+curl-8.23.0         transfer files with FTP, HTTP, HTTPS, etc.
+cvsps-2.1p3         generate patchsets from CVS repositories
+dav1d-1.5.4         small and fast AV1 decoder
+dbus-1.16.2p1v0     message bus system
+dbus-daemon-launch-helper-1.16.2 DBus setuid helper for starting system services
+dbus-glib-0.114v0   glib bindings for dbus message system
+dconf-0.40.0p2      configuration backend system
+desktop-file-utils-0.28p0 utilities for dot.desktop entries
+dotconf-1.3p0       simple, powerful configuration-file parser
+double-conversion-3.3.0 binary-decimal and decimal-binary routines for IEEE doubles
+duktape-2.7.0p1     embeddable JavaScript engine
+enchant2-2.8.21     generic spell checking library
+epoll-shim-0.0.20240608 small epoll implementation using kqueue
+espeak-1.52.0       compact speech synthesizer
+exo-4.20.0p0        Xfce4 extension library
+ffmpeg-9.0.2v1      audio/video converter and streamer
+ffmpegthumbnailer-2.2.2p0 lightweight video thumbnailer for file managers
+flac-1.5.0          free lossless audio codec
+flite-2.2           text to speech utility
+fribidi-1.0.18      library implementing the Unicode Bidirectional Algorithm
+garcon-4.20.0p0     Xfce4 freedesktop.org compliant menu implementation
+gcc-libs-16.1.0p11  GNU compiler collection: support libs
+gcr4-4.4.1          library for bits of crypto UI and parsing
+gdk-pixbuf-2.44.8   image data transformation library
+gettext-runtime-1.0 GNU gettext runtime libraries and programs
+giflib-6.1.3p0      tools and library routines for working with GIF images
+git-2.55.0p0        distributed version control system
+gitwrapper-0.130    invoke an appropriate Git repository server
+glew-2.3.1          GL Extension Wrangler library
+glfw-3.4p2          open source, multi-platform library for creating windows
+glib2-2.88.4        low level core library
+glib2-networking-2.90.1 network-related gio modules for GLib
+gmake-4.4.1p0       GNU make
+gmp-6.3.0p0         library for arbitrary precision arithmetic
+gnupg-2.5.24p0v0    GNU privacy guard - a free PGP replacement
+gnutls-3.8.13p1     GNU Transport Layer Security library
+graphene-1.10.8p1   thin layer of graphic data types
+graphite2-1.3.15    rendering for complex writing systems
+greybird-3.23.4p0   desktop suite theme for Xfce
+gsettings-desktop-schemas-50.1 GSettings Desktop Schemas
+gsm-1.0.24          GSM audio codec library and converter
+gspell-1.14.5       spell-checking library for GTK+
+gst-plugins-bad-1.28.7 bad elements for GStreamer
+gst-plugins-base-1.28.7p0 base elements for GStreamer
+gstreamer1-1.28.7   framework for streaming media
+gtk+3-3.24.52       multi-platform graphical toolkit
+gtk+3-cups-3.24.52  gtk+3 CUPS print backend
+gtk+4-4.22.5        multi-platform graphical toolkit
+gtk-layer-shell-0.10.1 desktop components for Wayland using the Layer Shell proto
+gtk4-update-icon-cache-4.22.5 gtk+ icon theme caching utility
+gtksourceview4-4.8.4p2 text widget that extends the GTK3 GtkTextView widget
+gvfs-1.60.3         GNOME Virtual File System
+harfbuzz-14.5.1     text shaping library
+hicolor-icon-theme-0.18 fallback theme of the icon theme specification
+hunspell-1.7.3      spelling, stemming, morphological analysis and generation
+icu4c-78.3v0        International Components for Unicode
+intel-firmware-20260925v0 microcode update binaries for Intel CPUs
+iodbc-3.52.16       ODBC 3.x driver manager
+iso-codes-4.20.1    lists of the country, language and currency iso names
+jpeg-3.2.0v0        SIMD-accelerated JPEG codec replacement of libjpeg
+json-glib-1.10.8p0  JSON parser for GLib-based libraries and applications
+lame-3.101          lame ain't an MP3 encoder
+lapack-3.12.1p0     library of Fortran linear algebra subroutines
+lcms2-2.18pl20260420 color management library
+lerc-4.2.0          Limited Error Raster Compression
+libao-1.2.0p2       portable audio output library
+libarchive-3.8.10   multi-format archive and compression library
+libass-0.17.5       portable ASS/SSA subtitle renderer
+libassuan-3.0.2p0   IPC library used by GnuPG and gpgme
+libb2-0.98.1v0      library providing BLAKE2b, BLAKE2s, BLAKE2bp, BLAKE2sp
+libbs2b-3.1.0p6     Bauer stereophonic-to-binaural DSP
+libdbusmenu-16.04.0p5 D-Bus menu implementation for Gtk
+libdisplay-info-0.3.0 EDID and DisplayID library
+libevent-2.1.13     event notification library
+libexif-0.6.26      extract digital camera info tags from JPEG images
+libffi-3.8.0        Foreign Function Interface
+libgcrypt-1.12.4    crypto library based on code used in GnuPG
+libgpg-error-1.61   error codes for GnuPG related software
+libgsf-1.14.60      GNOME Structured File library
+libgtop2-2.41.3p5   portable library for obtaining system information
+libiconv-1.19       character set conversion library
+libidn2-2.3.0p0     implementation of IDNA2008 internationalized domain names
+libimagequant-2.18.0 image quantization library
+libksba-1.8.1       X.509 library
+libltdl-2.4.2p3     GNU libtool system independent dlopen wrapper
+libmagic-5.48       library to determine file type
+libnotify-0.8.8p0   send desktop notifications to a notification daemon
+libogg-1.3.6p0      Ogg bitstream library
+libproxy-0.5.12     library for automatic proxy configuration management
+libpsl-0.21.1p1     public suffix list library
+librsvg-2.63.2v0    SAX-based render library for SVG files
+libsamplerate-0.2.2p0 audio sample rate conversion library
+libsecret-0.21.8.2  library for storing and retrieving passwords and secrets
+libsndfile-1.2.2p0  library to handle various audio file formats
+libsoup3-3.6.6      HTTP client/server library for GNOME
+libtasn1-4.21.0     Abstract Syntax Notation One structure parser library
+libtheora-1.2.0v0   open video codec
+libudev-openbsd-20260922 library to access udev device information
+libunbound-1.26.2   validating DNS resolver library
+libunibreak-7.0     implementation of the line and word breaking
+libunistring-0.9.7  manipulate Unicode strings
+libusb1-1.0.30      library for USB device access from userspace
+libv4l-1.24.1       libv4l userspace library
+libvidstab-1.1.0    video stabilization library
+libvoikko-4.3.3     natural language processing for Finnish
+libvorbis-1.3.7     audio compression codec library
+libvpx-1.16.0p1v0   Google VP8/VP9 video codec
+libwebp-1.6.0p2     Google WebP image format conversion tool
+libwnck3-43.3       window navigator construction kit
+libxfce4ui-4.20.2p0 Xfce4 widget library
+libxfce4util-4.20.1 Xfce4 basic utility library
+libxfce4windowing-4.20.7 Xfce4 windowing library
+libxkbcommon-1.13.2 library to handle keyboard descriptions
+libxklavier-5.4p2   utility library for XKB
+libxml-2.15.4       XML parsing library
+libxslt-1.1.45      XSLT C Library for GNOME
+libyaml-0.2.5       YAML 1.1 parser and emitter written in C
+llvm-22.1.8p10      modular, fast C/C++/ObjC compiler, static analyzer and tools
+lz4-1.10.0          fast BSD-licensed data compression
+lzo2-2.10p2         portable speedy lossless data compression library
+minizip-4.1.0       zip manipulation library
+mousepad-0.7.0      Xfce4 simple text editor
+mozilla-dicts-en-GB-1.3p1 en-GB dictionary for Mozilla
+mpg123-1.33.7       fast console MPEG audio player and decoder library
+nettle-4.0p0        cryptographic library
+nghttp2-1.70.0      library for HTTP/2
+nghttp3-1.18.0      implementation of HTTP/3
+ngtcp2-1.25.0       implementation of the RFC 9000 QUIC protocol
+noto-cjk-20240730p0 east asian fonts for the noto font family
+noto-emoji-2.051p0v0 emoji fonts for the noto font family
+noto-fonts-2026.09.01v0 pan-unicode font family
+npth-1.8            new GNU Portable Threads Library
+nspr-4.40           Netscape Portable Runtime
+nss-3.130p0         libraries to support development of security-enabled apps
+openh264-2.6.0      Cisco implementation of H.264 codec
+openjp2-2.5.4p0     open-source JPEG 2000 codec library
+opus-1.6.1          IETF audio codec
+orc-0.4.44          library and toolset to operate arrays of data
+p11-kit-0.26.5      library for loading and enumerating PKCS#11 modules
+p5-Error-0.17030    error/exception handling in an OO-ish way
+p5-MIME-Base32-1.303p0 Base32 encoder/decoder
+p5-Mail-Tools-2.21p0 modules for handling mail with perl
+p5-Regexp-IPv6-0.03p0 regular expression for IPv6 addresses
+p5-Time-TimeDate-2.35 library for parsing and formatting dates and times
+p5-URI-5.37         library to parse Uniform Resource Identifiers
+pango-1.58.2        library for layout and rendering of text
+pcaudiolib-1.3      C API to different audio devices
+pcre2-10.48         perl-compatible regular expression library, version 2
+pcsc-lite-2.5.0     resource manager for PC/SC
+pinentry-1.3.3      PIN or passphrase entry dialog (ncurses interface)
+png-1.6.59          library for manipulating PNG images
+polkit-128          framework for granting privileged operations to users
+poppler-26.09.0     PDF rendering library
+poppler-data-0.4.12 encoding files for poppler
+pulseaudio-17.0p4   cross-platform networked sound server
+py3-Pillow-13.0.0   Python Imaging Library (friendly fork of PIL)
+py3-cffi-2.1.1      Foreign Function Interface for Python calling C code
+py3-charset-normalizer-3.4.9 character set detector library
+py3-cparser-3.0     C parser in pure Python
+py3-cryptography-49.0.0p0 cryptographic recipes and primitives for Python
+py3-distlib-0.4.3   distribution utilities
+py3-filelock-3.32.7 platform independent file lock
+py3-iniconfig-2.3.0 brain-dead simple config-ini parsing
+py3-llvm-22.1.8p10  Python bindings for Clang
+py3-more-itertools-10.8.0p1 routines for operating on iterables beyond itertools
+py3-mypy-1.18.2     optional static type checker for Python
+py3-mypy_extensions-1.1.0 extensions to the standard "typing" module for mypy
+py3-numpy-2.5.3     fast array and numeric programming library for Python
+py3-packaging-26.3  core utilities for Python packaging
+py3-pathspec-1.1.1p0 utility for gitignore style pattern matching of file paths
+py3-pip-26.2.2      command-line tool for installing Python packages
+py3-platformdirs-4.11.12 determine appropriate platform-specific directories
+py3-pluggy-1.6.0p1  plugin and hook calling mechanisms for Python
+py3-psutil-7.2.2p0  retrieve system information and utilisation
+py3-pygments-2.21.0 Python syntax highlighter
+py3-python-discovery-1.6.4 library for discovering Python interpreters
+py3-setuptools-80.9.0v0 simplified packaging system for Python modules
+py3-test-9.0.3p0    cross-project testing tool for Python
+py3-typing_extensions-4.15.0 backported type hints for python >= 3.5
+py3-virtualenv-21.14.12 virtual Python environment builder
+py3-wheel-0.48.0    reference implementation for Python's "wheel" package format
+py3-xdg-0.28p5      python library to access freedesktop.org standards
+pyside6-6.11.2      Python Qt bindings for Qt 6
+python-3.14.9       interpreted object-oriented programming language
+qpdf-12.4.2         PDF transformation and inspection utility
+qt6-global-6.11.2   global Qt6 documentation internals
+qt6-qt3d-6.11.2     Qt6 components for 3D graphics
+qt6-qtbase-6.11.2p1 C++ general-purpose toolkit
+qt6-qtcharts-6.11.2 Qt6 components for drawing 2D charts
+qt6-qtconnectivity-6.11.2 Bluetooth and NFC support for Qt6
+qt6-qtdatavis3d-6.11.2 Qt6 3D data visualization components
+qt6-qtdeclarative-6.11.2 Qt6 Quick and QML components
+qt6-qtgraphs-6.11.2 Qt6 module to visualize data in 2D and 3D graphs
+qt6-qthttpserver-6.11.2 HTTP Server support for Qt6
+qt6-qtlanguageserver-6.11.2 Language server implementation for Qt6
+qt6-qtlocation-6.11.2 Geo positioning APIs
+qt6-qtmultimedia-6.11.2p0 Qt6 multimedia components
+qt6-qtnetworkauth-6.11.2 Qt6 network authorization components
+qt6-qtpositioning-6.11.2 Qt Positioning API
+qt6-qtquick3d-6.11.2 Quick 3D support for Qt6
+qt6-qtremoteobjects-6.11.2 Qt6 Inter-Process Communication module
+qt6-qtscxml-6.11.2  create state machines from SCXML files
+qt6-qtsensors-6.11.2 Qt6 hardware sensors support
+qt6-qtserialbus-6.11.2 Qt6 API for accessing serial bus devices
+qt6-qtserialport-6.11.2 Qt6 serial ports access components
+qt6-qtshadertools-6.11.2 Qt6 shader tools module
+qt6-qtspeech-6.11.2 Qt text-to-speech components
+qt6-qtsvg-6.11.2    SVG support for Qt6
+qt6-qttools-6.11.2  Qt6 development tools
+qt6-qtwebchannel-6.11.2 Qt6 seamless HTML/JavaScript integration
+qt6-qtwebengine-6.11.2p0 Qt chromium based web engine
+qt6-qtwebsockets-6.11.2 Qt6 module for the WebSocket protocol
+qt6-qtwebview-6.11.2 simple web viewing component for Qt6
+quirks-7.227        exceptions to pkg_add rules
+ristretto-0.14.0    Xfce4 lightweight image-viewer
+ruff-0.16.7         Python linter and code formatter
+sdl2-2.32.10p1      cross-platform multimedia library
+shared-mime-info-2.5.1 shared mime database for desktops
+shiboken6-6.11.2    Python binding generator for C++ libraries
+shiboken6-generator-6.11.2 Python binding generator for C++ libraries
+simdutf-9.2.1       unicode validator and transcoder with SIMD
+snappy-1.1.10p3     fast compression/decompression library
+soundtouch-2.3.3    tempo/pitch audio processing library
+speech-dispatcher-0.12.1p0 common interface to speech synthesis
+speex-1.2.1         patent-free speech codec
+speexdsp-1.2.1      speech processing DSP library
+sqlite3-3.53.2      embedded SQL implementation
+startup-notification-0.12p9 library for tracking application startup
+svt-av1-4.0.1       scalable AV1 encoder
+swig-4.4.1          simplified wrapper and interface generator
+tdb-1.4.15          trivial database library
+thunar-4.20.10      Xfce4 file manager
+tiff-4.7.2          tools and library routines for working with TIFF images
+tumbler-4.20.2      D-Bus thumbnailing service
+updatedb-0p0        pkg_add speed up cache
+vte3-0.84.1         GTK3 terminal emulation library
+vte3-common-0.84.1  shared files for vte3
+vulkan-headers-1.4.357.0 Vulkan header files
+vulkan-loader-1.4.357.0 Vulkan ICD loader
+wayland-1.26.0      Display server protocol
+x264-20250909       free H.264/MPEG-4 AVC encoder
+x265-4.3            free H.265/HEVC encoder
+xdotool-4.20260303.1v0 fake keyboard and mouse input
+xfce-4.20.0p0       Xfce desktop meta-package (base installation)
+xfce4-appfinder-4.20.0p0 Xfce4 application finder
+xfce4-mixer-4.20.0p0 Xfce4 volume mixer
+xfce4-notifyd-0.9.7p0 Xfce4 notification daemon
+xfce4-panel-4.20.8  Xfce4 desktop panel
+xfce4-screensaver-4.20.2p0 Xfce4 screensaver
+xfce4-session-4.20.4 Xfce4 session manager
+xfce4-settings-4.20.5 Xfce4 settings helpers
+xfce4-taskmanager-1.6.0 Xfce4 task manager and system monitor
+xfce4-terminal-1.2.0 Xfce4 terminal
+xfconf-4.20.0       Xfce4 settings daemon
+xfdesktop-4.20.2    Xfce4 desktop manager
+xfwm4-4.20.0p2      Xfce4 window manager
+xfwm4-themes-4.10.0p0 Xfwm4 window decoration themes
+xvidcore-1.3.7      ISO MPEG-4 compliant video codec
+xz-5.8.4            library and tools for XZ and LZMA compressed files
+zimg-3.0.6          scaling, colorspace conversion, and dithering library
+zstd-1.5.7p0        zstandard fast real-time compression algorithm

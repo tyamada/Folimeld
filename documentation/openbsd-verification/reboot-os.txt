@@ -1,0 +1,5 @@
+OpenBSD folimeld-openbsd.lan 8.0 GENERIC.MP#4 amd64
+hw.ncpu=1
+hw.physmem=17163026432
+Mon Nov  9 15:19:00 JST 2026
+uid=0(root) gid=0(wheel) groups=0(wheel), 2(kmem), 3(sys), 4(tty), 5(operator), 20(staff), 31(guest)

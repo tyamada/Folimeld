@@ -57,6 +57,18 @@ export LD_LIBRARY_PATH="$PWD/.venv-netbsd/lib:/usr/pkg/lib:/usr/X11R7/lib"
 .venv-netbsd/bin/python main.py
 ```
 
+### OpenBSD (verified configuration)
+
+Source execution was verified on OpenBSD 8.0 / amd64 with Python 3.14.9, PySide6 / Qt 6.11.2, and PyMuPDF / MuPDF 1.28.2. The verification environment was a VirtualBox VM with 1 vCPU and 16 GiB RAM. Device initialization stalled with 4 vCPUs, so successful boot with multiple CPUs remains unverified.
+
+Use OS packages and a virtual environment with `--system-site-packages`, and build PyMuPDF / MuPDF from source. MuPDF wrapper generation requires a patch for LLVM 22. Rather than applying `constraints-release.txt`, which includes versions pinned for Windows, prepare `.venv-openbsd` using the dependency configuration, patch, and build instructions in the [verification record (Japanese)](documentation/openbsd-verification_ja.md). The record also includes the full test, GUI, load test, and reboot results. No OpenBSD distribution package has been created.
+
+After setup, launch from the repository root within a regular user's X11 session.
+
+```sh
+.venv-openbsd/bin/python main.py
+```
+
 ## Public and private distribution policy
 
 Windows and macOS binaries stay private and are built and verified locally. Linux deb/Snap packages are public. The [migration plan](documentation/linux-release-migration.md) groups Linux packages, SHA-256 checksums, corresponding source ZIPs and build records in one Release. Run the following offline asset check before publication; it does not upload files or create tags.

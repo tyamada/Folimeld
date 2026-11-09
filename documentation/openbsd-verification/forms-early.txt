@@ -1,0 +1,4 @@
+............                                                             [100%]
+12 passed in 4.71s
+
+(process:49254): GLib-CRITICAL **: 14:37:18.476: g_main_context_pop_thread_default: assertion 'stack != NULL' failed

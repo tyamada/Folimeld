@@ -1,0 +1,31 @@
+/home/folimeld/Folimeld/.venv-openbsd/lib/python3.14/site-packages/pip/_vendor/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 4.4.0'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Collecting pyinstaller==6.22.2
+  Downloading pyinstaller-6.22.2.tar.gz (4.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.1/4.1 MB 5.2 MB/s  0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting altgraph (from pyinstaller==6.22.2)
+  Downloading altgraph-0.17.5-py2.py3-none-any.whl.metadata (7.5 kB)
+Requirement already satisfied: packaging>=22.0 in /usr/local/lib/python3.14/site-packages (from pyinstaller==6.22.2) (26.3)
+Collecting pyinstaller-hooks-contrib>=2026.6 (from pyinstaller==6.22.2)
+  Downloading pyinstaller_hooks_contrib-2026.9-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: setuptools>=42.0.0 in /usr/local/lib/python3.14/site-packages (from pyinstaller==6.22.2) (80.9.0)
+Downloading pyinstaller_hooks_contrib-2026.9-py3-none-any.whl (462 kB)
+Downloading altgraph-0.17.5-py2.py3-none-any.whl (21 kB)
+Building wheels for collected packages: pyinstaller
+  Building wheel for pyinstaller (pyproject.toml): started
+  Building wheel for pyinstaller (pyproject.toml): finished with status 'done'
+  Created wheel for pyinstaller: filename=pyinstaller-6.22.2-py3-none-any.whl size=2377288 sha256=1c02f5b7a16e5e6c0c6a90bb9bb0e2147f13bf401f2ef4f20cb72d602c0394cb
+  Stored in directory: /home/folimeld/.cache/pip/wheels/43/a0/54/d246e17128c799d22704b367db68b06fc598821bee1136ab19
+Successfully built pyinstaller
+Installing collected packages: altgraph, pyinstaller-hooks-contrib, pyinstaller
+
+Successfully installed altgraph-0.17.5 pyinstaller-6.22.2 pyinstaller-hooks-contrib-2026.9
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: /home/folimeld/Folimeld/.venv-openbsd/bin/python -m pip install --upgrade pip

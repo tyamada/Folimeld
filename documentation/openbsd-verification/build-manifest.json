@@ -1,0 +1,24 @@
+{
+  "platform": "OpenBSD-8.0-amd64-64bit-ELF",
+  "wheel": "pymupdf-1.28.2-cp314-abi3-openbsd_8_0_amd64.whl",
+  "wheel_sha256": "25932378ff47c85f5ef308120ff839472a261c3579bf77b3c370423f674c40b1",
+  "source_archives_verified": {
+    "commit": "ab807790f23ff7c3343d724821790699def1d5d3",
+    "archives": {
+      "folimeld-runtime.tar.gz": {
+        "sha256": "2d4c96ed00f251540942bacdabc1f3271821c736b779bcfab706cc6322d3fbc5",
+        "bytes": 406483146
+      },
+      "folimeld-extra.tar.gz": {
+        "sha256": "44f717ae27dd99f640078665d9861ce3e0e7032dc6d7ea7e3d8006632690b624",
+        "bytes": 146237
+      },
+      "folimeld-locales.tar.gz": {
+        "sha256": "17d6b38f05a14d3a8a22755f00076425e419d456fbbc4b69efc58cb15db4c22c",
+        "bytes": 16050
+      }
+    },
+    "scope": "Tracked source, tests, tools, assets, packaging, locales, root files, licenses, and supplementary Markdown; release binaries and previous large verification artifacts excluded."
+  },
+  "dependency_patch_sha256": "763ea2fe30e4d593cde2aac74a1816dd1a07042af518ede86c48fef42469b621"
+}

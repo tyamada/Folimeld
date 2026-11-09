@@ -1,0 +1,1257 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="35" skipped="9" tests="403" time="49.111" timestamp="2026-11-09T14:37:19.153700+09:00" hostname="folimeld-openbsd.lan"><testcase classname="tests.test_benchmark_pdf" name="test_image_benchmark_keeps_input_unchanged[0]" time="0.129"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_image_benchmark_keeps_inp0')
+history_limit = 0
+
+    @pytest.mark.parametrize("history_limit", [0, 128 * 1024 * 1024])
+    def test_image_benchmark_keeps_input_unchanged(tmp_path, history_limit):
+        source = tmp_path / "source.pdf"
+        saved = tmp_path / "saved.pdf"
+        create_fixture(source, pages=2, image_size=16)
+        original = hashlib.sha256(source.read_bytes()).digest()
+        with patch("folimeld.app.PdfDocument", side_effect=lambda: PdfDocument(history_limit, 0)):
+&gt;           result = benchmark(source, saved)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_benchmark_pdf.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tools/benchmark_pdf.py:73: in benchmark
+    window = MainWindow()
+             ^^^^^^^^^^^^
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_benchmark_pdf" name="test_image_benchmark_keeps_input_unchanged[134217728]" time="0.056"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_image_benchmark_keeps_inp1')
+history_limit = 134217728
+
+    @pytest.mark.parametrize("history_limit", [0, 128 * 1024 * 1024])
+    def test_image_benchmark_keeps_input_unchanged(tmp_path, history_limit):
+        source = tmp_path / "source.pdf"
+        saved = tmp_path / "saved.pdf"
+        create_fixture(source, pages=2, image_size=16)
+        original = hashlib.sha256(source.read_bytes()).digest()
+        with patch("folimeld.app.PdfDocument", side_effect=lambda: PdfDocument(history_limit, 0)):
+&gt;           result = benchmark(source, saved)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_benchmark_pdf.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tools/benchmark_pdf.py:73: in benchmark
+    window = MainWindow()
+             ^^^^^^^^^^^^
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_benchmark_pdf" name="test_report_cannot_overwrite_input" time="0.043" /><testcase classname="tests.test_blank_page.BlankPageTests" name="test_inserts_same_sized_blank_pages_after_selected_pages" time="0.033" /><testcase classname="tests.test_blank_page.DeletePageTests" name="test_deletes_selected_pages_and_selects_nearest_remaining_page" time="0.033" /><testcase classname="tests.test_blank_page.DeletePageTests" name="test_does_not_delete_every_page" time="0.029" /><testcase classname="tests.test_blank_page.DeletePageTests" name="test_empty_selection_does_not_modify_document" time="0.031" /><testcase classname="tests.test_button_display" name="test_button_display_applies_and_persists[icon_text]" time="0.030"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">mode = 'icon_text'
+
+    @pytest.mark.parametrize("mode", BUTTON_STYLES)
+    def test_button_display_applies_and_persists(mode):
+        app = QApplication.instance() or QApplication([])
+        settings = {}
+        with (patch("folimeld.app.QSettings") as factory,
+              patch("folimeld.app.is_packaged", return_value=False)):
+            factory.return_value.value.side_effect = lambda key, default=None: settings.get(key, default)
+            factory.return_value.setValue.side_effect = settings.__setitem__
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_button_display.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_button_display" name="test_button_display_applies_and_persists[icon]" time="0.031"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">mode = 'icon'
+
+    @pytest.mark.parametrize("mode", BUTTON_STYLES)
+    def test_button_display_applies_and_persists(mode):
+        app = QApplication.instance() or QApplication([])
+        settings = {}
+        with (patch("folimeld.app.QSettings") as factory,
+              patch("folimeld.app.is_packaged", return_value=False)):
+            factory.return_value.value.side_effect = lambda key, default=None: settings.get(key, default)
+            factory.return_value.setValue.side_effect = settings.__setitem__
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_button_display.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_button_display" name="test_button_display_applies_and_persists[text]" time="0.031"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">mode = 'text'
+
+    @pytest.mark.parametrize("mode", BUTTON_STYLES)
+    def test_button_display_applies_and_persists(mode):
+        app = QApplication.instance() or QApplication([])
+        settings = {}
+        with (patch("folimeld.app.QSettings") as factory,
+              patch("folimeld.app.is_packaged", return_value=False)):
+            factory.return_value.value.side_effect = lambda key, default=None: settings.get(key, default)
+            factory.return_value.setValue.side_effect = settings.__setitem__
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_button_display.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_button_display" name="test_invalid_button_display_falls_back_to_text" time="0.030"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">def test_invalid_button_display_falls_back_to_text():
+        app = QApplication.instance() or QApplication([])
+        with (patch("folimeld.app.QSettings") as factory,
+              patch("folimeld.app.is_packaged", return_value=False)):
+            factory.return_value.value.side_effect = lambda key, default=None: "unknown" if key == "button_display" else default
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_button_display.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_crypto_sources" name="test_download_rejects_corruption_preserving_existing_file" time="0.044" /><testcase classname="tests.test_crypto_sources" name="test_download_reuses_only_verified_files" time="0.042" /><testcase classname="tests.test_crypto_sources" name="test_sdist_rejects_unsafe_record_paths[../source.tar.gz]" time="0.043" /><testcase classname="tests.test_crypto_sources" name="test_sdist_rejects_unsafe_record_paths[..\\source.tar.gz]" time="0.041" /><testcase classname="tests.test_crypto_sources" name="test_sdist_rejects_modified_source" time="0.043" /><testcase classname="tests.test_crypto_sources" name="test_legal_texts_read_nested_documents_without_extracting_paths" time="0.046" /><testcase classname="tests.test_crypto_sources" name="test_missing_legal_documents_fail" time="0.039" /><testcase classname="tests.test_details" name="test_cover_dialog_saved_layout_and_history[False-TwoColumnLeft]" time="0.246" /><testcase classname="tests.test_details" name="test_cover_dialog_saved_layout_and_history[False-TwoColumnRight]" time="0.059" /><testcase classname="tests.test_details" name="test_cover_dialog_saved_layout_and_history[False-TwoPageLeft]" time="0.058" /><testcase classname="tests.test_details" name="test_cover_dialog_saved_layout_and_history[False-TwoPageRight]" time="0.068" /><testcase classname="tests.test_details" name="test_cover_dialog_saved_layout_and_history[True-TwoColumnLeft]" time="0.064" /><testcase classname="tests.test_details" name="test_cover_dialog_saved_layout_and_history[True-TwoColumnRight]" time="0.059" /><testcase classname="tests.test_details" name="test_cover_dialog_saved_layout_and_history[True-TwoPageLeft]" time="0.064" /><testcase classname="tests.test_details" name="test_cover_dialog_saved_layout_and_history[True-TwoPageRight]" time="0.058" /><testcase classname="tests.test_details.DetailsTest" name="test_other_layout_preserves_pdf_version_below_1_5" time="0.029" /><testcase classname="tests.test_details.DetailsTest" name="test_two_page_layout_preserves_pdf_version_above_1_5" time="0.031" /><testcase classname="tests.test_details.DetailsTest" name="test_two_page_layout_raises_pdf_version_to_1_5" time="0.029" /><testcase classname="tests.test_details.PageDisplayTest" name="test_cover_notice_uses_real_translator_and_restores_display" time="0.030"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">self = &lt;test_details.PageDisplayTest testMethod=test_cover_notice_uses_real_translator_and_restores_display&gt;
+
+    def test_cover_notice_uses_real_translator_and_restores_display(self) -&gt; None:
+        model = PdfDocument()
+        model.doc = fitz.open()
+        model.doc.new_page()
+        self.addCleanup(model.close)
+&gt;       translator = I18n()
+                     ^^^^^^
+
+tests/test_details.py:85: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_diagnostics" name="test_diagnostics_records_traceback_without_duplicate_handlers" time="0.045" /><testcase classname="tests.test_diagnostics" name="test_readonly_log_directory_does_not_prevent_startup" time="0.039" /><testcase classname="tests.test_edit_errors" name="test_edit_errors_are_reported[rotate-args0]" time="0.030"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">method = 'rotate', args = (90,)
+
+    @pytest.mark.parametrize("method,args", [
+        ("rotate", (90,)), ("move", (1,)), ("reorder_page", (0, 1)),
+    ])
+    def test_edit_errors_are_reported(method, args):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_edit_errors.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_edit_errors" name="test_edit_errors_are_reported[move-args1]" time="0.031"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">method = 'move', args = (1,)
+
+    @pytest.mark.parametrize("method,args", [
+        ("rotate", (90,)), ("move", (1,)), ("reorder_page", (0, 1)),
+    ])
+    def test_edit_errors_are_reported(method, args):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_edit_errors.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_edit_errors" name="test_edit_errors_are_reported[reorder_page-args2]" time="0.029"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">method = 'reorder_page', args = (0, 1)
+
+    @pytest.mark.parametrize("method,args", [
+        ("rotate", (90,)), ("move", (1,)), ("reorder_page", (0, 1)),
+    ])
+    def test_edit_errors_are_reported(method, args):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_edit_errors.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_edit_errors" name="test_properties_failure_rolls_back_and_keeps_dialog_open" time="0.030"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">def test_properties_failure_rolls_back_and_keeps_dialog_open():
+        from folimeld.dialogs import PropertiesDialog
+    
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_edit_errors.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_edit_errors" name="test_rollback_reconnects_thumbnails_to_restored_document" time="0.031"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">def test_rollback_reconnects_thumbnails_to_restored_document():
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_edit_errors.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_file_dialog.FileDialogTests" name="test_image_folder_picker_shows_files_but_accepts_only_directories" time="0.366" /><testcase classname="tests.test_file_dialog.FileDialogTests" name="test_missing_saved_directory_falls_back_to_pictures" time="0.040" /><testcase classname="tests.test_file_dialog.FileDialogTests" name="test_uses_and_remembers_last_open_directory" time="0.041" /><testcase classname="tests.test_folder_dialog" name="test_onedrive_environment_deduplicates_and_ignores_missing" time="0.000"><skipped type="pytest.skip" message="Windows registry integration">/home/folimeld/Folimeld/tests/test_folder_dialog.py:13: Windows registry integration</skipped></testcase><testcase classname="tests.test_folder_dialog" name="test_onedrive_not_added_on_other_platforms" time="0.031" /><testcase classname="tests.test_folder_dialog" name="test_folder_picker_adds_onedrive_sidebar_and_returns_folder" time="0.069" /><testcase classname="tests.test_folder_dialog" name="test_exit_action_preserves_unsaved_confirmation" time="0.030"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">def test_exit_action_preserves_unsaved_confirmation():
+        _app = QApplication.instance() or QApplication([])
+&gt;       window = MainWindow()
+                 ^^^^^^^^^^^^
+
+tests/test_folder_dialog.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_help" name="test_help_available_without_pdf_and_reuses_window" time="0.036"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">def test_help_available_without_pdf_and_reuses_window():
+        app = QApplication.instance() or QApplication([])
+        with patch("folimeld.app.is_packaged", return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_help.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_help" name="test_help_is_translated_in_every_language" time="0.034"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">def test_help_is_translated_in_every_language():
+        root = Path(__file__).resolve().parent.parent / "locales"
+&gt;       english = json.loads((root / "en.json").read_text(encoding="utf-8"))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_help.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/local/lib/python3.14/pathlib/__init__.py:787: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_history" name="test_multiple_edits_round_trip" time="0.119" /><testcase classname="tests.test_history" name="test_save_point_branch_and_no_ops" time="0.087" /><testcase classname="tests.test_history" name="test_password_history_and_reopen" time="0.164" /><testcase classname="tests.test_history" name="test_failed_group_rolls_back" time="0.041" /><testcase classname="tests.test_history" name="test_history_budget_prunes_old_states_and_preserves_save_point" time="0.129" /><testcase classname="tests.test_history" name="test_snapshot_larger_than_budget_does_not_block_editing" time="0.040" /><testcase classname="tests.test_history" name="test_disk_history_round_trip_branch_cleanup_and_save_point" time="0.105" /><testcase classname="tests.test_history" name="test_disk_history_budget_prunes_old_states" time="0.590" /><testcase classname="tests.test_history" name="test_disk_full_does_not_lose_edit_or_existing_history" time="0.179" /><testcase classname="tests.test_history" name="test_unreadable_disk_history_does_not_change_current_document" time="0.053" /><testcase classname="tests.test_history" name="test_ui_and_grouped_properties" time="0.152"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">model = &lt;folimeld.model.PdfDocument object at 0x646b10bd3d0&gt;
+
+    def test_ui_and_grouped_properties(model):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_history.py:196: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_i18n.SystemLanguageTests" name="test_all_languages_define_edit_labels" time="0.057" /><testcase classname="tests.test_i18n.SystemLanguageTests" name="test_all_languages_define_standard_button_labels" time="0.035" /><testcase classname="tests.test_i18n.SystemLanguageTests" name="test_generic_locale_falls_back_to_english" time="0.223" /><testcase classname="tests.test_i18n.SystemLanguageTests" name="test_qt_translator_uses_qt_locale_aliases" time="0.029" /><testcase classname="tests.test_i18n.SystemLanguageTests" name="test_system_language_is_a_supported_locale_code" time="0.083" /><testcase classname="tests.test_image_import" name="test_order[False-name]" time="0.125" /><testcase classname="tests.test_image_import" name="test_order[False-created]" time="0.073" /><testcase classname="tests.test_image_import" name="test_order[False-modified]" time="0.030" /><testcase classname="tests.test_image_import" name="test_order[True-name]" time="0.027" /><testcase classname="tests.test_image_import" name="test_order[True-created]" time="0.028" /><testcase classname="tests.test_image_import" name="test_order[True-modified]" time="0.051" /><testcase classname="tests.test_image_import" name="test_inventory_does_not_decode_or_recurse" time="0.050" /><testcase classname="tests.test_image_import" name="test_convert_orientation_transparency_tiff_and_save" time="0.099" /><testcase classname="tests.test_image_import" name="test_failure_and_animated_webp" time="0.351" /><testcase classname="tests.test_image_import" name="test_dialog_defaults_order_worker_and_cancel" time="2.568" /><testcase classname="tests.test_image_import" name="test_dialog_encrypted_result_and_cleanup[False]" time="0.431" /><testcase classname="tests.test_image_import" name="test_dialog_encrypted_result_and_cleanup[True]" time="0.424" /><testcase classname="tests.test_image_import" name="test_encrypted_conversion_write_failure" time="0.051" /><testcase classname="tests.test_license_info.LicenseInfoTests" name="test_bundle_collects_build_environment_notices" time="0.061" /><testcase classname="tests.test_license_info.LicenseInfoTests" name="test_frozen_app_reads_bundled_documents_without_package_metadata" time="0.063" /><testcase classname="tests.test_license_info.LicenseInfoTests" name="test_packaging_still_rejects_missing_metadata" time="0.033" /><testcase classname="tests.test_license_info.LicenseInfoTests" name="test_source_run_tolerates_missing_python_license_but_packaging_does_not" time="0.035" /><testcase classname="tests.test_license_info.LicenseInfoTests" name="test_source_run_without_winrt_metadata_still_loads_documents" time="0.066" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-IndexError0]" time="0.061" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-IndexError1]" time="0.066" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-IndexError2]" time="0.061" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-IndexError3]" time="0.060" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-ValueError0]" time="0.062" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-ValueError1]" time="0.061" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-ValueError2]" time="0.064" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-IndexError4]" time="0.062" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-ValueError3]" time="0.060" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-ValueError4]" time="0.062" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-TypeError0]" time="0.062" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-TypeError1]" time="0.063" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-IndexError5]" time="0.132" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-IndexError6]" time="0.073" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-IndexError7]" time="0.063" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-ValueError5]" time="0.063" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-ValueError6]" time="0.064" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-ValueError7]" time="0.064" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-ValueError8]" time="0.066" /><testcase classname="tests.test_model_validation" name="test_invalid_edit_preserves_document_history_and_save_point[&lt;lambda&gt;-TypeError2]" time="0.065" /><testcase classname="tests.test_model_validation" name="test_supported_versions[1.0]" time="0.055" /><testcase classname="tests.test_model_validation" name="test_supported_versions[1.1]" time="0.060" /><testcase classname="tests.test_model_validation" name="test_supported_versions[1.2]" time="0.058" /><testcase classname="tests.test_model_validation" name="test_supported_versions[1.3]" time="0.057" /><testcase classname="tests.test_model_validation" name="test_supported_versions[1.4]" time="0.056" /><testcase classname="tests.test_model_validation" name="test_supported_versions[1.5]" time="0.058" /><testcase classname="tests.test_model_validation" name="test_supported_versions[1.6]" time="0.056" /><testcase classname="tests.test_model_validation" name="test_supported_versions[1.7]" time="0.060" /><testcase classname="tests.test_model_validation" name="test_supported_versions[2.0]" time="0.057" /><testcase classname="tests.test_model_validation" name="test_supported_versions[PDF-1.7]" time="0.058" /><testcase classname="tests.test_model_validation" name="test_duplicate_rotation_indexes_are_applied_once" time="0.058" /><testcase classname="tests.test_model_validation" name="test_edit_without_document_has_clear_error" time="0.034" /><testcase classname="tests.test_model_validation" name="test_reorder_all_destinations[0-0]" time="0.067" /><testcase classname="tests.test_model_validation" name="test_reorder_all_destinations[0-1]" time="0.073" /><testcase classname="tests.test_model_validation" name="test_reorder_all_destinations[0-2]" time="0.064" /><testcase classname="tests.test_model_validation" name="test_reorder_all_destinations[1-0]" time="0.072" /><testcase classname="tests.test_model_validation" name="test_reorder_all_destinations[1-1]" time="0.066" /><testcase classname="tests.test_model_validation" name="test_reorder_all_destinations[1-2]" time="0.067" /><testcase classname="tests.test_model_validation" name="test_reorder_all_destinations[2-0]" time="0.068" /><testcase classname="tests.test_model_validation" name="test_reorder_all_destinations[2-1]" time="0.067" /><testcase classname="tests.test_model_validation" name="test_reorder_all_destinations[2-2]" time="0.063" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[0--1]" time="0.046" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[0-1]" time="0.045" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[1--1]" time="0.045" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[1-1]" time="0.064" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[2--1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[2-1]" time="0.051" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[3--1]" time="0.049" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[3-1]" time="0.055" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[4--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[4-1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[5--1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[5-1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[6--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[6-1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[7--1]" time="0.044" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[7-1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[8--1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[8-1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[9--1]" time="0.058" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[9-1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[10--1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[10-1]" time="0.065" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[11--1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[11-1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[12--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[12-1]" time="0.055" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[13--1]" time="0.055" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[13-1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[14--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[14-1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[15--1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[15-1]" time="0.055" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[16--1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[16-1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[17--1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[17-1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[18--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[18-1]" time="0.051" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[19--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[19-1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[20--1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[20-1]" time="0.049" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[21--1]" time="0.057" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[21-1]" time="0.056" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[22--1]" time="0.055" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[22-1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[23--1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[23-1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[24--1]" time="0.058" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[24-1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[25--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[25-1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[26--1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[26-1]" time="0.051" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[27--1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[27-1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[28--1]" time="0.051" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[28-1]" time="0.056" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[29--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[29-1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[30--1]" time="0.051" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[30-1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[31--1]" time="0.045" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[31-1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[32--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[32-1]" time="0.043" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[33--1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[33-1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[34--1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[34-1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[35--1]" time="0.051" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[35-1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[36--1]" time="0.049" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[36-1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[37--1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[37-1]" time="0.051" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[38--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[38-1]" time="0.048" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[39--1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[39-1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[40--1]" time="0.056" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[40-1]" time="0.055" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[41--1]" time="0.055" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[41-1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[42--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[42-1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[43--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[43-1]" time="0.051" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[44--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[44-1]" time="0.051" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[45--1]" time="0.051" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[45-1]" time="0.056" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[46--1]" time="0.051" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[46-1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[47--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[47-1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[48--1]" time="0.057" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[48-1]" time="0.046" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[49--1]" time="0.058" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[49-1]" time="0.055" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[50--1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[50-1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[51--1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[51-1]" time="0.051" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[52--1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[52-1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[53--1]" time="0.051" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[53-1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[54--1]" time="0.051" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[54-1]" time="0.056" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[55--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[55-1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[56--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[56-1]" time="0.045" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[57--1]" time="0.055" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[57-1]" time="0.056" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[58--1]" time="0.055" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[58-1]" time="0.054" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[59--1]" time="0.055" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[59-1]" time="0.056" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[60--1]" time="0.055" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[60-1]" time="0.047" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[61--1]" time="0.053" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[61-1]" time="0.052" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[62--1]" time="0.055" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[62-1]" time="0.045" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[63--1]" time="0.044" /><testcase classname="tests.test_move_groups" name="test_move_selection_patterns[63-1]" time="0.045" /><testcase classname="tests.test_msix_preflight" name="test_store_rejects_invalid_version[0.3.3.0]" time="0.030" /><testcase classname="tests.test_msix_preflight" name="test_store_rejects_invalid_version[1.0.0.1]" time="0.031" /><testcase classname="tests.test_msix_preflight" name="test_store_rejects_invalid_version[1.0.65536.0]" time="0.030" /><testcase classname="tests.test_msix_preflight" name="test_store_rejects_invalid_version[1.0.0]" time="0.033" /><testcase classname="tests.test_msix_preflight" name="test_store_rejects_invalid_version[1.0.0.0.1]" time="0.030" /><testcase classname="tests.test_msix_preflight" name="test_store_rejects_invalid_version[01.0.0.0]" time="0.031" /><testcase classname="tests.test_msix_preflight" name="test_store_rejects_invalid_version[-1.0.0.0]" time="0.030" /><testcase classname="tests.test_msix_preflight" name="test_store_rejects_development_or_incomplete_settings[values0]" time="0.031" /><testcase classname="tests.test_msix_preflight" name="test_store_rejects_development_or_incomplete_settings[values1]" time="0.030" /><testcase classname="tests.test_msix_preflight" name="test_store_rejects_development_or_incomplete_settings[values2]" time="0.032" /><testcase classname="tests.test_msix_preflight" name="test_store_rejects_development_or_incomplete_settings[values3]" time="0.030" /><testcase classname="tests.test_msix_preflight" name="test_store_rejects_development_or_incomplete_settings[values4]" time="0.031" /><testcase classname="tests.test_msix_preflight" name="test_store_rejects_development_or_incomplete_settings[values5]" time="0.033" /><testcase classname="tests.test_msix_preflight" name="test_store_rejects_development_or_incomplete_settings[values6]" time="0.031" /><testcase classname="tests.test_msix_preflight" name="test_store_rejects_development_or_incomplete_settings[values7]" time="0.033" /><testcase classname="tests.test_msix_preflight" name="test_package_static_checks[x64]" time="0.056" /><testcase classname="tests.test_msix_preflight" name="test_package_static_checks[arm64]" time="0.054" /><testcase classname="tests.test_msix_preflight" name="test_package_rejects_wrong_identity_architecture_and_missing_asset" time="0.067" /><testcase classname="tests.test_msix_preflight" name="test_package_version_must_increase_within_same_family" time="0.049" /><testcase classname="tests.test_msix_preflight" name="test_cli_requires_store_config_and_writes_no_false_success" time="0.042" /><testcase classname="tests.test_msix_preflight" name="test_cli_rejects_blank_example_and_stale_check_report" time="0.050" /><testcase classname="tests.test_msix_preflight" name="test_powershell_validate_only_and_store_failure_before_build" time="0.000"><skipped type="pytest.skip" message="Windows PowerShell build entry point">/home/folimeld/Folimeld/tests/test_msix_preflight.py:119: Windows PowerShell build entry point</skipped></testcase><testcase classname="tests.test_msix_test_bundle" name="test_prepare_refuses_other_identities_before_creating_output[identity0]" time="0.001"><skipped type="pytest.skip" message="Windows PowerShell packaging helpers">/home/folimeld/Folimeld/tests/test_msix_test_bundle.py:27: Windows PowerShell packaging helpers</skipped></testcase><testcase classname="tests.test_msix_test_bundle" name="test_prepare_refuses_other_identities_before_creating_output[identity1]" time="0.000"><skipped type="pytest.skip" message="Windows PowerShell packaging helpers">/home/folimeld/Folimeld/tests/test_msix_test_bundle.py:27: Windows PowerShell packaging helpers</skipped></testcase><testcase classname="tests.test_msix_test_bundle" name="test_prepare_refuses_other_identities_before_creating_output[identity2]" time="0.000"><skipped type="pytest.skip" message="Windows PowerShell packaging helpers">/home/folimeld/Folimeld/tests/test_msix_test_bundle.py:27: Windows PowerShell packaging helpers</skipped></testcase><testcase classname="tests.test_msix_test_bundle" name="test_prepare_preserves_existing_bundle" time="0.000"><skipped type="pytest.skip" message="Windows PowerShell packaging helpers">/home/folimeld/Folimeld/tests/test_msix_test_bundle.py:38: Windows PowerShell packaging helpers</skipped></testcase><testcase classname="tests.test_msix_test_bundle" name="test_prepare_requires_matching_source_record_before_signing" time="0.000"><skipped type="pytest.skip" message="Windows PowerShell packaging helpers">/home/folimeld/Folimeld/tests/test_msix_test_bundle.py:51: Windows PowerShell packaging helpers</skipped></testcase><testcase classname="tests.test_msix_test_bundle" name="test_powershell_scripts_parse[prepare_msix_test.ps1]" time="0.000"><skipped type="pytest.skip" message="Windows PowerShell packaging helpers">/home/folimeld/Folimeld/tests/test_msix_test_bundle.py:59: Windows PowerShell packaging helpers</skipped></testcase><testcase classname="tests.test_msix_test_bundle" name="test_powershell_scripts_parse[test_msix_on_vm.ps1]" time="0.000"><skipped type="pytest.skip" message="Windows PowerShell packaging helpers">/home/folimeld/Folimeld/tests/test_msix_test_bundle.py:59: Windows PowerShell packaging helpers</skipped></testcase><testcase classname="tests.test_password.PasswordTests" name="test_password_round_trip" time="0.210" /><testcase classname="tests.test_pdf_forms" name="test_widget_reading_survives_native_boundary[text-no]" time="0.314" /><testcase classname="tests.test_pdf_forms" name="test_widget_reading_survives_native_boundary[text-yes]" time="0.310" /><testcase classname="tests.test_pdf_forms" name="test_widget_reading_survives_native_boundary[checkbox-no]" time="0.302" /><testcase classname="tests.test_pdf_forms" name="test_widget_reading_survives_native_boundary[checkbox-yes]" time="0.318" /><testcase classname="tests.test_pdf_forms" name="test_widget_reading_survives_native_boundary[combo-no]" time="0.314" /><testcase classname="tests.test_pdf_forms" name="test_widget_reading_survives_native_boundary[combo-yes]" time="0.314" /><testcase classname="tests.test_pdf_forms" name="test_widget_reading_survives_native_boundary[empty_combo-no]" time="0.310" /><testcase classname="tests.test_pdf_forms" name="test_widget_reading_survives_native_boundary[empty_combo-yes]" time="0.317" /><testcase classname="tests.test_pdf_save" name="test_spawned_save_keeps_qt_responsive_and_preserves_editing[False]" time="0.041"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_spawned_save_keeps_qt_res0')
+failure = False
+
+    @pytest.mark.parametrize('failure', [False, True])
+    def test_spawned_save_keeps_qt_responsive_and_preserves_editing(tmp_path, failure):
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_pdf_save.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_pdf_save" name="test_spawned_save_keeps_qt_responsive_and_preserves_editing[True]" time="0.053"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_spawned_save_keeps_qt_res1')
+failure = True
+
+    @pytest.mark.parametrize('failure', [False, True])
+    def test_spawned_save_keeps_qt_responsive_and_preserves_editing(tmp_path, failure):
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_pdf_save.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_pdf_save" name="test_spawned_save_reports_python_failure_and_preserves_model" time="0.642" /><testcase classname="tests.test_pdf_save" name="test_encryption_failure_preserves_existing_destination_and_model" time="0.065" /><testcase classname="tests.test_prepare_linux_release" name="test_only_verified_linux_and_corresponding_sources_are_selected" time="0.129" /><testcase classname="tests.test_prepare_linux_release" name="test_corrupted_package_is_rejected" time="0.126" /><testcase classname="tests.test_prepare_linux_release" name="test_private_binary_in_checksum_list_is_rejected" time="0.132" /><testcase classname="tests.test_prepare_linux_release" name="test_wrong_source_archive_association_is_rejected" time="0.118" /><testcase classname="tests.test_prepare_linux_release" name="test_source_manifest_mismatch_is_rejected" time="0.132" /><testcase classname="tests.test_prepare_linux_release" name="test_unsafe_version_is_rejected[../private]" time="0.121" /><testcase classname="tests.test_prepare_linux_release" name="test_unsafe_version_is_rejected[0.3.3/../../]" time="0.128" /><testcase classname="tests.test_prepare_linux_release" name="test_unsafe_version_is_rejected[latest]" time="0.126" /><testcase classname="tests.test_prepare_linux_release" name="test_private_binary_inside_source_archive_is_rejected[private.exe]" time="0.121" /><testcase classname="tests.test_property_preservation" name="test_reorder_preserves_properties[False-False-&lt;lambda&gt;-expected0]" time="0.080" /><testcase classname="tests.test_property_preservation" name="test_reorder_preserves_properties[False-False-&lt;lambda&gt;-expected1]" time="0.084" /><testcase classname="tests.test_property_preservation" name="test_reorder_preserves_properties[False-False-&lt;lambda&gt;-expected2]" time="0.083" /><testcase classname="tests.test_property_preservation" name="test_reorder_preserves_properties[False-False-&lt;lambda&gt;-expected3]" time="0.080" /><testcase classname="tests.test_property_preservation" name="test_reorder_preserves_properties[False-True-&lt;lambda&gt;-expected0]" time="0.084" /><testcase classname="tests.test_property_preservation" name="test_reorder_preserves_properties[False-True-&lt;lambda&gt;-expected1]" time="0.081" /><testcase classname="tests.test_property_preservation" name="test_reorder_preserves_properties[False-True-&lt;lambda&gt;-expected2]" time="0.082" /><testcase classname="tests.test_property_preservation" name="test_reorder_preserves_properties[False-True-&lt;lambda&gt;-expected3]" time="0.085" /><testcase classname="tests.test_property_preservation" name="test_reorder_preserves_properties[True-False-&lt;lambda&gt;-expected0]" time="0.104" /><testcase classname="tests.test_property_preservation" name="test_reorder_preserves_properties[True-False-&lt;lambda&gt;-expected1]" time="0.095" /><testcase classname="tests.test_property_preservation" name="test_reorder_preserves_properties[True-False-&lt;lambda&gt;-expected2]" time="0.097" /><testcase classname="tests.test_property_preservation" name="test_reorder_preserves_properties[True-False-&lt;lambda&gt;-expected3]" time="0.099" /><testcase classname="tests.test_property_preservation" name="test_reorder_preserves_properties[True-True-&lt;lambda&gt;-expected0]" time="0.101" /><testcase classname="tests.test_property_preservation" name="test_reorder_preserves_properties[True-True-&lt;lambda&gt;-expected1]" time="0.103" /><testcase classname="tests.test_property_preservation" name="test_reorder_preserves_properties[True-True-&lt;lambda&gt;-expected2]" time="0.104" /><testcase classname="tests.test_property_preservation" name="test_reorder_preserves_properties[True-True-&lt;lambda&gt;-expected3]" time="0.100" /><testcase classname="tests.test_property_preservation" name="test_properties_dialog_preserves_viewer_preferences[False]" time="0.078" /><testcase classname="tests.test_property_preservation" name="test_properties_dialog_preserves_viewer_preferences[True]" time="0.083" /><testcase classname="tests.test_save_contents" name="test_save_preserves_images_links_annotations_forms_and_attachments[False-False]" time="0.104" /><testcase classname="tests.test_save_contents" name="test_save_preserves_images_links_annotations_forms_and_attachments[False-True]" time="1.514" /><testcase classname="tests.test_save_contents" name="test_save_preserves_images_links_annotations_forms_and_attachments[True-False]" time="1.692" /><testcase classname="tests.test_save_contents" name="test_save_preserves_images_links_annotations_forms_and_attachments[True-True]" time="2.031" /><testcase classname="tests.test_save_failures" name="test_failed_save_preserves_editing_and_history[False-False-write]" time="0.148" /><testcase classname="tests.test_save_failures" name="test_failed_save_preserves_editing_and_history[False-False-replace]" time="0.096" /><testcase classname="tests.test_save_failures" name="test_failed_save_preserves_editing_and_history[False-False-reopen]" time="0.101" /><testcase classname="tests.test_save_failures" name="test_failed_save_preserves_editing_and_history[False-True-write]" time="0.829" /><testcase classname="tests.test_save_failures" name="test_failed_save_preserves_editing_and_history[False-True-replace]" time="0.517" /><testcase classname="tests.test_save_failures" name="test_failed_save_preserves_editing_and_history[False-True-reopen]" time="0.660" /><testcase classname="tests.test_save_failures" name="test_failed_save_preserves_editing_and_history[True-False-write]" time="0.093" /><testcase classname="tests.test_save_failures" name="test_failed_save_preserves_editing_and_history[True-False-replace]" time="0.246" /><testcase classname="tests.test_save_failures" name="test_failed_save_preserves_editing_and_history[True-False-reopen]" time="0.220" /><testcase classname="tests.test_save_failures" name="test_failed_save_preserves_editing_and_history[True-True-write]" time="0.561" /><testcase classname="tests.test_save_failures" name="test_failed_save_preserves_editing_and_history[True-True-replace]" time="0.406" /><testcase classname="tests.test_save_failures" name="test_failed_save_preserves_editing_and_history[True-True-reopen]" time="0.647" /><testcase classname="tests.test_source_bundle" name="test_archive_preserves_actual_inputs_and_environment" time="0.536" /><testcase classname="tests.test_source_bundle" name="test_missing_required_source_fails" time="0.122" /><testcase classname="tests.test_source_bundle" name="test_includes_linked_new_docs_but_excludes_unrelated_work" time="0.131" /><testcase classname="tests.test_source_bundle" name="test_rejects_old_binary_without_record" time="0.610" /><testcase classname="tests.test_source_bundle" name="test_association_verifies_archive_and_changed_sources" time="0.233" /><testcase classname="tests.test_sponsors" name="test_sponsors_entry_is_linux_only[linux]" time="0.077"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">platform = 'linux'
+
+    @pytest.mark.parametrize("platform", ["linux", "win32", "darwin"])
+    def test_sponsors_entry_is_linux_only(platform):
+        app = QApplication.instance() or QApplication([])
+        with patch("folimeld.app.sys.platform", platform), patch("folimeld.app.is_packaged", return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_sponsors.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_sponsors" name="test_sponsors_entry_is_linux_only[win32]" time="0.038"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">platform = 'win32'
+
+    @pytest.mark.parametrize("platform", ["linux", "win32", "darwin"])
+    def test_sponsors_entry_is_linux_only(platform):
+        app = QApplication.instance() or QApplication([])
+        with patch("folimeld.app.sys.platform", platform), patch("folimeld.app.is_packaged", return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_sponsors.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_sponsors" name="test_sponsors_entry_is_linux_only[darwin]" time="0.139"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">platform = 'darwin'
+
+    @pytest.mark.parametrize("platform", ["linux", "win32", "darwin"])
+    def test_sponsors_entry_is_linux_only(platform):
+        app = QApplication.instance() or QApplication([])
+        with patch("folimeld.app.sys.platform", platform), patch("folimeld.app.is_packaged", return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_sponsors.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_sponsors" name="test_sponsors_translations" time="0.033"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">def test_sponsors_translations():
+&gt;       translator = I18n()
+                     ^^^^^^
+
+tests/test_sponsors.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_store_support" name="test_purchase_requires_verified_license_and_prevents_duplicates" time="0.032" /><testcase classname="tests.test_store_support" name="test_failed_purchase_never_unlocks[2-support_cancelled]" time="0.032" /><testcase classname="tests.test_store_support" name="test_failed_purchase_never_unlocks[3-support_error]" time="0.072" /><testcase classname="tests.test_store_support" name="test_failed_purchase_never_unlocks[4-support_error]" time="0.075" /><testcase classname="tests.test_store_support" name="test_revoked_license_removes_icon_even_if_catalog_fails" time="0.036" /><testcase classname="tests.test_store_support" name="test_network_failure_does_not_erase_known_ownership" time="0.037" /><testcase classname="tests.test_store_support" name="test_hresult_zero_is_success_and_store_price_is_displayed" time="0.639" /><testcase classname="tests.test_store_support" name="test_unpublished_product_disables_purchase" time="0.032" /><testcase classname="tests.test_store_support" name="test_non_store_build_has_no_purchase_menu" time="0.033"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">def test_non_store_build_has_no_purchase_menu():
+        from folimeld.app import MainWindow
+        _app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_store_support.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_temporary_data" name="test_only_256_bit_keys_are_accepted[0]" time="0.042" /><testcase classname="tests.test_temporary_data" name="test_only_256_bit_keys_are_accepted[16]" time="0.032" /><testcase classname="tests.test_temporary_data" name="test_only_256_bit_keys_are_accepted[24]" time="0.063" /><testcase classname="tests.test_temporary_data" name="test_only_256_bit_keys_are_accepted[33]" time="0.116" /><testcase classname="tests.test_temporary_data" name="test_encrypted_round_trip_and_randomized_ciphertext[0]" time="0.032" /><testcase classname="tests.test_temporary_data" name="test_encrypted_round_trip_and_randomized_ciphertext[17]" time="0.054" /><testcase classname="tests.test_temporary_data" name="test_encrypted_round_trip_and_randomized_ciphertext[1048607]" time="0.104" /><testcase classname="tests.test_temporary_data" name="test_corruption_never_returns_unauthenticated_plaintext[header]" time="0.032" /><testcase classname="tests.test_temporary_data" name="test_corruption_never_returns_unauthenticated_plaintext[nonce]" time="0.033" /><testcase classname="tests.test_temporary_data" name="test_corruption_never_returns_unauthenticated_plaintext[ciphertext]" time="0.169" /><testcase classname="tests.test_temporary_data" name="test_corruption_never_returns_unauthenticated_plaintext[tag]" time="0.031" /><testcase classname="tests.test_temporary_data" name="test_corruption_never_returns_unauthenticated_plaintext[truncate]" time="0.084" /><testcase classname="tests.test_temporary_data" name="test_corruption_never_returns_unauthenticated_plaintext[append]" time="0.147" /><testcase classname="tests.test_temporary_data" name="test_corruption_never_returns_unauthenticated_plaintext[key]" time="0.032" /><testcase classname="tests.test_temporary_data" name="test_short_write_fails_without_releasing_in_memory_snapshot" time="0.128" /><testcase classname="tests.test_temporary_data" name="test_corrupted_disk_history_preserves_current_document_and_stacks" time="0.053" /><testcase classname="tests.test_temporary_data" name="test_disk_budget_includes_encryption_overhead" time="0.034" /><testcase classname="tests.test_temporary_data" name="test_save_worker_authenticates_input_before_parsing_pdf" time="0.195" /><testcase classname="tests.test_temporary_data" name="test_abrupt_process_exit_leaves_ciphertext_without_a_key_file" time="0.485" /><testcase classname="tests.test_thumbnails" name="test_viewport_search_matches_full_scan_without_visiting_every_page[144-700]" time="0.055"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">size = 144, width = 700
+
+    @pytest.mark.parametrize('size,width', [(144, 700), (288, 700), (432, 700), (288, 1400)])
+    def test_viewport_search_matches_full_scan_without_visiting_every_page(size, width):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_thumbnails.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_thumbnails" name="test_viewport_search_matches_full_scan_without_visiting_every_page[288-700]" time="0.139"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">size = 288, width = 700
+
+    @pytest.mark.parametrize('size,width', [(144, 700), (288, 700), (432, 700), (288, 1400)])
+    def test_viewport_search_matches_full_scan_without_visiting_every_page(size, width):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_thumbnails.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_thumbnails" name="test_viewport_search_matches_full_scan_without_visiting_every_page[432-700]" time="0.039"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">size = 432, width = 700
+
+    @pytest.mark.parametrize('size,width', [(144, 700), (288, 700), (432, 700), (288, 1400)])
+    def test_viewport_search_matches_full_scan_without_visiting_every_page(size, width):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_thumbnails.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_thumbnails" name="test_viewport_search_matches_full_scan_without_visiting_every_page[288-1400]" time="0.033"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">size = 288, width = 1400
+
+    @pytest.mark.parametrize('size,width', [(144, 700), (288, 700), (432, 700), (288, 1400)])
+    def test_viewport_search_matches_full_scan_without_visiting_every_page(size, width):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_thumbnails.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_thumbnails" name="test_thumbnail_reuse_rotation_reorder_and_document_replacement" time="0.035"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">def test_thumbnail_reuse_rotation_reorder_and_document_replacement():
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_thumbnails.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_thumbnails" name="test_pending_renders_are_cancelled_when_document_changes" time="0.034"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">def test_pending_renders_are_cancelled_when_document_changes():
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_thumbnails.py:88: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_thumbnails" name="test_slow_thumbnail_yields_before_rendering_four_pages" time="0.077"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">def test_slow_thumbnail_yields_before_rendering_four_pages():
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_thumbnails.py:108: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_thumbnails" name="test_large_document_renders_near_viewport_and_releases_scrolled_out_icons" time="0.111"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_large_document_renders_ne0')
+
+    def test_large_document_renders_near_viewport_and_releases_scrolled_out_icons(tmp_path):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_thumbnails.py:131: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_toolbar_properties" name="test_toolbar_binding_round_trip[1.4-False]" time="0.064"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">cover = False, version = '1.4'
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_toolbar_binding_round_tri0')
+
+    @pytest.mark.parametrize('cover', [False, True])
+    @pytest.mark.parametrize('version', ['1.4', '1.7'])
+    def test_toolbar_binding_round_trip(cover, version, tmp_path):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_toolbar_properties.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_toolbar_properties" name="test_toolbar_binding_round_trip[1.4-True]" time="0.069"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">cover = True, version = '1.4'
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_toolbar_binding_round_tri1')
+
+    @pytest.mark.parametrize('cover', [False, True])
+    @pytest.mark.parametrize('version', ['1.4', '1.7'])
+    def test_toolbar_binding_round_trip(cover, version, tmp_path):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_toolbar_properties.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_toolbar_properties" name="test_toolbar_binding_round_trip[1.7-False]" time="0.046"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">cover = False, version = '1.7'
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_toolbar_binding_round_tri2')
+
+    @pytest.mark.parametrize('cover', [False, True])
+    @pytest.mark.parametrize('version', ['1.4', '1.7'])
+    def test_toolbar_binding_round_trip(cover, version, tmp_path):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_toolbar_properties.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_toolbar_properties" name="test_toolbar_binding_round_trip[1.7-True]" time="0.077"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'">cover = True, version = '1.7'
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-1/test_toolbar_binding_round_tri3')
+
+    @pytest.mark.parametrize('cover', [False, True])
+    @pytest.mark.parametrize('version', ['1.4', '1.7'])
+    def test_toolbar_binding_round_trip(cover, version, tmp_path):
+        app = QApplication.instance() or QApplication([])
+        with patch('folimeld.app.is_packaged', return_value=False):
+&gt;           window = MainWindow()
+                     ^^^^^^^^^^^^
+
+tests/test_toolbar_properties.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+folimeld/app.py:38: in __init__
+    self.i18n = i18n or I18n()
+                        ^^^^^^
+folimeld/i18n.py:48: in __init__
+    self.load(self.language)
+folimeld/i18n.py:73: in load
+    with fallback.open(encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/folimeld/Folimeld/locales/en.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld/Folimeld/locales/en.json'
+
+/usr/local/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError</failure></testcase><testcase classname="tests.test_version.VersionInfoTests" name="test_generated_resource_uses_same_version" time="0.031" /><testcase classname="tests.test_version.VersionInfoTests" name="test_invalid_version_is_rejected" time="0.057" /><testcase classname="tests.test_version.VersionInfoTests" name="test_windows_version_adds_revision" time="0.034" /><testcase classname="tests.test_windows_build_environment" name="test_build_path_excludes_unrelated_tools_and_keeps_git" time="0.041" /><testcase classname="tests.test_windows_build_environment" name="test_build_requires_windows_root" time="0.123" /><testcase classname="tests.test_windows_build_environment" name="test_binary_provenance_accepts_python_and_system_files" time="0.043" /><testcase classname="tests.test_windows_build_environment" name="test_binary_provenance_rejects_external_and_similar_prefixes[unrelated-image-tools]" time="0.052" /><testcase classname="tests.test_windows_build_environment" name="test_binary_provenance_rejects_external_and_similar_prefixes[venv-unrelated]" time="0.046" /><testcase classname="tests.test_windows_integration.WindowsIntegrationTests" name="test_non_windows_process_is_not_packaged" time="0.139" /><testcase classname="tests.test_windows_integration.WindowsIntegrationTests" name="test_open_command_quotes_executable_and_pdf_path" time="0.196" /><testcase classname="tests.test_windows_integration.WindowsIntegrationTests" name="test_packaged_app_does_not_write_file_association_registry_keys" time="0.037" /><testcase classname="tests.test_windows_integration.WindowsIntegrationTests" name="test_register_open_with_is_noop_when_windows_registry_is_unavailable" time="0.133" /></testsuite></testsuites>

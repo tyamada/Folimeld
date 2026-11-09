@@ -1,0 +1,701 @@
+/home/folimeld/Folimeld/.venv-openbsd/lib/python3.14/site-packages/pip/_vendor/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 4.4.0'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Processing ./pymupdf-1.28.2
+  Preparing metadata (pyproject.toml): started
+  Running command Preparing metadata (pyproject.toml)
+  [+0.0s] setup.py:184: <module>(): ### Starting.
+  [+0.0s] setup.py:185: <module>(): os.getcwd()='/home/folimeld/native-build/pymupdf-1.28.2'
+  [+0.0s] setup.py:185: <module>(): platform.machine()='amd64'
+  [+0.0s] setup.py:185: <module>(): platform.platform()='OpenBSD-8.0-amd64-64bit-ELF'
+  [+0.0s] setup.py:185: <module>(): platform.python_implementation()='CPython'
+  [+0.1s] setup.py:185: <module>(): platform.python_version()='3.14.9'
+  [+0.1s] setup.py:185: <module>(): platform.system()='OpenBSD'
+  [+0.1s] setup.py:185: <module>(): platform.uname()=uname_result(system='OpenBSD', node='folimeld-openbsd.lan', release='8.0', version='GENERIC.MP#4', machine='amd64')
+  [+0.1s] setup.py:185: <module>(): sys.executable='/home/folimeld/Folimeld/.venv-openbsd/bin/python'
+  [+0.1s] setup.py:185: <module>(): sys.version='3.14.9 (main, Oct 24 2026, 11:43:31) [Clang 22.1.6 ]'
+  [+0.1s] setup.py:185: <module>(): sys.version_info=sys.version_info(major=3, minor=14, micro=9, releaselevel='final', serial=0)
+  [+0.1s] setup.py:185: <module>(): list(sys.version_info)=[3, 14, 9, 'final', 0]
+  [+0.1s] setup.py:185: <module>(): sys.prefix='/home/folimeld/Folimeld/.venv-openbsd'
+  [+0.1s] setup.py:185: <module>(): sys.base_prefix='/usr/local'
+  [+0.1s] setup.py:185: <module>(): sysconfig.get_config_var("Py_GIL_DISABLED")=0
+  [+0.1s] setup.py:185: <module>(): sys._is_gil_enabled()=True
+  [+0.1s] setup.py:185: <module>(): CPU bits: 64
+  [+0.1s] setup.py:185: <module>(): sys.argv (3):
+  [+0.1s] setup.py:185: <module>():     0: '/home/folimeld/Folimeld/.venv-openbsd/lib/python3.14/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py'
+  [+0.1s] setup.py:185: <module>():     1: 'prepare_metadata_for_build_wheel'
+  [+0.1s] setup.py:185: <module>():     2: '/tmp/tmpofkake07'
+  [+0.1s] setup.py:185: <module>(): [Not showing os.environ because PIPCL_SHOW_ENV='0'.]
+  [+0.1s] setup.py:195: <module>(): PYMUPDF_SETUP_URL_WHEEL=None
+  [+0.1s] setup.py:198: <module>(): PYMUPDF_SETUP_DUMMY=None
+  [+0.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:764: __init__(): PIPCL_CHANGE_VERSIONS=None
+  [+0.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:833: build_wheel(): PIPCL_PREBUILT_WHEEL_pymupdf=None
+  [+0.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:1116: tag_platform(): From self.tag_platform_: ret=None.
+  [+0.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:1127: tag_platform(): From AUDITWHEEL_PLAT: ret=None.
+  [+0.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:1142: tag_platform(): From sysconfig.get_platform(): ret='openbsd_8_0_amd64'.
+  [+0.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:1146: tag_platform(): tag_platform(): returning ret='openbsd_8_0_amd64'.
+  [+0.1s] setup.py:315: get_mupdf_internal(): get_mupdf_internal(): out='dir' location='/home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source'
+  [+0.1s] setup.py:770: build_mupdf_unix(): Setting XCFLAGS and XCXXFLAGS to predefine TOFU_CJK_EXT.
+  [+0.1s] setup.py:802: build_mupdf_unix(): Running: cc --version
+  [+0.1s] setup.py:802: build_mupdf_unix(): OpenBSD clang version 22.1.6
+  [+0.2s] setup.py:802: build_mupdf_unix(): Target: amd64-unknown-openbsd8.0
+  [+0.2s] setup.py:802: build_mupdf_unix(): Thread model: posix
+  [+0.2s] setup.py:802: build_mupdf_unix(): InstalledDir: /usr/bin
+  [+0.2s] setup.py:802: build_mupdf_unix():
+  [+0.2s] setup.py:803: build_mupdf_unix(): Running: c++ --version
+  [+0.2s] setup.py:803: build_mupdf_unix(): OpenBSD clang version 22.1.6
+  [+0.2s] setup.py:803: build_mupdf_unix(): Target: amd64-unknown-openbsd8.0
+  [+0.2s] setup.py:803: build_mupdf_unix(): Thread model: posix
+  [+0.2s] setup.py:803: build_mupdf_unix(): InstalledDir: /usr/bin
+  [+0.2s] setup.py:803: build_mupdf_unix():
+  [+0.2s] setup.py:857: build_mupdf_unix(): g_py_limited_api=True
+  [+0.2s] setup.py:894: build_mupdf_unix(): Building MuPDF by running: cd /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source && XCFLAGS=-DTOFU_CJK_EXT XCXXFLAGS=-DTOFU_CJK_EXT CXX=c++ /home/folimeld/Folimeld/.venv-openbsd/bin/python ./scripts/mupdfwrap.py --swig /usr/local/bin/swig -d build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release -b all && echo /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release: && ls -l /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release
+  (+0.0s): state.py:344:set_dir_so: self.Py_LIMITED_API=None
+  (+0.0s): -d: state.py:344:set_dir_so: self.Py_LIMITED_API='0x030e0000'
+  (+0.0s): -b: __main__.py:1528:build: Setting compiler to os.environ["CXX"]='c++'.
+  (+0.0s): -b: m: __main__.py:1633:build: Building libmupdf.so ...
+  (+0.0s): -b: m: __main__.py:1149:_get_m_command: OpenBSD, using: make='CXX=c++ gmake'.
+  (+0.0s): -b: m: __main__.py:1156:_get_m_command: Setting -j to  multiprocessing.cpu_count()=1
+  (+0.0s): -b: m: __main__.py:1195:_get_m_command: Ignoring unrecognised flag 'amd64' in ['amd64', 'shared', 'tesseract', 'Py_LIMITED_API_0x030e0000', 'release'] in '/home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release'
+  (+0.1s): -b: m: __main__.py:1635:build: running: cd /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source && CXX=c++ gmake -j 1 HAVE_GLUT=no HAVE_PTHREAD=yes verbose=yes barcode=yes shared=yes HAVE_LEPTONICA=yes HAVE_TESSERACT=yes build=release OUT=build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release libs libmupdf-threads
+  (+2.0s): -b: m: __main__.py:1635:build: (+0.1s): -b: m: __main__.py:1635:build: gmake: Nothing to be done for 'libs'.
+  (+2.0s): -b: m: __main__.py:1635:build: (+0.1s): -b: m: __main__.py:1635:build: gmake: Nothing to be done for 'libmupdf-threads'.
+  (+2.0s): -b: m: __main__.py:1635:build: (+0.1s): -b: m: __main__.py:1635:build:
+  (+2.0s): -b: m: __main__.py:1635:build: [returned e=0]
+  (+2.0s): -b: 0: __main__.py:1306:build_0: Generating C++ source code ...
+  (+2.0s): -b: 0: cpp.py:5411:close: File unchanged: platform/c++/include/mupdf/extra.h
+  (+2.0s): -b: 0: cpp.py:5411:close: File unchanged: platform/c++/implementation/extra.cpp
+  (+2.1s): -b: 0: cpp.py:5802:cpp_source: Creating wrapper functions...
+  (+8.2s): -b: 0: cpp.py:5883:cpp_source: Creating wrapper classes...
+  (+12.1s): -b: 0: cpp.py:5409:close: File updated: platform/c++/include/mupdf/classes.h
+  (+12.1s): -b: 0: cpp.py:5409:close: File updated: platform/c++/include/mupdf/classes2.h
+  (+12.1s): -b: 0: cpp.py:5409:close: File updated: platform/c++/include/mupdf/exceptions.h
+  (+12.2s): -b: 0: cpp.py:5409:close: File updated: platform/c++/include/mupdf/functions.h
+  (+12.2s): -b: 0: cpp.py:5409:close: File updated: platform/c++/include/mupdf/internal.h
+  (+12.4s): -b: 0: cpp.py:5409:close: File updated: platform/c++/implementation/classes.cpp
+  (+12.5s): -b: 0: cpp.py:5409:close: File updated: platform/c++/implementation/classes2.cpp
+  (+12.5s): -b: 0: cpp.py:5409:close: File updated: platform/c++/implementation/exceptions.cpp
+  (+12.8s): -b: 0: cpp.py:5409:close: File updated: platform/c++/implementation/functions.cpp
+  (+12.8s): -b: 0: cpp.py:5409:close: File updated: platform/c++/implementation/internal.cpp
+  (+12.9s): -b: 0: cpp.py:5409:close: File updated: platform/c++/fn_usage.txt
+  (+13.0s): -b: 0: __main__.py:1373:build_0: Wrapper classes that are containers: generated.container_classnames=['FzLink', 'FzStextBlock', 'FzStextLine', 'FzStextPage']
+  (+13.0s): -b: 1: __main__.py:1695:build: Compiling generated C++ source code to create libmupdfcpp.so ...
+  (+13.0s): -b: 1: __main__.py:1769:build: Rebuilding because command has changed:
+  (+13.0s): -b: 1: __main__.py:1769:build: None
+  (+13.0s): -b: 1: __main__.py:1769:build: =>
+  (+13.0s): -b: 1: __main__.py:1769:build:
+  (+13.0s): -b: 1: __main__.py:1769:build: c++
+  (+13.0s): -b: 1: __main__.py:1769:build:     -c
+  (+13.0s): -b: 1: __main__.py:1769:build:     -o platform/c++/implementation/classes.cpp.o
+  (+13.0s): -b: 1: __main__.py:1769:build:     -O2 -DNDEBUG
+  (+13.0s): -b: 1: __main__.py:1769:build:     -fPIC
+  (+13.0s): -b: 1: __main__.py:1769:build:     -DTOFU_CJK_EXT
+  (+13.0s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include
+  (+13.0s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include
+  (+13.0s): -b: 1: __main__.py:1769:build:     /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/implementation/classes.cpp
+  (+13.0s): -b: 1: __main__.py:1769:build: : platform/c++/implementation/classes.cpp.o
+  (+13.0s): -b: 1: __main__.py:1769:build: running: c++ \
+  (+13.0s): -b: 1: __main__.py:1769:build:     -c \
+  (+13.0s): -b: 1: __main__.py:1769:build:     -o platform/c++/implementation/classes.cpp.o \
+  (+13.0s): -b: 1: __main__.py:1769:build:     -O2 -DNDEBUG \
+  (+13.0s): -b: 1: __main__.py:1769:build:     -fPIC \
+  (+13.0s): -b: 1: __main__.py:1769:build:     -DTOFU_CJK_EXT \
+  (+13.0s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include \
+  (+13.0s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include \
+  (+13.0s): -b: 1: __main__.py:1769:build:     /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/implementation/classes.cpp
+  (+18.9s): -b: 1: __main__.py:1769:build: [returned e=0]
+  (+18.9s): -b: 1: __main__.py:1769:build: Rebuilding because command has changed:
+  (+18.9s): -b: 1: __main__.py:1769:build: None
+  (+18.9s): -b: 1: __main__.py:1769:build: =>
+  (+18.9s): -b: 1: __main__.py:1769:build:
+  (+18.9s): -b: 1: __main__.py:1769:build: c++
+  (+18.9s): -b: 1: __main__.py:1769:build:     -c
+  (+18.9s): -b: 1: __main__.py:1769:build:     -o platform/c++/implementation/classes2.cpp.o
+  (+18.9s): -b: 1: __main__.py:1769:build:     -O2 -DNDEBUG
+  (+18.9s): -b: 1: __main__.py:1769:build:     -fPIC
+  (+18.9s): -b: 1: __main__.py:1769:build:     -DTOFU_CJK_EXT
+  (+18.9s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include
+  (+18.9s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include
+  (+18.9s): -b: 1: __main__.py:1769:build:     /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/implementation/classes2.cpp
+  (+18.9s): -b: 1: __main__.py:1769:build: : platform/c++/implementation/classes2.cpp.o
+  (+19.0s): -b: 1: __main__.py:1769:build: running: c++ \
+  (+19.0s): -b: 1: __main__.py:1769:build:     -c \
+  (+19.0s): -b: 1: __main__.py:1769:build:     -o platform/c++/implementation/classes2.cpp.o \
+  (+19.0s): -b: 1: __main__.py:1769:build:     -O2 -DNDEBUG \
+  (+19.0s): -b: 1: __main__.py:1769:build:     -fPIC \
+  (+19.0s): -b: 1: __main__.py:1769:build:     -DTOFU_CJK_EXT \
+  (+19.0s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include \
+  (+19.0s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include \
+  (+19.0s): -b: 1: __main__.py:1769:build:     /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/implementation/classes2.cpp
+  (+22.1s): -b: 1: __main__.py:1769:build: [returned e=0]
+  (+22.1s): -b: 1: __main__.py:1769:build: Rebuilding because command has changed:
+  (+22.1s): -b: 1: __main__.py:1769:build: None
+  (+22.1s): -b: 1: __main__.py:1769:build: =>
+  (+22.1s): -b: 1: __main__.py:1769:build:
+  (+22.1s): -b: 1: __main__.py:1769:build: c++
+  (+22.1s): -b: 1: __main__.py:1769:build:     -c
+  (+22.1s): -b: 1: __main__.py:1769:build:     -o platform/c++/implementation/exceptions.cpp.o
+  (+22.1s): -b: 1: __main__.py:1769:build:     -O2 -DNDEBUG
+  (+22.1s): -b: 1: __main__.py:1769:build:     -fPIC
+  (+22.1s): -b: 1: __main__.py:1769:build:     -DTOFU_CJK_EXT
+  (+22.1s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include
+  (+22.1s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include
+  (+22.1s): -b: 1: __main__.py:1769:build:     /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/implementation/exceptions.cpp
+  (+22.1s): -b: 1: __main__.py:1769:build: : platform/c++/implementation/exceptions.cpp.o
+  (+22.2s): -b: 1: __main__.py:1769:build: running: c++ \
+  (+22.2s): -b: 1: __main__.py:1769:build:     -c \
+  (+22.2s): -b: 1: __main__.py:1769:build:     -o platform/c++/implementation/exceptions.cpp.o \
+  (+22.2s): -b: 1: __main__.py:1769:build:     -O2 -DNDEBUG \
+  (+22.2s): -b: 1: __main__.py:1769:build:     -fPIC \
+  (+22.2s): -b: 1: __main__.py:1769:build:     -DTOFU_CJK_EXT \
+  (+22.2s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include \
+  (+22.2s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include \
+  (+22.2s): -b: 1: __main__.py:1769:build:     /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/implementation/exceptions.cpp
+  (+23.3s): -b: 1: __main__.py:1769:build: [returned e=0]
+  (+23.3s): -b: 1: __main__.py:1769:build: Rebuilding because command has changed:
+  (+23.3s): -b: 1: __main__.py:1769:build: None
+  (+23.3s): -b: 1: __main__.py:1769:build: =>
+  (+23.3s): -b: 1: __main__.py:1769:build:
+  (+23.3s): -b: 1: __main__.py:1769:build: c++
+  (+23.3s): -b: 1: __main__.py:1769:build:     -c
+  (+23.3s): -b: 1: __main__.py:1769:build:     -o platform/c++/implementation/extra.cpp.o
+  (+23.3s): -b: 1: __main__.py:1769:build:     -O2 -DNDEBUG
+  (+23.3s): -b: 1: __main__.py:1769:build:     -fPIC
+  (+23.3s): -b: 1: __main__.py:1769:build:     -DTOFU_CJK_EXT
+  (+23.3s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include
+  (+23.3s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include
+  (+23.3s): -b: 1: __main__.py:1769:build:     /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/implementation/extra.cpp
+  (+23.3s): -b: 1: __main__.py:1769:build: : platform/c++/implementation/extra.cpp.o
+  (+23.3s): -b: 1: __main__.py:1769:build: running: c++ \
+  (+23.3s): -b: 1: __main__.py:1769:build:     -c \
+  (+23.3s): -b: 1: __main__.py:1769:build:     -o platform/c++/implementation/extra.cpp.o \
+  (+23.3s): -b: 1: __main__.py:1769:build:     -O2 -DNDEBUG \
+  (+23.3s): -b: 1: __main__.py:1769:build:     -fPIC \
+  (+23.3s): -b: 1: __main__.py:1769:build:     -DTOFU_CJK_EXT \
+  (+23.3s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include \
+  (+23.3s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include \
+  (+23.3s): -b: 1: __main__.py:1769:build:     /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/implementation/extra.cpp
+  (+24.6s): -b: 1: __main__.py:1769:build: [returned e=0]
+  (+24.6s): -b: 1: __main__.py:1769:build: Rebuilding because command has changed:
+  (+24.6s): -b: 1: __main__.py:1769:build: None
+  (+24.6s): -b: 1: __main__.py:1769:build: =>
+  (+24.6s): -b: 1: __main__.py:1769:build:
+  (+24.6s): -b: 1: __main__.py:1769:build: c++
+  (+24.6s): -b: 1: __main__.py:1769:build:     -c
+  (+24.6s): -b: 1: __main__.py:1769:build:     -o platform/c++/implementation/functions.cpp.o
+  (+24.6s): -b: 1: __main__.py:1769:build:     -O2 -DNDEBUG
+  (+24.6s): -b: 1: __main__.py:1769:build:     -fPIC
+  (+24.6s): -b: 1: __main__.py:1769:build:     -DTOFU_CJK_EXT
+  (+24.6s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include
+  (+24.6s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include
+  (+24.6s): -b: 1: __main__.py:1769:build:     /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/implementation/functions.cpp
+  (+24.6s): -b: 1: __main__.py:1769:build: : platform/c++/implementation/functions.cpp.o
+  (+24.6s): -b: 1: __main__.py:1769:build: running: c++ \
+  (+24.6s): -b: 1: __main__.py:1769:build:     -c \
+  (+24.6s): -b: 1: __main__.py:1769:build:     -o platform/c++/implementation/functions.cpp.o \
+  (+24.6s): -b: 1: __main__.py:1769:build:     -O2 -DNDEBUG \
+  (+24.6s): -b: 1: __main__.py:1769:build:     -fPIC \
+  (+24.6s): -b: 1: __main__.py:1769:build:     -DTOFU_CJK_EXT \
+  (+24.6s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include \
+  (+24.6s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include \
+  (+24.6s): -b: 1: __main__.py:1769:build:     /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/implementation/functions.cpp
+  (+30.7s): -b: 1: __main__.py:1769:build: [returned e=0]
+  (+30.7s): -b: 1: __main__.py:1769:build: Rebuilding because command has changed:
+  (+30.7s): -b: 1: __main__.py:1769:build: None
+  (+30.7s): -b: 1: __main__.py:1769:build: =>
+  (+30.7s): -b: 1: __main__.py:1769:build:
+  (+30.7s): -b: 1: __main__.py:1769:build: c++
+  (+30.7s): -b: 1: __main__.py:1769:build:     -c
+  (+30.7s): -b: 1: __main__.py:1769:build:     -o platform/c++/implementation/internal.cpp.o
+  (+30.7s): -b: 1: __main__.py:1769:build:     -O2 -DNDEBUG
+  (+30.7s): -b: 1: __main__.py:1769:build:     -fPIC
+  (+30.7s): -b: 1: __main__.py:1769:build:     -DTOFU_CJK_EXT
+  (+30.7s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include
+  (+30.7s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include
+  (+30.7s): -b: 1: __main__.py:1769:build:     /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/implementation/internal.cpp
+  (+30.7s): -b: 1: __main__.py:1769:build: : platform/c++/implementation/internal.cpp.o
+  (+30.7s): -b: 1: __main__.py:1769:build: running: c++ \
+  (+30.7s): -b: 1: __main__.py:1769:build:     -c \
+  (+30.7s): -b: 1: __main__.py:1769:build:     -o platform/c++/implementation/internal.cpp.o \
+  (+30.7s): -b: 1: __main__.py:1769:build:     -O2 -DNDEBUG \
+  (+30.7s): -b: 1: __main__.py:1769:build:     -fPIC \
+  (+30.7s): -b: 1: __main__.py:1769:build:     -DTOFU_CJK_EXT \
+  (+30.7s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include \
+  (+30.7s): -b: 1: __main__.py:1769:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include \
+  (+30.7s): -b: 1: __main__.py:1769:build:     /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/implementation/internal.cpp
+  (+31.9s): -b: 1: __main__.py:1769:build: [returned e=0]
+  (+31.9s): -b: 1: __main__.py:1788:build: Rebuilding because command has changed:
+  (+31.9s): -b: 1: __main__.py:1788:build: None
+  (+31.9s): -b: 1: __main__.py:1788:build: =>
+  (+31.9s): -b: 1: __main__.py:1788:build:
+  (+31.9s): -b: 1: __main__.py:1788:build: c++
+  (+31.9s): -b: 1: __main__.py:1788:build:     -o build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/libmupdfcpp.so.28.2
+  (+31.9s): -b: 1: __main__.py:1788:build:
+  (+31.9s): -b: 1: __main__.py:1788:build:     -O2 -DNDEBUG
+  (+31.9s): -b: 1: __main__.py:1788:build:     -fPIC -shared
+  (+31.9s): -b: 1: __main__.py:1788:build:     -DTOFU_CJK_EXT
+  (+31.9s): -b: 1: __main__.py:1788:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include
+  (+31.9s): -b: 1: __main__.py:1788:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include
+  (+31.9s): -b: 1: __main__.py:1788:build:     platform/c++/implementation/classes.cpp.o platform/c++/implementation/classes2.cpp.o platform/c++/implementation/exceptions.cpp.o platform/c++/implementation/extra.cpp.o platform/c++/implementation/functions.cpp.o platform/c++/implementation/internal.cpp.o
+  (+31.9s): -b: 1: __main__.py:1788:build:     -L build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release -l mupdf -Wl,-rpath,'$ORIGIN',-z,origin
+  (+31.9s): -b: 1: __main__.py:1788:build: : /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/libmupdfcpp.so.28.2
+  (+31.9s): -b: 1: __main__.py:1788:build: running: c++ \
+  (+31.9s): -b: 1: __main__.py:1788:build:     -o build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/libmupdfcpp.so.28.2 \
+  (+31.9s): -b: 1: __main__.py:1788:build:     -O2 -DNDEBUG \
+  (+31.9s): -b: 1: __main__.py:1788:build:     -fPIC -shared \
+  (+31.9s): -b: 1: __main__.py:1788:build:     -DTOFU_CJK_EXT \
+  (+31.9s): -b: 1: __main__.py:1788:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include \
+  (+31.9s): -b: 1: __main__.py:1788:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include \
+  (+31.9s): -b: 1: __main__.py:1788:build:     platform/c++/implementation/classes.cpp.o platform/c++/implementation/classes2.cpp.o platform/c++/implementation/exceptions.cpp.o platform/c++/implementation/extra.cpp.o platform/c++/implementation/functions.cpp.o platform/c++/implementation/internal.cpp.o \
+  (+31.9s): -b: 1: __main__.py:1788:build:     -L build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release -l mupdf -Wl,-rpath,'$ORIGIN',-z,origin
+  (+32.2s): -b: 1: __main__.py:1788:build: [returned e=0]
+  (+32.3s): -b: 2: __main__.py:1880:build: Generating mupdf_cppyy.py file.
+  (+32.3s): -b: 2: make_cppyy.py:11:make_cppyy: Updating /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/mupdf_cppyy.py
+  (+32.3s): -b: 2: __main__.py:1883:build: Generating python module source code using SWIG ...
+  (+32.3s): -b: 2: swig Python: swig.py:130:build_swig: swig_location='/usr/local/bin/swig\n'
+  (+32.4s): -b: 2: swig Python: swig.py:136:build_swig: SWIG Version 4.4.1
+  (+32.4s): -b: 2: swig Python: swig.py:619:build_swig: build_dirs.Py_LIMITED_API='0x030e0000'
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig: Rebuilding because command has changed:
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig: None
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig: =>
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                     "/usr/local/bin/swig"
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                         -c++
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                         -doxygen
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                         -python
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                         -Wextra
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                         -w-201,-314,-302,-312,-321,-322,-362,-451,-503,-512,-509,-560
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                         -module mupdf
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                         -outdir ./platform/python
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                         -o platform/python/mupdf.intermediate.cpp
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                         -includeall
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                         -DTOFU_CJK_EXT
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                         -I./platform/python/include
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                         -Iinclude
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                         -Iplatform/c++/include
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                         -ignoremissing
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                         -DMUPDF_FITZ_HEAP_H
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                         platform/python/mupdfcpp_swig-Py_LIMITED_API_0x030e0000.i
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:                     : /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/python/mupdf.intermediate.cpp /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/python/mupdf.py
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig: running: "/usr/local/bin/swig" \
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:     -c++ \
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:     -doxygen \
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:     -python \
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:     -Wextra \
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:     -w-201,-314,-302,-312,-321,-322,-362,-451,-503,-512,-509,-560 \
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:     -module mupdf \
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:     -outdir ./platform/python \
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:     -o platform/python/mupdf.intermediate.cpp \
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:     -includeall \
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:     -DTOFU_CJK_EXT \
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:     -I./platform/python/include \
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:     -Iinclude \
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:     -Iplatform/c++/include \
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:     -ignoremissing \
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:     -DMUPDF_FITZ_HEAP_H \
+  (+32.5s): -b: 2: swig Python: swig.py:1885:build_swig:     platform/python/mupdfcpp_swig-Py_LIMITED_API_0x030e0000.i
+  (+39.4s): -b: 2: swig Python: swig.py:1885:build_swig: include/mupdf/fitz/getopt.h:99: Warning 454: Setting a pointer/reference variable may leak memory.
+  (+52.1s): -b: 2: swig Python: swig.py:1885:build_swig: platform/c++/include/mupdf/classes.h:6315: Warning 473: Returning a reference, pointer or pointer wrapper in a director method is not recommended.
+  (+52.1s): -b: 2: swig Python: swig.py:1885:build_swig: platform/c++/include/mupdf/classes.h:6316: Warning 473: Returning a reference, pointer or pointer wrapper in a director method is not recommended.
+  (+52.1s): -b: 2: swig Python: swig.py:1885:build_swig: platform/c++/include/mupdf/classes.h:6317: Warning 473: Returning a reference, pointer or pointer wrapper in a director method is not recommended.
+  (+52.9s): -b: 2: swig Python: swig.py:1885:build_swig: platform/c++/include/mupdf/classes.h:9029: Warning 473: Returning a reference, pointer or pointer wrapper in a director method is not recommended.
+  (+57.3s): -b: 2: swig Python: swig.py:1885:build_swig: platform/c++/include/mupdf/classes.h:18530: Warning 473: Returning a reference, pointer or pointer wrapper in a director method is not recommended.
+  (+58.8s): -b: 2: swig Python: swig.py:1885:build_swig: platform/c++/include/mupdf/classes.h:21084: Warning 473: Returning a reference, pointer or pointer wrapper in a director method is not recommended.
+  (+59.7s): -b: 2: swig Python: swig.py:1885:build_swig: platform/c++/include/mupdf/classes.h:21454: Warning 473: Returning a reference, pointer or pointer wrapper in a director method is not recommended.
+  (+1m12.7s): -b: 2: swig Python: swig.py:1885:build_swig: [returned e=0]
+  (+1m12.7s): -b: 2: swig Python: swig.py:1891:build_swig: swig => rebuilt=True.
+  (+1m12.7s): -b: 2: swig Python: swig.py:1892:build_swig: Rebuilding because /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/python/mupdf.py is newer than /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/mupdf.py: /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/mupdf.py
+  (+1m12.9s): -b: 2: swig Python: swig.py:1898:build_swig: Rebuilding because /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/python/mupdf.intermediate.cpp is newer than /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/python/mupdfcpp_swig-Py_LIMITED_API_0x030e0000.i.cpp: /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/python/mupdfcpp_swig-Py_LIMITED_API_0x030e0000.i.cpp
+  (+1m14.4s): -b: 3: __main__.py:1919:build: Compiling/linking generated Python module source code to create _mupdf.so ...
+  (+1m14.5s): -b: 3: __main__.py:2113:build: flags_compile='-I/usr/local/include/python3.14 -I/usr/local/include/python3.14'
+  (+1m14.5s): -b: 3: __main__.py:2114:build: flags_link='-L/usr/local/lib  -lintl -lpthread  -lutil -lm'
+  (+1m14.5s): -b: 3: __main__.py:2149:build: Have changed RLIMIT_DATA from 1,610,612,736 to 3,221,225,472.
+  (+1m14.5s): -b: 3: __main__.py:2238:build: Rebuilding because command has changed:
+  (+1m14.5s): -b: 3: __main__.py:2238:build: None
+  (+1m14.5s): -b: 3: __main__.py:2238:build: =>
+  (+1m14.5s): -b: 3: __main__.py:2238:build:
+  (+1m14.5s): -b: 3: __main__.py:2238:build: c++
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -c
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -o platform/python/mupdfcpp_swig-Py_LIMITED_API_0x030e0000.i.cpp.o
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     platform/python/mupdfcpp_swig-Py_LIMITED_API_0x030e0000.i.cpp
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -O2 -DNDEBUG
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -fPIC
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -DTOFU_CJK_EXT
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -I/usr/local/include/python3.14 -I/usr/local/include/python3.14
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -Wno-deprecated-declarations
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -Wno-free-nonheap-object
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -DSWIG_PYTHON_SILENT_MEMLEAK
+  (+1m14.5s): -b: 3: __main__.py:2238:build: : platform/python/mupdfcpp_swig-Py_LIMITED_API_0x030e0000.i.cpp.o
+  (+1m14.5s): -b: 3: __main__.py:2238:build: running: c++ \
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -c \
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -o platform/python/mupdfcpp_swig-Py_LIMITED_API_0x030e0000.i.cpp.o \
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     platform/python/mupdfcpp_swig-Py_LIMITED_API_0x030e0000.i.cpp \
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -O2 -DNDEBUG \
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -fPIC \
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -DTOFU_CJK_EXT \
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include \
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -I /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include \
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -I/usr/local/include/python3.14 -I/usr/local/include/python3.14 \
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -Wno-deprecated-declarations \
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -Wno-free-nonheap-object \
+  (+1m14.5s): -b: 3: __main__.py:2238:build:     -DSWIG_PYTHON_SILENT_MEMLEAK
+  (+3m32.5s): -b: 3: __main__.py:2238:build: [returned e=0]
+  (+3m32.5s): -b: 3: __main__.py:2263:build: Rebuilding because command has changed:
+  (+3m32.5s): -b: 3: __main__.py:2263:build: None
+  (+3m32.5s): -b: 3: __main__.py:2263:build: =>
+  (+3m32.5s): -b: 3: __main__.py:2263:build:
+  (+3m32.5s): -b: 3: __main__.py:2263:build: c++
+  (+3m32.5s): -b: 3: __main__.py:2263:build:     -o build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/_mupdf.so
+  (+3m32.5s): -b: 3: __main__.py:2263:build:
+  (+3m32.5s): -b: 3: __main__.py:2263:build:     platform/python/mupdfcpp_swig-Py_LIMITED_API_0x030e0000.i.cpp.o
+  (+3m32.5s): -b: 3: __main__.py:2263:build:     -O2 -DNDEBUG
+  (+3m32.5s): -b: 3: __main__.py:2263:build:     -shared
+  (+3m32.5s): -b: 3: __main__.py:2263:build:     -L/usr/local/lib  -lintl -lpthread  -lutil -lm
+  (+3m32.5s): -b: 3: __main__.py:2263:build:     -L build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release -l mupdfcpp -Wl,-rpath,'$ORIGIN',-z,origin
+  (+3m32.5s): -b: 3: __main__.py:2263:build: : /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/_mupdf.so
+  (+3m32.5s): -b: 3: __main__.py:2263:build: running: c++ \
+  (+3m32.5s): -b: 3: __main__.py:2263:build:     -o build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/_mupdf.so \
+  (+3m32.5s): -b: 3: __main__.py:2263:build:     platform/python/mupdfcpp_swig-Py_LIMITED_API_0x030e0000.i.cpp.o \
+  (+3m32.5s): -b: 3: __main__.py:2263:build:     -O2 -DNDEBUG \
+  (+3m32.5s): -b: 3: __main__.py:2263:build:     -shared \
+  (+3m32.5s): -b: 3: __main__.py:2263:build:     -L/usr/local/lib  -lintl -lpthread  -lutil -lm \
+  (+3m32.5s): -b: 3: __main__.py:2263:build:     -L build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release -l mupdfcpp -Wl,-rpath,'$ORIGIN',-z,origin
+  (+3m33.9s): -b: 3: __main__.py:2263:build: [returned e=0]
+  /home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release:
+  total 120636
+  -rwxr-xr-x   1 folimeld  folimeld  17805776 Nov  9 14:36 _mupdf.so
+  -rw-r--r--   1 folimeld  folimeld       347 Nov  9 14:36 _mupdf.so.cmd
+  drwxr-xr-x   3 folimeld  folimeld       512 Nov  9 14:11 generated
+  -rw-r--r--   1 folimeld  folimeld      9268 Nov  9 14:26 libmupdf-threads.a
+  -rw-r--r--   1 folimeld  folimeld       102 Nov  9 14:26 libmupdf-threads.a.in
+  -rwxr-xr-x   1 folimeld  folimeld  37204160 Nov  9 14:26 libmupdf.so.28.2
+  -rw-r--r--   1 folimeld  folimeld    121429 Nov  9 14:26 libmupdf.so.28.2.in
+  -rwxr-xr-x   1 folimeld  folimeld   3536208 Nov  9 14:33 libmupdfcpp.so.28.2
+  -rw-r--r--   1 folimeld  folimeld       690 Nov  9 14:33 libmupdfcpp.so.28.2.cmd
+  -rw-r--r--   1 folimeld  folimeld   2680616 Nov  9 14:33 mupdf.py
+  -rw-r--r--   1 folimeld  folimeld    248818 Nov  9 14:33 mupdf_cppyy.py
+  drwxr-xr-x  10 folimeld  folimeld       512 Nov  9 14:26 source
+  drwxr-xr-x  18 folimeld  folimeld       512 Nov  9 14:26 thirdparty
+  [+3m34.5s] setup.py:896: build_mupdf_unix(): Finished building mupdf.
+  [+3m34.5s] setup.py:486: build(): build(): mupdf_build_dir='/home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release'
+  [+3m34.5s] setup.py:923: _build_extension(): _build_extension(): g_py_limited_api=True defines=[]
+  [+3m34.5s] setup.py:930: _build_extension(): Building PyMuPDF extension.
+  [+3m34.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2045: build_extension(): Running command because: File does not exist: '/home/folimeld/native-build/pymupdf-1.28.2/src/build/extra.i.cpp'
+  [+3m34.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2045: build_extension(): Running: /usr/local/bin/swig
+  [+3m34.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2045: build_extension():         -Wall
+  [+3m34.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2045: build_extension():         -c++
+  [+3m34.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2045: build_extension():         -python
+  [+3m34.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2045: build_extension():         -module extra
+  [+3m34.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2045: build_extension():         -outdir /home/folimeld/native-build/pymupdf-1.28.2/src/build
+  [+3m34.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2045: build_extension():         -o /home/folimeld/native-build/pymupdf-1.28.2/src/build/extra.i.cpp
+  [+3m34.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2045: build_extension():         -MD -MF /home/folimeld/native-build/pymupdf-1.28.2/src/build/extra.i.cpp.d
+  [+3m34.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2045: build_extension():         -I/home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include -I/home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include
+  [+3m34.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2045: build_extension():         /home/folimeld/native-build/pymupdf-1.28.2/src/extra.i
+  [+3m37.7s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2106: build_extension(): Running command because: File does not exist: '/home/folimeld/native-build/pymupdf-1.28.2/src/build/extra.i.cpp.o'
+  [+3m37.7s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2106: build_extension(): Running: c++
+  [+3m37.7s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2106: build_extension():         -O2 -DNDEBUG
+  [+3m37.7s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2106: build_extension():         -I/usr/local/include/python3.14 -I/usr/local/include/python3.14
+  [+3m37.7s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2106: build_extension():         -I/home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/platform/c++/include -I/home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/include
+  [+3m37.7s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2106: build_extension():          -Wall -Wno-deprecated-declarations -Wno-unused-const-variable -Wno-deprecated-declarations
+  [+3m37.7s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2106: build_extension():         -DPy_LIMITED_API=0x030e0000
+  [+3m37.7s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2106: build_extension():         -c
+  [+3m37.7s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2106: build_extension():         -o /home/folimeld/native-build/pymupdf-1.28.2/src/build/extra.i.cpp.o
+  [+3m37.7s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2106: build_extension():         /home/folimeld/native-build/pymupdf-1.28.2/src/build/extra.i.cpp
+  [+3m37.7s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2106: build_extension():         -fPIC
+  [+3m39.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2106: build_extension(): /home/folimeld/native-build/pymupdf-1.28.2/src/build/extra.i.cpp:3655:20: warning: unused function 'repr' [-Wunused-function]
+  [+3m39.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2106: build_extension():  3655 | static std::string repr(PyObject* x)
+  [+3m39.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2106: build_extension():       |                    ^~~~
+  [+3m41.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2106: build_extension(): 1 warning generated.
+  [+3m41.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2106: build_extension():
+  [+3m41.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2141: build_extension(): Running command because: File does not exist: '/home/folimeld/native-build/pymupdf-1.28.2/src/build/_extra.so'
+  [+3m41.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2141: build_extension(): Running: c++
+  [+3m41.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2141: build_extension():         /home/folimeld/native-build/pymupdf-1.28.2/src/build/extra.i.cpp.o
+  [+3m41.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2141: build_extension():         -o /home/folimeld/native-build/pymupdf-1.28.2/src/build/_extra.so
+  [+3m41.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2141: build_extension():         -O2 -DNDEBUG
+  [+3m41.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2141: build_extension():         -L/home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release
+  [+3m41.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2141: build_extension():         -lmupdf -lmupdfcpp
+  [+3m41.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2141: build_extension():         -L/usr/local/lib  -lintl -lpthread  -lutil -lm
+  [+3m41.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2141: build_extension():         -Wl,-rpath,'$ORIGIN',-z,origin
+  [+3m41.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2141: build_extension():         -DPy_LIMITED_API=0x030e0000
+  [+3m41.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2141: build_extension():         -MD -MF /home/folimeld/native-build/pymupdf-1.28.2/src/build/_extra.so.d
+  [+3m41.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:2141: build_extension():         -shared
+  [+3m41.6s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4504: get_soname(): sos=['/home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/libmupdfcpp.so.28.2.cmd', '/home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/libmupdfcpp.so.28.2']
+  [+3m41.6s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4511: get_soname(): sos2=['/home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/libmupdfcpp.so.28.2']
+  [+3m41.6s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4504: get_soname(): sos=['/home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/libmupdf.so.28.2.in', '/home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/libmupdf.so.28.2']
+  [+3m41.6s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4511: get_soname(): sos2=['/home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/libmupdf.so.28.2']
+  [+3m41.6s] setup.py:575: build(): Running: /usr/local/bin/swig -version
+  [+3m41.7s] setup.py:577: build(): swig_version_text='\nSWIG Version 4.4.1\n\nCompiled with c++ [x86_64-unknown-openbsd8.0]\n\nConfigured options: +pcre\n\nPlease see https://www.swig.org for reporting bugs and further information\n'
+  [+3m41.7s] setup.py:587: build(): swig_version='4.4.1'
+  [+3m41.8s] setup.py:596: build(): _build.py is:
+  [+3m41.8s] setup.py:596: build():     pymupdf_git_branch = None
+  [+3m41.8s] setup.py:596: build():     pymupdf_git_comment = None
+  [+3m41.8s] setup.py:596: build():     pymupdf_git_diff = None
+  [+3m41.8s] setup.py:596: build():     pymupdf_git_diff_n = None
+  [+3m41.8s] setup.py:596: build():     pymupdf_git_sha = None
+  [+3m41.8s] setup.py:596: build():     mupdf_location = '/home/folimeld/native-build/pymupdf-1.28.2/mupdf-1.28.2-source'
+  [+3m41.8s] setup.py:596: build():     pymupdf_version = '1.28.2'
+  [+3m41.8s] setup.py:596: build():     pymupdf_version_tuple = (1, 28, 2)
+  [+3m41.8s] setup.py:596: build():     swig_version = '4.4.1'
+  [+3m41.8s] setup.py:596: build():     swig_version_tuple = (4, 4, 1)
+  [+3m41.8s] setup.py:596: build():     fake_no_gil = False
+  [+3m41.9s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/__init__.py                                        <= src/__init__.py
+  [+3m41.9s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/__main__.py                                        <= src/__main__.py
+  [+3m42.0s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/pymupdf.py                                         <= src/pymupdf.py
+  [+3m42.0s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/table.py                                           <= src/table.py
+  [+3m42.0s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/_table_refine.py                                   <= src/_table_refine.py
+  [+3m42.0s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/_table_spans.py                                    <= src/_table_spans.py
+  [+3m42.0s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/_table_union.py                                    <= src/_table_union.py
+  [+3m42.0s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/_table_headers.py                                  <= src/_table_headers.py
+  [+3m42.0s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/utils.py                                           <= src/utils.py
+  [+3m42.0s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/_wxcolors.py                                       <= src/_wxcolors.py
+  [+3m42.0s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/_apply_pages.py                                    <= src/_apply_pages.py
+  [+3m42.0s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/extra.py                                           <= src/build/extra.py
+  [+3m42.0s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/_extra.so                                          <= src/build/_extra.so
+  [+3m42.0s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: fitz/__init__.py                                           <= src/fitz___init__.py
+  [+3m42.0s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: fitz/table.py                                              <= src/fitz_table.py
+  [+3m42.0s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: fitz/utils.py                                              <= src/fitz_utils.py
+  [+3m42.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf.py                                           <= mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/mupdf.py
+  [+3m42.8s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/_mupdf.so                                          <= mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/_mupdf.so
+  [+3m43.0s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/libmupdfcpp.so.28.2                                <= mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/libmupdfcpp.so.28.2
+  [+3m46.0s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/libmupdf.so.28.2                                   <= mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/libmupdf.so.28.2
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/lib/libmupdf-threads.a                 <= mupdf-1.28.2-source/build/amd64-shared-tesseract-Py_LIMITED_API_0x030e0000-release/libmupdf-threads.a
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz.h                   <= mupdf-1.28.2-source/include/mupdf/fitz.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/html.h                   <= mupdf-1.28.2-source/include/mupdf/html.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/memento.h                <= mupdf-1.28.2-source/include/mupdf/memento.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf.h                    <= mupdf-1.28.2-source/include/mupdf/pdf.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/ucdn.h                   <= mupdf-1.28.2-source/include/mupdf/ucdn.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/archive.h           <= mupdf-1.28.2-source/include/mupdf/fitz/archive.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/band-writer.h       <= mupdf-1.28.2-source/include/mupdf/fitz/band-writer.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/barcode.h           <= mupdf-1.28.2-source/include/mupdf/fitz/barcode.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/bidi.h              <= mupdf-1.28.2-source/include/mupdf/fitz/bidi.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/bitmap.h            <= mupdf-1.28.2-source/include/mupdf/fitz/bitmap.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/buffer.h            <= mupdf-1.28.2-source/include/mupdf/fitz/buffer.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/color.h             <= mupdf-1.28.2-source/include/mupdf/fitz/color.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/compress.h          <= mupdf-1.28.2-source/include/mupdf/fitz/compress.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/compressed-buffer.h <= mupdf-1.28.2-source/include/mupdf/fitz/compressed-buffer.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/config.h            <= mupdf-1.28.2-source/include/mupdf/fitz/config.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/context.h           <= mupdf-1.28.2-source/include/mupdf/fitz/context.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/crypt.h             <= mupdf-1.28.2-source/include/mupdf/fitz/crypt.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/deskew.h            <= mupdf-1.28.2-source/include/mupdf/fitz/deskew.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/device.h            <= mupdf-1.28.2-source/include/mupdf/fitz/device.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/display-list.h      <= mupdf-1.28.2-source/include/mupdf/fitz/display-list.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/document.h          <= mupdf-1.28.2-source/include/mupdf/fitz/document.h
+  [+3m46.1s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/export.h            <= mupdf-1.28.2-source/include/mupdf/fitz/export.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/filter.h            <= mupdf-1.28.2-source/include/mupdf/fitz/filter.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/font.h              <= mupdf-1.28.2-source/include/mupdf/fitz/font.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/geometry.h          <= mupdf-1.28.2-source/include/mupdf/fitz/geometry.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/getopt.h            <= mupdf-1.28.2-source/include/mupdf/fitz/getopt.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/glyph-cache.h       <= mupdf-1.28.2-source/include/mupdf/fitz/glyph-cache.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/glyph.h             <= mupdf-1.28.2-source/include/mupdf/fitz/glyph.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/hash.h              <= mupdf-1.28.2-source/include/mupdf/fitz/hash.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/heap-imp.h          <= mupdf-1.28.2-source/include/mupdf/fitz/heap-imp.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/heap.h              <= mupdf-1.28.2-source/include/mupdf/fitz/heap.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/hyphen.h            <= mupdf-1.28.2-source/include/mupdf/fitz/hyphen.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/image.h             <= mupdf-1.28.2-source/include/mupdf/fitz/image.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/json.h              <= mupdf-1.28.2-source/include/mupdf/fitz/json.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/link.h              <= mupdf-1.28.2-source/include/mupdf/fitz/link.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/log.h               <= mupdf-1.28.2-source/include/mupdf/fitz/log.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/options.h           <= mupdf-1.28.2-source/include/mupdf/fitz/options.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/outline.h           <= mupdf-1.28.2-source/include/mupdf/fitz/outline.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/output-svg.h        <= mupdf-1.28.2-source/include/mupdf/fitz/output-svg.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/output.h            <= mupdf-1.28.2-source/include/mupdf/fitz/output.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/path.h              <= mupdf-1.28.2-source/include/mupdf/fitz/path.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/pixmap.h            <= mupdf-1.28.2-source/include/mupdf/fitz/pixmap.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/pool.h              <= mupdf-1.28.2-source/include/mupdf/fitz/pool.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/separation.h        <= mupdf-1.28.2-source/include/mupdf/fitz/separation.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/shade.h             <= mupdf-1.28.2-source/include/mupdf/fitz/shade.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/store.h             <= mupdf-1.28.2-source/include/mupdf/fitz/store.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/story-writer.h      <= mupdf-1.28.2-source/include/mupdf/fitz/story-writer.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/story.h             <= mupdf-1.28.2-source/include/mupdf/fitz/story.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/stream.h            <= mupdf-1.28.2-source/include/mupdf/fitz/stream.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/string-util.h       <= mupdf-1.28.2-source/include/mupdf/fitz/string-util.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/structured-text.h   <= mupdf-1.28.2-source/include/mupdf/fitz/structured-text.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/system.h            <= mupdf-1.28.2-source/include/mupdf/fitz/system.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/text.h              <= mupdf-1.28.2-source/include/mupdf/fitz/text.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/track-usage.h       <= mupdf-1.28.2-source/include/mupdf/fitz/track-usage.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/transition.h        <= mupdf-1.28.2-source/include/mupdf/fitz/transition.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/tree.h              <= mupdf-1.28.2-source/include/mupdf/fitz/tree.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/types.h             <= mupdf-1.28.2-source/include/mupdf/fitz/types.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/util.h              <= mupdf-1.28.2-source/include/mupdf/fitz/util.h
+  [+3m46.2s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/version.h           <= mupdf-1.28.2-source/include/mupdf/fitz/version.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/write-pixmap.h      <= mupdf-1.28.2-source/include/mupdf/fitz/write-pixmap.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/writer.h            <= mupdf-1.28.2-source/include/mupdf/fitz/writer.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/fitz/xml.h               <= mupdf-1.28.2-source/include/mupdf/fitz/xml.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/helpers/mu-office-lib.h  <= mupdf-1.28.2-source/include/mupdf/helpers/mu-office-lib.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/helpers/mu-threads.h     <= mupdf-1.28.2-source/include/mupdf/helpers/mu-threads.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/helpers/pkcs7-openssl.h  <= mupdf-1.28.2-source/include/mupdf/helpers/pkcs7-openssl.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/annot.h              <= mupdf-1.28.2-source/include/mupdf/pdf/annot.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/clean.h              <= mupdf-1.28.2-source/include/mupdf/pdf/clean.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/cmap.h               <= mupdf-1.28.2-source/include/mupdf/pdf/cmap.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/crypt.h              <= mupdf-1.28.2-source/include/mupdf/pdf/crypt.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/document.h           <= mupdf-1.28.2-source/include/mupdf/pdf/document.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/event.h              <= mupdf-1.28.2-source/include/mupdf/pdf/event.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/font.h               <= mupdf-1.28.2-source/include/mupdf/pdf/font.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/form.h               <= mupdf-1.28.2-source/include/mupdf/pdf/form.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/image-rewriter.h     <= mupdf-1.28.2-source/include/mupdf/pdf/image-rewriter.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/interpret.h          <= mupdf-1.28.2-source/include/mupdf/pdf/interpret.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/javascript.h         <= mupdf-1.28.2-source/include/mupdf/pdf/javascript.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/name-table.h         <= mupdf-1.28.2-source/include/mupdf/pdf/name-table.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/object.h             <= mupdf-1.28.2-source/include/mupdf/pdf/object.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/page.h               <= mupdf-1.28.2-source/include/mupdf/pdf/page.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/parse.h              <= mupdf-1.28.2-source/include/mupdf/pdf/parse.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/recolor.h            <= mupdf-1.28.2-source/include/mupdf/pdf/recolor.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/resource.h           <= mupdf-1.28.2-source/include/mupdf/pdf/resource.h
+  [+3m46.3s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/xref.h               <= mupdf-1.28.2-source/include/mupdf/pdf/xref.h
+  [+3m46.4s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/pdf/zugferd.h            <= mupdf-1.28.2-source/include/mupdf/pdf/zugferd.h
+  [+3m46.4s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/classes2.h               <= mupdf-1.28.2-source/platform/c++/include/mupdf/classes2.h
+  [+3m46.4s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/extra.h                  <= mupdf-1.28.2-source/platform/c++/include/mupdf/extra.h
+  [+3m46.4s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/classes.h                <= mupdf-1.28.2-source/platform/c++/include/mupdf/classes.h
+  [+3m46.4s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/exceptions.h             <= mupdf-1.28.2-source/platform/c++/include/mupdf/exceptions.h
+  [+3m46.4s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/functions.h              <= mupdf-1.28.2-source/platform/c++/include/mupdf/functions.h
+  [+3m46.4s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf/mupdf-devel/include/mupdf/internal.h               <= mupdf-1.28.2-source/platform/c++/include/mupdf/internal.h
+  [+3m46.4s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4597: add_file(): Adding file: pymupdf-1.28.2.dist-info/README.md                         <= README.md
+  [+3m46.4s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:1116: tag_platform(): From self.tag_platform_: ret=None.
+  [+3m46.4s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:1127: tag_platform(): From AUDITWHEEL_PLAT: ret=None.
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:1142: tag_platform(): From sysconfig.get_platform(): ret='openbsd_8_0_amd64'.
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:1146: tag_platform(): tag_platform(): returning ret='openbsd_8_0_amd64'.
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4613: get(): record_path='pymupdf-1.28.2.dist-info/RECORD'
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get(): ret is:
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     fitz/__init__.py,sha256=OZ-N45d0bJgMVH98NF0skNTLKSLPfpUyx4sxwIiVERg,589
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     fitz/table.py,sha256=irhKvEpZ_4PN--TJXM2vbrSsQ4QVve43R9Cy2KZeJxM,85
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     fitz/utils.py,sha256=TnLKI9a60-JjET9Kj9p7Gl4MoAvpaEcDG9ZP7ywvoTA,85
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf-1.28.2.dist-info/COPYING,sha256=QOYGl2AFNeq_ta4F9ygp2Iz-jQLdR5L1p1T29R2r5Vs,64
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf-1.28.2.dist-info/METADATA,sha256=XB_EYIib0_-NIT5sDykVSozTV2UF9IRNfD4In6Re7UA,26483
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf-1.28.2.dist-info/README.md,sha256=0NF77YURM0MHRIZpQaFwdULRrrByu6toHe7B5JSYZjw,25223
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf-1.28.2.dist-info/WHEEL,sha256=K_ejUYusaDJlluqH4oxrZlIIxZ9TOtyKkGeYSgZZBs8,93
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf-1.28.2.dist-info/entry_points.txt,sha256=9NcH_CVkHVuLNxE1TYbfwXwClVkMcM890TMTJ3C5fDA,51
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/__init__.py,sha256=6M20XtCvoh-RnOww5pt7Vyw9t7yA0gPk4H5MfqKxnM4,924164
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/__main__.py,sha256=djqXMFk30GZaQ9S2kgkk77Fdj4d5XsKSbAn52mm_0ss,41358
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/_apply_pages.py,sha256=cgtSAV1wMguzYDwackwHQcm1PoeplD7JapEe84tb1Fc,7716
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/_build.py,sha256=O8dRq_p3r49GR1VnH-j5UQo0SVPdHLqdWzOI2xJZzPg,344
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/_extra.so,sha256=Rz04JRgPi-qZfGQLJl5_OXjr7lcqV2O4p-GV8N4-fF0,283112
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/_mupdf.so,sha256=TU3KwqzmSU9bpztlAUm7UVJBTqYkEKQSbR7A_9ScT3Y,17805776
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/_table_headers.py,sha256=iBpjBT68ss5IyHaJOAd0ORu-CesJlqFLjffwskZekhU,38558
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/_table_refine.py,sha256=N-nxAcMoVjOk1iGB8Aj6Ntq6Hv3jDtobtzlZCKo69dI,31792
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/_table_spans.py,sha256=yuwQ6OdVmE4U87J0Y7nnJYl9e5jCLktEeVGpxWO1-Uk,23067
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/_table_union.py,sha256=79My5bUTx1hCWlPIuPa1uZwVvdp_iEgY7mLkBtkmVZI,15322
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/_wxcolors.py,sha256=AjY_qridRoV-JefKiHB8opddNnVKT6n9HRUIH8UjrB0,20533
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/extra.py,sha256=GT1lRpD4cBpYxexdbLantdbFnJtSnLTrPzKsTwlY5bI,6662
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/libmupdf.so.28.2,sha256=yf9B0Hc3zFGTR9UWQMtwaCVDHgeCTiFN0X1LNmFdVlg,37204160
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/libmupdfcpp.so.28.2,sha256=nR3Oc5pCJL_SBtxq-IDz91a0kLEzTpfnh3xLYAG3TZA,3536208
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/classes.h,sha256=xz5Oubx2dtPiw0XLFefdbIIeKcDMvdKVYj7BZjwcTXE,766632
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/classes2.h,sha256=g7wwnryJ0kj3D8RkVscBa4APbu0wIShEJkerCbz0NBc,512787
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/exceptions.h,sha256=lZK8a8bVdJYtMSXuP7lFeewpQpG97eUpFdhv1QypiAw,2079
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/extra.h,sha256=iUWh2F3kXn33eGTuv9micNGJfJDTV0iJjrG5sfqzWQA,8299
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz.h,sha256=PIUeNydxe9ZREoNx2o5eQnYzQVnPpZqk96YzRnvt63s,2877
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/archive.h,sha256=LrqCwgFVNfQd6Q6UrXOJ6LJS8m5zZOfhkLaxgic5UGE,12458
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/band-writer.h,sha256=RL5OypSBjWJHcr7C7qPZkSc0psYxofDs4K83mz1E36k,3759
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/barcode.h,sha256=dfDkzlQPVx2y9cni7ol_jXOkAC9Cpm99jDmXjW4fLME,4245
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/bidi.h,sha256=YnFGsH-vUDyUNM3Govo--nWgNvL7ltbSxOb9R6-hmzc,2530
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/bitmap.h,sha256=Go-tezmbgmMLg6RJUcUIAvVYHGm6DGKvYf3aOFf7pc0,5350
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/buffer.h,sha256=3RTBX4NoMf6DFOkI1Am_9s9lBq7PKCrSU1qSFwcHDVY,8089
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/color.h,sha256=lAgg0cZMLd1jdmsYj5uXmKeGXgv5UeE8Rjlr-if9aYg,13251
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/compress.h,sha256=qzNqNdrVxW4c-LYqcHJwhggc4R4AgsDCB9xSuAoqx_c,5188
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/compressed-buffer.h,sha256=TOxjRBCJ6siep3GXuCB3aCp0BiV4KlVfSJgMZT7z8ks,4643
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/config.h,sha256=E0GVpt7BOqjiF4gs14s2EMiWb0ZdOTvkvZo3PfrUKbQ,8245
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/context.h,sha256=1_vm2hT_arzwCtVvhiZkLOcIFm5kVAdPMJeGwP0CwF0,31974
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/crypt.h,sha256=tFDydnNpMamFlcILo5fwWnQiN1Y-aloUETpgudyqpUY,6750
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/deskew.h,sha256=U3NC83n3rJMN_JOhIf6fOYNHj4l0ianenreMlWJXWfU,1442
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/device.h,sha256=axL0iMm2nu4HLWSu2cX7lW_znlkkEXwHekI62k0_e64,25696
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/display-list.h,sha256=yYtX3oRHV8DFCjjBayEDV-cLmdtRFW2SGJH_-jxvLpo,4954
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/document.h,sha256=9Rq7HoAtsQvhe0ZAJzLw_7UK3uLyuAmUc5k4QmDqLQo,35716
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/export.h,sha256=-TWHp7YI7rg5bYOgYMNyGxOVGULJ3SRlxtRzFLARPSw,1689
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/filter.h,sha256=Fzsyt12sQcZmF4Lh_Cg-VWIdnmB1ce8rtxvYMLUpcx8,8104
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/font.h,sha256=1YGEnSpR3SGxKLLt837JaBitvmjcJfsUAGUeJ4x6YHs,25042
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/geometry.h,sha256=zvyHUieD3i3GW6DA5QxHGFF_R3wYFurYGNAdetNoDHU,24294
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/getopt.h,sha256=J-qJ3hHVvmR9n1mUv7xoutUHUvbGu85_NMLvE1hR4mE,4934
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/glyph-cache.h,sha256=5F7rSjej9vw-NBDLmSd0zdwpsU6okjuFDxHB2tp0xMM,3417
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/glyph.h,sha256=jSj-jspSOQNR0c_Vi9qtmHWNqkg6GxSJC_Fs4aE47LQ,2397
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/hash.h,sha256=2r0RT5R2tUp1xDaGJP2jZ-1SuL71EBQN7lXPHKdO9yw,4107
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/heap-imp.h,sha256=Kf0Xb6idULEXsrVvzVPTziBRT-s-wYX-aRbg5dYKNSM,4514
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/heap.h,sha256=NjkuUjuLUdYlnAAdyuen4ME0r0srX65FQRqQSuB8VJ8,5171
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/hyphen.h,sha256=jP37_J-hxAy_EPrti1I5lA0Bdwg0MaGo5YZ5PzcXhI8,2018
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/image.h,sha256=7E_H-5Tj7L1SNU_U46VYIZTNnbAHj7zEZxP4kcjEV04,15513
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/json.h,sha256=05m-JZ5cWJyL7sO5tBA4JR9IN8Kt0nhU_muoI4XfMiM,3263
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/link.h,sha256=zMEUOHWSRzk9nd2vkCaSDkANJONGzYkVzDWUam92bDU,4129
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/log.h,sha256=4xmhWdgwuBtFqbf12OUhfKgBT4HLEEOdWeZqHjI-CRc,1961
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/options.h,sha256=p8nqjDArVl5w4pYjCEpNgTlfNwaUoOGD0nQfFg5hYwc,6705
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/outline.h,sha256=6Fkz-Dyk0akWVxaQGRYBZdValB9NG0iWHOdORCvPrTQ,8148
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/output-svg.h,sha256=72BpfnSOPh_GzndQmfFaht42lGxWM1z1iy8HK771iRk,2947
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/output.h,sha256=JOe5oN1MvJkmTPGfOZ9tf28eig_YOkmRg5CsGm5BUyU,13780
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/path.h,sha256=FkS_p981Sc-AKLPrp_k9NHPxj6MRa9gZCFXFbGSmG8U,14146
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/pixmap.h,sha256=ps16r72LG_rgkeCAo7GEoWHq5EkoNUB1DBU3AyGUd8o,16252
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/pool.h,sha256=5pARCi3_A5N1H0ys2zq6yqJRJO232yycyLW6wZ_9PUc,3302
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/separation.h,sha256=2N9MuYDIa6jD5n4RpOjPqWJkn05vKklqGDm1ESQcq90,4603
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/shade.h,sha256=dPHkCrXxD6ra7A2SRBqxDS4aoJv09D6Q2dNVerPH-cs,6211
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/store.h,sha256=vzopA5kIdFExcUqE-GAvr48rdy3iO3UyxcxilrFUVYg,14139
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/story-writer.h,sha256=G3-ed4Znt8fjkPPhQvnM63iNEDhhOAV0qp6xX6xTDT4,6916
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/story.h,sha256=d00V0j3R77QoqKXmovFB1YTiTGtqPszRJWrEnhEA_b4,7681
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/stream.h,sha256=wcYOxFapZ0apWpZjJOdMu2dGuFo76A4iF-pXlCqPaN8,16683
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/string-util.h,sha256=YvX1Ld1iQvDze_MDwgiFq7-tss97GXxjoqy8CUK02OY,12673
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/structured-text.h,sha256=FPZCXEaOjUvnkHWuNH3TkHvez1lx-2MNUW5hx9mTtjY,44671
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/system.h,sha256=Bz5GlUK6OoSz-tk71fqxRku3kqqC3qa5FVjl41VjC-U,15316
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/text.h,sha256=F0tWsh0T_hgkZCfdaNcSsKgcJU-8F81IFU0COkwRlck,6456
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/track-usage.h,sha256=oleSq1ZwWWqMsAykvFKqxcTGBHDQpWjmQ4RRFLsdByo,1707
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/transition.h,sha256=B5Ubf9bj_WWoqa05InIdk978-VRg6rR07Puxatfu56w,2188
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/tree.h,sha256=425CcmbbB0j9PFtq4S4TwLlEWvLTEMJ92mheXoEWWF8,1983
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/types.h,sha256=P0WLCXlGYNyVSrdvjlRgdLUoZHptE_WCk35YksWe2f0,1470
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/util.h,sha256=YCOiFIEK2F0lTkE2JQa1wPFOoe9vJIpQO_ASuLlcEEE,12276
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/version.h,sha256=4pJ5-srCVmBgugE1UL1heP78bE0OyklDMERIk5Z2hQI,1200
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/write-pixmap.h,sha256=giGP9tYZ-p0XRq76lS5mhFry2f3cmIyxTJiLkgUaqxw,16876
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/writer.h,sha256=2rlXcsbR470qSHtn-sNvFKWAvvdLcphkIj133nu32VM,10455
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/fitz/xml.h,sha256=2AxngUvxrf1PUsZYW_ah_28RElZNwOF3rfLdAWdXhDY,12937
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/functions.h,sha256=_QSvGmMYum5VpocVzqDEDdA8gMwhoA_flQ2DPl2P9Dc,564600
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/helpers/mu-office-lib.h,sha256=yxvJ5B90c1Tu5sqq8d6O4dIZJO48ZBvXWlu5E6bVSBE,22192
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/helpers/mu-threads.h,sha256=9ZRYn-Rg_02WjHTtpgL6A9gGuU8SIWm-GM1JQX4J8hA,5774
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/helpers/pkcs7-openssl.h,sha256=jQb1aMNEcgC8EaKhfX4mIzE7KcvAENlK_-jMiTpelh4,2427
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/html.h,sha256=RJcuoBaunOZcvuqMZHMGvCepY4rc_Lbenj_jOZf6UDs,2074
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/internal.h,sha256=zV-K1o3Cg0wrPlEbcaKMH4ZD9sU32H1fq5DRBBw_ObY,1344
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/memento.h,sha256=MSoxjQJw-2p9xPkvuPn5VgaYPC5kjbBzBinvStZOcXk,17041
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf.h,sha256=GzHpp-9SgHqM42HlKneOM2FkS2FuDrOe5E-fPBDmRsg,1692
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/annot.h,sha256=DAw9miLS02HywIEvNcp6y__9kjmk3GM27MO9n5qwu-0,35759
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/clean.h,sha256=yYlkLxNQkO5j_Ojo2wkVLn-i1vqlDHL6c-XQAy7ruhY,2872
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/cmap.h,sha256=uiW7WPOcI1tnElBTxAItOInNHIcn5t6Jo-bCiJIKt_4,3954
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/crypt.h,sha256=5UaYdwjoDg9lFj1Lp3PsM2j206hWak3Djxku5f6svqY,4548
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/document.h,sha256=ahfB-ND-IUnmCQlKINBmW9IinVXx_FdaNhwc5CJrI9Q,33002
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/event.h,sha256=J_wWweEHcvVTBzuxA7c_jOv1pf2cCElKwCskO691DqY,4777
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/font.h,sha256=rv_4Y01eA1qzvw8Uo6mJLDz3LS7tnch4d59rbQNi19c,5391
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/form.h,sha256=kZaWRqLZzq1T-b4dPozYEJAjcJVy6e9VVqosrFpXzbI,15059
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/image-rewriter.h,sha256=15mbZX9D7cum5LilJ_yTATCKbxW5UTuw8PNZCxJnNh4,3565
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/interpret.h,sha256=KvXrauVksJ-_TKgrr3r9vnDHhTi-XGlfJYdOqOTJLg0,20664
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/javascript.h,sha256=NCrd8NG_qiNJiicEVu8oT1IYnpvXJlcNjlJbOoQNwuA,1823
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/name-table.h,sha256=OiMgf7TLcjwR2cMk84jMW8bfTMDf9DVAIrcuNqmNf08,20990
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/object.h,sha256=zryPgdBzgKd2wGb6kdznYlLbur25En2FSN1zBSRj68g,20933
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/page.h,sha256=5ggBxvCA_vG__uSq2xHdxaklD0Cloup6qzgS04kKq94,12356
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/parse.h,sha256=nX2CoEpO7I7pi5x99cMLHhygLTZJSuaX4P4F930KZ1M,2596
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/recolor.h,sha256=KEr9F2SnW-S3p92unTKRtlJthKI3XlkY9xaOAUuHGTA,1563
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/resource.h,sha256=QnsilywDmNXQtteTU1EXnoBFBPCyHtXB9OavuZhe9F0,6902
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/xref.h,sha256=TVTtPwHKmJQmuyALeNTKjLVK6TDUxrhwq8AIcdjvBYU,12131
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/pdf/zugferd.h,sha256=ma314FDM37JFdtqyRYMLgBG8FxwzkIeRE0TpbNXUT88,1616
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/include/mupdf/ucdn.h,sha256=hyRG_xZmQFBZS8HmwrSpWjX1wcmmVWVDDvqMKGI1ynU,14378
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf-devel/lib/libmupdf-threads.a,sha256=13wKG4VnIw_hY1mTyjQ3dPgcnOXM4W-osKI9olZsi48,9268
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/mupdf.py,sha256=yNQ6WCBGHgJv315NRWJEjG3QAWsnRWrgWtHQtF73t_o,2680616
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/pymupdf.py,sha256=TmBAFot49935b2zksN21nmcCqXm1VwTmLDi5tDBZY1I,64
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/table.py,sha256=xlI-Mtp2O9K4TnsMs9IhyZOP8dwGwZotDZfTY1mZ1so,109087
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf/utils.py,sha256=zBcgZ_4ncGijq9uciIbvv6yqvJsmH4Lstobs2F-3Yi0,39718
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:4614: get():     pymupdf-1.28.2.dist-info/RECORD,,
+  [+3m46.5s] ../../Folimeld/.venv-openbsd/lib/python3.14/site-packages/pipcl/__init__.py:975: build_wheel(): Have created wheel size=26,695,953: /tmp/pip-modern-metadata-7nlqpehq/pymupdf-1.28.2-cp314-abi3-openbsd_8_0_amd64.whl
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: pymupdf
+  Building wheel for pymupdf (pyproject.toml): started
+  Running command Building wheel for pymupdf (pyproject.toml)
+  Building wheel for pymupdf (pyproject.toml): finished with status 'done'
+  Created wheel for pymupdf: filename=pymupdf-1.28.2-cp314-abi3-openbsd_8_0_amd64.whl size=26695953 sha256=25932378ff47c85f5ef308120ff839472a261c3579bf77b3c370423f674c40b1
+  Stored in directory: /tmp/pip-ephem-wheel-cache-hh7g6e1n/wheels/aa/25/97/7270390eb5995f17b35eeba1bb94116379f7d1c13452074564
+Successfully built pymupdf
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: /home/folimeld/Folimeld/.venv-openbsd/bin/python -m pip install --upgrade pip
+/home/folimeld/Folimeld/.venv-openbsd/lib/python3.14/site-packages/pip/_vendor/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 4.4.0'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Processing ./wheels/pymupdf-1.28.2-cp314-abi3-openbsd_8_0_amd64.whl
+Installing collected packages: pymupdf
+Successfully installed pymupdf-1.28.2
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: /home/folimeld/Folimeld/.venv-openbsd/bin/python -m pip install --upgrade pip
+No broken requirements found.

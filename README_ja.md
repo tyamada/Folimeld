@@ -28,6 +28,8 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 - 日本語、英語、ドイツ語、スペイン語、フランス語、韓国語、ポルトガル語、中国語に対応
 - Windows（Intel/AMD（x64）版・ARM（arm64）版の両方）、macOS、Ubuntu、Debianで利用可能
 
+OpenBSD 8.0 / amd64では、1 vCPU・16 GiBのVirtualBox VMでソース実行を確認しています。依存ライブラリのビルドにパッチが必要です。配布パッケージは作成していません。構築方法と確認範囲は[OpenBSDの検証記録](documentation/openbsd-verification_ja.md)を参照してください。
+
 ## ダウンロード
 
 公開対象はLinux用パッケージです。Windows・macOS用バイナリは非公開とし、手元で開発・検証します。Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビルド記録は[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)から取得できます。以下のダウンロードリンクもReleaseを参照しています。[移行計画と実施記録](documentation/linux-release-migration_ja.md)を参照してください。互換性のため従来のリポジトリ内のダウンロードURLも維持しています。

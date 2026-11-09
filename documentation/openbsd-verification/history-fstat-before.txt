@@ -1,0 +1,29 @@
+USER     CMD          PID   FD MOUNT        INUM  MODE          R/W    SZ|DV
+folimeld python3.14 30257 text /usr/local  1347896  -rwxr-xr-x      r     6920
+folimeld python3.14 30257   wd /home     2332810  drwxr-xr-x      r     1024
+folimeld python3.14 30257    0 /           78942  crw-rw-rw-      r     null
+folimeld python3.14 30257    1 /home     2332876  -rw-r--r--      w     5752
+folimeld python3.14 30257    2 /home     2332876  -rw-r--r--      w     5752
+folimeld python3.14 30257    3 /tmp           10* -rw-------     rw     4096
+folimeld python3.14 30257    4* unix stream 0x0
+folimeld python3.14 30257    5 pipe 0x0 state: 
+folimeld python3.14 30257    6 pipe 0x0 state: 
+folimeld python3.14 30257    7 pipe 0x0 state: 
+folimeld python3.14 30257    8 pipe 0x0 state: 
+folimeld python3.14 30257    9 /home     2644075  -rw-r--r--     we     1164
+folimeld python3.14 30257   10 pipe 0x0 state: 
+folimeld python3.14 30257   11 pipe 0x0 state: 
+folimeld python3.14 30257   12* unix stream 0x0
+folimeld python3.14 30257   13* unix stream 0x0
+folimeld python3.14 30257   14 /usr/local  1406694  -rw-r--r--     re     6460
+folimeld python3.14 30257   15 /home     2413451  -rw-r--r--      r 19728289
+folimeld python3.14 30257   18 pipe 0x0 state: E
+folimeld python3.14 30257   19 pipe 0x0 state: E
+folimeld python3.14 30257   20 pipe 0x0 state: 
+folimeld python3.14 30257   21 /usr/local  1379430  -rw-r--r--     re   192748
+folimeld python3.14 30257   22 pipe 0x0 state: E
+folimeld python3.14 30257   23 pipe 0x0 state: E
+folimeld python3.14 30257   25 pipe 0x0 state: E
+folimeld python3.14 30257   27 pipe 0x0 state: E
+folimeld python3.14 30257   28 pipe 0x0 state: 
+folimeld python3.14 30257   29 pipe 0x0 state: 
