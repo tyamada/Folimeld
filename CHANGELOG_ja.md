@@ -37,6 +37,10 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 1.0.1.0 - 2026-11-09
+
+- 2026年11月9日、Folimeld 1.0.1.0（Windows 11 x64）を日本と米国のMicrosoft Storeで無料公開しました。 [日本のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [米国のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
+
 ## 0.3.3 - 2026-09-09
 
 - 配布用debをUbuntu 22.04でビルドし、Ubuntu 22.04以降に対応。X11依存ライブラリの指定も補完
