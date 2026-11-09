@@ -66,7 +66,7 @@ def test_private_binary_in_checksum_list_is_rejected(linux_release):
 
 
 def test_wrong_source_archive_association_is_rejected(linux_release):
-    record = next((linux_release / 'releases/ubuntu/source').rglob('folimeld*.json'))
+    record = next((linux_release / 'releases/ubuntu/source').rglob('folimeld_*.json'))
     data = json.loads(record.read_text())
     data['source_archive'] = '../private.zip'
     record.write_text(json.dumps(data))

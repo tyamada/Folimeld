@@ -7,7 +7,6 @@ import argparse
 from contextlib import contextmanager
 import gc
 import hashlib
-from importlib.metadata import version
 import json
 from io import BytesIO
 import os
@@ -21,8 +20,11 @@ from unittest.mock import patch
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 
 import fitz
+import cryptography
+import PIL
 from PIL import Image
 import psutil
+import PySide6
 from PySide6.QtWidgets import QApplication
 
 from folimeld.app import MainWindow
@@ -170,7 +172,13 @@ def main():
         result['input_unchanged'] = True
     result["environment"] = {
         "python": platform.python_version(), "platform": platform.platform(),
-        "dependencies": {name: version(name) for name in ("PyMuPDF", "PySide6", "Pillow", "psutil", "cryptography")},
+        "dependencies": {
+            "PyMuPDF": fitz.VersionBind,
+            "PySide6": PySide6.__version__,
+            "Pillow": PIL.__version__,
+            "psutil": psutil.__version__,
+            "cryptography": cryptography.__version__,
+        },
     }
     result["fixture"] = {"generated": args.input is None, "image_size": args.image_size if not args.input else None}
     report = json.dumps(result, indent=2) + "\n"

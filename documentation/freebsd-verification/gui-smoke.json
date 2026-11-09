@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "pages": 4,
+  "rotation": 90,
+  "saved": "build/freebsd-verification/\u65e5\u672c\u8a9e saved.pdf",
+  "platform": "freebsd15"
+}

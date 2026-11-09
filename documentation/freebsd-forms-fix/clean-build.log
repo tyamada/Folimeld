@@ -1,0 +1,45 @@
+Collecting pip==26.3
+  Using cached pip-26.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting setuptools==84.2.1
+  Using cached setuptools-84.2.1-py3-none-any.whl.metadata (6.6 kB)
+Collecting wheel==0.48.0
+  Using cached wheel-0.48.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting pipcl==13
+  Using cached pipcl-13-py3-none-any.whl.metadata (11 kB)
+Collecting clang==19.1.7
+  Using cached clang-19.1.7-py3-none-any.whl.metadata (1.1 kB)
+Collecting packaging>=24.0 (from wheel==0.48.0)
+  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Using cached pip-26.3-py3-none-any.whl (2.0 MB)
+Using cached setuptools-84.2.1-py3-none-any.whl (876 kB)
+Using cached wheel-0.48.0-py3-none-any.whl (33 kB)
+Using cached pipcl-13-py3-none-any.whl (57 kB)
+Using cached clang-19.1.7-py3-none-any.whl (31 kB)
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Installing collected packages: clang, setuptools, pip, packaging, wheel, pipcl
+  Attempting uninstall: pip
+    Found existing installation: pip 25.0.1
+    Uninstalling pip-25.0.1:
+      Successfully uninstalled pip-25.0.1
+Successfully installed clang-19.1.7 packaging-26.3 pip-26.3 pipcl-13 setuptools-84.2.1 wheel-0.48.0
+Hmm...  Looks like a unified diff to me...
+The text leading up to this was:
+--------------------------
+|--- a/scripts/wrap/__main__.py
+|+++ b/scripts/wrap/__main__.py
+--------------------------
+Patching file scripts/wrap/__main__.py using Plan A...
+Hunk #1 succeeded at 1793.
+done
+Processing ./build/freebsd-pymupdf-clean/pymupdf-1.28.2
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): still running...
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: pymupdf
+  Building wheel for pymupdf (pyproject.toml): started
+  Building wheel for pymupdf (pyproject.toml): finished with status 'done'
+  Created wheel for pymupdf: filename=pymupdf-1.28.2-cp312-abi3-freebsd_15_1_release_p5_amd64.whl size=26022392 sha256=a3098e5238298041e41ff3575f0c6b7134f8ec3a3f6149372e87fca035f5376e
+  Stored in directory: /tmp/pip-ephem-wheel-cache-8ls8lvst/wheels/4a/fa/a3/ee7ed9f48313f54d9dfa6733d230d17325c894cb50a06b73cf
+Successfully built pymupdf
+SHA256 (/home/folimeld/Folimeld/build/freebsd-pymupdf-clean/wheels/pymupdf-1.28.2-cp312-abi3-freebsd_15_1_release_p5_amd64.whl) = a3098e5238298041e41ff3575f0c6b7134f8ec3a3f6149372e87fca035f5376e

@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "versions": [
+    "1.28.2",
+    "1.28.2",
+    null
+  ],
+  "source": {
+    "encrypted": false,
+    "pages": 2,
+    "rotations": [
+      0,
+      0
+    ],
+    "fields": [
+      [
+        {
+          "name": "name",
+          "value": "Preserved field",
+          "choices": null,
+          "type": 7
+        },
+        {
+          "name": "choice",
+          "value": "Beta",
+          "choices": [
+            "Alpha",
+            "Beta"
+          ],
+          "type": 3
+        },
+        {
+          "name": "check",
+          "value": "Off",
+          "choices": null,
+          "type": 2
+        }
+      ],
+      [
+        {
+          "name": "empty_choice",
+          "value": "",
+          "choices": null,
+          "type": 3
+        }
+      ]
+    ],
+    "sha256": "c6318de6d83583399861eb6502f237eecddde73c661a0498c8e04de757f4c026"
+  },
+  "normal": {
+    "encrypted": false,
+    "pages": 2,
+    "rotations": [
+      90,
+      0
+    ],
+    "fields": [
+      [
+        {
+          "name": "name",
+          "value": "Preserved field",
+          "choices": null,
+          "type": 7
+        },
+        {
+          "name": "choice",
+          "value": "Beta",
+          "choices": [
+            "Alpha",
+            "Beta"
+          ],
+          "type": 3
+        },
+        {
+          "name": "check",
+          "value": "Off",
+          "choices": null,
+          "type": 2
+        }
+      ],
+      [
+        {
+          "name": "empty_choice",
+          "value": "",
+          "choices": null,
+          "type": 3
+        }
+      ]
+    ],
+    "sha256": "fb0c937320d0374f29b5468ea07a4ff9584e372f96dcefbf18cd301b41caa7bf"
+  },
+  "encrypted": {
+    "encrypted": true,
+    "pages": 2,
+    "rotations": [
+      90,
+      0
+    ],
+    "fields": [
+      [
+        {
+          "name": "name",
+          "value": "Preserved field",
+          "choices": null,
+          "type": 7
+        },
+        {
+          "name": "choice",
+          "value": "Beta",
+          "choices": [
+            "Alpha",
+            "Beta"
+          ],
+          "type": 3
+        },
+        {
+          "name": "check",
+          "value": "Off",
+          "choices": null,
+          "type": 2
+        }
+      ],
+      [
+        {
+          "name": "empty_choice",
+          "value": "",
+          "choices": null,
+          "type": 3
+        }
+      ]
+    ],
+    "sha256": "03376e7ce4a7400c084ab75ae4455f5ecbe5c337780e1b909388aaf139ec7fb8"
+  }
+}

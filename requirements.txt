@@ -1,5 +1,7 @@
 PySide6>=6.7
-PyMuPDF>=1.24
+PyMuPDF>=1.24; platform_system != "FreeBSD"
+# Older MuPDF wrappers index an empty vector when widgets have no choices.
+PyMuPDF>=1.28.2; platform_system == "FreeBSD"
 Pillow>=11.0
 cryptography>=46,<51
 winrt-runtime>=3.2,<4; sys_platform == "win32"

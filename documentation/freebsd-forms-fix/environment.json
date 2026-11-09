@@ -1,0 +1,31 @@
+{
+  "os": "FreeBSD-15.1-RELEASE-p5-amd64-64bit-ELF",
+  "python": "3.12.15",
+  "qt_binding": "6.11.2",
+  "pymupdf": "1.28.2",
+  "mupdf": "1.28.2",
+  "module": "/home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/__init__.py",
+  "wheel": "pymupdf-1.28.2-cp312-abi3-freebsd_15_1_release_p5_amd64.whl",
+  "wheel_sha256": "b1dfd1acb578f8875d00687a696102d84610faa1cf6fa69565099dea81b42868",
+  "app_pids": [
+    "1692"
+  ],
+  "app_native_mappings": [
+    " 1692        0x853f5a000        0x853f6f000 r--   21   63   8   4 CN--- vn /home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/_extra.so",
+    " 1692        0x853f6f000        0x853f8b000 r-x   28   63   8   4 CN--- vn /home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/_extra.so",
+    " 1692        0x853f8b000        0x853f8d000 r--    2    0   1   0 CN--- vn /home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/_extra.so",
+    " 1692        0x853f8d000        0x853f90000 rw-    3    0   1   0 CN--- vn /home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/_extra.so",
+    " 1692        0x854200000        0x8559b5000 r-- 6069 8800   8   4 CN--- vn /home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/libmupdf.so",
+    " 1692        0x8559b5000        0x8563ff000 r-x 2634 8800   8   4 CN--- vn /home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/libmupdf.so",
+    " 1692        0x8563ff000        0x856428000 r--   41    0   1   0 CN--- vn /home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/libmupdf.so",
+    " 1692        0x856428000        0x85645a000 rw-   50    0   1   0 C---- vn /home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/libmupdf.so",
+    " 1692        0x856642000        0x8567bc000 r--  378  776   8   4 CN--- vn /home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/libmupdfcpp.so",
+    " 1692        0x8567bc000        0x856864000 r-x  168  776   8   4 CN--- vn /home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/libmupdfcpp.so",
+    " 1692        0x856864000        0x856866000 r--    2    0   1   0 CN--- vn /home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/libmupdfcpp.so",
+    " 1692        0x856866000        0x856874000 rw-   14    0   1   0 CN--- vn /home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/libmupdfcpp.so",
+    " 1692        0x857a00000        0x8580ce000 r-- 1742 3960   8   4 CN--- vn /home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/_mupdf.so",
+    " 1692        0x8580ce000        0x85868d000 r-x 1471 3960   8   4 CN--- vn /home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/_mupdf.so",
+    " 1692        0x85868d000        0x858692000 r--    5    0   1   0 CN--- vn /home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/_mupdf.so",
+    " 1692        0x858692000        0x85872a000 rw-  152    0   1   0 CN--- vn /home/folimeld/Folimeld/.venv-freebsd/lib/python3.12/site-packages/pymupdf/_mupdf.so"
+  ]
+}

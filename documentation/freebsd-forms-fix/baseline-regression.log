@@ -1,0 +1,244 @@
+FFFF..FF                                                                 [100%]
+=================================== FAILURES ===================================
+____________ test_widget_reading_survives_native_boundary[text-no] _____________
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-3/test_widget_reading_survives_n0')
+kind = 'text', reopen = 'no'
+
+    @pytest.mark.parametrize('reopen', ['no', 'yes'])
+    @pytest.mark.parametrize('kind', ['text', 'checkbox', 'combo', 'empty_combo'])
+    def test_widget_reading_survives_native_boundary(tmp_path, kind, reopen):
+        result = subprocess.run(
+            [sys.executable, '-c', FORM_READER, kind, reopen],
+            cwd=tmp_path,
+            env={**os.environ, 'PYTHONFAULTHANDLER': '1'},
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+>       assert result.returncode == 0, (
+            f'Widget reader exited with {result.returncode}:\n'
+            f'{result.stdout}\n{result.stderr}'
+        )
+E       AssertionError: Widget reader exited with -4:
+E
+E         Fatal Python error: Illegal instruction
+E
+E         Current thread 0x00000f28a0a45010 (most recent call first):
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/mupdf.py", line 55796 in pdf_choice_widget_options2
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 18910 in JM_choice_options
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 19983 in JM_get_widget_properties
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 24862 in _fill_widget
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 12783 in load_widget
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 13165 in widgets
+E           File "<string>", line 39 in <module>
+E
+E         Extension modules: pymupdf._extra, pymupdf._mupdf (total: 2)
+E
+E       assert -4 == 0
+E        +  where -4 = CompletedProcess(args=['/home/folimeld/Folimeld/.venv-freebsd/bin/python', '-c', "\nimport json\nimport sys\n\ntry:\n ... in widgets\n  File "<string>", line 39 in <module>\n\nExtension modules: pymupdf._extra, pymupdf._mupdf (total: 2)\n').returncode
+
+tests/test_pdf_forms.py:68: AssertionError
+____________ test_widget_reading_survives_native_boundary[text-yes] ____________
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-3/test_widget_reading_survives_n1')
+kind = 'text', reopen = 'yes'
+
+    @pytest.mark.parametrize('reopen', ['no', 'yes'])
+    @pytest.mark.parametrize('kind', ['text', 'checkbox', 'combo', 'empty_combo'])
+    def test_widget_reading_survives_native_boundary(tmp_path, kind, reopen):
+        result = subprocess.run(
+            [sys.executable, '-c', FORM_READER, kind, reopen],
+            cwd=tmp_path,
+            env={**os.environ, 'PYTHONFAULTHANDLER': '1'},
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+>       assert result.returncode == 0, (
+            f'Widget reader exited with {result.returncode}:\n'
+            f'{result.stdout}\n{result.stderr}'
+        )
+E       AssertionError: Widget reader exited with -4:
+E
+E         Fatal Python error: Illegal instruction
+E
+E         Current thread 0x00000ae9d6a45010 (most recent call first):
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/mupdf.py", line 55796 in pdf_choice_widget_options2
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 18910 in JM_choice_options
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 19983 in JM_get_widget_properties
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 24862 in _fill_widget
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 12783 in load_widget
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 13165 in widgets
+E           File "<string>", line 39 in <module>
+E
+E         Extension modules: pymupdf._extra, pymupdf._mupdf (total: 2)
+E
+E       assert -4 == 0
+E        +  where -4 = CompletedProcess(args=['/home/folimeld/Folimeld/.venv-freebsd/bin/python', '-c', "\nimport json\nimport sys\n\ntry:\n ... in widgets\n  File "<string>", line 39 in <module>\n\nExtension modules: pymupdf._extra, pymupdf._mupdf (total: 2)\n').returncode
+
+tests/test_pdf_forms.py:68: AssertionError
+__________ test_widget_reading_survives_native_boundary[checkbox-no] ___________
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-3/test_widget_reading_survives_n2')
+kind = 'checkbox', reopen = 'no'
+
+    @pytest.mark.parametrize('reopen', ['no', 'yes'])
+    @pytest.mark.parametrize('kind', ['text', 'checkbox', 'combo', 'empty_combo'])
+    def test_widget_reading_survives_native_boundary(tmp_path, kind, reopen):
+        result = subprocess.run(
+            [sys.executable, '-c', FORM_READER, kind, reopen],
+            cwd=tmp_path,
+            env={**os.environ, 'PYTHONFAULTHANDLER': '1'},
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+>       assert result.returncode == 0, (
+            f'Widget reader exited with {result.returncode}:\n'
+            f'{result.stdout}\n{result.stderr}'
+        )
+E       AssertionError: Widget reader exited with -4:
+E
+E         Fatal Python error: Illegal instruction
+E
+E         Current thread 0x00000b0bef845010 (most recent call first):
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/mupdf.py", line 55796 in pdf_choice_widget_options2
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 18910 in JM_choice_options
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 19983 in JM_get_widget_properties
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 24862 in _fill_widget
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 12783 in load_widget
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 13165 in widgets
+E           File "<string>", line 39 in <module>
+E
+E         Extension modules: pymupdf._extra, pymupdf._mupdf (total: 2)
+E
+E       assert -4 == 0
+E        +  where -4 = CompletedProcess(args=['/home/folimeld/Folimeld/.venv-freebsd/bin/python', '-c', "\nimport json\nimport sys\n\ntry:\n ... in widgets\n  File "<string>", line 39 in <module>\n\nExtension modules: pymupdf._extra, pymupdf._mupdf (total: 2)\n').returncode
+
+tests/test_pdf_forms.py:68: AssertionError
+__________ test_widget_reading_survives_native_boundary[checkbox-yes] __________
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-3/test_widget_reading_survives_n3')
+kind = 'checkbox', reopen = 'yes'
+
+    @pytest.mark.parametrize('reopen', ['no', 'yes'])
+    @pytest.mark.parametrize('kind', ['text', 'checkbox', 'combo', 'empty_combo'])
+    def test_widget_reading_survives_native_boundary(tmp_path, kind, reopen):
+        result = subprocess.run(
+            [sys.executable, '-c', FORM_READER, kind, reopen],
+            cwd=tmp_path,
+            env={**os.environ, 'PYTHONFAULTHANDLER': '1'},
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+>       assert result.returncode == 0, (
+            f'Widget reader exited with {result.returncode}:\n'
+            f'{result.stdout}\n{result.stderr}'
+        )
+E       AssertionError: Widget reader exited with -4:
+E
+E         Fatal Python error: Illegal instruction
+E
+E         Current thread 0x000028ef80a45010 (most recent call first):
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/mupdf.py", line 55796 in pdf_choice_widget_options2
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 18910 in JM_choice_options
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 19983 in JM_get_widget_properties
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 24862 in _fill_widget
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 12783 in load_widget
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 13165 in widgets
+E           File "<string>", line 39 in <module>
+E
+E         Extension modules: pymupdf._extra, pymupdf._mupdf (total: 2)
+E
+E       assert -4 == 0
+E        +  where -4 = CompletedProcess(args=['/home/folimeld/Folimeld/.venv-freebsd/bin/python', '-c', "\nimport json\nimport sys\n\ntry:\n ... in widgets\n  File "<string>", line 39 in <module>\n\nExtension modules: pymupdf._extra, pymupdf._mupdf (total: 2)\n').returncode
+
+tests/test_pdf_forms.py:68: AssertionError
+_________ test_widget_reading_survives_native_boundary[empty_combo-no] _________
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-3/test_widget_reading_survives_n6')
+kind = 'empty_combo', reopen = 'no'
+
+    @pytest.mark.parametrize('reopen', ['no', 'yes'])
+    @pytest.mark.parametrize('kind', ['text', 'checkbox', 'combo', 'empty_combo'])
+    def test_widget_reading_survives_native_boundary(tmp_path, kind, reopen):
+        result = subprocess.run(
+            [sys.executable, '-c', FORM_READER, kind, reopen],
+            cwd=tmp_path,
+            env={**os.environ, 'PYTHONFAULTHANDLER': '1'},
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+>       assert result.returncode == 0, (
+            f'Widget reader exited with {result.returncode}:\n'
+            f'{result.stdout}\n{result.stderr}'
+        )
+E       AssertionError: Widget reader exited with -4:
+E
+E         Fatal Python error: Illegal instruction
+E
+E         Current thread 0x000000c873245010 (most recent call first):
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/mupdf.py", line 55796 in pdf_choice_widget_options2
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 18910 in JM_choice_options
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 19983 in JM_get_widget_properties
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 24862 in _fill_widget
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 12783 in load_widget
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 13165 in widgets
+E           File "<string>", line 39 in <module>
+E
+E         Extension modules: pymupdf._extra, pymupdf._mupdf (total: 2)
+E
+E       assert -4 == 0
+E        +  where -4 = CompletedProcess(args=['/home/folimeld/Folimeld/.venv-freebsd/bin/python', '-c', "\nimport json\nimport sys\n\ntry:\n ... in widgets\n  File "<string>", line 39 in <module>\n\nExtension modules: pymupdf._extra, pymupdf._mupdf (total: 2)\n').returncode
+
+tests/test_pdf_forms.py:68: AssertionError
+________ test_widget_reading_survives_native_boundary[empty_combo-yes] _________
+
+tmp_path = PosixPath('/tmp/pytest-of-folimeld/pytest-3/test_widget_reading_survives_n7')
+kind = 'empty_combo', reopen = 'yes'
+
+    @pytest.mark.parametrize('reopen', ['no', 'yes'])
+    @pytest.mark.parametrize('kind', ['text', 'checkbox', 'combo', 'empty_combo'])
+    def test_widget_reading_survives_native_boundary(tmp_path, kind, reopen):
+        result = subprocess.run(
+            [sys.executable, '-c', FORM_READER, kind, reopen],
+            cwd=tmp_path,
+            env={**os.environ, 'PYTHONFAULTHANDLER': '1'},
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+>       assert result.returncode == 0, (
+            f'Widget reader exited with {result.returncode}:\n'
+            f'{result.stdout}\n{result.stderr}'
+        )
+E       AssertionError: Widget reader exited with -4:
+E
+E         Fatal Python error: Illegal instruction
+E
+E         Current thread 0x0000225776445010 (most recent call first):
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/mupdf.py", line 55796 in pdf_choice_widget_options2
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 18910 in JM_choice_options
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 19983 in JM_get_widget_properties
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 24862 in _fill_widget
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 12783 in load_widget
+E           File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 13165 in widgets
+E           File "<string>", line 39 in <module>
+E
+E         Extension modules: pymupdf._extra, pymupdf._mupdf (total: 2)
+E
+E       assert -4 == 0
+E        +  where -4 = CompletedProcess(args=['/home/folimeld/Folimeld/.venv-freebsd/bin/python', '-c', "\nimport json\nimport sys\n\ntry:\n ... in widgets\n  File "<string>", line 39 in <module>\n\nExtension modules: pymupdf._extra, pymupdf._mupdf (total: 2)\n').returncode
+
+tests/test_pdf_forms.py:68: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_pdf_forms.py::test_widget_reading_survives_native_boundary[text-no]
+FAILED tests/test_pdf_forms.py::test_widget_reading_survives_native_boundary[text-yes]
+FAILED tests/test_pdf_forms.py::test_widget_reading_survives_native_boundary[checkbox-no]
+FAILED tests/test_pdf_forms.py::test_widget_reading_survives_native_boundary[checkbox-yes]
+FAILED tests/test_pdf_forms.py::test_widget_reading_survives_native_boundary[empty_combo-no]
+FAILED tests/test_pdf_forms.py::test_widget_reading_survives_native_boundary[empty_combo-yes]
+6 failed, 2 passed in 3.40s

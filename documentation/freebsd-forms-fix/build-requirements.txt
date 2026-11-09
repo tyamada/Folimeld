@@ -1,0 +1,5 @@
+clang==19.1.7
+packaging==26.3
+pipcl==13
+setuptools==84.2.1
+wheel==0.48.0

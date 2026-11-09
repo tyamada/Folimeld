@@ -1,0 +1,62 @@
+{
+  "before": {
+    "pages": 8,
+    "rotations": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "streams": [
+      "e2de4921e7bc23b960fb9d80318348f0247a8a78098868e9b0ba5799227da80d",
+      "c75a375705a75feea7821a96b08755fccf09100382eced6fe5644b8321e6e28d",
+      "a4ffbc9b966419482e1eded78a4f2699fc99eacaf3421847fef6da821a5dee4e",
+      "3958c6de512c4c09f895f7161a680b95160d94d013f1765db66ba5b00019f3b4",
+      "12f2319c342ae1278be302dda8c8987aab392888d2a8bc1f06f992c1f508c278",
+      "32fc9c47e70805172868b7f6e74d7141733e03fbffa47485bceb2ea30beb434d",
+      "339cb6e7d3cf2cecdd56a9ed4b7d622c3d2f15c10d16bc2e184cdd9e20f4303d",
+      "2171e4b20c17732c5c86efb315b3f68d8800a82f390e022878521ab8304a21db"
+    ]
+  },
+  "after": {
+    "pages": 8,
+    "rotations": [
+      0,
+      90,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "streams": [
+      "c75a375705a75feea7821a96b08755fccf09100382eced6fe5644b8321e6e28d",
+      "e2de4921e7bc23b960fb9d80318348f0247a8a78098868e9b0ba5799227da80d",
+      "a4ffbc9b966419482e1eded78a4f2699fc99eacaf3421847fef6da821a5dee4e",
+      "3958c6de512c4c09f895f7161a680b95160d94d013f1765db66ba5b00019f3b4",
+      "12f2319c342ae1278be302dda8c8987aab392888d2a8bc1f06f992c1f508c278",
+      "32fc9c47e70805172868b7f6e74d7141733e03fbffa47485bceb2ea30beb434d",
+      "339cb6e7d3cf2cecdd56a9ed4b7d622c3d2f15c10d16bc2e184cdd9e20f4303d",
+      "2171e4b20c17732c5c86efb315b3f68d8800a82f390e022878521ab8304a21db"
+    ]
+  },
+  "expected_order_0_based": [
+    1,
+    0,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "page_count_ok": true,
+  "page_order_ok": true,
+  "rotation_ok": true,
+  "passed": true
+}

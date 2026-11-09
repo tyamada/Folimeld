@@ -1,0 +1,30 @@
+Collecting mypy<2,>=1.18
+  Downloading mypy-1.20.2-py3-none-any.whl.metadata (2.4 kB)
+Requirement already satisfied: typing_extensions>=4.6.0 in /usr/local/lib/python3.12/site-packages (from mypy<2,>=1.18) (4.16.0)
+Collecting mypy_extensions>=1.0.0 (from mypy<2,>=1.18)
+  Downloading mypy_extensions-1.2.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting pathspec>=1.0.0 (from mypy<2,>=1.18)
+  Downloading pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+Collecting librt>=0.8.0 (from mypy<2,>=1.18)
+  Downloading librt-0.16.0.tar.gz (219 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Downloading mypy-1.20.2-py3-none-any.whl (2.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 17.1 MB/s eta 0:00:00
+Downloading mypy_extensions-1.2.0-py3-none-any.whl (5.1 kB)
+Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
+Building wheels for collected packages: librt
+  Building wheel for librt (pyproject.toml): started
+  Building wheel for librt (pyproject.toml): finished with status 'done'
+  Created wheel for librt: filename=librt-0.16.0-cp312-cp312-freebsd_15_1_release_p5_amd64.whl size=187750 sha256=3f663d25a5ab53a10f36006d8534368e7b6ee34833198f9cfbe9159602824cd1
+  Stored in directory: /home/folimeld/.cache/pip/wheels/7d/a3/0a/54427db872cc3626488992505d61e3dd824d6e1e6e9155e6bc
+Successfully built librt
+Installing collected packages: pathspec, mypy_extensions, librt, mypy
+Successfully installed librt-0.16.0 mypy-1.20.2 mypy_extensions-1.2.0 pathspec-1.1.1
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: /home/folimeld/Folimeld/.venv-freebsd/bin/python -m pip install --upgrade pip

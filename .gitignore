@@ -18,6 +18,8 @@ dist/
 
 # Local diagnostics and verification output
 *.log
+!documentation/freebsd-verification/*.log
+!documentation/freebsd-forms-fix/*.log
 /test-results.xml
 /build-requirements.txt
 .coverage

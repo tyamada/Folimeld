@@ -1,0 +1,46 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+This plugin does not support propagateSizeHints()
+{
+  "input_bytes": 19728289,
+  "pages": 100,
+  "output_bytes": 290702,
+  "thumbnail_size": 288,
+  "milliseconds": {
+    "open": 0.6935689999636452,
+    "refresh": 13.49374500000522,
+    "initial_thumbnails": 42.51278300000649,
+    "scroll_thumbnails": 461.07306599992626,
+    "rotate": 378.61591200010025,
+    "refresh_after_rotation": 9.610256999962985,
+    "rotation_thumbnails": 9.610815999963052,
+    "undo": 27.36765400004515,
+    "redo": 105.05501100010406,
+    "reorder": 135.2047660000153,
+    "save": 119.21746500001973
+  },
+  "max_thumbnail_batch_ms": 17.879743000094095,
+  "peak_resident_thumbnails": 24,
+  "rss_baseline_bytes": 153411584,
+  "sampled_peak_rss_bytes": 323887104,
+  "history_bytes": 39456579,
+  "history_disk_bytes": 0,
+  "undo_performed": true,
+  "redo_performed": true,
+  "input_sha256": "2f55382d50ce35be355e6d9156c4134f66559b1c869c01c84b8245c4e45a3747",
+  "input_unchanged": true,
+  "environment": {
+    "python": "3.12.15",
+    "platform": "FreeBSD-15.1-RELEASE-p5-amd64-64bit-ELF",
+    "dependencies": {
+      "PyMuPDF": "1.28.2",
+      "PySide6": "6.11.2",
+      "Pillow": "13.0.0",
+      "psutil": "7.2.2",
+      "cryptography": "50.0.1"
+    }
+  },
+  "fixture": {
+    "generated": true,
+    "image_size": 256
+  }
+}

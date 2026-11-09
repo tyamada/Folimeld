@@ -1,0 +1,157 @@
+(lldb) target create "/usr/local/bin/python3.12"
+Current executable set to '/usr/local/bin/python3.12' (x86_64).
+(lldb) settings set -- target.run-args  "/home/folimeld/Folimeld/build/freebsd-verification/pymupdf-form-reproducer.py"
+(lldb) settings set target.disable-aslr false
+(lldb) run
+Reading a text widget with PyMuPDF 1.27.2.2
+Process 1533 launched: '/usr/local/bin/python3.12' (x86_64)
+Process 1533 stopped
+* thread #1, name = 'python3.12', stop reason = signal SIGILL: privileged opcode
+    frame #0: 0x00000008305494b3 libmupdfcpp.so`pdf_choice_widget_options2(fz_context*, pdf_annot*, int) + 371
+libmupdfcpp.so`pdf_choice_widget_options2:
+->  0x8305494b3 <+371>: ud2
+    0x8305494b5 <+373>: leaq   -0x60(%rbp), %rdi
+    0x8305494b9 <+377>: callq  0x830549dc0               ; std::__1::vector<char const*, std::__1::allocator<char const*>>::__throw_length_error[abi:se190107]() const
+    0x8305494be <+382>: movq   %rax, %r12
+(lldb) bt 12
+* thread #1, name = 'python3.12', stop reason = signal SIGILL: privileged opcode
+  * frame #0: 0x00000008305494b3 libmupdfcpp.so`pdf_choice_widget_options2(fz_context*, pdf_annot*, int) + 371
+    frame #1: 0x0000000830571ad2 libmupdfcpp.so`mupdf::ll_pdf_choice_widget_options2(pdf_annot*, int) + 98
+    frame #2: 0x0000000830542a91 libmupdfcpp.so`mupdf::pdf_choice_widget_options2(mupdf::PdfAnnot const&, int) + 17
+    frame #3: 0x00000008334da0a0 _mupdf.so`_wrap_pdf_choice_widget_options2(_object*, _object*) + 432
+    frame #4: 0x0000000822b294b8 libpython3.12.so.1.0`___lldb_unnamed_symbol4558 + 216
+    frame #5: 0x0000000822ac2463 libpython3.12.so.1.0`_PyObject_MakeTpCall + 275
+    frame #6: 0x0000000822be95e0 libpython3.12.so.1.0`_PyEval_EvalFrameDefault + 28416
+    frame #7: 0x0000000822ae4382 libpython3.12.so.1.0`___lldb_unnamed_symbol4037 + 690
+    frame #8: 0x0000000822ae294b libpython3.12.so.1.0`___lldb_unnamed_symbol4013 + 43
+    frame #9: 0x0000000822af7802 libpython3.12.so.1.0`___lldb_unnamed_symbol4227 + 946
+    frame #10: 0x0000000822afd490 libpython3.12.so.1.0`___lldb_unnamed_symbol4276 + 96
+    frame #11: 0x0000000822af9403 libpython3.12.so.1.0`___lldb_unnamed_symbol4237 + 211
+(lldb) disassemble --frame
+libmupdfcpp.so`pdf_choice_widget_options2:
+    0x830549340 <+0>:   pushq  %rbp
+    0x830549341 <+1>:   movq   %rsp, %rbp
+    0x830549344 <+4>:   pushq  %r15
+    0x830549346 <+6>:   pushq  %r14
+    0x830549348 <+8>:   pushq  %r13
+    0x83054934a <+10>:  pushq  %r12
+    0x83054934c <+12>:  pushq  %rbx
+    0x83054934d <+13>:  subq   $0x48, %rsp
+    0x830549351 <+17>:  movl   %ecx, %r15d
+    0x830549354 <+20>:  movq   %rdx, %r12
+    0x830549357 <+23>:  movq   %rsi, %rbx
+    0x83054935a <+26>:  movq   %rdi, %r14
+    0x83054935d <+29>:  movq   %rsi, %rdi
+    0x830549360 <+32>:  movq   %rdx, %rsi
+    0x830549363 <+35>:  movl   %ecx, %edx
+    0x830549365 <+37>:  xorl   %ecx, %ecx
+    0x830549367 <+39>:  callq  0x83059da20               ; symbol stub for: pdf_choice_widget_options
+    0x83054936c <+44>:  xorps  %xmm0, %xmm0
+    0x83054936f <+47>:  movaps %xmm0, -0x60(%rbp)
+    0x830549373 <+51>:  movq   $0x0, -0x50(%rbp)
+    0x83054937b <+59>:  testl  %eax, %eax
+    0x83054937d <+61>:  je     0x8305494b3               ; <+371>
+    0x830549383 <+67>:  movq   %r12, -0x30(%rbp)
+    0x830549387 <+71>:  movl   %r15d, -0x38(%rbp)
+    0x83054938b <+75>:  js     0x8305494b5               ; <+373>
+    0x830549391 <+81>:  movslq %eax, %r13
+    0x830549394 <+84>:  leaq   (,%r13,8), %r12
+    0x83054939c <+92>:  movq   %r12, %rdi
+    0x83054939f <+95>:  callq  0x83058ed50               ; symbol stub for: operator new(unsigned long)
+    0x8305493a4 <+100>: movq   %rax, %r15
+    0x8305493a7 <+103>: movq   %rax, %rdi
+    0x8305493aa <+106>: xorl   %esi, %esi
+    0x8305493ac <+108>: movq   %r12, %rdx
+    0x8305493af <+111>: callq  0x830591540               ; symbol stub for: memset
+    0x8305493b4 <+116>: movq   %rbx, %rdi
+    0x8305493b7 <+119>: movq   -0x30(%rbp), %rsi
+    0x8305493bb <+123>: movl   -0x38(%rbp), %edx
+    0x8305493be <+126>: movq   %r15, %rcx
+    0x8305493c1 <+129>: movq   %r12, -0x40(%rbp)
+    0x8305493c5 <+133>: callq  0x83059da20               ; symbol stub for: pdf_choice_widget_options
+    0x8305493ca <+138>: xorps  %xmm0, %xmm0
+    0x8305493cd <+141>: movups %xmm0, (%r14)
+    0x8305493d1 <+145>: movq   $0x0, 0x10(%r14)
+    0x8305493d9 <+153>: movq   %r14, -0x70(%rbp)
+    0x8305493dd <+157>: movb   $0x0, -0x68(%rbp)
+    0x8305493e1 <+161>: leaq   (%r12,%r12,2), %r12
+    0x8305493e5 <+165>: movq   %r12, %rdi
+    0x8305493e8 <+168>: callq  0x83058ed50               ; symbol stub for: operator new(unsigned long)
+    0x8305493ed <+173>: movq   %rax, (%r14)
+    0x8305493f0 <+176>: movq   %rax, %rcx
+    0x8305493f3 <+179>: leaq   (,%r13,2), %rax
+    0x8305493fb <+187>: addq   %r13, %rax
+    0x8305493fe <+190>: leaq   (%rcx,%rax,8), %rax
+    0x830549402 <+194>: movq   %rcx, %rdi
+    0x830549405 <+197>: movq   %rcx, -0x30(%rbp)
+    0x830549409 <+201>: movq   %rax, 0x10(%r14)
+    0x83054940d <+205>: addq   $-0x18, %r12
+    0x830549411 <+209>: movabsq $-0x5555555555555555, %rbx ; imm = 0xAAAAAAAAAAAAAAAB
+    0x83054941b <+219>: movq   %r12, %rax
+    0x83054941e <+222>: mulq   %rbx
+    0x830549421 <+225>: shrq   $0x4, %rdx
+    0x830549425 <+229>: leaq   (%rdx,%rdx,2), %rax
+    0x830549429 <+233>: movq   %rax, -0x38(%rbp)
+    0x83054942d <+237>: leaq   0x18(,%rax,8), %rdx
+    0x830549435 <+245>: xorl   %r12d, %r12d
+    0x830549438 <+248>: xorl   %esi, %esi
+    0x83054943a <+250>: callq  0x830591540               ; symbol stub for: memset
+    0x83054943f <+255>: movq   -0x38(%rbp), %rax
+    0x830549443 <+259>: movq   -0x30(%rbp), %rcx
+    0x830549447 <+263>: leaq   (%rcx,%rax,8), %rax
+    0x83054944b <+267>: addq   $0x18, %rax
+    0x83054944f <+271>: movq   %rax, 0x8(%r14)
+    0x830549453 <+275>: nopw   %cs:(%rax,%rax)
+    0x830549460 <+288>: cmpq   %r13, %r12
+    0x830549463 <+291>: jae    0x8305494b3               ; <+371>
+    0x830549465 <+293>: movq   (%r14), %rax
+    0x830549468 <+296>: movq   0x8(%r14), %rcx
+    0x83054946c <+300>: subq   %rax, %rcx
+    0x83054946f <+303>: sarq   $0x3, %rcx
+    0x830549473 <+307>: imulq  %rbx, %rcx
+    0x830549477 <+311>: cmpq   %r12, %rcx
+    0x83054947a <+314>: jbe    0x8305494b3               ; <+371>
+    0x83054947c <+316>: movq   (%r15,%r12,8), %rsi
+    0x830549480 <+320>: leaq   (%r12,%r12,2), %rcx
+    0x830549484 <+324>: leaq   (%rax,%rcx,8), %rdi
+    0x830549488 <+328>: callq  0x830590ab0               ; symbol stub for: std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::assign(char const*)
+    0x83054948d <+333>: incq   %r12
+    0x830549490 <+336>: cmpq   %r13, %r12
+    0x830549493 <+339>: jne    0x830549460               ; <+288>
+    0x830549495 <+341>: movq   %r15, %rdi
+    0x830549498 <+344>: movq   -0x40(%rbp), %rsi
+    0x83054949c <+348>: callq  0x83058e2e0               ; symbol stub for: operator delete(void*, unsigned long)
+    0x8305494a1 <+353>: movq   %r14, %rax
+    0x8305494a4 <+356>: addq   $0x48, %rsp
+    0x8305494a8 <+360>: popq   %rbx
+    0x8305494a9 <+361>: popq   %r12
+    0x8305494ab <+363>: popq   %r13
+    0x8305494ad <+365>: popq   %r14
+    0x8305494af <+367>: popq   %r15
+    0x8305494b1 <+369>: popq   %rbp
+    0x8305494b2 <+370>: retq
+->  0x8305494b3 <+371>: ud2
+    0x8305494b5 <+373>: leaq   -0x60(%rbp), %rdi
+    0x8305494b9 <+377>: callq  0x830549dc0               ; std::__1::vector<char const*, std::__1::allocator<char const*>>::__throw_length_error[abi:se190107]() const
+    0x8305494be <+382>: movq   %rax, %r12
+    0x8305494c1 <+385>: leaq   -0x70(%rbp), %rdi
+    0x8305494c5 <+389>: callq  0x830549dd0               ; std::__1::__exception_guard_exceptions<std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>>::__destroy_vector>::~__exception_guard_exceptions[abi:se190107]()
+    0x8305494ca <+394>: jmp    0x8305494f5               ; <+437>
+    0x8305494cc <+396>: movq   %rax, %r12
+    0x8305494cf <+399>: jmp    0x8305494f5               ; <+437>
+    0x8305494d1 <+401>: movq   %rax, %r12
+    0x8305494d4 <+404>: movq   -0x60(%rbp), %rdi
+    0x8305494d8 <+408>: testq  %rdi, %rdi
+    0x8305494db <+411>: je     0x830549501               ; <+449>
+    0x8305494dd <+413>: movq   %rdi, -0x58(%rbp)
+    0x8305494e1 <+417>: movq   -0x50(%rbp), %rsi
+    0x8305494e5 <+421>: subq   %rdi, %rsi
+    0x8305494e8 <+424>: jmp    0x8305494fc               ; <+444>
+    0x8305494ea <+426>: movq   %rax, %r12
+    0x8305494ed <+429>: movq   %r14, %rdi
+    0x8305494f0 <+432>: callq  0x830549bc0               ; std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>>::~vector[abi:se190107]()
+    0x8305494f5 <+437>: movq   %r15, %rdi
+    0x8305494f8 <+440>: movq   -0x40(%rbp), %rsi
+    0x8305494fc <+444>: callq  0x83058e2e0               ; symbol stub for: operator delete(void*, unsigned long)
+    0x830549501 <+449>: movq   %r12, %rdi
+    0x830549504 <+452>: callq  0x83058e320               ; symbol stub for: _Unwind_Resume

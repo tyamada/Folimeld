@@ -1,0 +1,13 @@
+Reading a text widget with PyMuPDF 1.27.2.2
+Fatal Python error: Illegal instruction
+
+Current thread 0x000015ce3b445010 (most recent call first):
+  File "/usr/local/lib/python3.12/site-packages/pymupdf/mupdf.py", line 55796 in pdf_choice_widget_options2
+  File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 18910 in JM_choice_options
+  File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 19983 in JM_get_widget_properties
+  File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 24862 in _fill_widget
+  File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 12783 in load_widget
+  File "/usr/local/lib/python3.12/site-packages/pymupdf/__init__.py", line 13165 in widgets
+  File "/home/folimeld/Folimeld/build/freebsd-verification/pymupdf-form-reproducer.py", line 15 in <module>
+
+Extension modules: pymupdf._extra, pymupdf._mupdf (total: 2)

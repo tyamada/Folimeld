@@ -1,0 +1,44 @@
+{
+  "input_bytes": 333065,
+  "pages": 1000,
+  "output_bytes": 291015,
+  "thumbnail_size": 288,
+  "milliseconds": {
+    "open": 3.127069000015581,
+    "refresh": 137.61532199998783,
+    "initial_thumbnails": 57.384711999930005,
+    "scroll_thumbnails": 2418.394669999998,
+    "rotate": 108.69349400002193,
+    "refresh_after_rotation": 136.52593900008014,
+    "rotation_thumbnails": 10.377285999993546,
+    "undo": 74.45244200005163,
+    "redo": 77.9286700000057,
+    "reorder": 147.48785700010103,
+    "save": 195.30281499999091
+  },
+  "max_thumbnail_batch_ms": 13.528098000051614,
+  "peak_resident_thumbnails": 24,
+  "rss_baseline_bytes": 135012352,
+  "sampled_peak_rss_bytes": 153157632,
+  "history_bytes": 666131,
+  "history_disk_bytes": 0,
+  "undo_performed": true,
+  "redo_performed": true,
+  "input_sha256": "ac694d9e30f5b691a5fbdc8bebccedd2b0d42e108b2d08f143ebb277b2bf4dad",
+  "input_unchanged": true,
+  "environment": {
+    "python": "3.12.15",
+    "platform": "FreeBSD-15.1-RELEASE-p5-amd64-64bit-ELF",
+    "dependencies": {
+      "PyMuPDF": "1.28.2",
+      "PySide6": "6.11.2",
+      "Pillow": "13.0.0",
+      "psutil": "7.2.2",
+      "cryptography": "50.0.1"
+    }
+  },
+  "fixture": {
+    "generated": true,
+    "image_size": 0
+  }
+}

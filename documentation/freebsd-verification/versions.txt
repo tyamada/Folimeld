@@ -1,0 +1,5 @@
+3.12.15 (main, Oct 31 2026, 01:07:32) [Clang 19.1.7 (https://github.com/llvm/llvm-project.git llvmorg-19.1.7-0-gcd7080
+PySide6 6.11.2
+PyMuPDF 1.27.2.2
+Pillow 13.0.0
+cryptography 50.0.1
