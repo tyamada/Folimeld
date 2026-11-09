@@ -1,0 +1,15 @@
+{
+  "source_archive": "Folimeld-source-f67bd8d6672b4e7377126bfc24e1c7d7661004d454693a3cd1fe622b02e75be9.zip",
+  "source_sha256": "f67bd8d6672b4e7377126bfc24e1c7d7661004d454693a3cd1fe622b02e75be9",
+  "unsigned_packages": {
+    "folimeld-mupdf-1.28.2.tgz": "14ec850224aa378bb4ddf0678c72f8e7a7065ec401b718642e5005e4182bfda4",
+    "folimeld-0.3.3.tgz": "bead3ae30e245f2b57b8e9a46b42571d77a44cf0c2f89e6c0ce19e16429318ee"
+  },
+  "signed_packages": {
+    "folimeld-0.3.3.tgz": "9e48f0653bb90a7d6a0e5c55cddbb004eef073d2062313848bb545d475914ddc",
+    "folimeld-mupdf-1.28.2.tgz": "fb89413134738238635fc8f9bec58815b772881e6ef221f827b9d8e16be5cc21"
+  },
+  "public_key": "folimeld-80-pkg.pub",
+  "public_key_sha256": "48ff40c11d4ddbbafbea53e610582745414bb8665bf239258d4dac35494612d5",
+  "signature": "embedded signify gzip signature; SHA256SUMS.txt signed separately"
+}

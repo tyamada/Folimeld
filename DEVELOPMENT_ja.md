@@ -61,7 +61,7 @@ export LD_LIBRARY_PATH="$PWD/.venv-netbsd/lib:/usr/pkg/lib:/usr/X11R7/lib"
 
 OpenBSD 8.0 / amd64で、Python 3.14.9、PySide6 / Qt 6.11.2、PyMuPDF / MuPDF 1.28.2を使ったソース実行を確認しました。検証環境はVirtualBoxの1 vCPU・16 GiB構成です。4 vCPUではデバイス初期化が停滞したため、複数CPU構成での正常起動は未確認です。
 
-OSパッケージと `--system-site-packages` の仮想環境を使用し、PyMuPDF / MuPDFはソースからビルドします。MuPDFのラッパー生成にはLLVM 22向けのパッチが必要です。Windows向けの固定版を含む `constraints-release.txt` をそのまま適用せず、[検証記録](documentation/openbsd-verification_ja.md)の依存構成・パッチ・ビルド手順に従って `.venv-openbsd` を準備してください。全件テスト、GUI操作、負荷試験、再起動後の確認結果も同記録にあります。OpenBSD用の配布パッケージは作成していません。
+OSパッケージと `--system-site-packages` の仮想環境を使用し、PyMuPDF / MuPDFはソースからビルドします。MuPDFのラッパー生成にはLLVM 22向けのパッチが必要です。Windows向けの固定版を含む `constraints-release.txt` をそのまま適用せず、[検証記録](documentation/openbsd-verification_ja.md)の依存構成・パッチ・ビルド手順に従って `.venv-openbsd` を準備してください。全件テスト、GUI操作、負荷試験、再起動後の確認結果も同記録にあります。[OpenBSDパッケージとソースビルド](documentation/openbsd-install_ja.md)で導入・ビルド手順を案内しています。
 
 準備後、リポジトリーのルートから一般ユーザーのX11セッション内で起動します。
 

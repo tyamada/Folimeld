@@ -1,0 +1,16 @@
+{
+  "pages": 8,
+  "rotations": [
+    90,
+    90,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "streams_preserved": true,
+  "sha256": "873fdd0991a553e3816188aeeab0ddf1f90b846cc879f59045ecfcd8688c73de",
+  "pymupdf_module": "/usr/local/share/folimeld/vendor/pymupdf/__init__.py"
+}

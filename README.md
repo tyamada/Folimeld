@@ -28,13 +28,13 @@ Choose File → Exit to close the app, with a save prompt for unsaved changes. O
 - Available in Japanese, English, German, Spanish, French, Korean, Portuguese, and Chinese
 - Runs on Windows (both Intel/AMD (x64) and ARM (arm64) editions), macOS, Ubuntu, Debian, and FreeBSD 15.1 (amd64)
 
-Source execution has been verified on OpenBSD 8.0 / amd64 in a VirtualBox VM with 1 vCPU and 16 GiB RAM. Building the dependencies requires a patch. No distribution package has been created. See the [OpenBSD verification record (Japanese)](documentation/openbsd-verification_ja.md) for setup instructions and the scope of verification.
+Signed packages and matching source for OpenBSD 8.0 / amd64 are also available as a preview. Verification used a VirtualBox VM with 1 vCPU and 16 GiB RAM. See the OpenBSD section below for installation and the [verification record (Japanese)](documentation/openbsd-package-verification_ja.md) for the tested scope.
 
 ## Downloads
 
 **Folimeld 1.0.1.0 for Windows 11 (x64)** is available for free on the Microsoft Store in Japan and the United States. [Microsoft Store (Japan)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [Microsoft Store (United States)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
 
-Linux 0.3.3 packages, matching source ZIPs, checksums and build records are available in the [Linux GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3). FreeBSD and NetBSD previews are distributed through their dedicated Releases below. See the [Linux migration plan and implementation record](documentation/linux-release-migration.md). Existing repository download URLs remain available for compatibility.
+Linux 0.3.3 packages, matching source ZIPs, checksums and build records are available in the [Linux GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3). FreeBSD, NetBSD, and OpenBSD previews are distributed through their dedicated Releases below. See the [Linux migration plan and implementation record](documentation/linux-release-migration.md). Existing repository download URLs remain available for compatibility.
 
 | OS | Package formats |
 | --- | --- |
@@ -44,6 +44,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | Debian 13 | `.deb` (amd64 / arm64; basic functionality verified on WSL2) |
 | FreeBSD 15.1 / amd64 | Native `.pkg` and matching source (preview release) |
 | NetBSD 11.1 / amd64 | Native `.tgz` and matching source (preview release) |
+| OpenBSD 8.0 / amd64 | Signed native `.tgz` and matching source (preview release) |
 
 > [!NOTE]
 > Windows and macOS verification artifacts are not added to this public repository or GitHub Releases.
@@ -116,6 +117,28 @@ export PKG_PATH=https://cdn.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/11.0_20
 ```
 
 Run `/usr/pkg/bin/folimeld` or `/usr/pkg/bin/folimeld /path/to/file.pdf` as a regular user. Remove as root with `/usr/pkg/sbin/pkg_delete folimeld`. Other NetBSD releases and CPUs have not been tested.
+
+### OpenBSD source, packages, and installation
+
+The [application package](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-0.3.3.tgz), [private MuPDF dependency](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-mupdf-1.28.2.tgz), and [matching source, dependency sources, and build records](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3) for OpenBSD 8.0 / amd64 are available as a preview. These are not official OpenBSD packages.
+
+The [matching application source ZIP](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/Folimeld-source-f67bd8d6672b4e7377126bfc24e1c7d7661004d454693a3cd1fe622b02e75be9.zip) and [SHA-256 list](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/SHA256SUMS.txt) are also available.
+
+Download both packages, `folimeld-80-pkg.pub`, `SHA256SUMS.txt`, and `SHA256SUMS.txt.sig` from the Release. Follow the [public-key verification, installation, and source build instructions](documentation/openbsd-install.md), then verify the signature and compare package SHA-256 hashes as a regular user.
+
+```sh
+signify -V -p folimeld-80-pkg.pub -m SHA256SUMS.txt -x SHA256SUMS.txt.sig
+sha256 -r folimeld-0.3.3.tgz folimeld-mupdf-1.28.2.tgz
+```
+
+On a system configured with an X11 desktop and official OpenBSD 8.0 package sources, run as root. Official dependencies including Python and PySide6/Qt are also installed.
+
+```sh
+install -m 644 folimeld-80-pkg.pub /etc/signify/folimeld-80-pkg.pub
+pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.3.tgz
+```
+
+Run `folimeld` or `folimeld /path/to/file.pdf` as a regular user. Remove as root with `pkg_delete folimeld`, then `pkg_delete folimeld-mupdf` if the private dependency is no longer needed. System PyMuPDF is not replaced. Verification is limited to a VM with 1 vCPU and 16 GiB RAM; 4 vCPUs, other OS versions, and other architectures are unverified.
 
 ## Basic usage
 

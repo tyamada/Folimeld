@@ -1,0 +1,44 @@
+INSTALL_SIGNED_PACKAGES
+https://cdn.openbsd.org/pub/OpenBSD/8.0/packages-stable/amd64/: ftp: failed to open or create session file '/dev/fd/4': No such file or directory
+https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/: ftp: failed to open or create session file '/dev/fd/5': No such file or directory
+https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/: empty
+ldconfig: /var/run/ld.so.hints: No such file or directory
+Failed to generate UUID: Could not open /dev/urandom: No such file or directory
+system(/bin/sh, -c, /usr/local/bin/dbus-uuidgen --ensure=/etc/machine-id) failed:  exit(1)
+useradd: Warning: home directory `/var/run/pulse' doesn't exist, and -m was not specified
+Updating font cache: ok
+The following new rcscripts were installed: /etc/rc.d/messagebus /etc/rc.d/pcscd
+See rcctl(8) for details.
+New and changed readme(s):
+	/usr/local/share/doc/pkg-readmes/consolekit2
+	/usr/local/share/doc/pkg-readmes/dbus
+	/usr/local/share/doc/pkg-readmes/ffmpeg
+	/usr/local/share/doc/pkg-readmes/glib2
+	/usr/local/share/doc/pkg-readmes/gtk+3
+	/usr/local/share/doc/pkg-readmes/llvm-22
+	/usr/local/share/doc/pkg-readmes/sdl2
+--- +flite-2.2 -------------------
+The festival lite package was modified from the original source.
+You can find the modifications on
+https://cvsweb.openbsd.org/ports/audio/flite/patches/
+NONPRIVILEGED_SMOKE
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+{"passed": true, "pymupdf": "1.28.2", "module": "/usr/local/share/folimeld/vendor/pymupdf/__init__.py", "form_save": true, "undo_redo": true, "image_worker_pages": 3, "save_worker": true}
+
+(process:8409): GLib-CRITICAL **: 04:24:36.486: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+PAYLOAD_HASHES_OK 175
+DEVELOPMENT_CHECKOUT_ABSENT True
+COMPILER_ABSENT False
+REMOVE_AND_REINSTALL
+quirks-7.227 signed on 2026-11-08T18:23:24Z
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+{"passed": true, "pymupdf": "1.28.2", "module": "/usr/local/share/folimeld/vendor/pymupdf/__init__.py", "form_save": true, "undo_redo": true, "image_worker_pages": 3, "save_worker": true}
+
+(process:10305): GLib-CRITICAL **: 04:25:03.582: g_main_context_pop_thread_default: assertion 'stack != NULL' failed
+CLEAN_VERIFICATION_PASSED

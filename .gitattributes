@@ -14,3 +14,4 @@ documentation/openbsd-verification/** -text whitespace=-blank-at-eol,-blank-at-e
 # Captured logs retain the original command output, including trailing spaces.
 documentation/openbsd-verification/*.txt whitespace=-blank-at-eol,-blank-at-eof
 documentation/openbsd-verification/*.patch whitespace=-blank-at-eol,-space-before-tab
+documentation/openbsd-package-verification/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol

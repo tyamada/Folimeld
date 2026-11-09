@@ -1,0 +1,103 @@
+{
+  "release": "https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3",
+  "assets": [
+    {
+      "name": "AGPL-3.0.txt",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/AGPL-3.0.txt",
+      "size": 34523,
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+      "matched": true
+    },
+    {
+      "name": "build-record.json",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/build-record.json",
+      "size": 41601,
+      "sha256": "ee03d964850c064d2c0ba776b1b10d4757f0a97001cb810f218fad9c4192e43e",
+      "matched": true
+    },
+    {
+      "name": "folimeld-0.3.3.tgz",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-0.3.3.tgz",
+      "size": 5462216,
+      "sha256": "9e48f0653bb90a7d6a0e5c55cddbb004eef073d2062313848bb545d475914ddc",
+      "matched": true
+    },
+    {
+      "name": "folimeld-80-pkg.pub",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-80-pkg.pub",
+      "size": 124,
+      "sha256": "48ff40c11d4ddbbafbea53e610582745414bb8665bf239258d4dac35494612d5",
+      "matched": true
+    },
+    {
+      "name": "folimeld-mupdf-1.28.2.tgz",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-mupdf-1.28.2.tgz",
+      "size": 26822825,
+      "sha256": "fb89413134738238635fc8f9bec58815b772881e6ef221f827b9d8e16be5cc21",
+      "matched": true
+    },
+    {
+      "name": "Folimeld-source-f67bd8d6672b4e7377126bfc24e1c7d7661004d454693a3cd1fe622b02e75be9.zip",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/Folimeld-source-f67bd8d6672b4e7377126bfc24e1c7d7661004d454693a3cd1fe622b02e75be9.zip",
+      "size": 14221594,
+      "sha256": "f67bd8d6672b4e7377126bfc24e1c7d7661004d454693a3cd1fe622b02e75be9",
+      "matched": true
+    },
+    {
+      "name": "INSTALL.md",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/INSTALL.md",
+      "size": 4682,
+      "sha256": "3c2cf41131b6cc0a17eb77ad4119dab5e539beafe76793b46531e75f0663e5cc",
+      "matched": true
+    },
+    {
+      "name": "INSTALL_ja.md",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/INSTALL_ja.md",
+      "size": 5065,
+      "sha256": "a9d01e2a48c328f5773da9bf2ce72a8cb249e83cbee14d017a535eabae0a7fa3",
+      "matched": true
+    },
+    {
+      "name": "mupdf-1.28.2-source.tar.gz",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/mupdf-1.28.2-source.tar.gz",
+      "size": 68898646,
+      "sha256": "44075a84e329db55b9bef5f342a70fd26d69e48ad1d33cb89d9664581c641156",
+      "matched": true
+    },
+    {
+      "name": "pymupdf-1.28.2-cp314-abi3-openbsd_8_0_amd64.whl",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/pymupdf-1.28.2-cp314-abi3-openbsd_8_0_amd64.whl",
+      "size": 26695953,
+      "sha256": "25932378ff47c85f5ef308120ff839472a261c3579bf77b3c370423f674c40b1",
+      "matched": true
+    },
+    {
+      "name": "pymupdf-1.28.2.tar.gz",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/pymupdf-1.28.2.tar.gz",
+      "size": 87903557,
+      "sha256": "5e0be7908a715aa20333caddd73f1d6f01e4cd0c26e869fa2dd0b7f344da2249",
+      "matched": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/SHA256SUMS.txt",
+      "size": 1115,
+      "sha256": "c898e38259166cda21fd0912260a12f11bfa31bbe6bccb94d143f82637f0ae66",
+      "matched": true
+    },
+    {
+      "name": "SHA256SUMS.txt.sig",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/SHA256SUMS.txt.sig",
+      "size": 152,
+      "sha256": "8797693de8f2e10270f6dc333bfdd88cc915ac0a861e17581becd5502b48ec89",
+      "matched": true
+    },
+    {
+      "name": "signing-record.json",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/signing-record.json",
+      "size": 858,
+      "sha256": "9c30920cdbdc26f81b320e554bed21b2611291bc784f6f968d1bc61c1f5dd63b",
+      "matched": true
+    }
+  ]
+}

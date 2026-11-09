@@ -73,6 +73,6 @@ python3 -m tools.build_openbsd_package \
   --output /path/to/output --work /path/to/new-package-work
 ```
 
-独自portsの定義とファイル一覧を生成し、portsのfake・共有ライブラリ検査・packageを使用する。ソース、wheel、依存ソース、パッケージ、収録ファイルのハッシュを `build-record.json` に保存する。生成物の署名は公開者が別工程で行う。署名前後でパッケージのハッシュは変わるため、配布時の最終ハッシュはReleaseの署名済み一覧を基準とする。
+独自portsの定義とファイル一覧を生成し、portsのfake・共有ライブラリ検査・packageを使用する。ソース、wheel、依存ソース、パッケージ、収録ファイルのハッシュを `build-record.json` に保存する。生成物の署名は公開者が `sh tools/sign_openbsd_packages.sh /path/to/secret.sec /path/to/output /path/to/new-signed-output` で別工程として行う。秘密鍵はソースと配布フォルダーの外に置く。署名前後でパッケージのハッシュは変わるため、配布時の最終ハッシュはReleaseの署名済み一覧を基準とする。
 
 参考: OpenBSD公式 [ports](https://www.openbsd.org/faq/ports/)、[pkg_add(1)](https://man.openbsd.org/pkg_add)、[signify(1)](https://man.openbsd.org/signify)。

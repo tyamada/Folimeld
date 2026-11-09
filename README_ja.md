@@ -28,13 +28,13 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 - 日本語、英語、ドイツ語、スペイン語、フランス語、韓国語、ポルトガル語、中国語に対応
 - Windows（Intel/AMD（x64）版・ARM（arm64）版の両方）、macOS、Ubuntu、Debian、FreeBSD 15.1（amd64）で利用可能
 
-OpenBSD 8.0 / amd64では、1 vCPU・16 GiBのVirtualBox VMでソース実行を確認しています。依存ライブラリのビルドにパッチが必要です。配布パッケージは作成していません。構築方法と確認範囲は[OpenBSDの検証記録](documentation/openbsd-verification_ja.md)を参照してください。
+OpenBSD 8.0 / amd64向けにも署名付きパッケージと対応ソースを試験配布しています。検証は1 vCPU・16 GiBのVirtualBox VMで実施しました。導入方法は下記のOpenBSD節、確認範囲は[検証記録](documentation/openbsd-package-verification_ja.md)を参照してください。
 
 ## ダウンロード
 
 Windows版の **Folimeld 1.0.1.0（Windows 11 x64）** は、Microsoft Storeで日本と米国に公開しています。無料で入手できます。 [日本のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [米国のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
 
-Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビルド記録は[Linux版GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)から取得できます。FreeBSD版・NetBSD版は下記の専用Releaseで試験配布しています。[Linux版の移行計画と実施記録](documentation/linux-release-migration_ja.md)を参照してください。互換性のため従来のリポジトリ内のダウンロードURLも維持しています。
+Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビルド記録は[Linux版GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)から取得できます。FreeBSD版・NetBSD版・OpenBSD版は下記の専用Releaseで試験配布しています。[Linux版の移行計画と実施記録](documentation/linux-release-migration_ja.md)を参照してください。互換性のため従来のリポジトリ内のダウンロードURLも維持しています。
 
 | OS | 配布形式 |
 | --- | --- |
@@ -44,6 +44,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | Debian 13 | `.deb`（amd64 / arm64、WSL2で基本動作確認済み） |
 | FreeBSD 15.1 / amd64 | ネイティブ `.pkg` と対応ソース（試験配布） |
 | NetBSD 11.1 / amd64 | ネイティブ `.tgz` と対応ソース（試験配布） |
+| OpenBSD 8.0 / amd64 | 署名付きネイティブ `.tgz` と対応ソース（試験配布） |
 
 > [!NOTE]
 > Windows・macOSの検証用成果物は、公開リポジトリやGitHub Releasesへ追加しません。
@@ -116,6 +117,28 @@ export PKG_PATH=https://cdn.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/11.0_20
 ```
 
 一般ユーザーで `/usr/pkg/bin/folimeld` または `/usr/pkg/bin/folimeld /path/to/file.pdf` を実行します。削除はrootで `/usr/pkg/sbin/pkg_delete folimeld`。他のNetBSD版・CPUは未検証です。
+
+### OpenBSD版のソース・パッケージ・インストール
+
+OpenBSD 8.0 / amd64向けの[本体パッケージ](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-0.3.3.tgz)、[専用MuPDF依存](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-mupdf-1.28.2.tgz)、[対応ソース・依存ソース・ビルド記録](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3)を試験配布しています。OpenBSD公式パッケージではありません。
+
+[本体の対応ソースZIP](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/Folimeld-source-f67bd8d6672b4e7377126bfc24e1c7d7661004d454693a3cd1fe622b02e75be9.zip)と[SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/SHA256SUMS.txt)も取得できます。
+
+Releaseから両パッケージ、`folimeld-80-pkg.pub`、`SHA256SUMS.txt`、`SHA256SUMS.txt.sig` を取得します。[公開鍵の照合・インストール・ソースビルド手順](documentation/openbsd-install_ja.md)に従い、一般ユーザーで署名とパッケージのSHA-256を確認してください。
+
+```sh
+signify -V -p folimeld-80-pkg.pub -m SHA256SUMS.txt -x SHA256SUMS.txt.sig
+sha256 -r folimeld-0.3.3.tgz folimeld-mupdf-1.28.2.tgz
+```
+
+X11デスクトップとOpenBSD 8.0の公式パッケージ取得先を構成した環境で、rootとして実行します。Python・PySide6/Qtなどの公式依存も導入します。
+
+```sh
+install -m 644 folimeld-80-pkg.pub /etc/signify/folimeld-80-pkg.pub
+pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.3.tgz
+```
+
+一般ユーザーで `folimeld` または `folimeld /path/to/file.pdf` を実行します。削除はrootで `pkg_delete folimeld`、専用依存も不要なら `pkg_delete folimeld-mupdf`。システムのPyMuPDFは置き換えません。検証は1 vCPU・16 GiBのVMに限定し、4 vCPU・他のOS版・CPUは未確認です。
 
 ## 基本的な使い方
 

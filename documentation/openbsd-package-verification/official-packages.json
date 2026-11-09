@@ -1,0 +1,1341 @@
+{
+  "devel/gettext,-runtime": {
+    "name": "gettext-runtime-1.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/gettext-runtime-1.0.tgz",
+    "depends": [
+      "converters/libiconv"
+    ]
+  },
+  "converters/libiconv": {
+    "name": "libiconv-1.19",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libiconv-1.19.tgz",
+    "depends": []
+  },
+  "fonts/noto/cjk": {
+    "name": "noto-cjk-20240730p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/noto-cjk-20240730p0.tgz",
+    "depends": []
+  },
+  "sysutils/py-psutil": {
+    "name": "py3-psutil-7.2.2p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/py3-psutil-7.2.2p0.tgz",
+    "depends": [
+      "lang/python/3,-main"
+    ]
+  },
+  "lang/python/3,-main": {
+    "name": "python-3.14.9",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages-stable/amd64/python-3.14.9.tgz",
+    "depends": [
+      "archivers/bzip2",
+      "archivers/xz",
+      "archivers/zstd",
+      "databases/sqlite3",
+      "devel/gettext,-runtime",
+      "devel/libffi"
+    ]
+  },
+  "devel/libffi": {
+    "name": "libffi-3.8.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libffi-3.8.0.tgz",
+    "depends": []
+  },
+  "databases/sqlite3": {
+    "name": "sqlite3-3.53.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/sqlite3-3.53.2.tgz",
+    "depends": []
+  },
+  "archivers/zstd": {
+    "name": "zstd-1.5.7p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/zstd-1.5.7p0.tgz",
+    "depends": [
+      "archivers/lz4",
+      "archivers/xz"
+    ]
+  },
+  "archivers/xz": {
+    "name": "xz-5.8.4",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/xz-5.8.4.tgz",
+    "depends": []
+  },
+  "archivers/lz4": {
+    "name": "lz4-1.10.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/lz4-1.10.0.tgz",
+    "depends": []
+  },
+  "archivers/bzip2": {
+    "name": "bzip2-1.0.8p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/bzip2-1.0.8p0.tgz",
+    "depends": []
+  },
+  "security/py-cryptography": {
+    "name": "py3-cryptography-49.0.0p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/py3-cryptography-49.0.0p0.tgz",
+    "depends": [
+      "devel/py-cffi",
+      "lang/python/3,-main"
+    ]
+  },
+  "devel/py-cffi": {
+    "name": "py3-cffi-2.1.1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/py3-cffi-2.1.1.tgz",
+    "depends": [
+      "devel/libffi",
+      "devel/py-cparser",
+      "lang/python/3,-main"
+    ]
+  },
+  "devel/py-cparser": {
+    "name": "py3-cparser-3.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/py3-cparser-3.0.tgz",
+    "depends": [
+      "lang/python/3,-main"
+    ]
+  },
+  "graphics/py-Pillow": {
+    "name": "py3-Pillow-13.0.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages-stable/amd64/py3-Pillow-13.0.0.tgz",
+    "depends": [
+      "graphics/lcms2",
+      "graphics/libimagequant",
+      "graphics/libwebp",
+      "graphics/openjp2",
+      "lang/python/3,-main"
+    ]
+  },
+  "graphics/openjp2": {
+    "name": "openjp2-2.5.4p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages-stable/amd64/openjp2-2.5.4p0.tgz",
+    "depends": [
+      "graphics/lcms2",
+      "graphics/png"
+    ]
+  },
+  "graphics/png": {
+    "name": "png-1.6.59",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/png-1.6.59.tgz",
+    "depends": []
+  },
+  "graphics/lcms2": {
+    "name": "lcms2-2.18pl20260420",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/lcms2-2.18pl20260420.tgz",
+    "depends": [
+      "graphics/tiff"
+    ]
+  },
+  "graphics/tiff": {
+    "name": "tiff-4.7.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/tiff-4.7.2.tgz",
+    "depends": [
+      "archivers/xz",
+      "archivers/zstd",
+      "graphics/jpeg",
+      "graphics/lerc"
+    ]
+  },
+  "graphics/lerc": {
+    "name": "lerc-4.2.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/lerc-4.2.0.tgz",
+    "depends": []
+  },
+  "graphics/jpeg": {
+    "name": "jpeg-3.2.0v0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/jpeg-3.2.0v0.tgz",
+    "depends": []
+  },
+  "graphics/libwebp": {
+    "name": "libwebp-1.6.0p2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libwebp-1.6.0p2.tgz",
+    "depends": [
+      "graphics/giflib",
+      "graphics/jpeg",
+      "graphics/png",
+      "graphics/tiff"
+    ]
+  },
+  "graphics/giflib": {
+    "name": "giflib-6.1.3p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/giflib-6.1.3p0.tgz",
+    "depends": []
+  },
+  "graphics/libimagequant": {
+    "name": "libimagequant-2.18.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libimagequant-2.18.0.tgz",
+    "depends": []
+  },
+  "x11/qt6/pyside6/pyside": {
+    "name": "pyside6-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/pyside6-6.11.2.tgz",
+    "depends": [
+      "graphics/vulkan-headers",
+      "lang/python/3,-main",
+      "x11/qt6/pyside6/shiboken",
+      "x11/qt6/qt3d",
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtcharts",
+      "x11/qt6/qtconnectivity",
+      "x11/qt6/qtdatavis3d",
+      "x11/qt6/qtdeclarative",
+      "x11/qt6/qtgraphs",
+      "x11/qt6/qthttpserver",
+      "x11/qt6/qtlocation",
+      "x11/qt6/qtmultimedia",
+      "x11/qt6/qtnetworkauth",
+      "x11/qt6/qtpositioning",
+      "x11/qt6/qtquick3d",
+      "x11/qt6/qtremoteobjects",
+      "x11/qt6/qtscxml",
+      "x11/qt6/qtsensors",
+      "x11/qt6/qtserialbus",
+      "x11/qt6/qtserialport",
+      "x11/qt6/qtshadertools",
+      "x11/qt6/qtspeech",
+      "x11/qt6/qtsvg",
+      "x11/qt6/qttools",
+      "x11/qt6/qtwebchannel",
+      "x11/qt6/qtwebengine",
+      "x11/qt6/qtwebsockets",
+      "x11/qt6/qtwebview"
+    ]
+  },
+  "x11/qt6/qtwebview": {
+    "name": "qt6-qtwebview-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtwebview-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative",
+      "x11/qt6/qtpositioning",
+      "x11/qt6/qtwebchannel",
+      "x11/qt6/qtwebengine",
+      "x11/xkbcommon"
+    ]
+  },
+  "x11/xkbcommon": {
+    "name": "libxkbcommon-1.13.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libxkbcommon-1.13.2.tgz",
+    "depends": [
+      "textproc/libxml",
+      "wayland/wayland"
+    ]
+  },
+  "wayland/wayland": {
+    "name": "wayland-1.26.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/wayland-1.26.0.tgz",
+    "depends": [
+      "devel/epoll-shim",
+      "devel/libffi",
+      "textproc/libxml"
+    ]
+  },
+  "textproc/libxml": {
+    "name": "libxml-2.15.4",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libxml-2.15.4.tgz",
+    "depends": [
+      "converters/libiconv"
+    ]
+  },
+  "devel/epoll-shim": {
+    "name": "epoll-shim-0.0.20240608",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/epoll-shim-0.0.20240608.tgz",
+    "depends": []
+  },
+  "x11/qt6/qtwebengine": {
+    "name": "qt6-qtwebengine-6.11.2p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtwebengine-6.11.2p0.tgz",
+    "depends": [
+      "archivers/minizip",
+      "archivers/snappy",
+      "audio/opus",
+      "devel/epoll-shim",
+      "devel/harfbuzz,-main",
+      "devel/nspr",
+      "fonts/noto/fonts",
+      "graphics/jpeg",
+      "graphics/lcms2",
+      "graphics/libexif",
+      "graphics/libwebp",
+      "graphics/openjp2",
+      "graphics/png",
+      "graphics/tiff",
+      "multimedia/libvpx",
+      "multimedia/openh264",
+      "security/nss",
+      "sysutils/libudev-openbsd",
+      "textproc/libxml",
+      "textproc/libxslt",
+      "x11/dbus,-main",
+      "x11/gtk+3,-cups",
+      "x11/gtk+3,-main",
+      "x11/gtk+4,-guic",
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative",
+      "x11/qt6/qtpositioning",
+      "x11/qt6/qttools",
+      "x11/qt6/qtwebchannel",
+      "x11/xkbcommon"
+    ]
+  },
+  "x11/qt6/qtwebchannel": {
+    "name": "qt6-qtwebchannel-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtwebchannel-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative",
+      "x11/qt6/qtwebsockets"
+    ]
+  },
+  "x11/qt6/qtwebsockets": {
+    "name": "qt6-qtwebsockets-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtwebsockets-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative"
+    ]
+  },
+  "x11/qt6/qtdeclarative": {
+    "name": "qt6-qtdeclarative-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtdeclarative-6.11.2.tgz",
+    "depends": [
+      "lang/python/3,-main",
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtsvg",
+      "x11/xkbcommon"
+    ]
+  },
+  "x11/qt6/qtsvg": {
+    "name": "qt6-qtsvg-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtsvg-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main",
+      "x11/xkbcommon"
+    ]
+  },
+  "x11/qt6/qtbase,-main": {
+    "name": "qt6-qtbase-6.11.2p1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtbase-6.11.2p1.tgz",
+    "depends": [
+      "archivers/brotli",
+      "archivers/zstd",
+      "databases/iodbc,-main",
+      "databases/sqlite3",
+      "devel/gettext,-runtime",
+      "devel/harfbuzz,-main",
+      "devel/pango",
+      "devel/pcre2",
+      "graphics/cairo",
+      "graphics/gdk-pixbuf2",
+      "math/double-conversion",
+      "net/libproxy",
+      "print/cups,-libs",
+      "security/libb2",
+      "textproc/icu4c,-main",
+      "wayland/wayland",
+      "x11/dbus,-main",
+      "x11/gnome/at-spi2-core",
+      "x11/gtk+3,-main",
+      "x11/xkbcommon"
+    ]
+  },
+  "x11/gtk+3,-main": {
+    "name": "gtk+3-3.24.52",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/gtk+3-3.24.52.tgz",
+    "depends": [
+      "devel/dconf",
+      "devel/desktop-file-utils",
+      "devel/glib2",
+      "devel/pango",
+      "graphics/gdk-pixbuf2",
+      "wayland/wayland",
+      "x11/gnome/adwaita-icon-theme",
+      "x11/gnome/at-spi2-core",
+      "x11/gtk+4,-guic",
+      "x11/hicolor-icon-theme",
+      "x11/xkbcommon"
+    ]
+  },
+  "x11/hicolor-icon-theme": {
+    "name": "hicolor-icon-theme-0.18",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/hicolor-icon-theme-0.18.tgz",
+    "depends": []
+  },
+  "x11/gtk+4,-guic": {
+    "name": "gtk4-update-icon-cache-4.22.5",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/gtk4-update-icon-cache-4.22.5.tgz",
+    "depends": [
+      "graphics/gdk-pixbuf2",
+      "x11/hicolor-icon-theme"
+    ]
+  },
+  "graphics/gdk-pixbuf2": {
+    "name": "gdk-pixbuf-2.44.8",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/gdk-pixbuf-2.44.8.tgz",
+    "depends": [
+      "devel/glib2",
+      "graphics/png",
+      "graphics/tiff",
+      "misc/shared-mime-info"
+    ]
+  },
+  "misc/shared-mime-info": {
+    "name": "shared-mime-info-2.5.1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/shared-mime-info-2.5.1.tgz",
+    "depends": [
+      "devel/glib2",
+      "textproc/libxml"
+    ]
+  },
+  "devel/glib2": {
+    "name": "glib2-2.88.4",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages-stable/amd64/glib2-2.88.4.tgz",
+    "depends": [
+      "devel/gettext,-runtime",
+      "devel/libffi",
+      "devel/pcre2",
+      "lang/python/3,-main",
+      "sysutils/py-packaging"
+    ]
+  },
+  "sysutils/py-packaging": {
+    "name": "py3-packaging-26.3",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/py3-packaging-26.3.tgz",
+    "depends": [
+      "lang/python/3,-main"
+    ]
+  },
+  "devel/pcre2": {
+    "name": "pcre2-10.48",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/pcre2-10.48.tgz",
+    "depends": [
+      "archivers/bzip2"
+    ]
+  },
+  "x11/gnome/at-spi2-core": {
+    "name": "at-spi2-core-2.60.6",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/at-spi2-core-2.60.6.tgz",
+    "depends": [
+      "devel/glib2",
+      "textproc/libxml",
+      "x11/dbus,-main"
+    ]
+  },
+  "x11/dbus,-main": {
+    "name": "dbus-1.16.2p1v0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/dbus-1.16.2p1v0.tgz",
+    "depends": []
+  },
+  "x11/gnome/adwaita-icon-theme": {
+    "name": "adwaita-icon-theme-50.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/adwaita-icon-theme-50.0.tgz",
+    "depends": [
+      "x11/gnome/adwaita-icon-theme-legacy",
+      "x11/gnome/librsvg",
+      "x11/gtk+4,-guic"
+    ]
+  },
+  "x11/gnome/librsvg": {
+    "name": "librsvg-2.63.2v0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/librsvg-2.63.2v0.tgz",
+    "depends": [
+      "devel/pango",
+      "graphics/gdk-pixbuf2",
+      "multimedia/dav1d",
+      "textproc/libxml"
+    ]
+  },
+  "multimedia/dav1d": {
+    "name": "dav1d-1.5.4",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/dav1d-1.5.4.tgz",
+    "depends": []
+  },
+  "devel/pango": {
+    "name": "pango-1.58.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/pango-1.58.2.tgz",
+    "depends": [
+      "devel/fribidi",
+      "devel/glib2",
+      "devel/harfbuzz,-main"
+    ]
+  },
+  "devel/harfbuzz,-main": {
+    "name": "harfbuzz-14.5.1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages-stable/amd64/harfbuzz-14.5.1.tgz",
+    "depends": [
+      "graphics/cairo",
+      "graphics/glew",
+      "graphics/glfw",
+      "graphics/graphite2"
+    ]
+  },
+  "graphics/graphite2": {
+    "name": "graphite2-1.3.15",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/graphite2-1.3.15.tgz",
+    "depends": []
+  },
+  "graphics/glfw": {
+    "name": "glfw-3.4p2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/glfw-3.4p2.tgz",
+    "depends": [
+      "devel/epoll-shim",
+      "wayland/wayland",
+      "x11/xkbcommon"
+    ]
+  },
+  "graphics/glew": {
+    "name": "glew-2.3.1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/glew-2.3.1.tgz",
+    "depends": []
+  },
+  "graphics/cairo": {
+    "name": "cairo-1.18.6",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/cairo-1.18.6.tgz",
+    "depends": [
+      "archivers/lzo2",
+      "devel/glib2",
+      "graphics/png"
+    ]
+  },
+  "archivers/lzo2": {
+    "name": "lzo2-2.10p2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/lzo2-2.10p2.tgz",
+    "depends": []
+  },
+  "devel/fribidi": {
+    "name": "fribidi-1.0.18",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages-stable/amd64/fribidi-1.0.18.tgz",
+    "depends": []
+  },
+  "x11/gnome/adwaita-icon-theme-legacy": {
+    "name": "adwaita-icon-theme-legacy-46.2p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/adwaita-icon-theme-legacy-46.2p0.tgz",
+    "depends": [
+      "x11/gtk+4,-guic"
+    ]
+  },
+  "devel/desktop-file-utils": {
+    "name": "desktop-file-utils-0.28p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/desktop-file-utils-0.28p0.tgz",
+    "depends": [
+      "devel/glib2"
+    ]
+  },
+  "devel/dconf": {
+    "name": "dconf-0.40.0p2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/dconf-0.40.0p2.tgz",
+    "depends": [
+      "devel/glib2"
+    ]
+  },
+  "textproc/icu4c,-main": {
+    "name": "icu4c-78.3v0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/icu4c-78.3v0.tgz",
+    "depends": []
+  },
+  "security/libb2": {
+    "name": "libb2-0.98.1v0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libb2-0.98.1v0.tgz",
+    "depends": []
+  },
+  "print/cups,-libs": {
+    "name": "cups-libs-2.4.20",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages-stable/amd64/cups-libs-2.4.20.tgz",
+    "depends": [
+      "net/avahi,-libs"
+    ]
+  },
+  "net/avahi,-libs": {
+    "name": "avahi-libs-0.9rc5p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/avahi-libs-0.9rc5p0.tgz",
+    "depends": [
+      "devel/gettext,-runtime",
+      "devel/libevent2",
+      "x11/dbus,-main"
+    ]
+  },
+  "devel/libevent2": {
+    "name": "libevent-2.1.13",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libevent-2.1.13.tgz",
+    "depends": []
+  },
+  "net/libproxy": {
+    "name": "libproxy-0.5.12",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libproxy-0.5.12.tgz",
+    "depends": [
+      "devel/glib2",
+      "devel/gsettings-desktop-schemas",
+      "lang/duktape",
+      "lang/python/3,-main",
+      "net/curl"
+    ]
+  },
+  "net/curl": {
+    "name": "curl-8.23.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages-stable/amd64/curl-8.23.0.tgz",
+    "depends": [
+      "net/ngtcp2",
+      "www/nghttp2",
+      "www/nghttp3"
+    ]
+  },
+  "www/nghttp3": {
+    "name": "nghttp3-1.18.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/nghttp3-1.18.0.tgz",
+    "depends": []
+  },
+  "www/nghttp2": {
+    "name": "nghttp2-1.70.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/nghttp2-1.70.0.tgz",
+    "depends": []
+  },
+  "net/ngtcp2": {
+    "name": "ngtcp2-1.25.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/ngtcp2-1.25.0.tgz",
+    "depends": []
+  },
+  "lang/duktape": {
+    "name": "duktape-2.7.0p1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/duktape-2.7.0p1.tgz",
+    "depends": []
+  },
+  "devel/gsettings-desktop-schemas": {
+    "name": "gsettings-desktop-schemas-50.1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/gsettings-desktop-schemas-50.1.tgz",
+    "depends": [
+      "devel/dconf",
+      "devel/glib2"
+    ]
+  },
+  "math/double-conversion": {
+    "name": "double-conversion-3.3.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/double-conversion-3.3.0.tgz",
+    "depends": []
+  },
+  "databases/iodbc,-main": {
+    "name": "iodbc-3.52.16",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/iodbc-3.52.16.tgz",
+    "depends": []
+  },
+  "archivers/brotli": {
+    "name": "brotli-1.2.1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages-stable/amd64/brotli-1.2.1.tgz",
+    "depends": []
+  },
+  "x11/qt6/qttools": {
+    "name": "qt6-qttools-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qttools-6.11.2.tgz",
+    "depends": [
+      "archivers/zstd",
+      "devel/llvm/22,-main",
+      "x11/qt6/qtbase,-global",
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative",
+      "x11/qt6/qtlanguageserver",
+      "x11/xkbcommon"
+    ]
+  },
+  "x11/qt6/qtlanguageserver": {
+    "name": "qt6-qtlanguageserver-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtlanguageserver-6.11.2.tgz",
+    "depends": []
+  },
+  "x11/qt6/qtbase,-global": {
+    "name": "qt6-global-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-global-6.11.2.tgz",
+    "depends": []
+  },
+  "devel/llvm/22,-main": {
+    "name": "llvm-22.1.8p10",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/llvm-22.1.8p10.tgz",
+    "depends": [
+      "lang/python/3,-main"
+    ]
+  },
+  "x11/qt6/qtpositioning": {
+    "name": "qt6-qtpositioning-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtpositioning-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative",
+      "x11/qt6/qtserialport",
+      "x11/xkbcommon"
+    ]
+  },
+  "x11/qt6/qtserialport": {
+    "name": "qt6-qtserialport-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtserialport-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main"
+    ]
+  },
+  "x11/gtk+3,-cups": {
+    "name": "gtk+3-cups-3.24.52",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/gtk+3-cups-3.24.52.tgz",
+    "depends": [
+      "print/cups,-libs",
+      "x11/gtk+3,-main"
+    ]
+  },
+  "textproc/libxslt": {
+    "name": "libxslt-1.1.45",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libxslt-1.1.45.tgz",
+    "depends": [
+      "textproc/libxml"
+    ]
+  },
+  "sysutils/libudev-openbsd": {
+    "name": "libudev-openbsd-20260922",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libudev-openbsd-20260922.tgz",
+    "depends": []
+  },
+  "security/nss": {
+    "name": "nss-3.130p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages-stable/amd64/nss-3.130p0.tgz",
+    "depends": [
+      "databases/sqlite3",
+      "devel/nspr"
+    ]
+  },
+  "devel/nspr": {
+    "name": "nspr-4.40",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/nspr-4.40.tgz",
+    "depends": []
+  },
+  "multimedia/openh264": {
+    "name": "openh264-2.6.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/openh264-2.6.0.tgz",
+    "depends": []
+  },
+  "multimedia/libvpx": {
+    "name": "libvpx-1.16.0p1v0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libvpx-1.16.0p1v0.tgz",
+    "depends": []
+  },
+  "graphics/libexif": {
+    "name": "libexif-0.6.26",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libexif-0.6.26.tgz",
+    "depends": [
+      "devel/gettext,-runtime"
+    ]
+  },
+  "fonts/noto/fonts": {
+    "name": "noto-fonts-2026.09.01v0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/noto-fonts-2026.09.01v0.tgz",
+    "depends": [
+      "fonts/noto/emoji"
+    ]
+  },
+  "fonts/noto/emoji": {
+    "name": "noto-emoji-2.051p0v0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/noto-emoji-2.051p0v0.tgz",
+    "depends": []
+  },
+  "audio/opus": {
+    "name": "opus-1.6.1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/opus-1.6.1.tgz",
+    "depends": []
+  },
+  "archivers/snappy": {
+    "name": "snappy-1.1.10p3",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/snappy-1.1.10p3.tgz",
+    "depends": []
+  },
+  "archivers/minizip": {
+    "name": "minizip-4.1.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/minizip-4.1.0.tgz",
+    "depends": [
+      "archivers/bzip2",
+      "archivers/xz",
+      "archivers/zstd",
+      "converters/libiconv"
+    ]
+  },
+  "x11/qt6/qtspeech": {
+    "name": "qt6-qtspeech-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtspeech-6.11.2.tgz",
+    "depends": [
+      "audio/flite",
+      "audio/speech-dispatcher",
+      "devel/gettext,-runtime",
+      "devel/glib2",
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative",
+      "x11/qt6/qtmultimedia"
+    ]
+  },
+  "x11/qt6/qtmultimedia": {
+    "name": "qt6-qtmultimedia-6.11.2p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtmultimedia-6.11.2p0.tgz",
+    "depends": [
+      "audio/pulseaudio",
+      "devel/gettext,-runtime",
+      "devel/glib2",
+      "graphics/ffmpeg",
+      "multimedia/gstreamer1/core",
+      "multimedia/gstreamer1/plugins-bad",
+      "multimedia/gstreamer1/plugins-base",
+      "wayland/wayland",
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative",
+      "x11/qt6/qtquick3d",
+      "x11/qt6/qtshadertools",
+      "x11/xkbcommon"
+    ]
+  },
+  "x11/qt6/qtshadertools": {
+    "name": "qt6-qtshadertools-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtshadertools-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main",
+      "x11/xkbcommon"
+    ]
+  },
+  "x11/qt6/qtquick3d": {
+    "name": "qt6-qtquick3d-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtquick3d-6.11.2.tgz",
+    "depends": [
+      "multimedia/assimp",
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative",
+      "x11/qt6/qtshadertools",
+      "x11/xkbcommon"
+    ]
+  },
+  "multimedia/assimp": {
+    "name": "assimp-5.4.3p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/assimp-5.4.3p0.tgz",
+    "depends": []
+  },
+  "multimedia/gstreamer1/plugins-base": {
+    "name": "gst-plugins-base-1.28.7p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/gst-plugins-base-1.28.7p0.tgz",
+    "depends": [
+      "audio/cdparanoia",
+      "audio/libvorbis",
+      "audio/opus",
+      "devel/iso-codes",
+      "devel/orc",
+      "devel/pango",
+      "graphics/graphene",
+      "graphics/jpeg",
+      "multimedia/gstreamer1/core",
+      "multimedia/libtheora",
+      "wayland/wayland"
+    ]
+  },
+  "multimedia/libtheora": {
+    "name": "libtheora-1.2.0v0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libtheora-1.2.0v0.tgz",
+    "depends": [
+      "audio/libogg"
+    ]
+  },
+  "audio/libogg": {
+    "name": "libogg-1.3.6p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libogg-1.3.6p0.tgz",
+    "depends": []
+  },
+  "multimedia/gstreamer1/core": {
+    "name": "gstreamer1-1.28.7",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/gstreamer1-1.28.7.tgz",
+    "depends": [
+      "devel/glib2"
+    ]
+  },
+  "graphics/graphene": {
+    "name": "graphene-1.10.8p1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/graphene-1.10.8p1.tgz",
+    "depends": [
+      "devel/glib2"
+    ]
+  },
+  "devel/orc": {
+    "name": "orc-0.4.44",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/orc-0.4.44.tgz",
+    "depends": []
+  },
+  "devel/iso-codes": {
+    "name": "iso-codes-4.20.1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/iso-codes-4.20.1.tgz",
+    "depends": []
+  },
+  "audio/libvorbis": {
+    "name": "libvorbis-1.3.7",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libvorbis-1.3.7.tgz",
+    "depends": [
+      "audio/libogg"
+    ]
+  },
+  "audio/cdparanoia": {
+    "name": "cdparanoia-3.a9.8p5",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/cdparanoia-3.a9.8p5.tgz",
+    "depends": []
+  },
+  "multimedia/gstreamer1/plugins-bad": {
+    "name": "gst-plugins-bad-1.28.7",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/gst-plugins-bad-1.28.7.tgz",
+    "depends": [
+      "audio/libbs2b",
+      "audio/opus",
+      "audio/soundtouch",
+      "devel/json-glib",
+      "graphics/lcms2",
+      "multimedia/gstreamer1/plugins-base",
+      "multimedia/libass",
+      "security/nettle",
+      "x11/gnome/librsvg"
+    ]
+  },
+  "security/nettle": {
+    "name": "nettle-4.0p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/nettle-4.0p0.tgz",
+    "depends": [
+      "devel/gmp,-main"
+    ]
+  },
+  "devel/gmp,-main": {
+    "name": "gmp-6.3.0p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/gmp-6.3.0p0.tgz",
+    "depends": []
+  },
+  "multimedia/libass": {
+    "name": "libass-0.17.5",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libass-0.17.5.tgz",
+    "depends": [
+      "converters/libiconv",
+      "devel/fribidi",
+      "devel/harfbuzz,-main",
+      "textproc/libunibreak"
+    ]
+  },
+  "textproc/libunibreak": {
+    "name": "libunibreak-7.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libunibreak-7.0.tgz",
+    "depends": []
+  },
+  "devel/json-glib": {
+    "name": "json-glib-1.10.8p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/json-glib-1.10.8p0.tgz",
+    "depends": [
+      "devel/glib2"
+    ]
+  },
+  "audio/soundtouch": {
+    "name": "soundtouch-2.3.3",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/soundtouch-2.3.3.tgz",
+    "depends": []
+  },
+  "audio/libbs2b": {
+    "name": "libbs2b-3.1.0p6",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libbs2b-3.1.0p6.tgz",
+    "depends": [
+      "audio/libsndfile"
+    ]
+  },
+  "audio/libsndfile": {
+    "name": "libsndfile-1.2.2p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libsndfile-1.2.2p0.tgz",
+    "depends": [
+      "audio/flac",
+      "audio/lame",
+      "audio/libogg",
+      "audio/libvorbis",
+      "audio/mpg123",
+      "audio/opus"
+    ]
+  },
+  "audio/mpg123": {
+    "name": "mpg123-1.33.7",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/mpg123-1.33.7.tgz",
+    "depends": []
+  },
+  "audio/lame": {
+    "name": "lame-3.101",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/lame-3.101.tgz",
+    "depends": [
+      "audio/mpg123",
+      "converters/libiconv"
+    ]
+  },
+  "audio/flac": {
+    "name": "flac-1.5.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/flac-1.5.0.tgz",
+    "depends": [
+      "audio/libogg",
+      "converters/libiconv"
+    ]
+  },
+  "graphics/ffmpeg": {
+    "name": "ffmpeg-9.0.2v1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/ffmpeg-9.0.2v1.tgz",
+    "depends": [
+      "archivers/bzip2",
+      "archivers/xz",
+      "audio/gsm",
+      "audio/lame",
+      "audio/libvorbis",
+      "audio/opus",
+      "audio/speex",
+      "converters/libiconv",
+      "devel/fribidi",
+      "devel/harfbuzz,-main",
+      "devel/sdl2",
+      "graphics/libwebp",
+      "graphics/zimg",
+      "multimedia/aom",
+      "multimedia/dav1d",
+      "multimedia/libass",
+      "multimedia/libtheora",
+      "multimedia/libv4l",
+      "multimedia/libvidstab",
+      "multimedia/libvpx",
+      "multimedia/svt-av1",
+      "multimedia/x264",
+      "multimedia/x265",
+      "multimedia/xvidcore",
+      "textproc/libxml"
+    ]
+  },
+  "multimedia/xvidcore": {
+    "name": "xvidcore-1.3.7",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/xvidcore-1.3.7.tgz",
+    "depends": []
+  },
+  "multimedia/x265": {
+    "name": "x265-4.3",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/x265-4.3.tgz",
+    "depends": []
+  },
+  "multimedia/x264": {
+    "name": "x264-20250909",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/x264-20250909.tgz",
+    "depends": []
+  },
+  "multimedia/svt-av1": {
+    "name": "svt-av1-4.0.1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/svt-av1-4.0.1.tgz",
+    "depends": []
+  },
+  "multimedia/libvidstab": {
+    "name": "libvidstab-1.1.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libvidstab-1.1.0.tgz",
+    "depends": []
+  },
+  "multimedia/libv4l": {
+    "name": "libv4l-1.24.1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libv4l-1.24.1.tgz",
+    "depends": [
+      "graphics/jpeg"
+    ]
+  },
+  "multimedia/aom": {
+    "name": "aom-3.14.1p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/aom-3.14.1p0.tgz",
+    "depends": []
+  },
+  "graphics/zimg": {
+    "name": "zimg-3.0.6",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/zimg-3.0.6.tgz",
+    "depends": []
+  },
+  "devel/sdl2": {
+    "name": "sdl2-2.32.10p1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/sdl2-2.32.10p1.tgz",
+    "depends": [
+      "audio/libsamplerate",
+      "converters/libiconv"
+    ]
+  },
+  "audio/libsamplerate": {
+    "name": "libsamplerate-0.2.2p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libsamplerate-0.2.2p0.tgz",
+    "depends": []
+  },
+  "audio/speex": {
+    "name": "speex-1.2.1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/speex-1.2.1.tgz",
+    "depends": [
+      "audio/libogg",
+      "audio/speexdsp"
+    ]
+  },
+  "audio/speexdsp": {
+    "name": "speexdsp-1.2.1",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/speexdsp-1.2.1.tgz",
+    "depends": []
+  },
+  "audio/gsm": {
+    "name": "gsm-1.0.24",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/gsm-1.0.24.tgz",
+    "depends": []
+  },
+  "audio/pulseaudio": {
+    "name": "pulseaudio-17.0p4",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/pulseaudio-17.0p4.tgz",
+    "depends": [
+      "audio/libsndfile",
+      "audio/speexdsp",
+      "databases/tdb,-main",
+      "devel/dconf",
+      "devel/glib2",
+      "devel/libtool,-ltdl",
+      "multimedia/gstreamer1/plugins-base",
+      "sysutils/consolekit",
+      "x11/dbus,-main"
+    ]
+  },
+  "sysutils/consolekit": {
+    "name": "consolekit2-1.2.7p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/consolekit2-1.2.7p0.tgz",
+    "depends": [
+      "sysutils/polkit",
+      "x11/dbus,-suid"
+    ]
+  },
+  "x11/dbus,-suid": {
+    "name": "dbus-daemon-launch-helper-1.16.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/dbus-daemon-launch-helper-1.16.2.tgz",
+    "depends": [
+      "x11/dbus,-main"
+    ]
+  },
+  "sysutils/polkit": {
+    "name": "polkit-128",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages-stable/amd64/polkit-128.tgz",
+    "depends": [
+      "devel/glib2",
+      "lang/duktape",
+      "x11/dbus,-suid"
+    ]
+  },
+  "devel/libtool,-ltdl": {
+    "name": "libltdl-2.4.2p3",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libltdl-2.4.2p3.tgz",
+    "depends": []
+  },
+  "databases/tdb,-main": {
+    "name": "tdb-1.4.15",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/tdb-1.4.15.tgz",
+    "depends": []
+  },
+  "audio/speech-dispatcher": {
+    "name": "speech-dispatcher-0.12.1p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/speech-dispatcher-0.12.1p0.tgz",
+    "depends": [
+      "audio/espeak",
+      "audio/libao",
+      "audio/libsndfile",
+      "devel/dotconf",
+      "devel/glib2",
+      "devel/libtool,-ltdl",
+      "devel/py-xdg",
+      "lang/python/3,-main"
+    ]
+  },
+  "devel/py-xdg": {
+    "name": "py3-xdg-0.28p5",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/py3-xdg-0.28p5.tgz",
+    "depends": [
+      "lang/python/3,-main"
+    ]
+  },
+  "devel/dotconf": {
+    "name": "dotconf-1.3p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/dotconf-1.3p0.tgz",
+    "depends": []
+  },
+  "audio/libao": {
+    "name": "libao-1.2.0p2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libao-1.2.0p2.tgz",
+    "depends": []
+  },
+  "audio/espeak": {
+    "name": "espeak-1.52.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/espeak-1.52.0.tgz",
+    "depends": [
+      "audio/pcaudiolib"
+    ]
+  },
+  "audio/pcaudiolib": {
+    "name": "pcaudiolib-1.3",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/pcaudiolib-1.3.tgz",
+    "depends": [
+      "audio/pulseaudio"
+    ]
+  },
+  "audio/flite": {
+    "name": "flite-2.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/flite-2.2.tgz",
+    "depends": []
+  },
+  "x11/qt6/qtserialbus": {
+    "name": "qt6-qtserialbus-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtserialbus-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtserialport"
+    ]
+  },
+  "x11/qt6/qtsensors": {
+    "name": "qt6-qtsensors-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtsensors-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative"
+    ]
+  },
+  "x11/qt6/qtscxml": {
+    "name": "qt6-qtscxml-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtscxml-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative",
+      "x11/xkbcommon"
+    ]
+  },
+  "x11/qt6/qtremoteobjects": {
+    "name": "qt6-qtremoteobjects-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtremoteobjects-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative"
+    ]
+  },
+  "x11/qt6/qtnetworkauth": {
+    "name": "qt6-qtnetworkauth-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtnetworkauth-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main"
+    ]
+  },
+  "x11/qt6/qtlocation": {
+    "name": "qt6-qtlocation-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtlocation-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative",
+      "x11/qt6/qtpositioning",
+      "x11/xkbcommon"
+    ]
+  },
+  "x11/qt6/qthttpserver": {
+    "name": "qt6-qthttpserver-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qthttpserver-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtwebsockets"
+    ]
+  },
+  "x11/qt6/qtgraphs": {
+    "name": "qt6-qtgraphs-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtgraphs-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative",
+      "x11/qt6/qtquick3d",
+      "x11/qt6/qtshadertools",
+      "x11/xkbcommon"
+    ]
+  },
+  "x11/qt6/qtdatavis3d": {
+    "name": "qt6-qtdatavis3d-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtdatavis3d-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative"
+    ]
+  },
+  "x11/qt6/qtconnectivity": {
+    "name": "qt6-qtconnectivity-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtconnectivity-6.11.2.tgz",
+    "depends": [
+      "security/pcsc-lite",
+      "x11/qt6/qtbase,-main"
+    ]
+  },
+  "security/pcsc-lite": {
+    "name": "pcsc-lite-2.5.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/pcsc-lite-2.5.0.tgz",
+    "depends": [
+      "devel/libusb1",
+      "lang/python/3,-main"
+    ]
+  },
+  "devel/libusb1": {
+    "name": "libusb1-1.0.30",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/libusb1-1.0.30.tgz",
+    "depends": []
+  },
+  "x11/qt6/qtcharts": {
+    "name": "qt6-qtcharts-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qtcharts-6.11.2.tgz",
+    "depends": [
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative"
+    ]
+  },
+  "x11/qt6/qt3d": {
+    "name": "qt6-qt3d-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/qt6-qt3d-6.11.2.tgz",
+    "depends": [
+      "multimedia/assimp",
+      "x11/qt6/qtbase,-main",
+      "x11/qt6/qtdeclarative",
+      "x11/qt6/qtshadertools",
+      "x11/xkbcommon"
+    ]
+  },
+  "x11/qt6/pyside6/shiboken": {
+    "name": "shiboken6-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/shiboken6-6.11.2.tgz",
+    "depends": [
+      "devel/llvm/22,-main",
+      "lang/python/3,-main",
+      "math/py-numpy",
+      "x11/qt6/pyside6/shiboken_generator"
+    ]
+  },
+  "x11/qt6/pyside6/shiboken_generator": {
+    "name": "shiboken6-generator-6.11.2",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/shiboken6-generator-6.11.2.tgz",
+    "depends": [
+      "devel/llvm/22,-main",
+      "lang/python/3,-main",
+      "textproc/libxml",
+      "textproc/libxslt",
+      "x11/qt6/qtbase,-main"
+    ]
+  },
+  "math/py-numpy": {
+    "name": "py3-numpy-2.5.3",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/py3-numpy-2.5.3.tgz",
+    "depends": [
+      "lang/gcc/16,-libs",
+      "lang/python/3,-main",
+      "math/lapack",
+      "textproc/py-charset-normalizer"
+    ]
+  },
+  "textproc/py-charset-normalizer": {
+    "name": "py3-charset-normalizer-3.4.9",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/py3-charset-normalizer-3.4.9.tgz",
+    "depends": [
+      "lang/python/3,-main"
+    ]
+  },
+  "math/lapack": {
+    "name": "lapack-3.12.1p0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/lapack-3.12.1p0.tgz",
+    "depends": [
+      "lang/gcc/16,-libs"
+    ]
+  },
+  "lang/gcc/16,-libs": {
+    "name": "gcc-libs-16.1.0p11",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/gcc-libs-16.1.0p11.tgz",
+    "depends": []
+  },
+  "graphics/vulkan-headers": {
+    "name": "vulkan-headers-1.4.357.0",
+    "url": "https://cdn.openbsd.org/pub/OpenBSD/8.0/packages/amd64/vulkan-headers-1.4.357.0.tgz",
+    "depends": []
+  }
+}
