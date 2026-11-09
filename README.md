@@ -32,11 +32,13 @@ Source execution has been verified on OpenBSD 8.0 / amd64 in a VirtualBox VM wit
 
 ## Downloads
 
-Linux, FreeBSD, and NetBSD packages are publicly distributed. Windows and macOS binaries remain private for local development and verification. Linux 0.3.3 packages, matching source ZIPs, checksums and build records are available in the [Linux GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3). FreeBSD and NetBSD previews are distributed through their dedicated Releases below. The download links below point to Releases. See the [Linux migration plan and implementation record](documentation/linux-release-migration.md). Existing repository download URLs remain available for compatibility.
+**Folimeld 1.0.1.0 for Windows 11 (x64)** is available for free on the Microsoft Store in Japan and the United States. [Microsoft Store (Japan)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [Microsoft Store (United States)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
+
+Linux 0.3.3 packages, matching source ZIPs, checksums and build records are available in the [Linux GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3). FreeBSD and NetBSD previews are distributed through their dedicated Releases below. See the [Linux migration plan and implementation record](documentation/linux-release-migration.md). Existing repository download URLs remain available for compatibility.
 
 | OS | Package formats |
 | --- | --- |
-| Windows 10 / 11 (Intel/AMD (x64) / ARM (arm64)) | EXE / MSIX (binaries private) |
+| Windows 11 (Intel/AMD x64) | Microsoft Store (MSIX, 1.0.1.0, Japan and United States) |
 | macOS | `.app` (binaries private) |
 | Ubuntu | `.deb` / `.snap` / standalone executable (see each release for supported versions) |
 | Debian 13 | `.deb` (amd64 / arm64; basic functionality verified on WSL2) |
@@ -136,9 +138,9 @@ The **Details** tab in **Document Properties** lets you change the PDF version a
 
 Under **Settings → Image Size**, choose a thumbnail size of 144, 288, or 432 px for the longer edge (default: 288 px). Changes take effect immediately.
 
-The display language, image size, and last opened folder are saved on your device. PDFs are processed locally. Support purchases in the Windows MSIX edition use Microsoft Store to retrieve product information, check purchase status, and process payments. PDFs are never sent to the Store.
+The display language, image size, and last opened folder are saved on your device. PDFs are processed locally.
 
-In the Windows MSIX edition, **Help → Support Development…** lets you make a one-time purchase with a supporter icon (once the product is published in the Store). Purchasing adds a supporter icon to the Help menu. PDF editing features are the same whether or not you make a purchase. For developer setup instructions, see [Windows support purchases](documentation/windows-store-purchases_ja.md) (in Japanese).
+Microsoft Store version 1.0.1.0 does not offer supporter purchases.
 
 In the Linux edition, **Help → Support development…** displays information about [GitHub Sponsors](https://github.com/sponsors/tyamada). The button in the dialog opens the support page in your browser. Support is optional, and all features remain available whether or not you contribute.
 
