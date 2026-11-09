@@ -40,6 +40,7 @@ OpenBSD 8.0 / amd64では、1 vCPU・16 GiBのVirtualBox VMでソース実行を
 | macOS | `.app`（バイナリ非公開） |
 | Ubuntu | `.deb` / `.snap` / 単体実行ファイル（対応バージョンは各リリースを参照） |
 | Debian 13 | `.deb`（amd64 / arm64、WSL2で基本動作確認済み） |
+| FreeBSD 15.1 / amd64 | ネイティブ `.pkg` と対応ソース（公開準備中） |
 
 > [!NOTE]
 > Windows・macOSの検証用成果物は、公開リポジトリやGitHub Releasesへ追加しません。
@@ -79,6 +80,19 @@ sudo snap install --dangerous ./folimeld_0.3.3_arm64.snap
 ```
 
 Debian 13ではUbuntu版と同じdebパッケージを使用します。最小構成の環境で `Fontconfig error: Cannot load default config file` が表示される場合は、`sudo apt install fontconfig-config` を実行してください。Debian 13.6のamd64環境（WSL2 / WSLg、X11）でPDFの表示・ページ移動・回転・保存・再読込を確認しています。詳しくは[Debianでの検証記録](documentation/debian-wsl-verification_ja.md)を参照してください。arm64環境（WSL2）でもdebのインストールとPDFを指定した起動を確認済みです。
+
+### FreeBSD版のソース・パッケージ・インストール
+
+FreeBSD 15.1 / amd64向けのネイティブパッケージ `folimeld-0.3.3_1.pkg` と対応ソースを作成し、導入・GUI起動・保存・削除・再導入を確認済みです。**ダウンロード公開はまだ行っていません。** 現在の成果物はローカルの `dist/freebsd/` にあります。[FreeBSDのインストール・ビルド手順](documentation/freebsd-install_ja.md)に従ってソースから実行・パッケージ作成できます。対応ソースZIP、PyMuPDF/MuPDFのソース、SHA-256、ビルド記録も用意済みです。[パッケージ検証記録](documentation/freebsd-package-verification_ja.md)を参照してください。
+
+GUIデスクトップが構成されたFreeBSDで、パッケージ入手後は以下をrootで実行します。Python・Qtなどの依存パッケージは公式リポジトリから導入します。
+
+```sh
+pkg install python312 py312-pyside6 py312-pillow py312-cryptography py312-psutil noto-sans-jp
+pkg add ./folimeld-0.3.3_1.pkg
+```
+
+一般ユーザーで `folimeld` または `folimeld /path/to/file.pdf` を実行します。削除はrootで `pkg delete folimeld`。フォーム読み込みの不具合を修正したPyMuPDF/MuPDF 1.28.2をアプリ専用領域に同梱し、システムのPyMuPDFは置き換えません。別のFreeBSD版・CPUは未検証です。[GUI検証](documentation/freebsd-gui-verification_ja.md)と[画像取り込み・保存失敗・負荷試験](documentation/freebsd-extended-verification_ja.md)の記録も参照してください。
 
 ## 基本的な使い方
 

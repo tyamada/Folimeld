@@ -40,6 +40,7 @@ Only Linux packages are publicly distributed. Windows and macOS binaries remain 
 | macOS | `.app` (binaries private) |
 | Ubuntu | `.deb` / `.snap` / standalone executable (see each release for supported versions) |
 | Debian 13 | `.deb` (amd64 / arm64; basic functionality verified on WSL2) |
+| FreeBSD 15.1 / amd64 | Native `.pkg` and matching source (publication pending) |
 
 > [!NOTE]
 > Windows and macOS verification artifacts are not added to this public repository or GitHub Releases.
@@ -79,6 +80,19 @@ sudo snap install --dangerous ./folimeld_0.3.3_arm64.snap
 ```
 
 Debian 13 uses the same deb package as Ubuntu. If a minimal installation displays `Fontconfig error: Cannot load default config file`, run `sudo apt install fontconfig-config`. PDF display, page movement, rotation, saving, and reopening have been verified on Debian 13.6 amd64 (WSL2 / WSLg, X11). See the [Debian verification record](documentation/debian-wsl-verification_ja.md) (in Japanese) for details. Installation of the deb package and startup with a PDF have also been verified on arm64 (WSL2).
+
+### FreeBSD source, package, and installation
+
+A native `folimeld-0.3.3_1.pkg` package and matching source have been created for FreeBSD 15.1 / amd64. Installation, GUI launch, saving, removal, and reinstallation have been verified. **Downloads have not been published yet.** Current artifacts are stored locally in `dist/freebsd/`. Follow the [FreeBSD installation and build instructions](documentation/freebsd-install.md) to run from source or build a package. A matching source ZIP, PyMuPDF/MuPDF sources, SHA-256 checksums, and build records are also ready. See the [package verification record (Japanese)](documentation/freebsd-package-verification_ja.md).
+
+On FreeBSD with a configured graphical desktop, run the following as root after obtaining the package. Python, Qt, and other dependencies are installed from the official repository.
+
+```sh
+pkg install python312 py312-pyside6 py312-pillow py312-cryptography py312-psutil noto-sans-jp
+pkg add ./folimeld-0.3.3_1.pkg
+```
+
+Run `folimeld` or `folimeld /path/to/file.pdf` as a regular user. To uninstall, run `pkg delete folimeld` as root. PyMuPDF/MuPDF 1.28.2, which fixes the form-loading crash, is bundled in the application's private directory without replacing system PyMuPDF. Other FreeBSD versions and CPUs are unverified. See the [GUI verification](documentation/freebsd-gui-verification_ja.md) and [image import, save failure, and load tests](documentation/freebsd-extended-verification_ja.md) (Japanese).
 
 ## Basic usage
 

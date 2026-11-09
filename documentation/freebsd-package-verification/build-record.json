@@ -1,0 +1,36 @@
+{
+  "source_archive": "Folimeld-source-9ceb5ec75dcd3ddb60bb66f0b6996da5e700cf4400bd89b31808f5250b19f23b.zip",
+  "source_sha256": "9ceb5ec75dcd3ddb60bb66f0b6996da5e700cf4400bd89b31808f5250b19f23b",
+  "wheel": "pymupdf-1.28.2-cp312-abi3-freebsd_15_1_release_p5_amd64.whl",
+  "wheel_sha256": "b1dfd1acb578f8875d00687a696102d84610faa1cf6fa69565099dea81b42868",
+  "platform": "FreeBSD-15.1-RELEASE-p5-amd64-64bit-ELF",
+  "python": "3.12.15 (main, Oct 31 2026, 01:07:32) [Clang 19.1.7 (https://github.com/llvm/llvm-project.git llvmorg-19.1.7-0-gcd7080",
+  "dependencies": {
+    "python312": {
+      "origin": "lang/python312",
+      "version": "3.12.15"
+    },
+    "py312-pyside6": {
+      "origin": "devel/pyside6",
+      "version": "6.11.2"
+    },
+    "py312-pillow": {
+      "origin": "graphics/py-pillow",
+      "version": "13.0.0"
+    },
+    "py312-cryptography": {
+      "origin": "security/py-cryptography",
+      "version": "50.0.1,1"
+    },
+    "py312-psutil": {
+      "origin": "sysutils/py-psutil",
+      "version": "7.2.2_1"
+    },
+    "noto-sans-jp": {
+      "origin": "x11-fonts/noto-sans-jp",
+      "version": "2.004"
+    }
+  },
+  "package": "folimeld-0.3.3_1.pkg",
+  "package_sha256": "e44f9519f04164ec7064494c0d7f354fcb778b1fbeeb2404c9f484699c3f4c0e"
+}
