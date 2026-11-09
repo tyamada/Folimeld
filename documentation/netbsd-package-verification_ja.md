@@ -1,6 +1,6 @@
 # NetBSDパッケージの作成・導入確認
 
-検証日: 2026-11-09（日本時間）。NetBSD 11.1 / amd64向けの試験配布候補。公開準備中。
+検証・公開日: 2026-11-09（日本時間）。NetBSD 11.1 / amd64向けに[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3)で試験配布している。
 
 `tools/build_netbsd_package.py` は対応ソースZIPのマニフェストと依存の原本ソースのSHA-256を照合して `pkg_create` を実行する。PySide6/shiboken6 6.11.2（Core/Gui/Widgets）とPyMuPDF/MuPDF 1.28.2を `/usr/pkg/share/folimeld/` に同梱する。Python、Qt、Pillow、cryptography、psutil、gettext-lib、フォントは公式パッケージに依存する。システムのPySide6やPyMuPDFを置き換えない。
 
@@ -22,3 +22,11 @@
 chrootはホストVMのカーネルを共有する。今回のパッケージ機能テストはQtのoffscreenプラットフォームを使用した。表示を伴う操作は既存の[ソース実行GUI検証](netbsd-verification_ja.md)を参照。別のOS版・CPU、別系列のpkgsrc依存、将来版からの更新、一般化したラッパーでの依存全体の再コンパイルは未検証。
 
 インストール手順: [日本語](netbsd-install_ja.md) / [English](netbsd-install.md)。
+
+## 公開後の照合
+
+Releaseタグは `netbsd-v0.3.3`、対象コミットは `98b211eb1afea212bbab0565ad11bd623556bb0f`。プレリリースとして公開し、Linux安定版のlatest指定は変更していない。
+
+添付はtgz、ハッシュ付き対応ソースZIP、PyMuPDFネイティブwheel、PySide6/PyMuPDF/MuPDFの原本ソース、ビルド記録、日英インストール手順、AGPLライセンス、SHA-256一覧の11ファイル。全11ファイルを認証なしの公開URLから取得し直し、元ファイルと一致した。チェックサム一覧の10ファイルもすべて一致した。[公開ダウンロード記録](netbsd-package-verification/public-downloads.json)を参照。
+
+公開されたtgzをクリーンchrootへ再導入して、非特権の機能スモークと212ファイルの整合性検証が成功した。[公開パッケージの検証出力](netbsd-package-verification/public-smoke.txt)。対応ソースZIPはビルド時のスナップショットで、公開後の文書更新は含まない。実行・ビルド入力85ファイルが対応ソースと一致することを公開前に確認した。

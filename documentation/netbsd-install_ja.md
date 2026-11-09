@@ -2,7 +2,7 @@
 
 [English](netbsd-install.md) | [日本語](netbsd-install_ja.md)
 
-対象はNetBSD 11.1 / amd64、Python 3.12、X11デスクトップ。Folimeld独自の試験配布パッケージであり、NetBSD公式パッケージではない。現在は公開準備中。
+対象はNetBSD 11.1 / amd64、Python 3.12、X11デスクトップ。Folimeld独自の試験配布パッケージであり、NetBSD公式パッケージではない。[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3)からパッケージ・対応ソース・依存ソース・SHA-256一覧を取得する。
 
 確認範囲は[パッケージ検証記録](netbsd-package-verification_ja.md)を参照。
 
@@ -36,6 +36,8 @@ rootでビルド用依存を導入する。
 
 ```sh
 /usr/pkg/sbin/pkg_add py312-pip llvm clang cmake ninja-build bash gmake swig4 pkgconf
+/usr/pkg/sbin/pkg_add python312 qt6-qtbase qt6-qtsvg qt6-qtimageformats \
+  qt6-qttranslations py312-Pillow py312-cryptography py312-psutil gettext-lib noto-cjk-fonts
 ```
 
 一般ユーザーで実行する。空白やシェル特殊文字を含まない絶対パスを使用する。

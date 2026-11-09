@@ -2,7 +2,7 @@
 
 [English](netbsd-install.md) | [日本語](netbsd-install_ja.md)
 
-Targets NetBSD 11.1 / amd64, Python 3.12, and an X11 desktop. This is a Folimeld preview package, not an official NetBSD package. Publication is being prepared.
+Targets NetBSD 11.1 / amd64, Python 3.12, and an X11 desktop. This is a Folimeld preview package, not an official NetBSD package. Obtain the package, matching source, dependency sources, and SHA-256 list from the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3).
 
 See the [package verification record](netbsd-package-verification_ja.md) for the tested scope.
 
@@ -36,6 +36,8 @@ Install build dependencies as root.
 
 ```sh
 /usr/pkg/sbin/pkg_add py312-pip llvm clang cmake ninja-build bash gmake swig4 pkgconf
+/usr/pkg/sbin/pkg_add python312 qt6-qtbase qt6-qtsvg qt6-qtimageformats \
+  qt6-qttranslations py312-Pillow py312-cryptography py312-psutil gettext-lib noto-cjk-fonts
 ```
 
 Run as a regular user. Use absolute paths without spaces or shell metacharacters.

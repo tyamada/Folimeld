@@ -1,4 +1,4 @@
-﻿"""Run against installed files, with no checkout or development venv on sys.path."""
+"""Run against installed files, with no checkout or development venv on sys.path."""
 from multiprocessing import freeze_support
 from pathlib import Path
 import json
@@ -59,4 +59,3 @@ def main():
 if __name__ == '__main__':
     freeze_support()
     main()
-

@@ -1,0 +1,82 @@
+{
+  "release": "https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3",
+  "assets": [
+    {
+      "name": "AGPL-3.0.txt",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/AGPL-3.0.txt",
+      "size": 34523,
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+      "matched": true
+    },
+    {
+      "name": "build-record.json",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/build-record.json",
+      "size": 19143,
+      "sha256": "ef8c1f1e7c141b12652e7df9fdb6427f1c2da01cf8093aaf8a8c08ba0c1db48f",
+      "matched": true
+    },
+    {
+      "name": "folimeld-0.3.3.tgz",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/folimeld-0.3.3.tgz",
+      "size": 36539429,
+      "sha256": "2e09f44b9d0f2d975b49c7594a27a422c0ff3dbe36af2548caa938d3e7a78a47",
+      "matched": true
+    },
+    {
+      "name": "Folimeld-source-7dc20dbb3f9a72de8f0f23bf551303cb78a536392678404e13267c9df6f93c59.zip",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/Folimeld-source-7dc20dbb3f9a72de8f0f23bf551303cb78a536392678404e13267c9df6f93c59.zip",
+      "size": 14205085,
+      "sha256": "7dc20dbb3f9a72de8f0f23bf551303cb78a536392678404e13267c9df6f93c59",
+      "matched": true
+    },
+    {
+      "name": "INSTALL.md",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/INSTALL.md",
+      "size": 3759,
+      "sha256": "869098ca49f2ef596c003cb704ea8686831f17863748b57be1efde73ed9f7ece",
+      "matched": true
+    },
+    {
+      "name": "INSTALL_ja.md",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/INSTALL_ja.md",
+      "size": 4206,
+      "sha256": "227ca753d7d45cf72004781688995e4d2e05c821665e49b63f0af5ec2714230f",
+      "matched": true
+    },
+    {
+      "name": "mupdf-1.28.2-source.tar.gz",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/mupdf-1.28.2-source.tar.gz",
+      "size": 68898646,
+      "sha256": "44075a84e329db55b9bef5f342a70fd26d69e48ad1d33cb89d9664581c641156",
+      "matched": true
+    },
+    {
+      "name": "pymupdf-1.28.2-cp312-abi3-netbsd_11_1_amd64.whl",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/pymupdf-1.28.2-cp312-abi3-netbsd_11_1_amd64.whl",
+      "size": 25297007,
+      "sha256": "97559195934646c03579a9fe00eaa22a18104389b6500e797529c66329e64012",
+      "matched": true
+    },
+    {
+      "name": "pymupdf-1.28.2.tar.gz",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/pymupdf-1.28.2.tar.gz",
+      "size": 87903557,
+      "sha256": "5e0be7908a715aa20333caddd73f1d6f01e4cd0c26e869fa2dd0b7f344da2249",
+      "matched": true
+    },
+    {
+      "name": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "size": 18053248,
+      "sha256": "cba47efbaad1bedd529725cbc14e21f156c7a19366f07b3edfbb076ffd7afdf8",
+      "matched": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/SHA256SUMS.txt",
+      "size": 969,
+      "sha256": "33fd52bb003df545e3c2ee630d8de8bff30c3d692a5b2106b8ca4512a3db0fe1",
+      "matched": true
+    }
+  ]
+}

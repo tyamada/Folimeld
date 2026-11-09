@@ -32,7 +32,7 @@ Source execution has been verified on OpenBSD 8.0 / amd64 in a VirtualBox VM wit
 
 ## Downloads
 
-Linux and FreeBSD packages are publicly distributed. Windows and macOS binaries remain private for local development and verification. Linux 0.3.3 packages, matching source ZIPs, checksums and build records are available in the [Linux GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3). FreeBSD previews are distributed through the dedicated Release below. The download links below point to Releases. See the [Linux migration plan and implementation record](documentation/linux-release-migration.md). Existing repository download URLs remain available for compatibility.
+Linux, FreeBSD, and NetBSD packages are publicly distributed. Windows and macOS binaries remain private for local development and verification. Linux 0.3.3 packages, matching source ZIPs, checksums and build records are available in the [Linux GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3). FreeBSD and NetBSD previews are distributed through their dedicated Releases below. The download links below point to Releases. See the [Linux migration plan and implementation record](documentation/linux-release-migration.md). Existing repository download URLs remain available for compatibility.
 
 | OS | Package formats |
 | --- | --- |
@@ -41,7 +41,7 @@ Linux and FreeBSD packages are publicly distributed. Windows and macOS binaries 
 | Ubuntu | `.deb` / `.snap` / standalone executable (see each release for supported versions) |
 | Debian 13 | `.deb` (amd64 / arm64; basic functionality verified on WSL2) |
 | FreeBSD 15.1 / amd64 | Native `.pkg` and matching source (preview release) |
-| NetBSD 11.1 / amd64 | Native `.tgz` and matching source (publication being prepared) |
+| NetBSD 11.1 / amd64 | Native `.tgz` and matching source (preview release) |
 
 > [!NOTE]
 > Windows and macOS verification artifacts are not added to this public repository or GitHub Releases.
@@ -104,7 +104,7 @@ Run `folimeld` or `folimeld /path/to/file.pdf` as a regular user. To uninstall, 
 
 ### NetBSD source, package, and installation
 
-The NetBSD 11.1 / amd64 package `folimeld-0.3.3.tgz` is being prepared for publication. PySide6/shiboken6 and PyMuPDF/MuPDF are bundled privately; Python, Qt, and other dependencies use official packages. See the [installation and source build instructions](documentation/netbsd-install.md).
+The NetBSD 11.1 / amd64 [package `folimeld-0.3.3.tgz`](https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/folimeld-0.3.3.tgz) and [matching source, dependency sources, and build record](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3) are available as a preview release. Compare `sha256 -r folimeld-0.3.3.tgz` with the [SHA-256 list](https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/SHA256SUMS.txt). PySide6/shiboken6 and PyMuPDF/MuPDF are bundled privately; Python, Qt, and other dependencies use official packages. See the [installation and source build instructions](documentation/netbsd-install.md).
 
 After obtaining the package, run as root on NetBSD with an X11 desktop configured.
 

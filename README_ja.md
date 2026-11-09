@@ -32,7 +32,7 @@ OpenBSD 8.0 / amd64では、1 vCPU・16 GiBのVirtualBox VMでソース実行を
 
 ## ダウンロード
 
-公開対象はLinux・FreeBSD用パッケージです。Windows・macOS用バイナリは非公開とし、手元で開発・検証します。Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビルド記録は[Linux版GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)から取得できます。FreeBSD版は下記の専用Releaseで試験配布しています。以下のダウンロードリンクもReleaseを参照しています。[Linux版の移行計画と実施記録](documentation/linux-release-migration_ja.md)を参照してください。互換性のため従来のリポジトリ内のダウンロードURLも維持しています。
+公開対象はLinux・FreeBSD・NetBSD用パッケージです。Windows・macOS用バイナリは非公開とし、手元で開発・検証します。Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビルド記録は[Linux版GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)から取得できます。FreeBSD版・NetBSD版は下記の専用Releaseで試験配布しています。以下のダウンロードリンクもReleaseを参照しています。[Linux版の移行計画と実施記録](documentation/linux-release-migration_ja.md)を参照してください。互換性のため従来のリポジトリ内のダウンロードURLも維持しています。
 
 | OS | 配布形式 |
 | --- | --- |
@@ -41,7 +41,7 @@ OpenBSD 8.0 / amd64では、1 vCPU・16 GiBのVirtualBox VMでソース実行を
 | Ubuntu | `.deb` / `.snap` / 単体実行ファイル（対応バージョンは各リリースを参照） |
 | Debian 13 | `.deb`（amd64 / arm64、WSL2で基本動作確認済み） |
 | FreeBSD 15.1 / amd64 | ネイティブ `.pkg` と対応ソース（試験配布） |
-| NetBSD 11.1 / amd64 | ネイティブ `.tgz` と対応ソース（公開準備中） |
+| NetBSD 11.1 / amd64 | ネイティブ `.tgz` と対応ソース（試験配布） |
 
 > [!NOTE]
 > Windows・macOSの検証用成果物は、公開リポジトリやGitHub Releasesへ追加しません。
@@ -104,7 +104,7 @@ pkg add ./folimeld-0.3.3_1.pkg
 
 ### NetBSD版のソース・パッケージ・インストール
 
-NetBSD 11.1 / amd64向けパッケージ `folimeld-0.3.3.tgz` を公開準備中です。PySide6/shiboken6とPyMuPDF/MuPDFをアプリ専用領域に同梱し、Python・Qtなどは公式パッケージに依存します。[インストール・ソースビルド手順](documentation/netbsd-install_ja.md)を参照してください。
+NetBSD 11.1 / amd64向けの[パッケージ `folimeld-0.3.3.tgz`](https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/folimeld-0.3.3.tgz)と[対応ソース・依存ソース・ビルド記録](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3)を試験配布しています。[SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/SHA256SUMS.txt)と `sha256 -r folimeld-0.3.3.tgz` の結果を照合してください。PySide6/shiboken6とPyMuPDF/MuPDFをアプリ専用領域に同梱し、Python・Qtなどは公式パッケージに依存します。[インストール・ソースビルド手順](documentation/netbsd-install_ja.md)を参照してください。
 
 パッケージ入手後、X11デスクトップを構成したNetBSDでrootとして実行します。
 
