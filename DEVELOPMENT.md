@@ -71,7 +71,7 @@ After setup, launch from the repository root within a regular user's X11 session
 
 ## Public and private distribution policy
 
-Windows and macOS binaries stay private and are built and verified locally. Linux deb/Snap packages are public. The [migration plan](documentation/linux-release-migration.md) groups Linux packages, SHA-256 checksums, corresponding source ZIPs and build records in one Release. Run the following offline asset check before publication; it does not upload files or create tags.
+Windows and macOS binaries stay private and are built and verified locally. Linux deb/Snap and FreeBSD pkg packages are public. FreeBSD previews are distributed through a [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3), with [installation and build instructions](documentation/freebsd-install.md). The [migration plan](documentation/linux-release-migration.md) groups Linux packages, SHA-256 checksums, corresponding source ZIPs and build records in one Release. Run the following offline asset check before Linux publication; it does not upload files or create tags.
 
 ```bash
 python -m tools.prepare_linux_release --version 0.3.3

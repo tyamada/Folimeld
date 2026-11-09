@@ -1,0 +1,62 @@
+{
+  "release": "https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3",
+  "authenticated": false,
+  "checksum_file_sha256": "d49350d799a033dd7ded4fefc2407dcf98c9a3aff078dc327cead1ce2e7418c4",
+  "files": [
+    {
+      "name": "AGPL-3.0.txt",
+      "bytes": 34523,
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "name": "Folimeld-source-9ceb5ec75dcd3ddb60bb66f0b6996da5e700cf4400bd89b31808f5250b19f23b.zip",
+      "bytes": 14068343,
+      "sha256": "9ceb5ec75dcd3ddb60bb66f0b6996da5e700cf4400bd89b31808f5250b19f23b"
+    },
+    {
+      "name": "INSTALL.md",
+      "bytes": 4635,
+      "sha256": "3e8b3a389c55f0ab7ee5111fecefd306d3a3df878d812b92215e7ea0d8fda5ab"
+    },
+    {
+      "name": "INSTALL_ja.md",
+      "bytes": 5051,
+      "sha256": "c00b10868197b2ee93cbbc3b4dbcaed0f07e85af97dba7141de67886b3889ab7"
+    },
+    {
+      "name": "LICENSE.txt",
+      "bytes": 730,
+      "sha256": "2abf94716325b310911398472f8a1501673e2fdd449e0c1ad546107f61fcac56"
+    },
+    {
+      "name": "PyMuPDF-source-record.json",
+      "bytes": 475,
+      "sha256": "a627eda833320f102014e807ee9a3dd8817207853b37ff03531c8cc22198301f"
+    },
+    {
+      "name": "build-record.json",
+      "bytes": 1264,
+      "sha256": "a1edbf4a41fa705051570c6403a48c1fffc9380694bc816cc3f7875ad298deeb"
+    },
+    {
+      "name": "folimeld-0.3.3_1.pkg",
+      "bytes": 26086576,
+      "sha256": "e44f9519f04164ec7064494c0d7f354fcb778b1fbeeb2404c9f484699c3f4c0e"
+    },
+    {
+      "name": "mupdf-1.28.2-source.tar.gz",
+      "bytes": 68898646,
+      "sha256": "44075a84e329db55b9bef5f342a70fd26d69e48ad1d33cb89d9664581c641156"
+    },
+    {
+      "name": "pymupdf-1.28.2-cp312-abi3-freebsd_15_1_release_p5_amd64.whl",
+      "bytes": 26022403,
+      "sha256": "b1dfd1acb578f8875d00687a696102d84610faa1cf6fa69565099dea81b42868"
+    },
+    {
+      "name": "pymupdf-1.28.2.tar.gz",
+      "bytes": 87903557,
+      "sha256": "5e0be7908a715aa20333caddd73f1d6f01e4cd0c26e869fa2dd0b7f344da2249"
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 
 ![Folimeld icon](assets/Folimeld.iconset/icon_128x128.png)
 
-Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、削除できるデスクトップアプリです。Windows、macOS、Ubuntu、Debian に対応し、編集するファイルを外部サービスへ送信せず、ローカル環境で処理します。
+Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、削除できるデスクトップアプリです。Windows、macOS、Ubuntu、Debian、FreeBSD 15.1（amd64）に対応し、編集するファイルを外部サービスへ送信せず、ローカル環境で処理します。
 
 ![Folimeld main window](documentation/screenshots/main-window.png)
 
@@ -26,13 +26,13 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 - PDFバージョン、ページレイアウト、綴じ方向を編集
 - 閲覧パスワードの設定と解除
 - 日本語、英語、ドイツ語、スペイン語、フランス語、韓国語、ポルトガル語、中国語に対応
-- Windows（Intel/AMD（x64）版・ARM（arm64）版の両方）、macOS、Ubuntu、Debianで利用可能
+- Windows（Intel/AMD（x64）版・ARM（arm64）版の両方）、macOS、Ubuntu、Debian、FreeBSD 15.1（amd64）で利用可能
 
 OpenBSD 8.0 / amd64では、1 vCPU・16 GiBのVirtualBox VMでソース実行を確認しています。依存ライブラリのビルドにパッチが必要です。配布パッケージは作成していません。構築方法と確認範囲は[OpenBSDの検証記録](documentation/openbsd-verification_ja.md)を参照してください。
 
 ## ダウンロード
 
-公開対象はLinux用パッケージです。Windows・macOS用バイナリは非公開とし、手元で開発・検証します。Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビルド記録は[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)から取得できます。以下のダウンロードリンクもReleaseを参照しています。[移行計画と実施記録](documentation/linux-release-migration_ja.md)を参照してください。互換性のため従来のリポジトリ内のダウンロードURLも維持しています。
+公開対象はLinux・FreeBSD用パッケージです。Windows・macOS用バイナリは非公開とし、手元で開発・検証します。Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビルド記録は[Linux版GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)から取得できます。FreeBSD版は下記の専用Releaseで試験配布しています。以下のダウンロードリンクもReleaseを参照しています。[Linux版の移行計画と実施記録](documentation/linux-release-migration_ja.md)を参照してください。互換性のため従来のリポジトリ内のダウンロードURLも維持しています。
 
 | OS | 配布形式 |
 | --- | --- |
@@ -40,7 +40,7 @@ OpenBSD 8.0 / amd64では、1 vCPU・16 GiBのVirtualBox VMでソース実行を
 | macOS | `.app`（バイナリ非公開） |
 | Ubuntu | `.deb` / `.snap` / 単体実行ファイル（対応バージョンは各リリースを参照） |
 | Debian 13 | `.deb`（amd64 / arm64、WSL2で基本動作確認済み） |
-| FreeBSD 15.1 / amd64 | ネイティブ `.pkg` と対応ソース（公開準備中） |
+| FreeBSD 15.1 / amd64 | ネイティブ `.pkg` と対応ソース（試験配布） |
 
 > [!NOTE]
 > Windows・macOSの検証用成果物は、公開リポジトリやGitHub Releasesへ追加しません。
@@ -83,7 +83,14 @@ Debian 13ではUbuntu版と同じdebパッケージを使用します。最小�
 
 ### FreeBSD版のソース・パッケージ・インストール
 
-FreeBSD 15.1 / amd64向けのネイティブパッケージ `folimeld-0.3.3_1.pkg` と対応ソースを作成し、導入・GUI起動・保存・削除・再導入を確認済みです。**ダウンロード公開はまだ行っていません。** 現在の成果物はローカルの `dist/freebsd/` にあります。[FreeBSDのインストール・ビルド手順](documentation/freebsd-install_ja.md)に従ってソースから実行・パッケージ作成できます。対応ソースZIP、PyMuPDF/MuPDFのソース、SHA-256、ビルド記録も用意済みです。[パッケージ検証記録](documentation/freebsd-package-verification_ja.md)を参照してください。
+FreeBSD 15.1 / amd64向けの **0.3.3 / パッケージ改訂1** を[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)で試験配布しています。FreeBSD公式パッケージではありません。導入・GUI起動・保存・削除・再導入を確認済みです。
+
+- [amd64版pkgをダウンロード](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/folimeld-0.3.3_1.pkg)
+- [このpkgに対応するソースZIP](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/Folimeld-source-9ceb5ec75dcd3ddb60bb66f0b6996da5e700cf4400bd89b31808f5250b19f23b.zip)
+- [SHA-256チェックサム](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/SHA256SUMS.txt)
+- [依存ソース・wheel・ビルド記録](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)
+
+[インストール・ビルド手順](documentation/freebsd-install_ja.md)と[パッケージ検証記録](documentation/freebsd-package-verification_ja.md)を参照してください。ソースから再構築する場合は、上記の対応ソースZIPを使用してください。
 
 GUIデスクトップが構成されたFreeBSDで、パッケージ入手後は以下をrootで実行します。Python・Qtなどの依存パッケージは公式リポジトリから導入します。
 

@@ -4,7 +4,7 @@
 
 ![Folimeld icon](assets/Folimeld.iconset/icon_128x128.png)
 
-Folimeld is a desktop application for visually rearranging, rotating, inserting, and deleting PDF pages. It supports Windows, macOS, Ubuntu, and Debian, and processes files locally without sending them to external services.
+Folimeld is a desktop application for visually rearranging, rotating, inserting, and deleting PDF pages. It supports Windows, macOS, Ubuntu, Debian, and FreeBSD 15.1 (amd64), and processes files locally without sending them to external services.
 
 ![Folimeld main window](documentation/screenshots/main-window.png)
 
@@ -26,13 +26,13 @@ Choose File → Exit to close the app, with a save prompt for unsaved changes. O
 - Edit the PDF version, page layout, and binding direction
 - Set or remove a password required to open a PDF
 - Available in Japanese, English, German, Spanish, French, Korean, Portuguese, and Chinese
-- Runs on Windows (both Intel/AMD (x64) and ARM (arm64) editions), macOS, Ubuntu, and Debian
+- Runs on Windows (both Intel/AMD (x64) and ARM (arm64) editions), macOS, Ubuntu, Debian, and FreeBSD 15.1 (amd64)
 
 Source execution has been verified on OpenBSD 8.0 / amd64 in a VirtualBox VM with 1 vCPU and 16 GiB RAM. Building the dependencies requires a patch. No distribution package has been created. See the [OpenBSD verification record (Japanese)](documentation/openbsd-verification_ja.md) for setup instructions and the scope of verification.
 
 ## Downloads
 
-Only Linux packages are publicly distributed. Windows and macOS binaries remain private for local development and verification. Linux 0.3.3 packages, matching source ZIPs, checksums and build records are available in the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3). The download links below now point to that Release. See the [migration plan and implementation record](documentation/linux-release-migration.md). Existing repository download URLs remain available for compatibility.
+Linux and FreeBSD packages are publicly distributed. Windows and macOS binaries remain private for local development and verification. Linux 0.3.3 packages, matching source ZIPs, checksums and build records are available in the [Linux GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3). FreeBSD previews are distributed through the dedicated Release below. The download links below point to Releases. See the [Linux migration plan and implementation record](documentation/linux-release-migration.md). Existing repository download URLs remain available for compatibility.
 
 | OS | Package formats |
 | --- | --- |
@@ -40,7 +40,7 @@ Only Linux packages are publicly distributed. Windows and macOS binaries remain 
 | macOS | `.app` (binaries private) |
 | Ubuntu | `.deb` / `.snap` / standalone executable (see each release for supported versions) |
 | Debian 13 | `.deb` (amd64 / arm64; basic functionality verified on WSL2) |
-| FreeBSD 15.1 / amd64 | Native `.pkg` and matching source (publication pending) |
+| FreeBSD 15.1 / amd64 | Native `.pkg` and matching source (preview release) |
 
 > [!NOTE]
 > Windows and macOS verification artifacts are not added to this public repository or GitHub Releases.
@@ -83,7 +83,14 @@ Debian 13 uses the same deb package as Ubuntu. If a minimal installation display
 
 ### FreeBSD source, package, and installation
 
-A native `folimeld-0.3.3_1.pkg` package and matching source have been created for FreeBSD 15.1 / amd64. Installation, GUI launch, saving, removal, and reinstallation have been verified. **Downloads have not been published yet.** Current artifacts are stored locally in `dist/freebsd/`. Follow the [FreeBSD installation and build instructions](documentation/freebsd-install.md) to run from source or build a package. A matching source ZIP, PyMuPDF/MuPDF sources, SHA-256 checksums, and build records are also ready. See the [package verification record (Japanese)](documentation/freebsd-package-verification_ja.md).
+**0.3.3 / package revision 1** for FreeBSD 15.1 / amd64 is available as a preview in the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3). This is not an official FreeBSD package. Installation, GUI launch, saving, removal, and reinstallation have been verified.
+
+- [Download the amd64 pkg](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/folimeld-0.3.3_1.pkg)
+- [Matching source ZIP for this pkg](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/Folimeld-source-9ceb5ec75dcd3ddb60bb66f0b6996da5e700cf4400bd89b31808f5250b19f23b.zip)
+- [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/SHA256SUMS.txt)
+- [Dependency sources, wheel, and build records](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)
+
+See the [installation and build instructions](documentation/freebsd-install.md) and [package verification record (Japanese)](documentation/freebsd-package-verification_ja.md). Use the matching source ZIP above when rebuilding this package.
 
 On FreeBSD with a configured graphical desktop, run the following as root after obtaining the package. Python, Qt, and other dependencies are installed from the official repository.
 

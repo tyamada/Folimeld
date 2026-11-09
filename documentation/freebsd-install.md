@@ -2,13 +2,13 @@
 
 [English](freebsd-install.md) | [日本語](freebsd-install_ja.md)
 
-Target: FreeBSD 15.1 / amd64, Python 3.12, and a graphical desktop. Local distribution candidates are being prepared; downloads are not published. This is not an official FreeBSD Ports package.
+Target: FreeBSD 15.1 / amd64, Python 3.12, and a graphical desktop. A preview is available in the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3). This is not an official FreeBSD Ports package.
 
 Package creation, installation in a clean chroot, GUI launch, image conversion, saving, removal, and reinstallation have been verified. See the [verification record (Japanese)](freebsd-package-verification_ja.md).
 
 ## Installing the package
 
-Candidates are collected in `dist/freebsd/`: the Folimeld package, matching `Folimeld-source-<SHA256>.zip`, `build-record.json`, `SHA256SUMS.txt`, and `dependency-sources/`. Compare `sha256 -r folimeld-0.3.3_1.pkg` with the entry for that file in the checksum list. Check the other distribution files in the same way.
+Download the [package](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/folimeld-0.3.3_1.pkg) and [checksums](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/SHA256SUMS.txt) from the Release. The [matching source ZIP](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/Folimeld-source-9ceb5ec75dcd3ddb60bb66f0b6996da5e700cf4400bd89b31808f5250b19f23b.zip), `build-record.json`, and PyMuPDF/MuPDF source archives are attached to the same Release. Compare `sha256 -r folimeld-0.3.3_1.pkg` with the entry for that file in the checksum list. Check the other distribution files in the same way. Local build outputs remain in `dist/freebsd/`; files organized for publication are retained in `build/freebsd-release/`.
 
 Install dependencies first as root. Do not rely on `pkg add` for a local file to fetch missing dependencies from the official repository.
 
@@ -36,7 +36,7 @@ Install runtime and build dependencies as root:
 pkg install git python312 py312-pip py312-pyside6 py312-pillow py312-cryptography py312-psutil noto-sans-jp gmake swig pkgconf llvm19
 ```
 
-Before publication, use the updated working tree or the matching source ZIP from the local distribution candidate. Extract that ZIP into a new directory as a regular user. Replace the filename below with the actual hash-based filename.
+Use the matching source ZIP attached to this Release. Extract it into a new directory as a regular user. Replace the filename below with the actual hash-based filename.
 
 ```sh
 python3.12 -m zipfile -e /path/to/Folimeld-source-SHA256.zip Folimeld
@@ -64,6 +64,6 @@ python3.12 tools/build_freebsd_package.py \
 
 Building the package does not require root. The builder verifies the source manifest and records dependency names, versions, and origins, plus SHA-256 hashes of the source ZIP, wheel, and package. Installed files are owned by root:wheel. The package version appends `_1` to the application version as the FreeBSD package revision.
 
-Corresponding sources for bundled native code are [PyMuPDF 1.28.2](https://pypi.org/project/PyMuPDF/1.28.2/), [MuPDF 1.28.2](https://mupdf.com/downloads/archive/mupdf-1.28.2-source.tar.gz), and `packaging/freebsd/pymupdf-1.28.2-freebsd.patch` in this repository. Verify them against the fixed hashes in the build script and retain them with the distribution candidate. External official dependency packages are not bundled.
+Corresponding sources for bundled native code are [PyMuPDF 1.28.2](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/pymupdf-1.28.2.tar.gz), [MuPDF 1.28.2](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/mupdf-1.28.2-source.tar.gz), and `packaging/freebsd/pymupdf-1.28.2-freebsd.patch` in the matching source ZIP. They have been verified against the fixed hashes in the build script. External official dependency packages are not bundled.
 
 References: official FreeBSD pkg [pkg-create(8)](https://github.com/freebsd/pkg/blob/main/docs/pkg-create.8) and [pkg-add(8)](https://github.com/freebsd/pkg/blob/main/docs/pkg-add.8).

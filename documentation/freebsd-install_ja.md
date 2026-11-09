@@ -2,13 +2,13 @@
 
 [English](freebsd-install.md) | [日本語](freebsd-install_ja.md)
 
-対象はFreeBSD 15.1 / amd64、Python 3.12、GUIデスクトップ。現在はローカル配布候補の作成段階で、ダウンロード公開は未実施。FreeBSD公式Portsへの登録や公式パッケージではない。
+対象はFreeBSD 15.1 / amd64、Python 3.12、GUIデスクトップ。[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)で試験配布している。FreeBSD公式Portsへの登録や公式パッケージではない。
 
 pkgの作成、クリーンなchrootでの導入・GUI起動・画像変換・保存・削除・再導入を確認済み。[検証記録](freebsd-package-verification_ja.md)を参照。
 
 ## パッケージの導入
 
-配布候補は `dist/freebsd/` にまとめる。Folimeldパッケージ、対応する `Folimeld-source-<SHA256>.zip`、`build-record.json`、`SHA256SUMS.txt`、`dependency-sources/` を一緒に保管する。`sha256 -r folimeld-0.3.3_1.pkg` の結果を一覧の同名ファイルの値と照合する。ほかの配布ファイルも同様に照合する。
+Releaseから[パッケージ](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/folimeld-0.3.3_1.pkg)と[チェックサム](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/SHA256SUMS.txt)をダウンロードする。[対応ソースZIP](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/Folimeld-source-9ceb5ec75dcd3ddb60bb66f0b6996da5e700cf4400bd89b31808f5250b19f23b.zip)、`build-record.json`、PyMuPDF・MuPDFのソースアーカイブも同じReleaseに添付している。`sha256 -r folimeld-0.3.3_1.pkg` の結果を一覧の同名ファイルの値と照合する。ほかの配布ファイルも同様に照合する。ローカルの作成元は `dist/freebsd/`、公開用の整理済みファイルは `build/freebsd-release/` に保持している。
 
 rootで依存関係を先に導入する。ローカルファイルの `pkg add` は公式リポジトリから不足依存を自動取得する手順として扱わない。
 
@@ -36,7 +36,7 @@ rootでランタイムとビルド用パッケージを導入する。
 pkg install git python312 py312-pip py312-pyside6 py312-pillow py312-cryptography py312-psutil noto-sans-jp gmake swig pkgconf llvm19
 ```
 
-現在は公開前のため、更新済みの作業ツリーまたはローカル配布候補の対応ソースZIPを使う。一般ユーザーで対応ソースZIPを新しいディレクトリーに展開する。以下のファイル名は実際のハッシュ付きファイル名に置き換える。
+このReleaseに添付された対応ソースZIPを使う。一般ユーザーで新しいディレクトリーに展開する。以下のファイル名は実際のハッシュ付きファイル名に置き換える。
 
 ```sh
 python3.12 -m zipfile -e /path/to/Folimeld-source-SHA256.zip Folimeld
@@ -57,13 +57,13 @@ python3.12 -m venv --system-site-packages .venv-freebsd
 ```sh
 python3.12 -c "from tools.source_bundle import source_datas; source_datas('.', 'freebsd-amd64')"
 python3.12 tools/build_freebsd_package.py \
-  --source dist/source/Folimeld-source-実際のSHA256.zip \
-  --wheel build/freebsd-pymupdf/wheels/実際のwheel名.whl \
+  --source dist/source/Folimeld-source-ACTUAL_SHA256.zip \
+  --wheel build/freebsd-pymupdf/wheels/ACTUAL_WHEEL_NAME.whl \
   --output dist/freebsd
 ```
 
 パッケージ作成自体にroot権限は不要。ビルダーはソースのマニフェストを照合し、依存の名称・版・originと、ソース・wheel・パッケージのSHA-256を記録する。インストールファイルはroot:wheel所有で作成する。パッケージの版はアプリ版に `_1` を付けたFreeBSDパッケージ改訂番号。
 
-同梱ネイティブコードの対応ソースは、[PyMuPDF 1.28.2](https://pypi.org/project/PyMuPDF/1.28.2/)、[MuPDF 1.28.2](https://mupdf.com/downloads/archive/mupdf-1.28.2-source.tar.gz)、リポジトリの `packaging/freebsd/pymupdf-1.28.2-freebsd.patch`。ビルドスクリプトで固定したハッシュと照合し、配布候補にも保存する。外部の公式依存パッケージは同梱しない。
+同梱ネイティブコードの対応ソースは、[PyMuPDF 1.28.2](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/pymupdf-1.28.2.tar.gz)、[MuPDF 1.28.2](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/mupdf-1.28.2-source.tar.gz)、対応ソースZIP内の `packaging/freebsd/pymupdf-1.28.2-freebsd.patch`。ビルドスクリプトで固定したハッシュと照合済み。外部の公式依存パッケージは同梱しない。
 
 参考: FreeBSD pkgの公式 [pkg-create(8)](https://github.com/freebsd/pkg/blob/main/docs/pkg-create.8)、[pkg-add(8)](https://github.com/freebsd/pkg/blob/main/docs/pkg-add.8)。

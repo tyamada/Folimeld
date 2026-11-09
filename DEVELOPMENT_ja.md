@@ -71,7 +71,7 @@ OSパッケージと `--system-site-packages` の仮想環境を使用し、PyMu
 
 ## 公開・非公開の配布方針
 
-Windows・macOSのバイナリは非公開とし、ビルド・検証は手元で行います。Linuxのdeb/Snapは公開します。Linuxパッケージ、SHA-256一覧、対応ソースZIP、ビルド記録を同じReleaseにまとめる移行案は[こちら](documentation/linux-release-migration_ja.md)です。公開前の資材検査は以下で行えます。アップロードやタグ作成は行いません。
+Windows・macOSのバイナリは非公開とし、ビルド・検証は手元で行います。Linuxのdeb/SnapとFreeBSDのpkgは公開します。FreeBSD版は[専用Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)で試験配布し、[導入・ビルド手順](documentation/freebsd-install_ja.md)を用意しています。Linuxパッケージ、SHA-256一覧、対応ソースZIP、ビルド記録を同じReleaseにまとめる移行案は[こちら](documentation/linux-release-migration_ja.md)です。Linux版の公開前の資材検査は以下で行えます。アップロードやタグ作成は行いません。
 
 ```bash
 python -m tools.prepare_linux_release --version 0.3.3

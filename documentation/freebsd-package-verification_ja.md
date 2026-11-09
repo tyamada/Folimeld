@@ -1,6 +1,6 @@
 # FreeBSDパッケージの作成・導入確認
 
-検証日: 2026-11-09（日本時間）。パッケージはローカル配布候補で、GitHub Releasesへの公開は未実施。
+検証・公開日: 2026-11-09（日本時間）。[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)でFreeBSD 15.1 / amd64向けに試験配布している。
 
 ## 成果物
 
@@ -46,3 +46,13 @@ Python 3.12、PySide6、Pillow、cryptography、psutil、日本語フォント `
 [自動スモークスクリプト](freebsd-package-verification/smoke.py)はインストール先だけを `PYTHONPATH` に指定して実行し、[出力](freebsd-package-verification/clean-smoke.txt)を保存した。初版スクリプトは処理成功後のQtオブジェクト破棄で異常終了したため、QApplicationの破棄前にウィジェットを明示的に破棄するよう修正した。修正後は終了コード0。
 
 今後の別バージョンからのアップグレード、別のFreeBSD版・CPU、公式Portsでのビルドは未検証。インストール手順は[日本語](freebsd-install_ja.md)／[English](freebsd-install.md)を参照。
+
+## 公開後の照合
+
+Releaseタグは `freebsd-v0.3.3`、対象コミットは `14ab6b647a7dd49bd080be4eff4f2de160ea483e`。プレリリースとして公開し、既存のLinux安定版のlatest指定は変更していない。
+
+pkg、対応ソースZIP、ネイティブwheel、PyMuPDF/MuPDFの対応ソース、取得記録、ビルド記録、日英インストール手順、ライセンス、チェックサムの計12ファイルを添付した。公開用のファイル名はフラットな構成にし、`SHA256SUMS.txt`をその構成に合わせて生成した。公開済みの成果物は差し替えていない。
+
+全12ファイルを認証なしの公開URLから取得し直した。チェックサム一覧にある11ファイルはすべてSHA-256が一致した。[公開ダウンロード照合記録](freebsd-package-verification/public-downloads.json)を参照。ダウンロードしたpkgをFreeBSDのクリーンなchrootへ再導入し、`pkg check -d`、`pkg check -s`、フォーム・Undo/Redo・画像変換・保存ワーカーのスモークテストが終了コード0で成功した。[スモーク出力](freebsd-package-verification/public-smoke.txt)。
+
+配布pkgと対応ソースZIPのハッシュの関連を維持した。ソースZIPは上記ビルド時のスナップショットで、後続の公開文書更新を含むReleaseタグの自動生成ソースZIPとは区別する。公開前に、実行・ビルド入力157ファイルが対応ソースZIPと一致することを再確認した。
