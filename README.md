@@ -47,6 +47,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | FreeBSD 15.1 / amd64 | Native `.pkg` and matching source (preview release) |
 | FreeBSD 15.1 / aarch64 | Native `.pkg` and matching source (preview release) |
 | NetBSD 11.1 / amd64 | Native `.tgz` and matching source (preview release) |
+| NetBSD 11.1 / aarch64 | Native `.tgz` and matching source (preview release) |
 | OpenBSD 8.0 / amd64 | Signed native `.tgz` and matching source (preview release) |
 
 > [!NOTE]
@@ -158,6 +159,11 @@ export PKG_PATH=https://cdn.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/11.0_20
 ```
 
 Run `/usr/pkg/bin/folimeld` or `/usr/pkg/bin/folimeld /path/to/file.pdf` as a regular user. Remove as root with `/usr/pkg/sbin/pkg_delete folimeld`. Other NetBSD releases and CPUs have not been tested.
+
+**0.3.3** for **NetBSD 11.1 / aarch64** is available in the [ARM64 preview release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.3).
+
+- [aarch64 tgz](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.3/folimeld-0.3.3.tgz)
+- [aarch64 installation instructions](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.3/INSTALL.txt)
 
 ### OpenBSD source, packages, and installation
 

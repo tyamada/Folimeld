@@ -47,6 +47,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | FreeBSD 15.1 / amd64 | ネイティブ `.pkg` と対応ソース（試験配布） |
 | FreeBSD 15.1 / aarch64 | ネイティブ `.pkg` と対応ソース（試験配布） |
 | NetBSD 11.1 / amd64 | ネイティブ `.tgz` と対応ソース（試験配布） |
+| NetBSD 11.1 / aarch64 | ネイティブ `.tgz` と対応ソース（試験配布） |
 | OpenBSD 8.0 / amd64 | 署名付きネイティブ `.tgz` と対応ソース（試験配布） |
 
 > [!NOTE]
@@ -158,6 +159,11 @@ export PKG_PATH=https://cdn.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/11.0_20
 ```
 
 一般ユーザーで `/usr/pkg/bin/folimeld` または `/usr/pkg/bin/folimeld /path/to/file.pdf` を実行します。削除はrootで `/usr/pkg/sbin/pkg_delete folimeld`。他のNetBSD版・CPUは未検証です。
+
+**NetBSD 11.1 / aarch64** 向けの **0.3.3** は、[ARM64試験配布](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.3)から取得できます。
+
+- [aarch64版tgz](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.3/folimeld-0.3.3.tgz)
+- [aarch64版の導入手順](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.3/INSTALL_ja.txt)
 
 ### OpenBSD版のソース・パッケージ・インストール
 
