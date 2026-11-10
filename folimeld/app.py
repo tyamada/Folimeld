@@ -251,12 +251,15 @@ class MainWindow(QMainWindow):
                 QMessageBox.information(self, self.tr_("import_images"), self.tr_("image_empty"))
                 return
             dialog = ImageImportDialog(entries, self.tr_, self)
-            while dialog.exec():
-                if not self.confirm_discard():
-                    return
-                if dialog.convert(self.model):
-                    self.refresh()
-                    return
+            try:
+                while dialog.exec():
+                    if not self.confirm_discard():
+                        return
+                    if dialog.convert(self.model):
+                        self.refresh()
+                        return
+            finally:
+                dialog.deleteLater()
         except Exception as exc:
             self.error(exc)
 

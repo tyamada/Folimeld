@@ -91,6 +91,7 @@ class ImageImportDialog(QDialog):
             progress.setAutoReset(False)
             result = []
             timer = QTimer(progress)
+            connected = False
 
             def poll():
                 try:
@@ -112,6 +113,7 @@ class ImageImportDialog(QDialog):
                 process.start()
                 sender.close()
                 timer.timeout.connect(poll)
+                connected = True
                 timer.start(50)
                 progress.exec()
                 timer.stop()
@@ -132,10 +134,15 @@ class ImageImportDialog(QDialog):
                     return False
                 return True
             finally:
-                timer.stop()
-                if process.pid is not None:
-                    if process.is_alive():
-                        process.terminate()
-                    process.join()
-                receiver.close()
-                sender.close()
+                try:
+                    timer.stop()
+                    if connected:
+                        timer.timeout.disconnect(poll)
+                    if process.pid is not None:
+                        if process.is_alive():
+                            process.terminate()
+                        process.join()
+                finally:
+                    receiver.close()
+                    sender.close()
+                    progress.deleteLater()
