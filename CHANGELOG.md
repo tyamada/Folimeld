@@ -39,6 +39,12 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.4 - 2026-11-10
+
+- Released Folimeld 0.3.4 for Linux on November 10, 2026.
+- Published amd64 and ARM64 DEB packages for Ubuntu 24.04 and Debian 13, and amd64 and ARM64 Snap packages for Ubuntu 24.04.
+- Matching source archives and SHA-256 checksums are available in the [Linux 0.3.4 GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4).
+
 ## 1.0.1.0 - 2026-11-09
 
 - Released Folimeld 1.0.1.0 for Windows 11 (x64) on November 9, 2026. It is available for free on the Microsoft Store in Japan and the United States. [Microsoft Store (Japan)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [Microsoft Store (United States)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)

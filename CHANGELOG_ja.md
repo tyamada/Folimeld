@@ -39,6 +39,12 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.4 - 2026-11-10
+
+- 2026年11月10日、Folimeld 0.3.4のLinux版を公開しました。
+- Ubuntu 24.04・Debian 13向けにamd64／ARM64のDEB、Ubuntu 24.04向けにamd64／ARM64のSnapを公開しました。
+- 対応ソースとSHA-256チェックサムは[Linux版0.3.4のGitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4)で確認できます。
+
 ## 1.0.1.0 - 2026-11-09
 
 - 2026年11月9日、Folimeld 1.0.1.0（Windows 11 x64）を日本と米国のMicrosoft Storeで無料公開しました。 [日本のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [米国のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
