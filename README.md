@@ -4,7 +4,7 @@
 
 ![Folimeld icon](assets/Folimeld.iconset/icon_128x128.png)
 
-Folimeld is a desktop application for visually rearranging, rotating, inserting, and deleting PDF pages. It supports Windows, macOS, Ubuntu, Debian, and FreeBSD 15.1 (amd64), and processes files locally without sending them to external services.
+Folimeld is a desktop application for visually rearranging, rotating, inserting, and deleting PDF pages. It supports Windows, macOS, Ubuntu, Debian, and FreeBSD 15.1 (amd64 and ARM64), and processes files locally without sending them to external services.
 
 ![Folimeld main window](documentation/screenshots/main-window.png)
 
@@ -26,7 +26,7 @@ Choose File → Exit to close the app, with a save prompt for unsaved changes. O
 - Edit the PDF version, page layout, and binding direction
 - Set or remove a password required to open a PDF
 - Available in Japanese, English, German, Spanish, French, Korean, Portuguese, and Chinese
-- Runs on Windows 11 (Intel/AMD x64), macOS, Ubuntu, Debian, and FreeBSD 15.1 (amd64)
+- Runs on Windows 11 (Intel/AMD x64), macOS, Ubuntu, Debian, and FreeBSD 15.1 (amd64 and ARM64)
 
 Signed packages and matching source for OpenBSD 8.0 / amd64 are also available as a preview. Verification used a VirtualBox VM with 1 vCPU and 16 GiB RAM. See the OpenBSD section below for installation and the [verification record (Japanese)](documentation/openbsd-package-verification_ja.md) for the tested scope.
 
@@ -147,6 +147,8 @@ Run `folimeld` or `folimeld /path/to/file.pdf` as a regular user. To uninstall, 
 
 - [aarch64 pkg](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.3_1/folimeld-0.3.3_1.pkg)
 - [aarch64 installation instructions](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.3_1/INSTALL.txt)
+
+The release also includes matching source and SHA-256 checksums. The package was tested on FreeBSD 15.1 / aarch64 in an Xorg desktop session under QEMU with HVF on a MacBook Air M5.
 
 ### NetBSD source, package, and installation
 

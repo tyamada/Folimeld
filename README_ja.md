@@ -4,7 +4,7 @@
 
 ![Folimeld icon](assets/Folimeld.iconset/icon_128x128.png)
 
-Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、削除できるデスクトップアプリです。Windows、macOS、Ubuntu、Debian、FreeBSD 15.1（amd64）に対応し、編集するファイルを外部サービスへ送信せず、ローカル環境で処理します。
+Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、削除できるデスクトップアプリです。Windows、macOS、Ubuntu、Debian、FreeBSD 15.1（amd64・ARM64）に対応し、編集するファイルを外部サービスへ送信せず、ローカル環境で処理します。
 
 ![Folimeld main window](documentation/screenshots/main-window.png)
 
@@ -26,7 +26,7 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 - PDFバージョン、ページレイアウト、綴じ方向を編集
 - 閲覧パスワードの設定と解除
 - 日本語、英語、ドイツ語、スペイン語、フランス語、韓国語、ポルトガル語、中国語に対応
-- Windows 11（Intel/AMD x64）、macOS、Ubuntu、Debian、FreeBSD 15.1（amd64）で利用可能
+- Windows 11（Intel/AMD x64）、macOS、Ubuntu、Debian、FreeBSD 15.1（amd64・ARM64）で利用可能
 
 OpenBSD 8.0 / amd64向けにも署名付きパッケージと対応ソースを試験配布しています。検証は1 vCPU・16 GiBのVirtualBox VMで実施しました。導入方法は下記のOpenBSD節、確認範囲は[検証記録](documentation/openbsd-package-verification_ja.md)を参照してください。
 
@@ -147,6 +147,8 @@ pkg add ./folimeld-0.3.3_1.pkg
 
 - [aarch64版pkg](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.3_1/folimeld-0.3.3_1.pkg)
 - [aarch64版の導入手順](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.3_1/INSTALL_ja.txt)
+
+リリースには対応ソースとSHA-256チェックサムも掲載しています。MacBook Air M5上のQEMU（HVF）でFreeBSD 15.1 / aarch64を起動し、Xorgデスクトップでパッケージを検証しました。
 
 ### NetBSD版のソース・パッケージ・インストール
 
