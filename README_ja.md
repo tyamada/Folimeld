@@ -52,7 +52,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 ### Windows 11のインストールとソースビルド
 
 - **Microsoft Storeからインストール** — 上の日本または米国の掲載リンクを開き、Microsoft Storeで「入手」または「インストール」を選びます。完了後、スタートメニューからFolimeldを起動します。
-- **ソースを取得** — [公開リポジトリのmain](https://github.com/tyamada/Folimeld/tree/main)の「Code → Download ZIP」またはGitから、Windows用コードとビルドスクリプトを取得できます。Store版1.0.1.0の提出物に対応するソースZIPの公開先は未確認です。
+- **ソースを取得** — [公開リポジトリのmain](https://github.com/tyamada/Folimeld/tree/main)の「Code → Download ZIP」またはGitから、Windows用コードとビルドスクリプトを取得できます。
 - **Store版1.0.1.0 x64の対応ソース** — [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt) · [提出物との対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json)。公開用ZIPでは文書3件を公開向けに整理し、アプリコードとビルド用ファイルは提出時のソースと同一です。
 
 Windows 11 x64で、Gitとx64版Python 3.14を用意します。取得したソースのルートでPowerShellを開き、次を実行します。
