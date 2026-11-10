@@ -17,7 +17,7 @@ This document explains how to set up a development environment, run tests, build
 
 ### Windows
 
-The Windows edition supports both Intel/AMD (x64) and ARM (ARM64).
+The Microsoft Store release targets Windows 11 x64. See the ARM64 build instructions below.
 
 ```bat
 py -m venv .venv
@@ -71,7 +71,7 @@ After setup, launch from the repository root within a regular user's X11 session
 
 ## Public and private distribution policy
 
-Windows and macOS binaries stay private and are built and verified locally. Linux deb/Snap and FreeBSD pkg packages are public. FreeBSD previews are distributed through a [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3), with [installation and build instructions](documentation/freebsd-install.md). The [migration plan](documentation/linux-release-migration.md) groups Linux packages, SHA-256 checksums, corresponding source ZIPs and build records in one Release. Run the following offline asset check before Linux publication; it does not upload files or create tags.
+The Microsoft Store distributes the Windows 11 x64 release. Windows test artifacts and macOS binaries are kept locally. Linux deb/Snap and FreeBSD pkg packages are public. FreeBSD previews are distributed through a [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3), with [installation and build instructions](documentation/freebsd-install.md). The [migration plan](documentation/linux-release-migration.md) groups Linux packages, SHA-256 checksums, corresponding source ZIPs and build records in one Release. Run the following offline asset check before Linux publication; it does not upload files or create tags.
 
 ```bash
 python -m tools.prepare_linux_release --version 0.3.3
@@ -174,7 +174,9 @@ The unpackaged edition registers Folimeld in Windows **Open with** at startup. T
 
 ## MSIX for Microsoft Store
 
-The user reports that the existing Folimeld registration is an EXE or MSI app. MSIX has been selected for publication, but migration/name handling and MSIX identity information await confirmation. The [release plan](documentation/windows-store-release-plan.md) records the status and requirements for each submission type.
+Folimeld 1.0.1.0 is published as an MSIX product on the Microsoft Store in Japan and the United States. Use the same product's package identity and publisher for Store updates. See the [release plan](documentation/windows-store-release-plan.md).
+
+To build from the source used for Store version 1.0.1.0 x64, download the [source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) and verify it against the [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt). The [submission association record](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json) links the public archive to the submitted MSIX. The public archive updates three documentation files and retains the application source and build files from the submitted build.
 
 ### Intel/AMD (x64)
 

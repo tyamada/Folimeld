@@ -17,7 +17,7 @@
 
 ### Windows
 
-Windows版はIntel/AMD（x64）とARM（ARM64）の両方に対応しています。
+Microsoft Store配信版はWindows 11 x64向けです。ARM64のビルド手順は後述します。
 
 ```bat
 py -m venv .venv
@@ -71,7 +71,7 @@ OSパッケージと `--system-site-packages` の仮想環境を使用し、PyMu
 
 ## 公開・非公開の配布方針
 
-Windows・macOSのバイナリは非公開とし、ビルド・検証は手元で行います。Linuxのdeb/SnapとFreeBSDのpkgは公開します。FreeBSD版は[専用Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)で試験配布し、[導入・ビルド手順](documentation/freebsd-install_ja.md)を用意しています。Linuxパッケージ、SHA-256一覧、対応ソースZIP、ビルド記録を同じReleaseにまとめる移行案は[こちら](documentation/linux-release-migration_ja.md)です。Linux版の公開前の資材検査は以下で行えます。アップロードやタグ作成は行いません。
+Windows 11 x64の製品版はMicrosoft Storeで配信し、Windowsの検証用成果物とmacOSのバイナリは手元で管理します。Linuxのdeb/SnapとFreeBSDのpkgは公開します。FreeBSD版は[専用Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)で試験配布し、[導入・ビルド手順](documentation/freebsd-install_ja.md)を用意しています。Linuxパッケージ、SHA-256一覧、対応ソースZIP、ビルド記録を同じReleaseにまとめる移行案は[こちら](documentation/linux-release-migration_ja.md)です。Linux版の公開前の資材検査は以下で行えます。アップロードやタグ作成は行いません。
 
 ```bash
 python -m tools.prepare_linux_release --version 0.3.3
@@ -174,7 +174,9 @@ build_exe.bat
 
 ## Microsoft Store向けMSIX
 
-ユーザーによる確認では既存のFolimeld登録は「EXE または MSI アプリ」です。公開方式はMSIXを選択していますが、MSIX登録への移行・名前の扱いとIdentity情報は確認待ちです。[公開計画](documentation/windows-store-release-plan_ja.md) に状況と提出方式ごとの要件を記録しています。
+Folimeld 1.0.1.0はMSIX製品としてMicrosoft Storeで日本と米国に公開済みです。Storeへの更新には同じ製品のパッケージIDと発行元を使用します。[公開計画](documentation/windows-store-release-plan_ja.md)を参照してください。
+
+Store版1.0.1.0 x64のソースからビルドする場合は、[ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip)を取得し、[SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt)で照合してください。[提出物との対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json)で公開用ZIPと提出MSIXの対応を確認できます。公開用ZIPでは文書3件を更新し、アプリコードとビルド用ファイルは提出時のものを収録しています。
 
 ### Intel/AMD（x64）
 
