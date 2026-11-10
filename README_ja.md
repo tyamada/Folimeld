@@ -45,6 +45,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | Ubuntu | `.deb` / `.snap` / 単体実行ファイル（対応バージョンは各リリースを参照） |
 | Debian 13 | `.deb`（amd64 / arm64、WSL2で基本動作確認済み） |
 | FreeBSD 15.1 / amd64 | ネイティブ `.pkg` と対応ソース（試験配布） |
+| FreeBSD 15.1 / aarch64 | ネイティブ `.pkg` と対応ソース（試験配布） |
 | NetBSD 11.1 / amd64 | ネイティブ `.tgz` と対応ソース（試験配布） |
 | OpenBSD 8.0 / amd64 | 署名付きネイティブ `.tgz` と対応ソース（試験配布） |
 
@@ -138,7 +139,12 @@ pkg install python312 py312-pyside6 py312-pillow py312-cryptography py312-psutil
 pkg add ./folimeld-0.3.3_1.pkg
 ```
 
-一般ユーザーで `folimeld` または `folimeld /path/to/file.pdf` を実行します。削除はrootで `pkg delete folimeld`。フォーム読み込みの不具合を修正したPyMuPDF/MuPDF 1.28.2をアプリ専用領域に同梱し、システムのPyMuPDFは置き換えません。別のFreeBSD版・CPUは未検証です。[GUI検証](documentation/freebsd-gui-verification_ja.md)と[画像取り込み・保存失敗・負荷試験](documentation/freebsd-extended-verification_ja.md)の記録も参照してください。
+一般ユーザーで `folimeld` または `folimeld /path/to/file.pdf` を実行します。削除はrootで `pkg delete folimeld`。フォーム読み込みの不具合を修正したPyMuPDF/MuPDF 1.28.2をアプリ専用領域に同梱し、システムのPyMuPDFは置き換えません。このamd64パッケージはFreeBSD 15.1 / amd64で検証しました。[GUI検証](documentation/freebsd-gui-verification_ja.md)と[画像取り込み・保存失敗・負荷試験](documentation/freebsd-extended-verification_ja.md)の記録も参照してください。
+
+**FreeBSD 15.1 / aarch64** 向けの **0.3.3 / パッケージ改訂1** は、[ARM64試験配布](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.3_1)から取得できます。
+
+- [aarch64版pkg](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.3_1/folimeld-0.3.3_1.pkg)
+- [aarch64版の導入手順](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.3_1/INSTALL_ja.txt)
 
 ### NetBSD版のソース・パッケージ・インストール
 
