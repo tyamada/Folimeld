@@ -49,6 +49,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | NetBSD 11.1 / amd64 | ネイティブ `.tgz` と対応ソース（試験配布） |
 | NetBSD 11.1 / aarch64 | ネイティブ `.tgz` と対応ソース（試験配布） |
 | OpenBSD 8.0 / amd64 | 署名付きネイティブ `.tgz` と対応ソース（試験配布） |
+| OpenBSD 8.0 / arm64 | 署名付きネイティブ `.tgz` と対応ソース（試験配布） |
 
 > [!NOTE]
 > Windows・macOSの検証用成果物は、公開リポジトリやGitHub Releasesへ追加しません。
@@ -185,7 +186,13 @@ install -m 644 folimeld-80-pkg.pub /etc/signify/folimeld-80-pkg.pub
 pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.3.tgz
 ```
 
-一般ユーザーで `folimeld` または `folimeld /path/to/file.pdf` を実行します。削除はrootで `pkg_delete folimeld`、専用依存も不要なら `pkg_delete folimeld-mupdf`。システムのPyMuPDFは置き換えません。検証は1 vCPU・16 GiBのVMに限定し、4 vCPU・他のOS版・CPUは未確認です。
+一般ユーザーで `folimeld` または `folimeld /path/to/file.pdf` を実行します。削除はrootで `pkg_delete folimeld`、専用依存も不要なら `pkg_delete folimeld-mupdf`。システムのPyMuPDFは置き換えません。上記のamd64版は1 vCPU・16 GiBのVMで検証しました。
+
+**OpenBSD 8.0 / arm64** 向けの **0.3.3** は、[ARM64試験配布](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.3)から取得できます。本体と専用MuPDFはamd64版と同じ公開鍵で署名しています。
+
+- [arm64版本体](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.3/folimeld-0.3.3.tgz)
+- [arm64版専用MuPDF](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.3/folimeld-mupdf-1.28.2.tgz)
+- [arm64版の署名照合と導入手順](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.3/INSTALL_ja.txt)
 
 ## 基本的な使い方
 

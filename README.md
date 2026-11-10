@@ -49,6 +49,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | NetBSD 11.1 / amd64 | Native `.tgz` and matching source (preview release) |
 | NetBSD 11.1 / aarch64 | Native `.tgz` and matching source (preview release) |
 | OpenBSD 8.0 / amd64 | Signed native `.tgz` and matching source (preview release) |
+| OpenBSD 8.0 / arm64 | Signed native `.tgz` and matching source (preview release) |
 
 > [!NOTE]
 > Windows and macOS verification artifacts are not added to this public repository or GitHub Releases.
@@ -185,7 +186,13 @@ install -m 644 folimeld-80-pkg.pub /etc/signify/folimeld-80-pkg.pub
 pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.3.tgz
 ```
 
-Run `folimeld` or `folimeld /path/to/file.pdf` as a regular user. Remove as root with `pkg_delete folimeld`, then `pkg_delete folimeld-mupdf` if the private dependency is no longer needed. System PyMuPDF is not replaced. Verification is limited to a VM with 1 vCPU and 16 GiB RAM; 4 vCPUs, other OS versions, and other architectures are unverified.
+Run `folimeld` or `folimeld /path/to/file.pdf` as a regular user. Remove as root with `pkg_delete folimeld`, then `pkg_delete folimeld-mupdf` if the private dependency is no longer needed. System PyMuPDF is not replaced. The amd64 packages above were verified in a VM with 1 vCPU and 16 GiB of RAM.
+
+**0.3.3** for **OpenBSD 8.0 / arm64** is available in the [ARM64 preview release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.3). The application and private MuPDF packages use the same signing key as the amd64 release.
+
+- [arm64 application package](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.3/folimeld-0.3.3.tgz)
+- [arm64 private MuPDF package](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.3/folimeld-mupdf-1.28.2.tgz)
+- [arm64 signature verification and installation](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.3/INSTALL.txt)
 
 ## Basic usage
 
