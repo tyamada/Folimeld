@@ -1,0 +1,22 @@
+Folimeld Linux 0.3.4
+
+Folimeld is distributed under GNU AGPL version 3. See LICENSE and the
+AGPL, GPL, LGPL, and third-party notices in this directory.
+
+The Linux packages omit Qt Virtual Keyboard. They use unmodified Qt
+and Qt for Python binaries from the pinned 6.11.2 wheels. PyMuPDF and
+MuPDF 1.28.2 are used under AGPL version 3. The binary packages also
+include Python and other dependencies. See the dependency notices and
+source index supplied alongside the release packages for exact versions
+and per-component terms. The Snap uses separate runtime content snaps.
+
+For Folimeld's source, use the matching Folimeld-source ZIP listed in the
+artifact/source record. See packaging/linux/build-release-candidate.sh
+for the candidate build and packaging instructions. The dependency source
+set includes the available upstream and distribution source archives.
+
+To test a replacement QtCore, rebuild the matching Qt release with GLib
+support and rebuild Folimeld with the replacement library in the
+PyInstaller specification. The Linux application source and packaging
+scripts can be used to build and install the result locally. Local Snap
+installation requires the applicable runtime content and snapd options.
