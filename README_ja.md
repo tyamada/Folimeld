@@ -26,7 +26,7 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 - PDFバージョン、ページレイアウト、綴じ方向を編集
 - 閲覧パスワードの設定と解除
 - 日本語、英語、ドイツ語、スペイン語、フランス語、韓国語、ポルトガル語、中国語に対応
-- Windows（Intel/AMD（x64）版・ARM（arm64）版の両方）、macOS、Ubuntu、Debian、FreeBSD 15.1（amd64）で利用可能
+- Windows 11（Intel/AMD x64）、macOS、Ubuntu、Debian、FreeBSD 15.1（amd64）で利用可能
 
 OpenBSD 8.0 / amd64向けにも署名付きパッケージと対応ソースを試験配布しています。検証は1 vCPU・16 GiBのVirtualBox VMで実施しました。導入方法は下記のOpenBSD節、確認範囲は[検証記録](documentation/openbsd-package-verification_ja.md)を参照してください。
 
@@ -48,6 +48,28 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 
 > [!NOTE]
 > Windows・macOSの検証用成果物は、公開リポジトリやGitHub Releasesへ追加しません。
+
+### Windows 11のインストールとソースビルド
+
+- **Microsoft Storeからインストール** — 上の日本または米国の掲載リンクを開き、Microsoft Storeで「入手」または「インストール」を選びます。完了後、スタートメニューからFolimeldを起動します。
+- **ソースを取得** — [公開リポジトリのmain](https://github.com/tyamada/Folimeld/tree/main)の「Code → Download ZIP」またはGitから、Windows用コードとビルドスクリプトを取得できます。Store版1.0.1.0の提出物に対応するソースZIPの公開先は未確認です。
+- **Store版1.0.1.0 x64の対応ソース** — [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt) · [提出物との対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json)。公開用ZIPでは文書3件を公開向けに整理し、アプリコードとビルド用ファイルは提出時のソースと同一です。
+
+Windows 11 x64で、Gitとx64版Python 3.14を用意します。取得したソースのルートでPowerShellを開き、次を実行します。
+
+```powershell
+py -3.14 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt -c constraints-release.txt pyinstaller
+.\build_exe.bat
+```
+
+生成された `dist\Folimeld.exe` を直接起動できます。ローカル試験用のMSIXを作るには、Windows SDKのMakeAppxを導入し、同じソースのルートで次を実行します。
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 -Architecture x64
+```
+
+生成される `dist\Folimeld_<版>_x64.msix` は未署名です。試験機への導入には、Windows SDKのSignToolを使った[開発用MSIXの署名・導入・後始末手順](documentation/windows-store-test-bundle_ja.md)に従ってください。Store向けのビルドには別途、[StoreのパッケージID・発行元を使う手順](documentation/windows-store-release-plan_ja.md)があります。
 
 ### Ubuntu / Debian版を直接ダウンロード
 
@@ -166,6 +188,17 @@ pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.3.tgz
 Microsoft Store版 1.0.1.0 では、応援購入を提供していません。
 
 Linux版では「ヘルプ → 開発を応援する…」に [GitHub Sponsors](https://github.com/sponsors/tyamada) への案内を表示します。案内画面のボタンからブラウザーで支援ページを開けます。支援は任意であり、利用できる機能は支援の有無で変わりません。
+
+## TODO
+
+- Windows 11 x64で、Store版1.0.1.0からの更新と、設定・PDF操作の保持を検証する。
+- Windows 11 ARM64ネイティブ版は、依存ライブラリと実機での動作を確認したうえで配布を判断する。
+
+## 既知の問題点と制約
+
+- Microsoft Storeで配信中の1.0.1.0はWindows 11 x64向けです。ARM64ネイティブのStore配信版は未提供です。
+- Store配信版のメインウィンドウはPer-Monitor V2を確認済みです。150％・200％での表示と操作は未検証です。
+- 旧開発ビルドのローカルWACKではDPI警告（TEST92）と任意検査のFAIL（TEST88）が出ました。旧DPI警告の原因と、Store認定でのTEST92・TEST88・`runFullTrust` の個別判定は未確認です。Store版1.0.1.0は提出全体として認定に合格しています。[受入記録](documentation/windows-store-acceptance_ja.md)
 
 ## 開発・コントリビューション
 

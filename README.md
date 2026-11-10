@@ -26,7 +26,7 @@ Choose File → Exit to close the app, with a save prompt for unsaved changes. O
 - Edit the PDF version, page layout, and binding direction
 - Set or remove a password required to open a PDF
 - Available in Japanese, English, German, Spanish, French, Korean, Portuguese, and Chinese
-- Runs on Windows (both Intel/AMD (x64) and ARM (arm64) editions), macOS, Ubuntu, Debian, and FreeBSD 15.1 (amd64)
+- Runs on Windows 11 (Intel/AMD x64), macOS, Ubuntu, Debian, and FreeBSD 15.1 (amd64)
 
 Signed packages and matching source for OpenBSD 8.0 / amd64 are also available as a preview. Verification used a VirtualBox VM with 1 vCPU and 16 GiB RAM. See the OpenBSD section below for installation and the [verification record (Japanese)](documentation/openbsd-package-verification_ja.md) for the tested scope.
 
@@ -48,6 +48,28 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 
 > [!NOTE]
 > Windows and macOS verification artifacts are not added to this public repository or GitHub Releases.
+
+### Windows 11 installation and source builds
+
+- **Install from the Microsoft Store** — Open the Japan or United States listing above, then select **Get** or **Install** in the Microsoft Store. Launch Folimeld from the Start menu when installation completes.
+- **Get the source** — Use **Code → Download ZIP** or Git to get the Windows code and build scripts from the [public main branch](https://github.com/tyamada/Folimeld/tree/main).
+- **Source for Store version 1.0.1.0 x64** — [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt) · [Submission association record](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json). Three documentation files were revised for publication. The application source and build files match the submitted build's source snapshot.
+
+On Windows 11 x64, install Git and x64 Python 3.14. Open PowerShell at the root of the source tree and run:
+
+```powershell
+py -3.14 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt -c constraints-release.txt pyinstaller
+.\build_exe.bat
+```
+
+You can run the resulting `dist\Folimeld.exe` directly. To build an MSIX for local testing, install MakeAppx from the Windows SDK and run this from the same directory:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 -Architecture x64
+```
+
+The resulting `dist\Folimeld_<version>_x64.msix` is unsigned. For installation on a test machine, use the [development MSIX signing, installation and cleanup instructions](documentation/windows-store-test-bundle.md), which use SignTool from the Windows SDK. Store builds follow the [instructions for using the Store package identity and publisher](documentation/windows-store-release-plan.md).
 
 ### Direct downloads for Ubuntu / Debian
 
@@ -166,6 +188,17 @@ The display language, image size, and last opened folder are saved on your devic
 Microsoft Store version 1.0.1.0 does not offer supporter purchases.
 
 In the Linux edition, **Help → Support development…** displays information about [GitHub Sponsors](https://github.com/sponsors/tyamada). The button in the dialog opens the support page in your browser. Support is optional, and all features remain available whether or not you contribute.
+
+## TODO
+
+- Verify the Windows 11 x64 upgrade from Store version 1.0.1.0, including preference retention and PDF operations.
+- Verify dependencies and behavior on Windows 11 ARM64 hardware before deciding whether to distribute a native build.
+
+## Known issues and limitations
+
+- Microsoft Store version 1.0.1.0 targets Windows 11 x64. A native ARM64 Store package is pending.
+- The main window of the Store-delivered build was confirmed to use Per-Monitor V2. Visual layout and operation at 150% and 200% scaling remain untested.
+- Earlier local WACK runs on development builds reported a DPI warning (TEST92) and an optional test failure (TEST88). The cause of the earlier DPI warning and the individual Store certification outcomes for TEST92, TEST88 and `runFullTrust` remain unconfirmed. Store version 1.0.1.0 passed certification overall. [Acceptance record](documentation/windows-store-acceptance.md)
 
 ## Development and contributions
 
