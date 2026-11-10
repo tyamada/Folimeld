@@ -41,6 +41,7 @@ Linux and FreeBSD packages are publicly distributed. Windows and macOS binaries 
 | Ubuntu | `.deb` / `.snap` / standalone executable (see each release for supported versions) |
 | Debian 13 | `.deb` (amd64 / arm64; basic functionality verified on WSL2) |
 | FreeBSD 15.1 / amd64 | Native `.pkg` and matching source (preview release) |
+| NetBSD 11.1 / amd64 | Native `.tgz` and matching source (publication being prepared) |
 
 > [!NOTE]
 > Windows and macOS verification artifacts are not added to this public repository or GitHub Releases.
@@ -100,6 +101,19 @@ pkg add ./folimeld-0.3.3_1.pkg
 ```
 
 Run `folimeld` or `folimeld /path/to/file.pdf` as a regular user. To uninstall, run `pkg delete folimeld` as root. PyMuPDF/MuPDF 1.28.2, which fixes the form-loading crash, is bundled in the application's private directory without replacing system PyMuPDF. Other FreeBSD versions and CPUs are unverified. See the [GUI verification](documentation/freebsd-gui-verification_ja.md) and [image import, save failure, and load tests](documentation/freebsd-extended-verification_ja.md) (Japanese).
+
+### NetBSD source, package, and installation
+
+The NetBSD 11.1 / amd64 package `folimeld-0.3.3.tgz` is being prepared for publication. PySide6/shiboken6 and PyMuPDF/MuPDF are bundled privately; Python, Qt, and other dependencies use official packages. See the [installation and source build instructions](documentation/netbsd-install.md).
+
+After obtaining the package, run as root on NetBSD with an X11 desktop configured.
+
+```sh
+export PKG_PATH=https://cdn.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/11.0_2026Q3/All
+/usr/pkg/sbin/pkg_add ./folimeld-0.3.3.tgz
+```
+
+Run `/usr/pkg/bin/folimeld` or `/usr/pkg/bin/folimeld /path/to/file.pdf` as a regular user. Remove as root with `/usr/pkg/sbin/pkg_delete folimeld`. Other NetBSD releases and CPUs have not been tested.
 
 ## Basic usage
 
