@@ -34,6 +34,8 @@ Signed packages and matching source for OpenBSD 8.0 / amd64 are also available a
 
 **Folimeld 1.0.1.0 for Windows 11 (x64)** is available for free on the Microsoft Store in Japan and the United States. [Microsoft Store (Japan)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [Microsoft Store (United States)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
 
+Folimeld 0.3.4 for Linux is available on [GitHub Releases](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4).
+
 Linux 0.3.3 packages, matching source ZIPs, checksums and build records are available in the [Linux GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3). FreeBSD, NetBSD, and OpenBSD previews are distributed through their dedicated Releases below. See the [Linux migration plan and implementation record](documentation/linux-release-migration.md). Existing repository download URLs remain available for compatibility.
 
 | OS | Package formats |
@@ -72,6 +74,17 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 -Architectu
 The resulting `dist\Folimeld_<version>_x64.msix` is unsigned. For installation on a test machine, use the [development MSIX signing, installation and cleanup instructions](documentation/windows-store-test-bundle.md), which use SignTool from the Windows SDK. Store builds follow the [instructions for using the Store package identity and publisher](documentation/windows-store-release-plan.md).
 
 ### Direct downloads for Ubuntu / Debian
+
+#### Folimeld 0.3.4
+
+| Package | Supported distributions | Downloads |
+| --- | --- | --- |
+| DEB | Ubuntu 24.04 / Debian 13 | [amd64](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/folimeld_0.3.4_amd64.deb) / [ARM64](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/folimeld_0.3.4_arm64.deb) |
+| Snap | Ubuntu 24.04 (requires snapd) | [amd64](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/folimeld_0.3.4_amd64.snap) / [ARM64](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/folimeld_0.3.4_arm64.snap) |
+
+The [Linux 0.3.4 GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) includes matching source archives and build records. Verify downloads against [SHA256SUMS.txt](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/SHA256SUMS.txt).
+
+#### Folimeld 0.3.3
 
 Version **0.3.3 / x86_64 (amd64)**:
 

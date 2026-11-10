@@ -34,6 +34,8 @@ OpenBSD 8.0 / amd64向けにも署名付きパッケージと対応ソースを�
 
 Windows版の **Folimeld 1.0.1.0（Windows 11 x64）** は、Microsoft Storeで日本と米国に公開しています。無料で入手できます。 [日本のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [米国のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
 
+Linux版Folimeld 0.3.4を[GitHub Releases](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4)で公開しています。
+
 Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビルド記録は[Linux版GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)から取得できます。FreeBSD版・NetBSD版・OpenBSD版は下記の専用Releaseで試験配布しています。[Linux版の移行計画と実施記録](documentation/linux-release-migration_ja.md)を参照してください。互換性のため従来のリポジトリ内のダウンロードURLも維持しています。
 
 | OS | 配布形式 |
@@ -72,6 +74,17 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 -Architectu
 生成される `dist\Folimeld_<版>_x64.msix` は未署名です。試験機への導入には、Windows SDKのSignToolを使った[開発用MSIXの署名・導入・後始末手順](documentation/windows-store-test-bundle_ja.md)に従ってください。Store向けのビルドには別途、[StoreのパッケージID・発行元を使う手順](documentation/windows-store-release-plan_ja.md)があります。
 
 ### Ubuntu / Debian版を直接ダウンロード
+
+#### Folimeld 0.3.4
+
+| パッケージ | 対応ディストリビューション | ダウンロード |
+| --- | --- | --- |
+| DEB | Ubuntu 24.04 / Debian 13 | [amd64](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/folimeld_0.3.4_amd64.deb) / [ARM64](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/folimeld_0.3.4_arm64.deb) |
+| Snap | Ubuntu 24.04（snapdが必要） | [amd64](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/folimeld_0.3.4_amd64.snap) / [ARM64](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/folimeld_0.3.4_arm64.snap) |
+
+[Linux版0.3.4のGitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4)に対応ソースとビルド記録を掲載しています。ダウンロードしたファイルは[SHA256SUMS.txt](https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/SHA256SUMS.txt)と照合できます。
+
+#### Folimeld 0.3.3
 
 バージョン **0.3.3 / x86_64（amd64）**：
 
