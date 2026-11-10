@@ -1,0 +1,28 @@
+--- a/scripts/wrap/parse.py
++++ b/scripts/wrap/parse.py
+@@ -116,10 +116,17 @@
+         cursor = type_or_cursor
+     else:
+         assert 0
++    canonical = cursor.type.get_canonical()
++    if not include_empty and canonical.kind == clang.cindex.TypeKind.RECORD:
++        for field in canonical.get_fields():
++            if field.spelling:
++                yield field
++        return
+     if cursor.type.kind in (state.clang.cindex.TypeKind.TYPEDEF, state.clang.cindex.TypeKind.ELABORATED):
+         cursor2 = cursor.underlying_typedef_type.get_declaration()
+     else:
+         cursor2 = cursor
++    cursor2 = cursor2.get_definition() or cursor2
+ 
+     if 0:
+         # Diagnostics to show the difference between
+@@ -252,6 +259,7 @@
+                     if verbose:
+                         jlib.log( 'There is a keep() fn for this type so it uses reference counting: {keep_name=}')
+                     base_type_cursor = get_base_type( type_).get_declaration()
++                    base_type_cursor = base_type_cursor.get_definition() or base_type_cursor
+                     if base_type_cursor.is_definition():
+                         if verbose:
+                             jlib.log( 'Type definition is available so we look for .refs member: {key=} {type_.spelling=} {fileline(base_type_cursor)=}')
