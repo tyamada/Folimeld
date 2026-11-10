@@ -45,6 +45,12 @@
 - Published amd64 and ARM64 DEB packages for Ubuntu 24.04 and Debian 13, and amd64 and ARM64 Snap packages for Ubuntu 24.04.
 - Matching source archives and SHA-256 checksums are available in the [Linux 0.3.4 GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4).
 
+## 0.3.3_1 FreeBSD ARM64 preview - 2026-11-10
+
+- Published the Folimeld 0.3.3 package revision 1 preview for FreeBSD 15.1 ARM64 (aarch64).
+- Verified installation and operation in an Xorg desktop session on a MacBook Air M5 using QEMU with HVF.
+- The package, matching source, and installation instructions are available in the [FreeBSD ARM64 GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.3_1).
+
 ## 1.0.1.0 - 2026-11-09
 
 - Released Folimeld 1.0.1.0 for Windows 11 (x64) on November 9, 2026. It is available for free on the Microsoft Store in Japan and the United States. [Microsoft Store (Japan)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [Microsoft Store (United States)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)

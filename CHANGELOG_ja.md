@@ -45,6 +45,12 @@
 - Ubuntu 24.04・Debian 13向けにamd64／ARM64のDEB、Ubuntu 24.04向けにamd64／ARM64のSnapを公開しました。
 - 対応ソースとSHA-256チェックサムは[Linux版0.3.4のGitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4)で確認できます。
 
+## 0.3.3_1 FreeBSD ARM64版の試験公開 - 2026-11-10
+
+- FreeBSD 15.1 ARM64（aarch64）向けにFolimeld 0.3.3のパッケージ改訂1を試験公開しました。
+- MacBook Air M5上のQEMU（HVF）で、Xorgデスクトップ環境での導入と動作を確認しました。
+- パッケージ、対応ソース、導入手順は[FreeBSD ARM64版のGitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.3_1)で確認できます。
+
 ## 1.0.1.0 - 2026-11-09
 
 - 2026年11月9日、Folimeld 1.0.1.0（Windows 11 x64）を日本と米国のMicrosoft Storeで無料公開しました。 [日本のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [米国のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
