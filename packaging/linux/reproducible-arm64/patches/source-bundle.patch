@@ -1,0 +1,131 @@
+--- a/tools/source_bundle.py
++++ b/tools/source_bundle.py
+@@ -9,13 +9,16 @@
+ import hashlib
+ from importlib.metadata import distributions
+ import json
++import os
+ from pathlib import Path
+ import platform
+ import re
++import stat
+ import subprocess
+ import sys
++from tempfile import TemporaryDirectory
+ from urllib.parse import unquote, urlsplit
+-from zipfile import ZIP_DEFLATED, ZipFile
++from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
+ 
+ 
+ SOURCE_DIRS = {"folimeld", "tools", "assets", "locales", "licenses", "packaging", "tests"}
+@@ -99,17 +102,55 @@
+     return selected
+ 
+ 
++def write_reproducible_source_zip(archive, root, paths, packages, manifest, epoch):
++    """Write a stable ZIP with normalized Unix modes and UTC DOS timestamps."""
++    # ZIP stores years from 1980 and timestamps at two-second resolution.
++    stamp = datetime.fromtimestamp(max(epoch, 315532800), timezone.utc).timetuple()[:6]
++    for name in paths:
++        manifest["files"][name] = digest(root / name)
++    generated = {
++        "SOURCE-MANIFEST.json": (json.dumps(manifest, ensure_ascii=False, indent=2) + "\n").encode("utf-8"),
++        "build-requirements.txt": "".join(f"{n}=={v}\n" for n, v in packages).encode("utf-8"),
++    }
++    notices = root / "build" / "legal" / "Installed-packages.txt"
++    if notices.exists():
++        generated["licenses/Installed-packages.txt"] = notices.read_bytes()
++    if set(paths) & generated.keys():
++        raise ValueError("Source paths collide with generated ZIP entries")
++    for name in sorted(set(paths) | generated.keys()):
++        if name in generated:
++            data = generated[name]
++            mode = 0o644
++        else:
++            path = root / name
++            data = path.read_bytes()
++            if hashlib.sha256(data).hexdigest() != manifest["files"][name]:
++                raise ValueError(f"Source changed while writing snapshot: {name}")
++            mode = 0o755 if path.stat().st_mode & stat.S_IXUSR else 0o644
++        info = ZipInfo(name, stamp)
++        info.create_system = 3
++        info.external_attr = (stat.S_IFREG | mode) << 16
++        archive.writestr(info, data, compress_type=ZIP_DEFLATED, compresslevel=9)
++
++
+ def source_datas(project_root, target):
+     """Called before PyInstaller Analysis, after assets and notices are generated."""
+     root = Path(project_root).resolve()
+     if not re.fullmatch(r"[a-z0-9-]+", target):
+         raise ValueError("Invalid build target")
+     paths = source_paths(root)
++    epoch_text = os.environ.get("SOURCE_DATE_EPOCH")
++    epoch = None
++    if epoch_text is not None:
++        if not re.fullmatch(r"[0-9]+", epoch_text) or int(epoch_text) > 0xFFFFFFFF:
++            raise ValueError("SOURCE_DATE_EPOCH must be an unsigned 32-bit Unix timestamp")
++        epoch = int(epoch_text)
++    created = datetime.now(timezone.utc) if epoch is None else datetime.fromtimestamp(epoch, timezone.utc)
+     packages = sorted({(d.metadata["Name"], d.version) for d in distributions()})
+     manifest = {
+         "format": 1,
+         "target": target,
+-        "created_utc": datetime.now(timezone.utc).isoformat(),
++        "created_utc": created.isoformat(),
+         "git_commit": None,
+         "working_tree_changed": None,
+         "python": sys.version,
+@@ -124,22 +165,37 @@
+         manifest["working_tree_changed"] = bool(git(root, "status", "--porcelain", "--untracked-files=normal"))
+     output = root / "dist" / "source"
+     output.mkdir(parents=True, exist_ok=True)
+-    # A unique draft prevents overwriting records from previous builds.
+-    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+-    draft = output / f"Folimeld-{target}-{stamp}.zip"
+-    with ZipFile(draft, "x", ZIP_DEFLATED) as archive:
+-        for name in paths:
+-            data = (root / name).read_bytes()
+-            manifest["files"][name] = hashlib.sha256(data).hexdigest()
+-            archive.writestr(name, data)
+-        archive.writestr("SOURCE-MANIFEST.json", json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
+-        archive.writestr("build-requirements.txt", "".join(f"{n}=={v}\n" for n, v in packages))
+-        notices = root / "build" / "legal" / "Installed-packages.txt"
+-        if notices.exists():
+-            archive.write(notices, "licenses/Installed-packages.txt")
+-    archive_hash = digest(draft)
+-    archive_path = output / f"Folimeld-source-{archive_hash}.zip"
+-    draft.rename(archive_path)
++    if epoch is None:
++        # A unique draft prevents overwriting records from previous builds.
++        stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
++        draft = output / f"Folimeld-{target}-{stamp}.zip"
++        with ZipFile(draft, "x", ZIP_DEFLATED) as archive:
++            for name in paths:
++                data = (root / name).read_bytes()
++                manifest["files"][name] = hashlib.sha256(data).hexdigest()
++                archive.writestr(name, data)
++            archive.writestr("SOURCE-MANIFEST.json", json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
++            archive.writestr("build-requirements.txt", "".join(f"{n}=={v}\n" for n, v in packages))
++            notices = root / "build" / "legal" / "Installed-packages.txt"
++            if notices.exists():
++                archive.write(notices, "licenses/Installed-packages.txt")
++        archive_hash = digest(draft)
++        archive_path = output / f"Folimeld-source-{archive_hash}.zip"
++        draft.rename(archive_path)
++    else:
++        with TemporaryDirectory(dir=output, prefix=f".Folimeld-{target}-") as temporary:
++            draft = Path(temporary) / "source.zip"
++            with ZipFile(draft, "x") as archive:
++                write_reproducible_source_zip(archive, root, paths, packages, manifest, epoch)
++            draft.chmod(0o644)
++            archive_hash = digest(draft)
++            archive_path = output / f"Folimeld-source-{archive_hash}.zip"
++            # Link the completed ZIP atomically and keep any existing identical snapshot.
++            try:
++                os.link(draft, archive_path)
++            except FileExistsError:
++                if digest(archive_path) != archive_hash:
++                    raise ValueError(f"Source archive checksum mismatch: {archive_path}") from None
+     record = dict(manifest, source_archive=archive_path.name, source_sha256=archive_hash)
+     record_path = root / "build" / "source" / target / "Build-source.txt"
+     record_path.parent.mkdir(parents=True, exist_ok=True)
