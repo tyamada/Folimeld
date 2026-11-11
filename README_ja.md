@@ -4,7 +4,7 @@
 
 ![Folimeld icon](assets/Folimeld.iconset/icon_128x128.png)
 
-Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、削除できるデスクトップアプリです。Windows、macOS、Ubuntu、Debian、FreeBSD 15.1（amd64・ARM64）に対応し、編集するファイルを外部サービスへ送信せず、ローカル環境で処理します。
+Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、削除できるデスクトップアプリです。Windows、macOS、Ubuntu、Debianで利用でき、FreeBSD・NetBSD・OpenBSD向けにも試験配布しています。編集するファイルを外部サービスへ送信せず、ローカル環境で処理します。
 
 ![Folimeld main window](documentation/screenshots/main-window.png)
 
@@ -26,9 +26,9 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 - PDFバージョン、ページレイアウト、綴じ方向を編集
 - 閲覧パスワードの設定と解除
 - 日本語、英語、ドイツ語、スペイン語、フランス語、韓国語、ポルトガル語、中国語に対応
-- Windows 11（Intel/AMD x64）、macOS、Ubuntu、Debian、FreeBSD 15.1（amd64・ARM64）で利用可能
+- Windows 11、macOS、Ubuntu、Debianで利用可能。FreeBSD、NetBSD、OpenBSD向けに試験配布（対応OS版・CPUは下表を参照）
 
-OpenBSD 8.0 / amd64向けにも署名付きパッケージと対応ソースを試験配布しています。検証は1 vCPU・16 GiBのVirtualBox VMで実施しました。導入方法は下記のOpenBSD節、確認範囲は[検証記録](documentation/openbsd-package-verification_ja.md)を参照してください。
+BSDの各配布物は、対象のOS版・CPUと検証記録に対応しています。確認範囲と導入手順は下記の各OS節を参照してください。
 
 ## ダウンロード
 
@@ -38,21 +38,23 @@ Linux版Folimeld 0.3.4を[GitHub Releases](https://github.com/tyamada/Folimeld/r
 
 Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビルド記録は[Linux版GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)から取得できます。FreeBSD版・NetBSD版・OpenBSD版は下記の専用Releaseで試験配布しています。[Linux版の移行計画と実施記録](documentation/linux-release-migration_ja.md)を参照してください。互換性のため従来のリポジトリ内のダウンロードURLも維持しています。
 
-| OS | 配布形式 |
-| --- | --- |
-| Windows 11（Intel/AMD x64） | Microsoft Store（MSIX、1.0.1.0、日本・米国） |
-| macOS（Apple Silicon、macOS 15以降） | Homebrew（ソース配布、0.3.3） |
-| Ubuntu | `.deb` / `.snap` / 単体実行ファイル（対応バージョンは各リリースを参照） |
-| Debian 13 | `.deb`（amd64 / arm64、WSL2で基本動作確認済み） |
-| FreeBSD 15.1 / amd64 | ネイティブ `.pkg` と対応ソース（試験配布） |
-| FreeBSD 15.1 / aarch64 | ネイティブ `.pkg` と対応ソース（試験配布） |
-| NetBSD 11.1 / amd64 | ネイティブ `.tgz` と対応ソース（試験配布） |
-| NetBSD 11.1 / aarch64 | ネイティブ `.tgz` と対応ソース（試験配布） |
-| OpenBSD 8.0 / amd64 | 署名付きネイティブ `.tgz` と対応ソース（試験配布） |
-| OpenBSD 8.0 / arm64 | 署名付きネイティブ `.tgz` と対応ソース（試験配布） |
+| OS | CPU | 配布形式・版 | 公開先 |
+| --- | --- | --- | --- |
+| Windows 11 | x64 | Microsoft Store / 1.0.1.0 | [対応ソース](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.1.0) |
+| macOS 15以降 | Apple Silicon（arm64） | Homebrew / 0.3.3（ソース配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.3) |
+| Ubuntu 24.04 | amd64 / arm64 | DEB・Snap / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
+| Debian 13 | amd64 / arm64 | DEB / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
+| FreeBSD 15.1 | amd64 | pkg / 0.3.3_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3) |
+| FreeBSD 15.1 | aarch64 | pkg / 0.3.3_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.3_1) |
+| NetBSD 11.1 | amd64 | tgz / 0.3.3（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3) |
+| NetBSD 11.1 | aarch64 | tgz / 0.3.3（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.3) |
+| OpenBSD 8.0 | amd64 | 署名付き tgz / 0.3.3（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3) |
+| OpenBSD 8.0 | arm64 | 署名付き tgz / 0.3.3（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.3) |
+
+表の版番号は各配布先の版です。WindowsのStore版は日本・米国で提供しています。Linux 0.3.3（Ubuntu 22.04以降）の配布物と旧版の導入手順も下記に掲載しています。BSDのARM64は、FreeBSD・NetBSDで`aarch64`、OpenBSDで`arm64`と表記します。
 
 > [!NOTE]
-> Windows・macOSの検証用成果物は、公開リポジトリやGitHub Releasesへ追加しません。
+> Windowsの試験用バイナリとmacOSのローカル検証用アプリ・インストーラーは手元で管理します。公開ソースは各Releaseから取得できます。
 
 ### Windows 11のインストールと対応ソース
 
@@ -160,7 +162,7 @@ export PKG_PATH=https://cdn.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/11.0_20
 /usr/pkg/sbin/pkg_add ./folimeld-0.3.3.tgz
 ```
 
-一般ユーザーで `/usr/pkg/bin/folimeld` または `/usr/pkg/bin/folimeld /path/to/file.pdf` を実行します。削除はrootで `/usr/pkg/sbin/pkg_delete folimeld`。他のNetBSD版・CPUは未検証です。
+一般ユーザーで `/usr/pkg/bin/folimeld` または `/usr/pkg/bin/folimeld /path/to/file.pdf` を実行します。削除はrootで `/usr/pkg/sbin/pkg_delete folimeld`。このコマンド例はamd64版が対象です。aarch64版は次の専用手順を参照してください。
 
 **NetBSD 11.1 / aarch64** 向けの **0.3.3** は、[ARM64試験配布](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.3)から取得できます。
 

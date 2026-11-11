@@ -48,7 +48,7 @@ python -m pip install -r requirements-dev.txt -c constraints-release.txt
 
 ### NetBSD（検証済み構成）
 
-NetBSD 11.1 / amd64で、Python 3.12.14、PySide6 / Qt 6.11.2、PyMuPDF / MuPDF 1.28.2を使ったソース実行を確認しました。PySide6・PyMuPDFとビルド工具にはNetBSD向けの修正が必要です。構築方法、パッチ、全件テスト・GUI操作の結果は[検証記録](documentation/netbsd-verification_ja.md)を参照してください。NetBSD用の配布パッケージは作成していません。
+NetBSD 11.1 / amd64で、Python 3.12.14、PySide6 / Qt 6.11.2、PyMuPDF / MuPDF 1.28.2を使ったソース実行を確認しました。PySide6・PyMuPDFとビルド工具にはNetBSD向けの修正が必要です。構築方法、パッチ、全件テスト・GUI操作の結果は[検証記録](documentation/netbsd-verification_ja.md)を参照してください。NetBSD 11.1のamd64・aarch64向けパッケージは試験配布済みです。配布物の導入は[NetBSD導入手順](documentation/netbsd-install_ja.md)とREADMEのCPU別Releaseを参照してください。
 
 検証記録に従って依存と `.venv-netbsd` を構築した後、リポジトリーのルートからX11セッション内で起動します。
 
@@ -71,7 +71,7 @@ OSパッケージと `--system-site-packages` の仮想環境を使用し、PyMu
 
 ## 公開・非公開の配布方針
 
-Windowsの試験用成果物はローカルで管理し、macOSはHomebrewでソース配布しています。Linuxのdeb/SnapとFreeBSDのpkgは公開します。FreeBSD版は[専用Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)で試験配布し、[導入・ビルド手順](documentation/freebsd-install_ja.md)を用意しています。Linuxパッケージ、SHA-256一覧、対応ソースZIP、ビルド記録を同じReleaseにまとめる移行案は[こちら](documentation/linux-release-migration_ja.md)です。Linux版の公開前の資材検査は以下で行えます。アップロードやタグ作成は行いません。
+Windowsの試験用成果物はローカルで管理し、macOSはHomebrewでソース配布しています。Linuxのdeb/Snapを公開し、FreeBSD・NetBSD・OpenBSDのamd64・ARM64向けパッケージを試験配布しています。FreeBSD版は[専用Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)で試験配布し、[導入・ビルド手順](documentation/freebsd-install_ja.md)を用意しています。Linuxパッケージ、SHA-256一覧、対応ソースZIP、ビルド記録を同じReleaseにまとめる移行案は[こちら](documentation/linux-release-migration_ja.md)です。Linux版の公開前の資材検査は以下で行えます。アップロードやタグ作成は行いません。
 
 ```bash
 python -m tools.prepare_linux_release --version 0.3.3

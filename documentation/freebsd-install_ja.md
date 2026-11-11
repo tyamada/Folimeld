@@ -2,6 +2,8 @@
 
 [English](freebsd-install.md) | [日本語](freebsd-install_ja.md)
 
+このページのコマンドとビルド手順はamd64向けです。aarch64版は[専用Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.3_1)の[導入手順](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.3_1/INSTALL_ja.txt)を使用してください。対応ソース・SHA-256・検証記録も同じReleaseに掲載しています。
+
 対象はFreeBSD 15.1 / amd64、Python 3.12、GUIデスクトップ。[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)で試験配布している。FreeBSD公式Portsへの登録や公式パッケージではない。
 
 pkgの作成、クリーンなchrootでの導入・GUI起動・画像変換・保存・削除・再導入を確認済み。[検証記録](freebsd-package-verification_ja.md)を参照。

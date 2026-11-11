@@ -4,7 +4,7 @@
 
 ![Folimeld icon](assets/Folimeld.iconset/icon_128x128.png)
 
-Folimeld is a desktop application for visually rearranging, rotating, inserting, and deleting PDF pages. It supports Windows, macOS, Ubuntu, Debian, and FreeBSD 15.1 (amd64 and ARM64), and processes files locally without sending them to external services.
+Folimeld is a desktop application for visually rearranging, rotating, inserting, and deleting PDF pages. It is available for Windows, macOS, Ubuntu, and Debian, with preview releases for FreeBSD, NetBSD, and OpenBSD. Files are processed locally without sending them to external services.
 
 ![Folimeld main window](documentation/screenshots/main-window.png)
 
@@ -26,9 +26,9 @@ Choose File → Exit to close the app, with a save prompt for unsaved changes. O
 - Edit the PDF version, page layout, and binding direction
 - Set or remove a password required to open a PDF
 - Available in Japanese, English, German, Spanish, French, Korean, Portuguese, and Chinese
-- Runs on Windows 11 (Intel/AMD x64), macOS, Ubuntu, Debian, and FreeBSD 15.1 (amd64 and ARM64)
+- Available for Windows 11, macOS, Ubuntu, and Debian, with previews for FreeBSD, NetBSD, and OpenBSD (see the table below for OS versions and CPUs)
 
-Signed packages and matching source for OpenBSD 8.0 / amd64 are also available as a preview. Verification used a VirtualBox VM with 1 vCPU and 16 GiB RAM. See the OpenBSD section below for installation and the [verification record (Japanese)](documentation/openbsd-package-verification_ja.md) for the tested scope.
+Each BSD preview has its own target OS version, CPU, and verification record. See the OS sections below for the tested scope and installation instructions.
 
 ## Downloads
 
@@ -38,21 +38,23 @@ Folimeld 0.3.4 for Linux is available on [GitHub Releases](https://github.com/ty
 
 Linux 0.3.3 packages, matching source ZIPs, checksums and build records are available in the [Linux GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3). FreeBSD, NetBSD, and OpenBSD previews are distributed through their dedicated Releases below. See the [Linux migration plan and implementation record](documentation/linux-release-migration.md). Existing repository download URLs remain available for compatibility.
 
-| OS | Package formats |
-| --- | --- |
-| Windows 11 (Intel/AMD x64) | Microsoft Store (MSIX, 1.0.1.0, Japan and United States) |
-| macOS (Apple Silicon, macOS 15 or later) | Homebrew (source distribution, 0.3.3) |
-| Ubuntu | `.deb` / `.snap` / standalone executable (see each release for supported versions) |
-| Debian 13 | `.deb` (amd64 / arm64; basic functionality verified on WSL2) |
-| FreeBSD 15.1 / amd64 | Native `.pkg` and matching source (preview release) |
-| FreeBSD 15.1 / aarch64 | Native `.pkg` and matching source (preview release) |
-| NetBSD 11.1 / amd64 | Native `.tgz` and matching source (preview release) |
-| NetBSD 11.1 / aarch64 | Native `.tgz` and matching source (preview release) |
-| OpenBSD 8.0 / amd64 | Signed native `.tgz` and matching source (preview release) |
-| OpenBSD 8.0 / arm64 | Signed native `.tgz` and matching source (preview release) |
+| OS | CPU | Distribution and version | Release |
+| --- | --- | --- | --- |
+| Windows 11 | x64 | Microsoft Store / 1.0.1.0 | [Matching source](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.1.0) |
+| macOS 15 or later | Apple Silicon (arm64) | Homebrew / 0.3.3 (source) | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.3) |
+| Ubuntu 24.04 | amd64 / arm64 | DEB / Snap / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
+| Debian 13 | amd64 / arm64 | DEB / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
+| FreeBSD 15.1 | amd64 | pkg / 0.3.3_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3) |
+| FreeBSD 15.1 | aarch64 | pkg / 0.3.3_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.3_1) |
+| NetBSD 11.1 | amd64 | tgz / 0.3.3 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3) |
+| NetBSD 11.1 | aarch64 | tgz / 0.3.3 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.3) |
+| OpenBSD 8.0 | amd64 | Signed tgz / 0.3.3 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3) |
+| OpenBSD 8.0 | arm64 | Signed tgz / 0.3.3 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.3) |
+
+Versions in the table are specific to each distribution channel. The Windows Store edition is available in Japan and the United States. Linux 0.3.3 downloads for Ubuntu 22.04 or later and older installation instructions remain below. BSD ARM64 packages use the name `aarch64` on FreeBSD and NetBSD, and `arm64` on OpenBSD.
 
 > [!NOTE]
-> Windows and macOS verification artifacts are not added to this public repository or GitHub Releases.
+> Windows test binaries and locally built macOS apps and installers are kept locally. Public source archives are available from their respective Releases.
 
 ### Windows 11 installation and corresponding source
 
@@ -160,7 +162,7 @@ export PKG_PATH=https://cdn.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/11.0_20
 /usr/pkg/sbin/pkg_add ./folimeld-0.3.3.tgz
 ```
 
-Run `/usr/pkg/bin/folimeld` or `/usr/pkg/bin/folimeld /path/to/file.pdf` as a regular user. Remove as root with `/usr/pkg/sbin/pkg_delete folimeld`. Other NetBSD releases and CPUs have not been tested.
+Run `/usr/pkg/bin/folimeld` or `/usr/pkg/bin/folimeld /path/to/file.pdf` as a regular user. Remove as root with `/usr/pkg/sbin/pkg_delete folimeld`. These commands target amd64. For aarch64, use the dedicated instructions below.
 
 **0.3.3** for **NetBSD 11.1 / aarch64** is available in the [ARM64 preview release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.3).
 

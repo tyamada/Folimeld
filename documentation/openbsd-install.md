@@ -2,6 +2,8 @@
 
 [English](openbsd-install.md) | [日本語](openbsd-install_ja.md)
 
+The commands and build instructions on this page target amd64. For arm64, use the [installation instructions](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.3/INSTALL.txt) in the [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.3), which also contains matching source, SHA-256 checksums, and verification records.
+
 Targets OpenBSD 8.0 / amd64, Python 3.14, and an X11 desktop. This is a Folimeld preview, not an official OpenBSD package. Assets belong to the [OpenBSD Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3).
 
 ## Installing packages

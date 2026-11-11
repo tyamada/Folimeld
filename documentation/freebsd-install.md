@@ -2,6 +2,8 @@
 
 [English](freebsd-install.md) | [日本語](freebsd-install_ja.md)
 
+The commands and build instructions on this page target amd64. For aarch64, use the [installation instructions](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.3_1/INSTALL.txt) in the [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.3_1), which also contains matching source, SHA-256 checksums, and verification records.
+
 Target: FreeBSD 15.1 / amd64, Python 3.12, and a graphical desktop. A preview is available in the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3). This is not an official FreeBSD Ports package.
 
 Package creation, installation in a clean chroot, GUI launch, image conversion, saving, removal, and reinstallation have been verified. See the [verification record (Japanese)](freebsd-package-verification_ja.md).

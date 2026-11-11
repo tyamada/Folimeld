@@ -2,6 +2,8 @@
 
 [English](openbsd-install.md) | [日本語](openbsd-install_ja.md)
 
+このページのコマンドとビルド手順はamd64向けです。arm64版は[専用Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.3)の[導入手順](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.3/INSTALL_ja.txt)を使用してください。対応ソース・SHA-256・検証記録も同じReleaseに掲載しています。
+
 対象はOpenBSD 8.0 / amd64、Python 3.14、X11デスクトップ。Folimeld独自の試験配布であり、OpenBSD公式パッケージではない。配布先は[OpenBSD Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3)。
 
 ## パッケージの導入

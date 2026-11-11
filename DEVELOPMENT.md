@@ -48,7 +48,7 @@ python -m pip install -r requirements-dev.txt -c constraints-release.txt
 
 ### NetBSD (verified configuration)
 
-Source execution was verified on NetBSD 11.1 / amd64 with Python 3.12.14, PySide6 / Qt 6.11.2, and PyMuPDF / MuPDF 1.28.2. PySide6, PyMuPDF, and the build tools require NetBSD-specific changes. See the [verification record (Japanese)](documentation/netbsd-verification_ja.md) for setup instructions, patches, and the full test and GUI results. No NetBSD distribution package has been created.
+Source execution was verified on NetBSD 11.1 / amd64 with Python 3.12.14, PySide6 / Qt 6.11.2, and PyMuPDF / MuPDF 1.28.2. PySide6, PyMuPDF, and the build tools require NetBSD-specific changes. See the [verification record (Japanese)](documentation/netbsd-verification_ja.md) for setup instructions, patches, and the full test and GUI results. Preview packages are available for NetBSD 11.1 on amd64 and aarch64. For package installation, see the [NetBSD installation guide](documentation/netbsd-install.md) and the CPU-specific Releases in the README.
 
 After building the dependencies and `.venv-netbsd` as described in the record, launch from the repository root within an X11 session.
 
@@ -71,7 +71,7 @@ After setup, launch from the repository root within a regular user's X11 session
 
 ## Public and private distribution policy
 
-The Microsoft Store distributes the Windows 11 x64 release. Windows test artifacts are kept locally. macOS is distributed as source through Homebrew. Linux deb/Snap and FreeBSD pkg packages are public. FreeBSD previews are distributed through a [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3), with [installation and build instructions](documentation/freebsd-install.md). The [migration plan](documentation/linux-release-migration.md) groups Linux packages, SHA-256 checksums, corresponding source ZIPs and build records in one Release. Run the following offline asset check before Linux publication; it does not upload files or create tags.
+The Microsoft Store distributes the Windows 11 x64 release. Windows test artifacts are kept locally. macOS is distributed as source through Homebrew. Linux deb/Snap packages are public, with preview packages for FreeBSD, NetBSD, and OpenBSD on amd64 and ARM64. FreeBSD previews are distributed through a [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3), with [installation and build instructions](documentation/freebsd-install.md). The [migration plan](documentation/linux-release-migration.md) groups Linux packages, SHA-256 checksums, corresponding source ZIPs and build records in one Release. Run the following offline asset check before Linux publication; it does not upload files or create tags.
 
 ```bash
 python -m tools.prepare_linux_release --version 0.3.3

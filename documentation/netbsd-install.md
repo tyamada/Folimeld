@@ -2,6 +2,8 @@
 
 [English](netbsd-install.md) | [日本語](netbsd-install_ja.md)
 
+The commands and build instructions on this page target amd64. For aarch64, use the [installation instructions](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.3/INSTALL.txt) in the [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.3), which also contains matching source, SHA-256 checksums, and verification records.
+
 Targets NetBSD 11.1 / amd64, Python 3.12, and an X11 desktop. This is a Folimeld preview package, not an official NetBSD package. Obtain the package, matching source, dependency sources, and SHA-256 list from the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3).
 
 See the [package verification record](netbsd-package-verification_ja.md) for the tested scope.
