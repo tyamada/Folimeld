@@ -41,7 +41,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | OS | 配布形式 |
 | --- | --- |
 | Windows 11（Intel/AMD x64） | Microsoft Store（MSIX、1.0.1.0、日本・米国） |
-| macOS | Homebrew（準備中） |
+| macOS（Apple Silicon、macOS 15以降） | Homebrew（ソース配布、0.3.3） |
 | Ubuntu | `.deb` / `.snap` / 単体実行ファイル（対応バージョンは各リリースを参照） |
 | Debian 13 | `.deb`（amd64 / arm64、WSL2で基本動作確認済み） |
 | FreeBSD 15.1 / amd64 | ネイティブ `.pkg` と対応ソース（試験配布） |
@@ -61,6 +61,19 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 - **Store版1.0.1.0 x64の対応ソース** — [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt) · [提出物との対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json)。公開用ZIPでは文書3件を公開向けに整理し、アプリコードとビルド用ファイルは提出時のソースと同一です。
 
 Windows 11版はMicrosoft Storeで配布します。Store向けMSIXの開発手順は[開発ガイド](DEVELOPMENT_ja.md)を参照してください。
+
+### macOS版をHomebrewでインストール
+
+Folimeld 0.3.3のHomebrew配布は、**Apple Silicon（arm64）搭載のMacでmacOS 15 Sequoia以降**が対象です。Homebrewを導入した環境で、ターミナルから次を実行します。
+
+```sh
+brew install --build-from-source tyamada/tap/folimeld
+folimeld
+```
+
+HomebrewがPython 3.14とアプリ専用の依存環境を用意し、`folimeld`でPDF編集画面が開きます。
+
+[macOS版0.3.3のGitHub Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.3)から[ソースアーカイブ](https://github.com/tyamada/Folimeld/releases/download/macos-source-v0.3.3/folimeld-0.3.3-source.tar.gz)と[SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/macos-source-v0.3.3/SHA256SUMS.txt)を取得できます。
 
 ### Ubuntu / Debian版を直接ダウンロード
 

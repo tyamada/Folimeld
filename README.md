@@ -41,7 +41,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | OS | Package formats |
 | --- | --- |
 | Windows 11 (Intel/AMD x64) | Microsoft Store (MSIX, 1.0.1.0, Japan and United States) |
-| macOS | Homebrew (in development) |
+| macOS (Apple Silicon, macOS 15 or later) | Homebrew (source distribution, 0.3.3) |
 | Ubuntu | `.deb` / `.snap` / standalone executable (see each release for supported versions) |
 | Debian 13 | `.deb` (amd64 / arm64; basic functionality verified on WSL2) |
 | FreeBSD 15.1 / amd64 | Native `.pkg` and matching source (preview release) |
@@ -61,6 +61,19 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 - **Source for Store version 1.0.1.0 x64** — [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt) · [Submission association record](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json). Three documentation files were revised for publication. The application source and build files match the submitted build's source snapshot.
 
 Windows 11 releases are distributed through the Microsoft Store. See the [development guide](DEVELOPMENT.md) for the Store MSIX workflow.
+
+### Install on macOS with Homebrew
+
+The Folimeld 0.3.3 Homebrew release supports **Apple Silicon (arm64) Macs running macOS 15 Sequoia or later**. With Homebrew installed, run these commands in Terminal.
+
+```sh
+brew install --build-from-source tyamada/tap/folimeld
+folimeld
+```
+
+Homebrew sets up Python 3.14 and an isolated environment for the app's dependencies. The `folimeld` command opens the PDF editor.
+
+The [Folimeld 0.3.3 GitHub Release for macOS](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.3) includes the [source archive](https://github.com/tyamada/Folimeld/releases/download/macos-source-v0.3.3/folimeld-0.3.3-source.tar.gz) and [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/macos-source-v0.3.3/SHA256SUMS.txt).
 
 ### Direct downloads for Ubuntu / Debian
 
