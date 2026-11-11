@@ -2,6 +2,8 @@
 
 [English](README.md) | [日本語](README_ja.md)
 
+[Homepage](https://tyamada.github.io/Folimeld/)
+
 ![Folimeld icon](assets/Folimeld.iconset/icon_128x128.png)
 
 Folimeld is a desktop application for visually rearranging, rotating, inserting, and deleting PDF pages. It is available for Windows, macOS, Ubuntu, and Debian, with preview releases for FreeBSD, NetBSD, and OpenBSD. Files are processed locally without sending them to external services.

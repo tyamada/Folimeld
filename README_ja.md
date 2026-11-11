@@ -2,6 +2,8 @@
 
 [English](README.md) | [日本語](README_ja.md)
 
+[ホームページ](https://tyamada.github.io/Folimeld/index_ja.html)
+
 ![Folimeld icon](assets/Folimeld.iconset/icon_128x128.png)
 
 Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、削除できるデスクトップアプリです。Windows、macOS、Ubuntu、Debianで利用でき、FreeBSD・NetBSD・OpenBSD向けにも試験配布しています。編集するファイルを外部サービスへ送信せず、ローカル環境で処理します。
