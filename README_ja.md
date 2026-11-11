@@ -41,7 +41,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | OS | 配布形式 |
 | --- | --- |
 | Windows 11（Intel/AMD x64） | Microsoft Store（MSIX、1.0.1.0、日本・米国） |
-| macOS | `.app`（バイナリ非公開） |
+| macOS | Homebrew（準備中） |
 | Ubuntu | `.deb` / `.snap` / 単体実行ファイル（対応バージョンは各リリースを参照） |
 | Debian 13 | `.deb`（amd64 / arm64、WSL2で基本動作確認済み） |
 | FreeBSD 15.1 / amd64 | ネイティブ `.pkg` と対応ソース（試験配布） |
@@ -54,27 +54,13 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 > [!NOTE]
 > Windows・macOSの検証用成果物は、公開リポジトリやGitHub Releasesへ追加しません。
 
-### Windows 11のインストールとソースビルド
+### Windows 11のインストールと対応ソース
 
 - **Microsoft Storeからインストール** — 上の日本または米国の掲載リンクを開き、Microsoft Storeで「入手」または「インストール」を選びます。完了後、スタートメニューからFolimeldを起動します。
 - **ソースを取得** — [公開リポジトリのmain](https://github.com/tyamada/Folimeld/tree/main)の「Code → Download ZIP」またはGitから、Windows用コードとビルドスクリプトを取得できます。
 - **Store版1.0.1.0 x64の対応ソース** — [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt) · [提出物との対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json)。公開用ZIPでは文書3件を公開向けに整理し、アプリコードとビルド用ファイルは提出時のソースと同一です。
 
-Windows 11 x64で、Gitとx64版Python 3.14を用意します。取得したソースのルートでPowerShellを開き、次を実行します。
-
-```powershell
-py -3.14 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt -c constraints-release.txt pyinstaller
-.\build_exe.bat
-```
-
-生成された `dist\Folimeld.exe` を直接起動できます。ローカル試験用のMSIXを作るには、Windows SDKのMakeAppxを導入し、同じソースのルートで次を実行します。
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 -Architecture x64
-```
-
-生成される `dist\Folimeld_<版>_x64.msix` は未署名です。試験機への導入には、Windows SDKのSignToolを使った[開発用MSIXの署名・導入・後始末手順](documentation/windows-store-test-bundle_ja.md)に従ってください。Store向けのビルドには別途、[StoreのパッケージID・発行元を使う手順](documentation/windows-store-release-plan_ja.md)があります。
+Windows 11版はMicrosoft Storeで配布します。Store向けMSIXの開発手順は[開発ガイド](DEVELOPMENT_ja.md)を参照してください。
 
 ### Ubuntu / Debian版を直接ダウンロード
 

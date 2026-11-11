@@ -71,7 +71,7 @@ OSパッケージと `--system-site-packages` の仮想環境を使用し、PyMu
 
 ## 公開・非公開の配布方針
 
-Windows 11 x64の製品版はMicrosoft Storeで配信し、Windowsの検証用成果物とmacOSのバイナリは手元で管理します。Linuxのdeb/SnapとFreeBSDのpkgは公開します。FreeBSD版は[専用Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)で試験配布し、[導入・ビルド手順](documentation/freebsd-install_ja.md)を用意しています。Linuxパッケージ、SHA-256一覧、対応ソースZIP、ビルド記録を同じReleaseにまとめる移行案は[こちら](documentation/linux-release-migration_ja.md)です。Linux版の公開前の資材検査は以下で行えます。アップロードやタグ作成は行いません。
+Windowsの試験用成果物はローカルで管理し、macOSはHomebrewでの配布を準備中です。Linuxのdeb/SnapとFreeBSDのpkgは公開します。FreeBSD版は[専用Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)で試験配布し、[導入・ビルド手順](documentation/freebsd-install_ja.md)を用意しています。Linuxパッケージ、SHA-256一覧、対応ソースZIP、ビルド記録を同じReleaseにまとめる移行案は[こちら](documentation/linux-release-migration_ja.md)です。Linux版の公開前の資材検査は以下で行えます。アップロードやタグ作成は行いません。
 
 ```bash
 python -m tools.prepare_linux_release --version 0.3.3
@@ -162,16 +162,6 @@ python tools/make_app_icon.py
 - `assets/Folimeld.icns`
 - `packaging/msix/Assets/`
 
-## Windowsビルド
-
-```bat
-build_exe.bat
-```
-
-生成物は `dist\Folimeld.exe` です。Python、PySide6、PyMuPDF、翻訳データを含む単体実行ファイルとして生成されます。
-
-非パッケージ版は起動時にWindowsの「プログラムから開く」へFolimeldを登録します。MSIX版ではレジストリ登録を行わず、パッケージマニフェストのファイル関連付けを使用します。
-
 ## Microsoft Store向けMSIX
 
 Folimeld 1.0.1.0はMSIX製品としてMicrosoft Storeで日本と米国に公開済みです。Storeへの更新には同じ製品のパッケージIDと発行元を使用します。[公開計画](documentation/windows-store-release-plan_ja.md)を参照してください。
@@ -211,34 +201,9 @@ powershell -ExecutionPolicy Bypass -File .\build_msix.ps1 -Architecture arm64 `
 
 ビルドスクリプトはPython/PyInstaller環境のアーキテクチャを検査し、指定と一致しない場合は処理を停止します。
 
-## macOSビルド
+## macOSの配布
 
-```bash
-./build_exe.sh
-```
-
-生成物は `dist/Folimeld.app` です。スクリプトは必要に応じて仮想環境を作成し、依存関係をインストールします。
-
-```bash
-open dist/Folimeld.app
-```
-
-ローカル確認用としてad-hoc署名を行います。正式配布ではApple Developer証明書による署名と、公証の手続きを行ってください。
-
-### Mac App Store向けビルド
-
-Apple Developerで、Bundle ID `com.folimeld.Folimeld` に対応するApp Store用アプリ署名証明書、インストーラ署名証明書、App Sandboxを有効にしたプロビジョニングプロファイルを用意してください。
-
-```bash
-./build_appstore.sh \
-  --application-identity "アプリ署名証明書のCommon Name" \
-  --installer-identity "インストーラ署名証明書のCommon Name" \
-  --provisioning-profile "/path/to/Folimeld.provisionprofile"
-```
-
-生成物は `dist/Folimeld_<表示バージョン>.pkg` です。スクリプトはApp Sandbox entitlementsを適用し、アプリとインストーラに署名します。提出前にアプリ署名、Info.plist、Bundle ID、表示バージョンとビルド番号の分離、PDFのドキュメントタイプ、Sandbox entitlements、インストーラ署名を自動検証します。TestFlightで確認した後、TransporterまたはXcodeからApp Store Connectへアップロードしてください。
-
-App Storeへアップロードするたびに、`folimeld/__init__.py` のバージョンを更新してください。ユーザーがファイルダイアログで選択したPDFだけを読み書きするため、現在のentitlementsにはネットワーク権限を含めていません。
+Homebrewでの配布を準備中です。開発時の依存関係の設定とソースからの起動は、このガイドの該当する節を参照してください。
 
 ## Ubuntuビルド
 

@@ -41,7 +41,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | OS | Package formats |
 | --- | --- |
 | Windows 11 (Intel/AMD x64) | Microsoft Store (MSIX, 1.0.1.0, Japan and United States) |
-| macOS | `.app` (binaries private) |
+| macOS | Homebrew (in development) |
 | Ubuntu | `.deb` / `.snap` / standalone executable (see each release for supported versions) |
 | Debian 13 | `.deb` (amd64 / arm64; basic functionality verified on WSL2) |
 | FreeBSD 15.1 / amd64 | Native `.pkg` and matching source (preview release) |
@@ -54,27 +54,13 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 > [!NOTE]
 > Windows and macOS verification artifacts are not added to this public repository or GitHub Releases.
 
-### Windows 11 installation and source builds
+### Windows 11 installation and corresponding source
 
 - **Install from the Microsoft Store** — Open the Japan or United States listing above, then select **Get** or **Install** in the Microsoft Store. Launch Folimeld from the Start menu when installation completes.
 - **Get the source** — Use **Code → Download ZIP** or Git to get the Windows code and build scripts from the [public main branch](https://github.com/tyamada/Folimeld/tree/main).
 - **Source for Store version 1.0.1.0 x64** — [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt) · [Submission association record](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json). Three documentation files were revised for publication. The application source and build files match the submitted build's source snapshot.
 
-On Windows 11 x64, install Git and x64 Python 3.14. Open PowerShell at the root of the source tree and run:
-
-```powershell
-py -3.14 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt -c constraints-release.txt pyinstaller
-.\build_exe.bat
-```
-
-You can run the resulting `dist\Folimeld.exe` directly. To build an MSIX for local testing, install MakeAppx from the Windows SDK and run this from the same directory:
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 -Architecture x64
-```
-
-The resulting `dist\Folimeld_<version>_x64.msix` is unsigned. For installation on a test machine, use the [development MSIX signing, installation and cleanup instructions](documentation/windows-store-test-bundle.md), which use SignTool from the Windows SDK. Store builds follow the [instructions for using the Store package identity and publisher](documentation/windows-store-release-plan.md).
+Windows 11 releases are distributed through the Microsoft Store. See the [development guide](DEVELOPMENT.md) for the Store MSIX workflow.
 
 ### Direct downloads for Ubuntu / Debian
 

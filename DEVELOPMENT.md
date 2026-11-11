@@ -71,7 +71,7 @@ After setup, launch from the repository root within a regular user's X11 session
 
 ## Public and private distribution policy
 
-The Microsoft Store distributes the Windows 11 x64 release. Windows test artifacts and macOS binaries are kept locally. Linux deb/Snap and FreeBSD pkg packages are public. FreeBSD previews are distributed through a [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3), with [installation and build instructions](documentation/freebsd-install.md). The [migration plan](documentation/linux-release-migration.md) groups Linux packages, SHA-256 checksums, corresponding source ZIPs and build records in one Release. Run the following offline asset check before Linux publication; it does not upload files or create tags.
+The Microsoft Store distributes the Windows 11 x64 release. Windows test artifacts are kept locally. Homebrew distribution for macOS is in development. Linux deb/Snap and FreeBSD pkg packages are public. FreeBSD previews are distributed through a [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3), with [installation and build instructions](documentation/freebsd-install.md). The [migration plan](documentation/linux-release-migration.md) groups Linux packages, SHA-256 checksums, corresponding source ZIPs and build records in one Release. Run the following offline asset check before Linux publication; it does not upload files or create tags.
 
 ```bash
 python -m tools.prepare_linux_release --version 0.3.3
@@ -162,16 +162,6 @@ Output locations:
 - `assets/Folimeld.icns`
 - `packaging/msix/Assets/`
 
-## Windows build
-
-```bat
-build_exe.bat
-```
-
-The output is `dist\Folimeld.exe`, a standalone executable that includes Python, PySide6, PyMuPDF, and translation data.
-
-The unpackaged edition registers Folimeld in Windows **Open with** at startup. The MSIX edition uses file associations in the package manifest instead of registering them in the registry.
-
 ## MSIX for Microsoft Store
 
 Folimeld 1.0.1.0 is published as an MSIX product on the Microsoft Store in Japan and the United States. Use the same product's package identity and publisher for Store updates. See the [release plan](documentation/windows-store-release-plan.md).
@@ -211,36 +201,9 @@ powershell -ExecutionPolicy Bypass -File .\build_msix.ps1 -Architecture arm64 `
 
 The build script checks the architecture of the Python/PyInstaller environment and stops if it does not match the requested architecture.
 
-## macOS build
+## macOS distribution
 
-```bash
-./build_exe.sh
-```
-
-The output is `dist/Folimeld.app`. The script creates a virtual environment and installs dependencies as needed.
-
-```bash
-open dist/Folimeld.app
-```
-
-Ad-hoc signing is used for local verification. For official distribution, sign with an Apple Developer certificate and complete notarization.
-
-### Mac App Store build
-
-In Apple Developer, prepare an App Store application signing certificate, an installer signing certificate, and a provisioning profile with App Sandbox enabled for Bundle ID `com.folimeld.Folimeld`.
-
-Replace the Japanese placeholders below with the Common Names of the application and installer signing certificates, respectively.
-
-```bash
-./build_appstore.sh \
-  --application-identity "アプリ署名証明書のCommon Name" \
-  --installer-identity "インストーラ署名証明書のCommon Name" \
-  --provisioning-profile "/path/to/Folimeld.provisionprofile"
-```
-
-The output is `dist/Folimeld_<表示バージョン>.pkg`, where `<表示バージョン>` is the display version. The script applies App Sandbox entitlements and signs the application and installer. Before submission, it automatically verifies the application signature, Info.plist, Bundle ID, separation of the display version and build number, PDF document types, Sandbox entitlements, and installer signature. After testing with TestFlight, upload to App Store Connect using Transporter or Xcode.
-
-Update the version in `folimeld/__init__.py` every time you upload to the App Store. The current entitlements do not include network access, as the application only reads and writes PDFs selected by the user through file dialogs.
+Homebrew distribution is in development. For local development, see the environment setup and running from source sections above.
 
 ## Ubuntu build
 
