@@ -71,7 +71,7 @@ After setup, launch from the repository root within a regular user's X11 session
 
 ## Public and private distribution policy
 
-The Microsoft Store distributes the Windows 11 x64 release. Windows test artifacts are kept locally. Homebrew distribution for macOS is in development. Linux deb/Snap and FreeBSD pkg packages are public. FreeBSD previews are distributed through a [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3), with [installation and build instructions](documentation/freebsd-install.md). The [migration plan](documentation/linux-release-migration.md) groups Linux packages, SHA-256 checksums, corresponding source ZIPs and build records in one Release. Run the following offline asset check before Linux publication; it does not upload files or create tags.
+The Microsoft Store distributes the Windows 11 x64 release. Windows test artifacts are kept locally. macOS is distributed as source through Homebrew. Linux deb/Snap and FreeBSD pkg packages are public. FreeBSD previews are distributed through a [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3), with [installation and build instructions](documentation/freebsd-install.md). The [migration plan](documentation/linux-release-migration.md) groups Linux packages, SHA-256 checksums, corresponding source ZIPs and build records in one Release. Run the following offline asset check before Linux publication; it does not upload files or create tags.
 
 ```bash
 python -m tools.prepare_linux_release --version 0.3.3
@@ -203,7 +203,20 @@ The build script checks the architecture of the Python/PyInstaller environment a
 
 ## macOS distribution
 
-Homebrew distribution is in development. For local development, see the environment setup and running from source sections above.
+Folimeld 0.3.3 is distributed as source through Homebrew for Apple Silicon (arm64) running macOS 15 Sequoia or later. The [macOS Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.3) includes the source archive and SHA-256 checksums.
+
+```sh
+brew install --build-from-source tyamada/tap/folimeld
+folimeld
+```
+
+### Final verification of the published instructions
+
+On 2026-11-11 (Japan time), the commands above were checked against both READMEs on GitHub main and run in an Apple Silicon macOS 15.7.7 (24G720) virtual machine with Folimeld and its tap initially absent. Homebrew 7.0.12 installed Python 3.14.10 and an isolated environment for Folimeld 0.3.3, downloading the source and dependencies from public URLs. `pip check` passed.
+
+With SIP and Gatekeeper enabled, running `folimeld` from Terminal opened the “Untitled — Folimeld” window with “Ready” displayed. This final verification covered installation through the public distribution path and GUI launch. See the [verification log](documentation/macos-homebrew-public-verification.txt).
+
+For local development, see the environment setup and running from source sections above.
 
 ## Ubuntu build
 

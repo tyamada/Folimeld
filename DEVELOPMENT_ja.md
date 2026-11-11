@@ -71,7 +71,7 @@ OSパッケージと `--system-site-packages` の仮想環境を使用し、PyMu
 
 ## 公開・非公開の配布方針
 
-Windowsの試験用成果物はローカルで管理し、macOSはHomebrewでの配布を準備中です。Linuxのdeb/SnapとFreeBSDのpkgは公開します。FreeBSD版は[専用Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)で試験配布し、[導入・ビルド手順](documentation/freebsd-install_ja.md)を用意しています。Linuxパッケージ、SHA-256一覧、対応ソースZIP、ビルド記録を同じReleaseにまとめる移行案は[こちら](documentation/linux-release-migration_ja.md)です。Linux版の公開前の資材検査は以下で行えます。アップロードやタグ作成は行いません。
+Windowsの試験用成果物はローカルで管理し、macOSはHomebrewでソース配布しています。Linuxのdeb/SnapとFreeBSDのpkgは公開します。FreeBSD版は[専用Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)で試験配布し、[導入・ビルド手順](documentation/freebsd-install_ja.md)を用意しています。Linuxパッケージ、SHA-256一覧、対応ソースZIP、ビルド記録を同じReleaseにまとめる移行案は[こちら](documentation/linux-release-migration_ja.md)です。Linux版の公開前の資材検査は以下で行えます。アップロードやタグ作成は行いません。
 
 ```bash
 python -m tools.prepare_linux_release --version 0.3.3
@@ -203,7 +203,20 @@ powershell -ExecutionPolicy Bypass -File .\build_msix.ps1 -Architecture arm64 `
 
 ## macOSの配布
 
-Homebrewでの配布を準備中です。開発時の依存関係の設定とソースからの起動は、このガイドの該当する節を参照してください。
+Folimeld 0.3.3は、Apple Silicon（arm64）・macOS 15 Sequoia以降向けにHomebrewでソース配布しています。[macOS版Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.3)にソースアーカイブとSHA-256一覧を掲載しています。
+
+```sh
+brew install --build-from-source tyamada/tap/folimeld
+folimeld
+```
+
+### 公開手順の最終検証
+
+2026-11-11（日本時間）、Folimeldと専用tapが未導入のApple Silicon用macOS 15.7.7（24G720）仮想マシンで、GitHubのmainにある日英READMEの上記コマンドを確認し、公開tapからインストールしました。Homebrew 7.0.12がPython 3.14.10とFolimeld 0.3.3の専用環境を構築し、公開URLからソースと依存ファイルを取得しました。`pip check`は成功しました。
+
+SIPとGatekeeperを有効にした状態で、ターミナルから`folimeld`を実行し、「Untitled — Folimeld」のウィンドウと「Ready」表示を確認しました。今回の最終検証の対象は、公開配布経路でのインストールとGUI起動です。[検証ログ](documentation/macos-homebrew-public-verification.txt)を参照してください。
+
+開発時の依存関係の設定とソースからの起動は、このガイドの該当する節を参照してください。
 
 ## Ubuntuビルド
 

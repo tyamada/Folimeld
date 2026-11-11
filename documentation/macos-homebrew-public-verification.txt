@@ -1,0 +1,16 @@
+ProductName:		macOS
+ProductVersion:		15.7.7
+BuildVersion:		24G720
+arm64
+assessments enabled
+System Integrity Protection status: enabled.
+folimeld 0.3.3
+No broken requirements found.
+
+Published README commands verified:
+brew install --build-from-source tyamada/tap/folimeld
+folimeld
+
+Observed the Folimeld GUI window ("Untitled — Folimeld", status "Ready")
+in the clean macOS 15 guest using the native VM display.
+The source archive and dependencies were obtained by Homebrew from public URLs.
