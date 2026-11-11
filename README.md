@@ -8,7 +8,7 @@
 
 Folimeld is a desktop application for visually rearranging, rotating, inserting, and deleting PDF pages. It is available for Windows, macOS, Ubuntu, and Debian, with preview releases for FreeBSD, NetBSD, and OpenBSD. Files are processed locally without sending them to external services.
 
-![Folimeld main window](documentation/screenshots/main-window.png)
+![Folimeld main window](documentation/screenshots/main-window-macos.png)
 
 ### Create a PDF from an image folder
 
@@ -210,7 +210,7 @@ Open **Help → User guide** or press F1 to view basic operations, settings, and
 
 Opening a password-protected PDF displays a prompt for the password required to open it.
 
-![Password dialog](documentation/screenshots/password-dialog.png)
+![Password dialog](documentation/screenshots/password-dialog-macos.png)
 
 ### Document settings
 

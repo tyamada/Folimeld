@@ -8,7 +8,7 @@
 
 Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、削除できるデスクトップアプリです。Windows、macOS、Ubuntu、Debianで利用でき、FreeBSD・NetBSD・OpenBSD向けにも試験配布しています。編集するファイルを外部サービスへ送信せず、ローカル環境で処理します。
 
-![Folimeld main window](documentation/screenshots/main-window.png)
+![Folimeld main window](documentation/screenshots/main-window-macos_ja.png)
 
 ### 画像フォルダからPDFを作成
 
@@ -210,7 +210,7 @@ pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.3.tgz
 
 パスワード付きPDFを開くと、閲覧パスワードの入力画面が表示されます。
 
-![Password dialog](documentation/screenshots/password-dialog.png)
+![Password dialog](documentation/screenshots/password-dialog-macos_ja.png)
 
 ### 文書設定
 
