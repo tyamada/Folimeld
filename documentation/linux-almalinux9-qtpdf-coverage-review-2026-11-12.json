@@ -1,0 +1,267 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "candidate_unchanged": true,
+  "qt_version": "6.11.2",
+  "qt_self_reported_build": "Qt 6.11.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 11.5.0 20240719 (Red Hat 11.5.0-5)) [Python limited API run time: 3.12.15 built: 3.11.11]",
+  "pyside_config_sha256": "8aa9080dd16d6d317c4b933c9157b5d0bd4ad9278581233543526773e1007544",
+  "pyside_config_text": "built_modules = list(name for name in\n    \"Core;Gui;Widgets;PrintSupport;Sql;Network;Test;Concurrent;DBus;Designer;Xml;Help;Multimedia;MultimediaWidgets;OpenGL;OpenGLWidgets;Pdf;PdfWidgets;Positioning;Location;NetworkAuth;Nfc;Qml;Quick;Quick3D;QuickControls2;CanvasPainter;QuickTest;QuickWidgets;RemoteObjects;Scxml;Sensors;SerialPort;SerialBus;StateMachine;TextToSpeech;Charts;SpatialAudio;Svg;SvgWidgets;DataVisualization;Graphs;GraphsWidgets;Bluetooth;UiTools;WebChannel;WebEngineCore;WebEngineWidgets;WebEngineQuick;WebSockets;HttpServer;WebView;3DCore;3DRender;3DInput;3DLogic;3DAnimation;3DExtras\"\n    .split(\";\"))\n\nshiboken_library_soversion = \"6.11\"\npyside_library_soversion = \"6.11\"\n\nversion = \"6.11.2\"\nversion_info = (6, 11, 2, \"\", \"\")\n\n__build_date__ = '2026-08-14T10:06:39+00:00'\n\n\n\n\n__setup_py_package_version__ = '6.11.2'\n\n",
+  "qtpdf_entry_sha256": "782708b66cfd40d77ed412d9378e7462d5f885e0c8965cbfb59a21084c7b7fd8",
+  "chromium_source_path_markers": [
+    "../../../../../qtwebengine/src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/page_allocator_internals_posix.h",
+    "../../../../../qtwebengine/src/3rdparty/chromium/base/allocator/partition_allocator/src/partition_alloc/thread_isolation/pkey.cc"
+  ],
+  "installed_qt_credits_license_sbom_args_gn_files": [],
+  "reference_document_url": "https://doc.qt.io/qt-6.11/qtpdf-licensing.html",
+  "reference_document_caveat": "Live Qt6.11 page currently reports6.11.3; nine component names used as cross-check, not exact6.11.2 binary build manifest",
+  "component_notice_coverage": [
+    {
+      "component": "Abseil",
+      "source_documents": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/abseil-cpp/LICENSE",
+          "bytes": 11361,
+          "sha256": "c79a7fea0e3cac04cd43f20e7b648e5a0ff8fa5344e644b0ee09ca1162b62747"
+        }
+      ],
+      "documents_present_in_candidate_notice": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/abseil-cpp/LICENSE",
+          "bytes": 11361,
+          "sha256": "c79a7fea0e3cac04cd43f20e7b648e5a0ff8fa5344e644b0ee09ca1162b62747"
+        }
+      ],
+      "has_source_document_in_candidate_notice": true
+    },
+    {
+      "component": "FreeType",
+      "source_documents": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/freetype/src/LICENSE.TXT",
+          "bytes": 2149,
+          "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b"
+        }
+      ],
+      "documents_present_in_candidate_notice": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/freetype/src/LICENSE.TXT",
+          "bytes": 2149,
+          "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b"
+        }
+      ],
+      "has_source_document_in_candidate_notice": true
+    },
+    {
+      "component": "PDFium",
+      "source_documents": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/pdfium/LICENSE",
+          "bytes": 12896,
+          "sha256": "1fe9dea718fbd75cf149adaf4d8a22a4335604d964ddb76d1b45383dec8668c9"
+        }
+      ],
+      "documents_present_in_candidate_notice": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/pdfium/LICENSE",
+          "bytes": 12896,
+          "sha256": "1fe9dea718fbd75cf149adaf4d8a22a4335604d964ddb76d1b45383dec8668c9"
+        }
+      ],
+      "has_source_document_in_candidate_notice": true
+    },
+    {
+      "component": "Chromium",
+      "source_documents": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/LICENSE",
+          "bytes": 1536,
+          "sha256": "368cca1106be99d39ecd32a38d8305585d802a475effb66380b91ffc9bcf709b"
+        },
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/LICENSE.chromium_os",
+          "bytes": 1543,
+          "sha256": "c87ee91f4687ddeb8a959d4cb2f5571cdc9fc4e6fc568b49be6d2b2ef09e796a"
+        }
+      ],
+      "documents_present_in_candidate_notice": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/LICENSE",
+          "bytes": 1536,
+          "sha256": "368cca1106be99d39ecd32a38d8305585d802a475effb66380b91ffc9bcf709b"
+        },
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/LICENSE.chromium_os",
+          "bytes": 1543,
+          "sha256": "c87ee91f4687ddeb8a959d4cb2f5571cdc9fc4e6fc568b49be6d2b2ef09e796a"
+        }
+      ],
+      "has_source_document_in_candidate_notice": true
+    },
+    {
+      "component": "fast_float",
+      "source_documents": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/fast_float/src/LICENSE-APACHE",
+          "bytes": 10767,
+          "sha256": "097a889aa954d04e088b790b10a4014d6189561d0a6013935a73ce3d4ddaaf06"
+        },
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/fast_float/src/LICENSE-BOOST",
+          "bytes": 1337,
+          "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b"
+        },
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/fast_float/src/LICENSE-MIT",
+          "bytes": 1079,
+          "sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6"
+        }
+      ],
+      "documents_present_in_candidate_notice": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/fast_float/src/LICENSE-APACHE",
+          "bytes": 10767,
+          "sha256": "097a889aa954d04e088b790b10a4014d6189561d0a6013935a73ce3d4ddaaf06"
+        },
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/fast_float/src/LICENSE-BOOST",
+          "bytes": 1337,
+          "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b"
+        },
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/fast_float/src/LICENSE-MIT",
+          "bytes": 1079,
+          "sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6"
+        }
+      ],
+      "has_source_document_in_candidate_notice": true
+    },
+    {
+      "component": "Chromium ICU",
+      "source_documents": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/base/third_party/icu/LICENSE",
+          "bytes": 3674,
+          "sha256": "5d85142a5609ad177a2d7a2e7cae060b886b8b42f25c5b9803cf0cb5ee04ad2f"
+        },
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/icu/LICENSE",
+          "bytes": 25185,
+          "sha256": "17510cf7a58b4879b887ec05a45d72cf1b73544dd9ec7e72f20110ed104229ee"
+        },
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/icu/license.html",
+          "bytes": 622,
+          "sha256": "c62d7697c03979f5056d28b338fafc7a1152820f7b379adf4a9d88cd37160f96"
+        },
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/icu/scripts/LICENSE",
+          "bytes": 1559,
+          "sha256": "845022e0c1db1abb41a6ba4cd3c4b674ec290f3359d9d3c78ae558d4c0ed9308"
+        },
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/gn/src/base/third_party/icu/LICENSE",
+          "bytes": 3674,
+          "sha256": "5d85142a5609ad177a2d7a2e7cae060b886b8b42f25c5b9803cf0cb5ee04ad2f"
+        }
+      ],
+      "documents_present_in_candidate_notice": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/base/third_party/icu/LICENSE",
+          "bytes": 3674,
+          "sha256": "5d85142a5609ad177a2d7a2e7cae060b886b8b42f25c5b9803cf0cb5ee04ad2f"
+        },
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/icu/LICENSE",
+          "bytes": 25185,
+          "sha256": "17510cf7a58b4879b887ec05a45d72cf1b73544dd9ec7e72f20110ed104229ee"
+        },
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/icu/license.html",
+          "bytes": 622,
+          "sha256": "c62d7697c03979f5056d28b338fafc7a1152820f7b379adf4a9d88cd37160f96"
+        },
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/icu/scripts/LICENSE",
+          "bytes": 1559,
+          "sha256": "845022e0c1db1abb41a6ba4cd3c4b674ec290f3359d9d3c78ae558d4c0ed9308"
+        },
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/gn/src/base/third_party/icu/LICENSE",
+          "bytes": 3674,
+          "sha256": "5d85142a5609ad177a2d7a2e7cae060b886b8b42f25c5b9803cf0cb5ee04ad2f"
+        }
+      ],
+      "has_source_document_in_candidate_notice": true
+    },
+    {
+      "component": "libjpeg-turbo",
+      "source_documents": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/libjpeg_turbo/LICENSE.md",
+          "bytes": 5620,
+          "sha256": "96f5b328adbb78eeaaec6980d73fd558cb1e4d62560ed615646bc3cf5e532430"
+        }
+      ],
+      "documents_present_in_candidate_notice": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/libjpeg_turbo/LICENSE.md",
+          "bytes": 5620,
+          "sha256": "96f5b328adbb78eeaaec6980d73fd558cb1e4d62560ed615646bc3cf5e532430"
+        }
+      ],
+      "has_source_document_in_candidate_notice": true
+    },
+    {
+      "component": "libpng",
+      "source_documents": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/libpng/LICENSE",
+          "bytes": 5345,
+          "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526"
+        }
+      ],
+      "documents_present_in_candidate_notice": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/libpng/LICENSE",
+          "bytes": 5345,
+          "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526"
+        }
+      ],
+      "has_source_document_in_candidate_notice": true
+    },
+    {
+      "component": "zlib",
+      "source_documents": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/openscreen/src/third_party/zlib/LICENSE",
+          "bytes": 1109,
+          "sha256": "249994fe7f34f098c2a1ac549afe7879f2950aa7d71bb778eb723e22f9ae1791"
+        },
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/zlib/LICENSE",
+          "bytes": 910,
+          "sha256": "e1cfcc55c325b3f78cf55df9664abaa066e2271dffe8213347d9fccdfbac8f2c"
+        }
+      ],
+      "documents_present_in_candidate_notice": [
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/openscreen/src/third_party/zlib/LICENSE",
+          "bytes": 1109,
+          "sha256": "249994fe7f34f098c2a1ac549afe7879f2950aa7d71bb778eb723e22f9ae1791"
+        },
+        {
+          "path": "qt-everywhere-src-6.11.2/qtwebengine/src/3rdparty/chromium/third_party/zlib/LICENSE",
+          "bytes": 910,
+          "sha256": "e1cfcc55c325b3f78cf55df9664abaa066e2271dffe8213347d9fccdfbac8f2c"
+        }
+      ],
+      "has_source_document_in_candidate_notice": true
+    }
+  ],
+  "all_nine_component_groups_have_source_notices_in_revision3": true,
+  "limitations": [
+    "Source notice presence does not establish exact build selection or complete source/patch provenance",
+    "No wheel-provided generated credits or args.gn were found by this filename search; not proof of their global absence",
+    "Qt self-reported compiler/version is not independently reconstructed build provenance"
+  ]
+}

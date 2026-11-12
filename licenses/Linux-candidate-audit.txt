@@ -1,0 +1,2 @@
+Private Fedora44 amd64 candidate0.3.5/build1 revision1.
+Crypto native records and OS notices collected on Fedora44. Common upstream sources reused by hash. OS SRPMs and complete wheel/source provenance remain to verify. Unpublished; not a full desktop certification.

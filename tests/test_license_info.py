@@ -16,9 +16,16 @@ class LicenseInfoTests(unittest.TestCase):
                 raise PackageNotFoundError(name)
             return SimpleNamespace(version="1.2", metadata={"License": "Test license"}, files=[])
 
-        with patch("folimeld.license_info.sys.platform", "win32"), \
-                patch("folimeld.license_info.distribution", side_effect=lookup):
-            documents = dict(license_documents())
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "licenses").mkdir()
+            (root / "LICENSE").write_text("Folimeld notice", encoding="utf-8")
+            (root / "licenses" / "AGPL-3.0.txt").write_text("AGPL notice", encoding="utf-8")
+            with patch("sys._MEIPASS", directory, create=True), \
+                    patch("sys.frozen", False, create=True), \
+                    patch("folimeld.license_info.sys.platform", "win32"), \
+                    patch("folimeld.license_info.distribution", side_effect=lookup):
+                documents = dict(license_documents())
         self.assertIn("AGPL-3.0", documents)
         self.assertIn("PySide6 1.2", documents["Installed-packages"])
         self.assertIn("cryptography 1.2", documents["Installed-packages"])
@@ -30,6 +37,24 @@ class LicenseInfoTests(unittest.TestCase):
         with patch("folimeld.license_info.distribution", side_effect=PackageNotFoundError("missing")):
             with self.assertRaises(PackageNotFoundError):
                 installed_notices()
+
+    def test_packaging_includes_bootloader_license_text(self):
+        with tempfile.TemporaryDirectory() as directory:
+            copying = Path(directory) / "COPYING.txt"
+            text = "Bootloader license\nSpecial exception for distributed executables.\n"
+            copying.write_text(text, encoding="utf-8")
+
+            def lookup(name):
+                return SimpleNamespace(
+                    version="6.22.2", metadata={},
+                    files=[Path("licenses/COPYING.txt")] if name == "PyInstaller" else [],
+                    locate_file=lambda file: copying,
+                )
+
+            with patch("folimeld.license_info.distribution", side_effect=lookup):
+                notices = installed_notices()
+            self.assertIn("PyInstaller 6.22.2", notices)
+            self.assertIn(text, notices)
 
     def test_source_run_tolerates_missing_python_license_but_packaging_does_not(self):
         package = SimpleNamespace(version="1.2", metadata={}, files=[])

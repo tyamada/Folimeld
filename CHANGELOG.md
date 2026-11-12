@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+- Update notices and matching sources for the Fedora 44 / amd64 0.3.5 candidate. Verification in dedicated environments is in progress; unpublished.
+
 - Add signed application and private MuPDF dependency packages, matching source, build tools, and bilingual installation instructions for OpenBSD 8.0 / amd64
 
 - Restrict the Windows build DLL search path to required Python, Windows and Git locations; validate native binary provenance and stop builds that collect binaries from unrelated tools

@@ -3,11 +3,11 @@
   "cffi_version": "2.1.1",
   "openssl_version": "4.0.3",
   "cargo_lock_sha256": "98778208027ce05bfff0db88c290f28355eb20e685f0c728775359fb91a1a4c4",
-  "platform": "Windows-11-10.0.26300-SP0",
-  "machine": "AMD64",
+  "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "machine": "x86_64",
   "installed_native_binary_sha256": {
-    "cryptography/hazmat/bindings/_rust.pyd": "1d4332a447cab13dec8e3a533ad579e0e562b79e40822c931f33769758fc7156",
-    "_cffi_backend.cp314-win_amd64.pyd": "9e99b2184c60f21a88cafc374386ded3559e8694ed7cf111f2869e066d303334"
+    "cryptography/hazmat/bindings/_rust.abi3.so": "1e5d23fa66915204b9b67202a46993844d81cda56f6ad52cead2def37617ee29",
+    "_cffi_backend.cpython-314-x86_64-linux-gnu.so": "7d1eff7fbb874ee72228fd426103da2b9eef528979156077bdec736d5b4f61a2"
   },
   "source_archive_sha256": {
     "cryptography-50.0.2.tar.gz": "7b46165bb56eb4704e2eaaf86f3c940d19154535d9b0ca7d6d590b04060e00d5",
@@ -245,9 +245,9 @@
     "sha256": "325b5c806167c13b40b1ffeadfe0248197c00eccc4cf123ec1e28d2d2fd216d9"
   },
   "notice_sha256": {
-    "Cryptography-Rust.txt": "22761a5a6643f570942798da5916c227c7184bc984b621437cc1bd95467ed163",
-    "CFFI-libffi-x64.txt": "c58c9325338d69ba0a0e139b3acad540a2050369c55b39f3e0e259102452e2ae",
-    "OpenSSL.txt": "64db145f3ed1ec256852c3d0068d8df34299bc10da7d5aec1b4f0d8624da7661"
+    "Cryptography-Rust.txt": "905e4c77b7db6cdbe6910c77708531449e538e220b962d4fd37fb3dc2ad9edab",
+    "CFFI-libffi-x64.txt": "65c0d03531dcc6346ad1fd8269a347295181bb398ecc43f3d7e803c404a813ac",
+    "OpenSSL.txt": "7e488e10f58d519c5d8748280f4a63517e21303c8cf99a8ed38fbf00a23310da"
   },
   "scope": "Cargo.lock superset; CFFI x86/x64 headers; upstream OpenSSL legal files. Not proof of wheel build provenance, complete native notices, or all-platform compliance."
 }

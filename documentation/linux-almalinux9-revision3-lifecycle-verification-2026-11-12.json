@@ -1,0 +1,159 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "lifecycle": {
+    "commands": [
+      {
+        "command": [
+          "rpm",
+          "-V",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "log": ""
+      },
+      {
+        "command": [
+          "dnf",
+          "check"
+        ],
+        "exit_code": 0,
+        "log": ""
+      },
+      {
+        "command": [
+          "dnf",
+          "-y",
+          "--setopt=clean_requirements_on_remove=False",
+          "remove",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "log": "Dependencies resolved.\n================================================================================\n Package        Architecture Version                  Repository           Size\n================================================================================\nRemoving:\n folimeld       x86_64       0.3.3-3.alma9_8          @@commandline        98 M\n\nTransaction Summary\n================================================================================\nRemove  1 Package\n\nFreed space: 98 M\nRunning transaction check\nTransaction check succeeded.\nRunning transaction test\nTransaction test succeeded.\nRunning transaction\n  Preparing        :                                                        1/1 \n  Erasing          : folimeld-0.3.3-3.alma9_8.x86_64                        1/1 \n  Running scriptlet: folimeld-0.3.3-3.alma9_8.x86_64                        1/1 \n  Verifying        : folimeld-0.3.3-3.alma9_8.x86_64                        1/1 \n\nRemoved:\n  folimeld-0.3.3-3.alma9_8.x86_64                                               \n\nComplete!\n"
+      },
+      {
+        "command": [
+          "dnf",
+          "-y",
+          "--setopt=install_weak_deps=False",
+          "install",
+          "/root/folimeld-verification/folimeld-0.3.3-3.alma9_8.x86_64.rpm"
+        ],
+        "exit_code": 0,
+        "log": "Last metadata expiration check: 2:01:05 ago on Thu 12 Nov 2026 02:33:46 PM JST.\nDependencies resolved.\n================================================================================\n Package         Architecture  Version                Repository           Size\n================================================================================\nInstalling:\n folimeld        x86_64        0.3.3-3.alma9_8        @commandline         97 M\n\nTransaction Summary\n================================================================================\nInstall  1 Package\n\nTotal size: 97 M\nInstalled size: 98 M\nDownloading Packages:\nRunning transaction check\nTransaction check succeeded.\nRunning transaction test\nTransaction test succeeded.\nRunning transaction\n  Preparing        :                                                        1/1 \n  Installing       : folimeld-0.3.3-3.alma9_8.x86_64                        1/1 \n  Running scriptlet: folimeld-0.3.3-3.alma9_8.x86_64                        1/1 \n  Verifying        : folimeld-0.3.3-3.alma9_8.x86_64                        1/1 \n\nInstalled:\n  folimeld-0.3.3-3.alma9_8.x86_64                                               \n\nComplete!\n"
+      },
+      {
+        "command": [
+          "rpm",
+          "-V",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "log": ""
+      },
+      {
+        "command": [
+          "dnf",
+          "check"
+        ],
+        "exit_code": 0,
+        "log": ""
+      }
+    ],
+    "package_sha256": "3f1da813afaedad6aa6d47fa8b5d4d1cd0e2bba429e86b1f34b9c1590433be28",
+    "package_files_restored": {
+      "/usr/bin/folimeld": "b0915988edbfcea48704cf013f5961b5c496d7b6689a888f019cff9034f46455",
+      "/usr/share/applications/folimeld.desktop": "8a271d69a2ce9627a8e6dc2542c8076ff88becbc23cb316c985b0580f917e890",
+      "/usr/share/icons/hicolor/256x256/apps/folimeld.png": "e3ee064eec6215d101b1ff4c2e0815c1d6e717b4dc5f5d7278e8ba67658575d4",
+      "/usr/share/licenses/folimeld/LICENSE": "2abf94716325b310911398472f8a1501673e2fdd449e0c1ad546107f61fcac56"
+    },
+    "user_files_preserved": {
+      "/home/folimeld-test/verification/revision3-regression-20261112/fixtures/保存 結果.pdf": "2fccb4805ee3b652fc12429c4f1abbfc1a462b3f0a7194e131f6150394ad89ae",
+      "/home/folimeld-test/verification/revision3-regression-20261112/fixtures/原本_日本語.pdf": "6661b4f08cd45156d42ffdec0c9c418a4bdc7873e873615c141cde22ba035cdb",
+      "/home/folimeld-test/verification/revision3-regression-20261112/fixtures/encrypted-edited.pdf": "4df5eec0e26c335a24dd080a609b4c1510f0764b2f45544340cee5c49798d07c",
+      "/home/folimeld-test/verification/revision3-regression-20261112/fixtures/暗号化.pdf": "48b63c2a0e9c3bf3f4e18d55d1104195310ac3dfa7986c04973f0f8319e70c0f",
+      "/home/folimeld-test/verification/revision3-regression-20261112/fixtures/image-created.pdf": "2c60f3840a466c569c790891b0c5bd5a0e54750bed70df244f4558b3ad8e9072",
+      "/home/folimeld-test/verification/revision3-regression-20261112/config/Folimeld/Folimeld.conf": "df321278d2fd99616d0db9d16af04aa1790cec6c3037eff196a23df4aefb53f8"
+    },
+    "removed_package_files_verified": true,
+    "package": "folimeld-0.3.3-3.alma9_8.x86_64",
+    "scope": "Existing dedicated GUI-tool Test environment; removal does not auto-remove dependencies; not fresh minimal installation"
+  },
+  "test": {
+    "gio": {
+      "commands": [
+        {
+          "command": [
+            "gio",
+            "info",
+            "-a",
+            "standard::content-type",
+            "/home/folimeld-test/verification/revision3-gio-20261112/日本語 パス/関連付け 試験.pdf"
+          ],
+          "exit_code": 0,
+          "stdout": "uri: file:///home/folimeld-test/verification/revision3-gio-20261112/%E6%97%A5%E6%9C%AC%E8%AA%9E%20%E3%83%91%E3%82%B9/%E9%96%A2%E9%80%A3%E4%BB%98%E3%81%91%20%E8%A9%A6%E9%A8%93.pdf\nlocal path: /home/folimeld-test/verification/revision3-gio-20261112/日本語 パス/関連付け 試験.pdf\nunix mount: /dev/sdp / ext4 rw,relatime,discard,errors=remount-ro,data=ordered\nattributes:\n  standard::content-type: application/pdf\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "gio",
+            "mime",
+            "application/pdf",
+            "folimeld.desktop"
+          ],
+          "exit_code": 0,
+          "stdout": "Set folimeld.desktop as the default for application/pdf\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "gio",
+            "mime",
+            "application/pdf"
+          ],
+          "exit_code": 0,
+          "stdout": "Default application for “application/pdf”: folimeld.desktop\nRegistered applications:\n\tfolimeld.desktop\nRecommended applications:\n\tfolimeld.desktop\n",
+          "stderr": ""
+        }
+      ],
+      "gio_open": {
+        "exit_code": 0
+      },
+      "target": "/home/folimeld-test/verification/revision3-gio-20261112/日本語 パス/関連付け 試験.pdf",
+      "original_sha256": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+      "original_and_target_unchanged": true,
+      "binary_sha256": "b0915988edbfcea48704cf013f5961b5c496d7b6689a888f019cff9034f46455",
+      "pages_observed": 3,
+      "japanese_pdf_observed": true,
+      "scope": "Dedicated XDG config and isolated D-Bus, WSLg X11, not normal desktop double-click",
+      "gio_log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+      "session_log": "",
+      "test_gui_and_session_terminated": true
+    },
+    "startup": [
+      {
+        "platform": "offscreen",
+        "alive_after_12_seconds": true,
+        "exit_code_after_test": -15,
+        "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nThis plugin does not support propagateSizeHints()\n"
+      },
+      {
+        "platform": "xcb",
+        "alive_after_12_seconds": true,
+        "exit_code_after_test": -15,
+        "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+      }
+    ],
+    "no_folimeld_process_remaining": true,
+    "binary_sha256": "b0915988edbfcea48704cf013f5961b5c496d7b6689a888f019cff9034f46455"
+  },
+  "screenshots": {
+    "01-gio-nonascii-opened.png": "046c3895fa09b1a0ffbcf151627e06b4a11367b4280fe932e960058e81d1f7f1"
+  },
+  "limitations": [
+    "Existing dedicated GUI-tool/EPEL test environment, not a new minimal dependency environment",
+    "Dependencies deliberately retained during package removal",
+    "GIO via isolated XDG/D-Bus in WSLg, not full desktop file-manager double-click",
+    "Public version integration, application-version/settings migration, wheel provenance and Alma8 libXau signature unresolved"
+  ]
+}

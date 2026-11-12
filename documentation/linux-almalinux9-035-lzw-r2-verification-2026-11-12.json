@@ -1,0 +1,91 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "publication_ready": false,
+  "candidate": "/home/folimeld-build/folimeld-candidates/alma9-035-lzw-r2-20261112",
+  "package_path": "/home/folimeld-build/folimeld-candidates/alma9-035-lzw-r2-20261112/packages/folimeld-0.3.5-2.alma9_8.x86_64.rpm",
+  "package_sha256": "9f36b61f85fe6fbd32cce94af2b727f7fb62e0b4286ab977ea21498583498a70",
+  "executable_sha256": "5b18292874ed3ec0b7865f26b83baae5fa4a7c79e62163c82ab22704cd52d587",
+  "source_archive": "/home/folimeld-build/folimeld-candidates/alma9-035-lzw-r2-20261112/source/dist/source/Folimeld-source-301aba7447429bf12a53129cf21d463392058fcd9d2455ef387f33a3bdc8aa54.zip",
+  "source_sha256": "301aba7447429bf12a53129cf21d463392058fcd9d2455ef387f33a3bdc8aa54",
+  "source_files_verified": 679,
+  "notice_sha256": "1fd35fc142f1d09927e85d944bf181bd89b23d2fed3c42733ed2afd22a70b6bf",
+  "notice_in_elf_and_source_zip": true,
+  "unchanged_native_entries": 210,
+  "all_folimeld_source_unchanged": true,
+  "virtualkeyboard_entries": [],
+  "test_log": "...............                                                 [100%]\n15 passed, 9 subtests passed in 0.25s\n",
+  "initial_build_commands": [
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_license_info.py",
+        "tests/test_source_bundle.py",
+        "tests/test_linux_alma_rpm.py",
+        "--basetemp",
+        "/home/folimeld-build/folimeld-candidates/alma9-035-lzw-r2-20261112/pytest-temp",
+        "-o",
+        "cache_dir=/home/folimeld-build/folimeld-candidates/alma9-035-lzw-r2-20261112/pytest-cache",
+        "-q"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/bin/python",
+        "tools/make_app_icon.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/bin/python",
+        "-m",
+        "PyInstaller",
+        "--noconfirm",
+        "--clean",
+        "Folimeld-linux.spec"
+      ],
+      "exit_code": 1
+    }
+  ],
+  "resume_commands": [
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/bin/python",
+        "-m",
+        "PyInstaller",
+        "--noconfirm",
+        "--clean",
+        "Folimeld-linux.spec"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/bin/python",
+        "tools/package_linux_alma_rpm.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "artifact_source_association": {
+    "artifact": "folimeld-0.3.5-2.alma9_8.x86_64.rpm",
+    "artifact_sha256": "9f36b61f85fe6fbd32cce94af2b727f7fb62e0b4286ab977ea21498583498a70",
+    "executable": "folimeld",
+    "executable_sha256": "5b18292874ed3ec0b7865f26b83baae5fa4a7c79e62163c82ab22704cd52d587",
+    "association": "packaging script supplied executable; verify package contents before publication",
+    "source_archive": "Folimeld-source-301aba7447429bf12a53129cf21d463392058fcd9d2455ef387f33a3bdc8aa54.zip",
+    "source_sha256": "301aba7447429bf12a53129cf21d463392058fcd9d2455ef387f33a3bdc8aa54",
+    "git_commit": "423e59471b576e4732c7d6ec0ad9ab25cbf19582",
+    "working_tree_changed": true,
+    "dependency_sources": "NOT INCLUDED: obtain matching dependency sources and review bundled native components before distribution"
+  },
+  "remaining": [
+    "Install revision2 and verify license display and startup",
+    "Create separate revision2 staging/checksums; revision1 staging remains historical",
+    "Complete remaining third-party source/notice review and finalize release version"
+  ]
+}

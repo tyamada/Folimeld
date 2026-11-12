@@ -1,0 +1,1911 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "candidate_executable_sha256": "2abe33953f482b723bbd9c15a132bd7bad114ae1e998d3ee6105c96bfd096c98",
+  "elf_count": 210,
+  "groups": {
+    "Pillow": 19,
+    "Qt/PySide/Shiboken": 80,
+    "cryptography/cffi": 2,
+    "OS RPM": 105,
+    "PyMuPDF": 4
+  },
+  "all_match_prior_audited_origins": true,
+  "os_rpm_entries_have_exact_named_srpm": true,
+  "entries": [
+    {
+      "entry": "PIL/_avif.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "c0c30b196f5e42fe990291eb0fb5aade70803399f6be4bc08da9fb7ced9957dd",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PIL/_avif.cpython-312-x86_64-linux-gnu.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PIL/_imaging.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "94310f4a073e9773a067df88513804649f50a974f78bd85a52c52d21170783f2",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PIL/_imaging.cpython-312-x86_64-linux-gnu.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PIL/_imagingcms.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "2d4600dbd8c29d7cb243560ddf6a7c6ce36d13e15cf359d14050623ad7d153ac",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PIL/_imagingcms.cpython-312-x86_64-linux-gnu.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PIL/_imagingmath.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "95bd69209560c9fd64e6665204f33207c7b61cccd4c29797f0f522561bc5c693",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PIL/_imagingmath.cpython-312-x86_64-linux-gnu.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PIL/_imagingtk.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "e8f9d96fbfa0ccfd816d82d3c880eb05872f4d1079e09d63dfd7b513c9af73ff",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PIL/_imagingtk.cpython-312-x86_64-linux-gnu.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PIL/_webp.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "54806394ca07d141f07663d6629108be51795e7371c3c13db94ba808fbf15fd8",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PIL/_webp.cpython-312-x86_64-linux-gnu.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6Core.so.6",
+      "sha256": "23651543e0ff970f1d21b2abc1250221f0dd854fe68e3027462925532afbe22b",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6Core.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6DBus.so.6",
+      "sha256": "548e934455d147fe9c2f9e78a345a4458bcfad846c0d1e7fe0a80d71b0a04e15",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6DBus.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6EglFSDeviceIntegration.so.6",
+      "sha256": "928f596db3959e048c1114579ac4939921f4ad4c8341b2a31960c1309acf779e",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6EglFSDeviceIntegration.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6EglFsKmsSupport.so.6",
+      "sha256": "b052ea1b2ce58f3ac41c16cec684730cd74275f430c32b5dd04061502fae5327",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6EglFsKmsSupport.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6Gui.so.6",
+      "sha256": "c1797794be8cfd5e64e324c5068ff9f32bd54fda21af1a637c087550ebae73a0",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6Gui.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6Network.so.6",
+      "sha256": "bdf6d5cedfda840257bdc3e7393f159c250b51124969d4eae388f3c79912e646",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6Network.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6OpenGL.so.6",
+      "sha256": "7a529f90ab931734fa6a05bc7dce2ef23ee206c073f7f42b0838fb68ae999ec6",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6OpenGL.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6Pdf.so.6",
+      "sha256": "782708b66cfd40d77ed412d9378e7462d5f885e0c8965cbfb59a21084c7b7fd8",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6Pdf.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6Qml.so.6",
+      "sha256": "97638fce79b23fb910d1a79094df50262b7bd877cb4930c91d5e1c34dbb5294f",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6Qml.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6QmlMeta.so.6",
+      "sha256": "f188d7a80f4976dce5c62f4c9120b6531524e51f51f8a129175959bceede9cb0",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6QmlMeta.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6QmlModels.so.6",
+      "sha256": "130cf2b916a58142e1fc87d03e5ef473acf55a6f6bd47d67ef8de879bd896126",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6QmlModels.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6QmlWorkerScript.so.6",
+      "sha256": "f8e39f369fa639195dbfff756ebeb8695dc7679f68af1738020eff1b007db15c",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6QmlWorkerScript.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6Quick.so.6",
+      "sha256": "7969cc04af5e5c5829376b9b7509e690bc9c208763e1483a1835de852fe7460e",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6Quick.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6Svg.so.6",
+      "sha256": "6cc863209dc92d29e2698cc59f61064976b25c3e24fd36c34973a4e880d78e8d",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6Svg.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6WaylandClient.so.6",
+      "sha256": "a2628e71258b5fda3bc4fd920541a34298137fd2d46f447e65cc0d52e0bf4f64",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6WaylandClient.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6Widgets.so.6",
+      "sha256": "0cb5f5ab05e519487b0900a4592351a54420fe703a29bb929e06220a2fc2b616",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6Widgets.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6WlShellIntegration.so.6",
+      "sha256": "23e047a07ec4fb78c5640f1493cea17b8c05a9d01cc7cfc874b6cd60fdfc0f0b",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6WlShellIntegration.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6XcbQpa.so.6",
+      "sha256": "0e582e1461f9fe9fa208d83ff09edab901dcd3ba2702e047f458f72f00f9a9f5",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libQt6XcbQpa.so.6",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libicudata.so.73",
+      "sha256": "4d24b3a908dd838bea23414e16aa830d05a2a306c475246ab11ef0a00c3037e9",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libicudata.so.73",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libicui18n.so.73",
+      "sha256": "ad5410f3e4eb4f01f91d10ddb3780cdbcbeb902ed04a3bc4d3f562b956578d52",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libicui18n.so.73",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libicuuc.so.73",
+      "sha256": "8ce3427af0d2bf566bb422ce80a12014137d12ed452fe2dd9ed481ee46181168",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/Qt/lib/libicuuc.so.73",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/egldeviceintegrations/libqeglfs-emu-integration.so",
+      "sha256": "b3853427fba0131b7719fdeafad540b30822e0346a8652fe89a4b013a7083a1f",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/egldeviceintegrations/libqeglfs-emu-integration.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so",
+      "sha256": "8fcd2e9fd1b2656fa1f025b0bf3ae03af004034b6587f69f9e612c1bdc781154",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/egldeviceintegrations/libqeglfs-x11-integration.so",
+      "sha256": "e9343079ed68fdf2e703949e9e3f06351dce5c5d6cfd99775400e9929e106e1e",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/egldeviceintegrations/libqeglfs-x11-integration.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/generic/libqevdevkeyboardplugin.so",
+      "sha256": "41fd1024b7957ea28bf97d5acae9200d362e2266091ff6e8707b64fc1f1bfebf",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/generic/libqevdevkeyboardplugin.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/generic/libqevdevmouseplugin.so",
+      "sha256": "76ff27f8a68cdaecb5b3f3d1582afc9508f9ab5f63256e6efb54a68ddfaecd88",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/generic/libqevdevmouseplugin.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/generic/libqevdevtabletplugin.so",
+      "sha256": "0e04fee3590fb9bb2df0eee0ec0c18240a80f441c537d8dc0f62290fd6ec603d",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/generic/libqevdevtabletplugin.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/generic/libqevdevtouchplugin.so",
+      "sha256": "17b34f7d52c17994899aa1baef3ae96eda6a6869685e638e0cdf174de2cefd22",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/generic/libqevdevtouchplugin.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/generic/libqtuiotouchplugin.so",
+      "sha256": "a025e3d60794fa13d39c75e3332588222b9f97e9eeedb51a023a7705d6e41f2f",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/generic/libqtuiotouchplugin.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/iconengines/libqsvgicon.so",
+      "sha256": "dee247929cbf23f66f4738aadebdb523f304eb1e36089de489e1a1a31dce2b30",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/iconengines/libqsvgicon.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqgif.so",
+      "sha256": "8f602245038c508504445876ea675507508e3442ecf6faa964b39ce1ff2d8c80",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/imageformats/libqgif.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqicns.so",
+      "sha256": "56ba43983778b4ffa90390dcc32ff21e36441cf1debf50738fe29bedde497825",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/imageformats/libqicns.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqico.so",
+      "sha256": "0572f900823c5c1200ec14db0d533f9df8025a6888ad1b11df37ada551dc5c57",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/imageformats/libqico.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqjpeg.so",
+      "sha256": "3c02b7d32fb1fd564c9409e91e850fe94b274f7fad73d2be84cd6c198e326d71",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/imageformats/libqjpeg.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqpdf.so",
+      "sha256": "3c1f6b3db424a3afb4f720d7a0e92630c21262d0f17c0022f7aa134af75beed4",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/imageformats/libqpdf.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqsvg.so",
+      "sha256": "17f6125ef78e931abad94184dff61874d3f93f21adccb27a246cdf7f11b87fb0",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/imageformats/libqsvg.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqtga.so",
+      "sha256": "544f70899386c93a842e0ae1bf90e678da2ccff6f0e4cad544e270f6e4853a60",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/imageformats/libqtga.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqtiff.so",
+      "sha256": "fcf586d90273ee2a107c6bacc3253ef73897cb9d68641d0028a62f30baa16bb0",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/imageformats/libqtiff.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqwbmp.so",
+      "sha256": "8db43182afaaa946725cca340a9942b059025142cfb291f3a14d1709693c5f9d",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/imageformats/libqwbmp.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqwebp.so",
+      "sha256": "990e4bc0f37aab81a31b6f29db8fe7d4c6d634bae20e5ff7204e7f2ba9df0d28",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/imageformats/libqwebp.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/networkinformation/libqconnman.so",
+      "sha256": "b14582e7d81eeda12ce357b1b174bda530a965a904ddc30631f441daef963c4a",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/networkinformation/libqconnman.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/networkinformation/libqglib.so",
+      "sha256": "793b1b14a5da85941fd69907c6d5da6b8ed7ddf8438875aab15eabdd76dceb1e",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/networkinformation/libqglib.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/networkinformation/libqnetworkmanager.so",
+      "sha256": "ea3bb7d4d8a746575d299996a2dc6fd03840ed78cc73283bd1f09bcd846e5b04",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/networkinformation/libqnetworkmanager.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so",
+      "sha256": "d08bff4c3b137632a4498933e7d38c6338b8133e75c42ccb9d5e2e9ecc72696d",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so",
+      "sha256": "92437edcc4cdf67ea3479a3b0b7a8de04a3e536e77621abf7df1dbcfdaedf941",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqeglfs.so",
+      "sha256": "a6129b496524cc373ea947e05a68ff69a3fb6eb730eacc2614443bff1d6342a1",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/platforms/libqeglfs.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqlinuxfb.so",
+      "sha256": "f57281999c0fde12ac232590f75c8fddb84fb96a3d577cab68db77cdb9463721",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/platforms/libqlinuxfb.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqminimal.so",
+      "sha256": "eedbedccf3b61bfd42e730f7caf9fb268428e11ace34fd1cc62b9ab56ae26c75",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/platforms/libqminimal.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqminimalegl.so",
+      "sha256": "11f66d34948f29e338bb755e118a022415bac24151d273d6b46ac03cdc045e6b",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/platforms/libqminimalegl.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqoffscreen.so",
+      "sha256": "4e4f6e0e54234e362a1a9b2fc37c2d10647508e193f18b0218c84f2985e63966",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/platforms/libqoffscreen.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqvkkhrdisplay.so",
+      "sha256": "27979210d8424a78df8adb968c6865e8e27a647ff947aede783177851705199e",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/platforms/libqvkkhrdisplay.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqvnc.so",
+      "sha256": "81b5a1decd44b711a8634f3dc39eca1973e90e0c9b694411848d0179639b4f7f",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/platforms/libqvnc.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqwayland.so",
+      "sha256": "7a2a9a11ca1718666c6982af0cccfe31297bde4bf38acac129c6be4c6b056aae",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/platforms/libqwayland.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqxcb.so",
+      "sha256": "83981915129d4143e1a93d0bc8d190cf430f4f4bed37bfea544244eff18baf2f",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/platforms/libqxcb.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platformthemes/libqgtk3.so",
+      "sha256": "4d29d8f04aac1d990dae98227941680fbd375aff3d91a25475fe8e2111abac99",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/platformthemes/libqgtk3.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platformthemes/libqxdgdesktopportal.so",
+      "sha256": "30e3ea36831cd5e8be27b965ceec0557096d8573acccff7df3d7cfb193c777ba",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/platformthemes/libqxdgdesktopportal.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/tls/libqcertonlybackend.so",
+      "sha256": "1b82d5542239101dfbad7a477132a72c18e18fc628823a33b9772b30b73a1e18",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/tls/libqcertonlybackend.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/tls/libqopensslbackend.so",
+      "sha256": "80e3acb3a5185993d0f2a38c6abb8763dede29fb0997d9a57dc454b4da4ba7a5",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/tls/libqopensslbackend.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-decoration-client/libadwaita.so",
+      "sha256": "e3f12c7c325052f910f9fd7402f49d5433ae47230a7b8af5119cee283a75b087",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/wayland-decoration-client/libadwaita.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-decoration-client/libbradient.so",
+      "sha256": "961aa2a7d85a200e1738990ab07da456d940a3c56c337b67cbb7dcd0834db878",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/wayland-decoration-client/libbradient.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-graphics-integration-client/libdmabuf-server.so",
+      "sha256": "6d1e9f15c78fddc4f9b10569b6a2511cbf925f967da1f1ca3b9654a401e84930",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/wayland-graphics-integration-client/libdmabuf-server.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-graphics-integration-client/libdrm-egl-server.so",
+      "sha256": "12cc6b2b7a1f349c052bb748995c0b00c1e916b2dab47a557648e2090f74ce2f",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/wayland-graphics-integration-client/libdrm-egl-server.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-graphics-integration-client/libqt-plugin-wayland-egl.so",
+      "sha256": "fc6714c83383c892bace2c00eb287acc5b6798683da70a5e9dbd0e966aa12489",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/wayland-graphics-integration-client/libqt-plugin-wayland-egl.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-graphics-integration-client/libshm-emulation-server.so",
+      "sha256": "b961b254c55235b67fccdfe6720fca86efff31adf1e33adf376ffdd0d3f8b7d9",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/wayland-graphics-integration-client/libshm-emulation-server.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-graphics-integration-client/libvulkan-server.so",
+      "sha256": "dcaa1c1efb0cac97359993fee7960d797c162291d7e38a8fb50d4714fc972923",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/wayland-graphics-integration-client/libvulkan-server.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-shell-integration/libfullscreen-shell-v1.so",
+      "sha256": "2a66b4ced1791d02cf0b060045cd61e1177d5a420cc0b14dc6832e6128a5830e",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/wayland-shell-integration/libfullscreen-shell-v1.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-shell-integration/libivi-shell.so",
+      "sha256": "b9aacca6f28b10e8ed5f0beac7210064d11024980770a76792cd40ef46745bb9",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/wayland-shell-integration/libivi-shell.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-shell-integration/libqt-shell.so",
+      "sha256": "d38581778f99c5dc47830744fc0b7621ec358c7fb45ca9ffe53cf5b6e7544967",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/wayland-shell-integration/libqt-shell.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-shell-integration/libwl-shell-plugin.so",
+      "sha256": "bd403bf49eaca767442c37cd42365f78d5946f10ef7d6bc76cdb57bb67b3a893",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/wayland-shell-integration/libwl-shell-plugin.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-shell-integration/libxdg-shell.so",
+      "sha256": "f7fc95f585531bf89313d55d555f79d50d44357a9ba98367aaed14047f05b525",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/wayland-shell-integration/libxdg-shell.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/xcbglintegrations/libqxcb-egl-integration.so",
+      "sha256": "004179d65716c907e594d7ef922ac774e33eb0553dc09ff0cccbfbb12b122d48",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/xcbglintegrations/libqxcb-egl-integration.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/xcbglintegrations/libqxcb-glx-integration.so",
+      "sha256": "318a5e905246d26ac0640d34a011d7b34ed2e5302553792388c073176164c7ac",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/Qt/plugins/xcbglintegrations/libqxcb-glx-integration.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/QtCore.abi3.so",
+      "sha256": "d040e13f904ba5f6f43f5d97d8610b0eb53bfb12721710dfea16829355fe0cb1",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/QtCore.abi3.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/QtDBus.abi3.so",
+      "sha256": "1b40eccd88ca3ed4573498295bc0eca3669c676d4f7c6164c61de099c34bd05f",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/QtDBus.abi3.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/QtGui.abi3.so",
+      "sha256": "ac1da875502fd8142dc9083f1572efa20341145a6340b9d004d3318960f6306c",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/QtGui.abi3.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/QtNetwork.abi3.so",
+      "sha256": "62d57a067da6a3dfc49ec3a567068c7079adf9064a2d36fdc0f4a2645f84c69e",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/QtNetwork.abi3.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/QtWidgets.abi3.so",
+      "sha256": "afa3cae8ec4458405abe933f217913dfc550885a5a3d51cccc68e350ae35af2f",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/PySide6/QtWidgets.abi3.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "PySide6/libpyside6.abi3.so.6.11",
+      "sha256": "e5e300b4cdad95cea882715122308ad25cebd0040dbd813c7ed75031f93cff2f",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/PySide6/libpyside6.abi3.so.6.11",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "_cffi_backend.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "9bc1d08072255a5ec2db10fc75df1dd9e73097a75cd9150cfe875ebd6712f17c",
+      "matches_audited_origin": true,
+      "group": "cryptography/cffi",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/_cffi_backend.cpython-312-x86_64-linux-gnu.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "cryptography/hazmat/bindings/_rust.abi3.so",
+      "sha256": "1e5d23fa66915204b9b67202a46993844d81cda56f6ad52cead2def37617ee29",
+      "matches_audited_origin": true,
+      "group": "cryptography/cffi",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/cryptography/hazmat/bindings/_rust.abi3.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "libX11-xcb.so.1",
+      "sha256": "4c9ba30cf279b2727548bc0322828ee53f8436fafc4ee64da841f172c62768d9",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libX11-xcb|1.8.12|1.el9_8.1|x86_64|libX11-1.8.12-1.el9_8.1.src.rpm",
+      "source_material": "runtime/srpms/libX11-1.8.12-1.el9_8.1.src.rpm",
+      "source_sha256": "56387835556d3e5a2e2f4cf24e9ad9f341e7d34bb52bc9b574642184331e9085",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libX11.so.6",
+      "sha256": "871eed8f09d50b9a5ba57e6da602b1fdf9bb15cd18ca14183d077a7b251c8bd2",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libX11|1.8.12|1.el9_8.1|x86_64|libX11-1.8.12-1.el9_8.1.src.rpm",
+      "source_material": "runtime/srpms/libX11-1.8.12-1.el9_8.1.src.rpm",
+      "source_sha256": "56387835556d3e5a2e2f4cf24e9ad9f341e7d34bb52bc9b574642184331e9085",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libXau.so.6",
+      "sha256": "1c1a5928802d71e65ec7d5b3ccda2840810209f2c4ef98d9e9615acbc7012b80",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libXau|1.0.9|8.el9|x86_64|libXau-1.0.9-8.el9.src.rpm",
+      "source_material": "runtime/srpms/libXau-1.0.9-8.el9.src.rpm",
+      "source_sha256": "bf4b15477386236ed47e75c04eca396cf27eb54679e697b763f589c0b5f5361d",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libXext.so.6",
+      "sha256": "f16e3b2362eb2c7a913557cc50774d027183829e9188560af629f7e83c8ae95b",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libXext|1.3.4|8.el9|x86_64|libXext-1.3.4-8.el9.src.rpm",
+      "source_material": "runtime/srpms/libXext-1.3.4-8.el9.src.rpm",
+      "source_sha256": "fabff8d5be444891f4a5062025efd7b356b8a38bf718ba2ac71e55b021ea2a5a",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libblkid.so.1",
+      "sha256": "888cfd8f06c4ae891a14118f8c0f5bc58c60fd2a0ff89a75cf1ed21c0d693d3a",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libblkid|2.37.4|25.el9|x86_64|util-linux-2.37.4-25.el9.src.rpm",
+      "source_material": "runtime/srpms/util-linux-2.37.4-25.el9.src.rpm",
+      "source_sha256": "a5a3650d4d991341baed7d36cd8dcebabb6cc55b32a5bed5dfc89d5730ad7e63",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libbrotlicommon.so.1",
+      "sha256": "6362d0acec9b1db7da2ce23d42c25f03e67fb2bdb7e910acca0988e96b824684",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libbrotli|1.0.9|10.el9_8.1|x86_64|brotli-1.0.9-10.el9_8.1.src.rpm",
+      "source_material": "runtime/srpms/brotli-1.0.9-10.el9_8.1.src.rpm",
+      "source_sha256": "d211e0455ee313b52cbdb0078d69601e613ec2dd51049f09306f14c2fa4848b2",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libbrotlidec.so.1",
+      "sha256": "b6c71fa52381f583f1a6db33195a9838f02c94096e417df9f2c85249909e4d81",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libbrotli|1.0.9|10.el9_8.1|x86_64|brotli-1.0.9-10.el9_8.1.src.rpm",
+      "source_material": "runtime/srpms/brotli-1.0.9-10.el9_8.1.src.rpm",
+      "source_sha256": "d211e0455ee313b52cbdb0078d69601e613ec2dd51049f09306f14c2fa4848b2",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libbz2.so.1",
+      "sha256": "2b6e2c055a33f71883a66a454b1e0ef4e8cd523e3952e2e9e42620e63a07560c",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "bzip2-libs|1.0.8|11.el9|x86_64|bzip2-1.0.8-11.el9.src.rpm",
+      "source_material": "runtime/srpms/bzip2-1.0.8-11.el9.src.rpm",
+      "source_sha256": "1c068d5f33fe0578b379ed11e1a6eaf5bbf9c73bd92fa0ef872c212c29525363",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libcap.so.2",
+      "sha256": "31f45b93fefc44980d92a2817362fdd1e65fb81ca6df8cd1b6f7b978274a1004",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libcap|2.48|10.el9_8.1|x86_64|libcap-2.48-10.el9_8.1.src.rpm",
+      "source_material": "runtime/srpms/libcap-2.48-10.el9_8.1.src.rpm",
+      "source_sha256": "358f7b2f393f06038d180c413562d080fcfc3a140596f9a8e02d7c3102d42490",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libcom_err.so.2",
+      "sha256": "d6076f2489f0be254c874657261c00f93fee2d1170e792f78107887b82db3b77",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libcom_err|1.46.5|8.el9|x86_64|e2fsprogs-1.46.5-8.el9.src.rpm",
+      "source_material": "runtime/srpms/e2fsprogs-1.46.5-8.el9.src.rpm",
+      "source_sha256": "7b6ae451995ab8c9ed45560a24b0e9aaf8f98d5089e7a3e9d01a2e2b29110d79",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libcrypto.so.3",
+      "sha256": "c37e28d8705c4e7b6ff12d3fe461beb34847279228fb7e38390085d1c7ca2a3e",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "openssl-libs|3.5.8|2.el9_8|x86_64|openssl-3.5.8-2.el9_8.src.rpm",
+      "source_material": "runtime/srpms/openssl-3.5.8-2.el9_8.src.rpm",
+      "source_sha256": "33313dd77b97a5787afda11aceb2150dc2930668fdb3a279c4fbea61c06a14d1",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libdbus-1.so.3",
+      "sha256": "43555f9559074e1c8586f7f1846d2144c80a48ccae6963b7482d89ee316e7ca8",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "dbus-libs|1.12.20|8.el9|x86_64|dbus-1.12.20-8.el9.src.rpm",
+      "source_material": "runtime/srpms/dbus-1.12.20-8.el9.src.rpm",
+      "source_sha256": "4492228c81f433df3cfdff135088489af6629f8b8b086ac748dc36763e96d033",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libexpat.so.1",
+      "sha256": "a7b821416a466d6e88a3430ed44a9609b57b9fb086410451afaba8c7798407e4",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "expat|2.5.0|6.el9_8.7|x86_64|expat-2.5.0-6.el9_8.7.src.rpm",
+      "source_material": "runtime/srpms/expat-2.5.0-6.el9_8.7.src.rpm",
+      "source_sha256": "bacaff4f75c6938044ad6f599599c3c13cb893408e7f3275926dc59709cc9492",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libffi.so.8",
+      "sha256": "acf6d142deb5901b01b9e932da445934af60d3b62b4fb001f84daf320053ca8e",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libffi|3.4.2|8.el9|x86_64|libffi-3.4.2-8.el9.src.rpm",
+      "source_material": "runtime/srpms/libffi-3.4.2-8.el9.src.rpm",
+      "source_sha256": "a57b5538c8e35129fa1274fd892744ca6fc56beedd5e8691e20d3d10d0e12726",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libfontconfig.so.1",
+      "sha256": "1dbc208316dbba82a6c61267dbf9df0458927b546fdb4a0260a6a81ce34329ea",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "fontconfig|2.14.0|2.el9_1|x86_64|fontconfig-2.14.0-2.el9_1.src.rpm",
+      "source_material": "runtime/srpms/fontconfig-2.14.0-2.el9_1.src.rpm",
+      "source_sha256": "d629dc6eeb64768e885f1670385b96228ec7c4efa9c786b7c3a2422b1bf781fd",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libfreetype.so.6",
+      "sha256": "0048fb5d115a9dc15eeff04f0f10eb3f87c413d16040a4b2ec03d84cdae45ea9",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "freetype|2.10.4|10.el9_5|x86_64|freetype-2.10.4-10.el9_5.src.rpm",
+      "source_material": "runtime/srpms/freetype-2.10.4-10.el9_5.src.rpm",
+      "source_sha256": "28d03d91e7fae8386327064ab80cd8eca803c2f363e0fa5ca2608a5e69a8b3f8",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libgcc_s.so.1",
+      "sha256": "7074679107af381bb9cd0915e835668eb94f238df649f508f32199285eb38823",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libgcc|11.5.0|14.el9.alma.1|x86_64|gcc-11.5.0-14.el9.alma.1.src.rpm",
+      "source_material": "runtime/srpms/gcc-11.5.0-14.el9.alma.1.src.rpm",
+      "source_sha256": "6889d6c7ffd8df9b7f222dab02295505ca33321cac202e8eaf5d66156ec06ae0",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libgcrypt.so.20",
+      "sha256": "48e345c3702875e0c0e41d77ea66e20611b4241a11431dd0f0e61a0cc41added",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libgcrypt|1.10.0|13.el9_8|x86_64|libgcrypt-1.10.0-13.el9_8.src.rpm",
+      "source_material": "runtime/srpms/libgcrypt-1.10.0-13.el9_8.src.rpm",
+      "source_sha256": "d20abd496b9854016c895c44028228d5b13332ef3f571f3e7341254555179d32",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libgio-2.0.so.0",
+      "sha256": "0011105801b5c26f750cffad44f60f5d9e8d1fe9954c60cee41441575f394bfd",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "glib2|2.68.4|19.el9_8.10|x86_64|glib2-2.68.4-19.el9_8.10.src.rpm",
+      "source_material": "runtime/srpms/glib2-2.68.4-19.el9_8.10.src.rpm",
+      "source_sha256": "b486ba4249ee643dd41ca63c27452d9b57af22a9a903aa9fad33417e310385a2",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libglib-2.0.so.0",
+      "sha256": "86ff27651b7870c39fd5708a4ee71203e01112cf317596c2b6fca43e29534776",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "glib2|2.68.4|19.el9_8.10|x86_64|glib2-2.68.4-19.el9_8.10.src.rpm",
+      "source_material": "runtime/srpms/glib2-2.68.4-19.el9_8.10.src.rpm",
+      "source_sha256": "b486ba4249ee643dd41ca63c27452d9b57af22a9a903aa9fad33417e310385a2",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libgmodule-2.0.so.0",
+      "sha256": "e86417edfb541313a0c19d541066fd524931c0561bf5ed20888cd21f668bc2fd",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "glib2|2.68.4|19.el9_8.10|x86_64|glib2-2.68.4-19.el9_8.10.src.rpm",
+      "source_material": "runtime/srpms/glib2-2.68.4-19.el9_8.10.src.rpm",
+      "source_sha256": "b486ba4249ee643dd41ca63c27452d9b57af22a9a903aa9fad33417e310385a2",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libgobject-2.0.so.0",
+      "sha256": "fed685aa7c9e89600ff6ee02f661cef759bbd6dc88b2b0737c1fba0ca1e5096b",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "glib2|2.68.4|19.el9_8.10|x86_64|glib2-2.68.4-19.el9_8.10.src.rpm",
+      "source_material": "runtime/srpms/glib2-2.68.4-19.el9_8.10.src.rpm",
+      "source_sha256": "b486ba4249ee643dd41ca63c27452d9b57af22a9a903aa9fad33417e310385a2",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libgpg-error.so.0",
+      "sha256": "df6ee6858806a95e801e004eaab3717159b773faa7e442dacfb91dd80707bf5d",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libgpg-error|1.42|5.el9|x86_64|libgpg-error-1.42-5.el9.src.rpm",
+      "source_material": "runtime/srpms/libgpg-error-1.42-5.el9.src.rpm",
+      "source_sha256": "1fa9c58a783dae66feedb14cd0723f92469e3ee66b32f8fd97536d81cb9c768e",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libgraphite2.so.3",
+      "sha256": "21ca00d15269abf33570b6593b1204078caee7295381f0965f9f37ceace35972",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "graphite2|1.3.14|9.el9|x86_64|graphite2-1.3.14-9.el9.src.rpm",
+      "source_material": "runtime/srpms/graphite2-1.3.14-9.el9.src.rpm",
+      "source_sha256": "3abd95dc60985cbdf5a9702df077f16391e37c881a061897c2dbb6b24b2a2f46",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libgssapi_krb5.so.2",
+      "sha256": "682f434b9506a9d398ef1dfdb0b8d631eb52a5ed61963fa941cf6e969affd52b",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "krb5-libs|1.21.1|10.el9_8.1|x86_64|krb5-1.21.1-10.el9_8.1.src.rpm",
+      "source_material": "runtime/srpms/krb5-1.21.1-10.el9_8.1.src.rpm",
+      "source_sha256": "df9e187fdb9bf3d52f4f8e991aa462a603429734301ac0b22b9e37def9c639aa",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libgthread-2.0.so.0",
+      "sha256": "6cf1fe8dedcb2dbabf4010c30ab51d849003311d7ffa9ab03a00b92d6f3758a6",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "glib2|2.68.4|19.el9_8.10|x86_64|glib2-2.68.4-19.el9_8.10.src.rpm",
+      "source_material": "runtime/srpms/glib2-2.68.4-19.el9_8.10.src.rpm",
+      "source_sha256": "b486ba4249ee643dd41ca63c27452d9b57af22a9a903aa9fad33417e310385a2",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libharfbuzz.so.0",
+      "sha256": "fc843b2196889e2b481a56abb4d3ebc17327a6b392442ff7856cf856e3d1cf4e",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "harfbuzz|2.7.4|10.el9|x86_64|harfbuzz-2.7.4-10.el9.src.rpm",
+      "source_material": "runtime/srpms/harfbuzz-2.7.4-10.el9.src.rpm",
+      "source_sha256": "5fcde8244adac1d3264b83496965b8fe4b632d3ef2853cc2c293140c82cfab60",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libk5crypto.so.3",
+      "sha256": "e0d929585097bde108b62621546a12acf78ba80582e2b729b8e7bcdc53221a3d",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "krb5-libs|1.21.1|10.el9_8.1|x86_64|krb5-1.21.1-10.el9_8.1.src.rpm",
+      "source_material": "runtime/srpms/krb5-1.21.1-10.el9_8.1.src.rpm",
+      "source_sha256": "df9e187fdb9bf3d52f4f8e991aa462a603429734301ac0b22b9e37def9c639aa",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libkeyutils.so.1",
+      "sha256": "81e5c45716b8393b7c8fc7aba62b899537c21ac14f75b1410adbfe18c0230aeb",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "keyutils-libs|1.6.3|1.el9|x86_64|keyutils-1.6.3-1.el9.src.rpm",
+      "source_material": "runtime/srpms/keyutils-1.6.3-1.el9.src.rpm",
+      "source_sha256": "a133ed9e7dea39fda653cbee80a35a9cf389eb91c2c95f52c59d1ad6f457010b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libkrb5.so.3",
+      "sha256": "84219e823ee89e38bd43ffc39f3ba29bcd86d2a2d5b50bb6bc4c5dda32c2bebb",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "krb5-libs|1.21.1|10.el9_8.1|x86_64|krb5-1.21.1-10.el9_8.1.src.rpm",
+      "source_material": "runtime/srpms/krb5-1.21.1-10.el9_8.1.src.rpm",
+      "source_sha256": "df9e187fdb9bf3d52f4f8e991aa462a603429734301ac0b22b9e37def9c639aa",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libkrb5support.so.0",
+      "sha256": "1a245c4d8282e89a6f81f47683688b5a78019a37edfa087b289dcdf0ce241b7a",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "krb5-libs|1.21.1|10.el9_8.1|x86_64|krb5-1.21.1-10.el9_8.1.src.rpm",
+      "source_material": "runtime/srpms/krb5-1.21.1-10.el9_8.1.src.rpm",
+      "source_sha256": "df9e187fdb9bf3d52f4f8e991aa462a603429734301ac0b22b9e37def9c639aa",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "liblz4.so.1",
+      "sha256": "9ba322f507d8a158ff98695eff72da5cf62df8c8a396a4de7029a7d0d4331dc0",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "lz4-libs|1.9.3|5.el9|x86_64|lz4-1.9.3-5.el9.src.rpm",
+      "source_material": "runtime/srpms/lz4-1.9.3-5.el9.src.rpm",
+      "source_sha256": "092b2bbf667d890d0fc66d8677b871017fcf4f03c6829f78e734f677925a668a",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "liblzma.so.5",
+      "sha256": "b5092483e66266a4fb3b3bdbbf3dfb817fe0f07757b52d4a33d10eb4b91599ee",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "xz-libs|5.2.5|8.el9_8.1|x86_64|xz-5.2.5-8.el9_8.1.src.rpm",
+      "source_material": "runtime/srpms/xz-5.2.5-8.el9_8.1.src.rpm",
+      "source_sha256": "38472b8633bca7eb0bfc879d21fd0bbb136646b802c7b450727a53a97983b898",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libmount.so.1",
+      "sha256": "8cb4f4e5ea190bd4232cc76d66bde80dba612eb1d550eda33b2aad6c0f6f5643",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libmount|2.37.4|25.el9|x86_64|util-linux-2.37.4-25.el9.src.rpm",
+      "source_material": "runtime/srpms/util-linux-2.37.4-25.el9.src.rpm",
+      "source_sha256": "a5a3650d4d991341baed7d36cd8dcebabb6cc55b32a5bed5dfc89d5730ad7e63",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libmpdec.so.3",
+      "sha256": "0dd7dc966f79152af8c4aaa4f81afbc827af90b9bdb976fb3ef95e29f63e6229",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "mpdecimal|2.5.1|3.el9|x86_64|mpdecimal-2.5.1-3.el9.src.rpm",
+      "source_material": "runtime/srpms/mpdecimal-2.5.1-3.el9.src.rpm",
+      "source_sha256": "5e003bf8da00cfc25a7b980f6ec77e4b074025e8285fc6a697e2c1c654167187",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libpcre.so.1",
+      "sha256": "2abb5bde46e7bd303ba59d19c5bf5cb098c036e466e74e1c53ec5acecb10d495",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "pcre|8.44|4.el9|x86_64|pcre-8.44-4.el9.src.rpm",
+      "source_material": "runtime/srpms/pcre-8.44-4.el9.src.rpm",
+      "source_sha256": "efe3a93e2f6249dfb113402af7beca73e34bb6b738e5935c11ed56aaa79b6c94",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libpcre2-8.so.0",
+      "sha256": "9ce72b62a03b1cb9b3de54e73986ff525480f9818a7a88936ca5e723512cd943",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "pcre2|10.40|7.el9_8|x86_64|pcre2-10.40-7.el9_8.src.rpm",
+      "source_material": "runtime/srpms/pcre2-10.40-7.el9_8.src.rpm",
+      "source_sha256": "9d98d22ee963c3edc5eb0853519c4deeae690682e5a09feb4533f3aecf428fcc",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libpng16.so.16",
+      "sha256": "d7dcb093d9dd331a29d7ab32f41f4fa056c10c4789344ac6e2168f8f9dc674cc",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libpng|1.6.37|15.el9_8.2|x86_64|libpng-1.6.37-15.el9_8.2.src.rpm",
+      "source_material": "runtime/srpms/libpng-1.6.37-15.el9_8.2.src.rpm",
+      "source_sha256": "b36aaa4d9c8749e8087c6476c23884812ec905110ab3c179240af5ea72001605",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libpython3.12.so.1.0",
+      "sha256": "1cf2719db7058fdad7d296e22695824bbb888dcf86e74c424e65b97958064bc5",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libselinux.so.1",
+      "sha256": "a1ff09bffe20f97168af3ac53a6a024a1f897d8e6e3d1281f01d8344308cfa08",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libselinux|3.6|3.el9|x86_64|libselinux-3.6-3.el9.src.rpm",
+      "source_material": "runtime/srpms/libselinux-3.6-3.el9.src.rpm",
+      "source_sha256": "d3514e5a768f018e3605005308c12a8540d6a0be5b2a22b4e45db2f59dfbc039",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libssl.so.3",
+      "sha256": "f7f0969b8b5de26723efa968acdb30c6174face2bf95779883f90e7c9b233629",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "openssl-libs|3.5.8|2.el9_8|x86_64|openssl-3.5.8-2.el9_8.src.rpm",
+      "source_material": "runtime/srpms/openssl-3.5.8-2.el9_8.src.rpm",
+      "source_sha256": "33313dd77b97a5787afda11aceb2150dc2930668fdb3a279c4fbea61c06a14d1",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libstdc++.so.6",
+      "sha256": "95d70798b44b492fb46402ab43aed570558480a21cbc04449da1a15467daf603",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libstdc++|11.5.0|14.el9.alma.1|x86_64|gcc-11.5.0-14.el9.alma.1.src.rpm",
+      "source_material": "runtime/srpms/gcc-11.5.0-14.el9.alma.1.src.rpm",
+      "source_sha256": "6889d6c7ffd8df9b7f222dab02295505ca33321cac202e8eaf5d66156ec06ae0",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libsystemd.so.0",
+      "sha256": "4d3170074d8ee8c3a872c2baa268c53418ca3ed440ec6316d6e7b5bdb1d46436",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "systemd-libs|252|67.el9_8.6.alma.1|x86_64|systemd-252-67.el9_8.6.alma.1.src.rpm",
+      "source_material": "runtime/srpms/systemd-252-67.el9_8.6.alma.1.src.rpm",
+      "source_sha256": "c2a6ef1af0eccce3bdbf6bdf4c6a2dacb1de6574473c220190d1cf26e852d9a2",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxcb-cursor.so.0",
+      "sha256": "8c9cba194ff819b402973b8ef23bc7a2b7448b70ec1bbd89f32c25ec954c6f8a",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "xcb-util-cursor|0.1.4|3.el9|x86_64|xcb-util-cursor-0.1.4-3.el9.src.rpm",
+      "source_material": "runtime/srpms/xcb-util-cursor-0.1.4-3.el9.src.rpm",
+      "source_sha256": "1d84633477469e3b44a2c1461d3d0cdda4acf01fd1b9cad5f53b629f72fbc06b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxcb-glx.so.0",
+      "sha256": "d4a2f01890a7c1fd96875edaca8588308c41455f69278cfcb94f81a5aa531f92",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libxcb|1.13.1|9.el9|x86_64|libxcb-1.13.1-9.el9.src.rpm",
+      "source_material": "runtime/srpms/libxcb-1.13.1-9.el9.src.rpm",
+      "source_sha256": "e7ae24f0c0786a4ab134ca4ad40c05560af9b13eab2886d602820451fd1c2035",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxcb-icccm.so.4",
+      "sha256": "3cf949f200035e7799fa8d31cdf375aa1b866f7aa462b7d442d578ed9ed0c6f6",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "xcb-util-wm|0.4.1|22.el9|x86_64|xcb-util-wm-0.4.1-22.el9.src.rpm",
+      "source_material": "runtime/srpms/xcb-util-wm-0.4.1-22.el9.src.rpm",
+      "source_sha256": "619403fd6b53bb9aa8347890117f587461dfc094e9bda11e16780cd059f0a785",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxcb-image.so.0",
+      "sha256": "dc128c511b878b079b34e067e5d1bf2c61189c4ba645af93c929d436969d84fe",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "xcb-util-image|0.4.0|19.el9|x86_64|xcb-util-image-0.4.0-19.el9.src.rpm",
+      "source_material": "runtime/srpms/xcb-util-image-0.4.0-19.el9.src.rpm",
+      "source_sha256": "b6f43023070eddb39a856fd33e55e92453cafebdfca9c10e2db91f097cfbbaa9",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxcb-keysyms.so.1",
+      "sha256": "8f27cc93d686a76797a21625823b68f254fc6585951b28c5d30d4406ab51cb62",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "xcb-util-keysyms|0.4.0|17.el9|x86_64|xcb-util-keysyms-0.4.0-17.el9.src.rpm",
+      "source_material": "runtime/srpms/xcb-util-keysyms-0.4.0-17.el9.src.rpm",
+      "source_sha256": "0915ce02714655f53344d9e1d2bde64da67c06d4f7ed509eafcea1811081381a",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxcb-randr.so.0",
+      "sha256": "5a79b8c2143c9624362e07e43eb72f3ed7e579c938dbf6be6f437290d687f035",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libxcb|1.13.1|9.el9|x86_64|libxcb-1.13.1-9.el9.src.rpm",
+      "source_material": "runtime/srpms/libxcb-1.13.1-9.el9.src.rpm",
+      "source_sha256": "e7ae24f0c0786a4ab134ca4ad40c05560af9b13eab2886d602820451fd1c2035",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxcb-render-util.so.0",
+      "sha256": "bc44541b7c4a64112519160b6c81d121fec901ed38a51a2c3b9c61eee8b39ee7",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "xcb-util-renderutil|0.3.9|20.el9|x86_64|xcb-util-renderutil-0.3.9-20.el9.src.rpm",
+      "source_material": "runtime/srpms/xcb-util-renderutil-0.3.9-20.el9.src.rpm",
+      "source_sha256": "0743db58a0e586451714047b42bbc72ebe74ed30c38e7722c3b87bf6aea7c897",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxcb-render.so.0",
+      "sha256": "7676d3ddba5e31b61426235100c4e8f5fd53e66beffd7e12018e7a115f28d7d8",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libxcb|1.13.1|9.el9|x86_64|libxcb-1.13.1-9.el9.src.rpm",
+      "source_material": "runtime/srpms/libxcb-1.13.1-9.el9.src.rpm",
+      "source_sha256": "e7ae24f0c0786a4ab134ca4ad40c05560af9b13eab2886d602820451fd1c2035",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxcb-shape.so.0",
+      "sha256": "0e6ce51f23d042dd97e3af6a234a6bc7e5042f6e913bb507ce15597ebbced5ba",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libxcb|1.13.1|9.el9|x86_64|libxcb-1.13.1-9.el9.src.rpm",
+      "source_material": "runtime/srpms/libxcb-1.13.1-9.el9.src.rpm",
+      "source_sha256": "e7ae24f0c0786a4ab134ca4ad40c05560af9b13eab2886d602820451fd1c2035",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxcb-shm.so.0",
+      "sha256": "5be6f556df7c6ef1a531048fe358264d7b4c274752d91b65add9e241e643ae8f",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libxcb|1.13.1|9.el9|x86_64|libxcb-1.13.1-9.el9.src.rpm",
+      "source_material": "runtime/srpms/libxcb-1.13.1-9.el9.src.rpm",
+      "source_sha256": "e7ae24f0c0786a4ab134ca4ad40c05560af9b13eab2886d602820451fd1c2035",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxcb-sync.so.1",
+      "sha256": "443633139a7c24d958694d91c42ca49b3fb04444762e917707dca0d939efbce7",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libxcb|1.13.1|9.el9|x86_64|libxcb-1.13.1-9.el9.src.rpm",
+      "source_material": "runtime/srpms/libxcb-1.13.1-9.el9.src.rpm",
+      "source_sha256": "e7ae24f0c0786a4ab134ca4ad40c05560af9b13eab2886d602820451fd1c2035",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxcb-util.so.1",
+      "sha256": "8bea206a4430a4603ccd776011c9d77b166d57dc1c0b3006f49a45b2390e3b8e",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "xcb-util|0.4.0|19.el9|x86_64|xcb-util-0.4.0-19.el9.src.rpm",
+      "source_material": "runtime/srpms/xcb-util-0.4.0-19.el9.src.rpm",
+      "source_sha256": "4e6e770617a3be7362f4f0b97c7dc8ab9fb0139e6662160c499e0c3d03b604cc",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxcb-xfixes.so.0",
+      "sha256": "d74d818146709d60023248f284b7bb4d7a998ee8ccf2b2f3e5b3493d902cef93",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libxcb|1.13.1|9.el9|x86_64|libxcb-1.13.1-9.el9.src.rpm",
+      "source_material": "runtime/srpms/libxcb-1.13.1-9.el9.src.rpm",
+      "source_sha256": "e7ae24f0c0786a4ab134ca4ad40c05560af9b13eab2886d602820451fd1c2035",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxcb-xkb.so.1",
+      "sha256": "aa15cc0029bc839de0a63c9651ff9abdf3c5241247574488060f8b03a4dafc54",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libxcb|1.13.1|9.el9|x86_64|libxcb-1.13.1-9.el9.src.rpm",
+      "source_material": "runtime/srpms/libxcb-1.13.1-9.el9.src.rpm",
+      "source_sha256": "e7ae24f0c0786a4ab134ca4ad40c05560af9b13eab2886d602820451fd1c2035",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxkbcommon-x11.so.0",
+      "sha256": "8304aac20cb9facf62d3bcb28826d0238cb6b452c6b83e9dafa3bcdff1f46495",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libxkbcommon-x11|1.0.3|4.el9|x86_64|libxkbcommon-1.0.3-4.el9.src.rpm",
+      "source_material": "runtime/srpms/libxkbcommon-1.0.3-4.el9.src.rpm",
+      "source_sha256": "983993897da3211b49912cd5fe2fa420df47e6df54cb73f0d071807b160c6a15",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxkbcommon.so.0",
+      "sha256": "28342f8c9906b13082b17dc2b15df099db27410ef91fb1429bd0c765b4cab5b1",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libxkbcommon|1.0.3|4.el9|x86_64|libxkbcommon-1.0.3-4.el9.src.rpm",
+      "source_material": "runtime/srpms/libxkbcommon-1.0.3-4.el9.src.rpm",
+      "source_sha256": "983993897da3211b49912cd5fe2fa420df47e6df54cb73f0d071807b160c6a15",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libxml2.so.2",
+      "sha256": "aee7f5cee505564103bf674cf390cc3a21625641f6722cd225dc6d8eca708e60",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libxml2|2.9.13|14.el9_8.5|x86_64|libxml2-2.9.13-14.el9_8.5.src.rpm",
+      "source_material": "runtime/srpms/libxml2-2.9.13-14.el9_8.5.src.rpm",
+      "source_sha256": "2494b85d34137906e1eae459dae171c877a5aa232f2ea01c80f7746d12498d2d",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libz.so.1",
+      "sha256": "4d3dac7a48e8f147507f818eda0c5afafd0846d163b997ad24b3e2e4c791f039",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "zlib|1.2.11|40.el9|x86_64|zlib-1.2.11-40.el9.src.rpm",
+      "source_material": "runtime/srpms/zlib-1.2.11-40.el9.src.rpm",
+      "source_sha256": "126dca3fde91075df4310ea9430cb5c5a0b2ffcd988da335a3865eaa460a1459",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "libzstd.so.1",
+      "sha256": "82d8f7e09de63bfc2a31b76483ab91ec66a58974ed2f81dd604769a8e6ab76f0",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "libzstd|1.5.5|1.el9|x86_64|zstd-1.5.5-1.el9.src.rpm",
+      "source_material": "runtime/srpms/zstd-1.5.5-1.el9.src.rpm",
+      "source_sha256": "61447495882deacdc93b77f581b1c5e3365d8128c4da28f0bf0848630102b21c",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "pillow.libs/libXau-154567c4.so.6.0.0",
+      "sha256": "05484d24bf78cb8ed03169f1cb067204d829cb7af21de8820400d29d115e4320",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/pillow.libs/libXau-154567c4.so.6.0.0",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "pillow.libs/libavif-8a7f9d56.so.16.4.2",
+      "sha256": "3a8819e60f0fd7c716ef14776085a81c941db354002a9f9a679da38447e5507f",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/pillow.libs/libavif-8a7f9d56.so.16.4.2",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "pillow.libs/libjpeg-31e2ca52.so.62.4.0",
+      "sha256": "6d7c754529b30aff22efaaf88ba02061714591702c03f297f00ccb32ee6d9d9a",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/pillow.libs/libjpeg-31e2ca52.so.62.4.0",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "pillow.libs/liblcms2-dade1fbf.so.2.0.19",
+      "sha256": "2549d6886e7de9960792e10ac87acfb9895e2afae85b7aac02108080cc7d3a71",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/pillow.libs/liblcms2-dade1fbf.so.2.0.19",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "pillow.libs/liblzma-2be87c3e.so.5.8.3",
+      "sha256": "535737fa00b49f62d14d6d9bce76482440df700b33d2666d636894f751dd25f1",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/pillow.libs/liblzma-2be87c3e.so.5.8.3",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "pillow.libs/libopenjp2-b07f72ad.so.2.5.4",
+      "sha256": "185cb358047fd8b351c1d05b84a7e906c59d68d7f41222805f7042895ae266d8",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/pillow.libs/libopenjp2-b07f72ad.so.2.5.4",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "pillow.libs/libsharpyuv-0066295b.so.0.1.2",
+      "sha256": "c2c5e89368b3bf9276a3cfea7e52ceb624db1c0c986c127169616219d5325807",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/pillow.libs/libsharpyuv-0066295b.so.0.1.2",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "pillow.libs/libtiff-fc87e79d.so.6.2.0",
+      "sha256": "522bafb6812978fc53db6c32e5c57786186b551fc5fd6a7c61b857ca01261d16",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/pillow.libs/libtiff-fc87e79d.so.6.2.0",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "pillow.libs/libwebp-51b0b3f7.so.7.2.0",
+      "sha256": "7df9ad3680dd09d756511334791c8c896207863816eb2910840e5fc4ae10028a",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/pillow.libs/libwebp-51b0b3f7.so.7.2.0",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "pillow.libs/libwebpdemux-9fe2abcc.so.2.0.17",
+      "sha256": "a7ccaaf4388d8ec212ca85be17907e8e021b7da113f7f48c47722c1ebe602f8e",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/pillow.libs/libwebpdemux-9fe2abcc.so.2.0.17",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "pillow.libs/libwebpmux-8fb1c9f6.so.3.1.2",
+      "sha256": "48ebf91c4d208901a48f851fb4c851d380fededd2a272104e3ca24c17499deba",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/pillow.libs/libwebpmux-8fb1c9f6.so.3.1.2",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "pillow.libs/libxcb-ad31f5a3.so.1.1.0",
+      "sha256": "633fe8df9f1bfc0ef60de6a3495a599ec56e56216491b90b79604cfecfb88000",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/pillow.libs/libxcb-ad31f5a3.so.1.1.0",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "pillow.libs/libzstd-44be1190.so.1.5.7",
+      "sha256": "9501ab40e92a57491cadd2d02df46b596f24e74e6c0476b8500793f822fa0072",
+      "matches_audited_origin": true,
+      "group": "Pillow",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/pillow.libs/libzstd-44be1190.so.1.5.7",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "pymupdf/_extra.so",
+      "sha256": "22f946717a91da7e6c03e6e57e2c0dff532bb80f44c4d2e255628a88410aff1b",
+      "matches_audited_origin": true,
+      "group": "PyMuPDF",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/pymupdf/_extra.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "pymupdf/_mupdf.so",
+      "sha256": "d16a4ad71a3477f6a11dfbb0ef53c41180ec35a37b50fd39956e61c8344ec15c",
+      "matches_audited_origin": true,
+      "group": "PyMuPDF",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/pymupdf/_mupdf.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "pymupdf/libmupdf.so.28.2",
+      "sha256": "64ea1ff04304a3e90d5ae7fb38de4fb8e4057ff776434e747fe5a62d219b1cfa",
+      "matches_audited_origin": true,
+      "group": "PyMuPDF",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/pymupdf/libmupdf.so.28.2",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "pymupdf/libmupdfcpp.so.28.2",
+      "sha256": "18e57cf53d7b498ab4fe3672e4cb7be6ad946ba00b88b52507426fc50505ff19",
+      "matches_audited_origin": true,
+      "group": "PyMuPDF",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/pymupdf/libmupdfcpp.so.28.2",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_bisect.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "b898e92ed739a60e6bff64137b56e921c966a4971885f117b36e289c471896cd",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_blake2.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "021857801c68e491241e50bffb24c473e6326ad81a1f4c0219d297efc030ee57",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_bz2.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "26f07a1acf9dbabc82099b61264f3267e031b834936178b92d112efafb890cdc",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_codecs_cn.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "780366d44cdfb402b55a53820ef7b7f979e8ef116115d7008eecbfa5d3e1dae0",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_codecs_hk.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "0d1a7ad5dec41545cbae2ead2728567fab29bf576c6b634b7f1bd0bcd600af1e",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_codecs_iso2022.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "05b6b22f27198d36a3a7559b079f2a4bbfe42056dc9e0047e6990d41e3d2fff0",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_codecs_jp.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "964ce245caaac448c039b592f19cbb7437d2e208a79443ba6dc090f7e4575e43",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_codecs_kr.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "c588280d3bc68d4a9a8545db5a74fdfb4a75c2919075aa08e1eb1aa1401f13d6",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_codecs_tw.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "fdbbc15831017ac6cd49932683e6e9968d5cf1468243b6bf5b9f8491ccc59637",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_contextvars.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "c3381b38846cae7705c1bd4fd1c2766aaf803b9cb139bd38cc28d3eeffc9d4ba",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_csv.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "27d20df466f7ed7192fe02cdf5e0e6bda7604018840eb0daaecdbc76ec871df3",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_ctypes.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "74fe58d4530b950aaa9e8eea0bcd50aa225c9ee0bd645722bd1bdb7291fc7fab",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_datetime.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "23a9b191f1c8afabff67a8e06cfbc2e9d65d472e188b02de2b464e6145f54085",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_decimal.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "538573e021be4cccde3acb84caafec20b2b3180ec432f6b115974ac2a9e17620",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_elementtree.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "c5dd58a3b0b74c4fe9b5830b4b479e969cb8d4dea78cbc5efe61cf2fa72bc9cb",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "365918877fb4369c72c1b6cad8b7a4b715b1f9519466a109afc25cc6add26486",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_heapq.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "fdf21aac422e2c3a4bd94d7261538721a6ebd7fd055b5d35ab0265033edb468f",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_json.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "4e41ea334f0aed94971896e7643effd5d35a23186b4ae6a3d73548f1f6113614",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_lzma.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "c704823d7afdaf69e42863efddf94454f1d8387e230f9bdc6d98c0cd54504cab",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_multibytecodec.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "225ea77d1b46316946f254ab7f3c14c9b8ed4f0139545770b763a9a99b8dfca4",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_multiprocessing.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "cb5db8854dca89a94c1eb49d59be0d06e024e650f964dfccdc6e710d36198e43",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_opcode.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "296f5af27301189a9ca6a27181c81ef883110a79331c5ed406b0e24ae31c156d",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_pickle.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "c6fcd8326e0c01a6ec31544e68c72c6c7690d1540bdd311223fd59b3fc37fbaf",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_posixshmem.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "4ebac9818e3e46fe80e229cfb010c8b1d7d1b286c07a76492094da5b35e8e805",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_posixsubprocess.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "2d99bf9d8bf23c1bd975e97ae6402595c1d08e979d8e0d1f60b977861fbdd20d",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_queue.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "49bda091c1f7acdcea10bff85ab1dd271a6efce0561791021d16bc2b599f7d3d",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_random.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "9a090dd0998d6a88a041f677e281b3ef5b748c9a3a7a8ec5ff1d919c95e4c050",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_socket.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "fac824a362ab8666e74620653964d72d574eda7123b32ca1bfd0ab10b5b6082c",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_ssl.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "d5a534e8d90279a686ff2b5c82524295e4cc4d5d7627ec484e97172fed5ec3e4",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_statistics.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "8230548bf04b1dbabeaa51a8e848d49728d5d897a0255449ba811de02385ac57",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/_struct.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "83cb630f57a4f3f56c42a564440dd62aba91b5eed1b60af57a454f79bd8e3dea",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/array.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "0b5fadf7aa1c365e1b35f19a12080c3df895c8e93079440c8a5afed46a96bd7f",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/binascii.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "b1962ff34c5d97d2b5ab531cb4da3710006759404f5f9ae951cb5e96787d421f",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/fcntl.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "38672de3da973bc60cfded8e3d98e01c72882c92932e97a5eaf2fc3dfdba4ed8",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/grp.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "81a05bfb932a9cd0c155547eba3c91447e8319bf4c0f2be59f3472af865ad9e7",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/math.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "bdc38d29df6a6ddf738343c8deddf8a0e593ea76a75fb2174ff8051ef31dcd78",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/mmap.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "27dda0e13e7fedf8683f5ce23220dee87973e5de93ab3717e08ebc5ba5ee9308",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/pyexpat.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "8722acd778681a991de114bba9209a987de42569b8deb87072f671e28455acb6",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/resource.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "2f201a36cc9e34d0f3f9f3e368034a3ce2308c3786e34458671f7d25e8701bcc",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/select.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "518f5b3b8ef54c82da81a2c3c8981c4953826753d2fd4f312a758384c7916332",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/termios.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "e6db39e4eb1c5a17aadf5fc0f94a1e697c87fc993f43a8bca545e8a229385f67",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/unicodedata.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "e90fe587a0e7054876c445a5e694216bfc1d349a0d64b6aa66639b458120a5e8",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "python3.12/lib-dynload/zlib.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "2142d26592635a82b6efa7fcb976ab89921848f9846b8ce541b5bda734d74095",
+      "matches_audited_origin": true,
+      "group": "OS RPM",
+      "rpm_owner": "python3.12-libs|3.12.15|1.el9_8|x86_64|python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_material": "runtime/srpms/python3.12-3.12.15-1.el9_8.src.rpm",
+      "source_sha256": "63f0ad12fda496f9cb31ee784f5e48e2522bc5ad66acc4bfa3c8ca1cec5b8c6b",
+      "scope": "RPM owner metadata and exact SRPM filename; not a reproducible build proof"
+    },
+    {
+      "entry": "shiboken6/Shiboken.abi3.so",
+      "sha256": "362781770f80314c13c3bb24394ef8ba3c65d52e5ea94628462ed0bb9a1abd28",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib64/python3.12/site-packages/shiboken6/Shiboken.abi3.so",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    },
+    {
+      "entry": "shiboken6/libshiboken6.abi3.so.6.11",
+      "sha256": "c0ddb602926c9255ce6655f0ec0c7afc731016c99f96c4ada6e0595cddf29dae",
+      "matches_audited_origin": true,
+      "group": "Qt/PySide/Shiboken",
+      "analysis_origin": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages/shiboken6/libshiboken6.abi3.so.6.11",
+      "scope": "Matches installed wheel bytes; source/patch/notice completeness requires component review"
+    }
+  ],
+  "limitations": [
+    "Archive ELF entries only; bootloader, Python bytecode, fonts and other embedded third-party data require separate review",
+    "Installed wheel byte equality and RPM metadata do not prove historical compiler flags or complete corresponding source"
+  ]
+}

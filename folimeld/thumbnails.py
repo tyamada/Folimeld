@@ -169,6 +169,10 @@ class ThumbnailController(QObject):
             for row in rows:
                 item = self.pending.pop(row)
                 item.setIcon(self.render_icon(self.get_document()[row]))
+                # The placeholder was laid out before its icon existed. Notify
+                # Qt that its size hint changed, or the new decoration can keep
+                # the old position and be clipped outside its grid cell.
+                self.pages.itemDelegate().sizeHintChanged.emit(self.pages.indexFromItem(item))
                 self.resident[row] = item
                 if perf_counter() - started >= 0.016:
                     break
