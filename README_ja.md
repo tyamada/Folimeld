@@ -146,7 +146,7 @@ sudo apt install --no-install-recommends ./folimeld_0.3.5_amd64.deb
 folimeld
 ```
 
-3環境で既存版からの更新・削除再導入・一般ユーザー起動・既存試験PDF/設定保持、日本語PDF表示・回転直後のサムネイル・Undoを確認しました。UbuntuではRedo・ページ移動・白紙挿入削除・日本語/空白名保存と再読込、開発依存/Python/推奨CJKフォントなしの最小chrootでのoffscreen起動も確認しました。通常デスクトップ・ARM64・他OS/将来のrolling更新は未検証です。このDEBではIME・GIO・暗号化PDF・画像取込の実画面試験を再実施していません。未署名パッケージです。詳細は[日英案内](documentation/linux-deb-amd64-publication-body_ja.md)と[Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5)を参照してください。
+3環境で既存版からの更新・削除再導入・一般ユーザー起動・既存試験PDF/設定保持、日本語PDF表示・回転直後のサムネイル・Undoを確認しました。UbuntuではRedo・ページ移動・白紙挿入削除・日本語/空白名保存と再読込、開発依存/Python/推奨CJKフォントなしの最小chrootでのoffscreen起動も確認しました。通常デスクトップ・ARM64・他OS/将来のrolling更新は未検証です。公開後のUbuntu 24.04.4で、Mozc日本語変換・GIO関連付け・暗号化PDFの編集保存/再認証・画像取込保存も追加確認しました。Debian/Kaliではこれらの追加機能を再試験していません。[追加検証記録](documentation/linux-deb-amd64-extended-verification_ja.md)を参照してください。未署名パッケージです。詳細は[日英案内](documentation/linux-deb-amd64-publication-body_ja.md)と[Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5)を参照してください。
 
 ### openSUSE Tumbleweed 20261110 amd64試験版
 

@@ -9,6 +9,8 @@ Windows / Linux / macOS の PyInstaller spec は `tools/license_bundle.py` を�
 ライセンスを同梱します。MSIX / deb / Mac App Store パッケージもこの実行物を使います。
 ビルド時の文書取得にネットワークは使用しません。
 
+PyInstallerのブートローダー告知も、ビルド環境にあるPyInstallerパッケージのCOPYING全文として収集します。この収集対象への追加は次回ビルドから適用され、既存配布物へは遡及しません。Linux候補の同梱実体・ソースRPM・告知の追加確認は[AlmaLinux9ランタイム調査](https://github.com/tyamada/Folimeld/blob/03b14ec8c4410fbc7510aa9bedb27950e78cfc6e/documentation/linux-almalinux9-native-runtime-source-audit_ja.md)を参照してください。
+
 ## ビルドごとのソース保存
 
 3つの PyInstaller spec は、ライセンス収集後・Analysis 前に
@@ -114,6 +116,8 @@ debとSnapはPythonの版と実行ファイルのハッシュが異なります�
 完了するものではありません。依存関係を更新した場合にも上記の確認が必要です。
 
 ## 一次資料
+
+2026-11-12のAlmaLinux9候補調査で、Pillow由来LibTIFFのLZW部分についてBerkeley告知全文の不足を確認し、`licenses/LibTIFF-LZW.txt`を追加しました。既存の`licenses/`収集・表示処理で次回ビルドへ含まれます。過去の配布物を変更したものではありません。[ファイル・パッチ照合と候補反映記録](https://github.com/tyamada/Folimeld/blob/03b14ec8c4410fbc7510aa9bedb27950e78cfc6e/documentation/linux-almalinux9-pillow-component-review_ja.md)を参照してください。
 
 - GNU AGPL v3（第4～6条など）: https://www.gnu.org/licenses/agpl-3.0.html
 - GNU LGPL v3（第4条）: https://www.gnu.org/licenses/lgpl-3.0.html

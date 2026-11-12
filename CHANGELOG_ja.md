@@ -4,6 +4,9 @@
 
 ## 未リリース
 
+- Linux向けRPMビルド（Fedora・Leap16.1・Tumbleweed・AlmaLinux9）、既存パッケージの上書き拒否、非同期サムネイル回転の表示修正、PyInstaller全文・LibTIFF LZW告知をmainへ統合。ソース版を0.3.5へ同期（既存の他OS配布物は変更せず）。
+- 公開済みDEB 0.3.5をUbuntu24.04.4で追加検証し、Mozc変換、GIO、暗号化PDFの編集保存・再認証、画像取込保存を確認。Debian/Kaliの追加機能は未再試験。
+
 - OpenBSD 8.0 / amd64向けに本体・専用MuPDF依存の署名付きパッケージ、対応ソース、ビルド工具と日英インストール手順を追加
 
 - WindowsビルドのDLL検索パスをPython・Windows・Gitの必要な場所に限定し、無関係なツール由来のDLL混入を防止。ネイティブバイナリの収集元を検査し、想定外の場所ならビルドを停止

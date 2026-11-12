@@ -1,0 +1,15 @@
+{
+  "date_jst": "2026-11-13",
+  "version": "0.3.5",
+  "base_main": "d41f5ae04240317a61f7abc5bda25063be34a9d2",
+  "original_seven_file_diff_sha256": "72c52043f70243ef73d9098d9e86596858d8346875677081f0cf014e5e1bc283",
+  "checks": {
+    "pytest": "409 passed, 9 skipped, 67 subtests passed in 16.52s",
+    "ruff": "All checks passed",
+    "mypy": "Success: no issues found in 3 source files",
+    "shell": "sh -n build_linux.sh passed"
+  },
+  "scope": "Source version and existing Linux implementation integrated; existing published binaries/assets unchanged. Additional DEB GUI verification is Ubuntu24.04.4 only.",
+  "formatting": "Removed an extra blank EOF line from the previously untracked LibTIFF notice; preserved notice text.",
+  "documentation_links": "Historical Alma audit links point to the immutable published source commit rather than importing hundreds of unrelated historical records."
+}

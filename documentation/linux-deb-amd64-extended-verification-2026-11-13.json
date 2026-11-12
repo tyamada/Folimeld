@@ -1,0 +1,126 @@
+{
+  "date_jst": "2026-11-13",
+  "distro": "Folimeld-Ubuntu-24.04-Amd64-034-Test",
+  "package": "folimeld\t0.3.5",
+  "elf_sha256": "0de893f4db858da241716fbd12c279f52b274cdc2ad89d35de88a700e4704f6e",
+  "fixtures_unchanged": {
+    "fixtures/画像/画像01.png": "a2c58fbf87ae17ad25b1680400fd9a3d5e627ff599a47286378d0f0111103613",
+    "fixtures/suse-edited.pdf": "1787b4b474f16e980d4ff2a8dfa1b8e1dbee09672babccb82046276d61b211ff",
+    "fixtures/原本_日本語.pdf": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+    "fixtures/保存 結果.pdf": "7f83ba4969dce2efe174ca23dae12f8aa5eea6b67e7baf66c15e33b7aba3d656",
+    "fixtures/encrypted035.pdf": "d8aa83dde2b9ebc3fd4a8f1b5fed5a36b50656b760b9938e731361f1aecf7050",
+    "fixtures/暗号化.pdf": "48b63c2a0e9c3bf3f4e18d55d1104195310ac3dfa7986c04973f0f8319e70c0f"
+  },
+  "gio": [
+    {
+      "command": [
+        "gio",
+        "mime",
+        "application/pdf",
+        "folimeld.desktop"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "gio",
+        "open",
+        "/home/tyamada22/verification/deb035-extended-20261113/fixtures/原本_日本語.pdf"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "ime": [
+    {
+      "command": [
+        "ibus",
+        "write-cache"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "ibus",
+        "restart"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "ibus",
+        "engine",
+        "mozc-jp"
+      ],
+      "exit_code": 1,
+      "output": ""
+    },
+    {
+      "command": [
+        "ibus",
+        "engine"
+      ],
+      "exit_code": 0,
+      "output": "mozc-jp\n"
+    }
+  ],
+  "gui_observed": {
+    "gio_japanese_pdf": true,
+    "ime_romaji_hiragana_kanji_commit": "nihongo -> にほんご -> 日本語",
+    "encrypted_auth_rotate_save_reopen_reauth": true,
+    "image_folder_import_save": true
+  },
+  "notes": [
+    "Initial verification parent permissions required creating only the dedicated test directory as UID1000.",
+    "Old Ubuntu Mozc lacks symbol/composition_mode config fields; used its supported active_on_launch setting in the isolated XDG configuration.",
+    "ibus engine set returned 1, query confirmed mozc-jp, actual conversion/commit passed.",
+    "Conventional desktops and these additional features on Debian/Kali remain unverified."
+  ],
+  "integrity": [
+    {
+      "command": [
+        "dpkg",
+        "--verify",
+        "folimeld"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "apt-get",
+        "check"
+      ],
+      "exit_code": 0,
+      "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\n"
+    }
+  ],
+  "encrypted_saved_data": {
+    "pages": 3,
+    "rotations": [
+      180,
+      0,
+      0
+    ],
+    "wrong_password_rejected": true,
+    "text": [
+      "Page 1\n日本語PDF検証 1\n",
+      "Page 2\n日本語PDF検証 2\n",
+      "Page 3\n日本語PDF検証 3\n"
+    ]
+  },
+  "image_saved_data": {
+    "pages": 1,
+    "images": 1,
+    "center_rgb": [
+      0,
+      0,
+      255
+    ]
+  },
+  "saved_sha256": {
+    "encrypted-saved.pdf": "57c759fb30399bcafa015f72cf2a82538237b1d5186dcf91c77071e1f111d6e2",
+    "image-saved.pdf": "2dddb0f2b6f133c3d53a67585a2032be194bbb117fb769a4c8314ed6d625cf53"
+  }
+}

@@ -3,8 +3,60 @@ from unittest.mock import patch
 import fitz
 import pytest
 from PySide6.QtWidgets import QApplication
+from PySide6.QtCore import QEventLoop, QTimer
 
 from folimeld.app import MainWindow
+
+
+def wait_for_thumbnail_icons(window):
+    """Exercise the real render timer rather than calling render_batch directly."""
+    loop = QEventLoop()
+    poll = QTimer()
+    deadline = QTimer()
+    deadline.setSingleShot(True)
+
+    def ready():
+        return all(not window.pages.item(row).icon().isNull()
+                   for row in range(window.pages.count()))
+
+    poll.timeout.connect(lambda: loop.quit() if ready() else None)
+    deadline.timeout.connect(loop.quit)
+    poll.start(5)
+    deadline.start(2000)
+    loop.exec()
+    poll.stop()
+    deadline.stop()
+    assert ready(), "Thumbnails did not finish through the Qt event loop"
+
+
+def test_async_rotation_keeps_thumbnail_inside_first_grid_cell():
+    app = QApplication.instance() or QApplication([])
+    with patch('folimeld.app.is_packaged', return_value=False):
+        window = MainWindow()
+    try:
+        window.model.doc = fitz.open()
+        for _ in range(3):
+            page = window.model.doc.new_page(width=400, height=550)
+            page.insert_text((40, 70), 'Visible after rotation', fontsize=25)
+        window.show()
+        window.refresh([0])
+        wait_for_thumbnail_icons(window)
+        window.rotate(90)
+        wait_for_thumbnail_icons(window)
+        item = window.pages.item(0)
+        icon_size = item.icon().actualSize(window.pages.iconSize())
+        assert icon_size.width() > icon_size.height()
+        assert window.pages.visualItemRect(item).width() >= icon_size.width()
+        assert window.pages.visualItemRect(item).height() >= icon_size.height()
+        # Qt may update the decoration width but retain the position computed
+        # for an empty icon, clipping content outside its fixed grid cell.
+        assert window.pages.visualItemRect(item).left() >= 0
+        assert window.pages.visualItemRect(item).right() < window.pages.gridSize().width()
+    finally:
+        window.model.dirty = False
+        window.close()
+        window.deleteLater()
+        app.processEvents()
 
 
 @pytest.mark.parametrize('size,width', [(144, 700), (288, 700), (432, 700), (288, 1400)])
