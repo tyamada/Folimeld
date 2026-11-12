@@ -39,6 +39,11 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.5 Linux DEB amd64試験版 - 2026-11-13
+
+- Ubuntu 24.04.4・Debian 13.6・Kali Rolling 2026.3の専用WSL2/WSLgで更新・削除再導入・起動と日本語PDF回転/Undoを確認した[amd64 DEB試験版](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5)を公開。Ubuntuでは追加の編集・保存再読込・最小chroot起動も確認。
+- ソース870入力、実ネイティブ214項目、Ubuntu対応ソース61件、署名付きSourcesインデックス53件、公開12添付を照合。IME/GIO/暗号化PDF/画像GUIの未再試験を明記し、既存0.3.4・ARM64・Snapとlatestを保持。
+
 ## 0.3.5 openSUSE Tumbleweed 20261110 amd64試験版 - 2026-11-13
 
 - 専用WSL2/WSLgで検証した0.3.5-1.tw20261110のamd64 RPMを[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5)で公開。主要GUI・日本語名保存/GIO・Mozc入力・暗号化PDF・画像PDF、更新・削除再導入・新規最小installroot起動を確認。

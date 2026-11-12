@@ -1,0 +1,1015 @@
+{
+  "version": "0.3.5",
+  "branch": "release/deb-amd64-0.3.5",
+  "commit": "24265ed9bb9c312921faac4b952ce27729639ad3",
+  "source_inputs_verified": 870,
+  "native_entries_verified": 214,
+  "wheel_entries": 105,
+  "os_entries": 109,
+  "exact_ubuntu_source_packages": 61,
+  "official_bootloader_verified": true,
+  "fixed_build_venv_unchanged": true,
+  "tests": "409 passed, 9 skipped, 67 subtests passed in 17.47s",
+  "package_sha256": "573f72f323097d398d245218eda454037fdc5e74a4d6865bd085bd5955ecc3f7",
+  "elf_sha256": "0de893f4db858da241716fbd12c279f52b274cdc2ad89d35de88a700e4704f6e",
+  "source_sha256": "6148b7639ccce7e49e2dcdd9b2f93981b840d816708c9b4bc3339b87f2e0f20f",
+  "date_jst": "2026-11-13",
+  "platforms": {
+    "Folimeld-Kali-Amd64-Test": {
+      "commands": [
+        {
+          "command": [
+            "dpkg-query",
+            "-W",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": "folimeld\t0.3.3\n"
+        },
+        {
+          "command": [
+            "dpkg",
+            "--verify",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": ""
+        },
+        {
+          "command": [
+            "apt-get",
+            "-y",
+            "--no-install-recommends",
+            "install",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld_0.3.5_amd64.deb"
+          ],
+          "exit_code": 0,
+          "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nSolving dependencies...\nThe following packages were automatically installed and are no longer required:\n  libperl5.40 libpython3.13-minimal libpython3.13-stdlib openssh-client-gssapi\n  perl-modules-5.40 python3.13 python3.13-minimal\nUse 'apt autoremove' to remove them.\nThe following packages will be upgraded:\n  folimeld\n1 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.\nNeed to get 0 B/108 MB of archives.\nAfter this operation, 0 B of additional disk space will be used.\nGet:1 /mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld_0.3.5_amd64.deb folimeld amd64 0.3.5 [108 MB]\n(Reading database… \n(Reading database… 5%\n(Reading database… 10%\n(Reading database… 15%\n(Reading database… 20%\n(Reading database… 25%\n(Reading database… 30%\n(Reading database… 35%\n(Reading database… 40%\n(Reading database… 45%\n(Reading database… 50%\n(Reading database… 55%\n(Reading database… 60%\n(Reading database… 65%\n(Reading database… 70%\n(Reading database… 75%\n(Reading database… 80%\n(Reading database… 85%\n(Reading database… 90%\n(Reading database… 95%\n(Reading database… 100%\n(Reading database… 41369 files and directories currently installed.)\nPreparing to unpack …/folimeld_0.3.5_amd64.deb…\nUnpacking folimeld (0.3.5) over (0.3.3)…\nSetting up folimeld (0.3.5)…\nProcessing triggers for hicolor-icon-theme (0.18-2)…\nProcessing triggers for desktop-file-utils (0.28-1)…\n"
+        },
+        {
+          "command": [
+            "dpkg",
+            "--verify",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": ""
+        },
+        {
+          "command": [
+            "apt-get",
+            "check"
+          ],
+          "exit_code": 0,
+          "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\n"
+        },
+        {
+          "command": [
+            "dpkg",
+            "--audit"
+          ],
+          "exit_code": 0,
+          "output": ""
+        },
+        {
+          "command": [
+            "dpkg-query",
+            "-L",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": "/.\n/usr\n/usr/bin\n/usr/bin/folimeld\n/usr/share\n/usr/share/applications\n/usr/share/applications/folimeld.desktop\n/usr/share/icons\n/usr/share/icons/hicolor\n/usr/share/icons/hicolor/256x256\n/usr/share/icons/hicolor/256x256/apps\n/usr/share/icons/hicolor/256x256/apps/folimeld.png\n"
+        },
+        {
+          "command": [
+            "runuser",
+            "-u",
+            "folimeld-test",
+            "--",
+            "env",
+            "QT_QPA_PLATFORM=offscreen",
+            "QT_IM_MODULE=compose",
+            "DISPLAY=:0",
+            "XDG_CONFIG_HOME=/home/folimeld-test/verification/deb035-r1-20261113-complete/startup-offscreen/config",
+            "XDG_CACHE_HOME=/home/folimeld-test/verification/deb035-r1-20261113-complete/startup-offscreen/cache",
+            "XDG_DATA_HOME=/home/folimeld-test/verification/deb035-r1-20261113-complete/startup-offscreen/data",
+            "XDG_RUNTIME_DIR=/home/folimeld-test/verification/deb035-r1-20261113-complete/startup-offscreen/runtime",
+            "TMPDIR=/home/folimeld-test/verification/deb035-r1-20261113-complete/startup-offscreen/tmp",
+            "timeout",
+            "12",
+            "/usr/bin/folimeld"
+          ],
+          "exit_code": 124,
+          "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nThis plugin does not support propagateSizeHints()\n"
+        },
+        {
+          "command": [
+            "runuser",
+            "-u",
+            "folimeld-test",
+            "--",
+            "env",
+            "QT_QPA_PLATFORM=xcb",
+            "QT_IM_MODULE=compose",
+            "DISPLAY=:0",
+            "XDG_CONFIG_HOME=/home/folimeld-test/verification/deb035-r1-20261113-complete/startup-xcb/config",
+            "XDG_CACHE_HOME=/home/folimeld-test/verification/deb035-r1-20261113-complete/startup-xcb/cache",
+            "XDG_DATA_HOME=/home/folimeld-test/verification/deb035-r1-20261113-complete/startup-xcb/data",
+            "XDG_RUNTIME_DIR=/home/folimeld-test/verification/deb035-r1-20261113-complete/startup-xcb/runtime",
+            "TMPDIR=/home/folimeld-test/verification/deb035-r1-20261113-complete/startup-xcb/tmp",
+            "timeout",
+            "12",
+            "/usr/bin/folimeld"
+          ],
+          "exit_code": 124,
+          "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+        },
+        {
+          "command": [
+            "apt-get",
+            "-y",
+            "remove",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nSolving dependencies...\nThe following packages were automatically installed and are no longer required:\n  libegl-mesa0 libegl1 libperl5.40 libpython3.13-minimal libpython3.13-stdlib\n  libxcb-cursor0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1\n  libxcb-render-util0 libxcb-util1 libxcb-xkb1 libxkbcommon-x11-0\n  openssh-client-gssapi perl-modules-5.40 python3.13 python3.13-minimal\nUse 'apt autoremove' to remove them.\nThe following packages will be REMOVED:\n  folimeld\n0 upgraded, 0 newly installed, 1 to remove and 1 not upgraded.\nAfter this operation, 0 B of additional disk space will be used.\n(Reading database… \n(Reading database… 5%\n(Reading database… 10%\n(Reading database… 15%\n(Reading database… 20%\n(Reading database… 25%\n(Reading database… 30%\n(Reading database… 35%\n(Reading database… 40%\n(Reading database… 45%\n(Reading database… 50%\n(Reading database… 55%\n(Reading database… 60%\n(Reading database… 65%\n(Reading database… 70%\n(Reading database… 75%\n(Reading database… 80%\n(Reading database… 85%\n(Reading database… 90%\n(Reading database… 95%\n(Reading database… 100%\n(Reading database… 41369 files and directories currently installed.)\nRemoving folimeld (0.3.5)…\nProcessing triggers for hicolor-icon-theme (0.18-2)…\nProcessing triggers for desktop-file-utils (0.28-1)…\n"
+        },
+        {
+          "command": [
+            "apt-get",
+            "-y",
+            "--no-install-recommends",
+            "install",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld_0.3.5_amd64.deb"
+          ],
+          "exit_code": 0,
+          "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nSolving dependencies...\nThe following packages were automatically installed and are no longer required:\n  libperl5.40 libpython3.13-minimal libpython3.13-stdlib openssh-client-gssapi\n  perl-modules-5.40 python3.13 python3.13-minimal\nUse 'apt autoremove' to remove them.\nThe following NEW packages will be installed:\n  folimeld\n0 upgraded, 1 newly installed, 0 to remove and 1 not upgraded.\nNeed to get 0 B/108 MB of archives.\nAfter this operation, 0 B of additional disk space will be used.\nGet:1 /mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld_0.3.5_amd64.deb folimeld amd64 0.3.5 [108 MB]\nSelecting previously unselected package folimeld.\n(Reading database… \n(Reading database… 5%\n(Reading database… 10%\n(Reading database… 15%\n(Reading database… 20%\n(Reading database… 25%\n(Reading database… 30%\n(Reading database… 35%\n(Reading database… 40%\n(Reading database… 45%\n(Reading database… 50%\n(Reading database… 55%\n(Reading database… 60%\n(Reading database… 65%\n(Reading database… 70%\n(Reading database… 75%\n(Reading database… 80%\n(Reading database… 85%\n(Reading database… 90%\n(Reading database… 95%\n(Reading database… 100%\n(Reading database… 41366 files and directories currently installed.)\nPreparing to unpack …/folimeld_0.3.5_amd64.deb…\nUnpacking folimeld (0.3.5)…\nSetting up folimeld (0.3.5)…\nProcessing triggers for hicolor-icon-theme (0.18-2)…\nProcessing triggers for desktop-file-utils (0.28-1)…\n"
+        },
+        {
+          "command": [
+            "dpkg",
+            "--verify",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": ""
+        },
+        {
+          "command": [
+            "apt-get",
+            "check"
+          ],
+          "exit_code": 0,
+          "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\n"
+        }
+      ],
+      "previous_version": "folimeld\t0.3.3\n",
+      "retained_files": {
+        "/home/folimeld-test/verification/startup-offscreen.json": "f89b55734188c6c2aa98186c323bffca46a966a2c0ba9ef7b37b3415d32fbba4",
+        "/home/folimeld-test/verification/startup-xcb.json": "060b55cf43657f74c430d678aef4a55905acbe719afb8f09d19532f1fbb64e1f",
+        "/home/folimeld-test/verification/deb035-r1-20261113-retry/lifecycle.json": "371b15e15fceb9f654f44348c5afdef755d493937a79ea5e417bfd6aa869ac88",
+        "/home/folimeld-test/verification/deb035-r1-20261113/lifecycle.json": "371b15e15fceb9f654f44348c5afdef755d493937a79ea5e417bfd6aa869ac88",
+        "/home/folimeld-test/verification/thumbnail-fix-20261112/process.json": "21db78c168d4862fc3ca3fd559ec7b4a04c34c13d425545d9b2fa10a2fe78c1d",
+        "/home/folimeld-test/verification/thumbnail-fix-20261112/kali-thumbnail-fixed.pdf": "5213f415e8e15cc3d1f39b61c729e2e9118000d16771fb2b27c4051caa913a96",
+        "/home/folimeld-test/verification/thumbnail-fix-20261112/app.log": "b28fe775117cf1a8c3496ad4156ce474056bdd786f752a11f794f5c39a1baa3f",
+        "/home/folimeld-test/verification/gui-20261112/session.json": "0548c3acbfc44214958f857d3742a3511bce3130d02c05cf4e0b74425f101caf",
+        "/home/folimeld-test/verification/gui-20261112/mime-launch.json": "849d17aec8468e760392e5e663557fb7c13d9ca7540a7568cc2c0d6916d791d9",
+        "/home/folimeld-test/verification/gui-20261112/encrypted-session.log": "cfe2500dd4b1b762213b7f3028fba7456ef118d89c338646c1e02c6216435ced",
+        "/home/folimeld-test/verification/gui-20261112/encrypted-process.json": "f42f055a23c56a7940656d8f5783feda22c9d706c4ba090b34f43e95fe52006f",
+        "/home/folimeld-test/verification/gui-20261112/session.log": "cfe2500dd4b1b762213b7f3028fba7456ef118d89c338646c1e02c6216435ced",
+        "/home/folimeld-test/verification/cache/fontconfig/CACHEDIR.TAG": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682",
+        "/home/folimeld-test/verification/cache/fontconfig/d589a48862398ed80a3d6066f4f56f4c-le64.cache-9": "2556acd9db50bc9e018aa86ced1dc32de9c00734409aa2aa085f2b2e963c352d",
+        "/home/folimeld-test/verification/cache/fontconfig/4c599c202bc5c08e2d34565a40eac3b2-le64.cache-9": "c7517406ff473adad81087f69654e06129c7b600de79424ee2045605ca526e56",
+        "/home/folimeld-test/verification/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-le64.cache-9": "3e106877db1a938e1881060397ea071ab0329cb6d63cb5d51d3ce0bddb50f1b9",
+        "/home/folimeld-test/verification/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-le64.cache-9": "161705611ebda5ea9919fb4bc0f07c25c9208891d7c03ab366a9c0fc3347858a",
+        "/home/folimeld-test/verification/gui-20261112/fixtures/image-output.pdf": "187f1bf55dfc5205dd333e37831adfde81c1cd66b4eacc9d9b281c9d7c515ec1",
+        "/home/folimeld-test/verification/gui-20261112/fixtures/日本語": "3344cf2cf8c1a95bdf6d3801354f89387dfb75a04114f136efa15dfc7bf23309",
+        "/home/folimeld-test/verification/gui-20261112/fixtures/暗号化.pdf": "48b63c2a0e9c3bf3f4e18d55d1104195310ac3dfa7986c04973f0f8319e70c0f",
+        "/home/folimeld-test/verification/gui-20261112/fixtures/原本_日本語.pdf": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+        "/home/folimeld-test/verification/gui-20261112/fixtures/日本語.pdf": "c2a0a08dc22003c500d2d67ca28959b058d0b8a6da2ff2a4da697ec8981f4c42",
+        "/home/folimeld-test/verification/gui-20261112/config/QtProject.conf": "758a66d342fc4983d9a3fd7b65edd087530cc5aaadb7652c70b93187d5f40971",
+        "/home/folimeld-test/verification/gui-20261112/config/Folimeld/Folimeld.conf": "41b838b6378a7471a2d18d839a27b487b4cea8da854243eb58e2a4a74c515902",
+        "/home/folimeld-test/verification/gui-20261112/config/mozc/boundary.db": "c8f63af7a5bd1f3b2fc5bdc9aa65ab1be8873ca0f796eba519ef2dddbac7a8a1",
+        "/home/folimeld-test/verification/gui-20261112/config/mozc/.server.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "/home/folimeld-test/verification/gui-20261112/config/mozc/.registry.db": "c61eaf7d0f67b7e45ca3e2fa03354a922b863006d46d728d09121b9891963c21",
+        "/home/folimeld-test/verification/gui-20261112/config/mozc/.session.ipc": "5a9a5ff38d9575cda7a42f070e4c3843dfe8c21d325edce97b6379aa9c244f21",
+        "/home/folimeld-test/verification/gui-20261112/config/mozc/cform.db": "3db51a9bcb26c682ccf0ceb355a69cf7a2e786c349d93124de580c7822d7e39e",
+        "/home/folimeld-test/verification/gui-20261112/config/mozc/.encrypt_key.db": "232925a06f6e1164029de53185adee7d77d1a2df0b796e450f5b9e38cb6ef148",
+        "/home/folimeld-test/verification/gui-20261112/config/mozc/.history.db": "1d6ce6d5db5992c6fb67a0b7c30605ce7a095b5bb4c111ff30b0d1724b52a5c5",
+        "/home/folimeld-test/verification/gui-20261112/config/mozc/ibus_config.textproto": "ba4f44986b9ad157736dfbc123a88289bdefd406c1ff211f215159f9b8f8630d",
+        "/home/folimeld-test/verification/gui-20261112/config/mozc/segment.db": "8b3945c69a9660eb84d7393bbe02fdcd3f9742125a2f62c37d53914d0ec0a9fc",
+        "/home/folimeld-test/verification/gui-20261112/config/mozc/.renderer.:0.ipc": "9e73d4962c0602bd59543a0e4116aebc60c6b67e91990ab0b53e8a9783475142",
+        "/home/folimeld-test/verification/gui-20261112/config/ibus/bus/6da0a50d55634aad86608a90087ef75e-unix-wayland-0": "2974a09155b00919a5d9b31a416c92ea763d8efa94ee80f2620b24ceac44de10",
+        "/home/folimeld-test/verification/gui-20261112/fixtures/画像/画像01.png": "a2c58fbf87ae17ad25b1680400fd9a3d5e627ff599a47286378d0f0111103613",
+        "/home/folimeld-test/verification/gui-20261112/cache/ibus/bus/registry": "a9029c3c0e0877ea330003822a9e3c3361a0aa44e50992906cf509e5479f8e8e",
+        "/home/folimeld-test/verification/gui-20261112/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "/home/folimeld-test/verification/gui-20261112/runtime/dconf/user": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+        "/home/folimeld-test/verification/thumbnail-fix-20261112/config/QtProject.conf": "0776ece6e72d30b07ec32d0a8ebab4b560765c6b38cc2327d2f16bf4ac9e91d7",
+        "/home/folimeld-test/verification/thumbnail-fix-20261112/config/Folimeld/Folimeld.conf": "922523376cb86ca70555b1084863f22db24468d9b78fa106813bce4d457a3dc5",
+        "/home/folimeld-test/verification/thumbnail-fix-20261112/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "/home/folimeld-test/verification/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "/home/folimeld-test/.config/powershell/Microsoft.PowerShell_profile.ps1": "8c9919428cd89ef13b83c8504f2a511129942ab13ceafdaec8a2c67815d93e06",
+        "/home/folimeld-test/.config/dconf/user": "1fc944b34ca58823f29c118fbf5c0b7bd5060d8a39536b2bd9d3147db23ba3b6"
+      },
+      "retained_unchanged": true,
+      "binary_sha256": "0de893f4db858da241716fbd12c279f52b274cdc2ad89d35de88a700e4704f6e",
+      "package_sha256": "573f72f323097d398d245218eda454037fdc5e74a4d6865bd085bd5955ecc3f7"
+    },
+    "Folimeld-Ubuntu-24.04-Amd64-034-Test": {
+      "commands": [
+        {
+          "command": [
+            "dpkg-query",
+            "-W",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": "folimeld\t0.3.4\n"
+        },
+        {
+          "command": [
+            "dpkg",
+            "--verify",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": ""
+        },
+        {
+          "command": [
+            "apt-get",
+            "-y",
+            "--no-install-recommends",
+            "install",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld_0.3.5_amd64.deb"
+          ],
+          "exit_code": 0,
+          "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following packages will be upgraded:\n  folimeld\n1 upgraded, 0 newly installed, 0 to remove and 41 not upgraded.\nNeed to get 0 B/108 MB of archives.\nAfter this operation, 0 B of additional disk space will be used.\nGet:1 /mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld_0.3.5_amd64.deb folimeld amd64 0.3.5 [108 MB]\n(Reading database ... \n(Reading database ... 5%\n(Reading database ... 10%\n(Reading database ... 15%\n(Reading database ... 20%\n(Reading database ... 25%\n(Reading database ... 30%\n(Reading database ... 35%\n(Reading database ... 40%\n(Reading database ... 45%\n(Reading database ... 50%\n(Reading database ... 55%\n(Reading database ... 60%\n(Reading database ... 65%\n(Reading database ... 70%\n(Reading database ... 75%\n(Reading database ... 80%\n(Reading database ... 85%\n(Reading database ... 90%\n(Reading database ... 95%\n(Reading database ... 100%\n(Reading database ... 53355 files and directories currently installed.)\nPreparing to unpack .../folimeld_0.3.5_amd64.deb ...\nUnpacking folimeld (0.3.5) over (0.3.4) ...\nSetting up folimeld (0.3.5) ...\nProcessing triggers for hicolor-icon-theme (0.17-2) ...\n"
+        },
+        {
+          "command": [
+            "dpkg",
+            "--verify",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": ""
+        },
+        {
+          "command": [
+            "apt-get",
+            "check"
+          ],
+          "exit_code": 0,
+          "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\n"
+        },
+        {
+          "command": [
+            "dpkg",
+            "--audit"
+          ],
+          "exit_code": 0,
+          "output": ""
+        },
+        {
+          "command": [
+            "dpkg-query",
+            "-L",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": "/.\n/usr\n/usr/bin\n/usr/bin/folimeld\n/usr/share\n/usr/share/applications\n/usr/share/applications/folimeld.desktop\n/usr/share/icons\n/usr/share/icons/hicolor\n/usr/share/icons/hicolor/256x256\n/usr/share/icons/hicolor/256x256/apps\n/usr/share/icons/hicolor/256x256/apps/folimeld.png\n"
+        },
+        {
+          "command": [
+            "runuser",
+            "-u",
+            "tyamada22",
+            "--",
+            "env",
+            "QT_QPA_PLATFORM=offscreen",
+            "QT_IM_MODULE=compose",
+            "DISPLAY=:0",
+            "XDG_CONFIG_HOME=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-offscreen/config",
+            "XDG_CACHE_HOME=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-offscreen/cache",
+            "XDG_DATA_HOME=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-offscreen/data",
+            "XDG_RUNTIME_DIR=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-offscreen/runtime",
+            "TMPDIR=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-offscreen/tmp",
+            "timeout",
+            "12",
+            "/usr/bin/folimeld"
+          ],
+          "exit_code": 124,
+          "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nThis plugin does not support propagateSizeHints()\n"
+        },
+        {
+          "command": [
+            "runuser",
+            "-u",
+            "tyamada22",
+            "--",
+            "env",
+            "QT_QPA_PLATFORM=xcb",
+            "QT_IM_MODULE=compose",
+            "DISPLAY=:0",
+            "XDG_CONFIG_HOME=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-xcb/config",
+            "XDG_CACHE_HOME=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-xcb/cache",
+            "XDG_DATA_HOME=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-xcb/data",
+            "XDG_RUNTIME_DIR=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-xcb/runtime",
+            "TMPDIR=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-xcb/tmp",
+            "timeout",
+            "12",
+            "/usr/bin/folimeld"
+          ],
+          "exit_code": 124,
+          "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+        },
+        {
+          "command": [
+            "apt-get",
+            "-y",
+            "remove",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following packages will be REMOVED:\n  folimeld\n0 upgraded, 0 newly installed, 1 to remove and 41 not upgraded.\nAfter this operation, 0 B of additional disk space will be used.\n(Reading database ... \n(Reading database ... 5%\n(Reading database ... 10%\n(Reading database ... 15%\n(Reading database ... 20%\n(Reading database ... 25%\n(Reading database ... 30%\n(Reading database ... 35%\n(Reading database ... 40%\n(Reading database ... 45%\n(Reading database ... 50%\n(Reading database ... 55%\n(Reading database ... 60%\n(Reading database ... 65%\n(Reading database ... 70%\n(Reading database ... 75%\n(Reading database ... 80%\n(Reading database ... 85%\n(Reading database ... 90%\n(Reading database ... 95%\n(Reading database ... 100%\n(Reading database ... 53355 files and directories currently installed.)\nRemoving folimeld (0.3.5) ...\nProcessing triggers for hicolor-icon-theme (0.17-2) ...\n"
+        },
+        {
+          "command": [
+            "apt-get",
+            "-y",
+            "--no-install-recommends",
+            "install",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld_0.3.5_amd64.deb"
+          ],
+          "exit_code": 0,
+          "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following NEW packages will be installed:\n  folimeld\n0 upgraded, 1 newly installed, 0 to remove and 41 not upgraded.\nNeed to get 0 B/108 MB of archives.\nAfter this operation, 0 B of additional disk space will be used.\nGet:1 /mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld_0.3.5_amd64.deb folimeld amd64 0.3.5 [108 MB]\nSelecting previously unselected package folimeld.\n(Reading database ... \n(Reading database ... 5%\n(Reading database ... 10%\n(Reading database ... 15%\n(Reading database ... 20%\n(Reading database ... 25%\n(Reading database ... 30%\n(Reading database ... 35%\n(Reading database ... 40%\n(Reading database ... 45%\n(Reading database ... 50%\n(Reading database ... 55%\n(Reading database ... 60%\n(Reading database ... 65%\n(Reading database ... 70%\n(Reading database ... 75%\n(Reading database ... 80%\n(Reading database ... 85%\n(Reading database ... 90%\n(Reading database ... 95%\n(Reading database ... 100%\n(Reading database ... 53352 files and directories currently installed.)\nPreparing to unpack .../folimeld_0.3.5_amd64.deb ...\nUnpacking folimeld (0.3.5) ...\nSetting up folimeld (0.3.5) ...\nProcessing triggers for hicolor-icon-theme (0.17-2) ...\n"
+        },
+        {
+          "command": [
+            "dpkg",
+            "--verify",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": ""
+        },
+        {
+          "command": [
+            "apt-get",
+            "check"
+          ],
+          "exit_code": 0,
+          "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\n"
+        }
+      ],
+      "previous_version": "folimeld\t0.3.4\n",
+      "retained_files": {
+        "/home/tyamada22/verification/deb035-r1-20261113/lifecycle.json": "aea894b9ac120bc0cffc99ac18992e304600e99a7ef30dfaa5ce6befcaae02e7",
+        "/home/tyamada22/.config/QtProject.conf": "62114dfe2a9f42a31b8e46a423318b6501c899fde5bb2f40efc425a2c5caa16d"
+      },
+      "retained_unchanged": true,
+      "binary_sha256": "0de893f4db858da241716fbd12c279f52b274cdc2ad89d35de88a700e4704f6e",
+      "package_sha256": "573f72f323097d398d245218eda454037fdc5e74a4d6865bd085bd5955ecc3f7"
+    },
+    "Folimeld-Debian-Amd64-034-Test": {
+      "commands": [
+        {
+          "command": [
+            "dpkg-query",
+            "-W",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": "folimeld\t0.3.4\n"
+        },
+        {
+          "command": [
+            "dpkg",
+            "--verify",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": ""
+        },
+        {
+          "command": [
+            "apt-get",
+            "-y",
+            "--no-install-recommends",
+            "install",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld_0.3.5_amd64.deb"
+          ],
+          "exit_code": 0,
+          "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following packages will be upgraded:\n  folimeld\n1 upgraded, 0 newly installed, 0 to remove and 35 not upgraded.\nNeed to get 0 B/108 MB of archives.\nAfter this operation, 0 B of additional disk space will be used.\nGet:1 /mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld_0.3.5_amd64.deb folimeld amd64 0.3.5 [108 MB]\n(Reading database ... \n(Reading database ... 5%\n(Reading database ... 10%\n(Reading database ... 15%\n(Reading database ... 20%\n(Reading database ... 25%\n(Reading database ... 30%\n(Reading database ... 35%\n(Reading database ... 40%\n(Reading database ... 45%\n(Reading database ... 50%\n(Reading database ... 55%\n(Reading database ... 60%\n(Reading database ... 65%\n(Reading database ... 70%\n(Reading database ... 75%\n(Reading database ... 80%\n(Reading database ... 85%\n(Reading database ... 90%\n(Reading database ... 95%\n(Reading database ... 100%\n(Reading database ... 17854 files and directories currently installed.)\nPreparing to unpack .../folimeld_0.3.5_amd64.deb ...\nUnpacking folimeld (0.3.5) over (0.3.4) ...\nSetting up folimeld (0.3.5) ...\nProcessing triggers for hicolor-icon-theme (0.18-2) ...\n"
+        },
+        {
+          "command": [
+            "dpkg",
+            "--verify",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": ""
+        },
+        {
+          "command": [
+            "apt-get",
+            "check"
+          ],
+          "exit_code": 0,
+          "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\n"
+        },
+        {
+          "command": [
+            "dpkg",
+            "--audit"
+          ],
+          "exit_code": 0,
+          "output": ""
+        },
+        {
+          "command": [
+            "dpkg-query",
+            "-L",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": "/.\n/usr\n/usr/bin\n/usr/bin/folimeld\n/usr/share\n/usr/share/applications\n/usr/share/applications/folimeld.desktop\n/usr/share/icons\n/usr/share/icons/hicolor\n/usr/share/icons/hicolor/256x256\n/usr/share/icons/hicolor/256x256/apps\n/usr/share/icons/hicolor/256x256/apps/folimeld.png\n"
+        },
+        {
+          "command": [
+            "runuser",
+            "-u",
+            "tyamada22",
+            "--",
+            "env",
+            "QT_QPA_PLATFORM=offscreen",
+            "QT_IM_MODULE=compose",
+            "DISPLAY=:0",
+            "XDG_CONFIG_HOME=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-offscreen/config",
+            "XDG_CACHE_HOME=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-offscreen/cache",
+            "XDG_DATA_HOME=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-offscreen/data",
+            "XDG_RUNTIME_DIR=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-offscreen/runtime",
+            "TMPDIR=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-offscreen/tmp",
+            "timeout",
+            "12",
+            "/usr/bin/folimeld"
+          ],
+          "exit_code": 124,
+          "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nThis plugin does not support propagateSizeHints()\n"
+        },
+        {
+          "command": [
+            "runuser",
+            "-u",
+            "tyamada22",
+            "--",
+            "env",
+            "QT_QPA_PLATFORM=xcb",
+            "QT_IM_MODULE=compose",
+            "DISPLAY=:0",
+            "XDG_CONFIG_HOME=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-xcb/config",
+            "XDG_CACHE_HOME=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-xcb/cache",
+            "XDG_DATA_HOME=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-xcb/data",
+            "XDG_RUNTIME_DIR=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-xcb/runtime",
+            "TMPDIR=/home/tyamada22/verification/deb035-r1-20261113-retry/startup-xcb/tmp",
+            "timeout",
+            "12",
+            "/usr/bin/folimeld"
+          ],
+          "exit_code": 124,
+          "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+        },
+        {
+          "command": [
+            "apt-get",
+            "-y",
+            "remove",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following packages were automatically installed and are no longer required:\n  libegl-mesa0 libegl1 libxcb-cursor0 libxcb-icccm4 libxcb-image0\n  libxcb-keysyms1 libxcb-render-util0 libxcb-shape0 libxcb-xkb1\n  libxkbcommon-x11-0\nUse 'apt autoremove' to remove them.\nThe following packages will be REMOVED:\n  folimeld\n0 upgraded, 0 newly installed, 1 to remove and 35 not upgraded.\nAfter this operation, 0 B of additional disk space will be used.\n(Reading database ... \n(Reading database ... 5%\n(Reading database ... 10%\n(Reading database ... 15%\n(Reading database ... 20%\n(Reading database ... 25%\n(Reading database ... 30%\n(Reading database ... 35%\n(Reading database ... 40%\n(Reading database ... 45%\n(Reading database ... 50%\n(Reading database ... 55%\n(Reading database ... 60%\n(Reading database ... 65%\n(Reading database ... 70%\n(Reading database ... 75%\n(Reading database ... 80%\n(Reading database ... 85%\n(Reading database ... 90%\n(Reading database ... 95%\n(Reading database ... 100%\n(Reading database ... 17854 files and directories currently installed.)\nRemoving folimeld (0.3.5) ...\nProcessing triggers for hicolor-icon-theme (0.18-2) ...\n"
+        },
+        {
+          "command": [
+            "apt-get",
+            "-y",
+            "--no-install-recommends",
+            "install",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld_0.3.5_amd64.deb"
+          ],
+          "exit_code": 0,
+          "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following NEW packages will be installed:\n  folimeld\n0 upgraded, 1 newly installed, 0 to remove and 35 not upgraded.\nNeed to get 0 B/108 MB of archives.\nAfter this operation, 0 B of additional disk space will be used.\nGet:1 /mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld_0.3.5_amd64.deb folimeld amd64 0.3.5 [108 MB]\nSelecting previously unselected package folimeld.\n(Reading database ... \n(Reading database ... 5%\n(Reading database ... 10%\n(Reading database ... 15%\n(Reading database ... 20%\n(Reading database ... 25%\n(Reading database ... 30%\n(Reading database ... 35%\n(Reading database ... 40%\n(Reading database ... 45%\n(Reading database ... 50%\n(Reading database ... 55%\n(Reading database ... 60%\n(Reading database ... 65%\n(Reading database ... 70%\n(Reading database ... 75%\n(Reading database ... 80%\n(Reading database ... 85%\n(Reading database ... 90%\n(Reading database ... 95%\n(Reading database ... 100%\n(Reading database ... 17851 files and directories currently installed.)\nPreparing to unpack .../folimeld_0.3.5_amd64.deb ...\nUnpacking folimeld (0.3.5) ...\nSetting up folimeld (0.3.5) ...\nProcessing triggers for hicolor-icon-theme (0.18-2) ...\n"
+        },
+        {
+          "command": [
+            "dpkg",
+            "--verify",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "output": ""
+        },
+        {
+          "command": [
+            "apt-get",
+            "check"
+          ],
+          "exit_code": 0,
+          "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\n"
+        }
+      ],
+      "previous_version": "folimeld\t0.3.4\n",
+      "retained_files": {
+        "/home/tyamada22/verification/deb035-r1-20261113/lifecycle.json": "aea894b9ac120bc0cffc99ac18992e304600e99a7ef30dfaa5ce6befcaae02e7",
+        "/home/tyamada22/.config/QtProject.conf": "b3f274739f9fb4d1d022ccb53b329da29c2103afbe3e08bc3ecc0f5d89d25549",
+        "/home/tyamada22/.config/Folimeld/Folimeld.conf": "669883ccb2bb223bd7ed47ab8e1f5b989765aeaddde05327f70d15aa6a441519"
+      },
+      "retained_unchanged": true,
+      "binary_sha256": "0de893f4db858da241716fbd12c279f52b274cdc2ad89d35de88a700e4704f6e",
+      "package_sha256": "573f72f323097d398d245218eda454037fdc5e74a4d6865bd085bd5955ecc3f7"
+    }
+  },
+  "minimal_root": {
+    "commands": [
+      {
+        "command": [
+          "chroot",
+          "/home/tyamada22/verification/deb035-r1-20261113-retry/minimal-root",
+          "apt-get",
+          "update"
+        ],
+        "exit_code": 0,
+        "output": "Hit:1 https://archive.ubuntu.com/ubuntu noble InRelease\nGet:2 https://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [15.0 MB]\nGet:3 https://archive.ubuntu.com/ubuntu noble/universe Translation-en [5982 kB]\nFetched 21.0 MB in 6s (3683 kB/s)\nReading package lists...\n"
+      },
+      {
+        "command": [
+          "chroot",
+          "/home/tyamada22/verification/deb035-r1-20261113-retry/minimal-root",
+          "apt-get",
+          "-y",
+          "--no-install-recommends",
+          "install",
+          "/tmp/folimeld.deb"
+        ],
+        "exit_code": 0,
+        "output": "Reading package lists...\nBuilding dependency tree...\nThe following additional packages will be installed:\n  fontconfig-config fonts-dejavu-core fonts-dejavu-mono libbsd0 libdrm-amdgpu1\n  libdrm-common libdrm-intel1 libdrm-nouveau2 libdrm-radeon1 libdrm2 libedit2\n  libegl-mesa0 libegl1 libelf1t64 libexpat1 libgbm1 libgl1 libgl1-mesa-dri\n  libglapi-mesa libglvnd0 libglx-mesa0 libglx0 libicu74 libllvm17t64\n  libpciaccess0 libsensors-config libsensors5 libvulkan1 libwayland-client0\n  libwayland-server0 libx11-6 libx11-data libx11-xcb1 libxau6 libxcb-cursor0\n  libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0 libxcb-icccm4 libxcb-image0\n  libxcb-keysyms1 libxcb-present0 libxcb-randr0 libxcb-render-util0\n  libxcb-render0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1\n  libxcb-xfixes0 libxcb-xkb1 libxcb1 libxdmcp6 libxext6 libxfixes3\n  libxkbcommon-x11-0 libxkbcommon0 libxml2 libxshmfence1 libxxf86vm1 xkb-data\nSuggested packages:\n  pciutils lm-sensors\nRecommended packages:\n  fonts-noto-cjk libgl1-amber-dri mesa-vulkan-drivers | vulkan-icd\nThe following NEW packages will be installed:\n  folimeld fontconfig-config fonts-dejavu-core fonts-dejavu-mono libbsd0\n  libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm-nouveau2 libdrm-radeon1\n  libdrm2 libedit2 libegl-mesa0 libegl1 libelf1t64 libexpat1 libgbm1 libgl1\n  libgl1-mesa-dri libglapi-mesa libglvnd0 libglx-mesa0 libglx0 libicu74\n  libllvm17t64 libpciaccess0 libsensors-config libsensors5 libvulkan1\n  libwayland-client0 libwayland-server0 libx11-6 libx11-data libx11-xcb1\n  libxau6 libxcb-cursor0 libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0 libxcb-icccm4\n  libxcb-image0 libxcb-keysyms1 libxcb-present0 libxcb-randr0\n  libxcb-render-util0 libxcb-render0 libxcb-shape0 libxcb-shm0 libxcb-sync1\n  libxcb-util1 libxcb-xfixes0 libxcb-xkb1 libxcb1 libxdmcp6 libxext6\n  libxfixes3 libxkbcommon-x11-0 libxkbcommon0 libxml2 libxshmfence1\n  libxxf86vm1 xkb-data\n0 upgraded, 62 newly installed, 0 to remove and 0 not upgraded.\nNeed to get 51.0 MB/159 MB of archives.\nAfter this operation, 215 MB of additional disk space will be used.\nGet:1 /tmp/folimeld.deb folimeld amd64 0.3.5 [108 MB]\nGet:2 https://archive.ubuntu.com/ubuntu noble/main amd64 libbsd0 amd64 0.12.1-1build1 [41.2 kB]\nGet:3 https://archive.ubuntu.com/ubuntu noble/main amd64 libelf1t64 amd64 0.190-1.1build4 [57.6 kB]\nGet:4 https://archive.ubuntu.com/ubuntu noble/main amd64 libexpat1 amd64 2.6.1-2build1 [87.0 kB]\nGet:5 https://archive.ubuntu.com/ubuntu noble/main amd64 libicu74 amd64 74.2-1ubuntu3 [10.9 MB]\nGet:6 https://archive.ubuntu.com/ubuntu noble/main amd64 libxml2 amd64 2.9.14+dfsg-1.3ubuntu3 [762 kB]\nGet:7 https://archive.ubuntu.com/ubuntu noble/main amd64 xkb-data all 2.41-2ubuntu1 [395 kB]\nGet:8 https://archive.ubuntu.com/ubuntu noble/main amd64 libdrm-common all 2.4.120-2build1 [8096 B]\nGet:9 https://archive.ubuntu.com/ubuntu noble/main amd64 libdrm2 amd64 2.4.120-2build1 [40.5 kB]\nGet:10 https://archive.ubuntu.com/ubuntu noble/main amd64 libedit2 amd64 3.1-20230828-1build1 [97.6 kB]\nGet:11 https://archive.ubuntu.com/ubuntu noble/main amd64 libsensors-config all 1:3.6.0-9build1 [5546 B]\nGet:12 https://archive.ubuntu.com/ubuntu noble/main amd64 libsensors5 amd64 1:3.6.0-9build1 [26.6 kB]\nGet:13 https://archive.ubuntu.com/ubuntu noble/main amd64 libxau6 amd64 1:1.0.9-1build6 [7160 B]\nGet:14 https://archive.ubuntu.com/ubuntu noble/main amd64 libxdmcp6 amd64 1:1.1.3-0ubuntu6 [10.3 kB]\nGet:15 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb1 amd64 1.15-1ubuntu2 [47.7 kB]\nGet:16 https://archive.ubuntu.com/ubuntu noble/main amd64 libx11-data all 2:1.8.7-1build1 [115 kB]\nGet:17 https://archive.ubuntu.com/ubuntu noble/main amd64 libx11-6 amd64 2:1.8.7-1build1 [650 kB]\nGet:18 https://archive.ubuntu.com/ubuntu noble/main amd64 libxext6 amd64 2:1.3.4-1build2 [30.4 kB]\nGet:19 https://archive.ubuntu.com/ubuntu noble/main amd64 libxkbcommon0 amd64 1.6.0-1build1 [122 kB]\nGet:20 https://archive.ubuntu.com/ubuntu noble/main amd64 libglvnd0 amd64 1.7.0-1build1 [69.6 kB]\nGet:21 https://archive.ubuntu.com/ubuntu noble/main amd64 libwayland-server0 amd64 1.22.0-2.1build1 [33.9 kB]\nGet:22 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-randr0 amd64 1.15-1ubuntu2 [17.9 kB]\nGet:23 https://archive.ubuntu.com/ubuntu noble/main amd64 libgbm1 amd64 24.0.5-1ubuntu1 [42.5 kB]\nGet:24 https://archive.ubuntu.com/ubuntu noble/main amd64 libglapi-mesa amd64 24.0.5-1ubuntu1 [41.0 kB]\nGet:25 https://archive.ubuntu.com/ubuntu noble/main amd64 libwayland-client0 amd64 1.22.0-2.1build1 [26.4 kB]\nGet:26 https://archive.ubuntu.com/ubuntu noble/main amd64 libx11-xcb1 amd64 2:1.8.7-1build1 [7800 B]\nGet:27 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-dri2-0 amd64 1.15-1ubuntu2 [7222 B]\nGet:28 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-dri3-0 amd64 1.15-1ubuntu2 [7142 B]\nGet:29 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-present0 amd64 1.15-1ubuntu2 [5676 B]\nGet:30 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-sync1 amd64 1.15-1ubuntu2 [9312 B]\nGet:31 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-xfixes0 amd64 1.15-1ubuntu2 [10.2 kB]\nGet:32 https://archive.ubuntu.com/ubuntu noble/main amd64 libxshmfence1 amd64 1.3-1build5 [4764 B]\nGet:33 https://archive.ubuntu.com/ubuntu noble/main amd64 libegl-mesa0 amd64 24.0.5-1ubuntu1 [115 kB]\nGet:34 https://archive.ubuntu.com/ubuntu noble/main amd64 libegl1 amd64 1.7.0-1build1 [28.7 kB]\nGet:35 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-glx0 amd64 1.15-1ubuntu2 [24.8 kB]\nGet:36 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-shm0 amd64 1.15-1ubuntu2 [5756 B]\nGet:37 https://archive.ubuntu.com/ubuntu noble/main amd64 libxfixes3 amd64 1:6.0.0-2build1 [10.8 kB]\nGet:38 https://archive.ubuntu.com/ubuntu noble/main amd64 libxxf86vm1 amd64 1:1.1.4-1build4 [9282 B]\nGet:39 https://archive.ubuntu.com/ubuntu noble/main amd64 libvulkan1 amd64 1.3.275.0-1build1 [142 kB]\nGet:40 https://archive.ubuntu.com/ubuntu noble/main amd64 libdrm-amdgpu1 amd64 2.4.120-2build1 [20.2 kB]\nGet:41 https://archive.ubuntu.com/ubuntu noble/main amd64 libpciaccess0 amd64 0.17-3build1 [18.6 kB]\nGet:42 https://archive.ubuntu.com/ubuntu noble/main amd64 libdrm-intel1 amd64 2.4.120-2build1 [63.8 kB]\nGet:43 https://archive.ubuntu.com/ubuntu noble/main amd64 libdrm-nouveau2 amd64 2.4.120-2build1 [17.7 kB]\nGet:44 https://archive.ubuntu.com/ubuntu noble/main amd64 libdrm-radeon1 amd64 2.4.120-2build1 [20.8 kB]\nGet:45 https://archive.ubuntu.com/ubuntu noble/main amd64 libllvm17t64 amd64 1:17.0.6-9ubuntu1 [26.2 MB]\nGet:46 https://archive.ubuntu.com/ubuntu noble/main amd64 libgl1-mesa-dri amd64 24.0.5-1ubuntu1 [8939 kB]\nGet:47 https://archive.ubuntu.com/ubuntu noble/main amd64 libglx-mesa0 amd64 24.0.5-1ubuntu1 [154 kB]\nGet:48 https://archive.ubuntu.com/ubuntu noble/main amd64 libglx0 amd64 1.7.0-1build1 [38.6 kB]\nGet:49 https://archive.ubuntu.com/ubuntu noble/main amd64 libgl1 amd64 1.7.0-1build1 [102 kB]\nGet:50 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-xkb1 amd64 1.15-1ubuntu2 [32.3 kB]\nGet:51 https://archive.ubuntu.com/ubuntu noble/main amd64 libxkbcommon-x11-0 amd64 1.6.0-1build1 [14.5 kB]\nGet:52 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-util1 amd64 0.4.0-1build3 [10.7 kB]\nGet:53 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-image0 amd64 0.4.0-2build1 [10.8 kB]\nGet:54 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-render0 amd64 1.15-1ubuntu2 [16.2 kB]\nGet:55 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-render-util0 amd64 0.3.9-1build4 [9608 B]\nGet:56 https://archive.ubuntu.com/ubuntu noble/universe amd64 libxcb-cursor0 amd64 0.1.4-1build1 [10.7 kB]\nGet:57 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-icccm4 amd64 0.4.1-1.1build3 [10.8 kB]\nGet:58 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-keysyms1 amd64 0.4.0-1build4 [7956 B]\nGet:59 https://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-shape0 amd64 1.15-1ubuntu2 [6100 B]\nGet:60 https://archive.ubuntu.com/ubuntu noble/main amd64 fonts-dejavu-mono all 2.37-8 [502 kB]\nGet:61 https://archive.ubuntu.com/ubuntu noble/main amd64 fonts-dejavu-core all 2.37-8 [835 kB]\nGet:62 https://archive.ubuntu.com/ubuntu noble/main amd64 fontconfig-config amd64 2.15.0-1.1ubuntu2 [37.3 kB]\nFetched 51.0 MB in 5s (9945 kB/s)\nSelecting previously unselected package libbsd0:amd64.\n(Reading database ... 4845 files and directories currently installed.)\nPreparing to unpack .../00-libbsd0_0.12.1-1build1_amd64.deb ...\nUnpacking libbsd0:amd64 (0.12.1-1build1) ...\nSelecting previously unselected package libelf1t64:amd64.\nPreparing to unpack .../01-libelf1t64_0.190-1.1build4_amd64.deb ...\nUnpacking libelf1t64:amd64 (0.190-1.1build4) ...\nSelecting previously unselected package libexpat1:amd64.\nPreparing to unpack .../02-libexpat1_2.6.1-2build1_amd64.deb ...\nUnpacking libexpat1:amd64 (2.6.1-2build1) ...\nSelecting previously unselected package libicu74:amd64.\nPreparing to unpack .../03-libicu74_74.2-1ubuntu3_amd64.deb ...\nUnpacking libicu74:amd64 (74.2-1ubuntu3) ...\nSelecting previously unselected package libxml2:amd64.\nPreparing to unpack .../04-libxml2_2.9.14+dfsg-1.3ubuntu3_amd64.deb ...\nUnpacking libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3) ...\nSelecting previously unselected package xkb-data.\nPreparing to unpack .../05-xkb-data_2.41-2ubuntu1_all.deb ...\nUnpacking xkb-data (2.41-2ubuntu1) ...\nSelecting previously unselected package libdrm-common.\nPreparing to unpack .../06-libdrm-common_2.4.120-2build1_all.deb ...\nUnpacking libdrm-common (2.4.120-2build1) ...\nSelecting previously unselected package libdrm2:amd64.\nPreparing to unpack .../07-libdrm2_2.4.120-2build1_amd64.deb ...\nUnpacking libdrm2:amd64 (2.4.120-2build1) ...\nSelecting previously unselected package libedit2:amd64.\nPreparing to unpack .../08-libedit2_3.1-20230828-1build1_amd64.deb ...\nUnpacking libedit2:amd64 (3.1-20230828-1build1) ...\nSelecting previously unselected package libsensors-config.\nPreparing to unpack .../09-libsensors-config_1%3a3.6.0-9build1_all.deb ...\nUnpacking libsensors-config (1:3.6.0-9build1) ...\nSelecting previously unselected package libsensors5:amd64.\nPreparing to unpack .../10-libsensors5_1%3a3.6.0-9build1_amd64.deb ...\nUnpacking libsensors5:amd64 (1:3.6.0-9build1) ...\nSelecting previously unselected package libxau6:amd64.\nPreparing to unpack .../11-libxau6_1%3a1.0.9-1build6_amd64.deb ...\nUnpacking libxau6:amd64 (1:1.0.9-1build6) ...\nSelecting previously unselected package libxdmcp6:amd64.\nPreparing to unpack .../12-libxdmcp6_1%3a1.1.3-0ubuntu6_amd64.deb ...\nUnpacking libxdmcp6:amd64 (1:1.1.3-0ubuntu6) ...\nSelecting previously unselected package libxcb1:amd64.\nPreparing to unpack .../13-libxcb1_1.15-1ubuntu2_amd64.deb ...\nUnpacking libxcb1:amd64 (1.15-1ubuntu2) ...\nSelecting previously unselected package libx11-data.\nPreparing to unpack .../14-libx11-data_2%3a1.8.7-1build1_all.deb ...\nUnpacking libx11-data (2:1.8.7-1build1) ...\nSelecting previously unselected package libx11-6:amd64.\nPreparing to unpack .../15-libx11-6_2%3a1.8.7-1build1_amd64.deb ...\nUnpacking libx11-6:amd64 (2:1.8.7-1build1) ...\nSelecting previously unselected package libxext6:amd64.\nPreparing to unpack .../16-libxext6_2%3a1.3.4-1build2_amd64.deb ...\nUnpacking libxext6:amd64 (2:1.3.4-1build2) ...\nSelecting previously unselected package libxkbcommon0:amd64.\nPreparing to unpack .../17-libxkbcommon0_1.6.0-1build1_amd64.deb ...\nUnpacking libxkbcommon0:amd64 (1.6.0-1build1) ...\nSelecting previously unselected package libglvnd0:amd64.\nPreparing to unpack .../18-libglvnd0_1.7.0-1build1_amd64.deb ...\nUnpacking libglvnd0:amd64 (1.7.0-1build1) ...\nSelecting previously unselected package libwayland-server0:amd64.\nPreparing to unpack .../19-libwayland-server0_1.22.0-2.1build1_amd64.deb ...\nUnpacking libwayland-server0:amd64 (1.22.0-2.1build1) ...\nSelecting previously unselected package libxcb-randr0:amd64.\nPreparing to unpack .../20-libxcb-randr0_1.15-1ubuntu2_amd64.deb ...\nUnpacking libxcb-randr0:amd64 (1.15-1ubuntu2) ...\nSelecting previously unselected package libgbm1:amd64.\nPreparing to unpack .../21-libgbm1_24.0.5-1ubuntu1_amd64.deb ...\nUnpacking libgbm1:amd64 (24.0.5-1ubuntu1) ...\nSelecting previously unselected package libglapi-mesa:amd64.\nPreparing to unpack .../22-libglapi-mesa_24.0.5-1ubuntu1_amd64.deb ...\nUnpacking libglapi-mesa:amd64 (24.0.5-1ubuntu1) ...\nSelecting previously unselected package libwayland-client0:amd64.\nPreparing to unpack .../23-libwayland-client0_1.22.0-2.1build1_amd64.deb ...\nUnpacking libwayland-client0:amd64 (1.22.0-2.1build1) ...\nSelecting previously unselected package libx11-xcb1:amd64.\nPreparing to unpack .../24-libx11-xcb1_2%3a1.8.7-1build1_amd64.deb ...\nUnpacking libx11-xcb1:amd64 (2:1.8.7-1build1) ...\nSelecting previously unselected package libxcb-dri2-0:amd64.\nPreparing to unpack .../25-libxcb-dri2-0_1.15-1ubuntu2_amd64.deb ...\nUnpacking libxcb-dri2-0:amd64 (1.15-1ubuntu2) ...\nSelecting previously unselected package libxcb-dri3-0:amd64.\nPreparing to unpack .../26-libxcb-dri3-0_1.15-1ubuntu2_amd64.deb ...\nUnpacking libxcb-dri3-0:amd64 (1.15-1ubuntu2) ...\nSelecting previously unselected package libxcb-present0:amd64.\nPreparing to unpack .../27-libxcb-present0_1.15-1ubuntu2_amd64.deb ...\nUnpacking libxcb-present0:amd64 (1.15-1ubuntu2) ...\nSelecting previously unselected package libxcb-sync1:amd64.\nPreparing to unpack .../28-libxcb-sync1_1.15-1ubuntu2_amd64.deb ...\nUnpacking libxcb-sync1:amd64 (1.15-1ubuntu2) ...\nSelecting previously unselected package libxcb-xfixes0:amd64.\nPreparing to unpack .../29-libxcb-xfixes0_1.15-1ubuntu2_amd64.deb ...\nUnpacking libxcb-xfixes0:amd64 (1.15-1ubuntu2) ...\nSelecting previously unselected package libxshmfence1:amd64.\nPreparing to unpack .../30-libxshmfence1_1.3-1build5_amd64.deb ...\nUnpacking libxshmfence1:amd64 (1.3-1build5) ...\nSelecting previously unselected package libegl-mesa0:amd64.\nPreparing to unpack .../31-libegl-mesa0_24.0.5-1ubuntu1_amd64.deb ...\nUnpacking libegl-mesa0:amd64 (24.0.5-1ubuntu1) ...\nSelecting previously unselected package libegl1:amd64.\nPreparing to unpack .../32-libegl1_1.7.0-1build1_amd64.deb ...\nUnpacking libegl1:amd64 (1.7.0-1build1) ...\nSelecting previously unselected package libxcb-glx0:amd64.\nPreparing to unpack .../33-libxcb-glx0_1.15-1ubuntu2_amd64.deb ...\nUnpacking libxcb-glx0:amd64 (1.15-1ubuntu2) ...\nSelecting previously unselected package libxcb-shm0:amd64.\nPreparing to unpack .../34-libxcb-shm0_1.15-1ubuntu2_amd64.deb ...\nUnpacking libxcb-shm0:amd64 (1.15-1ubuntu2) ...\nSelecting previously unselected package libxfixes3:amd64.\nPreparing to unpack .../35-libxfixes3_1%3a6.0.0-2build1_amd64.deb ...\nUnpacking libxfixes3:amd64 (1:6.0.0-2build1) ...\nSelecting previously unselected package libxxf86vm1:amd64.\nPreparing to unpack .../36-libxxf86vm1_1%3a1.1.4-1build4_amd64.deb ...\nUnpacking libxxf86vm1:amd64 (1:1.1.4-1build4) ...\nSelecting previously unselected package libvulkan1:amd64.\nPreparing to unpack .../37-libvulkan1_1.3.275.0-1build1_amd64.deb ...\nUnpacking libvulkan1:amd64 (1.3.275.0-1build1) ...\nSelecting previously unselected package libdrm-amdgpu1:amd64.\nPreparing to unpack .../38-libdrm-amdgpu1_2.4.120-2build1_amd64.deb ...\nUnpacking libdrm-amdgpu1:amd64 (2.4.120-2build1) ...\nSelecting previously unselected package libpciaccess0:amd64.\nPreparing to unpack .../39-libpciaccess0_0.17-3build1_amd64.deb ...\nUnpacking libpciaccess0:amd64 (0.17-3build1) ...\nSelecting previously unselected package libdrm-intel1:amd64.\nPreparing to unpack .../40-libdrm-intel1_2.4.120-2build1_amd64.deb ...\nUnpacking libdrm-intel1:amd64 (2.4.120-2build1) ...\nSelecting previously unselected package libdrm-nouveau2:amd64.\nPreparing to unpack .../41-libdrm-nouveau2_2.4.120-2build1_amd64.deb ...\nUnpacking libdrm-nouveau2:amd64 (2.4.120-2build1) ...\nSelecting previously unselected package libdrm-radeon1:amd64.\nPreparing to unpack .../42-libdrm-radeon1_2.4.120-2build1_amd64.deb ...\nUnpacking libdrm-radeon1:amd64 (2.4.120-2build1) ...\nSelecting previously unselected package libllvm17t64:amd64.\nPreparing to unpack .../43-libllvm17t64_1%3a17.0.6-9ubuntu1_amd64.deb ...\nUnpacking libllvm17t64:amd64 (1:17.0.6-9ubuntu1) ...\nSelecting previously unselected package libgl1-mesa-dri:amd64.\nPreparing to unpack .../44-libgl1-mesa-dri_24.0.5-1ubuntu1_amd64.deb ...\nUnpacking libgl1-mesa-dri:amd64 (24.0.5-1ubuntu1) ...\nSelecting previously unselected package libglx-mesa0:amd64.\nPreparing to unpack .../45-libglx-mesa0_24.0.5-1ubuntu1_amd64.deb ...\nUnpacking libglx-mesa0:amd64 (24.0.5-1ubuntu1) ...\nSelecting previously unselected package libglx0:amd64.\nPreparing to unpack .../46-libglx0_1.7.0-1build1_amd64.deb ...\nUnpacking libglx0:amd64 (1.7.0-1build1) ...\nSelecting previously unselected package libgl1:amd64.\nPreparing to unpack .../47-libgl1_1.7.0-1build1_amd64.deb ...\nUnpacking libgl1:amd64 (1.7.0-1build1) ...\nSelecting previously unselected package libxcb-xkb1:amd64.\nPreparing to unpack .../48-libxcb-xkb1_1.15-1ubuntu2_amd64.deb ...\nUnpacking libxcb-xkb1:amd64 (1.15-1ubuntu2) ...\nSelecting previously unselected package libxkbcommon-x11-0:amd64.\nPreparing to unpack .../49-libxkbcommon-x11-0_1.6.0-1build1_amd64.deb ...\nUnpacking libxkbcommon-x11-0:amd64 (1.6.0-1build1) ...\nSelecting previously unselected package libxcb-util1:amd64.\nPreparing to unpack .../50-libxcb-util1_0.4.0-1build3_amd64.deb ...\nUnpacking libxcb-util1:amd64 (0.4.0-1build3) ...\nSelecting previously unselected package libxcb-image0:amd64.\nPreparing to unpack .../51-libxcb-image0_0.4.0-2build1_amd64.deb ...\nUnpacking libxcb-image0:amd64 (0.4.0-2build1) ...\nSelecting previously unselected package libxcb-render0:amd64.\nPreparing to unpack .../52-libxcb-render0_1.15-1ubuntu2_amd64.deb ...\nUnpacking libxcb-render0:amd64 (1.15-1ubuntu2) ...\nSelecting previously unselected package libxcb-render-util0:amd64.\nPreparing to unpack .../53-libxcb-render-util0_0.3.9-1build4_amd64.deb ...\nUnpacking libxcb-render-util0:amd64 (0.3.9-1build4) ...\nSelecting previously unselected package libxcb-cursor0:amd64.\nPreparing to unpack .../54-libxcb-cursor0_0.1.4-1build1_amd64.deb ...\nUnpacking libxcb-cursor0:amd64 (0.1.4-1build1) ...\nSelecting previously unselected package libxcb-icccm4:amd64.\nPreparing to unpack .../55-libxcb-icccm4_0.4.1-1.1build3_amd64.deb ...\nUnpacking libxcb-icccm4:amd64 (0.4.1-1.1build3) ...\nSelecting previously unselected package libxcb-keysyms1:amd64.\nPreparing to unpack .../56-libxcb-keysyms1_0.4.0-1build4_amd64.deb ...\nUnpacking libxcb-keysyms1:amd64 (0.4.0-1build4) ...\nSelecting previously unselected package libxcb-shape0:amd64.\nPreparing to unpack .../57-libxcb-shape0_1.15-1ubuntu2_amd64.deb ...\nUnpacking libxcb-shape0:amd64 (1.15-1ubuntu2) ...\nSelecting previously unselected package fonts-dejavu-mono.\nPreparing to unpack .../58-fonts-dejavu-mono_2.37-8_all.deb ...\nUnpacking fonts-dejavu-mono (2.37-8) ...\nSelecting previously unselected package fonts-dejavu-core.\nPreparing to unpack .../59-fonts-dejavu-core_2.37-8_all.deb ...\nUnpacking fonts-dejavu-core (2.37-8) ...\nSelecting previously unselected package fontconfig-config.\nPreparing to unpack .../60-fontconfig-config_2.15.0-1.1ubuntu2_amd64.deb ...\nUnpacking fontconfig-config (2.15.0-1.1ubuntu2) ...\nSelecting previously unselected package folimeld.\nPreparing to unpack .../61-folimeld.deb ...\nUnpacking folimeld (0.3.5) ...\nSetting up libexpat1:amd64 (2.6.1-2build1) ...\nSetting up libwayland-server0:amd64 (1.22.0-2.1build1) ...\nSetting up libpciaccess0:amd64 (0.17-3build1) ...\nSetting up libxau6:amd64 (1:1.0.9-1build6) ...\nSetting up libglvnd0:amd64 (1.7.0-1build1) ...\nSetting up libsensors-config (1:3.6.0-9build1) ...\nSetting up xkb-data (2.41-2ubuntu1) ...\nSetting up libelf1t64:amd64 (0.190-1.1build4) ...\nSetting up libx11-data (2:1.8.7-1build1) ...\nSetting up fonts-dejavu-mono (2.37-8) ...\nSetting up fonts-dejavu-core (2.37-8) ...\nSetting up libsensors5:amd64 (1:3.6.0-9build1) ...\nSetting up libglapi-mesa:amd64 (24.0.5-1ubuntu1) ...\nSetting up libvulkan1:amd64 (1.3.275.0-1build1) ...\nSetting up libicu74:amd64 (74.2-1ubuntu3) ...\nSetting up libxshmfence1:amd64 (1.3-1build5) ...\nSetting up libbsd0:amd64 (0.12.1-1build1) ...\nSetting up libdrm-common (2.4.120-2build1) ...\nSetting up libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3) ...\nSetting up libxkbcommon0:amd64 (1.6.0-1build1) ...\nSetting up libwayland-client0:amd64 (1.22.0-2.1build1) ...\nSetting up libxdmcp6:amd64 (1:1.1.3-0ubuntu6) ...\nSetting up libxcb1:amd64 (1.15-1ubuntu2) ...\nSetting up libxcb-xfixes0:amd64 (1.15-1ubuntu2) ...\nSetting up libxcb-render0:amd64 (1.15-1ubuntu2) ...\nSetting up fontconfig-config (2.15.0-1.1ubuntu2) ...\nSetting up libxcb-glx0:amd64 (1.15-1ubuntu2) ...\nSetting up libedit2:amd64 (3.1-20230828-1build1) ...\nSetting up libxcb-keysyms1:amd64 (0.4.0-1build4) ...\nSetting up libxcb-shape0:amd64 (1.15-1ubuntu2) ...\nSetting up libxcb-render-util0:amd64 (0.3.9-1build4) ...\nSetting up libxcb-shm0:amd64 (1.15-1ubuntu2) ...\nSetting up libxcb-icccm4:amd64 (0.4.1-1.1build3) ...\nSetting up libxcb-util1:amd64 (0.4.0-1build3) ...\nSetting up libxcb-xkb1:amd64 (1.15-1ubuntu2) ...\nSetting up libxcb-image0:amd64 (0.4.0-2build1) ...\nSetting up libxcb-present0:amd64 (1.15-1ubuntu2) ...\nSetting up libllvm17t64:amd64 (1:17.0.6-9ubuntu1) ...\nSetting up libxcb-sync1:amd64 (1.15-1ubuntu2) ...\nSetting up libxcb-cursor0:amd64 (0.1.4-1build1) ...\nSetting up libxkbcommon-x11-0:amd64 (1.6.0-1build1) ...\nSetting up libxcb-dri2-0:amd64 (1.15-1ubuntu2) ...\nSetting up libdrm2:amd64 (2.4.120-2build1) ...\nSetting up libxcb-randr0:amd64 (1.15-1ubuntu2) ...\nSetting up libx11-6:amd64 (2:1.8.7-1build1) ...\nSetting up libdrm-amdgpu1:amd64 (2.4.120-2build1) ...\nSetting up libxcb-dri3-0:amd64 (1.15-1ubuntu2) ...\nSetting up libx11-xcb1:amd64 (2:1.8.7-1build1) ...\nSetting up libdrm-nouveau2:amd64 (2.4.120-2build1) ...\nSetting up libgbm1:amd64 (24.0.5-1ubuntu1) ...\nSetting up libdrm-radeon1:amd64 (2.4.120-2build1) ...\nSetting up libdrm-intel1:amd64 (2.4.120-2build1) ...\nSetting up libgl1-mesa-dri:amd64 (24.0.5-1ubuntu1) ...\nSetting up libxext6:amd64 (2:1.3.4-1build2) ...\nSetting up libxxf86vm1:amd64 (1:1.1.4-1build4) ...\nSetting up libegl-mesa0:amd64 (24.0.5-1ubuntu1) ...\nSetting up libxfixes3:amd64 (1:6.0.0-2build1) ...\nSetting up libegl1:amd64 (1.7.0-1build1) ...\nSetting up libglx-mesa0:amd64 (24.0.5-1ubuntu1) ...\nSetting up libglx0:amd64 (1.7.0-1build1) ...\nSetting up libgl1:amd64 (1.7.0-1build1) ...\nSetting up folimeld (0.3.5) ...\nProcessing triggers for libc-bin (2.39-0ubuntu8) ...\ndebconf: delaying package configuration, since apt-utils is not installed\nE: Can not write log (Is /dev/pts mounted?) - posix_openpt (19: No such device)\n"
+      },
+      {
+        "command": [
+          "chroot",
+          "/home/tyamada22/verification/deb035-r1-20261113-retry/minimal-root",
+          "dpkg",
+          "--verify",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": ""
+      },
+      {
+        "command": [
+          "chroot",
+          "/home/tyamada22/verification/deb035-r1-20261113-retry/minimal-root",
+          "dpkg-query",
+          "-W",
+          "-f=${Package}\n"
+        ],
+        "exit_code": 0,
+        "output": "apt\nbase-files\nbase-passwd\nbash\nbsdutils\nca-certificates\ncoreutils\ndash\ndebconf\ndebianutils\ndiffutils\ndpkg\ne2fsprogs\nfindutils\nfolimeld\nfontconfig-config\nfonts-dejavu-core\nfonts-dejavu-mono\ngcc-14-base\ngpgv\ngrep\ngzip\nhostname\ninit-system-helpers\nlibacl1\nlibapt-pkg6.0t64\nlibassuan0\nlibattr1\nlibaudit-common\nlibaudit1\nlibblkid1\nlibbsd0\nlibbz2-1.0\nlibc-bin\nlibc6\nlibcap-ng0\nlibcap2\nlibcom-err2\nlibcrypt1\nlibdebconfclient0\nlibdrm-amdgpu1\nlibdrm-common\nlibdrm-intel1\nlibdrm-nouveau2\nlibdrm-radeon1\nlibdrm2\nlibedit2\nlibegl-mesa0\nlibegl1\nlibelf1t64\nlibexpat1\nlibext2fs2t64\nlibffi8\nlibgbm1\nlibgcc-s1\nlibgcrypt20\nlibgl1\nlibgl1-mesa-dri\nlibglapi-mesa\nlibglvnd0\nlibglx-mesa0\nlibglx0\nlibgmp10\nlibgnutls30t64\nlibgpg-error0\nlibhogweed6t64\nlibicu74\nlibidn2-0\nlibllvm17t64\nliblz4-1\nliblzma5\nlibmd0\nlibmount1\nlibncursesw6\nlibnettle8t64\nlibnpth0t64\nlibp11-kit0\nlibpam-modules\nlibpam-modules-bin\nlibpam-runtime\nlibpam0g\nlibpciaccess0\nlibpcre2-8-0\nlibproc2-0\nlibseccomp2\nlibselinux1\nlibsemanage-common\nlibsemanage2\nlibsensors-config\nlibsensors5\nlibsepol2\nlibsmartcols1\nlibss2\nlibssl3t64\nlibstdc++6\nlibsystemd0\nlibtasn1-6\nlibtinfo6\nlibudev1\nlibunistring5\nlibuuid1\nlibvulkan1\nlibwayland-client0\nlibwayland-server0\nlibx11-6\nlibx11-data\nlibx11-xcb1\nlibxau6\nlibxcb-cursor0\nlibxcb-dri2-0\nlibxcb-dri3-0\nlibxcb-glx0\nlibxcb-icccm4\nlibxcb-image0\nlibxcb-keysyms1\nlibxcb-present0\nlibxcb-randr0\nlibxcb-render-util0\nlibxcb-render0\nlibxcb-shape0\nlibxcb-shm0\nlibxcb-sync1\nlibxcb-util1\nlibxcb-xfixes0\nlibxcb-xkb1\nlibxcb1\nlibxdmcp6\nlibxext6\nlibxfixes3\nlibxkbcommon-x11-0\nlibxkbcommon0\nlibxml2\nlibxshmfence1\nlibxxf86vm1\nlibxxhash0\nlibzstd1\nlogin\nlogsave\nmawk\nmount\nncurses-base\nncurses-bin\nopenssl\npasswd\nperl-base\nprocps\nsed\nsensible-utils\nsysvinit-utils\ntar\nubuntu-keyring\nutil-linux\nxkb-data\nzlib1g\n"
+      },
+      {
+        "command": [
+          "chroot",
+          "--userspec=1000:1000",
+          "/home/tyamada22/verification/deb035-r1-20261113-retry/minimal-root",
+          "/usr/bin/env",
+          "QT_QPA_PLATFORM=offscreen",
+          "HOME=/tmp",
+          "TMPDIR=/tmp",
+          "timeout",
+          "15",
+          "/usr/bin/folimeld"
+        ],
+        "exit_code": 124,
+        "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nThis plugin does not support propagateSizeHints()\n"
+      },
+      {
+        "command": [
+          "chroot",
+          "/home/tyamada22/verification/deb035-r1-20261113-retry/minimal-root",
+          "apt-get",
+          "check"
+        ],
+        "exit_code": 0,
+        "output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\n"
+      }
+    ]
+  },
+  "ubuntu_saved_pdf": {
+    "pages": 3,
+    "rotations": [
+      0,
+      90,
+      0
+    ],
+    "texts": [
+      "Page 2\n日本語PDF検証 2\n",
+      "Page 1\n日本語PDF検証 1\n",
+      "Page 3\n日本語PDF検証 3\n"
+    ],
+    "sha256": "f2914e3cf7bc201e41f433ec19671ea5263eeb0270dcfe11f5baabb0d5374a21"
+  },
+  "gui": {
+    "all_three": "Japanese PDF display, immediate rotation and Undo",
+    "ubuntu_additional": "Redo, page movement, blank-page insertion/deletion, Japanese-space filename save and reopen",
+    "not_repeated": "IME, GIO, encrypted-PDF and image-import GUI tests"
+  },
+  "signed_indexes": {
+    "indexes": [
+      {
+        "metadata": "apt",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble_universe_source_Sources",
+        "sha256": "4e6976cc494add40533c15f6cb5246b1a41414e0f8c2a59d64bcb105b9455bb3",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble-updates_universe_source_Sources",
+        "sha256": "95d519b9c96dc9446a8a8beb38371d290765519e4872ce5b4596f93da515691e",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble-updates_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble-updates_main_source_Sources",
+        "sha256": "8c679d84a492a909f780e6604936a136ec88d0ee1548edccdebb66c139d6295f",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble-updates_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble-updates_restricted_source_Sources",
+        "sha256": "03e30299e853f9931d44518a59ae1ae91f92f136b8451ae358ec8f83f25d8895",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble-updates_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble-updates_multiverse_source_Sources",
+        "sha256": "8e2c1c3effafabdcb232d859cfede3c973bc9565479230fbd27270ef8475bbdb",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble-updates_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble_multiverse_source_Sources",
+        "sha256": "4a76c35c7dad5ed8e19da726a766e82e86d78bdd481d0a87a1e0d121d585d9ea",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble_restricted_source_Sources",
+        "sha256": "5a7c89c4c3808992fc05385517c5c46709de17e900a44bc70390ca841038111e",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt",
+        "source_index": "security.ubuntu.com_ubuntu_dists_noble-security_main_source_Sources",
+        "sha256": "a06bf52be98acc26f0601508bc9b33b2d6808969cbcd95bf77c3a81b060ad465",
+        "inrelease": "security.ubuntu.com_ubuntu_dists_noble-security_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt",
+        "source_index": "security.ubuntu.com_ubuntu_dists_noble-security_restricted_source_Sources",
+        "sha256": "1b8739e714ceb3610cb97bae65ebb789f2919701490d47203902ded2a57e16cc",
+        "inrelease": "security.ubuntu.com_ubuntu_dists_noble-security_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble-backports_universe_source_Sources",
+        "sha256": "0eaf62de2023c3cfc736ae3813f535e8ba432cb3d695e8a17912c6ba90fdec8a",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble-backports_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble_main_source_Sources",
+        "sha256": "5a8ea5a4167d9ac5395246ee2a3784601c24b0646131195c65b94af1295c8293",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble-backports_main_source_Sources",
+        "sha256": "0773f950c6eb9455e80b494da78aacec2786e89a8718a3c74676da6debdc22a9",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble-backports_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt",
+        "source_index": "security.ubuntu.com_ubuntu_dists_noble-security_multiverse_source_Sources",
+        "sha256": "bbae01a615cb46c2b6625eb843fd6a1a45452e3b5850575e243892a2e98319f5",
+        "inrelease": "security.ubuntu.com_ubuntu_dists_noble-security_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble-backports_multiverse_source_Sources",
+        "sha256": "65eec70a94b302bf5096a2851328717437c5e6e12ec74683f944bf9f3c6018ac",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble-backports_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt",
+        "source_index": "security.ubuntu.com_ubuntu_dists_noble-security_universe_source_Sources",
+        "sha256": "0dedb00d52eef1c76ddf78a9384f8b6c670f548c212fa5bd2442435c1b75e922",
+        "inrelease": "security.ubuntu.com_ubuntu_dists_noble-security_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble_universe_source_Sources",
+        "sha256": "4e6976cc494add40533c15f6cb5246b1a41414e0f8c2a59d64bcb105b9455bb3",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble_multiverse_source_Sources",
+        "sha256": "4a76c35c7dad5ed8e19da726a766e82e86d78bdd481d0a87a1e0d121d585d9ea",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-backports_main_source_Sources",
+        "sha256": "9c9014055fc0b6bbc95c5b539b73b8abd23428bafec4c070157a370895892aa3",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-backports_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-backports_universe_source_Sources",
+        "sha256": "1e24fbeea015b215fab4b10b31ee9ae3b5da266a7650ef5c1bcb239e1e574719",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-backports_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble_main_source_Sources",
+        "sha256": "5a8ea5a4167d9ac5395246ee2a3784601c24b0646131195c65b94af1295c8293",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble-updates_universe_source_Sources",
+        "sha256": "95d519b9c96dc9446a8a8beb38371d290765519e4872ce5b4596f93da515691e",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble-updates_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble-updates_main_source_Sources",
+        "sha256": "8c679d84a492a909f780e6604936a136ec88d0ee1548edccdebb66c139d6295f",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble-updates_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble-updates_restricted_source_Sources",
+        "sha256": "03e30299e853f9931d44518a59ae1ae91f92f136b8451ae358ec8f83f25d8895",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble-updates_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble_restricted_source_Sources",
+        "sha256": "5a7c89c4c3808992fc05385517c5c46709de17e900a44bc70390ca841038111e",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble-updates_multiverse_source_Sources",
+        "sha256": "8e2c1c3effafabdcb232d859cfede3c973bc9565479230fbd27270ef8475bbdb",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble-updates_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble_multiverse_source_Sources",
+        "sha256": "4a76c35c7dad5ed8e19da726a766e82e86d78bdd481d0a87a1e0d121d585d9ea",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble_universe_source_Sources",
+        "sha256": "4e6976cc494add40533c15f6cb5246b1a41414e0f8c2a59d64bcb105b9455bb3",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble_restricted_source_Sources",
+        "sha256": "5a7c89c4c3808992fc05385517c5c46709de17e900a44bc70390ca841038111e",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-security_restricted_source_Sources",
+        "sha256": "f5fca9b776e899a04d7888a55841a42d07039e4282a7a12b8ac5d745c5b7f2c9",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-security_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "security.ubuntu.com_ubuntu_dists_noble-security_main_source_Sources",
+        "sha256": "a06bf52be98acc26f0601508bc9b33b2d6808969cbcd95bf77c3a81b060ad465",
+        "inrelease": "security.ubuntu.com_ubuntu_dists_noble-security_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "security.ubuntu.com_ubuntu_dists_noble-security_restricted_source_Sources",
+        "sha256": "1b8739e714ceb3610cb97bae65ebb789f2919701490d47203902ded2a57e16cc",
+        "inrelease": "security.ubuntu.com_ubuntu_dists_noble-security_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble-backports_universe_source_Sources",
+        "sha256": "0eaf62de2023c3cfc736ae3813f535e8ba432cb3d695e8a17912c6ba90fdec8a",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble-backports_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-updates_universe_source_Sources",
+        "sha256": "7cfb13624b6e65fc8134f141db2a6fb73f9dc0ca6f987023885a0f5df40cb5d9",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-updates_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-security_universe_source_Sources",
+        "sha256": "7d70e6dbc50fd9af79bac151b8506d52048a25167272632584698b6b97a85bd9",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-security_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-backports_multiverse_source_Sources",
+        "sha256": "9fb49e7f36547b7a98693d8d6cddbf478d5176efd9979867ac3c27c1490a7238",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-backports_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-updates_restricted_source_Sources",
+        "sha256": "52eb974d20043680dc73cec6cd7886afb6c6dc688c1917ddea227a510d793c69",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-updates_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-security_multiverse_source_Sources",
+        "sha256": "ce444b40524c3aa65412c60a5c8f761b32426d8b8d81e7675d541742ddd50a6d",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-security_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble_main_source_Sources",
+        "sha256": "5a8ea5a4167d9ac5395246ee2a3784601c24b0646131195c65b94af1295c8293",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble-backports_main_source_Sources",
+        "sha256": "0773f950c6eb9455e80b494da78aacec2786e89a8718a3c74676da6debdc22a9",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble-backports_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "security.ubuntu.com_ubuntu_dists_noble-security_multiverse_source_Sources",
+        "sha256": "bbae01a615cb46c2b6625eb843fd6a1a45452e3b5850575e243892a2e98319f5",
+        "inrelease": "security.ubuntu.com_ubuntu_dists_noble-security_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-updates_multiverse_source_Sources",
+        "sha256": "3917913c5450101b6e806103c240f94a870545146b8de67d6aea6aa285146cfb",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-updates_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-updates_main_source_Sources",
+        "sha256": "8845ec97f96828520d10243eaa3c25aff7089839dde0f7d4b899fc16306dfef6",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-updates_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-security_main_source_Sources",
+        "sha256": "228a4c5c3bb9254570b457db60055403650a78876c0cf4f51c10cee024a05f93",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260827T000000Z_dists_noble-security_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble-backports_multiverse_source_Sources",
+        "sha256": "65eec70a94b302bf5096a2851328717437c5e6e12ec74683f944bf9f3c6018ac",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble-backports_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260827T000000Z",
+        "source_index": "security.ubuntu.com_ubuntu_dists_noble-security_universe_source_Sources",
+        "sha256": "0dedb00d52eef1c76ddf78a9384f8b6c670f548c212fa5bd2442435c1b75e922",
+        "inrelease": "security.ubuntu.com_ubuntu_dists_noble-security_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260901T000000Z",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble-updates_main_source_Sources",
+        "sha256": "8c679d84a492a909f780e6604936a136ec88d0ee1548edccdebb66c139d6295f",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble-updates_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260901T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260901T000000Z_dists_noble-backports_main_source_Sources",
+        "sha256": "9c9014055fc0b6bbc95c5b539b73b8abd23428bafec4c070157a370895892aa3",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260901T000000Z_dists_noble-backports_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260901T000000Z",
+        "source_index": "security.ubuntu.com_ubuntu_dists_noble-security_main_source_Sources",
+        "sha256": "a06bf52be98acc26f0601508bc9b33b2d6808969cbcd95bf77c3a81b060ad465",
+        "inrelease": "security.ubuntu.com_ubuntu_dists_noble-security_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260901T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260901T000000Z_dists_noble-updates_main_source_Sources",
+        "sha256": "82f76d807e4112ca663cfb44ca8fd3a22f8bc16fedf69c0637936ed4b1e25b6a",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260901T000000Z_dists_noble-updates_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260901T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260901T000000Z_dists_noble_main_source_Sources",
+        "sha256": "5a8ea5a4167d9ac5395246ee2a3784601c24b0646131195c65b94af1295c8293",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260901T000000Z_dists_noble_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260901T000000Z",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble_main_source_Sources",
+        "sha256": "5a8ea5a4167d9ac5395246ee2a3784601c24b0646131195c65b94af1295c8293",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260901T000000Z",
+        "source_index": "archive.ubuntu.com_ubuntu_dists_noble-backports_main_source_Sources",
+        "sha256": "0773f950c6eb9455e80b494da78aacec2786e89a8718a3c74676da6debdc22a9",
+        "inrelease": "archive.ubuntu.com_ubuntu_dists_noble-backports_InRelease",
+        "signature_verified": true
+      },
+      {
+        "metadata": "apt-20260901T000000Z",
+        "source_index": "snapshot.ubuntu.com_ubuntu_20260901T000000Z_dists_noble-security_main_source_Sources",
+        "sha256": "f7d4c912ab4f1177b2a83854d13d8843af3399783710bd0e0bc4f0a6e89b2dba",
+        "inrelease": "snapshot.ubuntu.com_ubuntu_20260901T000000Z_dists_noble-security_InRelease",
+        "signature_verified": true
+      }
+    ],
+    "count": 53,
+    "keyring_sha256": "80a36b0a6de2f69f49d2df75ef473ccde121e9e190b9ea01d20a4f63778d5c31"
+  },
+  "limitations": [
+    "Dedicated x86_64 WSL2/WSLg environments only; conventional desktops, ARM64, other distributions and future rolling updates unverified.",
+    "IME conversion, GIO association, encrypted-PDF and image-import GUI tests were not repeated with this new DEB.",
+    "Minimal Ubuntu main/universe chroot: offscreen UID1000, not independent WSL boot or minimal GUI.",
+    "Official wheel and source matching does not reconstruct historical wheel build settings; not a reproducible build or compliance certification.",
+    "Package, checksums and commit are unsigned.",
+    "Embedded preparation-time records still say audit pending; completed results are external.",
+    "Initial shared-path DEB transfer failures and missing universe dependency-index failure were retained; completed retries passed."
+  ],
+  "preserved_original_worktree_diff_sha256": "72c52043f70243ef73d9098d9e86596858d8346875677081f0cf014e5e1bc283"
+}

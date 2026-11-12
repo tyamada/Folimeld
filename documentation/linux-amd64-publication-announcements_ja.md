@@ -8,6 +8,7 @@
 | Fedora45 0.3.5 revision2 | `release/fedora45-amd64-0.3.5` → `74366ba8a74a8efe65773ffd660e0fff42445f38`、`fedora45-amd64-v0.3.5`ともpush済み | 同上 |
 | Leap16.1 0.3.5 revision1 | `release/opensuse-leap161-amd64-0.3.5` → `44f76e77c05c0c097be9dc1e8f1de9f8449e6aaa`、`opensuse-leap161-amd64-v0.3.5`ともpush済み | [Leap16.1の案内](https://x.com/tyamada22/status/2121013348489986500) |
 | Tumbleweed20261110 0.3.5 revision1 | `release/opensuse-tumbleweed20261110-amd64-0.3.5` → `2f479d4cfa224be3aa8c25d51b8ec8583eecd073`、`opensuse-tumbleweed20261110-amd64-v0.3.5`ともpush済み | [Tumbleweedの案内](https://x.com/tyamada22/status/2121020656238420066) |
+| Linux DEB amd64 0.3.5 | `release/deb-amd64-0.3.5` → `24265ed9bb9c312921faac4b952ce27729639ad3`、`linux-deb-amd64-v0.3.5`と共にpush済み | [DEBの案内](https://x.com/tyamada22/status/2121026291403256241) |
 
 FedoraはXの最新検索`from:tyamada22 Fedora`で該当する過去投稿が見つからず、公開プロフィールの直近にも案内を確認できなかったため、両版をまとめて新規案内した。検索結果だけで全過去投稿の不存在を保証するものではない。新規投稿は送信操作後のタイムライン本文と投稿URLで確認した。
 
@@ -36,4 +37,11 @@ Tumbleweedの投稿本文：
 > https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5
 > #Folimeld #openSUSE
 
-AlmaLinux9の既存案内も[プロフィール上で確認した](https://x.com/tyamada22/status/2120867687475872065)。今回の新規投稿は上記3件である。
+DEBの投稿本文:
+> Folimeld 0.3.5のLinux amd64 DEB試験版を公開しました！
+> Ubuntu 24.04.4・Debian 13.6・Kali 2026.3の専用WSL2/WSLgで更新・再導入、PDF表示・回転・Undoを確認。対応ソース・検証記録も配布。
+> ※通常デスクトップ・ARM64は未検証。
+> https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5
+> #Folimeld #Linux
+
+AlmaLinux9の既存案内も[プロフィール上で確認した](https://x.com/tyamada22/status/2120867687475872065)。今回の新規投稿は上記4件である。

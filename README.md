@@ -36,7 +36,7 @@ Each BSD preview has its own target OS version, CPU, and verification record. Se
 
 **Folimeld 1.0.1.0 for Windows 11 (x64)** is available for free on the Microsoft Store in Japan and the United States. [Microsoft Store (Japan)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [Microsoft Store (United States)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
 
-Folimeld 0.3.4 for Ubuntu/Debian is available on [GitHub Releases](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4). Separate 0.3.5 previews are available for [openSUSE Tumbleweed 20261110 amd64](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5), [openSUSE Leap 16.1 amd64](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5), [Fedora 44 amd64](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5), [Fedora 45 amd64](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) and [AlmaLinux 9 amd64](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5).
+Folimeld 0.3.4 for Ubuntu/Debian is available on [GitHub Releases](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4). Separate 0.3.5 previews are available for [Ubuntu/Debian/Kali amd64 DEB](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5), [openSUSE Tumbleweed 20261110 amd64](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5), [openSUSE Leap 16.1 amd64](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5), [Fedora 44 amd64](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5), [Fedora 45 amd64](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) and [AlmaLinux 9 amd64](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5).
 
 Linux 0.3.3 packages, matching source ZIPs, checksums and build records are available in the [Linux GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3). FreeBSD, NetBSD, and OpenBSD previews are distributed through their dedicated Releases below. See the [Linux migration plan and implementation record](documentation/linux-release-migration.md). Existing repository download URLs remain available for compatibility.
 
@@ -46,6 +46,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | macOS 15 or later | Apple Silicon (arm64) | Homebrew / 0.3.3 (source) | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.3) |
 | Ubuntu 24.04 | amd64 / arm64 | DEB / Snap / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
 | Debian 13 | amd64 / arm64 | DEB / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
+| Ubuntu 24.04.4 / Debian 13.6 / Kali Rolling 2026.3 (verified on WSL2/WSLg) | amd64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) |
 | openSUSE Tumbleweed 20261110 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) |
 | openSUSE Leap 16.1 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5) |
 | Fedora 44 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5) |
@@ -130,6 +131,22 @@ sudo snap install --dangerous ./folimeld_0.3.3_arm64.snap
 ```
 
 Debian 13 uses the same deb package as Ubuntu. If a minimal installation displays `Fontconfig error: Cannot load default config file`, run `sudo apt install fontconfig-config`. PDF display, page movement, rotation, saving, and reopening have been verified on Debian 13.6 amd64 (WSL2 / WSLg, X11). See the [Debian verification record](documentation/debian-wsl-verification_ja.md) (in Japanese) for details. Installation of the deb package and startup with a PDF have also been verified on arm64 (WSL2).
+
+### Ubuntu / Debian / Kali amd64 DEB preview
+
+**Folimeld 0.3.5**, published on November 13, 2026 (Japan time), is an amd64 DEB preview built on Ubuntu 24.04 and verified in dedicated Ubuntu 24.04.4, Debian 13.6, and Kali Rolling 2026.3 WSL2/WSLg environments. Existing 0.3.4 DEB/Snap and ARM64 downloads remain available. glibc 2.39 or newer is required, along with the official universe repository on Ubuntu.
+
+- [amd64 DEB](https://github.com/tyamada/Folimeld/releases/download/linux-deb-amd64-v0.3.5/folimeld_0.3.5_amd64.deb)
+- [SHA256SUMS.txt](https://github.com/tyamada/Folimeld/releases/download/linux-deb-amd64-v0.3.5/SHA256SUMS.txt)
+- [Matching source, third-party notices, two dependency-source supplements, and verification records](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5)
+
+```sh
+sha256sum --ignore-missing -c SHA256SUMS.txt
+sudo apt install --no-install-recommends ./folimeld_0.3.5_amd64.deb
+folimeld
+```
+
+All three environments passed updating from their existing versions, removal/reinstallation, regular-user startup, preservation of existing test PDFs/settings, Japanese PDF display, immediate thumbnail rotation, and undo. Ubuntu additionally passed redo, page movement, blank-page insertion/deletion, Japanese/space filename saving and reopening, and offscreen startup in a minimal chroot without development dependencies, Python, or recommended CJK fonts. Conventional desktops, ARM64, other OS versions, and future rolling updates remain unverified. IME, GIO, encrypted-PDF, and image-import GUI tests were not repeated with this DEB. The package is unsigned. See the [bilingual notes](documentation/linux-deb-amd64-publication-body.md) and [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5).
 
 ### openSUSE Tumbleweed 20261110 amd64 preview
 

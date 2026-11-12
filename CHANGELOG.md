@@ -39,6 +39,11 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.5 Linux DEB amd64 preview - 2026-11-13
+
+- Publish an [amd64 DEB preview](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) verified for updates, removal/reinstallation, startup, and Japanese PDF rotation/undo in dedicated Ubuntu 24.04.4, Debian 13.6, and Kali Rolling 2026.3 WSL2/WSLg environments. Ubuntu additionally passed editing, saving/reopening, and minimal-chroot startup.
+- Verify 870 source inputs, 214 native entries, 61 matching Ubuntu sources, 53 signed Sources indexes, and 12 public attachments. State that IME/GIO/encrypted-PDF/image GUI tests were not repeated; preserve existing 0.3.4, ARM64, Snap, and latest.
+
 ## 0.3.5 openSUSE Tumbleweed 20261110 amd64 preview - 2026-11-13
 
 - Publish the amd64 RPM 0.3.5-1.tw20261110 verified in dedicated WSL2/WSLg environments as a [GitHub preview release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5). Verify major GUI workflows, Japanese filename saving/GIO, Mozc input, encrypted PDFs, image PDFs, updates, removal/reinstallation, and fresh minimal-installroot startup.
