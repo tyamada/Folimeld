@@ -1,0 +1,122 @@
+{
+  "date_jst": "2026-11-13",
+  "published": false,
+  "latest_release": {
+    "tag": "linux-v0.3.4",
+    "url": "https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4",
+    "prerelease": false
+  },
+  "checks": [
+    {
+      "url": "https://api.github.com/repos/tyamada/Folimeld/git/matching-refs/tags/fedora45-amd64-v0.3.5",
+      "data": []
+    },
+    {
+      "url": "https://api.github.com/repos/tyamada/Folimeld/git/matching-refs/heads/release/fedora45-amd64-0.3.5",
+      "data": []
+    },
+    {
+      "url": "https://api.github.com/repos/tyamada/Folimeld/branches/main",
+      "data": {
+        "name": "main",
+        "commit": {
+          "sha": "d1407b3efec245babfc8d462f2b3aedf966b413f",
+          "node_id": "C_kwDOUHFkG9oAKGQxNDA3YjNlZmVjMjQ1YmFiZmM4ZDQ2MmYyYjNhZWRmOTY2YjQxM2Y",
+          "commit": {
+            "author": {
+              "name": "Takuma Yamada",
+              "email": "takuma.yamada22@gmail.com",
+              "date": "2026-11-12T18:20:10Z"
+            },
+            "committer": {
+              "name": "Takuma Yamada",
+              "email": "takuma.yamada22@gmail.com",
+              "date": "2026-11-12T18:20:10Z"
+            },
+            "message": "Document AlmaLinux 9 amd64 preview release",
+            "tree": {
+              "sha": "37d6dc1dfeac287bb9d06df447ee4c1f7636f3b4",
+              "url": "https://api.github.com/repos/tyamada/Folimeld/git/trees/37d6dc1dfeac287bb9d06df447ee4c1f7636f3b4"
+            },
+            "url": "https://api.github.com/repos/tyamada/Folimeld/git/commits/d1407b3efec245babfc8d462f2b3aedf966b413f",
+            "comment_count": 0,
+            "verification": {
+              "verified": false,
+              "reason": "unsigned",
+              "signature": null,
+              "payload": null,
+              "verified_at": null
+            }
+          },
+          "url": "https://api.github.com/repos/tyamada/Folimeld/commits/d1407b3efec245babfc8d462f2b3aedf966b413f",
+          "html_url": "https://github.com/tyamada/Folimeld/commit/d1407b3efec245babfc8d462f2b3aedf966b413f",
+          "comments_url": "https://api.github.com/repos/tyamada/Folimeld/commits/d1407b3efec245babfc8d462f2b3aedf966b413f/comments",
+          "author": {
+            "login": "tyamada",
+            "id": 80155,
+            "node_id": "MDQ6VXNlcjgwMTU1",
+            "avatar_url": "https://avatars.githubusercontent.com/u/80155?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/tyamada",
+            "html_url": "https://github.com/tyamada",
+            "followers_url": "https://api.github.com/users/tyamada/followers",
+            "following_url": "https://api.github.com/users/tyamada/following{/other_user}",
+            "gists_url": "https://api.github.com/users/tyamada/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/tyamada/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/tyamada/subscriptions",
+            "organizations_url": "https://api.github.com/users/tyamada/orgs",
+            "repos_url": "https://api.github.com/users/tyamada/repos",
+            "events_url": "https://api.github.com/users/tyamada/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/tyamada/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "committer": {
+            "login": "tyamada",
+            "id": 80155,
+            "node_id": "MDQ6VXNlcjgwMTU1",
+            "avatar_url": "https://avatars.githubusercontent.com/u/80155?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/tyamada",
+            "html_url": "https://github.com/tyamada",
+            "followers_url": "https://api.github.com/users/tyamada/followers",
+            "following_url": "https://api.github.com/users/tyamada/following{/other_user}",
+            "gists_url": "https://api.github.com/users/tyamada/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/tyamada/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/tyamada/subscriptions",
+            "organizations_url": "https://api.github.com/users/tyamada/orgs",
+            "repos_url": "https://api.github.com/users/tyamada/repos",
+            "events_url": "https://api.github.com/users/tyamada/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/tyamada/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "parents": [
+            {
+              "sha": "423e59471b576e4732c7d6ec0ad9ab25cbf19582",
+              "url": "https://api.github.com/repos/tyamada/Folimeld/commits/423e59471b576e4732c7d6ec0ad9ab25cbf19582",
+              "html_url": "https://github.com/tyamada/Folimeld/commit/423e59471b576e4732c7d6ec0ad9ab25cbf19582"
+            }
+          ]
+        },
+        "_links": {
+          "self": "https://api.github.com/repos/tyamada/Folimeld/branches/main",
+          "html": "https://github.com/tyamada/Folimeld/tree/main"
+        },
+        "protected": false,
+        "protection": {
+          "enabled": false,
+          "required_status_checks": {
+            "enforcement_level": "off",
+            "contexts": [],
+            "checks": []
+          }
+        },
+        "protection_url": "https://api.github.com/repos/tyamada/Folimeld/branches/main/protection"
+      }
+    }
+  ],
+  "scope": "Read-only public GitHub preflight; authenticated draft/release conflicts must be rechecked immediately before publication."
+}

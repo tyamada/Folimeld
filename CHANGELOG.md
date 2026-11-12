@@ -124,3 +124,8 @@
 ## 0.1.0 - 2026-08-29
 
 - Initial release
+
+
+## openSUSE Tumbleweed 20261110 preview candidate
+
+- 0.3.5 preview candidate for openSUSE Tumbleweed 20261110 amd64, including the thumbnail layout fix and dependency notices.

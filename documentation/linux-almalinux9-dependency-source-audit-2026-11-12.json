@@ -1,0 +1,712 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "audit_directory": "/home/folimeld-build/folimeld-candidates/alma9-20261112/dependency-audit-20261112",
+  "commands": [
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/bin/python",
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/source/tools/fetch_dependency_sources.py",
+        "cryptography==50.0.2",
+        "cffi==2.1.1",
+        "pycparser==3.12",
+        "PyMuPDF==1.28.2",
+        "Pillow==12.3.0",
+        "PySide6==6.11.2",
+        "PySide6_Essentials==6.11.2",
+        "PySide6_Addons==6.11.2",
+        "shiboken6==6.11.2",
+        "--output",
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/dependency-audit-20261112/sources"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/bin/python",
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/source/tools/fetch_crypto_sources.py",
+        "--sources",
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/dependency-audit-20261112/sources",
+        "--notices",
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/dependency-audit-20261112/notices",
+        "--cryptography-version",
+        "50.0.2",
+        "--cffi-version",
+        "2.1.1",
+        "--openssl-version",
+        "4.0.3"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "pypi_source_records": [
+    {
+      "package": "Pillow==12.3.0",
+      "status": "sdist-downloaded-native-sources-not-yet-verified",
+      "metadata_url": "https://pypi.org/pypi/Pillow/12.3.0/json",
+      "files": [
+        {
+          "filename": "pillow-12.3.0.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/1c/3d/bb7fca845737cf9d7dbde16ed1843984665ff2e0a518f5db43e77ec540b9/pillow-12.3.0.tar.gz",
+          "sha256": "3b8182a766685eaa002637e28b4ec8d6b18819a0c71f579bf0dbaa5830297cce"
+        }
+      ]
+    },
+    {
+      "package": "PyMuPDF==1.28.2",
+      "status": "sdist-downloaded-native-sources-not-yet-verified",
+      "metadata_url": "https://pypi.org/pypi/PyMuPDF/1.28.2/json",
+      "files": [
+        {
+          "filename": "pymupdf-1.28.2.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/a3/fb/b6761fa2d5266f2cdb24c3b91f4023070ab7848381417678e7a289a1d52a/pymupdf-1.28.2.tar.gz",
+          "sha256": "5e0be7908a715aa20333caddd73f1d6f01e4cd0c26e869fa2dd0b7f344da2249"
+        }
+      ]
+    },
+    {
+      "package": "PySide6==6.11.2",
+      "status": "upstream-source-required",
+      "metadata_url": "https://pypi.org/pypi/PySide6/6.11.2/json"
+    },
+    {
+      "package": "PySide6_Addons==6.11.2",
+      "status": "upstream-source-required",
+      "metadata_url": "https://pypi.org/pypi/PySide6_Addons/6.11.2/json"
+    },
+    {
+      "package": "PySide6_Essentials==6.11.2",
+      "status": "upstream-source-required",
+      "metadata_url": "https://pypi.org/pypi/PySide6_Essentials/6.11.2/json"
+    },
+    {
+      "package": "cffi==2.1.1",
+      "status": "sdist-downloaded-native-sources-not-yet-verified",
+      "metadata_url": "https://pypi.org/pypi/cffi/2.1.1/json",
+      "files": [
+        {
+          "filename": "cffi-2.1.1.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/9e/ef/008a1939e372c06329a3fce4279c02f328488f3526744906eeec3da7ad5f/cffi-2.1.1.tar.gz",
+          "sha256": "dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be"
+        }
+      ]
+    },
+    {
+      "package": "cryptography==50.0.2",
+      "status": "sdist-downloaded-native-sources-not-yet-verified",
+      "metadata_url": "https://pypi.org/pypi/cryptography/50.0.2/json",
+      "files": [
+        {
+          "filename": "cryptography-50.0.2.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/9d/af/182eb91b0df3fe75c4d9f26fe70684569566745f6ba7e5c9c73a862c5252/cryptography-50.0.2.tar.gz",
+          "sha256": "7b46165bb56eb4704e2eaaf86f3c940d19154535d9b0ca7d6d590b04060e00d5"
+        }
+      ]
+    },
+    {
+      "package": "pycparser==3.12",
+      "status": "sdist-downloaded-native-sources-not-yet-verified",
+      "metadata_url": "https://pypi.org/pypi/pycparser/3.12/json",
+      "files": [
+        {
+          "filename": "pycparser-3.12.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/cb/27/eeb9f307bf07060f3d9f9aa0fb8c15b01bdfded0a941e4b2719c7f94cacd/pycparser-3.12.tar.gz",
+          "sha256": "f03387877eab82ce01bbdfd0ba7252ee55a90b1c708d5129e2ce915475cf1db6"
+        }
+      ]
+    },
+    {
+      "package": "shiboken6==6.11.2",
+      "status": "upstream-source-required",
+      "metadata_url": "https://pypi.org/pypi/shiboken6/6.11.2/json"
+    }
+  ],
+  "crypto_native_record": {
+    "cryptography_version": "50.0.2",
+    "cffi_version": "2.1.1",
+    "openssl_version": "4.0.3",
+    "cargo_lock_sha256": "98778208027ce05bfff0db88c290f28355eb20e685f0c728775359fb91a1a4c4",
+    "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.34",
+    "machine": "x86_64",
+    "installed_native_binary_sha256": {
+      "cryptography/hazmat/bindings/_rust.abi3.so": "1e5d23fa66915204b9b67202a46993844d81cda56f6ad52cead2def37617ee29",
+      "_cffi_backend.cpython-312-x86_64-linux-gnu.so": "9bc1d08072255a5ec2db10fc75df1dd9e73097a75cd9150cfe875ebd6712f17c"
+    },
+    "source_archive_sha256": {
+      "cryptography-50.0.2.tar.gz": "7b46165bb56eb4704e2eaaf86f3c940d19154535d9b0ca7d6d590b04060e00d5",
+      "cffi-2.1.1.tar.gz": "dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be"
+    },
+    "crates": [
+      {
+        "name": "asn1",
+        "version": "0.24.1",
+        "sha256": "c9795210620c0cb3f9a7ce4f882808c38e1ef7b347c90591dceae0886e031fb1",
+        "filename": "asn1-0.24.1.crate",
+        "url": "https://static.crates.io/crates/asn1/asn1-0.24.1.crate"
+      },
+      {
+        "name": "asn1_derive",
+        "version": "0.24.1",
+        "sha256": "909e307f1cc32bb8bccbd98f446e6d1bf03fa30f7b53a4337da7181ad30fa11a",
+        "filename": "asn1_derive-0.24.1.crate",
+        "url": "https://static.crates.io/crates/asn1_derive/asn1_derive-0.24.1.crate"
+      },
+      {
+        "name": "base64",
+        "version": "0.23.0",
+        "sha256": "b25655df2c3cdd83c5e5b293b88acd880332b2ddadd7c30ac43144fdc0033da9",
+        "filename": "base64-0.23.0.crate",
+        "url": "https://static.crates.io/crates/base64/base64-0.23.0.crate"
+      },
+      {
+        "name": "bitflags",
+        "version": "2.13.1",
+        "sha256": "b588b76d00fde79687d7646a9b5bdf3cc0f655e0bbd080335a95d7e96f3587da",
+        "filename": "bitflags-2.13.1.crate",
+        "url": "https://static.crates.io/crates/bitflags/bitflags-2.13.1.crate"
+      },
+      {
+        "name": "cc",
+        "version": "1.4.0",
+        "sha256": "5add81bb678e6cb321aff7fa0dc7689ad82b112dbc032cea19f91d6b8e3582b9",
+        "filename": "cc-1.4.0.crate",
+        "url": "https://static.crates.io/crates/cc/cc-1.4.0.crate"
+      },
+      {
+        "name": "cfg-if",
+        "version": "1.0.4",
+        "sha256": "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801",
+        "filename": "cfg-if-1.0.4.crate",
+        "url": "https://static.crates.io/crates/cfg-if/cfg-if-1.0.4.crate"
+      },
+      {
+        "name": "find-msvc-tools",
+        "version": "0.1.9",
+        "sha256": "5baebc0774151f905a1a2cc41989300b1e6fbb29aff0ceffa1064fdd3088d582",
+        "filename": "find-msvc-tools-0.1.9.crate",
+        "url": "https://static.crates.io/crates/find-msvc-tools/find-msvc-tools-0.1.9.crate"
+      },
+      {
+        "name": "foreign-types",
+        "version": "0.3.2",
+        "sha256": "f6f339eb8adc052cd2ca78910fda869aefa38d22d5cb648e6485e4d3fc06f3b1",
+        "filename": "foreign-types-0.3.2.crate",
+        "url": "https://static.crates.io/crates/foreign-types/foreign-types-0.3.2.crate"
+      },
+      {
+        "name": "foreign-types-shared",
+        "version": "0.1.1",
+        "sha256": "00b0228411908ca8685dba7fc2cdd70ec9990a6e753e89b6ac91a84c40fbaf4b",
+        "filename": "foreign-types-shared-0.1.1.crate",
+        "url": "https://static.crates.io/crates/foreign-types-shared/foreign-types-shared-0.1.1.crate"
+      },
+      {
+        "name": "heck",
+        "version": "0.5.0",
+        "sha256": "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea",
+        "filename": "heck-0.5.0.crate",
+        "url": "https://static.crates.io/crates/heck/heck-0.5.0.crate"
+      },
+      {
+        "name": "itoa",
+        "version": "1.0.18",
+        "sha256": "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682",
+        "filename": "itoa-1.0.18.crate",
+        "url": "https://static.crates.io/crates/itoa/itoa-1.0.18.crate"
+      },
+      {
+        "name": "libc",
+        "version": "0.2.189",
+        "sha256": "3eaf3ede3fee6db1a4c2ee091bf8a8b4dccdc6d17f656fb07896ee72867612f2",
+        "filename": "libc-0.2.189.crate",
+        "url": "https://static.crates.io/crates/libc/libc-0.2.189.crate"
+      },
+      {
+        "name": "once_cell",
+        "version": "1.21.4",
+        "sha256": "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50",
+        "filename": "once_cell-1.21.4.crate",
+        "url": "https://static.crates.io/crates/once_cell/once_cell-1.21.4.crate"
+      },
+      {
+        "name": "openssl",
+        "version": "0.10.81",
+        "sha256": "77823a27f0babb03091cb9ed9ef80af3b39dbc82f97e8fa530374b7dafd87a45",
+        "filename": "openssl-0.10.81.crate",
+        "url": "https://static.crates.io/crates/openssl/openssl-0.10.81.crate"
+      },
+      {
+        "name": "openssl-macros",
+        "version": "0.1.1",
+        "sha256": "a948666b637a0f465e8564c73e89d4dde00d72d4d473cc972f390fc3dcee7d9c",
+        "filename": "openssl-macros-0.1.1.crate",
+        "url": "https://static.crates.io/crates/openssl-macros/openssl-macros-0.1.1.crate"
+      },
+      {
+        "name": "openssl-sys",
+        "version": "0.9.117",
+        "sha256": "b47e7e6bb2c38cd930d25a23b40fa52e068c10e85f3e03a7f5ba5aaca5713695",
+        "filename": "openssl-sys-0.9.117.crate",
+        "url": "https://static.crates.io/crates/openssl-sys/openssl-sys-0.9.117.crate"
+      },
+      {
+        "name": "pem",
+        "version": "4.0.0",
+        "sha256": "d354a98a3d1251555de99e8fdd8afda05573c31b82f59063a7b0a29b5527f120",
+        "filename": "pem-4.0.0.crate",
+        "url": "https://static.crates.io/crates/pem/pem-4.0.0.crate"
+      },
+      {
+        "name": "pkg-config",
+        "version": "0.3.33",
+        "sha256": "19f132c84eca552bf34cab8ec81f1c1dcc229b811638f9d283dceabe58c5569e",
+        "filename": "pkg-config-0.3.33.crate",
+        "url": "https://static.crates.io/crates/pkg-config/pkg-config-0.3.33.crate"
+      },
+      {
+        "name": "portable-atomic",
+        "version": "1.14.0",
+        "sha256": "3d20d5497ef88037a52ff98267d066e7f11fcc5e99bbfbd58a42336193aacec3",
+        "filename": "portable-atomic-1.14.0.crate",
+        "url": "https://static.crates.io/crates/portable-atomic/portable-atomic-1.14.0.crate"
+      },
+      {
+        "name": "proc-macro2",
+        "version": "1.0.107",
+        "sha256": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9",
+        "filename": "proc-macro2-1.0.107.crate",
+        "url": "https://static.crates.io/crates/proc-macro2/proc-macro2-1.0.107.crate"
+      },
+      {
+        "name": "pyo3",
+        "version": "0.29.2",
+        "sha256": "4688ddedf473e32662b9b067670129a8afb8c18e351482c70d62ba4a88171e8b",
+        "filename": "pyo3-0.29.2.crate",
+        "url": "https://static.crates.io/crates/pyo3/pyo3-0.29.2.crate"
+      },
+      {
+        "name": "pyo3-build-config",
+        "version": "0.29.2",
+        "sha256": "f41027e41b4bd03f6e60f9f417fe24a6341a6bb744edd62b6f709f2a52ea30e9",
+        "filename": "pyo3-build-config-0.29.2.crate",
+        "url": "https://static.crates.io/crates/pyo3-build-config/pyo3-build-config-0.29.2.crate"
+      },
+      {
+        "name": "pyo3-ffi",
+        "version": "0.29.2",
+        "sha256": "e591a95526fead067432c3b3a33fc74770b87b1e04e73671090d9c2055a2b327",
+        "filename": "pyo3-ffi-0.29.2.crate",
+        "url": "https://static.crates.io/crates/pyo3-ffi/pyo3-ffi-0.29.2.crate"
+      },
+      {
+        "name": "pyo3-macros",
+        "version": "0.29.2",
+        "sha256": "73225868fc1cd84eef2c3c230ddb91273bf1de46aeb8a4248da76d32a0924a1c",
+        "filename": "pyo3-macros-0.29.2.crate",
+        "url": "https://static.crates.io/crates/pyo3-macros/pyo3-macros-0.29.2.crate"
+      },
+      {
+        "name": "pyo3-macros-backend",
+        "version": "0.29.2",
+        "sha256": "571575aa3749fa6216757dd47d2a3e7ef360f329a40f0666a9fbd14889024952",
+        "filename": "pyo3-macros-backend-0.29.2.crate",
+        "url": "https://static.crates.io/crates/pyo3-macros-backend/pyo3-macros-backend-0.29.2.crate"
+      },
+      {
+        "name": "quote",
+        "version": "1.0.47",
+        "sha256": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001",
+        "filename": "quote-1.0.47.crate",
+        "url": "https://static.crates.io/crates/quote/quote-1.0.47.crate"
+      },
+      {
+        "name": "self_cell",
+        "version": "1.3.0",
+        "sha256": "2ab42ca02749e120097e328d91d415325bdf43b1c72c4c8badf37375fe40a813",
+        "filename": "self_cell-1.3.0.crate",
+        "url": "https://static.crates.io/crates/self_cell/self_cell-1.3.0.crate"
+      },
+      {
+        "name": "shlex",
+        "version": "2.0.1",
+        "sha256": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+        "filename": "shlex-2.0.1.crate",
+        "url": "https://static.crates.io/crates/shlex/shlex-2.0.1.crate"
+      },
+      {
+        "name": "syn",
+        "version": "2.0.119",
+        "sha256": "872831b642d1a07999a962a351ed35b955ea2cfc8f3862091e2a240a84f17297",
+        "filename": "syn-2.0.119.crate",
+        "url": "https://static.crates.io/crates/syn/syn-2.0.119.crate"
+      },
+      {
+        "name": "target-lexicon",
+        "version": "0.13.5",
+        "sha256": "adb6935a6f5c20170eeceb1a3835a49e12e19d792f6dd344ccc76a985ca5a6ca",
+        "filename": "target-lexicon-0.13.5.crate",
+        "url": "https://static.crates.io/crates/target-lexicon/target-lexicon-0.13.5.crate"
+      },
+      {
+        "name": "unicode-ident",
+        "version": "1.0.24",
+        "sha256": "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75",
+        "filename": "unicode-ident-1.0.24.crate",
+        "url": "https://static.crates.io/crates/unicode-ident/unicode-ident-1.0.24.crate"
+      },
+      {
+        "name": "vcpkg",
+        "version": "0.2.15",
+        "sha256": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+        "filename": "vcpkg-0.2.15.crate",
+        "url": "https://static.crates.io/crates/vcpkg/vcpkg-0.2.15.crate"
+      }
+    ],
+    "openssl": {
+      "url": "https://github.com/openssl/openssl/releases/download/openssl-4.0.3/openssl-4.0.3.tar.gz",
+      "sha256_url": "https://github.com/openssl/openssl/releases/download/openssl-4.0.3/openssl-4.0.3.tar.gz.sha256",
+      "sha256": "325b5c806167c13b40b1ffeadfe0248197c00eccc4cf123ec1e28d2d2fd216d9"
+    },
+    "notice_sha256": {
+      "Cryptography-Rust.txt": "905e4c77b7db6cdbe6910c77708531449e538e220b962d4fd37fb3dc2ad9edab",
+      "CFFI-libffi-x64.txt": "65c0d03531dcc6346ad1fd8269a347295181bb398ecc43f3d7e803c404a813ac",
+      "OpenSSL.txt": "7e488e10f58d519c5d8748280f4a63517e21303c8cf99a8ed38fbf00a23310da"
+    },
+    "scope": "Cargo.lock superset; CFFI x86/x64 headers; upstream OpenSSL legal files. Not proof of wheel build provenance, complete native notices, or all-platform compliance."
+  },
+  "embedded_binary_matches": [
+    {
+      "archive_entry": "cryptography/hazmat/bindings/_rust.abi3.so",
+      "sha256": "1e5d23fa66915204b9b67202a46993844d81cda56f6ad52cead2def37617ee29"
+    },
+    {
+      "archive_entry": "_cffi_backend.cpython-312-x86_64-linux-gnu.so",
+      "sha256": "9bc1d08072255a5ec2db10fc75df1dd9e73097a75cd9150cfe875ebd6712f17c"
+    }
+  ],
+  "existing_notice_comparison": {
+    "Cryptography-Rust.txt": {
+      "generated_sha256": "905e4c77b7db6cdbe6910c77708531449e538e220b962d4fd37fb3dc2ad9edab",
+      "existing_source_sha256": "22761a5a6643f570942798da5916c227c7184bc984b621437cc1bd95467ed163",
+      "text_equal": false,
+      "equal_after_universal_newlines": false,
+      "equal_ignoring_blank_lines": true
+    },
+    "CFFI-libffi-x64.txt": {
+      "generated_sha256": "65c0d03531dcc6346ad1fd8269a347295181bb398ecc43f3d7e803c404a813ac",
+      "existing_source_sha256": "c58c9325338d69ba0a0e139b3acad540a2050369c55b39f3e0e259102452e2ae",
+      "text_equal": false,
+      "equal_after_universal_newlines": true,
+      "equal_ignoring_blank_lines": true
+    },
+    "OpenSSL.txt": {
+      "generated_sha256": "7e488e10f58d519c5d8748280f4a63517e21303c8cf99a8ed38fbf00a23310da",
+      "existing_source_sha256": "64db145f3ed1ec256852c3d0068d8df34299bc10da7d5aec1b4f0d8624da7661",
+      "text_equal": false,
+      "equal_after_universal_newlines": true,
+      "equal_ignoring_blank_lines": true
+    }
+  },
+  "pymupdf_setup_source_references": [
+    {
+      "line": 318,
+      "text": "        location = f'https://mupdf.com/downloads/archive/mupdf-{version_mupdf}-source.tar.gz'"
+    },
+    {
+      "line": 319,
+      "text": "        #location = 'git:--branch master https://github.com/ArtifexSoftware/mupdf.git'"
+    },
+    {
+      "line": 330,
+      "text": "        pipcl.git_get(local_dir, text=location, remote='https://github.com/ArtifexSoftware/mupdf.git')"
+    },
+    {
+      "line": 451,
+      "text": "        mupdf_version_tuple = get_mupdf_version(mupdf_local)"
+    },
+    {
+      "line": 572,
+      "text": "    # pymupdf git info, swig version etc."
+    },
+    {
+      "line": 591,
+      "text": "    text += f'pymupdf_version = {version_p!r}\\n'"
+    },
+    {
+      "line": 592,
+      "text": "    text += f'pymupdf_version_tuple = {version_p_tuple!r}\\n'"
+    },
+    {
+      "line": 638,
+      "text": "    mupdf_version_tuple = get_mupdf_version(mupdf_local)"
+    },
+    {
+      "line": 640,
+      "text": "    log(f'{mupdf_version_tuple=}')"
+    },
+    {
+      "line": 646,
+      "text": "        if mupdf_version_tuple >= (1, 28):"
+    },
+    {
+      "line": 813,
+      "text": "    mupdf_version_tuple = get_mupdf_version(mupdf_local)"
+    },
+    {
+      "line": 901,
+      "text": "def get_mupdf_version(mupdf_dir):"
+    },
+    {
+      "line": 902,
+      "text": "    path = f'{mupdf_dir}/include/mupdf/fitz/version.h'"
+    },
+    {
+      "line": 908,
+      "text": "    assert v0 and v1 and v2, f'Cannot find MuPDF version numbers in {path=}.'"
+    },
+    {
+      "line": 1101,
+      "text": "# PyMuPDF version."
+    },
+    {
+      "line": 1104,
+      "text": "version_mupdf = '1.28.2'"
+    },
+    {
+      "line": 1142,
+      "text": "            ('Documentation, https://pymupdf.readthedocs.io/'),"
+    },
+    {
+      "line": 1143,
+      "text": "            ('Source, https://github.com/pymupdf/pymupdf'),"
+    },
+    {
+      "line": 1144,
+      "text": "            ('Tracker, https://github.com/pymupdf/PyMuPDF/issues'),"
+    },
+    {
+      "line": 1145,
+      "text": "            ('Changelog, https://pymupdf.readthedocs.io/en/latest/changes.html'),"
+    }
+  ],
+  "files": {
+    "command-1.log": {
+      "sha256": "e77c7af24bb1756739effc691e9d8acaf7a87b97abe32b625d4502c9a626497a",
+      "bytes": 518
+    },
+    "command-2.log": {
+      "sha256": "29553caef9ba37ac57e0bfc7fcbe2c7f6156aa5ea1e08e7f1de9e6a166a8b015",
+      "bytes": 137
+    },
+    "commands.json": {
+      "sha256": "048e8d8d60eb084f8aaad70771231aaf0a6e63c0763358b6fa6ca2da7ce9e4af",
+      "bytes": 1213
+    },
+    "notices/CFFI-libffi-x64.txt": {
+      "sha256": "65c0d03531dcc6346ad1fd8269a347295181bb398ecc43f3d7e803c404a813ac",
+      "bytes": 8725
+    },
+    "notices/Cryptography-Rust.txt": {
+      "sha256": "905e4c77b7db6cdbe6910c77708531449e538e220b962d4fd37fb3dc2ad9edab",
+      "bytes": 355981
+    },
+    "notices/OpenSSL.txt": {
+      "sha256": "7e488e10f58d519c5d8748280f4a63517e21303c8cf99a8ed38fbf00a23310da",
+      "bytes": 30063
+    },
+    "notices/crypto-native-sources.json": {
+      "sha256": "01659f17ee50f3e109f6755888b6b1c68a143f46935c6b2a8ea5aadd9c3be4fa",
+      "bytes": 10409
+    },
+    "sources/Pillow==12.3.0.json": {
+      "sha256": "cad322b18f135872eb3a56eaa73e91ff6bb9b5a8dff00fbfb5bb1331b22a2cdb",
+      "bytes": 459
+    },
+    "sources/PyMuPDF==1.28.2.json": {
+      "sha256": "bc624e150fc4318d75153bb6099b4fe3628066428ec2f77d770de021bb815192",
+      "bytes": 463
+    },
+    "sources/PySide6==6.11.2.json": {
+      "sha256": "2d5d7427798f8ae978056822e88e6f25c92c5f7f6f3e35b4247a038eb906bcc3",
+      "bytes": 138
+    },
+    "sources/PySide6_Addons==6.11.2.json": {
+      "sha256": "277509ca7ac1e7406a6d83a56ec4744db48b65d789d3594300776a31daf7815b",
+      "bytes": 152
+    },
+    "sources/PySide6_Essentials==6.11.2.json": {
+      "sha256": "0830fcc14ddf81c4f25a66798410dee8f548a04f16a67b2533907350be792561",
+      "bytes": 160
+    },
+    "sources/cffi-2.1.1.tar.gz": {
+      "sha256": "dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be",
+      "bytes": 530807
+    },
+    "sources/cffi==2.1.1.json": {
+      "sha256": "3a8077c7e9de7962d6c650004c063979a7e5f4ff143ccd94c25b956592b1054a",
+      "bytes": 447
+    },
+    "sources/cryptography-50.0.2.tar.gz": {
+      "sha256": "7b46165bb56eb4704e2eaaf86f3c940d19154535d9b0ca7d6d590b04060e00d5",
+      "bytes": 880623
+    },
+    "sources/cryptography-rust/asn1-0.24.1.crate": {
+      "sha256": "c9795210620c0cb3f9a7ce4f882808c38e1ef7b347c90591dceae0886e031fb1",
+      "bytes": 50502
+    },
+    "sources/cryptography-rust/asn1_derive-0.24.1.crate": {
+      "sha256": "909e307f1cc32bb8bccbd98f446e6d1bf03fa30f7b53a4337da7181ad30fa11a",
+      "bytes": 9534
+    },
+    "sources/cryptography-rust/base64-0.23.0.crate": {
+      "sha256": "b25655df2c3cdd83c5e5b293b88acd880332b2ddadd7c30ac43144fdc0033da9",
+      "bytes": 93578
+    },
+    "sources/cryptography-rust/bitflags-2.13.1.crate": {
+      "sha256": "b588b76d00fde79687d7646a9b5bdf3cc0f655e0bbd080335a95d7e96f3587da",
+      "bytes": 51395
+    },
+    "sources/cryptography-rust/cc-1.4.0.crate": {
+      "sha256": "5add81bb678e6cb321aff7fa0dc7689ad82b112dbc032cea19f91d6b8e3582b9",
+      "bytes": 97878
+    },
+    "sources/cryptography-rust/cfg-if-1.0.4.crate": {
+      "sha256": "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801",
+      "bytes": 9360
+    },
+    "sources/cryptography-rust/find-msvc-tools-0.1.9.crate": {
+      "sha256": "5baebc0774151f905a1a2cc41989300b1e6fbb29aff0ceffa1064fdd3088d582",
+      "bytes": 31493
+    },
+    "sources/cryptography-rust/foreign-types-0.3.2.crate": {
+      "sha256": "f6f339eb8adc052cd2ca78910fda869aefa38d22d5cb648e6485e4d3fc06f3b1",
+      "bytes": 7504
+    },
+    "sources/cryptography-rust/foreign-types-shared-0.1.1.crate": {
+      "sha256": "00b0228411908ca8685dba7fc2cdd70ec9990a6e753e89b6ac91a84c40fbaf4b",
+      "bytes": 5672
+    },
+    "sources/cryptography-rust/heck-0.5.0.crate": {
+      "sha256": "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea",
+      "bytes": 11517
+    },
+    "sources/cryptography-rust/itoa-1.0.18.crate": {
+      "sha256": "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682",
+      "bytes": 15935
+    },
+    "sources/cryptography-rust/libc-0.2.189.crate": {
+      "sha256": "3eaf3ede3fee6db1a4c2ee091bf8a8b4dccdc6d17f656fb07896ee72867612f2",
+      "bytes": 851502
+    },
+    "sources/cryptography-rust/once_cell-1.21.4.crate": {
+      "sha256": "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50",
+      "bytes": 35010
+    },
+    "sources/cryptography-rust/openssl-0.10.81.crate": {
+      "sha256": "77823a27f0babb03091cb9ed9ef80af3b39dbc82f97e8fa530374b7dafd87a45",
+      "bytes": 311187
+    },
+    "sources/cryptography-rust/openssl-macros-0.1.1.crate": {
+      "sha256": "a948666b637a0f465e8564c73e89d4dde00d72d4d473cc972f390fc3dcee7d9c",
+      "bytes": 5601
+    },
+    "sources/cryptography-rust/openssl-sys-0.9.117.crate": {
+      "sha256": "b47e7e6bb2c38cd930d25a23b40fa52e068c10e85f3e03a7f5ba5aaca5713695",
+      "bytes": 76045
+    },
+    "sources/cryptography-rust/pem-4.0.0.crate": {
+      "sha256": "d354a98a3d1251555de99e8fdd8afda05573c31b82f59063a7b0a29b5527f120",
+      "bytes": 18770
+    },
+    "sources/cryptography-rust/pkg-config-0.3.33.crate": {
+      "sha256": "19f132c84eca552bf34cab8ec81f1c1dcc229b811638f9d283dceabe58c5569e",
+      "bytes": 21590
+    },
+    "sources/cryptography-rust/portable-atomic-1.14.0.crate": {
+      "sha256": "3d20d5497ef88037a52ff98267d066e7f11fcc5e99bbfbd58a42336193aacec3",
+      "bytes": 200703
+    },
+    "sources/cryptography-rust/proc-macro2-1.0.107.crate": {
+      "sha256": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9",
+      "bytes": 59588
+    },
+    "sources/cryptography-rust/pyo3-0.29.2.crate": {
+      "sha256": "4688ddedf473e32662b9b067670129a8afb8c18e351482c70d62ba4a88171e8b",
+      "bytes": 1255741
+    },
+    "sources/cryptography-rust/pyo3-build-config-0.29.2.crate": {
+      "sha256": "f41027e41b4bd03f6e60f9f417fe24a6341a6bb744edd62b6f709f2a52ea30e9",
+      "bytes": 41104
+    },
+    "sources/cryptography-rust/pyo3-ffi-0.29.2.crate": {
+      "sha256": "e591a95526fead067432c3b3a33fc74770b87b1e04e73671090d9c2055a2b327",
+      "bytes": 90029
+    },
+    "sources/cryptography-rust/pyo3-macros-0.29.2.crate": {
+      "sha256": "73225868fc1cd84eef2c3c230ddb91273bf1de46aeb8a4248da76d32a0924a1c",
+      "bytes": 9044
+    },
+    "sources/cryptography-rust/pyo3-macros-backend-0.29.2.crate": {
+      "sha256": "571575aa3749fa6216757dd47d2a3e7ef360f329a40f0666a9fbd14889024952",
+      "bytes": 93749
+    },
+    "sources/cryptography-rust/quote-1.0.47.crate": {
+      "sha256": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001",
+      "bytes": 31622
+    },
+    "sources/cryptography-rust/self_cell-1.3.0.crate": {
+      "sha256": "2ab42ca02749e120097e328d91d415325bdf43b1c72c4c8badf37375fe40a813",
+      "bytes": 23869
+    },
+    "sources/cryptography-rust/shlex-2.0.1.crate": {
+      "sha256": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+      "bytes": 19332
+    },
+    "sources/cryptography-rust/syn-2.0.119.crate": {
+      "sha256": "872831b642d1a07999a962a351ed35b955ea2cfc8f3862091e2a240a84f17297",
+      "bytes": 307407
+    },
+    "sources/cryptography-rust/target-lexicon-0.13.5.crate": {
+      "sha256": "adb6935a6f5c20170eeceb1a3835a49e12e19d792f6dd344ccc76a985ca5a6ca",
+      "bytes": 26928
+    },
+    "sources/cryptography-rust/unicode-ident-1.0.24.crate": {
+      "sha256": "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75",
+      "bytes": 49298
+    },
+    "sources/cryptography-rust/vcpkg-0.2.15.crate": {
+      "sha256": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+      "bytes": 228735
+    },
+    "sources/cryptography==50.0.2.json": {
+      "sha256": "a899869b43594724f9b01329ee2897a91105ed5de4095c70402fa9e3fddfe70c",
+      "bytes": 483
+    },
+    "sources/openssl-4.0.3.tar.gz": {
+      "sha256": "325b5c806167c13b40b1ffeadfe0248197c00eccc4cf123ec1e28d2d2fd216d9",
+      "bytes": 55235667
+    },
+    "sources/pillow-12.3.0.tar.gz": {
+      "sha256": "3b8182a766685eaa002637e28b4ec8d6b18819a0c71f579bf0dbaa5830297cce",
+      "bytes": 47025035
+    },
+    "sources/pycparser-3.12.tar.gz": {
+      "sha256": "f03387877eab82ce01bbdfd0ba7252ee55a90b1c708d5129e2ce915475cf1db6",
+      "bytes": 158785
+    },
+    "sources/pycparser==3.12.json": {
+      "sha256": "3e0765e9cb4c54d118baa1a37bf0b30e3c6a34c9296313784c31195f425d767c",
+      "bytes": 463
+    },
+    "sources/pymupdf-1.28.2.tar.gz": {
+      "sha256": "5e0be7908a715aa20333caddd73f1d6f01e4cd0c26e869fa2dd0b7f344da2249",
+      "bytes": 87903557
+    },
+    "sources/shiboken6==6.11.2.json": {
+      "sha256": "b9a9dd489ea07f8de573716b853aab5accffbfa0d039d76b777c70682f194979",
+      "bytes": 142
+    }
+  },
+  "scope": "Exact PyPI sdists and crypto Cargo.lock superset/OpenSSL; not a complete Linux dependency source set, wheel provenance, or legal compliance conclusion",
+  "existing_candidate_and_notices_unchanged": true
+}

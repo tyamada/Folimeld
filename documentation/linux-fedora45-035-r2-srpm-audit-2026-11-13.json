@@ -1,0 +1,1403 @@
+{
+  "date_jst": "2026-11-13",
+  "published": false,
+  "exact_srpms_required": 38,
+  "verified_srpms": 38,
+  "source_rpms": [
+    {
+      "name": "brotli",
+      "version": "1.2.1",
+      "release": "1.fc45",
+      "filename": "brotli-1.2.1-1.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/b/brotli-1.2.1-1.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/b/brotli-1.2.1-1.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/brotli-1.2.1-1.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/b/brotli-1.2.1-1.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/brotli-1.2.1-1.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "brotli|1.2.1|1.fc45|i686",
+          "bytes": 686497,
+          "sha256": "d973c0cce0f6fdae031105e9e38b6588505fbe6cd7992249416a30998f9729d9"
+        }
+      ],
+      "bytes": 686497,
+      "sha256": "d973c0cce0f6fdae031105e9e38b6588505fbe6cd7992249416a30998f9729d9"
+    },
+    {
+      "name": "bzip2",
+      "version": "1.0.8",
+      "release": "24.fc45",
+      "filename": "bzip2-1.0.8-24.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/b/bzip2-1.0.8-24.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/b/bzip2-1.0.8-24.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/bzip2-1.0.8-24.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/b/bzip2-1.0.8-24.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/bzip2-1.0.8-24.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "bzip2|1.0.8|24.fc45|i686",
+          "bytes": 848296,
+          "sha256": "64fedb00a1df0634c14c7076dcff352dec973cfc061abcdba4f5f04f61637988"
+        }
+      ],
+      "bytes": 848296,
+      "sha256": "64fedb00a1df0634c14c7076dcff352dec973cfc061abcdba4f5f04f61637988"
+    },
+    {
+      "name": "dbus",
+      "version": "1.16.2",
+      "release": "6.fc45",
+      "filename": "dbus-1.16.2-6.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/d/dbus-1.16.2-6.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/d/dbus-1.16.2-6.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/dbus-1.16.2-6.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/d/dbus-1.16.2-6.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/dbus-1.16.2-6.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "dbus|1.16.2|6.fc45|i686",
+          "bytes": 1219904,
+          "sha256": "13ca12efc215230eac6e07321842ef7f63058993a5a6351e432189ae6c3c79a6"
+        }
+      ],
+      "bytes": 1219904,
+      "sha256": "13ca12efc215230eac6e07321842ef7f63058993a5a6351e432189ae6c3c79a6"
+    },
+    {
+      "name": "e2fsprogs",
+      "version": "1.47.4",
+      "release": "2.fc45",
+      "filename": "e2fsprogs-1.47.4-2.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/e/e2fsprogs-1.47.4-2.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/e/e2fsprogs-1.47.4-2.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/e2fsprogs-1.47.4-2.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/e/e2fsprogs-1.47.4-2.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/e2fsprogs-1.47.4-2.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "e2fsprogs|1.47.4|2.fc45|i686",
+          "bytes": 7754455,
+          "sha256": "de2cbf783f68eff71ab8b30a31fd5df8d5fb59a412dce0c77c00d86bb9d15ecc"
+        }
+      ],
+      "bytes": 7754455,
+      "sha256": "de2cbf783f68eff71ab8b30a31fd5df8d5fb59a412dce0c77c00d86bb9d15ecc"
+    },
+    {
+      "name": "expat",
+      "version": "2.9.0",
+      "release": "1.fc45",
+      "filename": "expat-2.9.0-1.fc45.src.rpm",
+      "dnf_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/e/expat-2.9.0-1.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/e/expat-2.9.0-1.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/expat-2.9.0-1.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/e/expat-2.9.0-1.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/expat-2.9.0-1.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "expat|2.9.0|1.fc45|i686",
+          "bytes": 898117,
+          "sha256": "a375e6290c310dc3af1c759715130e6ab74bf20e8861865a7fe6c88be1096d25"
+        }
+      ],
+      "bytes": 898117,
+      "sha256": "a375e6290c310dc3af1c759715130e6ab74bf20e8861865a7fe6c88be1096d25"
+    },
+    {
+      "name": "fontconfig",
+      "version": "2.18.3",
+      "release": "2.fc45",
+      "filename": "fontconfig-2.18.3-2.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/f/fontconfig-2.18.3-2.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/f/fontconfig-2.18.3-2.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/fontconfig-2.18.3-2.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/f/fontconfig-2.18.3-2.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/fontconfig-2.18.3-2.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "fontconfig|2.18.3|2.fc45|i686",
+          "bytes": 1246439,
+          "sha256": "31f1434bc1c1110f438f4396962a24697b0aedebae6d08c27e6b83fc7971257f"
+        }
+      ],
+      "bytes": 1246439,
+      "sha256": "31f1434bc1c1110f438f4396962a24697b0aedebae6d08c27e6b83fc7971257f"
+    },
+    {
+      "name": "freetype",
+      "version": "2.14.3",
+      "release": "3.fc45",
+      "filename": "freetype-2.14.3-3.fc45.src.rpm",
+      "dnf_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/f/freetype-2.14.3-3.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/f/freetype-2.14.3-3.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/freetype-2.14.3-3.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/f/freetype-2.14.3-3.fc45.src.rpm",
+          "status": "failed",
+          "error": "The read operation timed out"
+        },
+        {
+          "url": "https://dl.fedoraproject.org/pub/fedora/linux/updates/45/Everything/source/tree/Packages/f/freetype-2.14.3-3.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/freetype-2.14.3-3.fc45.src.rpm.attempt-2",
+          "resolved_url": "https://dl.fedoraproject.org/pub/fedora/linux/updates/45/Everything/source/tree/Packages/f/freetype-2.14.3-3.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/freetype-2.14.3-3.fc45.src.rpm.attempt-2:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "freetype|2.14.3|3.fc45|i686",
+          "bytes": 5271791,
+          "sha256": "7461bd02c7072272945de0d0ee730f0e97f899ae8f6eef3a0867cac08e9e96d0"
+        }
+      ],
+      "bytes": 5271791,
+      "sha256": "7461bd02c7072272945de0d0ee730f0e97f899ae8f6eef3a0867cac08e9e96d0"
+    },
+    {
+      "name": "gcc",
+      "version": "16.2.1",
+      "release": "3.fc45",
+      "filename": "gcc-16.2.1-3.fc45.src.rpm",
+      "dnf_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/g/gcc-16.2.1-3.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/g/gcc-16.2.1-3.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/gcc-16.2.1-3.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/g/gcc-16.2.1-3.fc45.src.rpm",
+          "status": "failed",
+          "error": "The read operation timed out"
+        },
+        {
+          "url": "https://dl.fedoraproject.org/pub/fedora/linux/updates/45/Everything/source/tree/Packages/g/gcc-16.2.1-3.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/gcc-16.2.1-3.fc45.src.rpm.attempt-2",
+          "resolved_url": "https://dl.fedoraproject.org/pub/fedora/linux/updates/45/Everything/source/tree/Packages/g/gcc-16.2.1-3.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/gcc-16.2.1-3.fc45.src.rpm.attempt-2:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "gcc|16.2.1|3.fc45|i686",
+          "bytes": 104062381,
+          "sha256": "2cd86e16d008273a91a9241fc2c38fa0352a2255e4754c84b275544e99f960c5"
+        }
+      ],
+      "bytes": 104062381,
+      "sha256": "2cd86e16d008273a91a9241fc2c38fa0352a2255e4754c84b275544e99f960c5"
+    },
+    {
+      "name": "glib2",
+      "version": "2.90.1",
+      "release": "1.fc45",
+      "filename": "glib2-2.90.1-1.fc45.src.rpm",
+      "dnf_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/g/glib2-2.90.1-1.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/g/glib2-2.90.1-1.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/glib2-2.90.1-1.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/g/glib2-2.90.1-1.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/glib2-2.90.1-1.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "glib2|2.90.1|1.fc45|i686",
+          "bytes": 5959785,
+          "sha256": "98f21f0b7d0a279d261761e918a883b5224a3ed8a3324ad1f0d29549f7492fa9"
+        }
+      ],
+      "bytes": 5959785,
+      "sha256": "98f21f0b7d0a279d261761e918a883b5224a3ed8a3324ad1f0d29549f7492fa9"
+    },
+    {
+      "name": "graphite2",
+      "version": "1.3.14",
+      "release": "22.fc45",
+      "filename": "graphite2-1.3.14-22.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/g/graphite2-1.3.14-22.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/g/graphite2-1.3.14-22.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/graphite2-1.3.14-22.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/g/graphite2-1.3.14-22.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/graphite2-1.3.14-22.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "graphite2|1.3.14|22.fc45|i686",
+          "bytes": 6327806,
+          "sha256": "31b2639be5679d79fa25c32b868e546406f92c2a5ae58e1568e3bbec75b197f2"
+        }
+      ],
+      "bytes": 6327806,
+      "sha256": "31b2639be5679d79fa25c32b868e546406f92c2a5ae58e1568e3bbec75b197f2"
+    },
+    {
+      "name": "harfbuzz",
+      "version": "15.0.0",
+      "release": "2.fc45",
+      "filename": "harfbuzz-15.0.0-2.fc45.src.rpm",
+      "dnf_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/h/harfbuzz-15.0.0-2.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/h/harfbuzz-15.0.0-2.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/harfbuzz-15.0.0-2.fc45.src.rpm.attempt-1",
+          "status": "failed",
+          "error": "Remote end closed connection without response"
+        },
+        {
+          "url": "https://dl.fedoraproject.org/pub/fedora/linux/updates/45/Everything/source/tree/Packages/h/harfbuzz-15.0.0-2.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/harfbuzz-15.0.0-2.fc45.src.rpm.attempt-2",
+          "resolved_url": "https://dl.fedoraproject.org/pub/fedora/linux/updates/45/Everything/source/tree/Packages/h/harfbuzz-15.0.0-2.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/harfbuzz-15.0.0-2.fc45.src.rpm.attempt-2:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "harfbuzz|15.0.0|2.fc45|i686",
+          "bytes": 20460580,
+          "sha256": "941c4e4c5cc6c11d82df16b19fb4ec5e2252aac13685f7052e39476749d68203"
+        }
+      ],
+      "bytes": 20460580,
+      "sha256": "941c4e4c5cc6c11d82df16b19fb4ec5e2252aac13685f7052e39476749d68203"
+    },
+    {
+      "name": "keyutils",
+      "version": "1.6.3",
+      "release": "8.fc45",
+      "filename": "keyutils-1.6.3-8.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/k/keyutils-1.6.3-8.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/k/keyutils-1.6.3-8.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/keyutils-1.6.3-8.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/k/keyutils-1.6.3-8.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/keyutils-1.6.3-8.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "keyutils|1.6.3|8.fc45|i686",
+          "bytes": 163610,
+          "sha256": "783c2b447128aac22c20e0c49731f5e1810aa373cb0fd202a838abc9c10c1674"
+        }
+      ],
+      "bytes": 163610,
+      "sha256": "783c2b447128aac22c20e0c49731f5e1810aa373cb0fd202a838abc9c10c1674"
+    },
+    {
+      "name": "krb5",
+      "version": "1.22.2",
+      "release": "11.fc45",
+      "filename": "krb5-1.22.2-11.fc45.src.rpm",
+      "dnf_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/k/krb5-1.22.2-11.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/k/krb5-1.22.2-11.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/krb5-1.22.2-11.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/k/krb5-1.22.2-11.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/krb5-1.22.2-11.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "krb5|1.22.2|11.fc45|i686",
+          "bytes": 9071239,
+          "sha256": "037cddb572799a82882aa9532cba0e08c6cc9ae90179908eb95709b32bf09323"
+        }
+      ],
+      "bytes": 9071239,
+      "sha256": "037cddb572799a82882aa9532cba0e08c6cc9ae90179908eb95709b32bf09323"
+    },
+    {
+      "name": "libX11",
+      "version": "1.8.13",
+      "release": "3.fc45",
+      "filename": "libX11-1.8.13-3.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libX11-1.8.13-3.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libX11-1.8.13-3.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libX11-1.8.13-3.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libX11-1.8.13-3.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libX11-1.8.13-3.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libX11|1.8.13|3.fc45|i686",
+          "bytes": 1836401,
+          "sha256": "9749660f022d671f00b564ccef266c6c56f0f578653a255879ff7c01ee668cd2"
+        }
+      ],
+      "bytes": 1836401,
+      "sha256": "9749660f022d671f00b564ccef266c6c56f0f578653a255879ff7c01ee668cd2"
+    },
+    {
+      "name": "libXau",
+      "version": "1.0.12",
+      "release": "5.fc45",
+      "filename": "libXau-1.0.12-5.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libXau-1.0.12-5.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libXau-1.0.12-5.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libXau-1.0.12-5.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libXau-1.0.12-5.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libXau-1.0.12-5.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libXau|1.0.12|5.fc45|i686",
+          "bytes": 311101,
+          "sha256": "9ab70a08ad091717ec1499c5d7cbba7dab5681c37595d5b4493fe8e0658e8b5c"
+        }
+      ],
+      "bytes": 311101,
+      "sha256": "9ab70a08ad091717ec1499c5d7cbba7dab5681c37595d5b4493fe8e0658e8b5c"
+    },
+    {
+      "name": "libXext",
+      "version": "1.3.6",
+      "release": "6.fc45",
+      "filename": "libXext-1.3.6-6.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libXext-1.3.6-6.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libXext-1.3.6-6.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libXext-1.3.6-6.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libXext-1.3.6-6.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libXext-1.3.6-6.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libXext|1.3.6|6.fc45|i686",
+          "bytes": 371380,
+          "sha256": "d58fcd8e691387e8bb48144be70ed836464195cf2d79173b2ccd199d4247d1a7"
+        }
+      ],
+      "bytes": 371380,
+      "sha256": "d58fcd8e691387e8bb48144be70ed836464195cf2d79173b2ccd199d4247d1a7"
+    },
+    {
+      "name": "libffi",
+      "version": "3.5.2",
+      "release": "3.fc45",
+      "filename": "libffi-3.5.2-3.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libffi-3.5.2-3.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libffi-3.5.2-3.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libffi-3.5.2-3.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libffi-3.5.2-3.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libffi-3.5.2-3.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libffi|3.5.2|3.fc45|i686",
+          "bytes": 1457400,
+          "sha256": "8f10055008ae4c4da5b58f4f65ba6b1b3cf880ef35d01c11709b682cd9852caa"
+        }
+      ],
+      "bytes": 1457400,
+      "sha256": "8f10055008ae4c4da5b58f4f65ba6b1b3cf880ef35d01c11709b682cd9852caa"
+    },
+    {
+      "name": "libpng",
+      "version": "1.6.59",
+      "release": "1.fc45",
+      "filename": "libpng-1.6.59-1.fc45.src.rpm",
+      "dnf_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/l/libpng-1.6.59-1.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/l/libpng-1.6.59-1.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libpng-1.6.59-1.fc45.src.rpm.attempt-1",
+          "status": "failed",
+          "error": "<urlopen error _ssl.c:1129: The handshake operation timed out>"
+        },
+        {
+          "url": "https://dl.fedoraproject.org/pub/fedora/linux/updates/45/Everything/source/tree/Packages/l/libpng-1.6.59-1.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libpng-1.6.59-1.fc45.src.rpm.attempt-2",
+          "resolved_url": "https://dl.fedoraproject.org/pub/fedora/linux/updates/45/Everything/source/tree/Packages/l/libpng-1.6.59-1.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libpng-1.6.59-1.fc45.src.rpm.attempt-2:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libpng|1.6.59|1.fc45|i686",
+          "bytes": 1646682,
+          "sha256": "fee1f106075d6f55612e28dbdc60212067fc4bba1dd5f53a1430d701cf5f075f"
+        }
+      ],
+      "bytes": 1646682,
+      "sha256": "fee1f106075d6f55612e28dbdc60212067fc4bba1dd5f53a1430d701cf5f075f"
+    },
+    {
+      "name": "libselinux",
+      "version": "3.11",
+      "release": "5.fc45",
+      "filename": "libselinux-3.11-5.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libselinux-3.11-5.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libselinux-3.11-5.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libselinux-3.11-5.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libselinux-3.11-5.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libselinux-3.11-5.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libselinux|3.11|5.fc45|i686",
+          "bytes": 408679,
+          "sha256": "754b23fef47fc75c071b794287d69f147b1f6add814884cfe8000cc6a37f3fd6"
+        }
+      ],
+      "bytes": 408679,
+      "sha256": "754b23fef47fc75c071b794287d69f147b1f6add814884cfe8000cc6a37f3fd6"
+    },
+    {
+      "name": "libxcb",
+      "version": "1.17.0",
+      "release": "8.fc45",
+      "filename": "libxcb-1.17.0-8.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libxcb-1.17.0-8.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libxcb-1.17.0-8.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libxcb-1.17.0-8.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libxcb-1.17.0-8.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libxcb-1.17.0-8.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libxcb|1.17.0|8.fc45|i686",
+          "bytes": 483518,
+          "sha256": "8e85f7e282d766209048216c96ec7d7af831c5faa9e0dc24081714b989b52698"
+        }
+      ],
+      "bytes": 483518,
+      "sha256": "8e85f7e282d766209048216c96ec7d7af831c5faa9e0dc24081714b989b52698"
+    },
+    {
+      "name": "libxkbcommon",
+      "version": "1.13.1",
+      "release": "4.fc45",
+      "filename": "libxkbcommon-1.13.1-4.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libxkbcommon-1.13.1-4.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libxkbcommon-1.13.1-4.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libxkbcommon-1.13.1-4.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libxkbcommon-1.13.1-4.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libxkbcommon-1.13.1-4.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libxkbcommon|1.13.1|4.fc45|i686",
+          "bytes": 1258340,
+          "sha256": "7d856ca73893faaec96db9ab0fd2b022bcba888ee1167260df85d52db69fae13"
+        }
+      ],
+      "bytes": 1258340,
+      "sha256": "7d856ca73893faaec96db9ab0fd2b022bcba888ee1167260df85d52db69fae13"
+    },
+    {
+      "name": "libxml2",
+      "version": "2.15.4",
+      "release": "1.fc45",
+      "filename": "libxml2-2.15.4-1.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libxml2-2.15.4-1.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libxml2-2.15.4-1.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libxml2-2.15.4-1.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libxml2-2.15.4-1.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/libxml2-2.15.4-1.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libxml2|2.15.4|1.fc45|i686",
+          "bytes": 3223537,
+          "sha256": "fac63bee88fcd66e40dba003a81716f7baf3e62b17ac7384baa2845c8a2ded37"
+        }
+      ],
+      "bytes": 3223537,
+      "sha256": "fac63bee88fcd66e40dba003a81716f7baf3e62b17ac7384baa2845c8a2ded37"
+    },
+    {
+      "name": "mpdecimal",
+      "version": "4.0.1",
+      "release": "4.fc45",
+      "filename": "mpdecimal-4.0.1-4.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/m/mpdecimal-4.0.1-4.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/m/mpdecimal-4.0.1-4.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/mpdecimal-4.0.1-4.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/m/mpdecimal-4.0.1-4.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/mpdecimal-4.0.1-4.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "mpdecimal|4.0.1|4.fc45|i686",
+          "bytes": 1089202,
+          "sha256": "f58b0a31ef52d9c21623bc5e659a0a6be1a3c4c64276cd566ece24ec970f070c"
+        }
+      ],
+      "bytes": 1089202,
+      "sha256": "f58b0a31ef52d9c21623bc5e659a0a6be1a3c4c64276cd566ece24ec970f070c"
+    },
+    {
+      "name": "openssl",
+      "version": "4.0.3",
+      "release": "1.fc45",
+      "filename": "openssl-4.0.3-1.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/o/openssl-4.0.3-1.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/o/openssl-4.0.3-1.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/openssl-4.0.3-1.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/o/openssl-4.0.3-1.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/openssl-4.0.3-1.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "openssl|4.0.3|1.fc45|i686",
+          "bytes": 55297446,
+          "sha256": "c302f1b70dc9e991af3d25e932f693935125ccf5551f71e1f8adc0b68ee856bb"
+        }
+      ],
+      "bytes": 55297446,
+      "sha256": "c302f1b70dc9e991af3d25e932f693935125ccf5551f71e1f8adc0b68ee856bb"
+    },
+    {
+      "name": "openssl3",
+      "version": "3.5.9",
+      "release": "1.fc45",
+      "filename": "openssl3-3.5.9-1.fc45.src.rpm",
+      "dnf_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/o/openssl3-3.5.9-1.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/o/openssl3-3.5.9-1.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/openssl3-3.5.9-1.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/o/openssl3-3.5.9-1.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/openssl3-3.5.9-1.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "openssl3|3.5.9|1.fc45|i686",
+          "bytes": 54107463,
+          "sha256": "4aeff1958b5b8756ad3b4ac57dc31476d4f2b25fb10b35e474478b88d1bb8a01"
+        }
+      ],
+      "bytes": 54107463,
+      "sha256": "4aeff1958b5b8756ad3b4ac57dc31476d4f2b25fb10b35e474478b88d1bb8a01"
+    },
+    {
+      "name": "pcre2",
+      "version": "10.49",
+      "release": "1.fc45",
+      "filename": "pcre2-10.49-1.fc45.src.rpm",
+      "dnf_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/p/pcre2-10.49-1.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/p/pcre2-10.49-1.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/pcre2-10.49-1.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/p/pcre2-10.49-1.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/pcre2-10.49-1.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "pcre2|10.49|1.fc45|i686",
+          "bytes": 2247505,
+          "sha256": "ae9bb995b022f44fbd5497b0ac3a7ceb44782fa75c0f389c303368863a216432"
+        }
+      ],
+      "bytes": 2247505,
+      "sha256": "ae9bb995b022f44fbd5497b0ac3a7ceb44782fa75c0f389c303368863a216432"
+    },
+    {
+      "name": "python3.14",
+      "version": "3.14.10",
+      "release": "1.fc45",
+      "filename": "python3.14-3.14.10-1.fc45.src.rpm",
+      "dnf_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/p/python3.14-3.14.10-1.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/p/python3.14-3.14.10-1.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/python3.14-3.14.10-1.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/p/python3.14-3.14.10-1.fc45.src.rpm",
+          "status": "failed",
+          "error": "The read operation timed out"
+        },
+        {
+          "url": "https://dl.fedoraproject.org/pub/fedora/linux/updates/45/Everything/source/tree/Packages/p/python3.14-3.14.10-1.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/python3.14-3.14.10-1.fc45.src.rpm.attempt-2",
+          "resolved_url": "https://dl.fedoraproject.org/pub/fedora/linux/updates/45/Everything/source/tree/Packages/p/python3.14-3.14.10-1.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/python3.14-3.14.10-1.fc45.src.rpm.attempt-2:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "python3.14|3.14.10|1.fc45|i686",
+          "bytes": 26508203,
+          "sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ],
+      "bytes": 26508203,
+      "sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+    },
+    {
+      "name": "systemd",
+      "version": "262.1",
+      "release": "1.fc45",
+      "filename": "systemd-262.1-1.fc45.src.rpm",
+      "dnf_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/s/systemd-262.1-1.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/s/systemd-262.1-1.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/systemd-262.1-1.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/s/systemd-262.1-1.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/systemd-262.1-1.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "systemd|262.1|1.fc45|i686",
+          "bytes": 19170203,
+          "sha256": "ab93a2babd70be49a77e3e3cd6d335aa0f4ab18943000e1c5ff7ea98aea86254"
+        }
+      ],
+      "bytes": 19170203,
+      "sha256": "ab93a2babd70be49a77e3e3cd6d335aa0f4ab18943000e1c5ff7ea98aea86254"
+    },
+    {
+      "name": "util-linux",
+      "version": "2.42.4",
+      "release": "1.fc45",
+      "filename": "util-linux-2.42.4-1.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/u/util-linux-2.42.4-1.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/u/util-linux-2.42.4-1.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/util-linux-2.42.4-1.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/u/util-linux-2.42.4-1.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/util-linux-2.42.4-1.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "util-linux|2.42.4|1.fc45|i686",
+          "bytes": 10793227,
+          "sha256": "72a7fde7d2cd980b3376b29a3c9c194d3f805460c293850b29bd6818252765d8"
+        }
+      ],
+      "bytes": 10793227,
+      "sha256": "72a7fde7d2cd980b3376b29a3c9c194d3f805460c293850b29bd6818252765d8"
+    },
+    {
+      "name": "xcb-util",
+      "version": "0.4.1",
+      "release": "10.fc45",
+      "filename": "xcb-util-0.4.1-10.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-0.4.1-10.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-0.4.1-10.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/xcb-util-0.4.1-10.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-0.4.1-10.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/xcb-util-0.4.1-10.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "xcb-util|0.4.1|10.fc45|i686",
+          "bytes": 291595,
+          "sha256": "110bb406f0a65c3a1c8745eca1deb3cdedab75e72402aa8d0f96f46c81f0f408"
+        }
+      ],
+      "bytes": 291595,
+      "sha256": "110bb406f0a65c3a1c8745eca1deb3cdedab75e72402aa8d0f96f46c81f0f408"
+    },
+    {
+      "name": "xcb-util-cursor",
+      "version": "0.1.6",
+      "release": "3.fc45",
+      "filename": "xcb-util-cursor-0.1.6-3.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-cursor-0.1.6-3.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-cursor-0.1.6-3.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/xcb-util-cursor-0.1.6-3.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-cursor-0.1.6-3.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/xcb-util-cursor-0.1.6-3.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "xcb-util-cursor|0.1.6|3.fc45|i686",
+          "bytes": 293812,
+          "sha256": "8b7e6c3ad4e0ba9b867f36ee0ad903349e836ff343edaab71c97233e4500ae33"
+        }
+      ],
+      "bytes": 293812,
+      "sha256": "8b7e6c3ad4e0ba9b867f36ee0ad903349e836ff343edaab71c97233e4500ae33"
+    },
+    {
+      "name": "xcb-util-image",
+      "version": "0.4.1",
+      "release": "10.fc45",
+      "filename": "xcb-util-image-0.4.1-10.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-image-0.4.1-10.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-image-0.4.1-10.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/xcb-util-image-0.4.1-10.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-image-0.4.1-10.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/xcb-util-image-0.4.1-10.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "xcb-util-image|0.4.1|10.fc45|i686",
+          "bytes": 310143,
+          "sha256": "679b86b4812abcc5c55e63dd59a599427928750a3e5690a6753fa6d712f466d1"
+        }
+      ],
+      "bytes": 310143,
+      "sha256": "679b86b4812abcc5c55e63dd59a599427928750a3e5690a6753fa6d712f466d1"
+    },
+    {
+      "name": "xcb-util-keysyms",
+      "version": "0.4.1",
+      "release": "10.fc45",
+      "filename": "xcb-util-keysyms-0.4.1-10.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-keysyms-0.4.1-10.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-keysyms-0.4.1-10.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/xcb-util-keysyms-0.4.1-10.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-keysyms-0.4.1-10.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/xcb-util-keysyms-0.4.1-10.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "xcb-util-keysyms|0.4.1|10.fc45|i686",
+          "bytes": 280776,
+          "sha256": "f6769b7a70740915c1aa889b1a27d6a9b8acce873fc449ad2ed8684c3d29ea9b"
+        }
+      ],
+      "bytes": 280776,
+      "sha256": "f6769b7a70740915c1aa889b1a27d6a9b8acce873fc449ad2ed8684c3d29ea9b"
+    },
+    {
+      "name": "xcb-util-renderutil",
+      "version": "0.3.10",
+      "release": "10.fc45",
+      "filename": "xcb-util-renderutil-0.3.10-10.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-renderutil-0.3.10-10.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-renderutil-0.3.10-10.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/xcb-util-renderutil-0.3.10-10.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-renderutil-0.3.10-10.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/xcb-util-renderutil-0.3.10-10.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "xcb-util-renderutil|0.3.10|10.fc45|i686",
+          "bytes": 282878,
+          "sha256": "f1dd48ec9d6593781ee19a19a9b1218af12618eb02f8e1bfe142fe34e3095968"
+        }
+      ],
+      "bytes": 282878,
+      "sha256": "f1dd48ec9d6593781ee19a19a9b1218af12618eb02f8e1bfe142fe34e3095968"
+    },
+    {
+      "name": "xcb-util-wm",
+      "version": "0.4.2",
+      "release": "10.fc45",
+      "filename": "xcb-util-wm-0.4.2-10.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-wm-0.4.2-10.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-wm-0.4.2-10.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/xcb-util-wm-0.4.2-10.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-wm-0.4.2-10.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/xcb-util-wm-0.4.2-10.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "xcb-util-wm|0.4.2|10.fc45|i686",
+          "bytes": 306449,
+          "sha256": "eb8e283eacac38a70734f1fed01e9c09f86c9dddfa74f338d7018848f8f8e1ef"
+        }
+      ],
+      "bytes": 306449,
+      "sha256": "eb8e283eacac38a70734f1fed01e9c09f86c9dddfa74f338d7018848f8f8e1ef"
+    },
+    {
+      "name": "xz",
+      "version": "5.8.3",
+      "release": "2.fc45",
+      "filename": "xz-5.8.3-2.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xz-5.8.3-2.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xz-5.8.3-2.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/xz-5.8.3-2.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xz-5.8.3-2.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/xz-5.8.3-2.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "xz|5.8.3|2.fc45|i686",
+          "bytes": 2817553,
+          "sha256": "aec4e3b940c25cc4c919b89fc1f46329dda56c5f9119502576a823e26ec4fba2"
+        }
+      ],
+      "bytes": 2817553,
+      "sha256": "aec4e3b940c25cc4c919b89fc1f46329dda56c5f9119502576a823e26ec4fba2"
+    },
+    {
+      "name": "zlib-ng",
+      "version": "2.3.3",
+      "release": "6.fc45",
+      "filename": "zlib-ng-2.3.3-6.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/z/zlib-ng-2.3.3-6.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/z/zlib-ng-2.3.3-6.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/zlib-ng-2.3.3-6.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/z/zlib-ng-2.3.3-6.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/zlib-ng-2.3.3-6.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "zlib-ng|2.3.3|6.fc45|i686",
+          "bytes": 2467912,
+          "sha256": "2c12f10165dd9936254566cb6a609687e7716a31461b05c228cb45ba311e8a83"
+        }
+      ],
+      "bytes": 2467912,
+      "sha256": "2c12f10165dd9936254566cb6a609687e7716a31461b05c228cb45ba311e8a83"
+    },
+    {
+      "name": "zstd",
+      "version": "1.5.7",
+      "release": "6.fc45",
+      "filename": "zstd-1.5.7-6.fc45.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/z/zstd-1.5.7-6.fc45.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/z/zstd-1.5.7-6.fc45.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/zstd-1.5.7-6.fc45.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/z/zstd-1.5.7-6.fc45.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/srpms/zstd-1.5.7-6.fc45.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 4f50a6114cd5c6976a7f1179655a4b02f577861e: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "zstd|1.5.7|6.fc45|i686",
+          "bytes": 2477733,
+          "sha256": "d889226ca681bea335bf54b1bd7c39ec6b886e46c7bc72b31024e858e4dc1f67"
+        }
+      ],
+      "bytes": 2477733,
+      "sha256": "d889226ca681bea335bf54b1bd7c39ec6b886e46c7bc72b31024e858e4dc1f67"
+    }
+  ],
+  "keys": [
+    {
+      "path": "/usr/share/pki/rpm-gpg/RPM-GPG-KEY-fedora-45-primary",
+      "sha256": "846912c73a910dab32da8ef0c0d68cb89d11ff514f598d2d1dd96d04d58b2425"
+    }
+  ],
+  "isolated_rpmdb": "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/fedora-source-audit/isolated-rpmdb",
+  "system_trust_unchanged": true,
+  "existing_candidate_unchanged": true,
+  "limitations": [
+    "SRPM name/version/release matches installed RPM SOURCERPM metadata; not independent reproducible compilation",
+    "DNF-selected mirror HTTPS source and isolated Fedora45-key signature verification; failed attempts retained",
+    "Additional source audit is not yet included in revision2 embedded material manifest"
+  ],
+  "corrected_source_query": {
+    "installed_binary_packages": [
+      "bzip2-libs",
+      "dbus-libs",
+      "expat",
+      "fontconfig",
+      "freetype",
+      "glib2",
+      "graphite2",
+      "harfbuzz",
+      "keyutils-libs",
+      "krb5-libs",
+      "libX11",
+      "libX11-xcb",
+      "libXau",
+      "libXext",
+      "libblkid",
+      "libbrotli",
+      "libcom_err",
+      "libffi",
+      "libgcc",
+      "libmount",
+      "libpng",
+      "libselinux",
+      "libstdc++",
+      "libxcb",
+      "libxkbcommon",
+      "libxkbcommon-x11",
+      "libxml2",
+      "libzstd",
+      "mpdecimal",
+      "openssl-libs",
+      "openssl3-libs",
+      "pcre2",
+      "python3.14-libs",
+      "systemd-libs",
+      "xcb-util",
+      "xcb-util-cursor",
+      "xcb-util-image",
+      "xcb-util-keysyms",
+      "xcb-util-renderutil",
+      "xcb-util-wm",
+      "xz-libs",
+      "zlib-ng-compat"
+    ],
+    "x86_64_package_metadata": [
+      [
+        "bzip2-libs",
+        "1.0.8",
+        "24.fc45",
+        "x86_64",
+        "bzip2-1.0.8-24.fc45.src.rpm"
+      ],
+      [
+        "dbus-libs",
+        "1.16.2",
+        "6.fc45",
+        "x86_64",
+        "dbus-1.16.2-6.fc45.src.rpm"
+      ],
+      [
+        "expat",
+        "2.9.0",
+        "1.fc45",
+        "x86_64",
+        "expat-2.9.0-1.fc45.src.rpm"
+      ],
+      [
+        "fontconfig",
+        "2.18.3",
+        "2.fc45",
+        "x86_64",
+        "fontconfig-2.18.3-2.fc45.src.rpm"
+      ],
+      [
+        "freetype",
+        "2.14.3",
+        "3.fc45",
+        "x86_64",
+        "freetype-2.14.3-3.fc45.src.rpm"
+      ],
+      [
+        "glib2",
+        "2.90.1",
+        "1.fc45",
+        "x86_64",
+        "glib2-2.90.1-1.fc45.src.rpm"
+      ],
+      [
+        "graphite2",
+        "1.3.14",
+        "22.fc45",
+        "x86_64",
+        "graphite2-1.3.14-22.fc45.src.rpm"
+      ],
+      [
+        "harfbuzz",
+        "15.0.0",
+        "2.fc45",
+        "x86_64",
+        "harfbuzz-15.0.0-2.fc45.src.rpm"
+      ],
+      [
+        "keyutils-libs",
+        "1.6.3",
+        "8.fc45",
+        "x86_64",
+        "keyutils-1.6.3-8.fc45.src.rpm"
+      ],
+      [
+        "krb5-libs",
+        "1.22.2",
+        "11.fc45",
+        "x86_64",
+        "krb5-1.22.2-11.fc45.src.rpm"
+      ],
+      [
+        "libX11",
+        "1.8.13",
+        "3.fc45",
+        "x86_64",
+        "libX11-1.8.13-3.fc45.src.rpm"
+      ],
+      [
+        "libX11-xcb",
+        "1.8.13",
+        "3.fc45",
+        "x86_64",
+        "libX11-1.8.13-3.fc45.src.rpm"
+      ],
+      [
+        "libXau",
+        "1.0.12",
+        "5.fc45",
+        "x86_64",
+        "libXau-1.0.12-5.fc45.src.rpm"
+      ],
+      [
+        "libXext",
+        "1.3.6",
+        "6.fc45",
+        "x86_64",
+        "libXext-1.3.6-6.fc45.src.rpm"
+      ],
+      [
+        "libblkid",
+        "2.42.4",
+        "1.fc45",
+        "x86_64",
+        "util-linux-2.42.4-1.fc45.src.rpm"
+      ],
+      [
+        "libbrotli",
+        "1.2.1",
+        "1.fc45",
+        "x86_64",
+        "brotli-1.2.1-1.fc45.src.rpm"
+      ],
+      [
+        "libcom_err",
+        "1.47.4",
+        "2.fc45",
+        "x86_64",
+        "e2fsprogs-1.47.4-2.fc45.src.rpm"
+      ],
+      [
+        "libffi",
+        "3.5.2",
+        "3.fc45",
+        "x86_64",
+        "libffi-3.5.2-3.fc45.src.rpm"
+      ],
+      [
+        "libgcc",
+        "16.2.1",
+        "3.fc45",
+        "x86_64",
+        "gcc-16.2.1-3.fc45.src.rpm"
+      ],
+      [
+        "libmount",
+        "2.42.4",
+        "1.fc45",
+        "x86_64",
+        "util-linux-2.42.4-1.fc45.src.rpm"
+      ],
+      [
+        "libpng",
+        "1.6.59",
+        "1.fc45",
+        "x86_64",
+        "libpng-1.6.59-1.fc45.src.rpm"
+      ],
+      [
+        "libselinux",
+        "3.11",
+        "5.fc45",
+        "x86_64",
+        "libselinux-3.11-5.fc45.src.rpm"
+      ],
+      [
+        "libstdc++",
+        "16.2.1",
+        "3.fc45",
+        "x86_64",
+        "gcc-16.2.1-3.fc45.src.rpm"
+      ],
+      [
+        "libxcb",
+        "1.17.0",
+        "8.fc45",
+        "x86_64",
+        "libxcb-1.17.0-8.fc45.src.rpm"
+      ],
+      [
+        "libxkbcommon",
+        "1.13.1",
+        "4.fc45",
+        "x86_64",
+        "libxkbcommon-1.13.1-4.fc45.src.rpm"
+      ],
+      [
+        "libxkbcommon-x11",
+        "1.13.1",
+        "4.fc45",
+        "x86_64",
+        "libxkbcommon-1.13.1-4.fc45.src.rpm"
+      ],
+      [
+        "libxml2",
+        "2.15.4",
+        "1.fc45",
+        "x86_64",
+        "libxml2-2.15.4-1.fc45.src.rpm"
+      ],
+      [
+        "libzstd",
+        "1.5.7",
+        "6.fc45",
+        "x86_64",
+        "zstd-1.5.7-6.fc45.src.rpm"
+      ],
+      [
+        "mpdecimal",
+        "4.0.1",
+        "4.fc45",
+        "x86_64",
+        "mpdecimal-4.0.1-4.fc45.src.rpm"
+      ],
+      [
+        "openssl-libs",
+        "4.0.3",
+        "1.fc45",
+        "x86_64",
+        "openssl-4.0.3-1.fc45.src.rpm"
+      ],
+      [
+        "openssl3-libs",
+        "3.5.9",
+        "1.fc45",
+        "x86_64",
+        "openssl3-3.5.9-1.fc45.src.rpm"
+      ],
+      [
+        "pcre2",
+        "10.49",
+        "1.fc45",
+        "x86_64",
+        "pcre2-10.49-1.fc45.src.rpm"
+      ],
+      [
+        "python3.14-libs",
+        "3.14.10",
+        "1.fc45",
+        "x86_64",
+        "python3.14-3.14.10-1.fc45.src.rpm"
+      ],
+      [
+        "systemd-libs",
+        "262.1",
+        "1.fc45",
+        "x86_64",
+        "systemd-262.1-1.fc45.src.rpm"
+      ],
+      [
+        "xcb-util",
+        "0.4.1",
+        "10.fc45",
+        "x86_64",
+        "xcb-util-0.4.1-10.fc45.src.rpm"
+      ],
+      [
+        "xcb-util-cursor",
+        "0.1.6",
+        "3.fc45",
+        "x86_64",
+        "xcb-util-cursor-0.1.6-3.fc45.src.rpm"
+      ],
+      [
+        "xcb-util-image",
+        "0.4.1",
+        "10.fc45",
+        "x86_64",
+        "xcb-util-image-0.4.1-10.fc45.src.rpm"
+      ],
+      [
+        "xcb-util-keysyms",
+        "0.4.1",
+        "10.fc45",
+        "x86_64",
+        "xcb-util-keysyms-0.4.1-10.fc45.src.rpm"
+      ],
+      [
+        "xcb-util-renderutil",
+        "0.3.10",
+        "10.fc45",
+        "x86_64",
+        "xcb-util-renderutil-0.3.10-10.fc45.src.rpm"
+      ],
+      [
+        "xcb-util-wm",
+        "0.4.2",
+        "10.fc45",
+        "x86_64",
+        "xcb-util-wm-0.4.2-10.fc45.src.rpm"
+      ],
+      [
+        "xz-libs",
+        "5.8.3",
+        "2.fc45",
+        "x86_64",
+        "xz-5.8.3-2.fc45.src.rpm"
+      ],
+      [
+        "zlib-ng-compat",
+        "2.3.3",
+        "6.fc45",
+        "x86_64",
+        "zlib-ng-2.3.3-6.fc45.src.rpm"
+      ]
+    ],
+    "exact_source_rpm_names": [
+      "brotli-1.2.1-1.fc45.src.rpm",
+      "bzip2-1.0.8-24.fc45.src.rpm",
+      "dbus-1.16.2-6.fc45.src.rpm",
+      "e2fsprogs-1.47.4-2.fc45.src.rpm",
+      "expat-2.9.0-1.fc45.src.rpm",
+      "fontconfig-2.18.3-2.fc45.src.rpm",
+      "freetype-2.14.3-3.fc45.src.rpm",
+      "gcc-16.2.1-3.fc45.src.rpm",
+      "glib2-2.90.1-1.fc45.src.rpm",
+      "graphite2-1.3.14-22.fc45.src.rpm",
+      "harfbuzz-15.0.0-2.fc45.src.rpm",
+      "keyutils-1.6.3-8.fc45.src.rpm",
+      "krb5-1.22.2-11.fc45.src.rpm",
+      "libX11-1.8.13-3.fc45.src.rpm",
+      "libXau-1.0.12-5.fc45.src.rpm",
+      "libXext-1.3.6-6.fc45.src.rpm",
+      "libffi-3.5.2-3.fc45.src.rpm",
+      "libpng-1.6.59-1.fc45.src.rpm",
+      "libselinux-3.11-5.fc45.src.rpm",
+      "libxcb-1.17.0-8.fc45.src.rpm",
+      "libxkbcommon-1.13.1-4.fc45.src.rpm",
+      "libxml2-2.15.4-1.fc45.src.rpm",
+      "mpdecimal-4.0.1-4.fc45.src.rpm",
+      "openssl-4.0.3-1.fc45.src.rpm",
+      "openssl3-3.5.9-1.fc45.src.rpm",
+      "pcre2-10.49-1.fc45.src.rpm",
+      "python3.14-3.14.10-1.fc45.src.rpm",
+      "systemd-262.1-1.fc45.src.rpm",
+      "util-linux-2.42.4-1.fc45.src.rpm",
+      "xcb-util-0.4.1-10.fc45.src.rpm",
+      "xcb-util-cursor-0.1.6-3.fc45.src.rpm",
+      "xcb-util-image-0.4.1-10.fc45.src.rpm",
+      "xcb-util-keysyms-0.4.1-10.fc45.src.rpm",
+      "xcb-util-renderutil-0.3.10-10.fc45.src.rpm",
+      "xcb-util-wm-0.4.2-10.fc45.src.rpm",
+      "xz-5.8.3-2.fc45.src.rpm",
+      "zlib-ng-2.3.3-6.fc45.src.rpm",
+      "zstd-1.5.7-6.fc45.src.rpm"
+    ],
+    "correction": "Original unqualified rpm query concatenated multiple installed libgcc architectures without a delimiter. Explicit x86_64 and newline-separated query corrects the source set."
+  },
+  "exact_dnf_query": {
+    "command": [
+      "dnf",
+      "--repo=fedora-source",
+      "--repo=updates-source",
+      "repoquery",
+      "--available",
+      "--arch=src",
+      "--queryformat=%{name}|%{version}|%{release}|%{location}",
+      "brotli-1.2.1-1.fc45.src",
+      "bzip2-1.0.8-24.fc45.src",
+      "dbus-1.16.2-6.fc45.src",
+      "e2fsprogs-1.47.4-2.fc45.src",
+      "expat-2.9.0-1.fc45.src",
+      "fontconfig-2.18.3-2.fc45.src",
+      "freetype-2.14.3-3.fc45.src",
+      "gcc-16.2.1-3.fc45.src",
+      "gcc-16.2.1-3.fc45.src.rpmgcc-16.2.1-3.fc45.src",
+      "glib2-2.90.1-1.fc45.src",
+      "graphite2-1.3.14-22.fc45.src",
+      "harfbuzz-15.0.0-2.fc45.src",
+      "keyutils-1.6.3-8.fc45.src",
+      "krb5-1.22.2-11.fc45.src",
+      "libX11-1.8.13-3.fc45.src",
+      "libXau-1.0.12-5.fc45.src",
+      "libXext-1.3.6-6.fc45.src",
+      "libffi-3.5.2-3.fc45.src",
+      "libpng-1.6.59-1.fc45.src",
+      "libselinux-3.11-5.fc45.src",
+      "libxcb-1.17.0-8.fc45.src",
+      "libxkbcommon-1.13.1-4.fc45.src",
+      "libxml2-2.15.4-1.fc45.src",
+      "mpdecimal-4.0.1-4.fc45.src",
+      "openssl-4.0.3-1.fc45.src",
+      "openssl3-3.5.9-1.fc45.src",
+      "pcre2-10.49-1.fc45.src",
+      "python3.14-3.14.10-1.fc45.src",
+      "systemd-262.1-1.fc45.src",
+      "util-linux-2.42.4-1.fc45.src",
+      "xcb-util-0.4.1-10.fc45.src",
+      "xcb-util-cursor-0.1.6-3.fc45.src",
+      "xcb-util-image-0.4.1-10.fc45.src",
+      "xcb-util-keysyms-0.4.1-10.fc45.src",
+      "xcb-util-renderutil-0.3.10-10.fc45.src",
+      "xcb-util-wm-0.4.2-10.fc45.src",
+      "xz-5.8.3-2.fc45.src",
+      "zlib-ng-2.3.3-6.fc45.src",
+      "zstd-1.5.7-6.fc45.src"
+    ],
+    "exit_code": 0,
+    "stdout": "brotli|1.2.1|1.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/b/brotli-1.2.1-1.fc45.src.rpmbzip2|1.0.8|24.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/b/bzip2-1.0.8-24.fc45.src.rpmdbus|1.16.2|6.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/d/dbus-1.16.2-6.fc45.src.rpme2fsprogs|1.47.4|2.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/e/e2fsprogs-1.47.4-2.fc45.src.rpmexpat|2.9.0|1.fc45|https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/e/expat-2.9.0-1.fc45.src.rpmfontconfig|2.18.3|2.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/f/fontconfig-2.18.3-2.fc45.src.rpmfreetype|2.14.3|3.fc45|https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/f/freetype-2.14.3-3.fc45.src.rpmgcc|16.2.1|3.fc45|https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/g/gcc-16.2.1-3.fc45.src.rpmglib2|2.90.1|1.fc45|https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/g/glib2-2.90.1-1.fc45.src.rpmgraphite2|1.3.14|22.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/g/graphite2-1.3.14-22.fc45.src.rpmharfbuzz|15.0.0|2.fc45|https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/h/harfbuzz-15.0.0-2.fc45.src.rpmkeyutils|1.6.3|8.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/k/keyutils-1.6.3-8.fc45.src.rpmkrb5|1.22.2|11.fc45|https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/k/krb5-1.22.2-11.fc45.src.rpmlibX11|1.8.13|3.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libX11-1.8.13-3.fc45.src.rpmlibXau|1.0.12|5.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libXau-1.0.12-5.fc45.src.rpmlibXext|1.3.6|6.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libXext-1.3.6-6.fc45.src.rpmlibffi|3.5.2|3.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libffi-3.5.2-3.fc45.src.rpmlibpng|1.6.59|1.fc45|https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/l/libpng-1.6.59-1.fc45.src.rpmlibselinux|3.11|5.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libselinux-3.11-5.fc45.src.rpmlibxcb|1.17.0|8.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libxcb-1.17.0-8.fc45.src.rpmlibxkbcommon|1.13.1|4.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libxkbcommon-1.13.1-4.fc45.src.rpmlibxml2|2.15.4|1.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/l/libxml2-2.15.4-1.fc45.src.rpmmpdecimal|4.0.1|4.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/m/mpdecimal-4.0.1-4.fc45.src.rpmopenssl3|3.5.9|1.fc45|https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/o/openssl3-3.5.9-1.fc45.src.rpmopenssl|4.0.3|1.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/o/openssl-4.0.3-1.fc45.src.rpmpcre2|10.49|1.fc45|https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/p/pcre2-10.49-1.fc45.src.rpmpython3.14|3.14.10|1.fc45|https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/p/python3.14-3.14.10-1.fc45.src.rpmsystemd|262.1|1.fc45|https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/Packages/s/systemd-262.1-1.fc45.src.rpmutil-linux|2.42.4|1.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/u/util-linux-2.42.4-1.fc45.src.rpmxcb-util-cursor|0.1.6|3.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-cursor-0.1.6-3.fc45.src.rpmxcb-util-image|0.4.1|10.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-image-0.4.1-10.fc45.src.rpmxcb-util-keysyms|0.4.1|10.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-keysyms-0.4.1-10.fc45.src.rpmxcb-util-renderutil|0.3.10|10.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-renderutil-0.3.10-10.fc45.src.rpmxcb-util-wm|0.4.2|10.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-wm-0.4.2-10.fc45.src.rpmxcb-util|0.4.1|10.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xcb-util-0.4.1-10.fc45.src.rpmxz|5.8.3|2.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/x/xz-5.8.3-2.fc45.src.rpmzlib-ng|2.3.3|6.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/z/zlib-ng-2.3.3-6.fc45.src.rpmzstd|1.5.7|6.fc45|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/45/Everything/source/tree/Packages/z/zstd-1.5.7-6.fc45.src.rpm",
+    "stderr": "Updating and loading repositories:\n Fedora 45 - Source                     100% |   3.1 MiB/s |   5.8 MiB |  00m02s\n Fedora 45 - Updates Source             100% |  19.6 KiB/s |   1.5 MiB |  01m16s\n>>> Curl error (28): Timeout was reached for https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/repodata/c586a8a6b548a86368e763879d1ed50508ea5f7a8ea9f40c5bddbf8f5e9829f8-updateinfo.xml.zck [Connection timed out after 30000 milliseconds] - https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/repodata/c586a8a6b548a86368e763879d1ed50508ea5f7a8ea9f40c5bddbf8f5e9829f8-updateinfo.xml.zck\n>>> Curl error (28): Timeout was reached for https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/repodata/e37d86d4b43530bd6a7f70c60c802a99f8bbcd4eee939a7c2e1c8f84369be434-primary.xml.zck [Operation too slow. Less than 1000 bytes/sec transferred the last 30 seconds] - https://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/repodata/e37d86d4b43530bd6a7f70c60c802a99f8bbcd4eee939a7c2e1c8f84369be434-primary.xml.zck\n>>> Curl error (28): Timeout was reached for http://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/repodata/c586a8a6b548a86368e763879d1ed50508ea5f7a8ea9f40c5bddbf8f5e9829f8-updateinfo.xml.zck [Operation too slow. Less than 1000 bytes/sec transferred the last 30 seconds] - http://mirrors.huaweicloud.com/repository/fedora/updates/45/Everything/source/tree/repodata/c586a8a6b548a86368e763879d1ed50508ea5f7a8ea9f40c5bddbf8f5e9829f8-updateinfo.xml.zck\nRepositories loaded.\n"
+  }
+}

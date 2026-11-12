@@ -1,0 +1,117 @@
+{
+  "date_jst": "2026-11-13",
+  "repository": "tyamada/Folimeld",
+  "git_remote_url": "https://github.com/tyamada/Folimeld.git",
+  "branch": "release/fedora44-amd64-0.3.5",
+  "target_commit": "293da8abe0459eba5d2a95609a6c3d630c986033",
+  "tree": "a42e63b91a2a3629cf4270a9776250942948d0b3",
+  "tag": "fedora44-amd64-v0.3.5",
+  "release_title": "Folimeld 0.3.5 \u2014 Fedora 44 amd64 preview",
+  "prerelease": true,
+  "make_latest": false,
+  "published": false,
+  "pushed": false,
+  "tag_created": false,
+  "requires_explicit_publication_authorization": true,
+  "packet_directory": "/home/folimeld-build/folimeld-candidates/fedora44-r2-readiness-20261113/publication-packet-r2",
+  "body_file": "/home/folimeld-build/folimeld-candidates/fedora44-r2-readiness-20261113/publication-packet-r2/RELEASE-NOTES.txt",
+  "asset_files": [
+    {
+      "name": "Folimeld-fedora44-0.3.5-r2-dependency-sources.tar",
+      "bytes": 1738352640,
+      "sha256": "48c688417ffbd46af8dc23a87f6aac2de99d6fba8500998b05de25ae0c34f0cd"
+    },
+    {
+      "name": "Folimeld-source-957b144ca26d0b13ff91449b1f98165fff2cfa452409fb540cf2d3bbe3d58e3e.zip",
+      "bytes": 23782773,
+      "sha256": "957b144ca26d0b13ff91449b1f98165fff2cfa452409fb540cf2d3bbe3d58e3e"
+    },
+    {
+      "name": "KNOWN-LIMITATIONS.txt",
+      "bytes": 2326,
+      "sha256": "8d2090b471925795e0f14ba169ec5f865f1919c359818dd16744a6b2d6dcd3f0"
+    },
+    {
+      "name": "RELEASE-NOTES.txt",
+      "bytes": 5136,
+      "sha256": "a9d5fa371836bb1e42e7faf2e4e3d6b7979ddd4edab23bdc8d5c564df305abf5"
+    },
+    {
+      "name": "dependency-source-manifest.json",
+      "bytes": 63881,
+      "sha256": "6a32e6de4d000611cc31c6ee6963ffc15da77c704e171506db5c69f2b006be35"
+    },
+    {
+      "name": "folimeld-0.3.5-2.fc44.x86_64.rpm",
+      "bytes": 104152756,
+      "sha256": "d3fc22088af7d4fa08b90bc341e64b24b23d350de98a11d9825a0cafa4416574"
+    },
+    {
+      "name": "folimeld-0.3.5-2.fc44.x86_64.rpm-d3fc22088af7d4fa08b90bc341e64b24b23d350de98a11d9825a0cafa4416574.json",
+      "bytes": 782,
+      "sha256": "b0574035497293ea5ca4fbe0b33ca64186e07df82d3d6e9b2b93e5f138f3cb13"
+    },
+    {
+      "name": "third-party-notices.tar.gz",
+      "bytes": 1676990,
+      "sha256": "98db9baf51e17b806a0fdc6814079c996918a44abd33da4bb2feb41d3120d51a"
+    },
+    {
+      "name": "verification-fedora44-amd64-0.3.5.json",
+      "bytes": 2838,
+      "sha256": "986338f2788953d59b33651b132029bb83eea276cc29615bb404d7a1dfde231b"
+    },
+    {
+      "name": "verification-records-fedora44-amd64-0.3.5.zip",
+      "bytes": 1335837,
+      "sha256": "06701fab1142a20a0a6c5ac086aac8949e074c3c2bf2e0fbde0722a2ce74bc1d"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 1115,
+      "sha256": "8ccb38025cdebbbfea48b7753c3af37a2235ad2e43199a4ed641d2e6da732949"
+    }
+  ],
+  "verification_record_files": 54,
+  "checksum_verification": {
+    "exit_code": 0,
+    "stdout": "Folimeld-fedora44-0.3.5-r2-dependency-sources.tar: OK\nFolimeld-source-957b144ca26d0b13ff91449b1f98165fff2cfa452409fb540cf2d3bbe3d58e3e.zip: OK\nKNOWN-LIMITATIONS.txt: OK\nRELEASE-NOTES.txt: OK\ndependency-source-manifest.json: OK\nfolimeld-0.3.5-2.fc44.x86_64.rpm: OK\nfolimeld-0.3.5-2.fc44.x86_64.rpm-d3fc22088af7d4fa08b90bc341e64b24b23d350de98a11d9825a0cafa4416574.json: OK\nthird-party-notices.tar.gz: OK\nverification-fedora44-amd64-0.3.5.json: OK\nverification-records-fedora44-amd64-0.3.5.zip: OK\n",
+    "stderr": ""
+  },
+  "remote_check": {
+    "date_jst": "2026-11-13",
+    "published": false,
+    "checks": [
+      {
+        "url": "https://api.github.com/repos/tyamada/Folimeld/releases/latest",
+        "data": {
+          "tag": "linux-v0.3.4",
+          "url": "https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4",
+          "prerelease": false
+        }
+      },
+      {
+        "url": "https://api.github.com/repos/tyamada/Folimeld/branches/main",
+        "data": {
+          "name": "main",
+          "sha": "ea3f5f13d5c57e70e1d7a912c5eca9361ca0b272"
+        }
+      },
+      {
+        "url": "https://api.github.com/repos/tyamada/Folimeld/git/matching-refs/tags/fedora44-amd64-v0.3.5",
+        "data": []
+      },
+      {
+        "url": "https://api.github.com/repos/tyamada/Folimeld/git/matching-refs/heads/release/fedora44-amd64-0.3.5",
+        "data": []
+      }
+    ],
+    "scope": "Read-only public GitHub preflight; recheck authenticated draft/release/tag/branch conflicts immediately before authorized publication"
+  },
+  "preservation": [
+    "Original main worktree, index and refs",
+    "Existing Linux0.3.4, Fedora45 preview, AlmaLinux preview and other release assets",
+    "Existing WSL environments and previous candidates"
+  ],
+  "before_publication": "Recheck authenticated draft/release/tag/branch conflicts and packet hashes; publish only after explicit Fedora release authorization"
+}

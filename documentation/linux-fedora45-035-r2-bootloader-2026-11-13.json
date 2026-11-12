@@ -1,0 +1,91 @@
+{
+  "date_jst": "2026-11-13",
+  "published": false,
+  "pyinstaller_version": "6.22.2",
+  "files": [
+    {
+      "filename": "pyinstaller-6.22.2-py3-none-manylinux2014_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/2b/07/b304ff3f5f8333778065e3658b604b0e108cd934b920f3fbab825a0dd5b7/pyinstaller-6.22.2-py3-none-manylinux2014_x86_64.whl",
+      "sha256": "9622686ecc5d5fa492fe6cde29d47df9dd41138cff8177be9f901ca3260f2096",
+      "bytes": 762173
+    },
+    {
+      "filename": "pyinstaller-6.22.2.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/cc/2b/836d9def811c02522e0921d8b8cdf0c16b0545a216e97e71041758057859/pyinstaller-6.22.2.tar.gz",
+      "sha256": "89b65a3ad07d9dd5832253e37bc45f31872d10d7f9d5c9fd0fdd6088a83829dd",
+      "bytes": 4092631
+    }
+  ],
+  "installed_bootloader": "/home/folimeld-build/folimeld-candidates/fedora45-20261112/build venv/lib64/python3.14/site-packages/PyInstaller/bootloader/Linux-64bit-intel/run",
+  "bootloader_sha256": "4e7712dbbabe9bd98c1c8ecb9130fdac17706f805bbd5cb780af2c05f4050a42",
+  "bootloader_bytes": 68336,
+  "official_wheel_matches_installed_bootloader": true,
+  "executable_bootloader_matches_after_removing_pydata": true,
+  "extraction_command": [
+    "objcopy",
+    "--remove-section",
+    "pydata",
+    "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/source/dist/folimeld",
+    "/home/folimeld-build/folimeld-candidates/fedora45-notices-035-r2-20261113/bootloader-source-audit/bootloader-without-pydata"
+  ],
+  "restored_sha256": "4e7712dbbabe9bd98c1c8ecb9130fdac17706f805bbd5cb780af2c05f4050a42",
+  "initial_prefix_comparison": "Failed as expected for objcopy-added pydata section: section table offsets and section count differ; removing only pydata into new output restores byte-identical official run",
+  "source_bootloader_files": [
+    "pyinstaller-6.22.2/bootloader/src/main.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_apple_events.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_apple_events.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_archive.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_archive.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_dylib_python.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_dylib_python.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_dylib_tcltk.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_dylib_tcltk.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_exception_dialog.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_exception_dialog.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_global.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_global_posix.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_global_win32.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_launch.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_launch.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_main.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_main.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_multipkg.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_multipkg.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_path.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_path.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_pyconfig.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_pyconfig.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_pyconfig_pep587.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_pyconfig_pep587_v310.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_pyconfig_pep587_v311.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_pyconfig_pep587_v312.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_pyconfig_pep587_v313.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_pyconfig_pep587_v38.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_pyconfig_pep587_v39.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_pyconfig_pep741.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_python.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_python.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_security.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_security.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_splash.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_splash.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_splash_centering_win32.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_splash_centering_x11.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_utils.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_utils.h",
+    "pyinstaller-6.22.2/bootloader/src/pyi_utils_posix.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_utils_win32.c",
+    "pyinstaller-6.22.2/bootloader/src/pyi_utils_win32_low_level.c"
+  ],
+  "copying_notice_present": true,
+  "python": {
+    "version": "3.14.10 (main, Oct 26 2026, 00:00:00) [GCC 16.2.1 20260819 (Red Hat 16.2.1-2)]",
+    "base_prefix": "/usr",
+    "config_args": "'--build=x86_64-redhat-linux-gnu' '--host=x86_64-redhat-linux-gnu' '--program-prefix=' '--disable-dependency-tracking' '--prefix=/usr' '--exec-prefix=/usr' '--bindir=/usr/bin' '--sbindir=/usr/bin' '--sysconfdir=/etc' '--datadir=/usr/share' '--includedir=/usr/include' '--libdir=/usr/lib64' '--libexecdir=/usr/libexec' '--localstatedir=/var' '--runstatedir=/run' '--sharedstatedir=/var/lib' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--with-platlibdir=lib64' '--enable-ipv6' '--enable-shared' '--with-computed-gotos=yes' '--with-dbmliborder=gdbm:ndbm:bdb' '--with-system-expat' '--with-system-libmpdec' '--enable-loadable-sqlite-extensions' '--with-dtrace' '--with-lto' '--with-ssl-default-suites=openssl' '--without-static-libpython' '--with-wheel-pkg-dir=/usr/share/python-wheels' '--with-valgrind' '--without-ensurepip' '--enable-experimental-jit=yes-off' '--enable-optimizations' 'build_alias=x86_64-redhat-linux-gnu' 'host_alias=x86_64-redhat-linux-gnu' 'PKG_CONFIG_PATH=:/usr/lib64/pkgconfig:/usr/share/pkgconfig' 'CC=gcc' 'CFLAGS=-fcf-protection -fexceptions  ' 'LDFLAGS= ' 'CPPFLAGS='",
+    "scope": "Fedora python3.14 runtime already mapped to exact signed Fedora SRPM in OS native source audit"
+  },
+  "limitations": [
+    "Official release source and exact prebuilt wheel bootloader verified; historical compiler flags and bit-reproducible rebuild not independently reproduced",
+    "Existing candidate RPM and embedded 118-file material manifest unchanged"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "target": "/home/folimeld-test/verification/mime-gui-20261112/日本語 パス/関連付け 試験.pdf",
+  "sha256": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+  "original_and_copy_unchanged": true,
+  "commands": [
+    {
+      "command": [
+        "gio",
+        "info",
+        "-a",
+        "standard::content-type",
+        "/home/folimeld-test/verification/mime-gui-20261112/日本語 パス/関連付け 試験.pdf"
+      ],
+      "exit_code": 0,
+      "stdout": "uri: file:///home/folimeld-test/verification/mime-gui-20261112/%E6%97%A5%E6%9C%AC%E8%AA%9E%20%E3%83%91%E3%82%B9/%E9%96%A2%E9%80%A3%E4%BB%98%E3%81%91%20%E8%A9%A6%E9%A8%93.pdf\nlocal path: /home/folimeld-test/verification/mime-gui-20261112/日本語 パス/関連付け 試験.pdf\nunix mount: /dev/sdn / ext4 rw,relatime,discard,errors=remount-ro,data=ordered\nattributes:\n  standard::content-type: application/pdf\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "gio",
+        "mime",
+        "application/pdf",
+        "folimeld.desktop"
+      ],
+      "exit_code": 0,
+      "stdout": "Set folimeld.desktop as the default for application/pdf\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "gio",
+        "mime",
+        "application/pdf"
+      ],
+      "exit_code": 0,
+      "stdout": "Default application for “application/pdf”: folimeld.desktop\nRegistered applications:\n\tfolimeld.desktop\nRecommended applications:\n\tfolimeld.desktop\n",
+      "stderr": ""
+    }
+  ],
+  "initial_without_session": {
+    "exit_code": 0,
+    "gui_observed": false
+  },
+  "with_isolated_dbus": {
+    "result": {
+      "exit_code": 0,
+      "stdout": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+      "stderr": ""
+    },
+    "gui_observed": true,
+    "title": "関連付け 試験.pdf — Folimeld",
+    "pages_observed": 3
+  },
+  "desktop_entry": "[Desktop Entry]\nType=Application\nName=Folimeld\nComment=Edit and organize PDF pages\nExec=folimeld %f\nIcon=folimeld\nTerminal=false\nCategories=Office;Graphics;\nMimeType=application/pdf;\nStartupWMClass=Folimeld\n",
+  "binary_sha256": "d5395dec696d6a001633ec642da8a784ac0220ab02ac1a8973392fdde0a20d43",
+  "scope": "Dedicated XDG config only; WSLg X11; no file-manager double-click test",
+  "verification_gui_and_session_terminated": true,
+  "screenshot": {
+    "path": "documentation\\linux-opensuse-tumbleweed-extended-gui-verification\\08-mime-nonascii-loaded.png",
+    "sha256": "27e7ab6838036c38506702231da2d6be7bc64fbb5ebe8a0c7f8933bf5787f9fb"
+  }
+}

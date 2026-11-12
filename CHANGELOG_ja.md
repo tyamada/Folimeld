@@ -124,3 +124,8 @@
 ## 0.1.0 - 2026-08-29
 
 - 最初のリリース
+
+
+## openSUSE Tumbleweed 20261110 preview candidate
+
+- openSUSE Tumbleweed 20261110 amd64向け0.3.5試験候補。サムネイル描画修正と依存告知を収録。

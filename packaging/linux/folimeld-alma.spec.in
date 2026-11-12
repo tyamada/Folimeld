@@ -1,0 +1,49 @@
+# Local standalone distribution, not an AlmaLinux repository submission.
+# PyInstaller appends its archive to the ELF: do not strip or rewrite it.
+%global __os_install_post %{nil}
+%global debug_package %{nil}
+%global _build_id_links none
+
+Name: folimeld
+Version: @VERSION@
+Release: @REVISION@.@DIST_RELEASE@
+Summary: PDF page editor
+License: AGPL-3.0-only
+URL: https://github.com/tyamada/Folimeld
+Source0: folimeld
+Source1: folimeld.desktop
+Source2: folimeld.png
+Source3: LICENSE
+Requires: glibc >= @LIBC_VERSION@
+Requires: libdbus-1.so.3()(64bit)
+Requires: libgthread-2.0.so.0()(64bit)
+Requires: libEGL.so.1()(64bit)
+Requires: libGL.so.1()(64bit)
+Requires: libxkbcommon-x11.so.0()(64bit)
+Requires: libxcb-cursor.so.0()(64bit)
+Requires: libxcb-icccm.so.4()(64bit)
+Requires: libxcb-keysyms.so.1()(64bit)
+Requires: libxcb-shape.so.0()(64bit)
+Requires: fontconfig
+Recommends: google-noto-sans-cjk-ttc-fonts
+
+%description
+Folimeld is a desktop application for rearranging, rotating, inserting,
+deleting, and protecting PDF pages. This package contains a standalone build;
+bundled dependency notices and the build source record are embedded in it.
+
+%prep
+
+%build
+
+%install
+install -Dm755 "%{SOURCE0}" "%{buildroot}%{_bindir}/folimeld"
+install -Dm644 "%{SOURCE1}" "%{buildroot}%{_datadir}/applications/folimeld.desktop"
+install -Dm644 "%{SOURCE2}" "%{buildroot}%{_datadir}/icons/hicolor/256x256/apps/folimeld.png"
+install -Dm644 "%{SOURCE3}" "%{buildroot}%{_licensedir}/%{name}/LICENSE"
+
+%files
+%{_bindir}/folimeld
+%{_datadir}/applications/folimeld.desktop
+%{_datadir}/icons/hicolor/256x256/apps/folimeld.png
+%license %{_licensedir}/%{name}/LICENSE

@@ -1,0 +1,676 @@
+{
+  "date_jst": "2026-11-13",
+  "published": false,
+  "package": "folimeld-0.3.5-2.fc44.x86_64",
+  "binary_sha256": "c5fea766f7f508255a1c1bfdd68e1e59230d448b564f818d7a4150f0876da7f8",
+  "gio": {
+    "launch": {
+      "env": {
+        "SHELL": "/bin/bash",
+        "WSL2_GUI_APPS_ENABLED": "1",
+        "WSL_DISTRO_NAME": "Folimeld-Fedora44-Amd64-Test",
+        "NAME": "DESKTOP-8MG8TSN",
+        "PWD": "/mnt/c/Users/takum/Downloads/source/Folimeld",
+        "LOGNAME": "folimeld-test",
+        "HOME": "/home/folimeld-test",
+        "LANG": "en_US.UTF-8",
+        "WSL_INTEROP": "/run/WSL/212_interop",
+        "WAYLAND_DISPLAY": "wayland-0",
+        "TERM": "xterm-256color",
+        "USER": "folimeld-test",
+        "DISPLAY": ":0",
+        "SHLVL": "0",
+        "XDG_RUNTIME_DIR": "/home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/runtime",
+        "WSLENV": "",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/takum/AppData/Local/Microsoft/WindowsApps/Microsoft.PowerShell_8wekyb3d8bbwe:/mnt/c/Users/takum/.codex/tmp/arg0-windows/codex-arg0Hww25P:/mnt/c/Program Files/Oracle/VirtualBox:/mnt/c/Program Files/coreutils/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/takum/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/takum/.lmstudio/bin:/mnt/c/Users/takum/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/takum/AppData/Local/Python/bin:/mnt/c/Users/takum/AppData/Local/Python/pythoncore-3.14-64/Scripts:/mnt/c/Users/takum/AppData/Local/Programs/Swift/Toolchains/6.3.2+Asserts/usr/bin/:/mnt/c/Users/takum/AppData/Local/Programs/Swift/Runtimes/6.3.2/usr/bin/:/mnt/c/Users/takum/.dotnet/tools:/mnt/c/Users/takum/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/takum/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/takum/.vscode/extensions/openai.chatgpt-26.1106.51428-win32-x64/bin/windows-x86_64",
+        "HOSTTYPE": "x86_64",
+        "PULSE_SERVER": "unix:/mnt/wslg/PulseServer",
+        "_": "/usr/sbin/python3",
+        "QT_QPA_PLATFORM": "xcb",
+        "QT_IM_MODULE": "compose",
+        "XMODIFIERS": "",
+        "GIO_USE_PORTALS": "0",
+        "TMPDIR": "/home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/tmp",
+        "XDG_CONFIG_HOME": "/home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/config",
+        "XDG_CACHE_HOME": "/home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/cache",
+        "XDG_DATA_HOME": "/home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/data"
+      },
+      "commands": [
+        {
+          "command": [
+            "gio",
+            "info",
+            "-a",
+            "standard::content-type",
+            "/home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/日本語 パス/関連付け 試験.pdf"
+          ],
+          "exit_code": 0,
+          "stdout": "uri: file:///home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/%E6%97%A5%E6%9C%AC%E8%AA%9E%20%E3%83%91%E3%82%B9/%E9%96%A2%E9%80%A3%E4%BB%98%E3%81%91%20%E8%A9%A6%E9%A8%93.pdf\nlocal path: /home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/日本語 パス/関連付け 試験.pdf\nunix mount: /dev/sdd / ext4 rw,relatime,discard,errors=remount-ro,data=ordered\nattributes:\n  standard::content-type: application/pdf\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "gio",
+            "mime",
+            "application/pdf",
+            "folimeld.desktop"
+          ],
+          "exit_code": 0,
+          "stdout": "Set folimeld.desktop as the default for application/pdf\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "gio",
+            "mime",
+            "application/pdf"
+          ],
+          "exit_code": 0,
+          "stdout": "Default application for “application/pdf”: folimeld.desktop\nRegistered applications:\n\tfolimeld.desktop\nRecommended applications:\n\tfolimeld.desktop\n",
+          "stderr": ""
+        }
+      ],
+      "target": "/home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/日本語 パス/関連付け 試験.pdf",
+      "original": "/home/folimeld-test/verification/gui-20261112/fixtures/原本_日本語.pdf",
+      "initial_sha256": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+      "binary_sha256": "c5fea766f7f508255a1c1bfdd68e1e59230d448b564f818d7a4150f0876da7f8"
+    },
+    "completed": {
+      "result": {
+        "exit_code": 0,
+        "output_log": "gio-open.log"
+      },
+      "inputs_unchanged": true,
+      "application_processes_stopped": [
+        272,
+        274
+      ],
+      "session_stopped": 263,
+      "gui_observed": true,
+      "pages_observed": 3
+    },
+    "log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 9\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 9\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 9\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 9\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 9\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 9\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 9\nqt.text.font.db: OpenType support missing for \"D050000L\", script 9\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 9\nqt.text.font.db: OpenType support missing for \"C059\", script 9\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 9\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 9\nqt.text.font.db: OpenType support missing for \"P052\", script 9\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 9\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 9\nqt.text.font.db: OpenType support missing for \"Z003\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 66\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 66\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 66\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 66\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 66\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 66\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 66\nqt.text.font.db: OpenType support missing for \"D050000L\", script 66\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 66\nqt.text.font.db: OpenType support missing for \"C059\", script 66\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 66\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 66\nqt.text.font.db: OpenType support missing for \"P052\", script 66\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 66\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 66\nqt.text.font.db: OpenType support missing for \"Z003\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 10\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 10\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 10\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 10\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 10\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 10\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 10\nqt.text.font.db: OpenType support missing for \"D050000L\", script 10\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 10\nqt.text.font.db: OpenType support missing for \"C059\", script 10\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 10\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 10\nqt.text.font.db: OpenType support missing for \"P052\", script 10\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 10\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 10\nqt.text.font.db: OpenType support missing for \"Z003\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 14\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 14\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 14\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 14\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 14\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 14\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 14\nqt.text.font.db: OpenType support missing for \"D050000L\", script 14\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 14\nqt.text.font.db: OpenType support missing for \"C059\", script 14\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 14\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 14\nqt.text.font.db: OpenType support missing for \"P052\", script 14\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 14\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 14\nqt.text.font.db: OpenType support missing for \"Z003\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 18\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 18\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 18\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 18\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 18\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 18\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 18\nqt.text.font.db: OpenType support missing for \"D050000L\", script 18\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 18\nqt.text.font.db: OpenType support missing for \"C059\", script 18\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 18\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 18\nqt.text.font.db: OpenType support missing for \"P052\", script 18\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 18\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 18\nqt.text.font.db: OpenType support missing for \"Z003\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 12\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 12\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 12\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 12\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 12\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 12\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 12\nqt.text.font.db: OpenType support missing for \"D050000L\", script 12\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 12\nqt.text.font.db: OpenType support missing for \"C059\", script 12\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 12\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 12\nqt.text.font.db: OpenType support missing for \"P052\", script 12\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 12\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 12\nqt.text.font.db: OpenType support missing for \"Z003\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 13\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 13\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 13\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 13\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 13\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 13\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 13\nqt.text.font.db: OpenType support missing for \"D050000L\", script 13\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 13\nqt.text.font.db: OpenType support missing for \"C059\", script 13\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 13\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 13\nqt.text.font.db: OpenType support missing for \"P052\", script 13\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 13\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 13\nqt.text.font.db: OpenType support missing for \"Z003\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 20\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 20\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 20\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 20\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 20\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 20\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 20\nqt.text.font.db: OpenType support missing for \"D050000L\", script 20\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 20\nqt.text.font.db: OpenType support missing for \"C059\", script 20\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 20\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 20\nqt.text.font.db: OpenType support missing for \"P052\", script 20\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 20\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 20\nqt.text.font.db: OpenType support missing for \"Z003\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 32\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 32\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 32\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 32\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 32\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 32\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 32\nqt.text.font.db: OpenType support missing for \"D050000L\", script 32\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 32\nqt.text.font.db: OpenType support missing for \"C059\", script 32\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 32\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 32\nqt.text.font.db: OpenType support missing for \"P052\", script 32\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 32\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 32\nqt.text.font.db: OpenType support missing for \"Z003\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\n"
+  },
+  "ime": {
+    "engine": "mozc-jp",
+    "environment": {
+      "QT_QPA_PLATFORM": "xcb",
+      "QT_IM_MODULE": "ibus",
+      "GTK_IM_MODULE": "ibus",
+      "XMODIFIERS": "@im=ibus"
+    },
+    "roman_input": "nihongo",
+    "hiragana_observed": "にほんご",
+    "kanji_observed": "日本語",
+    "committed": true,
+    "field": "Qt file-open dialog filename; cancelled without opening or saving"
+  },
+  "license_tabs_observed": [
+    "Folimeld",
+    "ICU-73.2",
+    "LibTIFF-LZW",
+    "Linux-OS-runtime-notices",
+    "MuPDF-source-notices",
+    "Qt-additional-referenced-licenses",
+    "Qt-source-notices"
+  ],
+  "limitations": [
+    "WSLg X11 only; no full desktop or file-manager double-click",
+    "IBus and GUI tools already installed; this is not a minimal installation",
+    "IBus engine setter returned 1; actual engine query exit 0 reported mozc-jp; direct input toggled before conversion"
+  ],
+  "logs": {
+    "version035-r2-desktop-gio2-20261113": {
+      "gio-open.log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 9\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 9\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 9\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 9\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 9\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 9\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 9\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 9\nqt.text.font.db: OpenType support missing for \"D050000L\", script 9\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 9\nqt.text.font.db: OpenType support missing for \"C059\", script 9\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 9\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 9\nqt.text.font.db: OpenType support missing for \"P052\", script 9\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 9\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 9\nqt.text.font.db: OpenType support missing for \"Z003\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"\", script 9\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 66\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 66\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 66\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 66\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 66\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 66\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 66\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 66\nqt.text.font.db: OpenType support missing for \"D050000L\", script 66\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 66\nqt.text.font.db: OpenType support missing for \"C059\", script 66\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 66\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 66\nqt.text.font.db: OpenType support missing for \"P052\", script 66\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 66\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 66\nqt.text.font.db: OpenType support missing for \"Z003\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"\", script 66\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 10\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 10\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 10\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 10\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 10\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 10\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 10\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 10\nqt.text.font.db: OpenType support missing for \"D050000L\", script 10\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 10\nqt.text.font.db: OpenType support missing for \"C059\", script 10\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 10\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 10\nqt.text.font.db: OpenType support missing for \"P052\", script 10\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 10\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 10\nqt.text.font.db: OpenType support missing for \"Z003\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"\", script 10\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 14\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 14\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 14\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 14\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 14\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 14\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 14\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 14\nqt.text.font.db: OpenType support missing for \"D050000L\", script 14\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 14\nqt.text.font.db: OpenType support missing for \"C059\", script 14\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 14\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 14\nqt.text.font.db: OpenType support missing for \"P052\", script 14\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 14\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 14\nqt.text.font.db: OpenType support missing for \"Z003\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"\", script 14\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 18\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 18\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 18\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 18\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 18\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 18\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 18\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 18\nqt.text.font.db: OpenType support missing for \"D050000L\", script 18\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 18\nqt.text.font.db: OpenType support missing for \"C059\", script 18\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 18\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 18\nqt.text.font.db: OpenType support missing for \"P052\", script 18\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 18\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 18\nqt.text.font.db: OpenType support missing for \"Z003\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"\", script 18\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 12\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 12\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 12\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 12\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 12\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 12\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 12\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 12\nqt.text.font.db: OpenType support missing for \"D050000L\", script 12\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 12\nqt.text.font.db: OpenType support missing for \"C059\", script 12\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 12\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 12\nqt.text.font.db: OpenType support missing for \"P052\", script 12\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 12\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 12\nqt.text.font.db: OpenType support missing for \"Z003\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"\", script 12\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 13\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 13\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 13\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 13\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 13\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 13\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 13\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 13\nqt.text.font.db: OpenType support missing for \"D050000L\", script 13\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 13\nqt.text.font.db: OpenType support missing for \"C059\", script 13\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 13\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 13\nqt.text.font.db: OpenType support missing for \"P052\", script 13\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 13\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 13\nqt.text.font.db: OpenType support missing for \"Z003\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"\", script 13\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 20\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 20\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 20\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 20\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 20\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 20\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 20\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 20\nqt.text.font.db: OpenType support missing for \"D050000L\", script 20\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 20\nqt.text.font.db: OpenType support missing for \"C059\", script 20\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 20\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 20\nqt.text.font.db: OpenType support missing for \"P052\", script 20\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 20\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 20\nqt.text.font.db: OpenType support missing for \"Z003\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"\", script 20\nqt.text.font.db: OpenType support missing for \"Noto Sans\", script 32\nqt.text.font.db: OpenType support missing for \"Adwaita Sans\", script 32\nqt.text.font.db: OpenType support missing for \"Nimbus Sans\", script 32\nqt.text.font.db: OpenType support missing for \"Open Sans\", script 32\nqt.text.font.db: OpenType support missing for \"URW Gothic\", script 32\nqt.text.font.db: OpenType support missing for \"Nimbus Sans Narrow\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Arabic Kufi\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Armenian\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Devanagari\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Ethiopic\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Fallback\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Georgian\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Hebrew\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Japanese\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Tamil\", script 32\nqt.text.font.db: OpenType support missing for \"Droid Sans Thai\", script 32\nqt.text.font.db: OpenType support missing for \"Adwaita Mono\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK JP\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK KR\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK SC\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK TC\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans CJK HK\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK JP\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK KR\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK SC\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK TC\", script 32\nqt.text.font.db: OpenType support missing for \"Noto Sans Mono CJK HK\", script 32\nqt.text.font.db: OpenType support missing for \"D050000L\", script 32\nqt.text.font.db: OpenType support missing for \"Standard Symbols PS\", script 32\nqt.text.font.db: OpenType support missing for \"C059\", script 32\nqt.text.font.db: OpenType support missing for \"Nimbus Mono PS\", script 32\nqt.text.font.db: OpenType support missing for \"Nimbus Roman\", script 32\nqt.text.font.db: OpenType support missing for \"P052\", script 32\nqt.text.font.db: OpenType support missing for \"Cantarell\", script 32\nqt.text.font.db: OpenType support missing for \"URW Bookman\", script 32\nqt.text.font.db: OpenType support missing for \"Z003\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\nqt.text.font.db: OpenType support missing for \"\", script 32\n",
+      "session.log": ""
+    },
+    "version035-r2-ime3-20261113": {
+      "engine-result.json": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}",
+      "session.log": "dbus-daemon[459]: [session uid=1000 pid=459 pidfd=5] Activating service name='org.freedesktop.portal.IBus' requested by ':1.0' (uid=1000 pid=462 comm=\"ibus-daemon --daemonize --xim --panel=disable\" label=\"kernel\")\ndbus-daemon[459]: [session uid=1000 pid=459 pidfd=5] Successfully activated service 'org.freedesktop.portal.IBus'\ndbus-daemon[459]: [session uid=1000 pid=459 pidfd=5] Activating service name='org.a11y.Bus' requested by ':1.3' (uid=1000 pid=468 comm=\"/usr/libexec/ibus-extension-gtk3\" label=\"kernel\")\ndbus-daemon[459]: [session uid=1000 pid=459 pidfd=5] Successfully activated service 'org.a11y.Bus'\ndbus-daemon[459]: [session uid=1000 pid=459 pidfd=5] Activating service name='org.freedesktop.portal.Desktop' requested by ':1.5' (uid=1000 pid=468 comm=\"/usr/libexec/ibus-extension-gtk3\" label=\"kernel\")\ndbus-daemon[459]: [session uid=1000 pid=459 pidfd=5] Activating service name='org.freedesktop.impl.portal.PermissionStore' requested by ':1.6' (uid=1000 pid=512 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[459]: [session uid=1000 pid=459 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'\ndbus-daemon[459]: [session uid=1000 pid=459 pidfd=5] Activating service name='org.freedesktop.portal.Documents' requested by ':1.6' (uid=1000 pid=512 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[459]: [session uid=1000 pid=459 pidfd=5] Successfully activated service 'org.freedesktop.portal.Documents'\n\n(/usr/libexec/xdg-desktop-portal:512): xdg-desktop-portal-WARNING **: 06:26:43.888: Choosing gtk.portal for org.freedesktop.impl.portal.Access as a last-resort fallback\ndbus-daemon[459]: [session uid=1000 pid=459 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.6' (uid=1000 pid=512 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[507]: Activating service name='org.a11y.atspi.Registry' requested by ':1.1' (uid=1000 pid=534 comm=\"/usr/libexec/xdg-desktop-portal-gtk\" label=\"kernel\")\ndbus-daemon[459]: [session uid=1000 pid=459 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'\ndbus-daemon[507]: Successfully activated service 'org.a11y.atspi.Registry'\nSpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry\n\n(/usr/libexec/xdg-desktop-portal:512): xdg-desktop-portal-WARNING **: 06:26:43.928: Choosing gtk.portal for org.freedesktop.impl.portal.Settings as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:512): xdg-desktop-portal-WARNING **: 06:26:43.929: Choosing gtk.portal for org.freedesktop.impl.portal.FileChooser as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:512): xdg-desktop-portal-WARNING **: 06:26:43.929: Choosing gtk.portal for org.freedesktop.impl.portal.AppChooser as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:512): xdg-desktop-portal-WARNING **: 06:26:43.930: Choosing gtk.portal for org.freedesktop.impl.portal.Print as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:512): xdg-desktop-portal-WARNING **: 06:26:43.931: Choosing gtk.portal for org.freedesktop.impl.portal.Notification as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:512): xdg-desktop-portal-WARNING **: 06:26:43.932: Choosing gtk.portal for org.freedesktop.impl.portal.Inhibit as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:512): xdg-desktop-portal-WARNING **: 06:26:43.941: Failed to connect to PipeWire: Couldn't connect to PipeWire\n\n(/usr/libexec/xdg-desktop-portal:512): xdg-desktop-portal-WARNING **: 06:26:43.941: Choosing gtk.portal for org.freedesktop.impl.portal.Account as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:512): xdg-desktop-portal-WARNING **: 06:26:43.942: Choosing gtk.portal for org.freedesktop.impl.portal.Email as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:512): xdg-desktop-portal-WARNING **: 06:26:43.943: Choosing gtk.portal for org.freedesktop.impl.portal.DynamicLauncher as a last-resort fallback\ndbus-daemon[459]: [session uid=1000 pid=459 pidfd=5] Successfully activated service 'org.freedesktop.portal.Desktop'\n",
+      "engine-attempts.json": "[{\"setter_exit\": 1, \"query_exit\": 0, \"engine\": \"mozc-jp\"}]",
+      "app.log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+    }
+  },
+  "stopped_own_profile_processes": [
+    {
+      "pid": 264,
+      "command": "dbus-daemon --nofork --print-address 4 --session "
+    },
+    {
+      "pid": 265,
+      "command": "python3 /home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/session.py "
+    },
+    {
+      "pid": 458,
+      "command": "dbus-run-session -- python3 /home/folimeld-test/verification/version035-r2-ime3-20261113/session.py "
+    },
+    {
+      "pid": 459,
+      "command": "dbus-daemon --nofork --print-address 4 --session "
+    },
+    {
+      "pid": 460,
+      "command": "python3 /home/folimeld-test/verification/version035-r2-ime3-20261113/session.py "
+    },
+    {
+      "pid": 462,
+      "command": "ibus-daemon --daemonize --xim --panel=disable "
+    },
+    {
+      "pid": 470,
+      "command": "/usr/libexec/ibus-x11 --kill-daemon "
+    },
+    {
+      "pid": 501,
+      "command": "/usr/libexec/at-spi-bus-launcher "
+    },
+    {
+      "pid": 507,
+      "command": "/usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 12 --address=unix:path=/home/folimeld-test/verification/version035-r2-ime3-20261113/runtime/at-spi/bus_0 "
+    },
+    {
+      "pid": 512,
+      "command": ""
+    },
+    {
+      "pid": 518,
+      "command": ""
+    },
+    {
+      "pid": 524,
+      "command": "/usr/libexec/xdg-document-portal "
+    },
+    {
+      "pid": 534,
+      "command": ""
+    },
+    {
+      "pid": 559,
+      "command": "/usr/libexec/mozc/mozc_server "
+    },
+    {
+      "pid": 568,
+      "command": "/usr/bin/folimeld "
+    },
+    {
+      "pid": 569,
+      "command": "/usr/bin/folimeld "
+    },
+    {
+      "pid": 621,
+      "command": "/usr/libexec/mozc/mozc_renderer "
+    }
+  ],
+  "ui_logs": {
+    "version035-r2-desktop-gio2-20261113": {
+      "ui-shot-1794518788051198569.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600016",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-desktop/05-os.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794518785576155924.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600016",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-desktop/03-icu.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-right-1794518790436462593.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "--repeat",
+            "3",
+            "--delay",
+            "150",
+            "Right"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-click-1794518783490525771.json": [
+        {
+          "command": [
+            "xdotool",
+            "mousemove",
+            "--window",
+            "0x600016",
+            "50",
+            "132",
+            "click",
+            "1"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-right-1794518787800593062.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "--repeat",
+            "1",
+            "--delay",
+            "150",
+            "Right"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-right-1794518789044732004.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "--repeat",
+            "2",
+            "--delay",
+            "150",
+            "Right"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794518786960055228.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600016",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-desktop/04-tiff.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794518789297034515.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600016",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-desktop/06-mupdf.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794518751200488600.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600007",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-desktop/01-gio-loaded.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-right-1794518785281937307.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "--repeat",
+            "7",
+            "--delay",
+            "150",
+            "Right"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794518791760852345.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600016",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-desktop/08-qt-source.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-click-1794518751851327700.json": [
+        {
+          "command": [
+            "xdotool",
+            "mousemove",
+            "--window",
+            "0x600007",
+            "165",
+            "10",
+            "click",
+            "1"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-right-1794518786715710771.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "--repeat",
+            "3",
+            "--delay",
+            "150",
+            "Right"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-click-1794518752461921600.json": [
+        {
+          "command": [
+            "xdotool",
+            "mousemove",
+            "--window",
+            "0x600007",
+            "165",
+            "10",
+            "click",
+            "1"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-right-1794518791514206079.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "--repeat",
+            "1",
+            "--delay",
+            "150",
+            "Right"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-click-1794518760415340400.json": [
+        {
+          "command": [
+            "xdotool",
+            "mousemove",
+            "--window",
+            "0x600011",
+            "70",
+            "65",
+            "click",
+            "1"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794518782951058672.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600016",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-desktop/02-license.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794518790678404320.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600016",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-desktop/07-qt-extra.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    "version035-r2-ime3-20261113": {
+      "ui-click-1794518845456371855.json": [
+        {
+          "command": [
+            "xdotool",
+            "mousemove",
+            "--window",
+            "0xe00011",
+            "580",
+            "392",
+            "click",
+            "1"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-key-1794518825001733510.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "ctrl+a"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-open-1794518814915621553.json": [
+        {
+          "command": [
+            "xdotool",
+            "mousemove",
+            "--window",
+            "0xe00007",
+            "20",
+            "40",
+            "click",
+            "1"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794518829220911583.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0xe00011",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-desktop/11-ime-committed.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-key-1794518828965192056.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "Return"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794518828258999345.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0xe00011",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-desktop/10-ime-kanji.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-key-1794518825749537302.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "Zenkaku_Hankaku"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794518827268829767.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0xe00011",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-desktop/09-ime-hiragana.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-type-1794518827029581267.json": [
+        {
+          "command": [
+            "xdotool",
+            "type",
+            "--clearmodifiers",
+            "--delay",
+            "150",
+            "nihongo"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-key-1794518827970626234.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "space"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-click-1794518824251160998.json": [
+        {
+          "command": [
+            "xdotool",
+            "mousemove",
+            "--window",
+            "0xe00011",
+            "220",
+            "360",
+            "click",
+            "1"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    }
+  },
+  "screenshots": {
+    "documentation/linux-fedora44-035-r2-desktop/01-gio-loaded.png": "3c6d8cd6edb2a835b6e52d5705639a95143f0b0f3850a51b261a6a201580e86f",
+    "documentation/linux-fedora44-035-r2-desktop/02-license.png": "58ba28312b143ab58fc00b0fc7159a8e8d874f0800ca91e17efc6298ba6fae26",
+    "documentation/linux-fedora44-035-r2-desktop/03-icu.png": "8dd82b727fa3915a5fd72ee0ab1fcb1b904e889ed0f9a53e3ab291379ed403a5",
+    "documentation/linux-fedora44-035-r2-desktop/04-tiff.png": "ea47273868cd5ef0a56d5a4af8294b6fb980d1993072f608787f8a275141349a",
+    "documentation/linux-fedora44-035-r2-desktop/05-os.png": "7d7c2e49594ba684fe6708459710e990de652ee5e27cc6e73b5d15202ea3fa34",
+    "documentation/linux-fedora44-035-r2-desktop/06-mupdf.png": "7bdf52d33a653967823fae215b8bf756fdc6a14a8670ae128a68fd4bea9dbbef",
+    "documentation/linux-fedora44-035-r2-desktop/07-qt-extra.png": "c04a645b1522bf326987280dbc07821b9f37e8ca7235ac612704af2ac9811a5f",
+    "documentation/linux-fedora44-035-r2-desktop/08-qt-source.png": "7fff15a61c9c93c686c4a38736c84a35c1bcdce34f72a1fe2e2771e1ac69e395",
+    "documentation/linux-fedora44-035-r2-desktop/09-ime-hiragana.png": "6eb0ea30a50c6d0582b787d97be4362212862b73c419d10fa42a16e147f7cf64",
+    "documentation/linux-fedora44-035-r2-desktop/10-ime-kanji.png": "5667bb395f1f9b6356db384fa93c085121d66fc7bfdbad6ecc6e2b50d2edfd7d",
+    "documentation/linux-fedora44-035-r2-desktop/11-ime-committed.png": "6cef41ffd8068c6f0d6fdc0a75ff852b7577cd831efbc41ce34957712ec8d602"
+  }
+}

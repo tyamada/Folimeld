@@ -1,0 +1,112 @@
+{
+  "repository": "tyamada/Folimeld",
+  "branch": "release/almalinux9-amd64-0.3.5",
+  "commit": "03b14ec8c4410fbc7510aa9bedb27950e78cfc6e",
+  "tag": "almalinux9-amd64-v0.3.5",
+  "published": true,
+  "assets": [
+    {
+      "id": 739530422,
+      "name": "Folimeld-0.3.5-alma9-amd64-dependency-materials.tar",
+      "bytes": 1717278720,
+      "digest": "sha256:c85e44ae33a1d21072eb80a98d5b0b6e167650f0025ecf4031b1c999fc705a5d",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-fd7faf0062b8dde253b5/Folimeld-0.3.5-alma9-amd64-dependency-materials.tar",
+      "upload_seconds": 105.44
+    },
+    {
+      "id": 739536634,
+      "name": "Folimeld-0.3.5-alma9-amd64-notices.tar.gz",
+      "bytes": 1687806,
+      "digest": "sha256:7be8752ed1a6f13d4ef0f95a662e5a009cce62c1d5efffb774fd709dcf5bacf0",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-fd7faf0062b8dde253b5/Folimeld-0.3.5-alma9-amd64-notices.tar.gz",
+      "upload_seconds": 1.67
+    },
+    {
+      "id": 739536711,
+      "name": "Folimeld-source-f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079.json",
+      "bytes": 89002,
+      "digest": "sha256:8999a828de2c570586822736444b2f33625ff9c419c44fb6263b6d09723219e0",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-fd7faf0062b8dde253b5/Folimeld-source-f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079.json",
+      "upload_seconds": 0.86
+    },
+    {
+      "id": 739536757,
+      "name": "Folimeld-source-f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079.zip",
+      "bytes": 21838581,
+      "digest": "sha256:f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-fd7faf0062b8dde253b5/Folimeld-source-f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079.zip",
+      "upload_seconds": 2.14
+    },
+    {
+      "id": 739536868,
+      "name": "KNOWN-LIMITATIONS.txt",
+      "bytes": 1569,
+      "digest": "sha256:60d46b25c74db8be2b87870e3fcd2de6c369ed77e9d780040466d78f95929fe9",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-fd7faf0062b8dde253b5/KNOWN-LIMITATIONS.txt",
+      "upload_seconds": 0.57
+    },
+    {
+      "id": 739536912,
+      "name": "RELEASE-NOTES.txt",
+      "bytes": 3907,
+      "digest": "sha256:704d37f41a1bb8942925e087ec31c267558c11c6216dd77187f8a408edf67621",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-fd7faf0062b8dde253b5/RELEASE-NOTES.txt",
+      "upload_seconds": 0.72
+    },
+    {
+      "id": 739536944,
+      "name": "folimeld-0.3.5-5.alma9_8.x86_64.rpm",
+      "bytes": 103052936,
+      "digest": "sha256:0ba2c7dfc397f61b1ca70679838c93589310d116a267249d67dd822b8cb654bc",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-fd7faf0062b8dde253b5/folimeld-0.3.5-5.alma9_8.x86_64.rpm",
+      "upload_seconds": 7.87
+    },
+    {
+      "id": 739537337,
+      "name": "folimeld-0.3.5-5.alma9_8.x86_64.rpm-0ba2c7dfc397f61b1ca70679838c93589310d116a267249d67dd822b8cb654bc.json",
+      "bytes": 785,
+      "digest": "sha256:2c5fb6f7578c4d4038d271e3ee97008b7494a7491d7e8a3a99e559bffc40b520",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-fd7faf0062b8dde253b5/folimeld-0.3.5-5.alma9_8.x86_64.rpm-0ba2c7dfc397f61b1ca70679838c93589310d116a267249d67dd822b8cb654bc.json",
+      "upload_seconds": 0.94
+    },
+    {
+      "id": 739537397,
+      "name": "folimeld-82ada5680df8bb74da15b801ce59793b140a4789766d0caf4b7082a120ca470c.json",
+      "bytes": 693,
+      "digest": "sha256:2a4ad2fd8203c041908b2fec5dfc92e11cb111c88b6a7fe8ddabca45348af88d",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-fd7faf0062b8dde253b5/folimeld-82ada5680df8bb74da15b801ce59793b140a4789766d0caf4b7082a120ca470c.json",
+      "upload_seconds": 0.66
+    },
+    {
+      "id": 739537444,
+      "name": "libXau-gpg-verification.json",
+      "bytes": 5512,
+      "digest": "sha256:9ee0a0b5918236ecd684a441e968fb783459ad356434d37cacbc2014027dbed6",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-fd7faf0062b8dde253b5/libXau-gpg-verification.json",
+      "upload_seconds": 0.75
+    },
+    {
+      "id": 739537488,
+      "name": "verification-almalinux9-amd64-0.3.5.json",
+      "bytes": 1338,
+      "digest": "sha256:04da81460c78770e699436fb68f291f1c2b796051e41277478736f0a14e80eee",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-fd7faf0062b8dde253b5/verification-almalinux9-amd64-0.3.5.json",
+      "upload_seconds": 0.57
+    },
+    {
+      "id": 739537531,
+      "name": "SHA256SUMS.txt",
+      "bytes": 1322,
+      "digest": "sha256:c342a19f081f98207650eb3e055b746a7454cf1343e96d0275326cc6322f3fa4",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-fd7faf0062b8dde253b5/SHA256SUMS.txt",
+      "upload_seconds": 0.7
+    }
+  ],
+  "pushed": true,
+  "tag_created": true,
+  "release_id": 442962401,
+  "release_url": "https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5",
+  "draft": false,
+  "published_at": "2026-11-12T13:10:25Z",
+  "make_latest": false
+}
