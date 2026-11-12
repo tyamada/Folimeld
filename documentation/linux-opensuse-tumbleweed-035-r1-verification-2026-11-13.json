@@ -1,0 +1,459 @@
+{
+  "date_jst": "2026-11-13",
+  "version": "0.3.5",
+  "rpm_revision": 1,
+  "commit": "2f479d4cfa224be3aa8c25d51b8ec8583eecd073",
+  "branch": "release/opensuse-tumbleweed20261110-amd64-0.3.5",
+  "source_inputs_verified": 864,
+  "native_entries_verified": 206,
+  "wheel_entries": 105,
+  "os_entries": 101,
+  "signature_verified_source_rpms": 35,
+  "virtual_keyboard_entries": 0,
+  "official_bootloader_verified": true,
+  "fixed_build_venv_unchanged": true,
+  "tests": "409 passed, 9 skipped, 67 subtests passed in 19.28s",
+  "rpm_sha256": "7c0bc1b2301783acdf349d62fa1c18ae49c3c8bba6fb2963a3aefab3df6f8eea",
+  "elf_sha256": "3a7105609c67ca22cb47ba32e6e8fc9827ecea2d86e018d8477869798edc4af0",
+  "source_sha256": "1fe3d874a16320d40b55240776221cf967436e72a912d88985a7642ef067b573",
+  "gui": {
+    "rotation_undo_redo_move_blank_insert_delete": true,
+    "japanese_filename_save_reopen": true,
+    "saved_pages": 3,
+    "saved_rotations": [
+      90,
+      0,
+      0
+    ],
+    "saved_text_preserved": true,
+    "encrypted_gui_auth_rotate_save": true,
+    "saved_encrypted_wrong_password_rejected": true,
+    "saved_encrypted_reauthentication": true,
+    "image_gui_import_save": true,
+    "image_pdf_pages": 1,
+    "image_pdf_images": 1,
+    "image_pdf_center_rgb": [
+      0,
+      0,
+      255
+    ],
+    "ibus_mozc_conversion_commit": "nihongo -> にほんご -> 日本語",
+    "license_dialog": true
+  },
+  "limitations": [
+    "Dedicated Tumbleweed20261110 WSL2/WSLg x86_64 only; conventional desktops, ARM64, other distributions and public Ubuntu/Debian 0.3.4 migration unverified.",
+    "Official wheel byte matching and exact source RPM verification do not reconstruct historical wheel build settings; not a reproducible build or compliance certification.",
+    "RPM, checksum list and Git commit are unsigned.",
+    "Embedded preparation-time records still say audit pending; completed audit results are external attachments.",
+    "IBus engine switching returned 1, but the queried engine was mozc-on and actual Japanese conversion/commit passed. WSL systemd user-session startup warnings were retained; global settings were not changed."
+  ],
+  "lifecycle": {
+    "date_jst": "2026-11-13",
+    "commands": [
+      {
+        "command": [
+          "rpm",
+          "-q",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": "folimeld-0.3.3-3.tw20261110.x86_64\n"
+      },
+      {
+        "command": [
+          "rpm",
+          "-V",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": ""
+      },
+      {
+        "command": [
+          "zypper",
+          "--non-interactive",
+          "install",
+          "--allow-unsigned-rpm",
+          "--no-recommends",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld-0.3.5-1.tw20261110.x86_64.rpm"
+        ],
+        "exit_code": 0,
+        "output": "'/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld-0.3.5-1.tw20261110.x86_64.rpm' looks like an RPM file. Will try to use it.\nRefreshing service 'openSUSE'.\nRetrieving repository 'repo-non-oss' metadata [...\nLooking for gpg keys in repository repo-non-oss.\n  gpgkey=http://cdn.opensuse.org/tumbleweed/repo/non-oss/repodata/repomd.xml.key\n..........done]\nBuilding repository 'repo-non-oss' cache [....done]\nRetrieving repository 'repo-oss' metadata [...\nLooking for gpg keys in repository repo-oss.\n  gpgkey=http://cdn.opensuse.org/tumbleweed/repo/oss/repodata/repomd.xml.key\n....................................done]\nBuilding repository 'repo-oss' cache [....done]\nLoading repository data...\nReading installed packages...\nResolving package dependencies...\n\nThe following package is going to be upgraded:\n  folimeld\n\n1 package to upgrade.\n\nPackage download size:    98.4 MiB\n\nPackage install size change:\n              |      99.9 MiB  required by packages that will be installed\n     2.2 MiB  |  -   97.7 MiB  released by packages that will be removed\n\nBackend:  classic_rpmtrans\nContinue? [y/n/v/...? shows all options] (y): y\nRetrieving: folimeld-0.3.5-1.tw20261110.x86_64 (Plain RPM files cache) (1/1),  98.4 MiB    \n    Package header is not signed!\n\n\nChecking for file conflicts: [...done]\n(1/1) Installing: folimeld-0.3.5-1.tw20261110.x86_64 [.......done]\nRunning post-transaction scripts [...done]\n \n"
+      },
+      {
+        "command": [
+          "rpm",
+          "-ql",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": "/usr/bin/folimeld\n/usr/share/applications/folimeld.desktop\n/usr/share/icons/hicolor/256x256/apps/folimeld.png\n/usr/share/licenses/folimeld/LICENSE\n"
+      },
+      {
+        "command": [
+          "rpm",
+          "-V",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": ""
+      },
+      {
+        "command": [
+          "zypper",
+          "--non-interactive",
+          "verify",
+          "--dry-run"
+        ],
+        "exit_code": 0,
+        "output": "Refreshing service 'openSUSE'.\nLoading repository data...\nReading installed packages...\nDependencies of all installed packages are satisfied.\n"
+      },
+      {
+        "command": [
+          "runuser",
+          "-u",
+          "folimeld-test",
+          "--",
+          "env",
+          "QT_QPA_PLATFORM=offscreen",
+          "QT_IM_MODULE=compose",
+          "DISPLAY=:0",
+          "XDG_CONFIG_HOME=/home/folimeld-test/verification/version035-r1-20261113/startup-offscreen/config",
+          "XDG_CACHE_HOME=/home/folimeld-test/verification/version035-r1-20261113/startup-offscreen/cache",
+          "XDG_DATA_HOME=/home/folimeld-test/verification/version035-r1-20261113/startup-offscreen/data",
+          "XDG_RUNTIME_DIR=/home/folimeld-test/verification/version035-r1-20261113/startup-offscreen/runtime",
+          "TMPDIR=/home/folimeld-test/verification/version035-r1-20261113/startup-offscreen/tmp",
+          "timeout",
+          "12",
+          "/usr/bin/folimeld"
+        ],
+        "exit_code": 124,
+        "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nThis plugin does not support propagateSizeHints()\n"
+      },
+      {
+        "command": [
+          "runuser",
+          "-u",
+          "folimeld-test",
+          "--",
+          "env",
+          "QT_QPA_PLATFORM=xcb",
+          "QT_IM_MODULE=compose",
+          "DISPLAY=:0",
+          "XDG_CONFIG_HOME=/home/folimeld-test/verification/version035-r1-20261113/startup-xcb/config",
+          "XDG_CACHE_HOME=/home/folimeld-test/verification/version035-r1-20261113/startup-xcb/cache",
+          "XDG_DATA_HOME=/home/folimeld-test/verification/version035-r1-20261113/startup-xcb/data",
+          "XDG_RUNTIME_DIR=/home/folimeld-test/verification/version035-r1-20261113/startup-xcb/runtime",
+          "TMPDIR=/home/folimeld-test/verification/version035-r1-20261113/startup-xcb/tmp",
+          "timeout",
+          "12",
+          "/usr/bin/folimeld"
+        ],
+        "exit_code": 124,
+        "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+      },
+      {
+        "command": [
+          "zypper",
+          "--non-interactive",
+          "remove",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": "Reading installed packages...\nResolving package dependencies...\n\nThe following package is going to be REMOVED:\n  folimeld\n\n1 package to remove.\n\nPackage install size change:\n              |         0 B    required by packages that will be installed\n   -99.9 MiB  |  -   99.9 MiB  released by packages that will be removed\n\nBackend:  classic_rpmtrans\nContinue? [y/n/v/...? shows all options] (y): y\n(1/1) Removing: folimeld-0.3.5-1.tw20261110.x86_64 [..done]\nRunning post-transaction scripts [...done]\n \n"
+      },
+      {
+        "command": [
+          "zypper",
+          "--non-interactive",
+          "install",
+          "--allow-unsigned-rpm",
+          "--no-recommends",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld-0.3.5-1.tw20261110.x86_64.rpm"
+        ],
+        "exit_code": 0,
+        "output": "'/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld-0.3.5-1.tw20261110.x86_64.rpm' looks like an RPM file. Will try to use it.\nRefreshing service 'openSUSE'.\nLoading repository data...\nReading installed packages...\nResolving package dependencies...\n\nThe following NEW package is going to be installed:\n  folimeld\n\n1 new package to install.\n\nPackage download size:    98.4 MiB\n\nPackage install size change:\n              |      99.9 MiB  required by packages that will be installed\n    99.9 MiB  |  -      0 B    released by packages that will be removed\n\nBackend:  classic_rpmtrans\nContinue? [y/n/v/...? shows all options] (y): y\nRetrieving: folimeld-0.3.5-1.tw20261110.x86_64 (Plain RPM files cache) (1/1),  98.4 MiB    \n    Package header is not signed!\n\n\nChecking for file conflicts: [...done]\n(1/1) Installing: folimeld-0.3.5-1.tw20261110.x86_64 [......done]\nRunning post-transaction scripts [...done]\n"
+      },
+      {
+        "command": [
+          "rpm",
+          "-V",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": ""
+      },
+      {
+        "command": [
+          "zypper",
+          "--non-interactive",
+          "verify",
+          "--dry-run"
+        ],
+        "exit_code": 0,
+        "output": "Refreshing service 'openSUSE'.\nLoading repository data...\nReading installed packages...\nDependencies of all installed packages are satisfied.\n"
+      }
+    ],
+    "retained_files": {
+      "/home/folimeld-test/verification/gui-20261112/initial-hashes.json": "4a74d4b175bab9d0f28d5c640a1676b6e6cbd29612c5b3d0c5e06ca6fed52742",
+      "/home/folimeld-test/verification/gui-20261112/gui-process.json": "e7cfceca2945e5aa7d37274dcab1453873dc88e96f8849437740007c0be98b25",
+      "/home/folimeld-test/verification/gui-20261112/gui.log": "b28fe775117cf1a8c3496ad4156ce474056bdd786f752a11f794f5c39a1baa3f",
+      "/home/folimeld-test/verification/mime-gui-20261112/launch.json": "3fe7be6119cdfd81d911b49db53b9d7510baaa41080e937275414c9844dc2123",
+      "/home/folimeld-test/verification/mime-gui-20261112/session-env.json": "9bcb83bfe49f1cede0dc0772ed77dfd086c8dabf642dbf29198efcdd75db4d01",
+      "/home/folimeld-test/verification/mime-gui-20261112/session-pid": "40f8d6d22b99ea3388538fd60bbf532256434b0eac401df1d9a2bdbb29354ae8",
+      "/home/folimeld-test/verification/mime-gui-20261112/session-result.json": "b08c3d3a19638aec1c9bc2091a732271385e5859d0e9ad765b8b99e09733a24e",
+      "/home/folimeld-test/verification/mime-gui-20261112/session.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/mime-gui-20261112/app.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/mime-gui-20261112/session.py": "1ab22fb6d0f51b8fca66ef1a2953b4bf24f2790c819b155fd404145627b580ed",
+      "/home/folimeld-test/verification/extended-gui-20261112/ime-process.json": "145addebd0884239ef4172af705c790acf1188ccc29f058586cbcee7f92bcc09",
+      "/home/folimeld-test/verification/extended-gui-20261112/image-created.pdf": "977ecce838944b066ff0fe1f54a20a80d734bb218b471a63667b9c88ad81739e",
+      "/home/folimeld-test/verification/extended-gui-20261112/ime-app.log": "ae75cdd42be80a160fce8fe8caa8524204f2fdbb5e95dad6e136cb5fc8b9be7b",
+      "/home/folimeld-test/verification/extended-gui-20261112/encrypted-edited.pdf": "8d83008ffe4595bb3e13042dbd7fa2b5db7cb28830c04e83a4e19cbe474557f6",
+      "/home/folimeld-test/verification/extended-gui-20261112/ime-session.py": "7fd3abada60f0f977fdf53ca7374c89a972e927cfe8c00759c1b97e274ab5753",
+      "/home/folimeld-test/verification/extended-gui-20261112/launch.json": "0bde438685273eaadca40bb52f759b3ef75862ce42de92d7684e32cc83171fb0",
+      "/home/folimeld-test/verification/extended-gui-20261112/ime-env.json": "17665646851b4707ee9ce771a10df8097d741da8529388151767399eae450cdb",
+      "/home/folimeld-test/verification/extended-gui-20261112/ime-engine.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/extended-gui-20261112/ime-session.log": "dd15c997f87cb332c07efb40f84a8ec7ba800658d98e2640a5399c3f6996e007",
+      "/home/folimeld-test/verification/extended-gui-20261112/ime-session-pid": "6fc8f95bc6465849249d974d53eecc56c00ffda0fc3c7024bfa5b8e4d794b072",
+      "/home/folimeld-test/verification/extended-gui-20261112/app.log": "7c8a6b00331d31ba445f3aacd8c7aab552488c1d09d81b4835f3e420085414fe",
+      "/home/folimeld-test/verification/revision3-startup-20261112/results.json": "9d0a62685a813270e8a911a3bd3c9ce6875fb258a400227031c4414986d7748c",
+      "/home/folimeld-test/verification/revision3-startup-20261112/offscreen/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/revision3-startup-20261112/offscreen/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-x86_64.cache-12": "7151cf367eff2f448286e5c5a69c58a2cf9f9e7b2c06af494faf01a17eb4b01b",
+      "/home/folimeld-test/verification/revision3-startup-20261112/offscreen/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-x86_64.cache-12": "bf213dc088400f300ac63cab6b6f6a47f84be29efdce9e09a2070c0e75f0d5b5",
+      "/home/folimeld-test/verification/revision3-startup-20261112/offscreen/cache/fontconfig/CACHEDIR.TAG": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682",
+      "/home/folimeld-test/verification/revision3-startup-20261112/xcb/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/revision3-startup-20261112/xcb/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-x86_64.cache-12": "7151cf367eff2f448286e5c5a69c58a2cf9f9e7b2c06af494faf01a17eb4b01b",
+      "/home/folimeld-test/verification/revision3-startup-20261112/xcb/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-x86_64.cache-12": "bf213dc088400f300ac63cab6b6f6a47f84be29efdce9e09a2070c0e75f0d5b5",
+      "/home/folimeld-test/verification/revision3-startup-20261112/xcb/cache/fontconfig/CACHEDIR.TAG": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/QtProject.conf": "ed33b8c6f10dd8f553bfd6a6e530afc86bf8f1ab22e4247e4feaa1f8ea2cdc04",
+      "/home/folimeld-test/verification/extended-gui-20261112/image-input/image01.png": "a2c58fbf87ae17ad25b1680400fd9a3d5e627ff599a47286378d0f0111103613",
+      "/home/folimeld-test/verification/extended-gui-20261112/runtime/dconf/user": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/mozc/ibus_config.textproto": "3cf1d67a9934a0d108bb9ad7a5e91fe5267c76617362b5f48cd0744321d613e6",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/mozc/.server.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/mozc/cform.db": "3db51a9bcb26c682ccf0ceb355a69cf7a2e786c349d93124de580c7822d7e39e",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/mozc/.history.db": "226fcab6219d78d8129f706a5468854c635dc4efe7107edd4644ca1f004483be",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/mozc/segment.db": "8b3945c69a9660eb84d7393bbe02fdcd3f9742125a2f62c37d53914d0ec0a9fc",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/mozc/boundary.db": "c8f63af7a5bd1f3b2fc5bdc9aa65ab1be8873ca0f796eba519ef2dddbac7a8a1",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/mozc/.encrypt_key.db": "95f15fe7a2003768b7b7879c107c48f26ea8d66f245539340b193fa7605f87e6",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/mozc/.session.ipc": "1547a9e6204c8fb293f8e9827fb34eb873a74a5688969f034cd89e9ef1ae8a1b",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/Folimeld/Folimeld.conf": "3fb8083735063983f06fe28575efbb05652b165b9be5f649acccf9398b905100",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/ibus/bus/3cf59fb23929478d9889c8339999a89f-unix-wayland-0": "996bf85a984ffbbbdd6f22093b1dd77987b8f11f8a6f12843861f48a7b6c717c",
+      "/home/folimeld-test/verification/extended-gui-20261112/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/extended-gui-20261112/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-x86_64.cache-12": "7151cf367eff2f448286e5c5a69c58a2cf9f9e7b2c06af494faf01a17eb4b01b",
+      "/home/folimeld-test/verification/extended-gui-20261112/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-x86_64.cache-12": "bf213dc088400f300ac63cab6b6f6a47f84be29efdce9e09a2070c0e75f0d5b5",
+      "/home/folimeld-test/verification/extended-gui-20261112/cache/fontconfig/CACHEDIR.TAG": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682",
+      "/home/folimeld-test/verification/extended-gui-20261112/cache/ibus/bus/registry": "8628e1381c7f46011965d5c95db51bb227ed926fbba8278571b473cdc0e9d41e",
+      "/home/folimeld-test/verification/mime-gui-20261112/config/QtProject.conf": "7af3ebe4b3d05e6c9bc4d57e19a8702e4d24be1f9758ac5616809e0b356ce1ce",
+      "/home/folimeld-test/verification/mime-gui-20261112/config/mimeapps.list": "0f0cb9b8b62d826170c797de81c16d8ad2166233ba3f43e3bda313a21eacfb91",
+      "/home/folimeld-test/verification/mime-gui-20261112/日本語 パス/関連付け 試験.pdf": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+      "/home/folimeld-test/verification/mime-gui-20261112/日本語 パス/保存 結果.pdf": "ba37c6eeba454bdd1001c10717dd17fc2b8c0b2466151cfd9cc828e70d4313d8",
+      "/home/folimeld-test/verification/mime-gui-20261112/tmp/_MEI000002c2Kra33X/PIL/_imagingmath.cpython-314-x86_64-linux-gnu.so": "eb27d24bd91fa968b2fcd962e92e29d772e1798417acd5e236b7d391c954bf34",
+      "/home/folimeld-test/verification/mime-gui-20261112/tmp/_MEI000002c2Kra33X/PIL/_imagingcms.cpython-314-x86_64-linux-gnu.so": "7f900f62aaa7b71ca1e062f028d382f1c2d931ca0372f1be492c5db57a47cee9",
+      "/home/folimeld-test/verification/mime-gui-20261112/tmp/_MEI000002c2Kra33X/PIL/_webp.cpython-314-x86_64-linux-gnu.so": "e82c41f2cd5f2f0389dca4d0159d8bd9a736970e8f6aaf37c4b7bcad74443328",
+      "/home/folimeld-test/verification/mime-gui-20261112/tmp/_MEI000002c2Kra33X/PIL/_avif.cpython-314-x86_64-linux-gnu.so": "7fafe261651607b8e8e9fe3463867352809be974e1fc02960f57d7021d2ed206",
+      "/home/folimeld-test/verification/mime-gui-20261112/tmp/_MEI000002c2Kra33X/PIL/_imaging.cpython-314-x86_64-linux-gnu.so": "fdf8144377b394125d936c9a5acea2985797977304d8ac974ccb75256f03475c",
+      "/home/folimeld-test/verification/mime-gui-20261112/tmp/_MEI000002c2Kra33X/PIL/_imagingtk.cpython-314-x86_64-linux-gnu.so": "422418cdcceddcda7985ca17b4e49324aeee1f2dd35e7aa92acd5e436597d228",
+      "/home/folimeld-test/verification/mime-gui-20261112/tmp/_MEI000002c2Kra33X/PySide6/Qt/lib/libQt6Core.so.6": "521aba7fd66ac2adb030aa5f55ebb69aaec3e41f1b14afe5fac7ec5aa69dc466",
+      "/home/folimeld-test/verification/mime-gui-20261112/config/Folimeld/Folimeld.conf": "9dddf45cdcc64647c53ac10cb70e195a518afd8ba0ee4d2b5f5f5941eea64dba",
+      "/home/folimeld-test/verification/mime-gui-20261112/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/mime-gui-20261112/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-x86_64.cache-12": "7151cf367eff2f448286e5c5a69c58a2cf9f9e7b2c06af494faf01a17eb4b01b",
+      "/home/folimeld-test/verification/mime-gui-20261112/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-x86_64.cache-12": "bf213dc088400f300ac63cab6b6f6a47f84be29efdce9e09a2070c0e75f0d5b5",
+      "/home/folimeld-test/verification/mime-gui-20261112/cache/fontconfig/CACHEDIR.TAG": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682",
+      "/home/folimeld-test/verification/minimal-startup-retry-20261112/offscreen/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/minimal-startup-retry-20261112/offscreen/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-x86_64.cache-12": "7ddba79f4dedf50adcfc4dcf698c4391a2382a791f74aa60f9bf713fb9493f5f",
+      "/home/folimeld-test/verification/minimal-startup-retry-20261112/offscreen/cache/fontconfig/CACHEDIR.TAG": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682",
+      "/home/folimeld-test/verification/minimal-startup-retry-20261112/xcb/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/minimal-startup-retry-20261112/xcb/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-x86_64.cache-12": "7ddba79f4dedf50adcfc4dcf698c4391a2382a791f74aa60f9bf713fb9493f5f",
+      "/home/folimeld-test/verification/minimal-startup-retry-20261112/xcb/cache/fontconfig/CACHEDIR.TAG": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682",
+      "/home/folimeld-test/verification/gui-20261112/config/QtProject.conf": "f5926a038221b6652c6478ece177cb0fecbf16253f4010b5fabc3c5eae07b92e",
+      "/home/folimeld-test/verification/gui-20261112/fixtures/suse-edited.pdf": "1787b4b474f16e980d4ff2a8dfa1b8e1dbee09672babccb82046276d61b211ff",
+      "/home/folimeld-test/verification/gui-20261112/fixtures/原本_日本語.pdf": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+      "/home/folimeld-test/verification/gui-20261112/fixtures/暗号化.pdf": "48b63c2a0e9c3bf3f4e18d55d1104195310ac3dfa7986c04973f0f8319e70c0f",
+      "/home/folimeld-test/verification/gui-20261112/fixtures/画像/画像01.png": "a2c58fbf87ae17ad25b1680400fd9a3d5e627ff599a47286378d0f0111103613",
+      "/home/folimeld-test/verification/gui-20261112/config/Folimeld/Folimeld.conf": "94853acb40973c2a46bc7757d9cabbe539d8d107852d2cc8e932ce11e872bfd8",
+      "/home/folimeld-test/verification/gui-20261112/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/gui-20261112/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-x86_64.cache-12": "7151cf367eff2f448286e5c5a69c58a2cf9f9e7b2c06af494faf01a17eb4b01b",
+      "/home/folimeld-test/verification/gui-20261112/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-x86_64.cache-12": "bf213dc088400f300ac63cab6b6f6a47f84be29efdce9e09a2070c0e75f0d5b5",
+      "/home/folimeld-test/verification/gui-20261112/cache/fontconfig/CACHEDIR.TAG": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682"
+    },
+    "retained_unchanged": true,
+    "binary_sha256": "3a7105609c67ca22cb47ba32e6e8fc9827ecea2d86e018d8477869798edc4af0",
+    "package_files": [
+      "/usr/bin/folimeld",
+      "/usr/share/applications/folimeld.desktop",
+      "/usr/share/icons/hicolor/256x256/apps/folimeld.png",
+      "/usr/share/licenses/folimeld/LICENSE"
+    ]
+  },
+  "minimal_installroot": {
+    "commands": [
+      {
+        "command": [
+          "rpm",
+          "--root",
+          "/home/folimeld-test/verification/version035-r1-20261113/minimal-root",
+          "--initdb"
+        ],
+        "exit_code": 0,
+        "output": ""
+      },
+      {
+        "command": [
+          "rpm",
+          "--root",
+          "/home/folimeld-test/verification/version035-r1-20261113/minimal-root",
+          "--import",
+          "/usr/lib/rpm/gnupg/keys/gpg-pubkey-09d9ea69-68595a8c.asc",
+          "/usr/lib/rpm/gnupg/keys/gpg-pubkey-287a0027-682477e3.asc",
+          "/usr/lib/rpm/gnupg/keys/gpg-pubkey-29b700a4-6a17fa38.asc",
+          "/usr/lib/rpm/gnupg/keys/gpg-pubkey-39db7c82-66c5d91a.asc",
+          "/usr/lib/rpm/gnupg/keys/gpg-pubkey-3fa1d6ce-67c856ee.asc"
+        ],
+        "exit_code": 0,
+        "output": ""
+      },
+      {
+        "command": [
+          "zypper",
+          "--root",
+          "/home/folimeld-test/verification/version035-r1-20261113/minimal-root",
+          "--non-interactive",
+          "addrepo",
+          "https://cdn.opensuse.org/tumbleweed/repo/oss",
+          "tumbleweed-oss"
+        ],
+        "exit_code": 0,
+        "output": "Adding repository 'tumbleweed-oss' [.....done]\nRepository 'tumbleweed-oss' successfully added\n\nURI         : https://cdn.opensuse.org/tumbleweed/repo/oss\nEnabled     : Yes\nGPG Check   : Yes\nAutorefresh : No\nPriority    : 99 (default priority)\n\nRepository priorities are without effect. All enabled repositories share the same priority.\n"
+      },
+      {
+        "command": [
+          "zypper",
+          "--root",
+          "/home/folimeld-test/verification/version035-r1-20261113/minimal-root",
+          "--non-interactive",
+          "install",
+          "--allow-unsigned-rpm",
+          "--no-recommends",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld-0.3.5-1.tw20261110.x86_64.rpm"
+        ],
+        "exit_code": 0,
+        "output": "'/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld-0.3.5-1.tw20261110.x86_64.rpm' looks like an RPM file. Will try to use it.\nLooking for gpg keys in repository tumbleweed-oss.\n  gpgkey=https://cdn.opensuse.org/tumbleweed/repo/oss/repodata/repomd.xml.key\nBuilding repository 'tumbleweed-oss' cache [....done]\nLoading repository data...\nReading installed packages...\nResolving package dependencies...\n\nThe following 103 NEW packages are going to be installed:\n  bash bash-sh compat-usrmerge-tools coreutils dbus-1-common filesystem fillup folimeld fontconfig glibc libacl1 libattr1 libaudit1 libbrotlicommon1 libbrotlidec1 libbz2-1 libcap2 libcrypt1 libdbus-1-3 libdisplay-info3 libdrm2 libdrm_amdgpu1 libdrm_intel1 libeconf0 libedit0 libelf1 libexpat1 libffi8 libfontconfig1 libfreetype6 libgbm1 libgcc_s1 libglib-2_0-0 libglvnd libgmp10 libgthread-2_0-0 libLLVM23 libncurses6 libpciaccess0 libpcre2-8-0 libpkgconf7 libpng16-16 libreadline8 libselinux1 libsemanage2 libsemanage-conf libsepol2 libSPIRV-Tools-2026_4_rc2 libstdc++6 libsubid6 libsystemd0 libvulkan1 libvulkan_lvp libwayland-client0 libX11-6 libX11-data libX11-xcb1 libXau6 libxcb1 libxcb-cursor0 libxcb-dri3-0 libxcb-glx0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-present0 libxcb-randr0 libxcb-render0 libxcb-render-util0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxcb-xfixes0 libxcb-xkb1 libXext6 libxkbcommon0 libxkbcommon-x11-0 libxml2-16 libxshmfence1 libXxf86vm1 libz-ng-compat1 libzstd1 login_defs Mesa Mesa-dri Mesa-libEGL1 Mesa-libGL1 Mesa-vulkan-device-select pam patterns-glibc-hwcaps-x86_64_v3 permctl permissions permissions-config pkgconf pkgconf-m4 pkgconf-pkg-config shadow shadow-pw-mgmt system-user-root sysuser-shadow terminfo-base xkeyboard-config\n\nThe following NEW pattern is going to be installed:\n  x86_64_v3\n\n103 new packages to install.\n\nPackage download size:   164.7 MiB\n\nPackage install size change:\n              |     369.3 MiB  required by packages that will be installed\n   369.3 MiB  |  -      0 B    released by packages that will be removed\n\nBackend:  classic_rpmtrans\nContinue? [y/n/v/...? shows all options] (y): y\n\nChecking for file conflicts: [...done]\nWarning: 103 packages had to be excluded from file conflicts check because they are not yet downloaded.\n\n    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in\n    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'\n    in the zypper manual page for details.\n\nRetrieving: compat-usrmerge-tools-84.87-6.1.x86_64 (tumbleweed-oss) (1/103), 310.6 KiB    \nRetrieving: compat-usrmerge-tools-84.87-6.1.x86_64.rpm [.done]\n(  1/103) Installing: compat-usrmerge-tools-84.87-6.1.x86_64 [..done]\nRetrieving: libX11-data-1.8.14-1.1.noarch (tumbleweed-oss) (2/103), 142.9 KiB    \nRetrieving: libX11-data-1.8.14-1.1.noarch.rpm [.done]\n(  2/103) Installing: libX11-data-1.8.14-1.1.noarch [..done]\nRetrieving: libsemanage-conf-3.11-1.2.x86_64 (tumbleweed-oss) (3/103),  12.6 KiB    \nRetrieving: libsemanage-conf-3.11-1.2.x86_64.rpm [.done]\n(  3/103) Installing: libsemanage-conf-3.11-1.2.x86_64 [..done]\nRetrieving: pkgconf-m4-2.5.1-1.5.noarch (tumbleweed-oss) (4/103),  20.8 KiB    \nRetrieving: pkgconf-m4-2.5.1-1.5.noarch.rpm [.done]\n(  4/103) Installing: pkgconf-m4-2.5.1-1.5.noarch [..done]\nRetrieving: system-user-root-20190513-2.20.noarch (tumbleweed-oss) (5/103),   8.1 KiB    \nRetrieving: system-user-root-20190513-2.20.noarch.rpm [.done]\n(  5/103) Installing: system-user-root-20190513-2.20.noarch [..done]\nRetrieving: filesystem-84.87-21.2.x86_64 (tumbleweed-oss) (6/103),  70.4 KiB    \nRetrieving: filesystem-84.87-21.2.x86_64.rpm [.done]\n(  6/103) Installing: filesystem-84.87-21.2.x86_64 [...done]\nRetrieving: glibc-2.44-3.1.x86_64 (tumbleweed-oss) (7/103),   2.2 MiB    \nRetrieving: glibc-2.44-3.1.x86_64.rpm [.done]\n(  7/103) Installing: glibc-2.44-3.1.x86_64 [..done]\nRetrieving: patterns-glibc-hwcaps-x86_64_v3-20230201-3.7.x86_64 (tumbleweed-oss) (8/103),   7.6 KiB    \nRetrieving: patterns-glibc-hwcaps-x86_64_v3-20230201-3.7.x86_64.rpm [.done]\n(  8/103) Installing: patterns-glibc-hwcaps-x86_64_v3-20230201-3.7.x86_64 [..done]\nRetrieving: libzstd1-1.5.7-6.1.x86_64 (tumbleweed-oss) (9/103), 371.2 KiB    \nRetrieving: libzstd1-1.5.7-6.1.x86_64.rpm [.done]\n(  9/103) Installing: libzstd1-1.5.7-6.1.x86_64 [..done]\nRetrieving: libz-ng-compat1-2.3.3-2.4.x86_64 (tumbleweed-oss) (10/103), 101.7 KiB    \nRetrieving: libz-ng-compat1-2.3.3-2.4.x86_64.rpm [.done]\n( 10/103) Installing: libz-ng-compat1-2.3.3-2.4.x86_64 [..done]\nRetrieving: libxshmfence1-1.3.3-1.6.x86_64 (tumbleweed-oss) (11/103),  11.9 KiB    \nRetrieving: libxshmfence1-1.3.3-1.6.x86_64.rpm [.done]\n( 11/103) Installing: libxshmfence1-1.3.3-1.6.x86_64 [..done]\nRetrieving: libxml2-16-2.15.4-1.1.x86_64 (tumbleweed-oss) (12/103), 591.2 KiB    \nRetrieving: libxml2-16-2.15.4-1.1.x86_64.rpm [.done]\n( 12/103) Installing: libxml2-16-2.15.4-1.1.x86_64 [..done]\nRetrieving: libvulkan1-1.4.363-1.1.x86_64 (tumbleweed-oss) (13/103), 183.4 KiB    \nRetrieving: libvulkan1-1.4.363-1.1.x86_64.rpm [.done]\n( 13/103) Installing: libvulkan1-1.4.363-1.1.x86_64 [..done]\nRetrieving: libsystemd0-261.4-1.1.x86_64 (tumbleweed-oss) (14/103), 584.3 KiB    \nRetrieving: libsystemd0-261.4-1.1.x86_64.rpm [.done]\n( 14/103) Installing: libsystemd0-261.4-1.1.x86_64 [..done]\nRetrieving: libsepol2-3.11-1.2.x86_64 (tumbleweed-oss) (15/103), 347.0 KiB    \nRetrieving: libsepol2-3.11-1.2.x86_64.rpm [.done]\n( 15/103) Installing: libsepol2-3.11-1.2.x86_64 [..done]\nRetrieving: libpkgconf7-2.5.1-1.5.x86_64 (tumbleweed-oss) (16/103),  47.5 KiB    \nRetrieving: libpkgconf7-2.5.1-1.5.x86_64.rpm [.done]\n( 16/103) Installing: libpkgconf7-2.5.1-1.5.x86_64 [..done]\nRetrieving: libpcre2-8-0-10.49-2.1.x86_64 (tumbleweed-oss) (17/103), 333.8 KiB    \nRetrieving: libpcre2-8-0-10.49-2.1.x86_64.rpm [.done]\n( 17/103) Installing: libpcre2-8-0-10.49-2.1.x86_64 [..done]\nRetrieving: libncurses6-6.6.20261107-117.1.x86_64 (tumbleweed-oss) (18/103), 447.3 KiB    \nRetrieving: libncurses6-6.6.20261107-117.1.x86_64.rpm [.done]\n( 18/103) Installing: libncurses6-6.6.20261107-117.1.x86_64 [..done]\nRetrieving: terminfo-base-6.6.20261107-117.1.x86_64 (tumbleweed-oss) (19/103), 205.1 KiB    \nRetrieving: terminfo-base-6.6.20261107-117.1.x86_64.rpm [.done]\n( 19/103) Installing: terminfo-base-6.6.20261107-117.1.x86_64 [..done]\nRetrieving: libgmp10-6.3.0-5.6.x86_64 (tumbleweed-oss) (20/103), 307.1 KiB    \nRetrieving: libgmp10-6.3.0-5.6.x86_64.rpm [.done]\n( 20/103) Installing: libgmp10-6.3.0-5.6.x86_64 [..done]\nRetrieving: libgcc_s1-16.2.1+git9901-1.1.x86_64 (tumbleweed-oss) (21/103),  90.2 KiB    \nRetrieving: libgcc_s1-16.2.1+git9901-1.1.x86_64.rpm [.done]\n( 21/103) Installing: libgcc_s1-16.2.1+git9901-1.1.x86_64 [..done]\nRetrieving: libffi8-3.5.2-2.5.x86_64 (tumbleweed-oss) (22/103),  30.7 KiB    \nRetrieving: libffi8-3.5.2-2.5.x86_64.rpm [.done]\n( 22/103) Installing: libffi8-3.5.2-2.5.x86_64 [..done]\nRetrieving: libexpat1-2.10.0-1.1.x86_64 (tumbleweed-oss) (23/103),  99.0 KiB    \nRetrieving: libexpat1-2.10.0-1.1.x86_64.rpm [.done]\n( 23/103) Installing: libexpat1-2.10.0-1.1.x86_64 [..done]\nRetrieving: libeconf0-0.8.6-1.1.x86_64 (tumbleweed-oss) (24/103),  36.9 KiB    \nRetrieving: libeconf0-0.8.6-1.1.x86_64.rpm [.done]\n( 24/103) Installing: libeconf0-0.8.6-1.1.x86_64 [..done]\nRetrieving: libdrm2-2.4.134-2.2.x86_64 (tumbleweed-oss) (25/103),  53.7 KiB    \nRetrieving: libdrm2-2.4.134-2.2.x86_64.rpm [.done]\n( 25/103) Installing: libdrm2-2.4.134-2.2.x86_64 [..done]\nRetrieving: libdisplay-info3-0.3.0-2.5.x86_64 (tumbleweed-oss) (26/103),  82.1 KiB    \nRetrieving: libdisplay-info3-0.3.0-2.5.x86_64.rpm [.done]\n( 26/103) Installing: libdisplay-info3-0.3.0-2.5.x86_64 [..done]\nRetrieving: libcrypt1-4.5.2-2.4.x86_64 (tumbleweed-oss) (27/103), 119.4 KiB    \nRetrieving: libcrypt1-4.5.2-2.4.x86_64.rpm [.done]\n( 27/103) Installing: libcrypt1-4.5.2-2.4.x86_64 [..done]\nRetrieving: libcap2-2.78-1.4.x86_64 (tumbleweed-oss) (28/103),  39.7 KiB    \nRetrieving: libcap2-2.78-1.4.x86_64.rpm [.done]\n( 28/103) Installing: libcap2-2.78-1.4.x86_64 [..done]\nRetrieving: libbz2-1-1.0.8-7.1.x86_64 (tumbleweed-oss) (29/103),  45.9 KiB    \nRetrieving: libbz2-1-1.0.8-7.1.x86_64.rpm [.done]\n( 29/103) Installing: libbz2-1-1.0.8-7.1.x86_64 [..done]\nRetrieving: libbrotlicommon1-1.2.1-1.1.x86_64 (tumbleweed-oss) (30/103),  66.2 KiB    \nRetrieving: libbrotlicommon1-1.2.1-1.1.x86_64.rpm [.done]\n( 30/103) Installing: libbrotlicommon1-1.2.1-1.1.x86_64 [..done]\nRetrieving: libaudit1-4.0.2-3.5.x86_64 (tumbleweed-oss) (31/103),  57.7 KiB    \nRetrieving: libaudit1-4.0.2-3.5.x86_64.rpm [.done]\n( 31/103) Installing: libaudit1-4.0.2-3.5.x86_64 [..done]\nRetrieving: libattr1-2.6.0-1.2.x86_64 (tumbleweed-oss) (32/103),  33.9 KiB    \nRetrieving: libattr1-2.6.0-1.2.x86_64.rpm [.done]\n( 32/103) Installing: libattr1-2.6.0-1.2.x86_64 [..done]\nRetrieving: libacl1-2.4.0-1.2.x86_64 (tumbleweed-oss) (33/103),  40.4 KiB    \nRetrieving: libacl1-2.4.0-1.2.x86_64.rpm [.done]\n( 33/103) Installing: libacl1-2.4.0-1.2.x86_64 [..done]\nRetrieving: libXau6-1.0.12-2.5.x86_64 (tumbleweed-oss) (34/103),  15.9 KiB    \nRetrieving: libXau6-1.0.12-2.5.x86_64.rpm [.done]\n( 34/103) Installing: libXau6-1.0.12-2.5.x86_64 [..done]\nRetrieving: libX11-xcb1-1.8.14-1.1.x86_64 (tumbleweed-oss) (35/103),  18.2 KiB    \nRetrieving: libX11-xcb1-1.8.14-1.1.x86_64.rpm [.done]\n( 35/103) Installing: libX11-xcb1-1.8.14-1.1.x86_64 [..done]\nRetrieving: fillup-1.42-281.7.x86_64 (tumbleweed-oss) (36/103),  24.8 KiB    \nRetrieving: fillup-1.42-281.7.x86_64.rpm [.done]\n( 36/103) Installing: fillup-1.42-281.7.x86_64 [..done]\nRetrieving: libpng16-16-1.6.59-1.1.x86_64 (tumbleweed-oss) (37/103), 158.4 KiB    \nRetrieving: libpng16-16-1.6.59-1.1.x86_64.rpm [.done]\n( 37/103) Installing: libpng16-16-1.6.59-1.1.x86_64 [..done]\nRetrieving: libpciaccess0-0.19-1.4.x86_64 (tumbleweed-oss) (38/103),  28.1 KiB    \nRetrieving: libpciaccess0-0.19-1.4.x86_64.rpm [.done]\n( 38/103) Installing: libpciaccess0-0.19-1.4.x86_64 [..done]\nRetrieving: libelf1-0.196-2.1.x86_64 (tumbleweed-oss) (39/103),  64.6 KiB    \nRetrieving: libelf1-0.196-2.1.x86_64.rpm [.done]\n( 39/103) Installing: libelf1-0.196-2.1.x86_64 [..done]\nRetrieving: pkgconf-2.5.1-1.5.x86_64 (tumbleweed-oss) (40/103),  60.0 KiB    \nRetrieving: pkgconf-2.5.1-1.5.x86_64.rpm [.done]\n( 40/103) Installing: pkgconf-2.5.1-1.5.x86_64 [..done]\nRetrieving: libselinux1-3.11-2.1.x86_64 (tumbleweed-oss) (41/103), 106.1 KiB    \nRetrieving: libselinux1-3.11-2.1.x86_64.rpm [.done]\n( 41/103) Installing: libselinux1-3.11-2.1.x86_64 [..done]\nRetrieving: libglib-2_0-0-2.90.1-1.1.x86_64 (tumbleweed-oss) (42/103), 793.8 KiB    \nRetrieving: libglib-2_0-0-2.90.1-1.1.x86_64.rpm [.done]\n( 42/103) Installing: libglib-2_0-0-2.90.1-1.1.x86_64 [..done]\nRetrieving: libreadline8-8.3.6-3.1.x86_64 (tumbleweed-oss) (43/103), 185.0 KiB    \nRetrieving: libreadline8-8.3.6-3.1.x86_64.rpm [.done]\n( 43/103) Installing: libreadline8-8.3.6-3.1.x86_64 [..done]\nRetrieving: libedit0-20250104.3.1-1.5.x86_64 (tumbleweed-oss) (44/103), 107.0 KiB    \nRetrieving: libedit0-20250104.3.1-1.5.x86_64.rpm [.done]\n( 44/103) Installing: libedit0-20250104.3.1-1.5.x86_64 [..done]\nRetrieving: libstdc++6-16.2.1+git9901-1.1.x86_64 (tumbleweed-oss) (45/103), 835.8 KiB    \nRetrieving: libstdc++6-16.2.1+git9901-1.1.x86_64.rpm [.done]\n( 45/103) Installing: libstdc++6-16.2.1+git9901-1.1.x86_64 [..done]\nRetrieving: libwayland-client0-1.26.0-1.2.x86_64 (tumbleweed-oss) (46/103),  38.8 KiB    \nRetrieving: libwayland-client0-1.26.0-1.2.x86_64.rpm [.done]\n( 46/103) Installing: libwayland-client0-1.26.0-1.2.x86_64 [..done]\nRetrieving: libgbm1-26.2.6-1.1.x86_64 (tumbleweed-oss) (47/103),  64.6 KiB    \nRetrieving: libgbm1-26.2.6-1.1.x86_64.rpm [.not found]\nRetrieving: libgbm1-26.2.6-1.1.x86_64.rpm [...done (48.0 KiB/s)]\n( 47/103) Installing: libgbm1-26.2.6-1.1.x86_64 [..done]\nRetrieving: libdrm_amdgpu1-2.4.134-2.2.x86_64 (tumbleweed-oss) (48/103),  41.6 KiB    \nRetrieving: libdrm_amdgpu1-2.4.134-2.2.x86_64.rpm [..done (15.8 KiB/s)]\n( 48/103) Installing: libdrm_amdgpu1-2.4.134-2.2.x86_64 [..done]\nRetrieving: libbrotlidec1-1.2.1-1.1.x86_64 (tumbleweed-oss) (49/103),  32.1 KiB    \nRetrieving: libbrotlidec1-1.2.1-1.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 49/103) Installing: libbrotlidec1-1.2.1-1.1.x86_64 [..done]\nRetrieving: permctl-1699_20260917-2.1.x86_64 (tumbleweed-oss) (50/103), 449.3 KiB    \nRetrieving: permctl-1699_20260917-2.1.x86_64.rpm [......done (431.9 KiB/s)]\n( 50/103) Installing: permctl-1699_20260917-2.1.x86_64 [..done]\nRetrieving: libxcb1-1.17.0-2.7.x86_64 (tumbleweed-oss) (51/103),  54.2 KiB    \nRetrieving: libxcb1-1.17.0-2.7.x86_64.rpm [..done (15.8 KiB/s)]\n( 51/103) Installing: libxcb1-1.17.0-2.7.x86_64 [..done]\nRetrieving: libdrm_intel1-2.4.134-2.2.x86_64 (tumbleweed-oss) (52/103),  82.1 KiB    \nRetrieving: libdrm_intel1-2.4.134-2.2.x86_64.rpm [..done (15.8 KiB/s)]\n( 52/103) Installing: libdrm_intel1-2.4.134-2.2.x86_64 [..done]\nRetrieving: libsubid6-4.20.3-1.1.x86_64 (tumbleweed-oss) (53/103),  49.2 KiB    \nRetrieving: libsubid6-4.20.3-1.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 53/103) Installing: libsubid6-4.20.3-1.1.x86_64 [..done]\nRetrieving: libsemanage2-3.11-1.2.x86_64 (tumbleweed-oss) (54/103), 109.9 KiB    \nRetrieving: libsemanage2-3.11-1.2.x86_64.rpm [..done (15.8 KiB/s)]\n( 54/103) Installing: libsemanage2-3.11-1.2.x86_64 [..done]\nRetrieving: libgthread-2_0-0-2.90.1-1.1.x86_64 (tumbleweed-oss) (55/103),  70.3 KiB    \nRetrieving: libgthread-2_0-0-2.90.1-1.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 55/103) Installing: libgthread-2_0-0-2.90.1-1.1.x86_64 [..done]\nRetrieving: bash-5.3.20-10.1.x86_64 (tumbleweed-oss) (56/103), 691.8 KiB    \nRetrieving: bash-5.3.20-10.1.x86_64.rpm [...done (255.9 KiB/s)]\n( 56/103) Installing: bash-5.3.20-10.1.x86_64 [..done]\nRetrieving: bash-sh-5.3.20-10.1.noarch (tumbleweed-oss) (57/103),  25.0 KiB    \nRetrieving: bash-sh-5.3.20-10.1.noarch.rpm [..done (15.8 KiB/s)]\n( 57/103) Installing: bash-sh-5.3.20-10.1.noarch [..done]\nRetrieving: libSPIRV-Tools-2026_4_rc2-2026.4~rc2-1.1.x86_64 (tumbleweed-oss) (58/103),   1.7 MiB    \nRetrieving: libSPIRV-Tools-2026_4_rc2-2026.4~rc2-1.1.x86_64.rpm [...done (1.0 MiB/s)]\n( 58/103) Installing: libSPIRV-Tools-2026_4_rc2-2026.4~rc2-1.1.x86_64 [..done]\nRetrieving: libLLVM23-23.1.4-1.2.x86_64 (tumbleweed-oss) (59/103),  33.9 MiB    \nRetrieving: libLLVM23-23.1.4-1.2.x86_64.rpm [..................done (32.2 MiB/s)]\n( 59/103) Installing: libLLVM23-23.1.4-1.2.x86_64 [.........done]\nRetrieving: libfreetype6-2.15.0-2.1.x86_64 (tumbleweed-oss) (60/103), 604.5 KiB    \nRetrieving: libfreetype6-2.15.0-2.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 60/103) Installing: libfreetype6-2.15.0-2.1.x86_64 [..done]\nRetrieving: libxcb-xkb1-1.17.0-2.7.x86_64 (tumbleweed-oss) (61/103),  39.4 KiB    \nRetrieving: libxcb-xkb1-1.17.0-2.7.x86_64.rpm [..done (15.8 KiB/s)]\n( 61/103) Installing: libxcb-xkb1-1.17.0-2.7.x86_64 [..done]\nRetrieving: libxcb-xfixes0-1.17.0-2.7.x86_64 (tumbleweed-oss) (62/103),  17.2 KiB    \nRetrieving: libxcb-xfixes0-1.17.0-2.7.x86_64.rpm [..done (15.8 KiB/s)]\n( 62/103) Installing: libxcb-xfixes0-1.17.0-2.7.x86_64 [..done]\nRetrieving: libxcb-util1-0.4.1-1.10.x86_64 (tumbleweed-oss) (63/103),  16.0 KiB    \nRetrieving: libxcb-util1-0.4.1-1.10.x86_64.rpm [..done (15.8 KiB/s)]\n( 63/103) Installing: libxcb-util1-0.4.1-1.10.x86_64 [..done]\nRetrieving: libxcb-sync1-1.17.0-2.7.x86_64 (tumbleweed-oss) (64/103),  16.7 KiB    \nRetrieving: libxcb-sync1-1.17.0-2.7.x86_64.rpm [..done (15.8 KiB/s)]\n( 64/103) Installing: libxcb-sync1-1.17.0-2.7.x86_64 [..done]\nRetrieving: libxcb-shm0-1.17.0-2.7.x86_64 (tumbleweed-oss) (65/103),  13.4 KiB    \nRetrieving: libxcb-shm0-1.17.0-2.7.x86_64.rpm [..done (13.4 KiB/s)]\n( 65/103) Installing: libxcb-shm0-1.17.0-2.7.x86_64 [..done]\nRetrieving: libxcb-shape0-1.17.0-2.7.x86_64 (tumbleweed-oss) (66/103),  13.6 KiB    \nRetrieving: libxcb-shape0-1.17.0-2.7.x86_64.rpm [..done (13.6 KiB/s)]\n( 66/103) Installing: libxcb-shape0-1.17.0-2.7.x86_64 [..done]\nRetrieving: libxcb-render0-1.17.0-2.7.x86_64 (tumbleweed-oss) (67/103),  23.1 KiB    \nRetrieving: libxcb-render0-1.17.0-2.7.x86_64.rpm [..done (15.8 KiB/s)]\n( 67/103) Installing: libxcb-render0-1.17.0-2.7.x86_64 [..done]\nRetrieving: libxcb-randr0-1.17.0-2.7.x86_64 (tumbleweed-oss) (68/103),  24.8 KiB    \nRetrieving: libxcb-randr0-1.17.0-2.7.x86_64.rpm [..done (15.8 KiB/s)]\n( 68/103) Installing: libxcb-randr0-1.17.0-2.7.x86_64 [..done]\nRetrieving: libxcb-present0-1.17.0-2.7.x86_64 (tumbleweed-oss) (69/103),  13.4 KiB    \nRetrieving: libxcb-present0-1.17.0-2.7.x86_64.rpm [..done (13.4 KiB/s)]\n( 69/103) Installing: libxcb-present0-1.17.0-2.7.x86_64 [..done]\nRetrieving: libxcb-keysyms1-0.4.1-1.11.x86_64 (tumbleweed-oss) (70/103),  12.1 KiB    \nRetrieving: libxcb-keysyms1-0.4.1-1.11.x86_64.rpm [..done (12.1 KiB/s)]\n( 70/103) Installing: libxcb-keysyms1-0.4.1-1.11.x86_64 [..done]\nRetrieving: libxcb-icccm4-0.4.2-1.10.x86_64 (tumbleweed-oss) (71/103),  14.9 KiB    \nRetrieving: libxcb-icccm4-0.4.2-1.10.x86_64.rpm [..done (14.9 KiB/s)]\n( 71/103) Installing: libxcb-icccm4-0.4.2-1.10.x86_64 [..done]\nRetrieving: libxcb-glx0-1.17.0-2.7.x86_64 (tumbleweed-oss) (72/103),  30.7 KiB    \nRetrieving: libxcb-glx0-1.17.0-2.7.x86_64.rpm [..done (15.8 KiB/s)]\n( 72/103) Installing: libxcb-glx0-1.17.0-2.7.x86_64 [..done]\nRetrieving: libxcb-dri3-0-1.17.0-2.7.x86_64 (tumbleweed-oss) (73/103),  14.7 KiB    \nRetrieving: libxcb-dri3-0-1.17.0-2.7.x86_64.rpm [..done (14.7 KiB/s)]\n( 73/103) Installing: libxcb-dri3-0-1.17.0-2.7.x86_64 [..done]\nRetrieving: libX11-6-1.8.14-1.1.x86_64 (tumbleweed-oss) (74/103), 678.8 KiB    \nRetrieving: libX11-6-1.8.14-1.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 74/103) Installing: libX11-6-1.8.14-1.1.x86_64 [..done]\nRetrieving: pkgconf-pkg-config-2.5.1-1.5.x86_64 (tumbleweed-oss) (75/103),  16.0 KiB    \nRetrieving: pkgconf-pkg-config-2.5.1-1.5.x86_64.rpm [..done (15.8 KiB/s)]\n( 75/103) Installing: pkgconf-pkg-config-2.5.1-1.5.x86_64 [..done]\nRetrieving: login_defs-4.20.3-1.1.noarch (tumbleweed-oss) (76/103),  47.8 KiB    \nRetrieving: login_defs-4.20.3-1.1.noarch.rpm [..done (15.8 KiB/s)]\n( 76/103) Installing: login_defs-4.20.3-1.1.noarch [..done]\nRetrieving: coreutils-9.12-1.1.x86_64 (tumbleweed-oss) (77/103),   1.2 MiB    \nRetrieving: coreutils-9.12-1.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 77/103) Installing: coreutils-9.12-1.1.x86_64 [..done]\nRetrieving: fontconfig-2.18.3-1.1.x86_64 (tumbleweed-oss) (78/103),  70.1 KiB    \nRetrieving: fontconfig-2.18.3-1.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 78/103) Installing: fontconfig-2.18.3-1.1.x86_64 [..done]\nRetrieving: libfontconfig1-2.18.3-1.1.x86_64 (tumbleweed-oss) (79/103), 183.0 KiB    \nRetrieving: libfontconfig1-2.18.3-1.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 79/103) Installing: libfontconfig1-2.18.3-1.1.x86_64 [..done]\nRetrieving: libxcb-image0-0.4.1-1.12.x86_64 (tumbleweed-oss) (80/103),  16.9 KiB    \nRetrieving: libxcb-image0-0.4.1-1.12.x86_64.rpm [..done (15.8 KiB/s)]\n( 80/103) Installing: libxcb-image0-0.4.1-1.12.x86_64 [..done]\nRetrieving: libxcb-render-util0-0.3.10-1.11.x86_64 (tumbleweed-oss) (81/103),  14.1 KiB    \nRetrieving: libxcb-render-util0-0.3.10-1.11.x86_64.rpm [..done (14.1 KiB/s)]\n( 81/103) Installing: libxcb-render-util0-0.3.10-1.11.x86_64 [..done]\nRetrieving: Mesa-vulkan-device-select-26.2.6-1.1.x86_64 (tumbleweed-oss) (82/103), 100.1 KiB    \nRetrieving: Mesa-vulkan-device-select-26.2.6-1.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 82/103) Installing: Mesa-vulkan-device-select-26.2.6-1.1.x86_64 [..done]\nRetrieving: libXext6-1.3.7-1.5.x86_64 (tumbleweed-oss) (83/103),  38.0 KiB    \nRetrieving: libXext6-1.3.7-1.5.x86_64.rpm [..done (15.8 KiB/s)]\n( 83/103) Installing: libXext6-1.3.7-1.5.x86_64 [..done]\nRetrieving: xkeyboard-config-2.48-2.1.noarch (tumbleweed-oss) (84/103), 441.6 KiB    \nRetrieving: xkeyboard-config-2.48-2.1.noarch.rpm [..done (15.8 KiB/s)]\n( 84/103) Installing: xkeyboard-config-2.48-2.1.noarch [..done]\nRetrieving: permissions-config-1699_20260917-2.1.noarch (tumbleweed-oss) (85/103),  28.6 KiB    \nRetrieving: permissions-config-1699_20260917-2.1.noarch.rpm [..done (15.8 KiB/s)]\n( 85/103) Installing: permissions-config-1699_20260917-2.1.noarch [..\nUpdating /etc/sysconfig/security ...\nChecking permissions and ownerships - using the permissions files\n\t/usr/share/permissions/permissions\n\t/usr/share/permissions/permissions.easy\n\t/etc/permissions.local\ndone]\nRetrieving: libxcb-cursor0-0.1.6-1.5.x86_64 (tumbleweed-oss) (86/103),  17.7 KiB    \nRetrieving: libxcb-cursor0-0.1.6-1.5.x86_64.rpm [..done (15.8 KiB/s)]\n( 86/103) Installing: libxcb-cursor0-0.1.6-1.5.x86_64 [..done]\nRetrieving: libvulkan_lvp-26.2.6-1.1.x86_64 (tumbleweed-oss) (87/103),   2.4 MiB    \nRetrieving: libvulkan_lvp-26.2.6-1.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 87/103) Installing: libvulkan_lvp-26.2.6-1.1.x86_64 [..done]\nRetrieving: libXxf86vm1-1.1.7-1.5.x86_64 (tumbleweed-oss) (88/103),  17.9 KiB    \nRetrieving: libXxf86vm1-1.1.7-1.5.x86_64.rpm [..done (15.8 KiB/s)]\n( 88/103) Installing: libXxf86vm1-1.1.7-1.5.x86_64 [..done]\nRetrieving: libxkbcommon0-1.13.2-1.3.x86_64 (tumbleweed-oss) (89/103), 176.1 KiB    \nRetrieving: libxkbcommon0-1.13.2-1.3.x86_64.rpm [..done (15.8 KiB/s)]\n( 89/103) Installing: libxkbcommon0-1.13.2-1.3.x86_64 [..done]\nRetrieving: permissions-1699_20260917-2.1.x86_64 (tumbleweed-oss) (90/103),  16.6 KiB    \nRetrieving: permissions-1699_20260917-2.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 90/103) Installing: permissions-1699_20260917-2.1.x86_64 [..done]\nRetrieving: Mesa-26.2.6-1.1.x86_64 (tumbleweed-oss) (91/103),  62.9 KiB    \nRetrieving: Mesa-26.2.6-1.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 91/103) Installing: Mesa-26.2.6-1.1.x86_64 [..done]\nRetrieving: Mesa-dri-26.2.6-1.1.x86_64 (tumbleweed-oss) (92/103),  11.3 MiB    \nRetrieving: Mesa-dri-26.2.6-1.1.x86_64.rpm [.....done (11.1 MiB/s)]\n( 92/103) Installing: Mesa-dri-26.2.6-1.1.x86_64 [....done]\nRetrieving: libglvnd-1.7.0-2.4.x86_64 (tumbleweed-oss) (93/103), 388.0 KiB    \nRetrieving: libglvnd-1.7.0-2.4.x86_64.rpm [..done (15.8 KiB/s)]\n( 93/103) Installing: libglvnd-1.7.0-2.4.x86_64 [..done]\nRetrieving: Mesa-libEGL1-26.2.6-1.1.x86_64 (tumbleweed-oss) (94/103), 196.9 KiB    \nRetrieving: Mesa-libEGL1-26.2.6-1.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 94/103) Installing: Mesa-libEGL1-26.2.6-1.1.x86_64 [..done]\nRetrieving: libxkbcommon-x11-0-1.13.2-1.3.x86_64 (tumbleweed-oss) (95/103),  30.0 KiB    \nRetrieving: libxkbcommon-x11-0-1.13.2-1.3.x86_64.rpm [..done (15.8 KiB/s)]\n( 95/103) Installing: libxkbcommon-x11-0-1.13.2-1.3.x86_64 [..done]\nRetrieving: pam-1.7.3-1.1.x86_64 (tumbleweed-oss) (96/103), 359.1 KiB    \nRetrieving: pam-1.7.3-1.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 96/103) Installing: pam-1.7.3-1.1.x86_64 [..\n/usr/sbin/unix_chkpwd: rpm sub-process exited with 125. Cannot determine package ownership.\ndone]\nRetrieving: Mesa-libGL1-26.2.6-1.1.x86_64 (tumbleweed-oss) (97/103), 188.5 KiB    \nRetrieving: Mesa-libGL1-26.2.6-1.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 97/103) Installing: Mesa-libGL1-26.2.6-1.1.x86_64 [..done]\nRetrieving: shadow-pw-mgmt-4.20.3-1.1.x86_64 (tumbleweed-oss) (98/103), 131.2 KiB    \nRetrieving: shadow-pw-mgmt-4.20.3-1.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 98/103) Installing: shadow-pw-mgmt-4.20.3-1.1.x86_64 [..\n/usr/bin/newgidmap: setting to root:root 0755 \"cap_setgid=ep\". (missing capabilities)\n/usr/bin/newuidmap: setting to root:root 0755 \"cap_setuid=ep\". (missing capabilities)\ndone]\nRetrieving: shadow-4.20.3-1.1.x86_64 (tumbleweed-oss) (99/103), 639.8 KiB    \nRetrieving: shadow-4.20.3-1.1.x86_64.rpm [..done (15.8 KiB/s)]\n( 99/103) Installing: shadow-4.20.3-1.1.x86_64 [..\n/usr/bin/gpasswd: rpm sub-process exited with 125. Cannot determine package ownership.\n/usr/bin/newgrp: rpm sub-process exited with 125. Cannot determine package ownership.\ndone]\nRetrieving: sysuser-shadow-3.3-12.3.noarch (tumbleweed-oss) (100/103),  10.4 KiB    \nRetrieving: sysuser-shadow-3.3-12.3.noarch.rpm [..done (10.4 KiB/s)]\n(100/103) Installing: sysuser-shadow-3.3-12.3.noarch [..done]\nRetrieving: dbus-1-common-1.14.10-5.7.noarch (tumbleweed-oss) (101/103),  18.8 KiB    \nRetrieving: dbus-1-common-1.14.10-5.7.noarch.rpm [..done (15.8 KiB/s)]\n(101/103) Installing: dbus-1-common-1.14.10-5.7.noarch [..\n/usr/sbin/useradd -r -c User for D-Bus -d /run/dbus -U messagebus -s /usr/sbin/nologin\ndone]\nRetrieving: libdbus-1-3-1.14.10-5.7.x86_64 (tumbleweed-oss) (102/103), 150.5 KiB    \nRetrieving: libdbus-1-3-1.14.10-5.7.x86_64.rpm [..done (15.8 KiB/s)]\n(102/103) Installing: libdbus-1-3-1.14.10-5.7.x86_64 [..done]\nRetrieving: folimeld-0.3.5-1.tw20261110.x86_64 (Plain RPM files cache) (103/103),  98.4 MiB    \n    Package header is not signed!\n\n(103/103) Installing: folimeld-0.3.5-1.tw20261110.x86_64 [......done]\nRunning post-transaction scripts [...done]\n"
+      },
+      {
+        "command": [
+          "rpm",
+          "--root",
+          "/home/folimeld-test/verification/version035-r1-20261113/minimal-root",
+          "-V",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": ""
+      },
+      {
+        "command": [
+          "rpm",
+          "--root",
+          "/home/folimeld-test/verification/version035-r1-20261113/minimal-root",
+          "-qa",
+          "--qf",
+          "%{NAME}\n"
+        ],
+        "exit_code": 0,
+        "output": "gpg-pubkey\ngpg-pubkey\ngpg-pubkey\ngpg-pubkey\ngpg-pubkey\ncompat-usrmerge-tools\nlibX11-data\nlibsemanage-conf\npkgconf-m4\nsystem-user-root\nfilesystem\nglibc\npatterns-glibc-hwcaps-x86_64_v3\nlibzstd1\nlibz-ng-compat1\nlibxshmfence1\nlibxml2-16\nlibvulkan1\nlibsystemd0\nlibsepol2\nlibpkgconf7\nlibpcre2-8-0\nlibncurses6\nterminfo-base\nlibgmp10\nlibgcc_s1\nlibffi8\nlibexpat1\nlibeconf0\nlibdrm2\nlibdisplay-info3\nlibcrypt1\nlibcap2\nlibbz2-1\nlibbrotlicommon1\nlibaudit1\nlibattr1\nlibacl1\nlibXau6\nlibX11-xcb1\nfillup\nlibpng16-16\nlibpciaccess0\nlibelf1\npkgconf\nlibselinux1\nlibglib-2_0-0\nlibreadline8\nlibedit0\nlibstdc++6\nlibwayland-client0\nlibgbm1\nlibdrm_amdgpu1\nlibbrotlidec1\npermctl\nlibxcb1\nlibdrm_intel1\nlibsubid6\nlibsemanage2\nlibgthread-2_0-0\nbash\nbash-sh\nlibSPIRV-Tools-2026_4_rc2\nlibLLVM23\nlibfreetype6\nlibxcb-xkb1\nlibxcb-xfixes0\nlibxcb-util1\nlibxcb-sync1\nlibxcb-shm0\nlibxcb-shape0\nlibxcb-render0\nlibxcb-randr0\nlibxcb-present0\nlibxcb-keysyms1\nlibxcb-icccm4\nlibxcb-glx0\nlibxcb-dri3-0\nlibX11-6\npkgconf-pkg-config\nlogin_defs\ncoreutils\nfontconfig\nlibfontconfig1\nlibxcb-image0\nlibxcb-render-util0\nMesa-vulkan-device-select\nlibXext6\nxkeyboard-config\npermissions-config\nlibxcb-cursor0\nlibvulkan_lvp\nlibXxf86vm1\nlibxkbcommon0\npermissions\nMesa\nMesa-dri\nlibglvnd\nMesa-libEGL1\nlibxkbcommon-x11-0\npam\nMesa-libGL1\nshadow-pw-mgmt\nshadow\nsysuser-shadow\ndbus-1-common\nlibdbus-1-3\nfolimeld\n"
+      },
+      {
+        "command": [
+          "chroot",
+          "--userspec=1000:1000",
+          "/home/folimeld-test/verification/version035-r1-20261113/minimal-root",
+          "/usr/bin/env",
+          "QT_QPA_PLATFORM=offscreen",
+          "HOME=/tmp",
+          "TMPDIR=/tmp",
+          "timeout",
+          "15",
+          "/usr/bin/folimeld"
+        ],
+        "exit_code": 124,
+        "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nDetected locale \"C\" with character encoding \"ANSI_X3.4-1968\", which is not UTF-8.\nQt depends on a UTF-8 locale, but has failed to switch to one.\nIf this causes problems, reconfigure your locale. See the locale(1) manual\nfor more information.\nThis plugin does not support propagateSizeHints()\n"
+      },
+      {
+        "command": [
+          "rpm",
+          "--root",
+          "/home/folimeld-test/verification/version035-r1-20261113/minimal-root",
+          "-V",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": ""
+      }
+    ]
+  },
+  "gio": [
+    {
+      "command": [
+        "gio",
+        "mime",
+        "application/pdf",
+        "folimeld.desktop"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "gio",
+        "open",
+        "/home/folimeld-test/verification/version035-r1-20261113/gui/fixtures/保存 結果.pdf"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "ime_engine": {
+    "switch_exit_code": 1,
+    "engine": "mozc-on\n",
+    "output": ""
+  },
+  "saved_pdf_data": {
+    "pages": 3,
+    "rotations": [
+      90,
+      0,
+      0
+    ],
+    "texts": [
+      "Page 1\n日本語PDF検証 1\n",
+      "Page 2\n日本語PDF検証 2\n",
+      "Page 3\n日本語PDF検証 3\n"
+    ]
+  },
+  "saved_encrypted_data": {
+    "needs_password": true,
+    "wrong_password": 0,
+    "correct_password": 2,
+    "pages": 3,
+    "rotations": [
+      90,
+      0,
+      0
+    ],
+    "texts": [
+      "Page 1\n日本語PDF検証 1\n",
+      "Page 2\n日本語PDF検証 2\n",
+      "Page 3\n日本語PDF検証 3\n"
+    ]
+  },
+  "saved_image_data": {
+    "pages": 1,
+    "images": 1,
+    "center_rgb": [
+      0,
+      0,
+      255
+    ]
+  },
+  "gui_automation": "Windows CUA targeted the dedicated WSLg test app; generated test copies only.",
+  "minimal_installroot_scope": "Regular rolling repositories as served on 2026-11-13; chroot/offscreen, not an independent WSL boot pinned to snapshot 20261110.",
+  "preserved_original_worktree_diff_sha256": "72c52043f70243ef73d9098d9e86596858d8346875677081f0cf014e5e1bc283"
+}

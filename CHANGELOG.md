@@ -39,6 +39,11 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.5 openSUSE Tumbleweed 20261110 amd64 preview - 2026-11-13
+
+- Publish the amd64 RPM 0.3.5-1.tw20261110 verified in dedicated WSL2/WSLg environments as a [GitHub preview release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5). Verify major GUI workflows, Japanese filename saving/GIO, Mozc input, encrypted PDFs, image PDFs, updates, removal/reinstallation, and fresh minimal-installroot startup.
+- Fix 864 matching inputs in a dedicated source commit; verify 206 distributed native entries, 35 signature-verified source RPMs and 11 attachments. The minimal root uses regular rolling repositories with chroot, not an independent boot of a pinned 20261110 environment. Other snapshots, conventional desktops, ARM64, and migration from public 0.3.4 remain unverified. Preserve existing Releases and latest.
+
 ## 0.3.5 openSUSE Leap 16.1 amd64 preview - 2026-11-13
 
 - Publish the amd64 RPM (0.3.5-1) verified in dedicated WSL2/WSLg environments as a [GitHub preview release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5). Verify PDF editing, Japanese filename saving/GIO reopening, encrypted PDFs, image PDFs, Mozc Japanese input, updates, removal/reinstallation, and fresh minimal-installroot startup.
