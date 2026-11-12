@@ -39,6 +39,16 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.5 openSUSE Leap 16.1 amd64 preview - 2026-11-13
+
+- Publish the amd64 RPM (0.3.5-1) verified in dedicated WSL2/WSLg environments as a [GitHub preview release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5). Verify PDF editing, Japanese filename saving/GIO reopening, encrypted PDFs, image PDFs, Mozc Japanese input, updates, removal/reinstallation, and fresh minimal-installroot startup.
+- Fix 858 matching source inputs in a dedicated commit. Verify 209 distributed native entries, 36 signature-verified source RPMs and 11 attachments. Conventional desktops, ARM64, Tumbleweed, and migration from public Ubuntu/Debian 0.3.4 are outside the verified scope. Document synthetic-input failures/retests and provenance limits; preserve existing downloads and latest.
+
+## 0.3.5 Fedora 44 amd64 preview - 2026-11-13
+
+- Publish the amd64 RPM (0.3.5-2), verified in dedicated Fedora 44 WSL2/WSLg environments, as a [GitHub preview release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5). Verify PDF editing, Japanese filename saving/reopening, encrypted PDFs, image PDFs, Japanese input, GIO, updates, removal/reinstallation, and fresh minimal-installroot startup.
+- Verify 822 matching source inputs, 207 distributed native entries, 37 signature-verified source RPMs and 11 attachments. Conventional desktops, ARM64, and migration from public Ubuntu/Debian 0.3.4 remain unverified. Preserve existing downloads and latest.
+
 ## 0.3.5 Fedora 45 amd64 preview - 2026-11-13
 
 - Publish an amd64 RPM (0.3.5-2) verified on Fedora 45 WSL2/WSLg as a [GitHub preview release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) (Japan time).

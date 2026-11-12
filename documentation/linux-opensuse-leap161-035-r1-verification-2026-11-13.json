@@ -1,0 +1,398 @@
+{
+  "date_jst": "2026-11-13",
+  "version": "0.3.5",
+  "rpm_revision": 1,
+  "commit": "44f76e77c05c0c097be9dc1e8f1de9f8449e6aaa",
+  "branch": "release/opensuse-leap161-amd64-0.3.5",
+  "source_inputs_verified": 858,
+  "native_entries_verified": 209,
+  "wheel_entries": 105,
+  "os_entries": 104,
+  "signature_verified_source_rpms": 36,
+  "virtual_keyboard_entries": 0,
+  "official_bootloader_verified": true,
+  "fixed_build_venv_unchanged": true,
+  "tests": "409 passed, 9 skipped, 67 subtests passed in 17.51s",
+  "rpm_sha256": "ae7517737f6011a145161e3f56a1776d910ed172f12aa807999b64144d06066f",
+  "elf_sha256": "3a852ce9710a4d57d9bb29389bcd4790cb9be50c12cc8d75e7c970ab2c735399",
+  "source_sha256": "d73c5cd22274d62d82c88f8973bc83259d076fa98d6fcdea6274f226b3b181f5",
+  "gui": {
+    "rotation_undo_redo_move_blank_insert_delete": true,
+    "japanese_filename_save_reopen": true,
+    "saved_pages": 3,
+    "saved_rotations": [
+      90,
+      0,
+      0
+    ],
+    "saved_text_preserved": true,
+    "encrypted_gui_auth_rotate_save": true,
+    "saved_encrypted_wrong_password_rejected": true,
+    "saved_encrypted_reauthentication": true,
+    "image_gui_import_save": true,
+    "image_pdf_pages": 1,
+    "image_pdf_images": 1,
+    "image_pdf_center_rgb": [
+      0,
+      0,
+      255
+    ],
+    "ibus_mozc_conversion_commit": "nihongo -> にほんご -> 日本語",
+    "license_dialog": true
+  },
+  "limitations": [
+    "Dedicated Leap16.1 WSL2/WSLg x86_64 only; conventional desktops, ARM64, other distributions and public Ubuntu/Debian 0.3.4 migration unverified.",
+    "Official wheel byte matching and exact source RPM verification do not reconstruct historical wheel build settings; not a reproducible build or compliance certification.",
+    "RPM, checksum list and Git commit are unsigned.",
+    "Embedded preparation-time records still say audit pending; completed audit results are external attachments.",
+    "Synthetic GUI inputs initially caused repeated characters, repeated dialogs and an overlong-filename save error; the test process was stopped and image import/save passed in a fresh GUI using mouse confirmations."
+  ],
+  "lifecycle": {
+    "date_jst": "2026-11-13",
+    "commands": [
+      {
+        "command": [
+          "rpm",
+          "-q",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": "folimeld-0.3.3-3.lp161.x86_64\n"
+      },
+      {
+        "command": [
+          "rpm",
+          "-V",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": ""
+      },
+      {
+        "command": [
+          "zypper",
+          "--non-interactive",
+          "install",
+          "--allow-unsigned-rpm",
+          "--no-recommends",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld-0.3.5-1.lp161.x86_64.rpm"
+        ],
+        "exit_code": 0,
+        "output": "'/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld-0.3.5-1.lp161.x86_64.rpm' looks like an RPM file. Will try to use it.\nRefreshing service 'openSUSE'.\nLoading repository data...\nReading installed packages...\nResolving package dependencies...\n\nThe following package is going to be upgraded:\n  folimeld\n\n1 package to upgrade.\n\nPackage download size:    96.8 MiB\n\nPackage install size change:\n              |      98.4 MiB  required by packages that will be installed\n     2.2 MiB  |  -   96.2 MiB  released by packages that will be removed\n\nBackend:  classic_rpmtrans\nContinue? [y/n/v/...? shows all options] (y): y\nRetrieving: folimeld-0.3.5-1.lp161.x86_64 (Plain RPM files cache) (1/1),  96.8 MiB    \n    Package header is not signed!\n\n\nChecking for file conflicts: [...done]\n(1/1) Installing: folimeld-0.3.5-1.lp161.x86_64 [.......done]\nRunning post-transaction scripts [...done]\n \n"
+      },
+      {
+        "command": [
+          "rpm",
+          "-ql",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": "/usr/bin/folimeld\n/usr/share/applications/folimeld.desktop\n/usr/share/icons/hicolor/256x256/apps/folimeld.png\n/usr/share/licenses/folimeld/LICENSE\n"
+      },
+      {
+        "command": [
+          "rpm",
+          "-V",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": ""
+      },
+      {
+        "command": [
+          "zypper",
+          "--non-interactive",
+          "verify",
+          "--dry-run"
+        ],
+        "exit_code": 0,
+        "output": "Refreshing service 'openSUSE'.\nLoading repository data...\nReading installed packages...\nDependencies of all installed packages are satisfied.\n"
+      },
+      {
+        "command": [
+          "runuser",
+          "-u",
+          "folimeld-test",
+          "--",
+          "env",
+          "QT_QPA_PLATFORM=offscreen",
+          "QT_IM_MODULE=compose",
+          "DISPLAY=:0",
+          "XDG_CONFIG_HOME=/home/folimeld-test/verification/version035-r1-20261113/startup-offscreen/config",
+          "XDG_CACHE_HOME=/home/folimeld-test/verification/version035-r1-20261113/startup-offscreen/cache",
+          "XDG_DATA_HOME=/home/folimeld-test/verification/version035-r1-20261113/startup-offscreen/data",
+          "XDG_RUNTIME_DIR=/home/folimeld-test/verification/version035-r1-20261113/startup-offscreen/runtime",
+          "TMPDIR=/home/folimeld-test/verification/version035-r1-20261113/startup-offscreen/tmp",
+          "timeout",
+          "12",
+          "/usr/bin/folimeld"
+        ],
+        "exit_code": 124,
+        "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nThis plugin does not support propagateSizeHints()\n"
+      },
+      {
+        "command": [
+          "runuser",
+          "-u",
+          "folimeld-test",
+          "--",
+          "env",
+          "QT_QPA_PLATFORM=xcb",
+          "QT_IM_MODULE=compose",
+          "DISPLAY=:0",
+          "XDG_CONFIG_HOME=/home/folimeld-test/verification/version035-r1-20261113/startup-xcb/config",
+          "XDG_CACHE_HOME=/home/folimeld-test/verification/version035-r1-20261113/startup-xcb/cache",
+          "XDG_DATA_HOME=/home/folimeld-test/verification/version035-r1-20261113/startup-xcb/data",
+          "XDG_RUNTIME_DIR=/home/folimeld-test/verification/version035-r1-20261113/startup-xcb/runtime",
+          "TMPDIR=/home/folimeld-test/verification/version035-r1-20261113/startup-xcb/tmp",
+          "timeout",
+          "12",
+          "/usr/bin/folimeld"
+        ],
+        "exit_code": 124,
+        "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+      },
+      {
+        "command": [
+          "zypper",
+          "--non-interactive",
+          "remove",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": "Reading installed packages...\nResolving package dependencies...\n\nThe following package is going to be REMOVED:\n  folimeld\n\n1 package to remove.\n\nPackage install size change:\n              |         0 B    required by packages that will be installed\n   -98.4 MiB  |  -   98.4 MiB  released by packages that will be removed\n\nBackend:  classic_rpmtrans\nContinue? [y/n/v/...? shows all options] (y): y\n(1/1) Removing: folimeld-0.3.5-1.lp161.x86_64 [..done]\nRunning post-transaction scripts [...done]\n \n"
+      },
+      {
+        "command": [
+          "zypper",
+          "--non-interactive",
+          "install",
+          "--allow-unsigned-rpm",
+          "--no-recommends",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld-0.3.5-1.lp161.x86_64.rpm"
+        ],
+        "exit_code": 0,
+        "output": "'/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld-0.3.5-1.lp161.x86_64.rpm' looks like an RPM file. Will try to use it.\nRefreshing service 'openSUSE'.\nLoading repository data...\nReading installed packages...\nResolving package dependencies...\n\nThe following NEW package is going to be installed:\n  folimeld\n\n1 new package to install.\n\nPackage download size:    96.8 MiB\n\nPackage install size change:\n              |      98.4 MiB  required by packages that will be installed\n    98.4 MiB  |  -      0 B    released by packages that will be removed\n\nBackend:  classic_rpmtrans\nContinue? [y/n/v/...? shows all options] (y): y\nRetrieving: folimeld-0.3.5-1.lp161.x86_64 (Plain RPM files cache) (1/1),  96.8 MiB    \n    Package header is not signed!\n\n\nChecking for file conflicts: [...done]\n(1/1) Installing: folimeld-0.3.5-1.lp161.x86_64 [......done]\nRunning post-transaction scripts [...done]\n"
+      },
+      {
+        "command": [
+          "rpm",
+          "-V",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": ""
+      },
+      {
+        "command": [
+          "zypper",
+          "--non-interactive",
+          "verify",
+          "--dry-run"
+        ],
+        "exit_code": 0,
+        "output": "Refreshing service 'openSUSE'.\nLoading repository data...\nReading installed packages...\nDependencies of all installed packages are satisfied.\n"
+      }
+    ],
+    "retained_files": {
+      "/home/folimeld-test/verification/extended-gui-20261112/ime-env.json": "4608421f2763a0e10420bf8e4834c35cd8ab8e27cf805ff255f30ea8b17b920f",
+      "/home/folimeld-test/verification/extended-gui-20261112/ime-process.json": "1dfacaf5b7166f9e7bb5840a0f109be164678422a8a13ad572ab54420acea433",
+      "/home/folimeld-test/verification/extended-gui-20261112/ime-engine.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/extended-gui-20261112/ime-session.py": "7fd3abada60f0f977fdf53ca7374c89a972e927cfe8c00759c1b97e274ab5753",
+      "/home/folimeld-test/verification/extended-gui-20261112/app.log": "7c8a6b00331d31ba445f3aacd8c7aab552488c1d09d81b4835f3e420085414fe",
+      "/home/folimeld-test/verification/extended-gui-20261112/image-created.pdf": "bf89b3febf002cfbb00efc7c02d52e3c9458a5fa0d8bebf3b627526ea50322d4",
+      "/home/folimeld-test/verification/extended-gui-20261112/ime-session-pid": "c22e1a4acbd2d996ff19a852585f9434883c30124f6b118eb9152fe4e5ee7994",
+      "/home/folimeld-test/verification/extended-gui-20261112/encrypted-edited.pdf": "0d7176b5b5ac4b6feed8c5a481946f3139a3cc77e2384bd381f5dc653be7a1b3",
+      "/home/folimeld-test/verification/extended-gui-20261112/launch.json": "f7b69492cf45db249e826048d3bf3a2ef9bbd8e2ac268398d5b3ca672d043807",
+      "/home/folimeld-test/verification/extended-gui-20261112/ime-session.log": "c37539b6f64ea42324b4bed82435fc513a9149fc8ef8a47fae6c03a4edc15547",
+      "/home/folimeld-test/verification/extended-gui-20261112/ime-app.log": "ae75cdd42be80a160fce8fe8caa8524204f2fdbb5e95dad6e136cb5fc8b9be7b",
+      "/home/folimeld-test/verification/gui-20261112/gui-process.json": "0c9fa24fcaf89d31a340b31b6fe727d51236356dc3c49ca14be78dc526cd73b5",
+      "/home/folimeld-test/verification/gui-20261112/gui.log": "b28fe775117cf1a8c3496ad4156ce474056bdd786f752a11f794f5c39a1baa3f",
+      "/home/folimeld-test/verification/gui-20261112/initial-hashes.json": "4a74d4b175bab9d0f28d5c640a1676b6e6cbd29612c5b3d0c5e06ca6fed52742",
+      "/home/folimeld-test/verification/revision3-startup-20261112/results.json": "9d0a62685a813270e8a911a3bd3c9ce6875fb258a400227031c4414986d7748c",
+      "/home/folimeld-test/verification/mime-gui-20261112/session-env.json": "dad731702767da57e0b022b9044024cc59db1261a8f3f1d27311ae1c8062f3f9",
+      "/home/folimeld-test/verification/mime-gui-20261112/session-result.json": "b08c3d3a19638aec1c9bc2091a732271385e5859d0e9ad765b8b99e09733a24e",
+      "/home/folimeld-test/verification/mime-gui-20261112/session-pid": "de498b9901677f58da56b38a515db0a6a3b93840bde5fd0b74437502163e9fb1",
+      "/home/folimeld-test/verification/mime-gui-20261112/session.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/mime-gui-20261112/app.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/mime-gui-20261112/session.py": "1ab22fb6d0f51b8fca66ef1a2953b4bf24f2790c819b155fd404145627b580ed",
+      "/home/folimeld-test/verification/mime-gui-20261112/launch.json": "c83c0f2abd08c76a5e165287b75fbac0e6d2b7d091959d119f527475f40788c7",
+      "/home/folimeld-test/verification/mime-gui-20261112/config/mimeapps.list": "0f0cb9b8b62d826170c797de81c16d8ad2166233ba3f43e3bda313a21eacfb91",
+      "/home/folimeld-test/verification/mime-gui-20261112/config/QtProject.conf": "8b9b1f46f992c49ff14b46b5698f52c7d6e6151e3d04e32c4b99d8fd4a43fa42",
+      "/home/folimeld-test/verification/mime-gui-20261112/日本語 パス/保 結果.pdf": "3e0ea27dd544045888a79989c28f507987a5b3cb672ac5c58f8f542d05c33a04",
+      "/home/folimeld-test/verification/mime-gui-20261112/日本語 パス/関連付け 試験.pdf": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+      "/home/folimeld-test/verification/mime-gui-20261112/tmp/_MEI00000349vzEshN/PIL/_imaging.cpython-313-x86_64-linux-gnu.so": "62cb539989b4ee9c6964c70e93b588643ce231a0368082e499a8ef67f1055017",
+      "/home/folimeld-test/verification/mime-gui-20261112/tmp/_MEI00000349vzEshN/PIL/_avif.cpython-313-x86_64-linux-gnu.so": "3155ad10215109cd3361d84882e922be7d6c397e7711229d799d03b66138286f",
+      "/home/folimeld-test/verification/mime-gui-20261112/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-x86_64.cache-9": "7cf6a002db365ed0b8983a0f39ecb2f2a7babb4929159d1c1472f5076549c2ab",
+      "/home/folimeld-test/verification/mime-gui-20261112/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-x86_64.cache-9": "7f1913d2b50d278d7a198821434c0d8444c4ddad6d2b1be1b29f4415d7fe30e1",
+      "/home/folimeld-test/verification/mime-gui-20261112/cache/fontconfig/CACHEDIR.TAG": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682",
+      "/home/folimeld-test/verification/mime-gui-20261112/config/Folimeld/Folimeld.conf": "9dddf45cdcc64647c53ac10cb70e195a518afd8ba0ee4d2b5f5f5941eea64dba",
+      "/home/folimeld-test/verification/mime-gui-20261112/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/minimal-startup-retry-20261112/xcb/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-x86_64.cache-9": "5545ae705a210059a71d4505ff97d5eb7821b6da6f52e2c199ff28ec65c14bf1",
+      "/home/folimeld-test/verification/minimal-startup-retry-20261112/xcb/cache/fontconfig/CACHEDIR.TAG": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682",
+      "/home/folimeld-test/verification/minimal-startup-retry-20261112/xcb/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/minimal-startup-retry-20261112/offscreen/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-x86_64.cache-9": "5545ae705a210059a71d4505ff97d5eb7821b6da6f52e2c199ff28ec65c14bf1",
+      "/home/folimeld-test/verification/minimal-startup-retry-20261112/offscreen/cache/fontconfig/CACHEDIR.TAG": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682",
+      "/home/folimeld-test/verification/minimal-startup-retry-20261112/offscreen/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/revision3-startup-20261112/xcb/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-x86_64.cache-9": "7cf6a002db365ed0b8983a0f39ecb2f2a7babb4929159d1c1472f5076549c2ab",
+      "/home/folimeld-test/verification/revision3-startup-20261112/xcb/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-x86_64.cache-9": "7f1913d2b50d278d7a198821434c0d8444c4ddad6d2b1be1b29f4415d7fe30e1",
+      "/home/folimeld-test/verification/revision3-startup-20261112/xcb/cache/fontconfig/CACHEDIR.TAG": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682",
+      "/home/folimeld-test/verification/revision3-startup-20261112/xcb/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/revision3-startup-20261112/offscreen/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-x86_64.cache-9": "7cf6a002db365ed0b8983a0f39ecb2f2a7babb4929159d1c1472f5076549c2ab",
+      "/home/folimeld-test/verification/revision3-startup-20261112/offscreen/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-x86_64.cache-9": "7f1913d2b50d278d7a198821434c0d8444c4ddad6d2b1be1b29f4415d7fe30e1",
+      "/home/folimeld-test/verification/revision3-startup-20261112/offscreen/cache/fontconfig/CACHEDIR.TAG": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682",
+      "/home/folimeld-test/verification/revision3-startup-20261112/offscreen/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/gui-20261112/config/QtProject.conf": "482f2dd6a4e94a184294ef5e1930d44cfba85f1b30c65acf5a36157659edc1e9",
+      "/home/folimeld-test/verification/gui-20261112/fixtures/暗号化.pdf": "48b63c2a0e9c3bf3f4e18d55d1104195310ac3dfa7986c04973f0f8319e70c0f",
+      "/home/folimeld-test/verification/gui-20261112/fixtures/原本_日本語.pdf": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+      "/home/folimeld-test/verification/gui-20261112/fixtures/suse-edited.pdf": "bb37633d4d03124f190e34a815f16b99414b6a0235a2acf7a05f11e9133e9e9b",
+      "/home/folimeld-test/verification/gui-20261112/fixtures/画像/画像01.png": "a2c58fbf87ae17ad25b1680400fd9a3d5e627ff599a47286378d0f0111103613",
+      "/home/folimeld-test/verification/gui-20261112/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-x86_64.cache-9": "7cf6a002db365ed0b8983a0f39ecb2f2a7babb4929159d1c1472f5076549c2ab",
+      "/home/folimeld-test/verification/gui-20261112/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-x86_64.cache-9": "7f1913d2b50d278d7a198821434c0d8444c4ddad6d2b1be1b29f4415d7fe30e1",
+      "/home/folimeld-test/verification/gui-20261112/cache/fontconfig/CACHEDIR.TAG": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682",
+      "/home/folimeld-test/verification/gui-20261112/config/Folimeld/Folimeld.conf": "94853acb40973c2a46bc7757d9cabbe539d8d107852d2cc8e932ce11e872bfd8",
+      "/home/folimeld-test/verification/gui-20261112/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/extended-gui-20261112/image-input/image01.png": "a2c58fbf87ae17ad25b1680400fd9a3d5e627ff599a47286378d0f0111103613",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/QtProject.conf": "93e867d4efb942b48f5351783e2d32450a6d0eeebf4e5eaa50bc1898cb4c7d9c",
+      "/home/folimeld-test/verification/extended-gui-20261112/runtime/dconf/user": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+      "/home/folimeld-test/verification/extended-gui-20261112/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-x86_64.cache-9": "7cf6a002db365ed0b8983a0f39ecb2f2a7babb4929159d1c1472f5076549c2ab",
+      "/home/folimeld-test/verification/extended-gui-20261112/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-x86_64.cache-9": "7f1913d2b50d278d7a198821434c0d8444c4ddad6d2b1be1b29f4415d7fe30e1",
+      "/home/folimeld-test/verification/extended-gui-20261112/cache/fontconfig/CACHEDIR.TAG": "05e7633fb31bf1f6f8d89020c16b9f24587fdf7638e951c9745b192f5fc3b682",
+      "/home/folimeld-test/verification/extended-gui-20261112/cache/ibus/bus/registry": "42a3a02106a0a58355f555570a4cf27f437958aea712b4453cd98800509a3054",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/Folimeld/Folimeld.conf": "3fb8083735063983f06fe28575efbb05652b165b9be5f649acccf9398b905100",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/mozc/.session.ipc": "a18164511f51e8723cfff379c6fb45b71e9a1273a1ed1a251ba8a06215b5db46",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/mozc/ibus_config.textproto": "6f9e493784c97cb4fefc7240fb9c8e8a5cd386991850e74aa287bb1f7c5c9a1d",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/mozc/boundary.db": "c8f63af7a5bd1f3b2fc5bdc9aa65ab1be8873ca0f796eba519ef2dddbac7a8a1",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/mozc/segment.db": "8b3945c69a9660eb84d7393bbe02fdcd3f9742125a2f62c37d53914d0ec0a9fc",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/mozc/cform.db": "3db51a9bcb26c682ccf0ceb355a69cf7a2e786c349d93124de580c7822d7e39e",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/mozc/.server.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/folimeld-test/verification/extended-gui-20261112/config/ibus/bus/1c8139a104534ad48f76d35c90a39aa2-unix-wayland-0": "92311d4443b359e746eef8da56c0b3407ed0dedd4d56f5494d7166af2c8460d8",
+      "/home/folimeld-test/verification/extended-gui-20261112/data/Folimeld/Folimeld/logs/folimeld.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "retained_unchanged": true,
+    "binary_sha256": "3a852ce9710a4d57d9bb29389bcd4790cb9be50c12cc8d75e7c970ab2c735399",
+    "package_files": [
+      "/usr/bin/folimeld",
+      "/usr/share/applications/folimeld.desktop",
+      "/usr/share/icons/hicolor/256x256/apps/folimeld.png",
+      "/usr/share/licenses/folimeld/LICENSE"
+    ]
+  },
+  "minimal_installroot": {
+    "commands": [
+      {
+        "command": [
+          "rpm",
+          "--root",
+          "/home/folimeld-test/verification/version035-r1-20261113/minimal-root",
+          "--initdb"
+        ],
+        "exit_code": 0,
+        "output": ""
+      },
+      {
+        "command": [
+          "rpm",
+          "--root",
+          "/home/folimeld-test/verification/version035-r1-20261113/minimal-root",
+          "--import",
+          "/usr/lib/rpm/gnupg/keys/gpg-pubkey-09d9ea69-68595a8c.asc",
+          "/usr/lib/rpm/gnupg/keys/gpg-pubkey-25db7ae0-645bae34.asc",
+          "/usr/lib/rpm/gnupg/keys/gpg-pubkey-287a0027-682477e3.asc",
+          "/usr/lib/rpm/gnupg/keys/gpg-pubkey-29b700a4-6a17fa38.asc",
+          "/usr/lib/rpm/gnupg/keys/gpg-pubkey-39db7c82-66c5d91a.asc",
+          "/usr/lib/rpm/gnupg/keys/gpg-pubkey-3fa1d6ce-67c856ee.asc"
+        ],
+        "exit_code": 0,
+        "output": ""
+      },
+      {
+        "command": [
+          "zypper",
+          "--root",
+          "/home/folimeld-test/verification/version035-r1-20261113/minimal-root",
+          "--non-interactive",
+          "addrepo",
+          "https://cdn.opensuse.org/distribution/leap/16.1/repo/oss/x86_64",
+          "leap161-oss"
+        ],
+        "exit_code": 0,
+        "output": "Adding repository 'leap161-oss' [.....done]\nRepository 'leap161-oss' successfully added\n\nURI         : https://cdn.opensuse.org/distribution/leap/16.1/repo/oss/x86_64\nEnabled     : Yes\nGPG Check   : Yes\nAutorefresh : No\nPriority    : 99 (default priority)\n\nRepository priorities are without effect. All enabled repositories share the same priority.\n"
+      },
+      {
+        "command": [
+          "zypper",
+          "--root",
+          "/home/folimeld-test/verification/version035-r1-20261113/minimal-root",
+          "--non-interactive",
+          "install",
+          "--allow-unsigned-rpm",
+          "--no-recommends",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld-0.3.5-1.lp161.x86_64.rpm"
+        ],
+        "exit_code": 0,
+        "output": "'/mnt/c/Users/takum/Downloads/source/Folimeld/build/linux-continuation/folimeld-0.3.5-1.lp161.x86_64.rpm' looks like an RPM file. Will try to use it.\nLooking for gpg keys in repository leap161-oss.\n  gpgkey=https://cdn.opensuse.org/distribution/leap/16.1/repo/oss/x86_64/repodata/repomd.xml.key\nBuilding repository 'leap161-oss' cache [....done]\nLoading repository data...\nReading installed packages...\nResolving package dependencies...\n\nThe following 104 NEW packages are going to be installed:\n  bash bash-sh compat-usrmerge-tools coreutils dbus-1-common filesystem fillup folimeld fontconfig glibc libacl1 libattr1 libaudit1 libbrotlicommon1 libbrotlidec1 libbz2-1 libcap2 libcrypt1 libdbus-1-3 libdisplay-info2 libdrm2 libdrm_amdgpu1 libdrm_intel1 libeconf0 libedit0 libelf1 libexpat1 libffi8 libfontconfig1 libfreetype6 libgbm1 libgcc_s1 libglib-2_0-0 libglvnd libgmp10 libgthread-2_0-0 libLLVM21 liblzma5 libncurses6 libpciaccess0 libpcre2-8-0 libpkgconf5 libpng16-16 libreadline8 libselinux1 libsemanage2 libsemanage-conf libsepol2 libSPIRV-Tools-2026_1 libstdc++6 libsubid5 libsystemd0 libvulkan1 libvulkan_lvp libwayland-client0 libX11-6 libX11-data libX11-xcb1 libXau6 libxcb1 libxcb-cursor0 libxcb-dri3-0 libxcb-glx0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-present0 libxcb-randr0 libxcb-render0 libxcb-render-util0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxcb-xfixes0 libxcb-xkb1 libXext6 libxkbcommon0 libxkbcommon-x11-0 libxml2-2 libxshmfence1 libXxf86vm1 libz-ng-compat1 libzstd1 login_defs Mesa Mesa-dri Mesa-libEGL1 Mesa-libGL1 Mesa-vulkan-device-select pam patterns-glibc-hwcaps-x86_64_v3 permctl permissions permissions-config pkgconf pkgconf-m4 pkgconf-pkg-config shadow shadow-pw-mgmt system-user-root sysuser-shadow terminfo-base xkeyboard-config\n\nThe following NEW pattern is going to be installed:\n  x86_64_v3\n\n104 new packages to install.\n\nPackage download size:   162.4 MiB\n\nPackage install size change:\n              |     339.4 MiB  required by packages that will be installed\n   339.4 MiB  |  -      0 B    released by packages that will be removed\n\nBackend:  classic_rpmtrans\nContinue? [y/n/v/...? shows all options] (y): y\n\nChecking for file conflicts: [...done]\nWarning: 104 packages had to be excluded from file conflicts check because they are not yet downloaded.\n\n    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in\n    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'\n    in the zypper manual page for details.\n\nRetrieving: compat-usrmerge-tools-84.87-160100.2.2.x86_64 (leap161-oss) (1/104), 280.8 KiB    \nRetrieving: compat-usrmerge-tools-84.87-160100.2.2.x86_64.rpm [..done (140.6 KiB/s)]\n(  1/104) Installing: compat-usrmerge-tools-84.87-160100.2.2.x86_64 [..done]\nRetrieving: libX11-data-1.8.12-160100.3.1.noarch (leap161-oss) (2/104), 169.2 KiB    \nRetrieving: libX11-data-1.8.12-160100.3.1.noarch.rpm [..done (169.2 KiB/s)]\n(  2/104) Installing: libX11-data-1.8.12-160100.3.1.noarch [..done]\nRetrieving: libsemanage-conf-3.11-160100.2.1.x86_64 (leap161-oss) (3/104),  24.0 KiB    \nRetrieving: libsemanage-conf-3.11-160100.2.1.x86_64.rpm [.done]\n(  3/104) Installing: libsemanage-conf-3.11-160100.2.1.x86_64 [..done]\nRetrieving: pkgconf-m4-2.2.0-160100.2.1.noarch (leap161-oss) (4/104),  20.9 KiB    \nRetrieving: pkgconf-m4-2.2.0-160100.2.1.noarch.rpm [.done]\n(  4/104) Installing: pkgconf-m4-2.2.0-160100.2.1.noarch [..done]\nRetrieving: system-user-root-20190513-160100.2.1.noarch (leap161-oss) (5/104),   8.2 KiB    \nRetrieving: system-user-root-20190513-160100.2.1.noarch.rpm [.done]\n(  5/104) Installing: system-user-root-20190513-160100.2.1.noarch [..done]\nRetrieving: filesystem-84.87-160100.2.1.x86_64 (leap161-oss) (6/104), 101.0 KiB    \nRetrieving: filesystem-84.87-160100.2.1.x86_64.rpm [.done]\n(  6/104) Installing: filesystem-84.87-160100.2.1.x86_64 [...done]\nRetrieving: glibc-2.40-160100.3.1.x86_64 (leap161-oss) (7/104),   2.2 MiB    \nRetrieving: glibc-2.40-160100.3.1.x86_64.rpm [..done (546.8 KiB/s)]\n(  7/104) Installing: glibc-2.40-160100.3.1.x86_64 [..done]\nRetrieving: terminfo-base-6.5.20250531-160100.2.1.x86_64 (leap161-oss) (8/104), 457.5 KiB    \nRetrieving: terminfo-base-6.5.20250531-160100.2.1.x86_64.rpm [.done]\n(  8/104) Installing: terminfo-base-6.5.20250531-160100.2.1.x86_64 [..done]\nRetrieving: libncurses6-6.5.20250531-160100.2.1.x86_64 (leap161-oss) (9/104), 678.8 KiB    \nRetrieving: libncurses6-6.5.20250531-160100.2.1.x86_64.rpm [.done]\n(  9/104) Installing: libncurses6-6.5.20250531-160100.2.1.x86_64 [..done]\nRetrieving: patterns-glibc-hwcaps-x86_64_v3-20230201-160100.2.1.x86_64 (leap161-oss) (10/104),   7.7 KiB    \nRetrieving: patterns-glibc-hwcaps-x86_64_v3-20230201-160100.2.1.x86_64.rpm [.done]\n( 10/104) Installing: patterns-glibc-hwcaps-x86_64_v3-20230201-160100.2.1.x86_64 [..done]\nRetrieving: libzstd1-1.5.7-160100.2.1.x86_64 (leap161-oss) (11/104), 326.8 KiB    \nRetrieving: libzstd1-1.5.7-160100.2.1.x86_64.rpm [..done (210.9 KiB/s)]\n( 11/104) Installing: libzstd1-1.5.7-160100.2.1.x86_64 [..done]\nRetrieving: libz-ng-compat1-2.3.2-160100.2.1.x86_64 (leap161-oss) (12/104), 100.2 KiB    \nRetrieving: libz-ng-compat1-2.3.2-160100.2.1.x86_64.rpm [..done (78.1 KiB/s)]\n( 12/104) Installing: libz-ng-compat1-2.3.2-160100.2.1.x86_64 [..done]\nRetrieving: libxshmfence1-1.3.2-160100.2.1.x86_64 (leap161-oss) (13/104),  12.0 KiB    \nRetrieving: libxshmfence1-1.3.2-160100.2.1.x86_64.rpm [..done (12.0 KiB/s)]\n( 13/104) Installing: libxshmfence1-1.3.2-160100.2.1.x86_64 [..done]\nRetrieving: libvulkan1-1.4.341-160100.2.1.x86_64 (leap161-oss) (14/104), 166.3 KiB    \nRetrieving: libvulkan1-1.4.341-160100.2.1.x86_64.rpm [..done (85.9 KiB/s)]\n( 14/104) Installing: libvulkan1-1.4.341-160100.2.1.x86_64 [..done]\nRetrieving: libsepol2-3.11-160100.2.1.x86_64 (leap161-oss) (15/104), 331.8 KiB    \nRetrieving: libsepol2-3.11-160100.2.1.x86_64.rpm [..done (331.8 KiB/s)]\n( 15/104) Installing: libsepol2-3.11-160100.2.1.x86_64 [..done]\nRetrieving: libpkgconf5-2.2.0-160100.2.1.x86_64 (leap161-oss) (16/104),  42.1 KiB    \nRetrieving: libpkgconf5-2.2.0-160100.2.1.x86_64.rpm [.done]\n( 16/104) Installing: libpkgconf5-2.2.0-160100.2.1.x86_64 [..done]\nRetrieving: libpcre2-8-0-10.45-160100.3.1.x86_64 (leap161-oss) (17/104), 394.5 KiB    \nRetrieving: libpcre2-8-0-10.45-160100.3.1.x86_64.rpm [.done]\n( 17/104) Installing: libpcre2-8-0-10.45-160100.3.1.x86_64 [..done]\nRetrieving: liblzma5-5.8.1-160100.2.1.x86_64 (leap161-oss) (18/104), 165.9 KiB    \nRetrieving: liblzma5-5.8.1-160100.2.1.x86_64.rpm [..done (132.8 KiB/s)]\n( 18/104) Installing: liblzma5-5.8.1-160100.2.1.x86_64 [..done]\nRetrieving: libgmp10-6.3.0-160100.2.1.x86_64 (leap161-oss) (19/104), 315.6 KiB    \nRetrieving: libgmp10-6.3.0-160100.2.1.x86_64.rpm [..done (210.9 KiB/s)]\n( 19/104) Installing: libgmp10-6.3.0-160100.2.1.x86_64 [..done]\nRetrieving: libgcc_s1-16.2.0+git9497-160100.2.1.x86_64 (leap161-oss) (20/104),  88.9 KiB    \nRetrieving: libgcc_s1-16.2.0+git9497-160100.2.1.x86_64.rpm [.done]\n( 20/104) Installing: libgcc_s1-16.2.0+git9497-160100.2.1.x86_64 [..done]\nRetrieving: libffi8-3.4.6-160100.2.1.x86_64 (leap161-oss) (21/104),  30.6 KiB    \nRetrieving: libffi8-3.4.6-160100.2.1.x86_64.rpm [.done]\n( 21/104) Installing: libffi8-3.4.6-160100.2.1.x86_64 [..done]\nRetrieving: libexpat1-2.7.4-160100.2.1.x86_64 (leap161-oss) (22/104), 122.7 KiB    \nRetrieving: libexpat1-2.7.4-160100.2.1.x86_64.rpm [.done]\n( 22/104) Installing: libexpat1-2.7.4-160100.2.1.x86_64 [..done]\nRetrieving: libeconf0-0.7.9-160100.2.1.x86_64 (leap161-oss) (23/104),  47.3 KiB    \nRetrieving: libeconf0-0.7.9-160100.2.1.x86_64.rpm [.done]\n( 23/104) Installing: libeconf0-0.7.9-160100.2.1.x86_64 [..done]\nRetrieving: libdrm2-2.4.131-160100.2.1.x86_64 (leap161-oss) (24/104), 109.5 KiB    \nRetrieving: libdrm2-2.4.131-160100.2.1.x86_64.rpm [.done]\n( 24/104) Installing: libdrm2-2.4.131-160100.2.1.x86_64 [..done]\nRetrieving: libdisplay-info2-0.2.0-160100.2.1.x86_64 (leap161-oss) (25/104),  75.4 KiB    \nRetrieving: libdisplay-info2-0.2.0-160100.2.1.x86_64.rpm [.done]\n( 25/104) Installing: libdisplay-info2-0.2.0-160100.2.1.x86_64 [..done]\nRetrieving: libcrypt1-4.4.38-160100.2.1.x86_64 (leap161-oss) (26/104), 111.7 KiB    \nRetrieving: libcrypt1-4.4.38-160100.2.1.x86_64.rpm [.done]\n( 26/104) Installing: libcrypt1-4.4.38-160100.2.1.x86_64 [..done]\nRetrieving: libcap2-2.78-160100.2.1.x86_64 (leap161-oss) (27/104),  53.2 KiB    \nRetrieving: libcap2-2.78-160100.2.1.x86_64.rpm [.done]\n( 27/104) Installing: libcap2-2.78-160100.2.1.x86_64 [..done]\nRetrieving: libbz2-1-1.0.8-160100.3.1.x86_64 (leap161-oss) (28/104),  52.0 KiB    \nRetrieving: libbz2-1-1.0.8-160100.3.1.x86_64.rpm [.done]\n( 28/104) Installing: libbz2-1-1.0.8-160100.3.1.x86_64 [..done]\nRetrieving: libbrotlicommon1-1.1.0-160100.2.1.x86_64 (leap161-oss) (29/104),  69.6 KiB    \nRetrieving: libbrotlicommon1-1.1.0-160100.2.1.x86_64.rpm [.done]\n( 29/104) Installing: libbrotlicommon1-1.1.0-160100.2.1.x86_64 [..done]\nRetrieving: libaudit1-4.0-160100.2.1.x86_64 (leap161-oss) (30/104), 104.6 KiB    \nRetrieving: libaudit1-4.0-160100.2.1.x86_64.rpm [.done]\n( 30/104) Installing: libaudit1-4.0-160100.2.1.x86_64 [..done]\nRetrieving: libattr1-2.5.2-160100.2.1.x86_64 (leap161-oss) (31/104),  36.1 KiB    \nRetrieving: libattr1-2.5.2-160100.2.1.x86_64.rpm [..done (36.1 KiB/s)]\n( 31/104) Installing: libattr1-2.5.2-160100.2.1.x86_64 [..done]\nRetrieving: libacl1-2.3.2-160100.2.1.x86_64 (leap161-oss) (32/104),  43.4 KiB    \nRetrieving: libacl1-2.3.2-160100.2.1.x86_64.rpm [.done]\n( 32/104) Installing: libacl1-2.3.2-160100.2.1.x86_64 [..done]\nRetrieving: libXau6-1.0.12-160100.2.1.x86_64 (leap161-oss) (33/104),  17.0 KiB    \nRetrieving: libXau6-1.0.12-160100.2.1.x86_64.rpm [.done]\n( 33/104) Installing: libXau6-1.0.12-160100.2.1.x86_64 [..done]\nRetrieving: libX11-xcb1-1.8.12-160100.3.1.x86_64 (leap161-oss) (34/104),  44.5 KiB    \nRetrieving: libX11-xcb1-1.8.12-160100.3.1.x86_64.rpm [.done]\n( 34/104) Installing: libX11-xcb1-1.8.12-160100.3.1.x86_64 [..done]\nRetrieving: fillup-1.42-160100.2.1.x86_64 (leap161-oss) (35/104),  26.8 KiB    \nRetrieving: fillup-1.42-160100.2.1.x86_64.rpm [..done (23.4 KiB/s)]\n( 35/104) Installing: fillup-1.42-160100.2.1.x86_64 [..done]\nRetrieving: libreadline8-8.2.13-160100.2.1.x86_64 (leap161-oss) (36/104), 252.3 KiB    \nRetrieving: libreadline8-8.2.13-160100.2.1.x86_64.rpm [.done]\n( 36/104) Installing: libreadline8-8.2.13-160100.2.1.x86_64 [..done]\nRetrieving: libedit0-20210910.3.1-160100.2.1.x86_64 (leap161-oss) (37/104), 107.2 KiB    \nRetrieving: libedit0-20210910.3.1-160100.2.1.x86_64.rpm [.done]\n( 37/104) Installing: libedit0-20210910.3.1-160100.2.1.x86_64 [..done]\nRetrieving: libpng16-16-1.6.58-160100.2.1.x86_64 (leap161-oss) (38/104), 191.7 KiB    \nRetrieving: libpng16-16-1.6.58-160100.2.1.x86_64.rpm [.done]\n( 38/104) Installing: libpng16-16-1.6.58-160100.2.1.x86_64 [..done]\nRetrieving: libpciaccess0-0.18.1-160100.2.1.x86_64 (leap161-oss) (39/104),  29.0 KiB    \nRetrieving: libpciaccess0-0.18.1-160100.2.1.x86_64.rpm [.done]\n( 39/104) Installing: libpciaccess0-0.18.1-160100.2.1.x86_64 [..done]\nRetrieving: libelf1-0.192-160100.2.1.x86_64 (leap161-oss) (40/104),  94.7 KiB    \nRetrieving: libelf1-0.192-160100.2.1.x86_64.rpm [.done]\n( 40/104) Installing: libelf1-0.192-160100.2.1.x86_64 [..done]\nRetrieving: pkgconf-2.2.0-160100.2.1.x86_64 (leap161-oss) (41/104),  53.0 KiB    \nRetrieving: pkgconf-2.2.0-160100.2.1.x86_64.rpm [.done]\n( 41/104) Installing: pkgconf-2.2.0-160100.2.1.x86_64 [..done]\nRetrieving: libselinux1-3.11-160100.2.1.x86_64 (leap161-oss) (42/104), 119.8 KiB    \nRetrieving: libselinux1-3.11-160100.2.1.x86_64.rpm [.done]\n( 42/104) Installing: libselinux1-3.11-160100.2.1.x86_64 [..done]\nRetrieving: libglib-2_0-0-2.84.4-160100.3.1.x86_64 (leap161-oss) (43/104), 983.3 KiB    \nRetrieving: libglib-2_0-0-2.84.4-160100.3.1.x86_64.rpm [..done (335.9 KiB/s)]\n( 43/104) Installing: libglib-2_0-0-2.84.4-160100.3.1.x86_64 [..done]\nRetrieving: libxml2-2-2.13.8-160100.2.1.x86_64 (leap161-oss) (44/104), 723.9 KiB    \nRetrieving: libxml2-2-2.13.8-160100.2.1.x86_64.rpm [..done (578.1 KiB/s)]\n( 44/104) Installing: libxml2-2-2.13.8-160100.2.1.x86_64 [..done]\nRetrieving: libstdc++6-16.2.0+git9497-160100.2.1.x86_64 (leap161-oss) (45/104), 836.2 KiB    \nRetrieving: libstdc++6-16.2.0+git9497-160100.2.1.x86_64.rpm [.done]\n( 45/104) Installing: libstdc++6-16.2.0+git9497-160100.2.1.x86_64 [..done]\nRetrieving: libwayland-client0-1.24.0-160100.2.1.x86_64 (leap161-oss) (46/104),  47.8 KiB    \nRetrieving: libwayland-client0-1.24.0-160100.2.1.x86_64.rpm [.done]\n( 46/104) Installing: libwayland-client0-1.24.0-160100.2.1.x86_64 [..done]\nRetrieving: libgbm1-26.0.7-160100.2.1.x86_64 (leap161-oss) (47/104), 273.4 KiB    \nRetrieving: libgbm1-26.0.7-160100.2.1.x86_64.rpm [.done]\n( 47/104) Installing: libgbm1-26.0.7-160100.2.1.x86_64 [..done]\nRetrieving: libdrm_amdgpu1-2.4.131-160100.2.1.x86_64 (leap161-oss) (48/104),  96.4 KiB    \nRetrieving: libdrm_amdgpu1-2.4.131-160100.2.1.x86_64.rpm [.done]\n( 48/104) Installing: libdrm_amdgpu1-2.4.131-160100.2.1.x86_64 [..done]\nRetrieving: libsystemd0-257.13-160100.3.5.x86_64 (leap161-oss) (49/104), 901.4 KiB    \nRetrieving: libsystemd0-257.13-160100.3.5.x86_64.rpm [..done (335.9 KiB/s)]\n( 49/104) Installing: libsystemd0-257.13-160100.3.5.x86_64 [..done]\nRetrieving: libbrotlidec1-1.1.0-160100.2.1.x86_64 (leap161-oss) (50/104),  32.9 KiB    \nRetrieving: libbrotlidec1-1.1.0-160100.2.1.x86_64.rpm [.done]\n( 50/104) Installing: libbrotlidec1-1.1.0-160100.2.1.x86_64 [..done]\nRetrieving: permctl-1699_20260518-160100.2.1.x86_64 (leap161-oss) (51/104), 443.5 KiB    \nRetrieving: permctl-1699_20260518-160100.2.1.x86_64.rpm [.done]\n( 51/104) Installing: permctl-1699_20260518-160100.2.1.x86_64 [..done]\nRetrieving: libxcb1-1.17.0-160100.2.1.x86_64 (leap161-oss) (52/104),  64.1 KiB    \nRetrieving: libxcb1-1.17.0-160100.2.1.x86_64.rpm [.done]\n( 52/104) Installing: libxcb1-1.17.0-160100.2.1.x86_64 [..done]\nRetrieving: bash-5.2.37-160100.2.1.x86_64 (leap161-oss) (53/104), 718.7 KiB    \nRetrieving: bash-5.2.37-160100.2.1.x86_64.rpm [.done]\n( 53/104) Installing: bash-5.2.37-160100.2.1.x86_64 [..done]\nRetrieving: bash-sh-5.2.37-160100.2.1.noarch (leap161-oss) (54/104), 123.4 KiB    \nRetrieving: bash-sh-5.2.37-160100.2.1.noarch.rpm [.done]\n( 54/104) Installing: bash-sh-5.2.37-160100.2.1.noarch [..done]\nRetrieving: libdrm_intel1-2.4.131-160100.2.1.x86_64 (leap161-oss) (55/104), 134.8 KiB    \nRetrieving: libdrm_intel1-2.4.131-160100.2.1.x86_64.rpm [.done]\n( 55/104) Installing: libdrm_intel1-2.4.131-160100.2.1.x86_64 [..done]\nRetrieving: libsubid5-4.19.4-160100.2.1.x86_64 (leap161-oss) (56/104),  69.7 KiB    \nRetrieving: libsubid5-4.19.4-160100.2.1.x86_64.rpm [.done]\n( 56/104) Installing: libsubid5-4.19.4-160100.2.1.x86_64 [..done]\nRetrieving: libsemanage2-3.11-160100.2.1.x86_64 (leap161-oss) (57/104), 115.1 KiB    \nRetrieving: libsemanage2-3.11-160100.2.1.x86_64.rpm [...done (101.5 KiB/s)]\n( 57/104) Installing: libsemanage2-3.11-160100.2.1.x86_64 [..done]\nRetrieving: libgthread-2_0-0-2.84.4-160100.3.1.x86_64 (leap161-oss) (58/104), 315.4 KiB    \nRetrieving: libgthread-2_0-0-2.84.4-160100.3.1.x86_64.rpm [..done (140.6 KiB/s)]\n( 58/104) Installing: libgthread-2_0-0-2.84.4-160100.3.1.x86_64 [..done]\nRetrieving: libSPIRV-Tools-2026_1-2026.1-160100.2.1.x86_64 (leap161-oss) (59/104),   1.6 MiB    \nRetrieving: libSPIRV-Tools-2026_1-2026.1-160100.2.1.x86_64.rpm [..done (578.1 KiB/s)]\n( 59/104) Installing: libSPIRV-Tools-2026_1-2026.1-160100.2.1.x86_64 [..done]\nRetrieving: libLLVM21-21.1.8-160100.2.1.x86_64 (leap161-oss) (60/104),  30.3 MiB    \nRetrieving: libLLVM21-21.1.8-160100.2.1.x86_64.rpm [......................done (14.5 MiB/s)]\n( 60/104) Installing: libLLVM21-21.1.8-160100.2.1.x86_64 [........done]\nRetrieving: libfreetype6-2.14.3-160100.2.1.x86_64 (leap161-oss) (61/104), 602.4 KiB    \nRetrieving: libfreetype6-2.14.3-160100.2.1.x86_64.rpm [.done]\n( 61/104) Installing: libfreetype6-2.14.3-160100.2.1.x86_64 [..done]\nRetrieving: libxcb-xkb1-1.17.0-160100.2.1.x86_64 (leap161-oss) (62/104),  50.3 KiB    \nRetrieving: libxcb-xkb1-1.17.0-160100.2.1.x86_64.rpm [.done]\n( 62/104) Installing: libxcb-xkb1-1.17.0-160100.2.1.x86_64 [..done]\nRetrieving: libxcb-xfixes0-1.17.0-160100.2.1.x86_64 (leap161-oss) (63/104),  28.8 KiB    \nRetrieving: libxcb-xfixes0-1.17.0-160100.2.1.x86_64.rpm [.done]\n( 63/104) Installing: libxcb-xfixes0-1.17.0-160100.2.1.x86_64 [..done]\nRetrieving: libxcb-util1-0.4.1-160100.2.1.x86_64 (leap161-oss) (64/104),  16.0 KiB    \nRetrieving: libxcb-util1-0.4.1-160100.2.1.x86_64.rpm [.done]\n( 64/104) Installing: libxcb-util1-0.4.1-160100.2.1.x86_64 [..done]\nRetrieving: libxcb-sync1-1.17.0-160100.2.1.x86_64 (leap161-oss) (65/104),  28.1 KiB    \nRetrieving: libxcb-sync1-1.17.0-160100.2.1.x86_64.rpm [.done]\n( 65/104) Installing: libxcb-sync1-1.17.0-160100.2.1.x86_64 [..done]\nRetrieving: libxcb-shm0-1.17.0-160100.2.1.x86_64 (leap161-oss) (66/104),  24.8 KiB    \nRetrieving: libxcb-shm0-1.17.0-160100.2.1.x86_64.rpm [.done]\n( 66/104) Installing: libxcb-shm0-1.17.0-160100.2.1.x86_64 [..done]\nRetrieving: libxcb-shape0-1.17.0-160100.2.1.x86_64 (leap161-oss) (67/104),  25.1 KiB    \nRetrieving: libxcb-shape0-1.17.0-160100.2.1.x86_64.rpm [.done]\n( 67/104) Installing: libxcb-shape0-1.17.0-160100.2.1.x86_64 [..done]\nRetrieving: libxcb-render0-1.17.0-160100.2.1.x86_64 (leap161-oss) (68/104),  34.7 KiB    \nRetrieving: libxcb-render0-1.17.0-160100.2.1.x86_64.rpm [.done]\n( 68/104) Installing: libxcb-render0-1.17.0-160100.2.1.x86_64 [..done]\nRetrieving: libxcb-randr0-1.17.0-160100.2.1.x86_64 (leap161-oss) (69/104),  36.4 KiB    \nRetrieving: libxcb-randr0-1.17.0-160100.2.1.x86_64.rpm [.done]\n( 69/104) Installing: libxcb-randr0-1.17.0-160100.2.1.x86_64 [..done]\nRetrieving: libxcb-present0-1.17.0-160100.2.1.x86_64 (leap161-oss) (70/104),  24.9 KiB    \nRetrieving: libxcb-present0-1.17.0-160100.2.1.x86_64.rpm [.done]\n( 70/104) Installing: libxcb-present0-1.17.0-160100.2.1.x86_64 [..done]\nRetrieving: libxcb-keysyms1-0.4.1-160100.2.1.x86_64 (leap161-oss) (71/104),  12.0 KiB    \nRetrieving: libxcb-keysyms1-0.4.1-160100.2.1.x86_64.rpm [.done]\n( 71/104) Installing: libxcb-keysyms1-0.4.1-160100.2.1.x86_64 [..done]\nRetrieving: libxcb-icccm4-0.4.2-160100.2.1.x86_64 (leap161-oss) (72/104),  14.9 KiB    \nRetrieving: libxcb-icccm4-0.4.2-160100.2.1.x86_64.rpm [.done]\n( 72/104) Installing: libxcb-icccm4-0.4.2-160100.2.1.x86_64 [..done]\nRetrieving: libxcb-glx0-1.17.0-160100.2.1.x86_64 (leap161-oss) (73/104),  42.5 KiB    \nRetrieving: libxcb-glx0-1.17.0-160100.2.1.x86_64.rpm [.done]\n( 73/104) Installing: libxcb-glx0-1.17.0-160100.2.1.x86_64 [..done]\nRetrieving: libxcb-dri3-0-1.17.0-160100.2.1.x86_64 (leap161-oss) (74/104),  26.2 KiB    \nRetrieving: libxcb-dri3-0-1.17.0-160100.2.1.x86_64.rpm [.done]\n( 74/104) Installing: libxcb-dri3-0-1.17.0-160100.2.1.x86_64 [..done]\nRetrieving: libX11-6-1.8.12-160100.3.1.x86_64 (leap161-oss) (75/104), 670.7 KiB    \nRetrieving: libX11-6-1.8.12-160100.3.1.x86_64.rpm [.done]\n( 75/104) Installing: libX11-6-1.8.12-160100.3.1.x86_64 [..done]\nRetrieving: pkgconf-pkg-config-2.2.0-160100.2.1.x86_64 (leap161-oss) (76/104),  16.3 KiB    \nRetrieving: pkgconf-pkg-config-2.2.0-160100.2.1.x86_64.rpm [..done (7.8 KiB/s)]\n( 76/104) Installing: pkgconf-pkg-config-2.2.0-160100.2.1.x86_64 [..done]\nRetrieving: login_defs-4.19.4-160100.2.1.noarch (leap161-oss) (77/104),  68.9 KiB    \nRetrieving: login_defs-4.19.4-160100.2.1.noarch.rpm [.done]\n( 77/104) Installing: login_defs-4.19.4-160100.2.1.noarch [..done]\nRetrieving: coreutils-9.6-160100.3.1.x86_64 (leap161-oss) (78/104),   1.2 MiB    \nRetrieving: coreutils-9.6-160100.3.1.x86_64.rpm [.....done (1.1 MiB/s)]\n( 78/104) Installing: coreutils-9.6-160100.3.1.x86_64 [..done]\nRetrieving: fontconfig-2.16.0-160100.2.1.x86_64 (leap161-oss) (79/104), 137.5 KiB    \nRetrieving: fontconfig-2.16.0-160100.2.1.x86_64.rpm [.done]\n( 79/104) Installing: fontconfig-2.16.0-160100.2.1.x86_64 [..done]\nRetrieving: libfontconfig1-2.16.0-160100.2.1.x86_64 (leap161-oss) (80/104), 199.5 KiB    \nRetrieving: libfontconfig1-2.16.0-160100.2.1.x86_64.rpm [..done (54.7 KiB/s)]\n( 80/104) Installing: libfontconfig1-2.16.0-160100.2.1.x86_64 [..done]\nRetrieving: libxcb-image0-0.4.1-160100.2.1.x86_64 (leap161-oss) (81/104),  16.6 KiB    \nRetrieving: libxcb-image0-0.4.1-160100.2.1.x86_64.rpm [..done (16.6 KiB/s)]\n( 81/104) Installing: libxcb-image0-0.4.1-160100.2.1.x86_64 [..done]\nRetrieving: libxcb-render-util0-0.3.10-160100.2.1.x86_64 (leap161-oss) (82/104),  13.8 KiB    \nRetrieving: libxcb-render-util0-0.3.10-160100.2.1.x86_64.rpm [.done]\n( 82/104) Installing: libxcb-render-util0-0.3.10-160100.2.1.x86_64 [..done]\nRetrieving: Mesa-vulkan-device-select-26.0.7-160100.2.2.x86_64 (leap161-oss) (83/104), 307.5 KiB    \nRetrieving: Mesa-vulkan-device-select-26.0.7-160100.2.2.x86_64.rpm [.done]\n( 83/104) Installing: Mesa-vulkan-device-select-26.0.7-160100.2.2.x86_64 [..done]\nRetrieving: libXext6-1.3.6-160100.2.1.x86_64 (leap161-oss) (84/104),  37.2 KiB    \nRetrieving: libXext6-1.3.6-160100.2.1.x86_64.rpm [.done]\n( 84/104) Installing: libXext6-1.3.6-160100.2.1.x86_64 [..done]\nRetrieving: xkeyboard-config-2.47-160100.2.1.noarch (leap161-oss) (85/104), 468.9 KiB    \nRetrieving: xkeyboard-config-2.47-160100.2.1.noarch.rpm [...done (445.3 KiB/s)]\n( 85/104) Installing: xkeyboard-config-2.47-160100.2.1.noarch [..done]\nRetrieving: permissions-config-1699_20260518-160100.2.1.noarch (leap161-oss) (86/104),  67.8 KiB    \nRetrieving: permissions-config-1699_20260518-160100.2.1.noarch.rpm [.done]\n( 86/104) Installing: permissions-config-1699_20260518-160100.2.1.noarch [..\nUpdating /etc/sysconfig/security ...\nChecking permissions and ownerships - using the permissions files\n\t/usr/share/permissions/permissions\n\t/usr/share/permissions/permissions.easy\n\t/etc/permissions.local\ndone]\nRetrieving: libxcb-cursor0-0.1.5-160100.2.1.x86_64 (leap161-oss) (87/104),  17.3 KiB    \nRetrieving: libxcb-cursor0-0.1.5-160100.2.1.x86_64.rpm [.done]\n( 87/104) Installing: libxcb-cursor0-0.1.5-160100.2.1.x86_64 [..done]\nRetrieving: libvulkan_lvp-26.0.7-160100.2.2.x86_64 (leap161-oss) (88/104),   2.4 MiB    \nRetrieving: libvulkan_lvp-26.0.7-160100.2.2.x86_64.rpm [.......done (2.4 MiB/s)]\n( 88/104) Installing: libvulkan_lvp-26.0.7-160100.2.2.x86_64 [..done]\nRetrieving: libXxf86vm1-1.1.6-160100.2.1.x86_64 (leap161-oss) (89/104),  17.0 KiB    \nRetrieving: libXxf86vm1-1.1.6-160100.2.1.x86_64.rpm [..done (17.0 KiB/s)]\n( 89/104) Installing: libXxf86vm1-1.1.6-160100.2.1.x86_64 [..done]\nRetrieving: libxkbcommon0-1.8.0-160100.2.1.x86_64 (leap161-oss) (90/104), 151.2 KiB    \nRetrieving: libxkbcommon0-1.8.0-160100.2.1.x86_64.rpm [...done (117.2 KiB/s)]\n( 90/104) Installing: libxkbcommon0-1.8.0-160100.2.1.x86_64 [..done]\nRetrieving: permissions-1699_20260518-160100.2.1.x86_64 (leap161-oss) (91/104),  55.1 KiB    \nRetrieving: permissions-1699_20260518-160100.2.1.x86_64.rpm [.done]\n( 91/104) Installing: permissions-1699_20260518-160100.2.1.x86_64 [..done]\nRetrieving: Mesa-26.0.7-160100.2.1.x86_64 (leap161-oss) (92/104), 271.8 KiB    \nRetrieving: Mesa-26.0.7-160100.2.1.x86_64.rpm [..done (234.3 KiB/s)]\n( 92/104) Installing: Mesa-26.0.7-160100.2.1.x86_64 [..done]\nRetrieving: Mesa-dri-26.0.7-160100.2.2.x86_64 (leap161-oss) (93/104),  10.7 MiB    \nRetrieving: Mesa-dri-26.0.7-160100.2.2.x86_64.rpm [..........................done (5.3 MiB/s)]\n( 93/104) Installing: Mesa-dri-26.0.7-160100.2.2.x86_64 [....done]\nRetrieving: libglvnd-1.7.0-160100.2.1.x86_64 (leap161-oss) (94/104), 253.8 KiB    \nRetrieving: libglvnd-1.7.0-160100.2.1.x86_64.rpm [.done]\n( 94/104) Installing: libglvnd-1.7.0-160100.2.1.x86_64 [..done]\nRetrieving: Mesa-libEGL1-26.0.7-160100.2.1.x86_64 (leap161-oss) (95/104), 408.6 KiB    \nRetrieving: Mesa-libEGL1-26.0.7-160100.2.1.x86_64.rpm [..done (351.5 KiB/s)]\n( 95/104) Installing: Mesa-libEGL1-26.0.7-160100.2.1.x86_64 [..done]\nRetrieving: libxkbcommon-x11-0-1.8.0-160100.2.1.x86_64 (leap161-oss) (96/104),  38.7 KiB    \nRetrieving: libxkbcommon-x11-0-1.8.0-160100.2.1.x86_64.rpm [.done]\n( 96/104) Installing: libxkbcommon-x11-0-1.8.0-160100.2.1.x86_64 [..done]\nRetrieving: pam-1.7.2+git12-160100.2.1.x86_64 (leap161-oss) (97/104), 373.1 KiB    \nRetrieving: pam-1.7.2+git12-160100.2.1.x86_64.rpm [.done]\n( 97/104) Installing: pam-1.7.2+git12-160100.2.1.x86_64 [..done]\nRetrieving: Mesa-libGL1-26.0.7-160100.2.1.x86_64 (leap161-oss) (98/104), 398.4 KiB    \nRetrieving: Mesa-libGL1-26.0.7-160100.2.1.x86_64.rpm [..done (78.1 KiB/s)]\n( 98/104) Installing: Mesa-libGL1-26.0.7-160100.2.1.x86_64 [..done]\nRetrieving: shadow-pw-mgmt-4.19.4-160100.2.1.x86_64 (leap161-oss) (99/104), 155.8 KiB    \nRetrieving: shadow-pw-mgmt-4.19.4-160100.2.1.x86_64.rpm [..done (155.8 KiB/s)]\n( 99/104) Installing: shadow-pw-mgmt-4.19.4-160100.2.1.x86_64 [..\n/usr/bin/newgidmap: setting to root:root 0755 \"cap_setgid=ep\". (missing capabilities)\n/usr/bin/newuidmap: setting to root:root 0755 \"cap_setuid=ep\". (missing capabilities)\ndone]\nRetrieving: shadow-4.19.4-160100.2.1.x86_64 (leap161-oss) (100/104), 669.5 KiB    \nRetrieving: shadow-4.19.4-160100.2.1.x86_64.rpm [..done (164.0 KiB/s)]\n(100/104) Installing: shadow-4.19.4-160100.2.1.x86_64 [..done]\nRetrieving: sysuser-shadow-3.3-160100.2.1.noarch (leap161-oss) (101/104),  14.5 KiB    \nRetrieving: sysuser-shadow-3.3-160100.2.1.noarch.rpm [.done]\n(101/104) Installing: sysuser-shadow-3.3-160100.2.1.noarch [..done]\nRetrieving: dbus-1-common-1.14.10-160100.2.1.noarch (leap161-oss) (102/104), 135.7 KiB    \nRetrieving: dbus-1-common-1.14.10-160100.2.1.noarch.rpm [..done (15.6 KiB/s)]\n(102/104) Installing: dbus-1-common-1.14.10-160100.2.1.noarch [..\n/usr/sbin/useradd -r -c User for D-Bus -d /run/dbus -U messagebus -s /usr/sbin/nologin\ndone]\nRetrieving: libdbus-1-3-1.14.10-160100.2.1.x86_64 (leap161-oss) (103/104), 256.2 KiB    \nRetrieving: libdbus-1-3-1.14.10-160100.2.1.x86_64.rpm [.done]\n(103/104) Installing: libdbus-1-3-1.14.10-160100.2.1.x86_64 [..done]\nRetrieving: folimeld-0.3.5-1.lp161.x86_64 (Plain RPM files cache) (104/104),  96.8 MiB    \n    Package header is not signed!\n\n(104/104) Installing: folimeld-0.3.5-1.lp161.x86_64 [......done]\nRunning post-transaction scripts [....done]\n"
+      },
+      {
+        "command": [
+          "rpm",
+          "--root",
+          "/home/folimeld-test/verification/version035-r1-20261113/minimal-root",
+          "-V",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": ""
+      },
+      {
+        "command": [
+          "rpm",
+          "--root",
+          "/home/folimeld-test/verification/version035-r1-20261113/minimal-root",
+          "-qa",
+          "--qf",
+          "%{NAME}\n"
+        ],
+        "exit_code": 0,
+        "output": "gpg-pubkey\ngpg-pubkey\ngpg-pubkey\ngpg-pubkey\ngpg-pubkey\ngpg-pubkey\ncompat-usrmerge-tools\nlibX11-data\nlibsemanage-conf\npkgconf-m4\nsystem-user-root\nfilesystem\nglibc\nterminfo-base\nlibncurses6\npatterns-glibc-hwcaps-x86_64_v3\nlibzstd1\nlibz-ng-compat1\nlibxshmfence1\nlibvulkan1\nlibsepol2\nlibpkgconf5\nlibpcre2-8-0\nliblzma5\nlibgmp10\nlibgcc_s1\nlibffi8\nlibexpat1\nlibeconf0\nlibdrm2\nlibdisplay-info2\nlibcrypt1\nlibcap2\nlibbz2-1\nlibbrotlicommon1\nlibaudit1\nlibattr1\nlibacl1\nlibXau6\nlibX11-xcb1\nfillup\nlibreadline8\nlibedit0\nlibpng16-16\nlibpciaccess0\nlibelf1\npkgconf\nlibselinux1\nlibglib-2_0-0\nlibxml2-2\nlibstdc++6\nlibwayland-client0\nlibgbm1\nlibdrm_amdgpu1\nlibsystemd0\nlibbrotlidec1\npermctl\nlibxcb1\nbash\nbash-sh\nlibdrm_intel1\nlibsubid5\nlibsemanage2\nlibgthread-2_0-0\nlibSPIRV-Tools-2026_1\nlibLLVM21\nlibfreetype6\nlibxcb-xkb1\nlibxcb-xfixes0\nlibxcb-util1\nlibxcb-sync1\nlibxcb-shm0\nlibxcb-shape0\nlibxcb-render0\nlibxcb-randr0\nlibxcb-present0\nlibxcb-keysyms1\nlibxcb-icccm4\nlibxcb-glx0\nlibxcb-dri3-0\nlibX11-6\npkgconf-pkg-config\nlogin_defs\ncoreutils\nfontconfig\nlibfontconfig1\nlibxcb-image0\nlibxcb-render-util0\nMesa-vulkan-device-select\nlibXext6\nxkeyboard-config\npermissions-config\nlibxcb-cursor0\nlibvulkan_lvp\nlibXxf86vm1\nlibxkbcommon0\npermissions\nMesa\nMesa-dri\nlibglvnd\nMesa-libEGL1\nlibxkbcommon-x11-0\npam\nMesa-libGL1\nshadow-pw-mgmt\nshadow\nsysuser-shadow\ndbus-1-common\nlibdbus-1-3\nfolimeld\n"
+      },
+      {
+        "command": [
+          "chroot",
+          "--userspec=1000:1000",
+          "/home/folimeld-test/verification/version035-r1-20261113/minimal-root",
+          "/usr/bin/env",
+          "QT_QPA_PLATFORM=offscreen",
+          "HOME=/tmp",
+          "TMPDIR=/tmp",
+          "timeout",
+          "15",
+          "/usr/bin/folimeld"
+        ],
+        "exit_code": 124,
+        "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nDetected locale \"C\" with character encoding \"ANSI_X3.4-1968\", which is not UTF-8.\nQt depends on a UTF-8 locale, but has failed to switch to one.\nIf this causes problems, reconfigure your locale. See the locale(1) manual\nfor more information.\nThis plugin does not support propagateSizeHints()\n"
+      },
+      {
+        "command": [
+          "rpm",
+          "--root",
+          "/home/folimeld-test/verification/version035-r1-20261113/minimal-root",
+          "-V",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "output": ""
+      }
+    ]
+  },
+  "gio": {
+    "command": [
+      "gio",
+      "open",
+      "/home/folimeld-test/verification/version035-r1-20261113/gui/fixtures/保存 結果.pdf"
+    ],
+    "exit_code": 0,
+    "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+    "shutdown_note": "After observing the reopened PDF, test application processes were explicitly terminated; gio itself returned 0. Inherited output pipes had delayed capture completion."
+  }
+}

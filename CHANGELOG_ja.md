@@ -39,6 +39,16 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.5 openSUSE Leap 16.1 amd64試験版 - 2026-11-13
+
+- 専用WSL2/WSLgで検証したamd64 RPM（0.3.5-1）を[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5)で試験公開。PDF編集・日本語名保存/GIO再読込・暗号化PDF・画像PDF・Mozc日本語入力、更新・削除再導入・新規最小installroot起動を確認。
+- 対応ソース858入力を専用コミットへ固定。実配布209ネイティブ実体、署名検証済み36 SRPMと11添付を照合。通常デスクトップ・ARM64・Tumbleweed・公開Ubuntu/Debian 0.3.4からの移行は対象外。合成入力での失敗と再試験・来歴上の制約を明記し、既存配布物とlatestを保持。
+
+## 0.3.5 Fedora 44 amd64試験版 - 2026-11-13
+
+- Fedora 44専用WSL2/WSLgで検証したamd64 RPM（0.3.5-2）を[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5)で試験公開。PDF編集・日本語名保存再読込・暗号化PDF・画像PDF・日本語入力・GIO、更新・削除再導入・新規最小installroot起動を確認。
+- 対応ソース822入力、実配布207ネイティブ実体、署名検証済み37 SRPMと11添付を照合。通常デスクトップ・ARM64・公開Ubuntu/Debian 0.3.4からの移行等は未検証。既存配布物とlatestを保持。
+
 ## 0.3.5 Fedora 45 amd64試験版 - 2026-11-13
 
 - Fedora 45のWSL2／WSLgで検証したamd64 RPM（0.3.5-2）を[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5)で試験公開（日本時間）。

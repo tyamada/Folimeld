@@ -1,0 +1,68 @@
+{
+  "date_jst": "2026-11-13",
+  "repository": "tyamada/Folimeld",
+  "branch": "release/opensuse-leap161-amd64-0.3.5",
+  "commit": "44f76e77c05c0c097be9dc1e8f1de9f8449e6aaa",
+  "tag": "opensuse-leap161-amd64-v0.3.5",
+  "prerelease": true,
+  "make_latest": false,
+  "packet_directory": "/home/folimeld-build/folimeld-candidates/leap161-035-r1-20261113/publication-packet",
+  "assets": [
+    {
+      "name": "Folimeld-leap161-0.3.5-r1-dependency-sources.tar",
+      "bytes": 1692856320,
+      "sha256": "6919aaa5a71c339a7dbfca5ab458b00d1665a6fcb625cdf92714817b408af42c"
+    },
+    {
+      "name": "Folimeld-source-d73c5cd22274d62d82c88f8973bc83259d076fa98d6fcdea6274f226b3b181f5.zip",
+      "bytes": 24563329,
+      "sha256": "d73c5cd22274d62d82c88f8973bc83259d076fa98d6fcdea6274f226b3b181f5"
+    },
+    {
+      "name": "KNOWN-LIMITATIONS.txt",
+      "bytes": 1372,
+      "sha256": "701457c1fcd250f1ebeb76a9eeb9d8fc72216b422261c0ebb262feb54b20f06c"
+    },
+    {
+      "name": "RELEASE-NOTES.txt",
+      "bytes": 6129,
+      "sha256": "f1c1a8f45cb3e15cab466fac8bcbb68b063fe94fc60f2347fe2d6e1f5a1d2b74"
+    },
+    {
+      "name": "dependency-source-manifest.json",
+      "bytes": 39419,
+      "sha256": "6c2e84b0f935dbc118e68a0f4dd36a60ec2236517096394a91f5b57a3f2ef530"
+    },
+    {
+      "name": "folimeld-0.3.5-1.lp161.x86_64.rpm",
+      "bytes": 101520401,
+      "sha256": "ae7517737f6011a145161e3f56a1776d910ed172f12aa807999b64144d06066f"
+    },
+    {
+      "name": "folimeld-0.3.5-1.lp161.x86_64.rpm-ae7517737f6011a145161e3f56a1776d910ed172f12aa807999b64144d06066f.json",
+      "bytes": 783,
+      "sha256": "a43960891b129bc39ac469ee0ea620973f887caff768db72c753cb60d24df8fd"
+    },
+    {
+      "name": "third-party-notices.tar.gz",
+      "bytes": 2424695,
+      "sha256": "5388f7131c99c099971d07a7ee3c4f95af4f695617bf2cb65c4c44ec10abf539"
+    },
+    {
+      "name": "verification-leap161-amd64-0.3.5.json",
+      "bytes": 53724,
+      "sha256": "5a08c1a88ac3c145026fd8770e27fdf566b7026ca76c4c8c306c663888fb231c"
+    },
+    {
+      "name": "verification-records-leap161-amd64-0.3.5.zip",
+      "bytes": 913121,
+      "sha256": "800e0bbb39857dc0f2d7eb90976b1e28d70bf0d9a0a7b3c190f4f10d68cf7467"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 1114,
+      "sha256": "cdc2a6f68813f4da3b9a7f70d85ca6313bd672072ab3527dcd9e192536fd396a"
+    }
+  ],
+  "authorization": "User explicitly requested publishing the highest-priority unpublished package, then proceeding to the next package in this task."
+}

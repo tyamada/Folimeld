@@ -6,7 +6,7 @@
 
 ![Folimeld icon](assets/Folimeld.iconset/icon_128x128.png)
 
-Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、削除できるデスクトップアプリです。Windows、macOS、Ubuntu、Debianで利用でき、Fedora・AlmaLinux・FreeBSD・NetBSD・OpenBSD向けにも試験配布しています。編集するファイルを外部サービスへ送信せず、ローカル環境で処理します。
+Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、削除できるデスクトップアプリです。Windows、macOS、Ubuntu、Debianで利用でき、openSUSE・Fedora・AlmaLinux・FreeBSD・NetBSD・OpenBSD向けにも試験配布しています。編集するファイルを外部サービスへ送信せず、ローカル環境で処理します。
 
 ![Folimeld main window](documentation/screenshots/main-window-macos_ja.png)
 
@@ -28,7 +28,7 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 - PDFバージョン、ページレイアウト、綴じ方向を編集
 - 閲覧パスワードの設定と解除
 - 日本語、英語、ドイツ語、スペイン語、フランス語、韓国語、ポルトガル語、中国語に対応
-- Windows 11、macOS、Ubuntu、Debianで利用可能。Fedora、AlmaLinux、FreeBSD、NetBSD、OpenBSD向けに試験配布（対応OS版・CPUは下表を参照）
+- Windows 11、macOS、Ubuntu、Debianで利用可能。openSUSE、Fedora、AlmaLinux、FreeBSD、NetBSD、OpenBSD向けに試験配布（対応OS版・CPUは下表を参照）
 
 BSDの各配布物は、対象のOS版・CPUと検証記録に対応しています。確認範囲と導入手順は下記の各OS節を参照してください。
 
@@ -36,7 +36,7 @@ BSDの各配布物は、対象のOS版・CPUと検証記録に対応していま
 
 Windows版の **Folimeld 1.0.1.0（Windows 11 x64）** は、Microsoft Storeで日本と米国に公開しています。無料で入手できます。 [日本のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [米国のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
 
-Ubuntu／Debian向けFolimeld 0.3.4を[GitHub Releases](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4)で公開しています。[Fedora 45 amd64向け0.3.5試験版](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5)と[AlmaLinux 9 amd64向け0.3.5試験版](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5)も公開しています。
+Ubuntu／Debian向けFolimeld 0.3.4を[GitHub Releases](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4)で公開しています。[openSUSE Leap 16.1 amd64向け0.3.5試験版](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5)、[Fedora 44 amd64向け0.3.5試験版](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5)、[Fedora 45 amd64向け0.3.5試験版](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5)と[AlmaLinux 9 amd64向け0.3.5試験版](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5)も公開しています。
 
 Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビルド記録は[Linux版GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)から取得できます。FreeBSD版・NetBSD版・OpenBSD版は下記の専用Releaseで試験配布しています。[Linux版の移行計画と実施記録](documentation/linux-release-migration_ja.md)を参照してください。互換性のため従来のリポジトリ内のダウンロードURLも維持しています。
 
@@ -46,6 +46,8 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | macOS 15以降 | Apple Silicon（arm64） | Homebrew / 0.3.3（ソース配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.3) |
 | Ubuntu 24.04 | amd64 / arm64 | DEB・Snap / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
 | Debian 13 | amd64 / arm64 | DEB / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
+| openSUSE Leap 16.1（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5) |
+| Fedora 44（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5) |
 | Fedora 45（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) |
 | AlmaLinux 9.8（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5) |
 | FreeBSD 15.1 | amd64 | pkg / 0.3.3_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3) |
@@ -127,6 +129,42 @@ sudo snap install --dangerous ./folimeld_0.3.3_arm64.snap
 ```
 
 Debian 13ではUbuntu版と同じdebパッケージを使用します。最小構成の環境で `Fontconfig error: Cannot load default config file` が表示される場合は、`sudo apt install fontconfig-config` を実行してください。Debian 13.6のamd64環境（WSL2 / WSLg、X11）でPDFの表示・ページ移動・回転・保存・再読込を確認しています。詳しくは[Debianでの検証記録](documentation/debian-wsl-verification_ja.md)を参照してください。arm64環境（WSL2）でもdebのインストールとPDFを指定した起動を確認済みです。
+
+### openSUSE Leap 16.1 amd64試験版
+
+2026年11月13日（日本時間）公開の**Folimeld 0.3.5（RPM revision1）**は、openSUSE Leap 16.1の専用WSL2／WSLgで検証した試験版です。
+
+- [amd64 RPM](https://github.com/tyamada/Folimeld/releases/download/opensuse-leap161-amd64-v0.3.5/folimeld-0.3.5-1.lp161.x86_64.rpm)
+- [SHA256SUMS.txt](https://github.com/tyamada/Folimeld/releases/download/opensuse-leap161-amd64-v0.3.5/SHA256SUMS.txt)
+- [対応ソース・第三者告知・依存ソース資料・検証記録](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5)
+
+RPMとSHA256SUMS.txtを同じフォルダへ取得し、照合後に導入します。RPMは未署名です。指定したローカルRPMだけを許可し、標準リポジトリの署名検証は維持します。
+
+```sh
+sha256sum --ignore-missing -c SHA256SUMS.txt
+sudo zypper install --allow-unsigned-rpm --no-recommends ./folimeld-0.3.5-1.lp161.x86_64.rpm
+folimeld
+```
+
+PDF編集・日本語名保存とGIO再読込、暗号化PDF、画像PDF、日本語入力、更新・削除再導入、既存試験PDF/設定の保持、新規最小installrootのoffscreen起動を確認しました。通常デスクトップ・通常ファイルマネージャー操作・ARM64・Tumbleweed・公開Ubuntu/Debian 0.3.4からの移行は対象外です。最小依存試験はchroot内であり、独立WSLブートや最小環境のGUI/IMEは未検証です。合成GUI入力の失敗と再試験、wheel来歴等の制約は[Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5)と[KNOWN-LIMITATIONS.txt](https://github.com/tyamada/Folimeld/releases/download/opensuse-leap161-amd64-v0.3.5/KNOWN-LIMITATIONS.txt)を参照してください。
+
+### Fedora 44 amd64試験版
+
+2026年11月13日（日本時間）公開の**Folimeld 0.3.5（RPM revision2）**は、Fedora 44のWSL2／WSLgで検証した試験版です。
+
+- [amd64 RPM](https://github.com/tyamada/Folimeld/releases/download/fedora44-amd64-v0.3.5/folimeld-0.3.5-2.fc44.x86_64.rpm)
+- [SHA256SUMS.txt](https://github.com/tyamada/Folimeld/releases/download/fedora44-amd64-v0.3.5/SHA256SUMS.txt)
+- [対応ソース・第三者告知・依存ソース資料・検証記録](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5)
+
+RPMとSHA256SUMS.txtを同じフォルダへダウンロードし、照合後に導入してください。RPMは未署名です。
+
+```sh
+sha256sum --ignore-missing -c SHA256SUMS.txt
+sudo dnf install ./folimeld-0.3.5-2.fc44.x86_64.rpm
+folimeld
+```
+
+PDF編集・日本語名での別名保存と再読込、暗号化PDF、画像からのPDF作成、日本語入力、GIO起動、更新・削除再導入を確認しています。新規の最小依存installrootではoffscreen起動と整合性を確認しました。通常デスクトップ、他ディストリビューション、ARM64、公開Ubuntu／Debian 0.3.4からの移行は未検証です。最小依存試験は独立WSLのブートや日本語GUI/IMEの確認を意味しません。詳しい確認範囲と来歴の制約はRelease本文と[KNOWN-LIMITATIONS.txt](https://github.com/tyamada/Folimeld/releases/download/fedora44-amd64-v0.3.5/KNOWN-LIMITATIONS.txt)を参照してください。既存配布物とlatestは変更していません。
 
 ### Fedora 45 amd64試験版
 
