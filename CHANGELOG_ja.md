@@ -39,6 +39,26 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.5 Linux DEB amd64試験版 - 2026-11-13
+
+- Ubuntu 24.04.4・Debian 13.6・Kali Rolling 2026.3の専用WSL2/WSLgで更新・削除再導入・起動と日本語PDF回転/Undoを確認した[amd64 DEB試験版](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5)を公開。Ubuntuでは追加の編集・保存再読込・最小chroot起動も確認。
+- ソース870入力、実ネイティブ214項目、Ubuntu対応ソース61件、署名付きSourcesインデックス53件、公開12添付を照合。IME/GIO/暗号化PDF/画像GUIの未再試験を明記し、既存0.3.4・ARM64・Snapとlatestを保持。
+
+## 0.3.5 openSUSE Tumbleweed 20261110 amd64試験版 - 2026-11-13
+
+- 専用WSL2/WSLgで検証した0.3.5-1.tw20261110のamd64 RPMを[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5)で公開。主要GUI・日本語名保存/GIO・Mozc入力・暗号化PDF・画像PDF、更新・削除再導入・新規最小installroot起動を確認。
+- 864入力を専用ソースコミットへ固定し、実配布206実体、署名検証済み35 SRPMと11添付を照合。最小rootは通常のローリングリポジトリを用いたchrootで、独立した20261110環境のブートではない。他スナップショット・通常デスクトップ・ARM64・公開0.3.4からの移行等は未検証。既存Releaseとlatestを保持。
+
+## 0.3.5 openSUSE Leap 16.1 amd64試験版 - 2026-11-13
+
+- 専用WSL2/WSLgで検証したamd64 RPM（0.3.5-1）を[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5)で試験公開。PDF編集・日本語名保存/GIO再読込・暗号化PDF・画像PDF・Mozc日本語入力、更新・削除再導入・新規最小installroot起動を確認。
+- 対応ソース858入力を専用コミットへ固定。実配布209ネイティブ実体、署名検証済み36 SRPMと11添付を照合。通常デスクトップ・ARM64・Tumbleweed・公開Ubuntu/Debian 0.3.4からの移行は対象外。合成入力での失敗と再試験・来歴上の制約を明記し、既存配布物とlatestを保持。
+
+## 0.3.5 Fedora 44 amd64試験版 - 2026-11-13
+
+- Fedora 44専用WSL2/WSLgで検証したamd64 RPM（0.3.5-2）を[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5)で試験公開。PDF編集・日本語名保存再読込・暗号化PDF・画像PDF・日本語入力・GIO、更新・削除再導入・新規最小installroot起動を確認。
+- 対応ソース822入力、実配布207ネイティブ実体、署名検証済み37 SRPMと11添付を照合。通常デスクトップ・ARM64・公開Ubuntu/Debian 0.3.4からの移行等は未検証。既存配布物とlatestを保持。
+
 ## 0.3.5 Fedora 45 amd64試験版 - 2026-11-13
 
 - Fedora 45のWSL2／WSLgで検証したamd64 RPM（0.3.5-2）を[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5)で試験公開（日本時間）。

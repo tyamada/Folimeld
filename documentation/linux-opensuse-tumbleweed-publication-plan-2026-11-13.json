@@ -1,0 +1,68 @@
+{
+  "date_jst": "2026-11-13",
+  "repository": "tyamada/Folimeld",
+  "branch": "release/opensuse-tumbleweed20261110-amd64-0.3.5",
+  "commit": "2f479d4cfa224be3aa8c25d51b8ec8583eecd073",
+  "tag": "opensuse-tumbleweed20261110-amd64-v0.3.5",
+  "prerelease": true,
+  "make_latest": false,
+  "packet_directory": "/home/folimeld-build/folimeld-candidates/tw20261110-035-r1-20261113/publication-packet",
+  "assets": [
+    {
+      "name": "Folimeld-source-1fe3d874a16320d40b55240776221cf967436e72a912d88985a7642ef067b573.zip",
+      "bytes": 24611633,
+      "sha256": "1fe3d874a16320d40b55240776221cf967436e72a912d88985a7642ef067b573"
+    },
+    {
+      "name": "Folimeld-tumbleweed20261110-0.3.5-r1-dependency-sources.tar",
+      "bytes": 1695539200,
+      "sha256": "b77ed5d7480544dc0b084bf9f89a7450f91d27d42e8a6879829f9eaf90ea4c6f"
+    },
+    {
+      "name": "KNOWN-LIMITATIONS.txt",
+      "bytes": 1249,
+      "sha256": "2ba6e827b87719bcc58fc1222170c829dc5d12215794bc81f2026f9512d3427a"
+    },
+    {
+      "name": "RELEASE-NOTES.txt",
+      "bytes": 6119,
+      "sha256": "ce57192f5c1f3e045b63d0db123981259f510d042224ff4b4586e9289f130b38"
+    },
+    {
+      "name": "dependency-source-manifest.json",
+      "bytes": 38584,
+      "sha256": "8652741753c3b0905f6ba2d72862b537822634c65ea3e8a065e5d3e6c1e626d6"
+    },
+    {
+      "name": "folimeld-0.3.5-1.tw20261110.x86_64.rpm",
+      "bytes": 103138652,
+      "sha256": "7c0bc1b2301783acdf349d62fa1c18ae49c3c8bba6fb2963a3aefab3df6f8eea"
+    },
+    {
+      "name": "folimeld-0.3.5-1.tw20261110.x86_64.rpm-7c0bc1b2301783acdf349d62fa1c18ae49c3c8bba6fb2963a3aefab3df6f8eea.json",
+      "bytes": 788,
+      "sha256": "948f1b5ae23db3788aea9e37cadfbf61375c9e8c439c5dc7c15d15319395e2b5"
+    },
+    {
+      "name": "third-party-notices.tar.gz",
+      "bytes": 2443590,
+      "sha256": "af5d57f45df3cec978c152a02292e769c6f4c28bd2ce8967ce3d297b6deba869"
+    },
+    {
+      "name": "verification-records-tumbleweed20261110-amd64-0.3.5.zip",
+      "bytes": 131279,
+      "sha256": "e930c3b36f55c9b6522e76d173f58986e650478ecadb7147b9c508cc728ee706"
+    },
+    {
+      "name": "verification-tumbleweed20261110-amd64-0.3.5.json",
+      "bytes": 55112,
+      "sha256": "40e1736d513ddf8c65acc790b84e4facbbb77e69eb682f0fd106f979ab937742"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 1157,
+      "sha256": "d4592a22875d72bf0fe32c8621cab88b7da18a868b09b5dff690171f047e5898"
+    }
+  ],
+  "authorization": "Awaiting explicit approval of these 11 concrete assets and the source branch/tag."
+}

@@ -1,0 +1,1381 @@
+{
+  "repository": "tyamada/Folimeld",
+  "branch": "release/opensuse-tumbleweed20261110-amd64-0.3.5",
+  "commit": "2f479d4cfa224be3aa8c25d51b8ec8583eecd073",
+  "tag": "opensuse-tumbleweed20261110-amd64-v0.3.5",
+  "pushed": true,
+  "published": true,
+  "assets": [
+    {
+      "id": 741451216,
+      "name": "Folimeld-tumbleweed20261110-0.3.5-r1-dependency-sources.tar",
+      "bytes": 1695539200,
+      "digest": "sha256:b77ed5d7480544dc0b084bf9f89a7450f91d27d42e8a6879829f9eaf90ea4c6f",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-47773b07fac47e96e430/Folimeld-tumbleweed20261110-0.3.5-r1-dependency-sources.tar",
+      "upload_seconds": 102.92
+    },
+    {
+      "id": 741455629,
+      "name": "folimeld-0.3.5-1.tw20261110.x86_64.rpm",
+      "bytes": 103138652,
+      "digest": "sha256:7c0bc1b2301783acdf349d62fa1c18ae49c3c8bba6fb2963a3aefab3df6f8eea",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-47773b07fac47e96e430/folimeld-0.3.5-1.tw20261110.x86_64.rpm",
+      "upload_seconds": 7.0
+    },
+    {
+      "id": 741455958,
+      "name": "Folimeld-source-1fe3d874a16320d40b55240776221cf967436e72a912d88985a7642ef067b573.zip",
+      "bytes": 24611633,
+      "digest": "sha256:1fe3d874a16320d40b55240776221cf967436e72a912d88985a7642ef067b573",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-47773b07fac47e96e430/Folimeld-source-1fe3d874a16320d40b55240776221cf967436e72a912d88985a7642ef067b573.zip",
+      "upload_seconds": 2.47
+    },
+    {
+      "id": 741456049,
+      "name": "third-party-notices.tar.gz",
+      "bytes": 2443590,
+      "digest": "sha256:af5d57f45df3cec978c152a02292e769c6f4c28bd2ce8967ce3d297b6deba869",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-47773b07fac47e96e430/third-party-notices.tar.gz",
+      "upload_seconds": 0.94
+    },
+    {
+      "id": 741456080,
+      "name": "verification-records-tumbleweed20261110-amd64-0.3.5.zip",
+      "bytes": 131279,
+      "digest": "sha256:e930c3b36f55c9b6522e76d173f58986e650478ecadb7147b9c508cc728ee706",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-47773b07fac47e96e430/verification-records-tumbleweed20261110-amd64-0.3.5.zip",
+      "upload_seconds": 0.72
+    },
+    {
+      "id": 741456106,
+      "name": "verification-tumbleweed20261110-amd64-0.3.5.json",
+      "bytes": 55112,
+      "digest": "sha256:40e1736d513ddf8c65acc790b84e4facbbb77e69eb682f0fd106f979ab937742",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-47773b07fac47e96e430/verification-tumbleweed20261110-amd64-0.3.5.json",
+      "upload_seconds": 0.71
+    },
+    {
+      "id": 741456130,
+      "name": "dependency-source-manifest.json",
+      "bytes": 38584,
+      "digest": "sha256:8652741753c3b0905f6ba2d72862b537822634c65ea3e8a065e5d3e6c1e626d6",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-47773b07fac47e96e430/dependency-source-manifest.json",
+      "upload_seconds": 0.66
+    },
+    {
+      "id": 741456159,
+      "name": "RELEASE-NOTES.txt",
+      "bytes": 6119,
+      "digest": "sha256:ce57192f5c1f3e045b63d0db123981259f510d042224ff4b4586e9289f130b38",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-47773b07fac47e96e430/RELEASE-NOTES.txt",
+      "upload_seconds": 0.71
+    },
+    {
+      "id": 741456186,
+      "name": "KNOWN-LIMITATIONS.txt",
+      "bytes": 1249,
+      "digest": "sha256:2ba6e827b87719bcc58fc1222170c829dc5d12215794bc81f2026f9512d3427a",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-47773b07fac47e96e430/KNOWN-LIMITATIONS.txt",
+      "upload_seconds": 0.68
+    },
+    {
+      "id": 741456209,
+      "name": "SHA256SUMS.txt",
+      "bytes": 1157,
+      "digest": "sha256:d4592a22875d72bf0fe32c8621cab88b7da18a868b09b5dff690171f047e5898",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-47773b07fac47e96e430/SHA256SUMS.txt",
+      "upload_seconds": 0.65
+    },
+    {
+      "id": 741456236,
+      "name": "folimeld-0.3.5-1.tw20261110.x86_64.rpm-7c0bc1b2301783acdf349d62fa1c18ae49c3c8bba6fb2963a3aefab3df6f8eea.json",
+      "bytes": 788,
+      "digest": "sha256:948f1b5ae23db3788aea9e37cadfbf61375c9e8c439c5dc7c15d15319395e2b5",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-47773b07fac47e96e430/folimeld-0.3.5-1.tw20261110.x86_64.rpm-7c0bc1b2301783acdf349d62fa1c18ae49c3c8bba6fb2963a3aefab3df6f8eea.json",
+      "upload_seconds": 0.98
+    }
+  ],
+  "previous_releases": [
+    {
+      "id": 443596222,
+      "tag": "opensuse-leap161-amd64-v0.3.5",
+      "draft": false,
+      "prerelease": true,
+      "assets": [
+        {
+          "id": 741374910,
+          "name": "dependency-source-manifest.json",
+          "size": 39419,
+          "digest": "sha256:6c2e84b0f935dbc118e68a0f4dd36a60ec2236517096394a91f5b57a3f2ef530"
+        },
+        {
+          "id": 741374436,
+          "name": "folimeld-0.3.5-1.lp161.x86_64.rpm",
+          "size": 101520401,
+          "digest": "sha256:ae7517737f6011a145161e3f56a1776d910ed172f12aa807999b64144d06066f"
+        },
+        {
+          "id": 741375014,
+          "name": "folimeld-0.3.5-1.lp161.x86_64.rpm-ae7517737f6011a145161e3f56a1776d910ed172f12aa807999b64144d06066f.json",
+          "size": 783,
+          "digest": "sha256:a43960891b129bc39ac469ee0ea620973f887caff768db72c753cb60d24df8fd"
+        },
+        {
+          "id": 741369651,
+          "name": "Folimeld-leap161-0.3.5-r1-dependency-sources.tar",
+          "size": 1692856320,
+          "digest": "sha256:6919aaa5a71c339a7dbfca5ab458b00d1665a6fcb625cdf92714817b408af42c"
+        },
+        {
+          "id": 741374725,
+          "name": "Folimeld-source-d73c5cd22274d62d82c88f8973bc83259d076fa98d6fcdea6274f226b3b181f5.zip",
+          "size": 24563329,
+          "digest": "sha256:d73c5cd22274d62d82c88f8973bc83259d076fa98d6fcdea6274f226b3b181f5"
+        },
+        {
+          "id": 741374964,
+          "name": "KNOWN-LIMITATIONS.txt",
+          "size": 1372,
+          "digest": "sha256:701457c1fcd250f1ebeb76a9eeb9d8fc72216b422261c0ebb262feb54b20f06c"
+        },
+        {
+          "id": 741374929,
+          "name": "RELEASE-NOTES.txt",
+          "size": 6129,
+          "digest": "sha256:f1c1a8f45cb3e15cab466fac8bcbb68b063fe94fc60f2347fe2d6e1f5a1d2b74"
+        },
+        {
+          "id": 741374993,
+          "name": "SHA256SUMS.txt",
+          "size": 1114,
+          "digest": "sha256:cdc2a6f68813f4da3b9a7f70d85ca6313bd672072ab3527dcd9e192536fd396a"
+        },
+        {
+          "id": 741374810,
+          "name": "third-party-notices.tar.gz",
+          "size": 2424695,
+          "digest": "sha256:5388f7131c99c099971d07a7ee3c4f95af4f695617bf2cb65c4c44ec10abf539"
+        },
+        {
+          "id": 741374859,
+          "name": "verification-leap161-amd64-0.3.5.json",
+          "size": 53724,
+          "digest": "sha256:5a08c1a88ac3c145026fd8770e27fdf566b7026ca76c4c8c306c663888fb231c"
+        },
+        {
+          "id": 741374837,
+          "name": "verification-records-leap161-amd64-0.3.5.zip",
+          "size": 913121,
+          "digest": "sha256:800e0bbb39857dc0f2d7eb90976b1e28d70bf0d9a0a7b3c190f4f10d68cf7467"
+        }
+      ]
+    },
+    {
+      "id": 443488626,
+      "tag": "fedora45-amd64-v0.3.5",
+      "draft": false,
+      "prerelease": true,
+      "assets": [
+        {
+          "id": 741028304,
+          "name": "dependency-source-manifest.json",
+          "size": 63794,
+          "digest": "sha256:3171e94c35d44de0516b166547039bb83d2c2c8c18a089cf58f7d1fe30c0d929"
+        },
+        {
+          "id": 741028335,
+          "name": "folimeld-0.3.5-2.fc45.x86_64.rpm",
+          "size": 106437437,
+          "digest": "sha256:03c273625477385a8c92d246c7d7f44b50ed622afe656750f6b94a1b107c539b"
+        },
+        {
+          "id": 741028727,
+          "name": "folimeld-0.3.5-2.fc45.x86_64.rpm-03c273625477385a8c92d246c7d7f44b50ed622afe656750f6b94a1b107c539b.json",
+          "size": 782,
+          "digest": "sha256:36b9e1c555ce902a029311c180aa27918fdcdee0ba69fc573836fd141cbc956b"
+        },
+        {
+          "id": 741024007,
+          "name": "Folimeld-fedora45-0.3.5-r2-dependency-sources.tar",
+          "size": 1788856320,
+          "digest": "sha256:daebd0d729661dad6c40e57e0f9dd8f4cb8965d074c5c71858343a371e3c768c"
+        },
+        {
+          "id": 741028130,
+          "name": "Folimeld-source-76b4a7c37f071399d602965e1d348ab35cda3277d2ecf2c0b4ffad2392830836.zip",
+          "size": 23491783,
+          "digest": "sha256:76b4a7c37f071399d602965e1d348ab35cda3277d2ecf2c0b4ffad2392830836"
+        },
+        {
+          "id": 741028234,
+          "name": "KNOWN-LIMITATIONS.txt",
+          "size": 2336,
+          "digest": "sha256:eb3b46a4f9cc57d49b65fd8a5ee5ada53153140082e5b185b6bd54b9e0f2c639"
+        },
+        {
+          "id": 741028269,
+          "name": "RELEASE-NOTES.txt",
+          "size": 5118,
+          "digest": "sha256:d1ef21b00c2dec28af9b0bf271c8b76772a4800c766f499893175f2241bba488"
+        },
+        {
+          "id": 741028874,
+          "name": "SHA256SUMS.txt",
+          "size": 1115,
+          "digest": "sha256:3c6421c14d66da58b88eb4401a82b0819eb52ced2a660255ecca49d0dee50fdf"
+        },
+        {
+          "id": 741028753,
+          "name": "third-party-notices.tar.gz",
+          "size": 1698985,
+          "digest": "sha256:f41ffcb068612f25a03682cc7aefb888db9e11e1ddd7e90308d8c6b5d3d1c401"
+        },
+        {
+          "id": 741028808,
+          "name": "verification-fedora45-amd64-0.3.5.json",
+          "size": 2838,
+          "digest": "sha256:bb98c9330ad2be7ff0337acab3d16a39951a4dd21e649d31c51d1054dacb0367"
+        },
+        {
+          "id": 741028829,
+          "name": "verification-records-fedora45-amd64-0.3.5.zip",
+          "size": 1741792,
+          "digest": "sha256:1c61577cbe4e1cbf0497a2fa68412d0a5b03a8cb070a9c29d0990e8b8b79b069"
+        }
+      ]
+    },
+    {
+      "id": 443552443,
+      "tag": "fedora44-amd64-v0.3.5",
+      "draft": false,
+      "prerelease": true,
+      "assets": [
+        {
+          "id": 741231465,
+          "name": "dependency-source-manifest.json",
+          "size": 63881,
+          "digest": "sha256:6a32e6de4d000611cc31c6ee6963ffc15da77c704e171506db5c69f2b006be35"
+        },
+        {
+          "id": 741231491,
+          "name": "folimeld-0.3.5-2.fc44.x86_64.rpm",
+          "size": 104152756,
+          "digest": "sha256:d3fc22088af7d4fa08b90bc341e64b24b23d350de98a11d9825a0cafa4416574"
+        },
+        {
+          "id": 741232006,
+          "name": "folimeld-0.3.5-2.fc44.x86_64.rpm-d3fc22088af7d4fa08b90bc341e64b24b23d350de98a11d9825a0cafa4416574.json",
+          "size": 782,
+          "digest": "sha256:b0574035497293ea5ca4fbe0b33ca64186e07df82d3d6e9b2b93e5f138f3cb13"
+        },
+        {
+          "id": 741226336,
+          "name": "Folimeld-fedora44-0.3.5-r2-dependency-sources.tar",
+          "size": 1738352640,
+          "digest": "sha256:48c688417ffbd46af8dc23a87f6aac2de99d6fba8500998b05de25ae0c34f0cd"
+        },
+        {
+          "id": 741231291,
+          "name": "Folimeld-source-957b144ca26d0b13ff91449b1f98165fff2cfa452409fb540cf2d3bbe3d58e3e.zip",
+          "size": 23782773,
+          "digest": "sha256:957b144ca26d0b13ff91449b1f98165fff2cfa452409fb540cf2d3bbe3d58e3e"
+        },
+        {
+          "id": 741231422,
+          "name": "KNOWN-LIMITATIONS.txt",
+          "size": 2326,
+          "digest": "sha256:8d2090b471925795e0f14ba169ec5f865f1919c359818dd16744a6b2d6dcd3f0"
+        },
+        {
+          "id": 741231442,
+          "name": "RELEASE-NOTES.txt",
+          "size": 5136,
+          "digest": "sha256:a9d5fa371836bb1e42e7faf2e4e3d6b7979ddd4edab23bdc8d5c564df305abf5"
+        },
+        {
+          "id": 741232193,
+          "name": "SHA256SUMS.txt",
+          "size": 1115,
+          "digest": "sha256:8ccb38025cdebbbfea48b7753c3af37a2235ad2e43199a4ed641d2e6da732949"
+        },
+        {
+          "id": 741232053,
+          "name": "third-party-notices.tar.gz",
+          "size": 1676990,
+          "digest": "sha256:98db9baf51e17b806a0fdc6814079c996918a44abd33da4bb2feb41d3120d51a"
+        },
+        {
+          "id": 741232087,
+          "name": "verification-fedora44-amd64-0.3.5.json",
+          "size": 2838,
+          "digest": "sha256:986338f2788953d59b33651b132029bb83eea276cc29615bb404d7a1dfde231b"
+        },
+        {
+          "id": 741232137,
+          "name": "verification-records-fedora44-amd64-0.3.5.zip",
+          "size": 1335837,
+          "digest": "sha256:06701fab1142a20a0a6c5ac086aac8949e074c3c2bf2e0fbde0722a2ce74bc1d"
+        }
+      ]
+    },
+    {
+      "id": 442962401,
+      "tag": "almalinux9-amd64-v0.3.5",
+      "draft": false,
+      "prerelease": true,
+      "assets": [
+        {
+          "id": 739536944,
+          "name": "folimeld-0.3.5-5.alma9_8.x86_64.rpm",
+          "size": 103052936,
+          "digest": "sha256:0ba2c7dfc397f61b1ca70679838c93589310d116a267249d67dd822b8cb654bc"
+        },
+        {
+          "id": 739537337,
+          "name": "folimeld-0.3.5-5.alma9_8.x86_64.rpm-0ba2c7dfc397f61b1ca70679838c93589310d116a267249d67dd822b8cb654bc.json",
+          "size": 785,
+          "digest": "sha256:2c5fb6f7578c4d4038d271e3ee97008b7494a7491d7e8a3a99e559bffc40b520"
+        },
+        {
+          "id": 739530422,
+          "name": "Folimeld-0.3.5-alma9-amd64-dependency-materials.tar",
+          "size": 1717278720,
+          "digest": "sha256:c85e44ae33a1d21072eb80a98d5b0b6e167650f0025ecf4031b1c999fc705a5d"
+        },
+        {
+          "id": 739536634,
+          "name": "Folimeld-0.3.5-alma9-amd64-notices.tar.gz",
+          "size": 1687806,
+          "digest": "sha256:7be8752ed1a6f13d4ef0f95a662e5a009cce62c1d5efffb774fd709dcf5bacf0"
+        },
+        {
+          "id": 739537397,
+          "name": "folimeld-82ada5680df8bb74da15b801ce59793b140a4789766d0caf4b7082a120ca470c.json",
+          "size": 693,
+          "digest": "sha256:2a4ad2fd8203c041908b2fec5dfc92e11cb111c88b6a7fe8ddabca45348af88d"
+        },
+        {
+          "id": 739536711,
+          "name": "Folimeld-source-f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079.json",
+          "size": 89002,
+          "digest": "sha256:8999a828de2c570586822736444b2f33625ff9c419c44fb6263b6d09723219e0"
+        },
+        {
+          "id": 739536757,
+          "name": "Folimeld-source-f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079.zip",
+          "size": 21838581,
+          "digest": "sha256:f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079"
+        },
+        {
+          "id": 739536868,
+          "name": "KNOWN-LIMITATIONS.txt",
+          "size": 1569,
+          "digest": "sha256:60d46b25c74db8be2b87870e3fcd2de6c369ed77e9d780040466d78f95929fe9"
+        },
+        {
+          "id": 739537444,
+          "name": "libXau-gpg-verification.json",
+          "size": 5512,
+          "digest": "sha256:9ee0a0b5918236ecd684a441e968fb783459ad356434d37cacbc2014027dbed6"
+        },
+        {
+          "id": 739536912,
+          "name": "RELEASE-NOTES.txt",
+          "size": 3907,
+          "digest": "sha256:704d37f41a1bb8942925e087ec31c267558c11c6216dd77187f8a408edf67621"
+        },
+        {
+          "id": 739537531,
+          "name": "SHA256SUMS.txt",
+          "size": 1322,
+          "digest": "sha256:c342a19f081f98207650eb3e055b746a7454cf1343e96d0275326cc6322f3fa4"
+        },
+        {
+          "id": 739537488,
+          "name": "verification-almalinux9-amd64-0.3.5.json",
+          "size": 1338,
+          "digest": "sha256:04da81460c78770e699436fb68f291f1c2b796051e41277478736f0a14e80eee"
+        }
+      ]
+    },
+    {
+      "id": 441112259,
+      "tag": "macos-source-v0.3.3",
+      "draft": false,
+      "prerelease": false,
+      "assets": [
+        {
+          "id": 733584251,
+          "name": "folimeld-0.3.3-source.tar.gz",
+          "size": 5432269,
+          "digest": "sha256:cb6dc0035f474aa8d25bf9cd9770c162b7cf9b912ff78a3ff9bdd7ed82a39c33"
+        },
+        {
+          "id": 733584252,
+          "name": "SHA256SUMS.txt",
+          "size": 95,
+          "digest": "sha256:da55a745a47bdbef58f9b76d21ea26531463aab53899d6e3f58d8dffa8e44581"
+        }
+      ]
+    },
+    {
+      "id": 440174431,
+      "tag": "linux-v0.3.4",
+      "draft": false,
+      "prerelease": false,
+      "assets": [
+        {
+          "id": 730889459,
+          "name": "Folimeld-0.3.4-amd64-snap-packaging-source.zip",
+          "size": 3757,
+          "digest": "sha256:dd4525094e25d9c9a5d9f118578c5f61b7e1b67711a2de5dc917ec24eb2acc2c"
+        },
+        {
+          "id": 730889201,
+          "name": "Folimeld-0.3.4-amd64-source-supplement.tar",
+          "size": 82108928,
+          "digest": "sha256:13c23bc5071b245582a26ca708102422aa0a02903bdaea543201727683f9c7da"
+        },
+        {
+          "id": 730889253,
+          "name": "Folimeld-0.3.4-Pillow-wheel-source-and-notice-supplement.zip",
+          "size": 5853009,
+          "digest": "sha256:a5811c2c3dfb45344b22f0a1bb19b305034c045f4912e6f6a91dcfa5591790d0"
+        },
+        {
+          "id": 730889154,
+          "name": "Folimeld-0.3.4-third-party-source-set.tar",
+          "size": 1456230400,
+          "digest": "sha256:306c4c9525c5240c5564472b762b05a9c81aff7df362a117dc78049e1c748b7e"
+        },
+        {
+          "id": 730889124,
+          "name": "Folimeld-source-281132ee8d40b75c0233b603bcb04e6132a0dcc856b45419d679ade7a2e51c90.zip",
+          "size": 15112004,
+          "digest": "sha256:281132ee8d40b75c0233b603bcb04e6132a0dcc856b45419d679ade7a2e51c90"
+        },
+        {
+          "id": 730889086,
+          "name": "Folimeld-source-5483477427254f56e4a82232bab0585d633abe0d5aac73eeb4be0234da197a4a.zip",
+          "size": 15112001,
+          "digest": "sha256:5483477427254f56e4a82232bab0585d633abe0d5aac73eeb4be0234da197a4a"
+        },
+        {
+          "id": 730888827,
+          "name": "folimeld_0.3.4_amd64.deb",
+          "size": 107075008,
+          "digest": "sha256:c45a569b1c5015c3eb3768ce118b04dd8b0a35c1cda82b631978cdebfb0b8256"
+        },
+        {
+          "id": 730889309,
+          "name": "folimeld_0.3.4_amd64.deb-c45a569b1c5015c3eb3768ce118b04dd8b0a35c1cda82b631978cdebfb0b8256.json",
+          "size": 775,
+          "digest": "sha256:4563015d4310666d08155e05ef4a000d531bbf442451bde2948d79feab8b43a6"
+        },
+        {
+          "id": 730889402,
+          "name": "folimeld_0.3.4_amd64.snap",
+          "size": 107565056,
+          "digest": "sha256:127f414cfbfc7ea0657618f187081b6bdc70ede9f773314fac5836acd5d3fbc9"
+        },
+        {
+          "id": 730889432,
+          "name": "folimeld_0.3.4_amd64.snap-127f414cfbfc7ea0657618f187081b6bdc70ede9f773314fac5836acd5d3fbc9.json",
+          "size": 776,
+          "digest": "sha256:c37ac48b42fa4396deaef3a5ff0529bc5a4aeb9ce36020fd8ef477dbcb4c64e1"
+        },
+        {
+          "id": 730888825,
+          "name": "folimeld_0.3.4_arm64.deb",
+          "size": 104525178,
+          "digest": "sha256:33f5fbc490f189330032be6f33be267d6d1706e46a1c595de814f1b942e78731"
+        },
+        {
+          "id": 730889338,
+          "name": "folimeld_0.3.4_arm64.deb-33f5fbc490f189330032be6f33be267d6d1706e46a1c595de814f1b942e78731.json",
+          "size": 775,
+          "digest": "sha256:61955a5edcf94cbb9b4ad003fadc82e3432d1a959ae698a99065a504ccfe48f3"
+        },
+        {
+          "id": 730888823,
+          "name": "folimeld_0.3.4_arm64.snap",
+          "size": 104996864,
+          "digest": "sha256:2467427c2c7e68b9c3082a8aee2ee257adfeccd231f47b8b19e97a76164adc4f"
+        },
+        {
+          "id": 730889356,
+          "name": "folimeld_0.3.4_arm64.snap-2467427c2c7e68b9c3082a8aee2ee257adfeccd231f47b8b19e97a76164adc4f.json",
+          "size": 776,
+          "digest": "sha256:8f26091df2e519dac7f4c52bfa18381d071cd1f46fe96f257ff83b3085848184"
+        },
+        {
+          "id": 730889217,
+          "name": "native-dependency-provenance.json",
+          "size": 774770,
+          "digest": "sha256:ff922263c17584c11d5dc426aa207765ce13cde9139cb028c0dc001ad5e495bf"
+        },
+        {
+          "id": 730889480,
+          "name": "SHA256SUMS.txt",
+          "size": 1964,
+          "digest": "sha256:783012c9d82a0f48e600656b305d7698bf1a0f91b60bf5ac49a2714b4a7b2303"
+        },
+        {
+          "id": 730889164,
+          "name": "third-party-notices.tar.gz",
+          "size": 2015678,
+          "digest": "sha256:7d7c304d3ee0e94c4d198b1f216dc0f427eee88446d8bc1db56323ae7eef2997"
+        }
+      ]
+    },
+    {
+      "id": 440306796,
+      "tag": "openbsd-aarch64-v0.3.3",
+      "draft": false,
+      "prerelease": true,
+      "assets": [
+        {
+          "id": 731284091,
+          "name": "AGPL-3.0.txt",
+          "size": 34523,
+          "digest": "sha256:0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+        },
+        {
+          "id": 731284190,
+          "name": "build-record.json",
+          "size": 35921,
+          "digest": "sha256:e98e278ebac7d82240ecac618f18a40102a7d304bb53a96c28f2631f91253f25"
+        },
+        {
+          "id": 731284090,
+          "name": "BUILD_ja.txt",
+          "size": 2277,
+          "digest": "sha256:4e6167881c6dda5ec7d4f4127bacdcc0d2aac456c7d65aeeb695ea6bc7abc3aa"
+        },
+        {
+          "id": 731284204,
+          "name": "folimeld-0.3.3.tgz",
+          "size": 5480018,
+          "digest": "sha256:406b641fb28c2a62254641b0abba6b6f6dd5a3d6d423f35d91ab2c727c9fbcd7"
+        },
+        {
+          "id": 731284208,
+          "name": "folimeld-80-pkg.pub",
+          "size": 124,
+          "digest": "sha256:48ff40c11d4ddbbafbea53e610582745414bb8665bf239258d4dac35494612d5"
+        },
+        {
+          "id": 731284207,
+          "name": "folimeld-form.png",
+          "size": 15949,
+          "digest": "sha256:fbc14149d843aad1724bcc1abf6077ad98d43fdc73ba8551c707cfdfb03178e4"
+        },
+        {
+          "id": 731284219,
+          "name": "folimeld-mupdf-1.28.2.tgz",
+          "size": 26689184,
+          "digest": "sha256:a80d23b590a431735c0599073ce27df1717314ed1a00186520e1b12cb44a69f0"
+        },
+        {
+          "id": 731284094,
+          "name": "Folimeld-source-db0bad2b5f3d539b017691b41d8826e7b9ac68b0b2226e8990799f3633f59803.zip",
+          "size": 14115191,
+          "digest": "sha256:db0bad2b5f3d539b017691b41d8826e7b9ac68b0b2226e8990799f3633f59803"
+        },
+        {
+          "id": 731284093,
+          "name": "INSTALL.txt",
+          "size": 1403,
+          "digest": "sha256:c8195f73921b743668890cf174a6b0d750844c4c501ac9d3ed152959d44e63ee"
+        },
+        {
+          "id": 731284092,
+          "name": "INSTALL_ja.txt",
+          "size": 1540,
+          "digest": "sha256:04b9f30a4f8144b71fd5df35a1d2bec0c24303f6e41eab59865306eaa2843a1c"
+        },
+        {
+          "id": 731284126,
+          "name": "LICENSE.txt",
+          "size": 730,
+          "digest": "sha256:2abf94716325b310911398472f8a1501673e2fdd449e0c1ad546107f61fcac56"
+        },
+        {
+          "id": 731284221,
+          "name": "mupdf-1.28.2-source.tar.gz",
+          "size": 68898646,
+          "digest": "sha256:44075a84e329db55b9bef5f342a70fd26d69e48ad1d33cb89d9664581c641156"
+        },
+        {
+          "id": 731284227,
+          "name": "mupdf-llvm22-definition.patch",
+          "size": 1310,
+          "digest": "sha256:763ea2fe30e4d593cde2aac74a1816dd1a07042af518ede86c48fef42469b621"
+        },
+        {
+          "id": 731284228,
+          "name": "openbsd-aarch64.patch",
+          "size": 3488,
+          "digest": "sha256:01bfc951cdff00a519a41e942504e8ff0ca77a211cec5025287c576555cac512"
+        },
+        {
+          "id": 731284299,
+          "name": "pymupdf-1.28.2.tar.gz",
+          "size": 87903557,
+          "digest": "sha256:5e0be7908a715aa20333caddd73f1d6f01e4cd0c26e869fa2dd0b7f344da2249"
+        },
+        {
+          "id": 731284117,
+          "name": "RELEASE-NOTES.txt",
+          "size": 1810,
+          "digest": "sha256:ae6b40e0d61b9e6c125f1267491e217c73ca2f3fce0b91bce77b24de082541ee"
+        },
+        {
+          "id": 731284133,
+          "name": "SHA256",
+          "size": 197,
+          "digest": "sha256:ff521350279a450cb878337b6e7929fddbf24e3a4981f5be9d62db9b065b0926"
+        },
+        {
+          "id": 731284157,
+          "name": "SHA256.sig",
+          "size": 349,
+          "digest": "sha256:90481bbe5bab98c6d8e5bcceeaaee7f0de1d7791d34ac6589698bae7af872e0c"
+        },
+        {
+          "id": 731284177,
+          "name": "SHA256SUMS.txt",
+          "size": 1925,
+          "digest": "sha256:5a764042eb16f76421717fcdedc979cfcfa15f6410f1b712f61c10e449490b5c"
+        },
+        {
+          "id": 731284178,
+          "name": "SHA256SUMS.txt.sig",
+          "size": 152,
+          "digest": "sha256:19d5d8f1ad3e671154763373928a389e1f3e9a2cc649baa6df4d9ddf021d8ea3"
+        },
+        {
+          "id": 731284297,
+          "name": "signing-record.json",
+          "size": 943,
+          "digest": "sha256:3609125d566c85aec06e93e7c7ba28da630a11604db38d2c91bfe6831c3520a1"
+        },
+        {
+          "id": 731284313,
+          "name": "source-provenance.json",
+          "size": 1372,
+          "digest": "sha256:05d5ec3197e914178b3357bb7d87f069cde0fab9cb07aa6890b5a47253047caa"
+        },
+        {
+          "id": 731284186,
+          "name": "Third-party-notices.txt",
+          "size": 1508,
+          "digest": "sha256:0f5c2f5ca21b32501d2579542c07fcf5dc167795b8ac2e467eda04a1065d8013"
+        },
+        {
+          "id": 731284349,
+          "name": "verification.json",
+          "size": 2744,
+          "digest": "sha256:be4e83e15caa6cefb59998b7328cd76f123c0973b253f2220aefb189f78fd324"
+        }
+      ]
+    },
+    {
+      "id": 440288593,
+      "tag": "netbsd-aarch64-v0.3.3",
+      "draft": false,
+      "prerelease": true,
+      "assets": [
+        {
+          "id": 731231250,
+          "name": "AGPL-3.0.txt",
+          "size": 34523,
+          "digest": "sha256:0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+        },
+        {
+          "id": 731231331,
+          "name": "build-record.json",
+          "size": 19460,
+          "digest": "sha256:b392a45f4e3d704c7daf11acf7ba9f4c433e7381b16447805473ed2c8051c0af"
+        },
+        {
+          "id": 731231254,
+          "name": "BUILD_ja.txt",
+          "size": 3115,
+          "digest": "sha256:cbd91fb085d89a5a342826060fe5313f02b0a0fc83fd09832f5cb854c87a23ec"
+        },
+        {
+          "id": 731231342,
+          "name": "folimeld-0.3.3.tgz",
+          "size": 36022607,
+          "digest": "sha256:959c7f3e8025c65d23141a5625b06bb2a972764fccbaef05f99f086376a940ec"
+        },
+        {
+          "id": 731231348,
+          "name": "folimeld-form.png",
+          "size": 19536,
+          "digest": "sha256:ff9901f695e5bc849766d53040f7bf28ed7972f86ba04e8fb3a6a4c3a8365c22"
+        },
+        {
+          "id": 731231252,
+          "name": "Folimeld-source-736023c0696c977f86337bb157af363f320af6d3495cfb7e19a4ce2b9204aca1.zip",
+          "size": 14098107,
+          "digest": "sha256:736023c0696c977f86337bb157af363f320af6d3495cfb7e19a4ce2b9204aca1"
+        },
+        {
+          "id": 731231251,
+          "name": "INSTALL.txt",
+          "size": 1115,
+          "digest": "sha256:7d4cd4402f6bd0a6e7ae6e815ce5a8c9e0f6c5446523ce762d9323e3509ed8d8"
+        },
+        {
+          "id": 731231253,
+          "name": "INSTALL_ja.txt",
+          "size": 1287,
+          "digest": "sha256:a841f3d28c2be7b117911b3e81eeac508559f9ac7f420b1629d0b30b80b060d9"
+        },
+        {
+          "id": 731231310,
+          "name": "LICENSE.txt",
+          "size": 730,
+          "digest": "sha256:2abf94716325b310911398472f8a1501673e2fdd449e0c1ad546107f61fcac56"
+        },
+        {
+          "id": 731231369,
+          "name": "mupdf-1.28.2-source.tar.gz",
+          "size": 68898646,
+          "digest": "sha256:44075a84e329db55b9bef5f342a70fd26d69e48ad1d33cb89d9664581c641156"
+        },
+        {
+          "id": 731231371,
+          "name": "mupdf-netbsd-link.patch",
+          "size": 549,
+          "digest": "sha256:4c67c484bf364fbceb72c0c67bda84356969a3e00ba8d4c22337d6faf46bd2f5"
+        },
+        {
+          "id": 731231380,
+          "name": "mupdf-sha2.patch",
+          "size": 2598,
+          "digest": "sha256:7a3a1abfdef403659e57a6401d46d580c34165a00ce83b5c28b19ac5210b6703"
+        },
+        {
+          "id": 731231409,
+          "name": "mupdf-tesseract-endian.patch",
+          "size": 895,
+          "digest": "sha256:2fb8b5f20274182324ed3f3876c879f4c230a96112b59051f50d2bf547b10c34"
+        },
+        {
+          "id": 731231433,
+          "name": "netbsd-aarch64.patch",
+          "size": 2110,
+          "digest": "sha256:d3323845682f1c3ebcedf8c47e7291260af5eace7a173e8e7d917208d1cd96d9"
+        },
+        {
+          "id": 731231444,
+          "name": "pipcl-netbsd-suffix.patch",
+          "size": 298,
+          "digest": "sha256:e6f6ba4b0f166e78be84f6b388a05ac62ccd4d3a2eaef19977f3951fb900d1ed"
+        },
+        {
+          "id": 731231453,
+          "name": "pymupdf-1.28.2.tar.gz",
+          "size": 87903557,
+          "digest": "sha256:5e0be7908a715aa20333caddd73f1d6f01e4cd0c26e869fa2dd0b7f344da2249"
+        },
+        {
+          "id": 731231465,
+          "name": "pyside-helper.patch",
+          "size": 461,
+          "digest": "sha256:d07b2462f3838d20923628e95e7bf42cabbab3fc82a51c444ebcc4da52772b35"
+        },
+        {
+          "id": 731231474,
+          "name": "pyside-modules.patch",
+          "size": 1550,
+          "digest": "sha256:fa715b381d388e17eef69df7e9d315ce5c72a765dfc8e7ea05f36c203b091b26"
+        },
+        {
+          "id": 731231497,
+          "name": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+          "size": 18053248,
+          "digest": "sha256:cba47efbaad1bedd529725cbc14e21f156c7a19366f07b3edfbb076ffd7afdf8"
+        },
+        {
+          "id": 731231498,
+          "name": "pyside-stage.sh",
+          "size": 1247,
+          "digest": "sha256:85a767ce0d0c165a09ecdbf4ec1dd02d030aef830bf6f7820a27fc17ed9bdc8d"
+        },
+        {
+          "id": 731231287,
+          "name": "RELEASE-NOTES.txt",
+          "size": 1516,
+          "digest": "sha256:9c6a9bdafe5d19e1a1406b27fe94eea55c765e36e7d281a6cda753818976293a"
+        },
+        {
+          "id": 731231291,
+          "name": "SHA256SUMS.txt",
+          "size": 2137,
+          "digest": "sha256:bd9f10f38a2a60793f2c9e9ab25d9539f3af7fbfd2c895838e3625c5e0b89b67"
+        },
+        {
+          "id": 731231504,
+          "name": "source-provenance.json",
+          "size": 1331,
+          "digest": "sha256:2b1de6059598bf9a09abb46a0ae40d0815b28656c1d82a39a1f197a95b3e224a"
+        },
+        {
+          "id": 731231325,
+          "name": "Third-party-notices.txt",
+          "size": 1508,
+          "digest": "sha256:0f5c2f5ca21b32501d2579542c07fcf5dc167795b8ac2e467eda04a1065d8013"
+        },
+        {
+          "id": 731231535,
+          "name": "verification.json",
+          "size": 1702,
+          "digest": "sha256:3724888bf0bdf5d9383636d19f4e626afd017b101b1e5c2cdab825332a85fc33"
+        }
+      ]
+    },
+    {
+      "id": 440279856,
+      "tag": "freebsd-aarch64-v0.3.3_1",
+      "draft": false,
+      "prerelease": true,
+      "assets": [
+        {
+          "id": 731205595,
+          "name": "AGPL-3.0.txt",
+          "size": 34523,
+          "digest": "sha256:0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+        },
+        {
+          "id": 731205691,
+          "name": "build-record.json",
+          "size": 1266,
+          "digest": "sha256:26fd138d543417e7abb36f4fe5f85de1bd47c1864a97aec8ccaa0f70e3b2fc74"
+        },
+        {
+          "id": 731205588,
+          "name": "BUILD_ja.txt",
+          "size": 2320,
+          "digest": "sha256:c69271085733e94551bc7676a0df3241d40df95a108311a8a652542d352d4812"
+        },
+        {
+          "id": 731205694,
+          "name": "folimeld-0.3.3_1.pkg",
+          "size": 25477239,
+          "digest": "sha256:e18ab7ce5e839b2bc9b8e5fb3760d26574ae84adf9b4fcd05150b2669a7ee3fd"
+        },
+        {
+          "id": 731205711,
+          "name": "folimeld-form.png",
+          "size": 23689,
+          "digest": "sha256:ea8e669974f24c7e8b4f322b9f717dc38e77865452849d45cb518055c99d6eb1"
+        },
+        {
+          "id": 731205592,
+          "name": "Folimeld-source-1a9db620c3c8082b8969d0390d3c1db75f4904901343b2d6a40fadc68e43bf43.zip",
+          "size": 13964825,
+          "digest": "sha256:1a9db620c3c8082b8969d0390d3c1db75f4904901343b2d6a40fadc68e43bf43"
+        },
+        {
+          "id": 731205734,
+          "name": "freebsd-aarch64.patch",
+          "size": 715,
+          "digest": "sha256:f9e5f575d93abc5d327d2ef69845a2e493bbb177be942c6063cf7b395f75f55b"
+        },
+        {
+          "id": 731205594,
+          "name": "INSTALL.txt",
+          "size": 763,
+          "digest": "sha256:0234d43e10af2294fcba97167c1284c44d80da9b4d8e11dc477bda51b78b8dfb"
+        },
+        {
+          "id": 731205597,
+          "name": "INSTALL_ja.txt",
+          "size": 900,
+          "digest": "sha256:4b202f337cab9e48a76d84910bf13bcfdb1e7163669a2175844356dded49b54a"
+        },
+        {
+          "id": 731205630,
+          "name": "LICENSE.txt",
+          "size": 730,
+          "digest": "sha256:2abf94716325b310911398472f8a1501673e2fdd449e0c1ad546107f61fcac56"
+        },
+        {
+          "id": 731205733,
+          "name": "mupdf-1.28.2-source.tar.gz",
+          "size": 68898646,
+          "digest": "sha256:44075a84e329db55b9bef5f342a70fd26d69e48ad1d33cb89d9664581c641156"
+        },
+        {
+          "id": 731205754,
+          "name": "native-build-requirements.txt",
+          "size": 73,
+          "digest": "sha256:836436ed221dfc62157aba3a2e43c8f7f2aebb42d37fd4725f80a56ede75cf69"
+        },
+        {
+          "id": 731205794,
+          "name": "pymupdf-1.28.2-freebsd.patch",
+          "size": 549,
+          "digest": "sha256:ba3a4678a291c1f18980584add3d24e0cb4b752006f5b210741327c87c07ae8b"
+        },
+        {
+          "id": 731205807,
+          "name": "pymupdf-1.28.2.tar.gz",
+          "size": 87903557,
+          "digest": "sha256:5e0be7908a715aa20333caddd73f1d6f01e4cd0c26e869fa2dd0b7f344da2249"
+        },
+        {
+          "id": 731205629,
+          "name": "RELEASE-NOTES.txt",
+          "size": 1598,
+          "digest": "sha256:1e57c95f02d7a1241166680d7e74d763dca63b0d7a3040d89a790c9a5eb80434"
+        },
+        {
+          "id": 731205632,
+          "name": "SHA256SUMS.txt",
+          "size": 1608,
+          "digest": "sha256:e3f149852850d76634823061aa0709dad93c5dd6debe12b79c4a64e93825988e"
+        },
+        {
+          "id": 731205815,
+          "name": "source-provenance.json",
+          "size": 1337,
+          "digest": "sha256:a746f48a19c0f049bf1702c2b0d172423caf385185b685214fc91038d6df02c0"
+        },
+        {
+          "id": 731205650,
+          "name": "Third-party-notices.txt",
+          "size": 1508,
+          "digest": "sha256:0f5c2f5ca21b32501d2579542c07fcf5dc167795b8ac2e467eda04a1065d8013"
+        },
+        {
+          "id": 731205849,
+          "name": "verification.json",
+          "size": 1563,
+          "digest": "sha256:54b2505840e73e5af307adf160743546ffc0d51f31e90f729f4d9352470eea50"
+        }
+      ]
+    },
+    {
+      "id": 439857574,
+      "tag": "windows-store-v1.0.1.0",
+      "draft": false,
+      "prerelease": false,
+      "assets": [
+        {
+          "id": 729730359,
+          "name": "Folimeld-1.0.1.0-windows-x64-source.zip",
+          "size": 5774689,
+          "digest": "sha256:ad7b510f015fff96ae702a509cabcec5b8c0d5dfb52ae284eacf74042265bb56"
+        },
+        {
+          "id": 729730433,
+          "name": "SHA256SUMS.txt",
+          "size": 196,
+          "digest": "sha256:bbe238205ba511a378de0229c3bd30ed4e9dda42b401065f3d4099ff2df43088"
+        },
+        {
+          "id": 729730418,
+          "name": "source-association.json",
+          "size": 2660,
+          "digest": "sha256:3ccb4b6cb0746ee0fe74d4091b97c9f51b744621d319b979890ec6518335983a"
+        }
+      ]
+    },
+    {
+      "id": 438972952,
+      "tag": "openbsd-v0.3.3",
+      "draft": false,
+      "prerelease": true,
+      "assets": [
+        {
+          "id": 727018081,
+          "name": "AGPL-3.0.txt",
+          "size": 34523,
+          "digest": "sha256:0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+        },
+        {
+          "id": 727018163,
+          "name": "build-record.json",
+          "size": 41601,
+          "digest": "sha256:ee03d964850c064d2c0ba776b1b10d4757f0a97001cb810f218fad9c4192e43e"
+        },
+        {
+          "id": 727018244,
+          "name": "folimeld-0.3.3.tgz",
+          "size": 5462216,
+          "digest": "sha256:9e48f0653bb90a7d6a0e5c55cddbb004eef073d2062313848bb545d475914ddc"
+        },
+        {
+          "id": 727018330,
+          "name": "folimeld-80-pkg.pub",
+          "size": 124,
+          "digest": "sha256:48ff40c11d4ddbbafbea53e610582745414bb8665bf239258d4dac35494612d5"
+        },
+        {
+          "id": 727018396,
+          "name": "folimeld-mupdf-1.28.2.tgz",
+          "size": 26822825,
+          "digest": "sha256:fb89413134738238635fc8f9bec58815b772881e6ef221f827b9d8e16be5cc21"
+        },
+        {
+          "id": 727018585,
+          "name": "Folimeld-source-f67bd8d6672b4e7377126bfc24e1c7d7661004d454693a3cd1fe622b02e75be9.zip",
+          "size": 14221594,
+          "digest": "sha256:f67bd8d6672b4e7377126bfc24e1c7d7661004d454693a3cd1fe622b02e75be9"
+        },
+        {
+          "id": 727018742,
+          "name": "INSTALL.md",
+          "size": 4682,
+          "digest": "sha256:3c2cf41131b6cc0a17eb77ad4119dab5e539beafe76793b46531e75f0663e5cc"
+        },
+        {
+          "id": 727018796,
+          "name": "INSTALL_ja.md",
+          "size": 5065,
+          "digest": "sha256:a9d01e2a48c328f5773da9bf2ce72a8cb249e83cbee14d017a535eabae0a7fa3"
+        },
+        {
+          "id": 727018872,
+          "name": "mupdf-1.28.2-source.tar.gz",
+          "size": 68898646,
+          "digest": "sha256:44075a84e329db55b9bef5f342a70fd26d69e48ad1d33cb89d9664581c641156"
+        },
+        {
+          "id": 727019237,
+          "name": "pymupdf-1.28.2-cp314-abi3-openbsd_8_0_amd64.whl",
+          "size": 26695953,
+          "digest": "sha256:25932378ff47c85f5ef308120ff839472a261c3579bf77b3c370423f674c40b1"
+        },
+        {
+          "id": 727019418,
+          "name": "pymupdf-1.28.2.tar.gz",
+          "size": 87903557,
+          "digest": "sha256:5e0be7908a715aa20333caddd73f1d6f01e4cd0c26e869fa2dd0b7f344da2249"
+        },
+        {
+          "id": 727019776,
+          "name": "SHA256SUMS.txt",
+          "size": 1115,
+          "digest": "sha256:c898e38259166cda21fd0912260a12f11bfa31bbe6bccb94d143f82637f0ae66"
+        },
+        {
+          "id": 727019835,
+          "name": "SHA256SUMS.txt.sig",
+          "size": 152,
+          "digest": "sha256:8797693de8f2e10270f6dc333bfdd88cc915ac0a861e17581becd5502b48ec89"
+        },
+        {
+          "id": 727019892,
+          "name": "signing-record.json",
+          "size": 858,
+          "digest": "sha256:9c30920cdbdc26f81b320e554bed21b2611291bc784f6f968d1bc61c1f5dd63b"
+        }
+      ]
+    },
+    {
+      "id": 438929777,
+      "tag": "netbsd-v0.3.3",
+      "draft": false,
+      "prerelease": true,
+      "assets": [
+        {
+          "id": 726892645,
+          "name": "AGPL-3.0.txt",
+          "size": 34523,
+          "digest": "sha256:0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+        },
+        {
+          "id": 726892723,
+          "name": "build-record.json",
+          "size": 19143,
+          "digest": "sha256:ef8c1f1e7c141b12652e7df9fdb6427f1c2da01cf8093aaf8a8c08ba0c1db48f"
+        },
+        {
+          "id": 726892797,
+          "name": "folimeld-0.3.3.tgz",
+          "size": 36539429,
+          "digest": "sha256:2e09f44b9d0f2d975b49c7594a27a422c0ff3dbe36af2548caa938d3e7a78a47"
+        },
+        {
+          "id": 726892993,
+          "name": "Folimeld-source-7dc20dbb3f9a72de8f0f23bf551303cb78a536392678404e13267c9df6f93c59.zip",
+          "size": 14205085,
+          "digest": "sha256:7dc20dbb3f9a72de8f0f23bf551303cb78a536392678404e13267c9df6f93c59"
+        },
+        {
+          "id": 726893157,
+          "name": "INSTALL.md",
+          "size": 3759,
+          "digest": "sha256:869098ca49f2ef596c003cb704ea8686831f17863748b57be1efde73ed9f7ece"
+        },
+        {
+          "id": 726893102,
+          "name": "INSTALL_ja.md",
+          "size": 4206,
+          "digest": "sha256:227ca753d7d45cf72004781688995e4d2e05c821665e49b63f0af5ec2714230f"
+        },
+        {
+          "id": 726893225,
+          "name": "mupdf-1.28.2-source.tar.gz",
+          "size": 68898646,
+          "digest": "sha256:44075a84e329db55b9bef5f342a70fd26d69e48ad1d33cb89d9664581c641156"
+        },
+        {
+          "id": 726893510,
+          "name": "pymupdf-1.28.2-cp312-abi3-netbsd_11_1_amd64.whl",
+          "size": 25297007,
+          "digest": "sha256:97559195934646c03579a9fe00eaa22a18104389b6500e797529c66329e64012"
+        },
+        {
+          "id": 726893689,
+          "name": "pymupdf-1.28.2.tar.gz",
+          "size": 87903557,
+          "digest": "sha256:5e0be7908a715aa20333caddd73f1d6f01e4cd0c26e869fa2dd0b7f344da2249"
+        },
+        {
+          "id": 726893930,
+          "name": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+          "size": 18053248,
+          "digest": "sha256:cba47efbaad1bedd529725cbc14e21f156c7a19366f07b3edfbb076ffd7afdf8"
+        },
+        {
+          "id": 726894028,
+          "name": "SHA256SUMS.txt",
+          "size": 969,
+          "digest": "sha256:33fd52bb003df545e3c2ee630d8de8bff30c3d692a5b2106b8ca4512a3db0fe1"
+        }
+      ]
+    },
+    {
+      "id": 438907589,
+      "tag": "freebsd-v0.3.3",
+      "draft": false,
+      "prerelease": true,
+      "assets": [
+        {
+          "id": 726830017,
+          "name": "AGPL-3.0.txt",
+          "size": 34523,
+          "digest": "sha256:0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+        },
+        {
+          "id": 726830022,
+          "name": "build-record.json",
+          "size": 1264,
+          "digest": "sha256:a1edbf4a41fa705051570c6403a48c1fffc9380694bc816cc3f7875ad298deeb"
+        },
+        {
+          "id": 726830021,
+          "name": "folimeld-0.3.3_1.pkg",
+          "size": 26086576,
+          "digest": "sha256:e44f9519f04164ec7064494c0d7f354fcb778b1fbeeb2404c9f484699c3f4c0e"
+        },
+        {
+          "id": 726830123,
+          "name": "Folimeld-source-9ceb5ec75dcd3ddb60bb66f0b6996da5e700cf4400bd89b31808f5250b19f23b.zip",
+          "size": 14068343,
+          "digest": "sha256:9ceb5ec75dcd3ddb60bb66f0b6996da5e700cf4400bd89b31808f5250b19f23b"
+        },
+        {
+          "id": 726830120,
+          "name": "INSTALL.md",
+          "size": 4635,
+          "digest": "sha256:3e8b3a389c55f0ab7ee5111fecefd306d3a3df878d812b92215e7ea0d8fda5ab"
+        },
+        {
+          "id": 726830208,
+          "name": "INSTALL_ja.md",
+          "size": 5051,
+          "digest": "sha256:c00b10868197b2ee93cbbc3b4dbcaed0f07e85af97dba7141de67886b3889ab7"
+        },
+        {
+          "id": 726830249,
+          "name": "LICENSE.txt",
+          "size": 730,
+          "digest": "sha256:2abf94716325b310911398472f8a1501673e2fdd449e0c1ad546107f61fcac56"
+        },
+        {
+          "id": 726830263,
+          "name": "mupdf-1.28.2-source.tar.gz",
+          "size": 68898646,
+          "digest": "sha256:44075a84e329db55b9bef5f342a70fd26d69e48ad1d33cb89d9664581c641156"
+        },
+        {
+          "id": 726830288,
+          "name": "pymupdf-1.28.2-cp312-abi3-freebsd_15_1_release_p5_amd64.whl",
+          "size": 26022403,
+          "digest": "sha256:b1dfd1acb578f8875d00687a696102d84610faa1cf6fa69565099dea81b42868"
+        },
+        {
+          "id": 726830335,
+          "name": "pymupdf-1.28.2.tar.gz",
+          "size": 87903557,
+          "digest": "sha256:5e0be7908a715aa20333caddd73f1d6f01e4cd0c26e869fa2dd0b7f344da2249"
+        },
+        {
+          "id": 726830465,
+          "name": "PyMuPDF-source-record.json",
+          "size": 475,
+          "digest": "sha256:a627eda833320f102014e807ee9a3dd8817207853b37ff03531c8cc22198301f"
+        },
+        {
+          "id": 726830551,
+          "name": "SHA256SUMS.txt",
+          "size": 1047,
+          "digest": "sha256:d49350d799a033dd7ded4fefc2407dcf98c9a3aff078dc327cead1ce2e7418c4"
+        }
+      ]
+    },
+    {
+      "id": 433472424,
+      "tag": "linux-v0.3.3",
+      "draft": false,
+      "prerelease": false,
+      "assets": [
+        {
+          "id": 708054927,
+          "name": "Folimeld-source-12dff8c781f3d953a0d3ca69322d5974ac600dfe29a69c09e3c8de985dfebb04.json",
+          "size": 11994,
+          "digest": "sha256:6571fb683894fb283b22e013e726a78b411a506bf724d621b43a94dfb7c23494"
+        },
+        {
+          "id": 708054926,
+          "name": "Folimeld-source-12dff8c781f3d953a0d3ca69322d5974ac600dfe29a69c09e3c8de985dfebb04.zip",
+          "size": 5571896,
+          "digest": "sha256:12dff8c781f3d953a0d3ca69322d5974ac600dfe29a69c09e3c8de985dfebb04"
+        },
+        {
+          "id": 708054938,
+          "name": "Folimeld-source-4174d983e9419d33efd73ff7375cf78aa2b4fd153dd54bde2b121955b00ed314.json",
+          "size": 11528,
+          "digest": "sha256:0547bc053334d494c319cb395243241c145978a7a1707e9448f64b6cc070d5ca"
+        },
+        {
+          "id": 708054928,
+          "name": "Folimeld-source-4174d983e9419d33efd73ff7375cf78aa2b4fd153dd54bde2b121955b00ed314.zip",
+          "size": 5570986,
+          "digest": "sha256:4174d983e9419d33efd73ff7375cf78aa2b4fd153dd54bde2b121955b00ed314"
+        },
+        {
+          "id": 708054931,
+          "name": "Folimeld-source-9bbbad4a0a9ffcd42b5fcf6fed0d9fdb39e162c319ca1424a5575d148cccdcd2.json",
+          "size": 11590,
+          "digest": "sha256:a87d22c980961b851f168cc6940b94b33210d3e8fb1ca37f08cd198c4e20739f"
+        },
+        {
+          "id": 708054974,
+          "name": "Folimeld-source-9bbbad4a0a9ffcd42b5fcf6fed0d9fdb39e162c319ca1424a5575d148cccdcd2.zip",
+          "size": 5571008,
+          "digest": "sha256:9bbbad4a0a9ffcd42b5fcf6fed0d9fdb39e162c319ca1424a5575d148cccdcd2"
+        },
+        {
+          "id": 708054969,
+          "name": "Folimeld-source-dc872a9a74e523a83a7b65f6b2e4a89a89f17e1c7dc2ae62677dec00bb5804f6.json",
+          "size": 11530,
+          "digest": "sha256:4eaef37d5207de894eabca79855fd3208bac38e3178d2c947b11638a2114ab3d"
+        },
+        {
+          "id": 708054971,
+          "name": "Folimeld-source-dc872a9a74e523a83a7b65f6b2e4a89a89f17e1c7dc2ae62677dec00bb5804f6.zip",
+          "size": 5571752,
+          "digest": "sha256:dc872a9a74e523a83a7b65f6b2e4a89a89f17e1c7dc2ae62677dec00bb5804f6"
+        },
+        {
+          "id": 708054981,
+          "name": "folimeld_0.3.3_amd64.deb",
+          "size": 98331544,
+          "digest": "sha256:230b330d1d5ac56b34a6975595e5e7563e8d0c6d9077c9652ea5d595239f728d"
+        },
+        {
+          "id": 708054997,
+          "name": "folimeld_0.3.3_amd64.deb-230b330d1d5ac56b34a6975595e5e7563e8d0c6d9077c9652ea5d595239f728d.json",
+          "size": 774,
+          "digest": "sha256:390edfef793ecc3d9f8375d981c42ad7c7643a7fff960503b5b454be4a429d34"
+        },
+        {
+          "id": 708055006,
+          "name": "folimeld_0.3.3_amd64.snap",
+          "size": 100876288,
+          "digest": "sha256:30b56f869371cac6baae0ce4fc45e2f208812e68e0dcc6a6d865dbd06f9fced8"
+        },
+        {
+          "id": 708055014,
+          "name": "folimeld_0.3.3_amd64.snap-30b56f869371cac6baae0ce4fc45e2f208812e68e0dcc6a6d865dbd06f9fced8.json",
+          "size": 775,
+          "digest": "sha256:486767fc19665c0be04de369c1be4e91ac0e768cf9633cb6e15aad4e8506e9cf"
+        },
+        {
+          "id": 708055026,
+          "name": "folimeld_0.3.3_arm64.deb",
+          "size": 94865388,
+          "digest": "sha256:e1e6d424524077f01b917f169190c427ed7dfc86d813454e765b004f90b3c117"
+        },
+        {
+          "id": 708055028,
+          "name": "folimeld_0.3.3_arm64.deb-e1e6d424524077f01b917f169190c427ed7dfc86d813454e765b004f90b3c117.json",
+          "size": 774,
+          "digest": "sha256:54469f4d0dd86cc3251ac4d96be43e9e7686e6d54f69da9162e3c6836e597adb"
+        },
+        {
+          "id": 708055037,
+          "name": "folimeld_0.3.3_arm64.snap",
+          "size": 98308096,
+          "digest": "sha256:c7e3f136a4686dee8ca9bfd87490cfc6648375552251ca6c95d3d9f7b7b9dcab"
+        },
+        {
+          "id": 708055047,
+          "name": "folimeld_0.3.3_arm64.snap-c7e3f136a4686dee8ca9bfd87490cfc6648375552251ca6c95d3d9f7b7b9dcab.json",
+          "size": 775,
+          "digest": "sha256:8a477fdb0dcffacfe7d386ed53841904e29d1d458e440c3a1fcdb6129c1a756e"
+        },
+        {
+          "id": 708054980,
+          "name": "folimeld_0.3.3_SHA256SUMS.txt",
+          "size": 366,
+          "digest": "sha256:2d9d0f02d77214aa55f708a6261d9d6f9a7475b0210ba6202cf51a7695cf3968"
+        }
+      ]
+    },
+    {
+      "id": 382690414,
+      "tag": "v0.3.0",
+      "draft": false,
+      "prerelease": false,
+      "assets": []
+    },
+    {
+      "id": 381845653,
+      "tag": "v0.2.5",
+      "draft": false,
+      "prerelease": false,
+      "assets": []
+    },
+    {
+      "id": 379150624,
+      "tag": "v0.2.0",
+      "draft": false,
+      "prerelease": false,
+      "assets": []
+    },
+    {
+      "id": 378861076,
+      "tag": "v0.1.0",
+      "draft": false,
+      "prerelease": false,
+      "assets": []
+    }
+  ],
+  "latest_before": 440174431,
+  "release_id": 443621210,
+  "release_url": "https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5",
+  "prerelease": true,
+  "previous_releases_unchanged": true,
+  "latest_unchanged": true,
+  "public_assets_verified": true
+}

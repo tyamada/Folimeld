@@ -1,0 +1,73 @@
+{
+  "date_jst": "2026-11-13",
+  "repository": "tyamada/Folimeld",
+  "branch": "release/deb-amd64-0.3.5",
+  "commit": "24265ed9bb9c312921faac4b952ce27729639ad3",
+  "tag": "linux-deb-amd64-v0.3.5",
+  "prerelease": true,
+  "make_latest": false,
+  "packet_directory": "/home/tyamada22/folimeld-candidates/deb-amd64-035-r1-20261113/publication-packet",
+  "assets": [
+    {
+      "name": "Folimeld-deb-0.3.5-common-dependency-sources.tar",
+      "bytes": 1421547520,
+      "sha256": "093fcf37c9d3b62e2488ceb5d7fbc0e3c5916126ee4794194adf298b0a8a4527"
+    },
+    {
+      "name": "Folimeld-deb-0.3.5-ubuntu-native-sources.tar",
+      "bytes": 659783680,
+      "sha256": "3342bf3b0bdfc7ac19932080a31e5f5c1da3bc79febab894beb6b396e6caa56d"
+    },
+    {
+      "name": "Folimeld-source-6148b7639ccce7e49e2dcdd9b2f93981b840d816708c9b4bc3339b87f2e0f20f.zip",
+      "bytes": 25332284,
+      "sha256": "6148b7639ccce7e49e2dcdd9b2f93981b840d816708c9b4bc3339b87f2e0f20f"
+    },
+    {
+      "name": "KNOWN-LIMITATIONS.txt",
+      "bytes": 764,
+      "sha256": "cab1bb51c80723ec3fa2e2309f5c29e1e6edbec9fefb11f9b83caabc7de93ad3"
+    },
+    {
+      "name": "RELEASE-NOTES.txt",
+      "bytes": 5834,
+      "sha256": "4494e37cf68a46398c7c4de15c765cc700569a6f8221f0c0729fc4d01f657272"
+    },
+    {
+      "name": "dependency-source-manifest.json",
+      "bytes": 119288,
+      "sha256": "a64371ba93f64ff4e6d83d72a15541299a9f0fd6412a922f14798389c3b4f9b8"
+    },
+    {
+      "name": "folimeld_0.3.5_amd64.deb",
+      "bytes": 108034422,
+      "sha256": "573f72f323097d398d245218eda454037fdc5e74a4d6865bd085bd5955ecc3f7"
+    },
+    {
+      "name": "folimeld_0.3.5_amd64.deb-573f72f323097d398d245218eda454037fdc5e74a4d6865bd085bd5955ecc3f7.json",
+      "bytes": 774,
+      "sha256": "cd06228ff1834222c003bd38831d24f25b50da420558355dd85c520c7cf39bd2"
+    },
+    {
+      "name": "third-party-notices.tar.gz",
+      "bytes": 3139523,
+      "sha256": "d1832af0dcdef352dfeb478237341cda2244431de50d2c6230f403fe2486c660"
+    },
+    {
+      "name": "verification-deb-amd64-0.3.5.json",
+      "bytes": 83633,
+      "sha256": "78c7b80220848e77654108265c64a301f45f2244ee7f7a44f0927abec6e0a8fe"
+    },
+    {
+      "name": "verification-records-deb-amd64-0.3.5.zip",
+      "bytes": 157930,
+      "sha256": "43e58f4166a27514ca79fb2b245fd98025dd98a1e30ca23d86bdf04cbcee8fae"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 1199,
+      "sha256": "3d77f49c5fc5bf1142cac5fab1b091edfa2060bed7295387908356e7a8e710f3"
+    }
+  ],
+  "authorization": "User requested sequential package publication, source push, and X announcement; this plan fixes the exact payload."
+}
