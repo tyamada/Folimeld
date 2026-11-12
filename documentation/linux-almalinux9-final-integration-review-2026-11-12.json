@@ -1,0 +1,207 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "directory": "/home/folimeld-build/folimeld-candidates/alma9-final-integration-review-20261112-02",
+  "base_candidate": "/home/folimeld-build/folimeld-candidates/alma9-035-source-r4-20261112",
+  "base_source_archive_sha256": "f4d5f3639a43e86f289bb7925476bb0179fe12a5ad8b52381418b055e891233e",
+  "proposed_version": "0.3.5",
+  "proposed_rpm_revision": 4,
+  "candidate_functional_source_unchanged": true,
+  "readme_changelog_pairs_updated": true,
+  "changed_existing_files": [
+    "CHANGELOG.md",
+    "CHANGELOG_ja.md",
+    "README.md",
+    "README_ja.md"
+  ],
+  "added_documentation": [
+    "linux-almalinux9-release-draft.md",
+    "linux-almalinux9-release-draft_ja.md"
+  ],
+  "relative_links_checked": [
+    {
+      "from": "README_ja.md",
+      "target": "README.md"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "README_ja.md"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "assets/Folimeld.iconset/icon_128x128.png"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "documentation/screenshots/main-window-macos_ja.png"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "documentation/linux-almalinux9-release-draft_ja.md"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "documentation/linux-release-migration_ja.md"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "DEVELOPMENT_ja.md"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "documentation/debian-wsl-verification_ja.md"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "documentation/freebsd-install_ja.md"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "documentation/freebsd-package-verification_ja.md"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "documentation/freebsd-gui-verification_ja.md"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "documentation/freebsd-extended-verification_ja.md"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "documentation/netbsd-install_ja.md"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "documentation/openbsd-install_ja.md"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "documentation/screenshots/password-dialog-macos_ja.png"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "documentation/windows-store-acceptance_ja.md"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "DEVELOPMENT_ja.md"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "CHANGELOG_ja.md"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "LICENSE"
+    },
+    {
+      "from": "README_ja.md",
+      "target": "documentation/license-distribution_ja.md"
+    },
+    {
+      "from": "README.md",
+      "target": "README.md"
+    },
+    {
+      "from": "README.md",
+      "target": "README_ja.md"
+    },
+    {
+      "from": "README.md",
+      "target": "assets/Folimeld.iconset/icon_128x128.png"
+    },
+    {
+      "from": "README.md",
+      "target": "documentation/screenshots/main-window-macos.png"
+    },
+    {
+      "from": "README.md",
+      "target": "documentation/linux-almalinux9-release-draft.md"
+    },
+    {
+      "from": "README.md",
+      "target": "documentation/linux-release-migration.md"
+    },
+    {
+      "from": "README.md",
+      "target": "DEVELOPMENT.md"
+    },
+    {
+      "from": "README.md",
+      "target": "documentation/debian-wsl-verification_ja.md"
+    },
+    {
+      "from": "README.md",
+      "target": "documentation/freebsd-install.md"
+    },
+    {
+      "from": "README.md",
+      "target": "documentation/freebsd-package-verification_ja.md"
+    },
+    {
+      "from": "README.md",
+      "target": "documentation/freebsd-gui-verification_ja.md"
+    },
+    {
+      "from": "README.md",
+      "target": "documentation/freebsd-extended-verification_ja.md"
+    },
+    {
+      "from": "README.md",
+      "target": "documentation/netbsd-install.md"
+    },
+    {
+      "from": "README.md",
+      "target": "documentation/openbsd-install.md"
+    },
+    {
+      "from": "README.md",
+      "target": "documentation/screenshots/password-dialog-macos.png"
+    },
+    {
+      "from": "README.md",
+      "target": "documentation/windows-store-acceptance.md"
+    },
+    {
+      "from": "README.md",
+      "target": "DEVELOPMENT.md"
+    },
+    {
+      "from": "README.md",
+      "target": "CHANGELOG.md"
+    },
+    {
+      "from": "README.md",
+      "target": "LICENSE"
+    },
+    {
+      "from": "README.md",
+      "target": "documentation/license-distribution_ja.md"
+    },
+    {
+      "from": "CHANGELOG_ja.md",
+      "target": "CHANGELOG_ja.md"
+    },
+    {
+      "from": "CHANGELOG_ja.md",
+      "target": "CHANGELOG.md"
+    },
+    {
+      "from": "CHANGELOG.md",
+      "target": "CHANGELOG_ja.md"
+    },
+    {
+      "from": "CHANGELOG.md",
+      "target": "CHANGELOG.md"
+    }
+  ],
+  "proposal_patch_sha256": "245f02b29865a22883037db96056ceb0d2d7e8c5d9e10e3f4fdff0ac40a7d658",
+  "source_input_count": 686,
+  "main_worktree_modified_by_operation": false,
+  "limitations": [
+    "Integration review copy only; revision4 RPM and source ZIP are unchanged",
+    "Changed documentation requires a new source snapshot and artifact association before publication",
+    "No commit/tag/publication or main version update performed"
+  ]
+}

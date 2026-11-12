@@ -11,7 +11,7 @@ SOURCE_URL = "https://github.com/tyamada/Folimeld"
 def installed_notices(*, strict: bool = True) -> str:
     """Collect notices; packaging requires metadata, source runs may omit it."""
     names = ["PySide6", "PySide6_Essentials", "PySide6_Addons", "shiboken6", "PyMuPDF", "Pillow",
-             "cryptography", "cffi", "pycparser"]
+             "cryptography", "cffi", "pycparser", "PyInstaller"]
     if sys.platform == "win32":
         names += ["winrt-runtime", "winrt-Windows.Services.Store",
                   "winrt-Windows.Foundation", "winrt-Windows.Foundation.Collections"]

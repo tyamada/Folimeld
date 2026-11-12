@@ -1,0 +1,83 @@
+{
+  "date_jst": "2026-11-12",
+  "originals_unchanged": true,
+  "original_hashes": {
+    "原本_日本語.pdf": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+    "暗号化.pdf": "48b63c2a0e9c3bf3f4e18d55d1104195310ac3dfa7986c04973f0f8319e70c0f",
+    "画像/画像01.png": "a2c58fbf87ae17ad25b1680400fd9a3d5e627ff599a47286378d0f0111103613"
+  },
+  "encrypted_saved": {
+    "sha256": "0d7176b5b5ac4b6feed8c5a481946f3139a3cc77e2384bd381f5dc653be7a1b3",
+    "password_required": true,
+    "wrong_password_rejected": true,
+    "test_password_accepted": true,
+    "pages": 3,
+    "rotations": [
+      90,
+      0,
+      0
+    ],
+    "page_text_preserved": true,
+    "gui_reopen_observed": true
+  },
+  "image_pdf": {
+    "sha256": "bf89b3febf002cfbb00efc7c02d52e3c9458a5fa0d8bebf3b627526ea50322d4",
+    "pages": 1,
+    "images": 1,
+    "center_rgb": [
+      0,
+      0,
+      255
+    ]
+  },
+  "published": false,
+  "private_application_version": "0.3.3",
+  "rpm_revision": 2,
+  "environment": {
+    "installed_package": "folimeld-0.3.3-2.lp161.x86_64\n",
+    "binary_sha256": "53fb285ac9efa231e4abf40d82bb69be0b411c04de21890cfd609fd3366cf567",
+    "rpm_verify": "",
+    "additional_packages": "ibus-1.5.33-160100.2.1.x86_64\nibus-mozc-2.31.5810.102+backports-bp161.2.1.x86_64\ndbus-1-1.14.10-160100.2.1.x86_64\ndbus-1-daemon-1.14.10-160100.2.1.x86_64\n",
+    "ime_engine": "mozc-jp",
+    "ime_environment": {
+      "QT_QPA_PLATFORM": "xcb",
+      "QT_IM_MODULE": "ibus",
+      "GTK_IM_MODULE": "ibus",
+      "XMODIFIERS": "@im=ibus"
+    },
+    "logs": {
+      "app.log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+      "ime-app.log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+      "ime-engine.log": "",
+      "ime-session.log": "dbus-daemon[659]: [session uid=1000 pid=659] Activating service name='org.freedesktop.portal.IBus' requested by ':1.0' (uid=1000 pid=662 comm=\"ibus-daemon --daemonize --xim --panel=disable\" label=\"kernel\")\nNot connected to the ibus bus\ndbus-daemon[659]: [session uid=1000 pid=659] Activated service 'org.freedesktop.portal.IBus' failed: Process org.freedesktop.portal.IBus exited with status 1\n"
+    },
+    "verification_gui_terminated": true,
+    "zypper_verify": {
+      "exit_code": 0,
+      "stdout": "Refreshing service 'openSUSE'.\nLoading repository data...\nReading installed packages...\nDependencies of all installed packages are satisfied.\n",
+      "stderr": ""
+    }
+  },
+  "ime_observed": {
+    "roman_input": "nihongo",
+    "hiragana": "にほんご",
+    "kanji": "日本語",
+    "committed": true,
+    "field": "Qt file-open dialog filename; cancelled after test"
+  },
+  "limitations": [
+    "WSLg X11 only; no complete Linux desktop session",
+    "GUI/IME tools added after minimal-dependency tests; no new clean-install/removal cycle",
+    "Single synthetic image and password-protected PDF",
+    "Leap16.1 x86_64 only; no Tumbleweed or ARM64 verification"
+  ],
+  "screenshots": {
+    "01-encrypted-loaded.png": "6cd2171718dc95401f5d4fa6c7576c7a6131847da20d463e872117bfd401f6d7",
+    "02-encrypted-saved.png": "72cb4d166192ba314978b4b2809ea723aa1626f4d5b52c13a0f95ee705b6f5fb",
+    "03-encrypted-reopened.png": "f374332fbaed034975f420cee9ccbe30356db4c34d829f14df2316484eb1365c",
+    "04-image-imported.png": "9410fe3ca367296002ea844f9c099a1ab26d707b4448c947fa43459479dd01ea",
+    "05-ime-hiragana.png": "df62039dfd01e39d8e833d443a72d2281988bc1882a73091fd0413b51c3072dd",
+    "06-ime-kanji.png": "a076f763e941f6be873267639801f8287dc6bdbfbce634f52500a7cf3077068f",
+    "07-ime-committed.png": "d5367cd92b152eb805683f97d17e60d98894aacbaccd1f950803da408433d997"
+  }
+}

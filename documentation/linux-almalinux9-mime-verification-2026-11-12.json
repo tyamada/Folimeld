@@ -1,0 +1,61 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "target": "/home/folimeld-test/verification/mime-gui-20261112/日本語 パス/関連付け 試験.pdf",
+  "sha256": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+  "original_and_copy_unchanged": true,
+  "commands": [
+    {
+      "command": [
+        "gio",
+        "info",
+        "-a",
+        "standard::content-type",
+        "/home/folimeld-test/verification/mime-gui-20261112/日本語 パス/関連付け 試験.pdf"
+      ],
+      "exit_code": 0,
+      "stdout": "uri: file:///home/folimeld-test/verification/mime-gui-20261112/%E6%97%A5%E6%9C%AC%E8%AA%9E%20%E3%83%91%E3%82%B9/%E9%96%A2%E9%80%A3%E4%BB%98%E3%81%91%20%E8%A9%A6%E9%A8%93.pdf\nlocal path: /home/folimeld-test/verification/mime-gui-20261112/日本語 パス/関連付け 試験.pdf\nunix mount: /dev/sdp / ext4 rw,relatime,discard,errors=remount-ro,data=ordered\nattributes:\n  standard::content-type: application/pdf\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "gio",
+        "mime",
+        "application/pdf"
+      ],
+      "exit_code": 0,
+      "stdout": "Default application for “application/pdf”: folimeld.desktop\nRegistered applications:\n\tfolimeld.desktop\nRecommended applications:\n\tfolimeld.desktop\n",
+      "stderr": ""
+    }
+  ],
+  "initial_without_explicit_session": {
+    "gio_pid": 1239,
+    "application_exited": true,
+    "gio_still_waiting": true,
+    "action": "SIGTERM owned test gio after GUI close",
+    "app_log": "\n(gio open:1239): GLib-GIO-CRITICAL **: 14:32:21.402: g_dbus_connection_flush: assertion 'G_IS_DBUS_CONNECTION (connection)' failed\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+  },
+  "premature_session_attempt_log": "Traceback (most recent call last):\n  File \"/home/folimeld-test/verification/mime-gui-20261112/session.py\", line 4, in <module>\n    r=json.loads((p/'launch.json').read_text());e=r['env']\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.12/pathlib.py\", line 1027, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.12/pathlib.py\", line 1013, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/home/folimeld-test/verification/mime-gui-20261112/launch.json'\n",
+  "capture_output_attempt": {
+    "timeout_seconds": 15,
+    "stdout": "b'warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\\n'",
+    "stderr": "None"
+  },
+  "with_isolated_dbus_and_log_file": {
+    "result": {
+      "exit_code": 0,
+      "log_redirected_to_file": true
+    },
+    "log": "",
+    "gui_observed": true,
+    "pages_observed": 3
+  },
+  "desktop_entry": "[Desktop Entry]\nType=Application\nName=Folimeld\nComment=Edit and organize PDF pages\nExec=folimeld %f\nIcon=folimeld\nTerminal=false\nCategories=Office;Graphics;\nMimeType=application/pdf;\nStartupWMClass=Folimeld\n",
+  "binary_sha256": "e7df5b946593a785d5d2c68ba15caa110903ee86b70b30eea784ba8a56f34914",
+  "scope": "Dedicated XDG config and D-Bus only; WSLg X11; no file-manager double-click test",
+  "verification_gui_and_session_terminated": true,
+  "screenshots": {
+    "08-mime-nonascii-loaded.png": "046c3895fa09b1a0ffbcf151627e06b4a11367b4280fe932e960058e81d1f7f1",
+    "11-mime-isolated-dbus.png": "046c3895fa09b1a0ffbcf151627e06b4a11367b4280fe932e960058e81d1f7f1"
+  }
+}

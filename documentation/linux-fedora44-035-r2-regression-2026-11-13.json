@@ -1,0 +1,1255 @@
+{
+  "date": "2026-11-13",
+  "distribution": "Fedora 44 amd64",
+  "rpm": "folimeld-0.3.5-2.fc44.x86_64",
+  "binary_sha256": "c5fea766f7f508255a1c1bfdd68e1e59230d448b564f818d7a4150f0876da7f8",
+  "profile": "/home/folimeld-test/verification/version035-r2-regression-20261113",
+  "initial_hashes": {
+    "原本_日本語.pdf": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+    "暗号化.pdf": "48b63c2a0e9c3bf3f4e18d55d1104195310ac3dfa7986c04973f0f8319e70c0f",
+    "images/image01.png": "a2c58fbf87ae17ad25b1680400fd9a3d5e627ff599a47286378d0f0111103613"
+  },
+  "inputs_unchanged": true,
+  "test_processes_stopped": [
+    271,
+    272,
+    445
+  ],
+  "ui_logs": {
+    "ui-click-1794517830621148686.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x60008a",
+          "70",
+          "63",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-shot-1794517793306923510.json": [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600071",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/09-reopen-password.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-shot-1794517739107338411.json": [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/07-reopened.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-shot-1794517691214923357.json": [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/04-redo.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-key-1794517738782712243.json": [
+      {
+        "command": [
+          "xdotool",
+          "key",
+          "--clearmodifiers",
+          "Return"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-click-1794517690031035268.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "116",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-click-1794517765636550055.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x60005a",
+          "70",
+          "63",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-click-1794517812080027319.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600079",
+          "580",
+          "361",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-click-1794517757832229367.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "760",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-save-1794517738077266557.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600041",
+          "220",
+          "360",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "key",
+          "--window",
+          "0x600041",
+          "--clearmodifiers",
+          "ctrl+a"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "type",
+          "--clearmodifiers",
+          "--delay",
+          "150",
+          "保存_結果.pdf"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600041",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/save-name-1.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600041",
+          "580",
+          "361",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-open-1794517775434896642.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "20",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-click-1794517803946886240.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600076",
+          "70",
+          "88",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-file-menu-1794517701079845803.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "30",
+          "10",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-click-1794517689218008816.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "760",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-click-1794517687937490475.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "150",
+          "200",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-click-1794517690835749428.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "175",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-shot-1794517758197755013.json": [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/08-encrypted-rotated.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-shot-1794517677162323100.json": [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/01-loaded.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-shot-1794517689489065367.json": [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/02-rotated.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-shot-1794517822909089503.json": [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x60007e",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/12-image-list.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-shot-1794517823748289332.json": [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/13-image-created.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-save-1794517774888024867.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x60005d",
+          "220",
+          "360",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "key",
+          "--window",
+          "0x60005d",
+          "--clearmodifiers",
+          "ctrl+a"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "type",
+          "--clearmodifiers",
+          "--delay",
+          "150",
+          "encrypted-edited.pdf"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x60005d",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/save-name-3.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x60005d",
+          "580",
+          "361",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-click-1794517688593203514.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "150",
+          "200",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-save-1794517747398667340.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x60004b",
+          "220",
+          "360",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "key",
+          "--window",
+          "0x60004b",
+          "--clearmodifiers",
+          "ctrl+a"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "type",
+          "--clearmodifiers",
+          "--delay",
+          "150",
+          "暗号化.pdf"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x60004b",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/save-name-2.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x60004b",
+          "580",
+          "361",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-shot-1794517690295436146.json": [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/03-undo.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-click-1794517700167495527.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "520",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-file-menu-1794517795630526076.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "30",
+          "10",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-click-1794517811480619563.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600079",
+          "180",
+          "74",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-shot-1794517804276506121.json": [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600079",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/11-folder.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-key-1794517748103977664.json": [
+      {
+        "command": [
+          "xdotool",
+          "key",
+          "--clearmodifiers",
+          "Return"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-open-1794517725155818842.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "20",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-password-1794517756613010807.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600055",
+          "80",
+          "45",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "type",
+          "--clearmodifiers",
+          "--delay",
+          "150",
+          "test123"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600055",
+          "74",
+          "76",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-save-1794517784920743797.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600067",
+          "220",
+          "360",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "key",
+          "--window",
+          "0x600067",
+          "--clearmodifiers",
+          "ctrl+a"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "type",
+          "--clearmodifiers",
+          "--delay",
+          "150",
+          "encrypted-edited.pdf"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600067",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/save-name-4.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600067",
+          "580",
+          "361",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-password-1794517794748778130.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600071",
+          "80",
+          "45",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "type",
+          "--clearmodifiers",
+          "--delay",
+          "150",
+          "test123"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600071",
+          "74",
+          "76",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-click-1794517757227598845.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "150",
+          "200",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-file-menu-1794517824287678656.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "30",
+          "10",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-click-1794517691757646865.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "630",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-shot-1794517795090666141.json": [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/10-encrypted-reopened.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-save-1794517724610717005.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600016",
+          "220",
+          "360",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "key",
+          "--window",
+          "0x600016",
+          "--clearmodifiers",
+          "ctrl+a"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "type",
+          "--clearmodifiers",
+          "--delay",
+          "150",
+          "/home/folimeld-test/verification/version035-r2-regression-20261113/fixtures/保存_結果.pdf"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600016",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/save-name-0.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600016",
+          "580",
+          "361",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-file-menu-1794517758740011010.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "30",
+          "10",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-click-1794517692320972298.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "380",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-shot-1794517700534853725.json": [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/06-deleted.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-save-1794517841602541166.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x60008d",
+          "220",
+          "360",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "key",
+          "--window",
+          "0x60008d",
+          "--clearmodifiers",
+          "ctrl+a"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "type",
+          "--clearmodifiers",
+          "--delay",
+          "150",
+          "image-created.pdf"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x60008d",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/save-name-5.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x60008d",
+          "580",
+          "361",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-click-1794517823450950910.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x60007e",
+          "647",
+          "476",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-key-1794517785631171331.json": [
+      {
+        "command": [
+          "xdotool",
+          "key",
+          "--clearmodifiers",
+          "Return"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-open-1794517739647836383.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "20",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-click-1794517708811732380.json": [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600011",
+          "70",
+          "63",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "ui-shot-1794517692613002178.json": [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora44-035-r2-regression/05-blank.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ]
+  },
+  "remaining": [
+    "IME",
+    "GIO",
+    "remove and reinstall",
+    "minimal dependency install",
+    "license UI",
+    "final source material integration"
+  ],
+  "published": false,
+  "pdf_validation": {
+    "original_and_test_copy_unchanged": true,
+    "original_sha256": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+    "edited": {
+      "saved_name": "new/保存_結果.pdf",
+      "sha256": "72769b6ffcd9c5ff3a30c1b9a64c3a718e8a1b6442a04759b21e933ee76f3521",
+      "pages": 3,
+      "original_page_order": [
+        2,
+        1,
+        3
+      ],
+      "rotations": [
+        0,
+        90,
+        0
+      ],
+      "text_preserved": true,
+      "gui_reopen_observed": true
+    },
+    "encrypted": {
+      "sha256": "f8018b79b02318befa7bb1463afe917d247a0d1632f94751542f37897b65f0cf",
+      "needs_password": true,
+      "wrong_password_rejected": true,
+      "test_password_accepted": true,
+      "pages": 3,
+      "rotations": [
+        90,
+        0,
+        0
+      ],
+      "text_preserved": true,
+      "gui_reauthenticated_and_reopened": true,
+      "input_unchanged": true
+    },
+    "image_pdf": {
+      "sha256": "61da025e8da072bbbf988945eb90eaef5d6be3ba7fa8f149d28db12f1988c718",
+      "pages": 1,
+      "images": 1,
+      "center_rgb": [
+        0,
+        0,
+        255
+      ],
+      "png_unchanged": true
+    }
+  },
+  "screenshots": {
+    "documentation/linux-fedora44-035-r2-regression/01-loaded.png": "3c6d8cd6edb2a835b6e52d5705639a95143f0b0f3850a51b261a6a201580e86f",
+    "documentation/linux-fedora44-035-r2-regression/02-rotated.png": "e8457606b0af152de279f8a38fb1785589811f6345783be4625930b149ef9a02",
+    "documentation/linux-fedora44-035-r2-regression/03-undo.png": "31049662fb9e220effe0ad8ce3d9d16aa1f16e1bc6b6ccbccbc1eb49f4e7b350",
+    "documentation/linux-fedora44-035-r2-regression/04-redo.png": "b6d03de1c705d450011adce4b8740d82fe5cc2b7fcba4522e05e1e66e9072a8b",
+    "documentation/linux-fedora44-035-r2-regression/05-blank.png": "19a0628f6618e555cf0e672f7d5ffc2ca53b0405d402668fe2fae09fe124316d",
+    "documentation/linux-fedora44-035-r2-regression/06-deleted.png": "efd363e2c7ae9e35ca4e1c41407514ce0494a10b5dd63d56570695a35f3efcb1",
+    "documentation/linux-fedora44-035-r2-regression/07-reopened.png": "2b0edb76fb99c57e15b15ec7004cb7f6d5d1e78b5e4d659ebcf3084eb610729e",
+    "documentation/linux-fedora44-035-r2-regression/08-encrypted-rotated.png": "e8457606b0af152de279f8a38fb1785589811f6345783be4625930b149ef9a02",
+    "documentation/linux-fedora44-035-r2-regression/09-reopen-password.png": "a23be58079468f6938f9e104e9dd187a191f6aa2c7e5dc96a56fed7f10d54638",
+    "documentation/linux-fedora44-035-r2-regression/10-encrypted-reopened.png": "d1a96c9cab95ea1ab1b53124ed8ce005a94945791a1eebbc97db22db6526b76b",
+    "documentation/linux-fedora44-035-r2-regression/11-folder.png": "7c54e4b3e0dede9f761697782623cd811fb08767000d596ebf06b0cd984fd869",
+    "documentation/linux-fedora44-035-r2-regression/12-image-list.png": "d9ac48317854eec0d747d2f020de588a9fbf2e6a76b90e46fa68ff109e0c6310",
+    "documentation/linux-fedora44-035-r2-regression/13-image-created.png": "52a393b46fa629f16cad52be1d0f448c6967b1a6ff893130a0f6ba33021dba18",
+    "documentation/linux-fedora44-035-r2-regression/save-name-0.png": "acf3135392d1183d37305d1f9fde6253d7c248284001859b360b065ce90cdf93",
+    "documentation/linux-fedora44-035-r2-regression/save-name-1.png": "87b070539c3410111b54f9cbde9959d88cfdeaf04bd5c449de22b46566a34038",
+    "documentation/linux-fedora44-035-r2-regression/save-name-2.png": "808f536aa1d536fe2bf59e6e1bee3e6e6ee5a75261388a7882b9ea0a97876559",
+    "documentation/linux-fedora44-035-r2-regression/save-name-3.png": "00eb075925b95631f5a7dd10a2fcfe57ac40d24fc68788e24da17ebfef8915cc",
+    "documentation/linux-fedora44-035-r2-regression/save-name-4.png": "f51438decdce0eb1d4126cd41b5b53950a238aa4f0adbe2a438f5bb14791526a",
+    "documentation/linux-fedora44-035-r2-regression/save-name-5.png": "f94c50e9986c833619d6e7e6661cf12fcd7b060924c406eac11c427e553b41e6"
+  }
+}

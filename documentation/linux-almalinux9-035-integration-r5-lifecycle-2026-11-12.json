@@ -1,0 +1,96 @@
+{
+  "lifecycle": {
+    "commands": [
+      {
+        "command": [
+          "rpm",
+          "-V",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "log": ""
+      },
+      {
+        "command": [
+          "dnf",
+          "check"
+        ],
+        "exit_code": 0,
+        "log": ""
+      },
+      {
+        "command": [
+          "dnf",
+          "-y",
+          "--setopt=clean_requirements_on_remove=False",
+          "remove",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "log": "Dependencies resolved.\n================================================================================\n Package        Architecture Version                  Repository           Size\n================================================================================\nRemoving:\n folimeld       x86_64       0.3.5-5.alma9_8          @@commandline       100 M\n\nTransaction Summary\n================================================================================\nRemove  1 Package\n\nFreed space: 100 M\nRunning transaction check\nTransaction check succeeded.\nRunning transaction test\nTransaction test succeeded.\nRunning transaction\n  Preparing        :                                                        1/1 \n  Erasing          : folimeld-0.3.5-5.alma9_8.x86_64                        1/1 \n  Running scriptlet: folimeld-0.3.5-5.alma9_8.x86_64                        1/1 \n  Verifying        : folimeld-0.3.5-5.alma9_8.x86_64                        1/1 \n\nRemoved:\n  folimeld-0.3.5-5.alma9_8.x86_64                                               \n\nComplete!\n"
+      },
+      {
+        "command": [
+          "dnf",
+          "-y",
+          "--setopt=install_weak_deps=False",
+          "install",
+          "/root/folimeld-verification/folimeld-0.3.5-5.alma9_8.x86_64.rpm"
+        ],
+        "exit_code": 0,
+        "log": "Last metadata expiration check: 3:22:55 ago on Thu 12 Nov 2026 06:21:19 PM JST.\nDependencies resolved.\n================================================================================\n Package         Architecture  Version                Repository           Size\n================================================================================\nInstalling:\n folimeld        x86_64        0.3.5-5.alma9_8        @commandline         98 M\n\nTransaction Summary\n================================================================================\nInstall  1 Package\n\nTotal size: 98 M\nInstalled size: 100 M\nDownloading Packages:\nRunning transaction check\nTransaction check succeeded.\nRunning transaction test\nTransaction test succeeded.\nRunning transaction\n  Preparing        :                                                        1/1 \n  Installing       : folimeld-0.3.5-5.alma9_8.x86_64                        1/1 \n  Running scriptlet: folimeld-0.3.5-5.alma9_8.x86_64                        1/1 \n  Verifying        : folimeld-0.3.5-5.alma9_8.x86_64                        1/1 \n\nInstalled:\n  folimeld-0.3.5-5.alma9_8.x86_64                                               \n\nComplete!\n"
+      },
+      {
+        "command": [
+          "rpm",
+          "-V",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "log": ""
+      },
+      {
+        "command": [
+          "dnf",
+          "check"
+        ],
+        "exit_code": 0,
+        "log": ""
+      }
+    ],
+    "package_sha256": "0ba2c7dfc397f61b1ca70679838c93589310d116a267249d67dd822b8cb654bc",
+    "package_files_restored": {
+      "/usr/bin/folimeld": "82ada5680df8bb74da15b801ce59793b140a4789766d0caf4b7082a120ca470c",
+      "/usr/share/applications/folimeld.desktop": "8a271d69a2ce9627a8e6dc2542c8076ff88becbc23cb316c985b0580f917e890",
+      "/usr/share/icons/hicolor/256x256/apps/folimeld.png": "e3ee064eec6215d101b1ff4c2e0815c1d6e717b4dc5f5d7278e8ba67658575d4",
+      "/usr/share/licenses/folimeld/LICENSE": "2abf94716325b310911398472f8a1501673e2fdd449e0c1ad546107f61fcac56"
+    },
+    "user_files_preserved": {
+      "/home/folimeld-test/verification/version035-regression-20261112/fixtures/保存 結果.pdf": "4654e184ef48f9d1c955f64b5590bf95f2c6bbd0153d1bfc7b7dceabffa55eb9",
+      "/home/folimeld-test/verification/version035-regression-20261112/fixtures/原本_日本語.pdf": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+      "/home/folimeld-test/verification/version035-regression-20261112/fixtures/encrypted-edited.pdf": "0533528ef63e689631f4144cf193acdcd2297d820912aee557e87f7bbcae8983",
+      "/home/folimeld-test/verification/version035-regression-20261112/fixtures/暗号化.pdf": "48b63c2a0e9c3bf3f4e18d55d1104195310ac3dfa7986c04973f0f8319e70c0f",
+      "/home/folimeld-test/verification/version035-regression-20261112/fixtures/image-created.pdf": "aa665f5ea0ec838c6c85382bf628ab7b0eaf617e2298044c09abef72164dc19a",
+      "/home/folimeld-test/verification/version035-regression-20261112/config/Folimeld/Folimeld.conf": "f939829dc6c7e2e015d699c66bfcd55816446db419189ec3c55bd8f2443b7b4a"
+    },
+    "removed_package_files_verified": true,
+    "package": "folimeld-0.3.5-5.alma9_8.x86_64",
+    "scope": "Existing dedicated GUI-tool Test environment; removal does not auto-remove dependencies; not fresh minimal installation"
+  },
+  "startup": [
+    {
+      "platform": "offscreen",
+      "alive_after_12_seconds": true,
+      "exit_code_after_test": -15,
+      "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nThis plugin does not support propagateSizeHints()\n"
+    },
+    {
+      "platform": "xcb",
+      "alive_after_12_seconds": true,
+      "exit_code_after_test": -15,
+      "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+    }
+  ],
+  "date_jst": "2026-11-12",
+  "published": false
+}

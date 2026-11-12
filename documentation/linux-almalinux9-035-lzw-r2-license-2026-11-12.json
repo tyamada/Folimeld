@@ -1,0 +1,15 @@
+{
+  "binary_sha256": "5b18292874ed3ec0b7865f26b83baae5fa4a7c79e62163c82ab22704cd52d587",
+  "notice_tab_observed": true,
+  "berkeley_notice_observed": true,
+  "fixture_unchanged": true,
+  "terminated_test_pid": 6333,
+  "log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+  "date_jst": "2026-11-12",
+  "published": false,
+  "screenshots": {
+    "01-notice.png": "d48c9e43521157e2f476d55f57cf496dc5d3cb1c81ea3ee1c6a037bb35b4243d",
+    "02-berkeley.png": "d48c9e43521157e2f476d55f57cf496dc5d3cb1c81ea3ee1c6a037bb35b4243d",
+    "03-berkeley-bottom.png": "ada872258716a591dda591f8a8a26498b41b9b40368d1abfc1f9d70bf5b848f8"
+  }
+}

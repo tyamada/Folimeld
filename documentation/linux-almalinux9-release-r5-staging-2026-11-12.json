@@ -1,0 +1,157 @@
+{
+  "date_jst": "2026-11-12",
+  "staging_directory": "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/staging-r5",
+  "published": false,
+  "publication_ready": false,
+  "status": {
+    "published": false,
+    "publication_ready": false,
+    "candidate_version": "0.3.5",
+    "rpm_revision": 5,
+    "candidate_unchanged": true,
+    "embedded_material_manifest_is_historical": true,
+    "supplement": "libXau-gpg-verification.json supersedes the historical signature-unverified item only; expired key status retained",
+    "verified_dependency_files": 162,
+    "remaining": [
+      "Review actual bundled third-party components against supplied sources, patches and required notices",
+      "Resolve historical wheel inputs where mutable upstream references prevent exact mapping",
+      "Finalize version, release text and repository integration; no publication authorized by this staging operation"
+    ],
+    "rpm_sha256": "0ba2c7dfc397f61b1ca70679838c93589310d116a267249d67dd822b8cb654bc",
+    "executable_sha256": "82ada5680df8bb74da15b801ce59793b140a4789766d0caf4b7082a120ca470c",
+    "source_sha256": "f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079"
+  },
+  "files": [
+    {
+      "name": "Folimeld-0.3.5-alma9-amd64-dependency-materials.tar",
+      "bytes": 1717278720,
+      "sha256": "c85e44ae33a1d21072eb80a98d5b0b6e167650f0025ecf4031b1c999fc705a5d"
+    },
+    {
+      "name": "Folimeld-0.3.5-alma9-amd64-notices.tar.gz",
+      "bytes": 1687806,
+      "sha256": "7be8752ed1a6f13d4ef0f95a662e5a009cce62c1d5efffb774fd709dcf5bacf0"
+    },
+    {
+      "name": "Folimeld-source-f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079.json",
+      "bytes": 89002,
+      "sha256": "8999a828de2c570586822736444b2f33625ff9c419c44fb6263b6d09723219e0"
+    },
+    {
+      "name": "Folimeld-source-f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079.zip",
+      "bytes": 21838581,
+      "sha256": "f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079"
+    },
+    {
+      "name": "PREPARATION-STATUS.json",
+      "bytes": 964,
+      "sha256": "51a19d048e3f131f56e8ca7ff2f8fc1eda9cb8e2d8306b7d213fb7af56c0c001"
+    },
+    {
+      "name": "folimeld-0.3.5-5.alma9_8.x86_64.rpm",
+      "bytes": 103052936,
+      "sha256": "0ba2c7dfc397f61b1ca70679838c93589310d116a267249d67dd822b8cb654bc"
+    },
+    {
+      "name": "folimeld-0.3.5-5.alma9_8.x86_64.rpm-0ba2c7dfc397f61b1ca70679838c93589310d116a267249d67dd822b8cb654bc.json",
+      "bytes": 785,
+      "sha256": "2c5fb6f7578c4d4038d271e3ee97008b7494a7491d7e8a3a99e559bffc40b520"
+    },
+    {
+      "name": "folimeld-82ada5680df8bb74da15b801ce59793b140a4789766d0caf4b7082a120ca470c.json",
+      "bytes": 693,
+      "sha256": "2a4ad2fd8203c041908b2fec5dfc92e11cb111c88b6a7fe8ddabca45348af88d"
+    },
+    {
+      "name": "libXau-gpg-verification.json",
+      "bytes": 5512,
+      "sha256": "9ee0a0b5918236ecd684a441e968fb783459ad356434d37cacbc2014027dbed6"
+    },
+    {
+      "name": "linux-almalinux9-release-draft.md",
+      "bytes": 1858,
+      "sha256": "511a697f805aa7f31f93ad4e08b0fdb007b91451313f190b9e4fdca7cd572bd2"
+    },
+    {
+      "name": "linux-almalinux9-release-draft_ja.md",
+      "bytes": 1918,
+      "sha256": "2cbb9ee5c7edd32246de15af5047098c5e2181f8d90e723c51adf070f8837684"
+    }
+  ],
+  "checksum_file_sha256": "5011ec8697e8a713bd28167765850136b99182bd1dd3da532daf6a1fc7b7643a",
+  "dependency_archive_roundtrip_verified": true,
+  "original_candidate_unchanged": true,
+  "signature": {
+    "rpm_sha256": "f9e5775417473caa6b5699171eec64253ef90473f36f0efe81d020b52a5de49a",
+    "key_sha256": "2cbe597b108cefbf571d8d430d238d0a7a6575eebf6c80649be5e10c323e7023",
+    "signature_header_offset": 5144,
+    "main_header_end": 14232,
+    "commands": [
+      {
+        "command": [
+          "gpg",
+          "--batch",
+          "--no-options",
+          "--homedir",
+          "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/gnupg",
+          "--import",
+          "/home/folimeld-build/folimeld-candidates/alma9-20261112/pillow-native-audit-20261112/RPM-GPG-KEY-AlmaLinux-8"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "gpg: keybox '/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/gnupg/pubring.kbx' created\ngpg: /home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/gnupg/trustdb.gpg: trustdb created\ngpg: key 488FCF7C3ABB34F8: public key \"AlmaLinux <packager@almalinux.org>\" imported\ngpg: key 2AE81E8ACED7258B: public key \"AlmaLinux OS 8 <packager@almalinux.org>\" imported\ngpg: Total number processed: 2\ngpg:               imported: 2\n"
+      },
+      {
+        "command": [
+          "gpg",
+          "--batch",
+          "--no-options",
+          "--homedir",
+          "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/gnupg",
+          "--with-colons",
+          "--fingerprint"
+        ],
+        "exit_code": 0,
+        "stdout": "tru::1:1794479268:0:3:1:5\npub:e:4096:1:488FCF7C3ABB34F8:1610451214:1705059214::-:::c::::::23::0:\nfpr:::::::::5E9B8F5617B5066CE92057C3488FCF7C3ABB34F8:\nuid:e::::1610451214::53A3867E7CDFA56523148BF531EB8CE8DBBAFA3F::AlmaLinux <packager@almalinux.org>::::::::::0:\nsub:e:3072:1:51D6647EC21AD6EA:1610451398:1705059214:::::s::::::23:\nfpr:::::::::E53CF5EF91CEB0AD1812ECB851D6647EC21AD6EA:\npub:-:4096:1:2AE81E8ACED7258B:1696928879:::-:::scSC::::::23::0:\nfpr:::::::::BC5EDDCADF502C077F1582882AE81E8ACED7258B:\nuid:-::::1696928879::1C9B4A64DC309AB00C0978768A9B823FC0B9BCC0::AlmaLinux OS 8 <packager@almalinux.org>::::::::::0:\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "gpg",
+          "--batch",
+          "--no-options",
+          "--homedir",
+          "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/gnupg",
+          "--status-fd",
+          "1",
+          "--verify",
+          "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/signature-268.pgp",
+          "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/signed-268.bin"
+        ],
+        "exit_code": 0,
+        "stdout": "[GNUPG:] NEWSIG\n[GNUPG:] KEYEXPIRED 1705059214\n[GNUPG:] KEYEXPIRED 1705059398\n[GNUPG:] KEY_CONSIDERED 5E9B8F5617B5066CE92057C3488FCF7C3ABB34F8 0\n[GNUPG:] KEYEXPIRED 1705059214\n[GNUPG:] SIG_ID xco9l7oxEoIASo8LogvE2jDeXew 2021-01-14 1610618031\n[GNUPG:] KEYEXPIRED 1705059214\n[GNUPG:] KEYEXPIRED 1705059398\n[GNUPG:] KEY_CONSIDERED 5E9B8F5617B5066CE92057C3488FCF7C3ABB34F8 0\n[GNUPG:] EXPKEYSIG 51D6647EC21AD6EA AlmaLinux <packager@almalinux.org>\n[GNUPG:] VALIDSIG E53CF5EF91CEB0AD1812ECB851D6647EC21AD6EA 2021-01-14 1610618031 0 4 0 1 8 00 5E9B8F5617B5066CE92057C3488FCF7C3ABB34F8\n[GNUPG:] KEYEXPIRED 1705059214\n[GNUPG:] KEYEXPIRED 1705059398\n[GNUPG:] KEY_CONSIDERED 5E9B8F5617B5066CE92057C3488FCF7C3ABB34F8 0\n",
+        "stderr": "gpg: Signature made Thu 14 Jan 2021 06:53:51 PM JST\ngpg:                using RSA key 51D6647EC21AD6EA\ngpg: Good signature from \"AlmaLinux <packager@almalinux.org>\" [expired]\ngpg: Note: This key has expired!\nPrimary key fingerprint: 5E9B 8F56 17B5 066C E920  57C3 488F CF7C 3ABB 34F8\n     Subkey fingerprint: E53C F5EF 91CE B0AD 1812  ECB8 51D6 647E C21A D6EA\n"
+      },
+      {
+        "command": [
+          "gpg",
+          "--batch",
+          "--no-options",
+          "--homedir",
+          "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/gnupg",
+          "--status-fd",
+          "1",
+          "--verify",
+          "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/signature-1002.pgp",
+          "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/signed-1002.bin"
+        ],
+        "exit_code": 0,
+        "stdout": "[GNUPG:] NEWSIG\n[GNUPG:] KEYEXPIRED 1705059214\n[GNUPG:] KEYEXPIRED 1705059398\n[GNUPG:] KEY_CONSIDERED 5E9B8F5617B5066CE92057C3488FCF7C3ABB34F8 0\n[GNUPG:] KEYEXPIRED 1705059214\n[GNUPG:] SIG_ID yJ/yYkvsqer+sGf+jsTkX2e9aK4 2021-01-14 1610618031\n[GNUPG:] KEYEXPIRED 1705059214\n[GNUPG:] KEYEXPIRED 1705059398\n[GNUPG:] KEY_CONSIDERED 5E9B8F5617B5066CE92057C3488FCF7C3ABB34F8 0\n[GNUPG:] EXPKEYSIG 51D6647EC21AD6EA AlmaLinux <packager@almalinux.org>\n[GNUPG:] VALIDSIG E53CF5EF91CEB0AD1812ECB851D6647EC21AD6EA 2021-01-14 1610618031 0 4 0 1 8 00 5E9B8F5617B5066CE92057C3488FCF7C3ABB34F8\n[GNUPG:] KEYEXPIRED 1705059214\n[GNUPG:] KEYEXPIRED 1705059398\n[GNUPG:] KEY_CONSIDERED 5E9B8F5617B5066CE92057C3488FCF7C3ABB34F8 0\n",
+        "stderr": "gpg: Signature made Thu 14 Jan 2021 06:53:51 PM JST\ngpg:                using RSA key 51D6647EC21AD6EA\ngpg: Good signature from \"AlmaLinux <packager@almalinux.org>\" [expired]\ngpg: Note: This key has expired!\nPrimary key fingerprint: 5E9B 8F56 17B5 066C E920  57C3 488F CF7C 3ABB 34F8\n     Subkey fingerprint: E53C F5EF 91CE B0AD 1812  ECB8 51D6 647E C21A D6EA\n"
+      }
+    ],
+    "system_policy_unchanged": true,
+    "system_trust_unchanged": true,
+    "scope": "Independent OpenPGP verification of RPM header and header+payload; does not establish wheel build provenance"
+  }
+}

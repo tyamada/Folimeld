@@ -124,3 +124,8 @@
 ## 0.1.0 - 2026-08-29
 
 - 最初のリリース
+
+
+## openSUSE Leap 16.1 preview candidate
+
+- openSUSE Leap 16.1 amd64向け0.3.5試験候補。サムネイル描画修正と依存告知を収録。

@@ -1,0 +1,35 @@
+{
+  "date_jst": "2026-11-13",
+  "published": false,
+  "directory": "/home/folimeld-build/folimeld-candidates/fedora44-r2-readiness-20261113",
+  "external_material_archive": {
+    "path": "/home/folimeld-build/folimeld-candidates/fedora44-r2-readiness-20261113/Folimeld-fedora44-0.3.5-r2-dependency-sources.tar",
+    "bytes": 1738352640,
+    "sha256": "48c688417ffbd46af8dc23a87f6aac2de99d6fba8500998b05de25ae0c34f0cd",
+    "files_including_manifest": 178
+  },
+  "embedded_manifest_unchanged": true,
+  "supplemental_manifest_sha256": "6a32e6de4d000611cc31c6ee6963ffc15da77c704e171506db5c69f2b006be35",
+  "verified_source_rpms": 37,
+  "original_embedded_materials": 119,
+  "packet_files": {
+    "folimeld-0.3.5-2.fc44.x86_64.rpm": {
+      "bytes": 104152756,
+      "sha256": "d3fc22088af7d4fa08b90bc341e64b24b23d350de98a11d9825a0cafa4416574"
+    },
+    "Folimeld-source-957b144ca26d0b13ff91449b1f98165fff2cfa452409fb540cf2d3bbe3d58e3e.zip": {
+      "bytes": 23782773,
+      "sha256": "957b144ca26d0b13ff91449b1f98165fff2cfa452409fb540cf2d3bbe3d58e3e"
+    },
+    "folimeld-0.3.5-2.fc44.x86_64.rpm-d3fc22088af7d4fa08b90bc341e64b24b23d350de98a11d9825a0cafa4416574.json": {
+      "bytes": 782,
+      "sha256": "b0574035497293ea5ca4fbe0b33ca64186e07df82d3d6e9b2b93e5f138f3cb13"
+    }
+  },
+  "limitations": [
+    "External supplemental source set; existing candidate binary, RPM, embedded manifest and corresponding application ZIP remain unchanged",
+    "Historical Alma scope in reused common upstream audit records is preserved; Fedora-specific verification is separate",
+    "Exact prebuilt wheel bytes, signed OS source RPMs and official source releases verified; historical compiler flags and bit-reproducible rebuild not independently reproduced",
+    "Failed download attempts and isolated rpmdb deliberately excluded from this archive"
+  ]
+}

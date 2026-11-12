@@ -1,0 +1,21 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "source_directory": "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/source-archive-review-r4/source",
+  "git_absent": true,
+  "no_test_overlay": true,
+  "command": [
+    "/home/folimeld-build/folimeld-candidates/linux-integration-review-20261112/test-venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "--basetemp",
+    "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/source-archive-review-r4/pytest-full-temp",
+    "-o",
+    "cache_dir=/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/source-archive-review-r4/pytest-full-cache"
+  ],
+  "exit_code": 0,
+  "stdout": "........................................s............... [ 13%]\n....................................... [ 22%]\n...................................................... [ 35%]\n........................................................................ [ 52%]\n.......................................................................s [ 70%]\nsssssss................................................................. [ 87%]\n.....................................................                    [100%]\n409 passed, 9 skipped, 67 subtests passed in 16.79s\n",
+  "stderr": "",
+  "scope": "Existing dedicated test venv reading fixed build dependencies; no dependency updates"
+}

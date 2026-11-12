@@ -1,0 +1,171 @@
+{
+  "binary_sha256": "b0915988edbfcea48704cf013f5961b5c496d7b6689a888f019cff9034f46455",
+  "checks": [
+    {
+      "command": [
+        "rpm",
+        "-q",
+        "folimeld"
+      ],
+      "exit_code": 0,
+      "stdout": "folimeld-0.3.3-3.alma9_8.x86_64\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "rpm",
+        "-V",
+        "folimeld"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "dnf",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "ime": {
+    "engine": "mozc-jp",
+    "hiragana_observed": "にほんご",
+    "kanji_and_commit_observed": "日本語",
+    "session": "isolated dbus-run-session",
+    "ibus_exit": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "test_gui_pid_terminated": 3321
+  },
+  "app_log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+  "ime_app_log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+  "ime_session_log": "dbus-daemon[3243]: [session uid=1000 pid=3243] Activating service name='org.freedesktop.portal.IBus' requested by ':1.0' (uid=1000 pid=3246 comm=\"ibus-daemon --daemonize --xim --panel=disable \" label=\"kernel\")\nNot connected to the ibus bus\ndbus-daemon[3243]: [session uid=1000 pid=3243] Activated service 'org.freedesktop.portal.IBus' failed: Process org.freedesktop.portal.IBus exited with status 1\ndbus-daemon[3243]: [session uid=1000 pid=3243] Activating service name='org.a11y.Bus' requested by ':1.2' (uid=1000 pid=3253 comm=\"/usr/libexec/ibus-extension-gtk3 \" label=\"kernel\")\ndbus-daemon[3243]: [session uid=1000 pid=3243] Successfully activated service 'org.a11y.Bus'\ndbus-daemon[3269]: Activating service name='org.a11y.atspi.Registry' requested by ':1.0' (uid=1000 pid=3256 comm=\"/usr/libexec/ibus-x11 --kill-daemon \" label=\"kernel\")\ndbus-daemon[3243]: [session uid=1000 pid=3243] Activating service name='org.freedesktop.portal.Desktop' requested by ':1.5' (uid=1000 pid=3253 comm=\"/usr/libexec/ibus-extension-gtk3 \" label=\"kernel\")\ndbus-daemon[3269]: Successfully activated service 'org.a11y.atspi.Registry'\nSpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry\ndbus-daemon[3243]: [session uid=1000 pid=3243] Activating service name='org.freedesktop.portal.Documents' requested by ':1.8' (uid=1000 pid=3277 comm=\"/usr/libexec/xdg-desktop-portal \" label=\"kernel\")\ndbus-daemon[3243]: [session uid=1000 pid=3243] Activating service name='org.freedesktop.impl.portal.PermissionStore' requested by ':1.9' (uid=1000 pid=3284 comm=\"/usr/libexec/xdg-document-portal \" label=\"kernel\")\ndbus-daemon[3243]: [session uid=1000 pid=3243] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'\ndbus-daemon[3243]: [session uid=1000 pid=3243] Successfully activated service 'org.freedesktop.portal.Documents'\ndbus-daemon[3243]: [session uid=1000 pid=3243] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.8' (uid=1000 pid=3277 comm=\"/usr/libexec/xdg-desktop-portal \" label=\"kernel\")\ndbus-daemon[3243]: [session uid=1000 pid=3243] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'\n\n** (/usr/libexec/xdg-desktop-portal:3277): WARNING **: 16:22:41.567: Failed connect to PipeWire: Couldn't connect to PipeWire\ndbus-daemon[3243]: [session uid=1000 pid=3243] Successfully activated service 'org.freedesktop.portal.Desktop'\n",
+  "launch": {
+    "pid": 2449,
+    "env": {
+      "SHELL": "/bin/bash",
+      "WSL2_GUI_APPS_ENABLED": "1",
+      "WSL_DISTRO_NAME": "Folimeld-AlmaLinux9-Amd64-Test",
+      "NAME": "DESKTOP-8MG8TSN",
+      "PWD": "/mnt/c/Users/takum/Downloads/source/Folimeld",
+      "LOGNAME": "folimeld-test",
+      "HOME": "/home/folimeld-test",
+      "LANG": "en_US.UTF-8",
+      "WSL_INTEROP": "/run/WSL/2443_interop",
+      "WAYLAND_DISPLAY": "wayland-0",
+      "TERM": "xterm-256color",
+      "USER": "folimeld-test",
+      "DISPLAY": ":0",
+      "SHLVL": "0",
+      "XDG_RUNTIME_DIR": "/home/folimeld-test/verification/revision3-regression-20261112/runtime",
+      "WSLENV": "",
+      "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/takum/AppData/Local/Microsoft/WindowsApps/Microsoft.PowerShell_8wekyb3d8bbwe:/mnt/c/Users/takum/.codex/tmp/arg0-windows/codex-arg02FvunG:/mnt/c/Program Files/Oracle/VirtualBox:/mnt/c/Program Files/coreutils/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/takum/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/takum/.lmstudio/bin:/mnt/c/Users/takum/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/takum/AppData/Local/Python/bin:/mnt/c/Users/takum/AppData/Local/Python/pythoncore-3.14-64/Scripts:/mnt/c/Users/takum/AppData/Local/Programs/Swift/Toolchains/6.3.2+Asserts/usr/bin/:/mnt/c/Users/takum/AppData/Local/Programs/Swift/Runtimes/6.3.2/usr/bin/:/mnt/c/Users/takum/.dotnet/tools:/mnt/c/Users/takum/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/takum/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/takum/.vscode/extensions/openai.chatgpt-26.1106.51428-win32-x64/bin/windows-x86_64",
+      "HOSTTYPE": "x86_64",
+      "PULSE_SERVER": "unix:/mnt/wslg/PulseServer",
+      "_": "/usr/bin/python3.12",
+      "QT_QPA_PLATFORM": "xcb",
+      "QT_IM_MODULE": "compose",
+      "XMODIFIERS": "",
+      "TMPDIR": "/home/folimeld-test/verification/revision3-regression-20261112/tmp",
+      "XDG_CONFIG_HOME": "/home/folimeld-test/verification/revision3-regression-20261112/config",
+      "XDG_CACHE_HOME": "/home/folimeld-test/verification/revision3-regression-20261112/cache",
+      "XDG_DATA_HOME": "/home/folimeld-test/verification/revision3-regression-20261112/data"
+    },
+    "binary_sha256": "b0915988edbfcea48704cf013f5961b5c496d7b6689a888f019cff9034f46455",
+    "initial_hashes": {
+      "原本_日本語.pdf": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+      "暗号化.pdf": "48b63c2a0e9c3bf3f4e18d55d1104195310ac3dfa7986c04973f0f8319e70c0f",
+      "images/image01.png": "a2c58fbf87ae17ad25b1680400fd9a3d5e627ff599a47286378d0f0111103613"
+    }
+  },
+  "automation_notes": [
+    "Save toolbar wrote only the newly created regression PDF copy before Save As; retained reference source unchanged",
+    "Initial file path typing and password input did not reliably reach intended Qt widgets; selected existing list entries and cleared modifiers",
+    "Image save failed once because synthetic input dropped s from folimeld-test; successful retry used verified short filename",
+    "05 is before file-dialog disappearance and 07 is before successful password entry; use 06 and 09 as actual reopen evidence"
+  ],
+  "date_jst": "2026-11-12",
+  "published": false,
+  "data": {
+    "original_reference_unchanged": true,
+    "original_sha256": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+    "edited": {
+      "saved_name": "new/保存 結果.pdf",
+      "sha256": "2fccb4805ee3b652fc12429c4f1abbfc1a462b3f0a7194e131f6150394ad89ae",
+      "pages": 3,
+      "original_page_order": [
+        2,
+        1,
+        3
+      ],
+      "rotations": [
+        0,
+        90,
+        0
+      ],
+      "text_preserved": true,
+      "gui_reopen_observed": true
+    },
+    "test_copy_overwritten_during_save": {
+      "path": "new/原本_日本語.pdf",
+      "sha256": "6661b4f08cd45156d42ffdec0c9c418a4bdc7873e873615c141cde22ba035cdb",
+      "same_page_data_as_edited": true,
+      "scope": "Only new dedicated regression copy; retained reference unchanged"
+    },
+    "encrypted": {
+      "sha256": "4df5eec0e26c335a24dd080a609b4c1510f0764b2f45544340cee5c49798d07c",
+      "needs_password": true,
+      "wrong_password_rejected": true,
+      "test_password_accepted": true,
+      "pages": 3,
+      "rotations": [
+        90,
+        0,
+        0
+      ],
+      "text_preserved": true,
+      "gui_reauthenticated_and_reopened": true,
+      "input_unchanged": true
+    },
+    "image_pdf": {
+      "sha256": "2c60f3840a466c569c790891b0c5bd5a0e54750bed70df244f4558b3ad8e9072",
+      "pages": 1,
+      "images": 1,
+      "center_rgb": [
+        0,
+        0,
+        255
+      ],
+      "png_unchanged": true
+    }
+  },
+  "screenshots": {
+    "01-rotated.png": "483996f1d2f4596f67b80a16b1c90b02768e9957fe08c55021adeb7c2939e188",
+    "02-undo.png": "8d4c402e671210a856ac52140223b1509dcbb3655b23fc706f367182e06602a1",
+    "03-redo-moved.png": "852135c0acea1c594dc611ef7a2c9fee6a6785236400f4e30d9ce0f4c4bb6d85",
+    "04-blank-inserted.png": "5794f7185aa84e1b8cd7de95135ae8d30032f19a08bf37685e5794256f02ff9b",
+    "05-edited-reopened.png": "0f115feed7174cbda5d45c014785405eef8e29c0cfd7a1f51659bda7b8cbc963",
+    "06-reopen-confirmed.png": "ee5adb3276c3891e68d1be0b168ee2bba179013d5c0ab79464da78a00d2d8573",
+    "07-encrypted-loaded.png": "8d907142a934929a68ea03719eebd7951c21cfa19f96b185f978361b4ba43953",
+    "08-encrypted-saved.png": "5062bee37ef990e36a128e42164edd263e06a0c328809cd7684429f4952e316e",
+    "09-encrypted-reopened.png": "3f0ae7f34d00c3f1eadfc4f65bfaec5c08100bd46302dd626a1ad213b4b51007",
+    "10-image-options.png": "b2631787e5aea827c74ae6ba9c341ab6ccdf525d3a352d255ac401da6c5e34ef",
+    "11-image-imported.png": "ff4fde73770a1a54801f1fe241ed0fc45a906bb87399bfc7d6dc1d8ca1d50b1c",
+    "12-image-saved.png": "0d05a6c713c2e60334b87a734dd9c01206a0cf937646d4a736814767e0f172ba",
+    "13-ime-hiragana.png": "61a1a72f955c34943f078b5f117a88719a07ff090a21c5525d8a537c3547a691",
+    "14-ime-kanji.png": "6a8a13b3bda02adfb13447d3f02a2fd150b2c2506e004122cdf5cfbc7b1c9b46",
+    "15-ime-committed.png": "62a1f1f10dbe6a4eb2b0fc687c7cf891a83ac8b566bf0ee11e8d0d191a083542"
+  },
+  "limitations": [
+    "WSLg X11 in existing dedicated GUI-tool/EPEL environment; not fresh minimal install",
+    "Limited synthetic PDF/AES256/image/IME cases",
+    "GIO association and removal/reinstall not repeated for revision3",
+    "Wheel provenance, Alma8 libXau signature, public version integration and full desktop migration remain"
+  ]
+}

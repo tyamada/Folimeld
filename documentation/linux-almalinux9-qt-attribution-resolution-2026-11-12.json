@@ -1,0 +1,223 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "resolved_files": [
+    {
+      "path": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/forkfd/qt_attribution.json",
+      "raw_sha256": "525fd890017a3966f542da42a9ff0ca2a0d71bc45f80a4871de3e0bd0f612612",
+      "parse_method": "json.loads(strict=False) permits literal newlines inside strings",
+      "data": {
+        "Id": "forkfd",
+        "Name": "forkfd",
+        "QDocModule": "qtcore",
+        "QtUsage": "Used on most Unix platforms in Qt Core.",
+        "Comment": "No upstream; treat as final, no relevant PURL or CPE found",
+        "Files": [
+          "forkfd.c",
+          "forkfd.h",
+          "forkfd_gcc.h"
+        ],
+        "License": "MIT License",
+        "LicenseId": "MIT",
+        "LicenseFile": "LICENSE",
+        "Copyright": "Copyright (C) 2016 Intel Corporation\nCopyright (C) 2015 Klarälvdalens Datakonsult AB, a KDAB Group company, info@kdab.com"
+      }
+    },
+    {
+      "path": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libpsl/qt_attribution.json",
+      "raw_sha256": "ae227b5f2cf40511fe1a84d4c752f4005917b7eeb44e7c4495b1403c27cc3647",
+      "parse_method": "json.loads(strict=False) permits literal newlines inside strings",
+      "data": [
+        {
+          "Id": "psl-data",
+          "Name": "The Public Suffix List",
+          "QDocModule": "qtnetwork",
+          "Description": "The Public Suffix List is an initiative of Mozilla,\nbut is maintained as a community resource. It is available for use in any software,\nbut was originally created to meet the needs of browser manufacturers.\nIt allows browsers to, for example:\n\n- Avoid privacy-damaging \"supercookies\" being set for high-level domain name suffixes\n\n- Highlight the most important part of a domain name in the user interface\n\n- Accurately sort history entries by site",
+          "Files": "psl_data.cpp",
+          "QtUsage": "Used in Qt Network to avoid setting \"supercookies\" in the cookie jar\nsupported by Qt (by the QNetworkCookieJar class).",
+          "Comment": "Updated by util/update_public_suffix_list.sh; if you add fields here, update the script, too!",
+          "Homepage": "http://publicsuffix.org/",
+          "Version": "2026-05-14_08-35-31_UTC",
+          "DownloadLocation": "https://publicsuffix.org/list/public_suffix_list.dat",
+          "PURL": "pkg:generic/psl-data@e452c7058d6946bd76952b128c12f5ce87a5acb8?download_url=https://publicsuffix.org/list/public_suffix_list.dat",
+          "License": "Mozilla Public License 2.0",
+          "LicenseFile": "PSL-LICENSE.txt",
+          "LicenseId": "MPL-2.0",
+          "Copyright": "The list was originally provided by Jo Hermans <jo.hermans@gmail.com>.\nIt is now maintained on github (https://github.com/publicsuffix/list)."
+        },
+        {
+          "Id": "libpsl",
+          "Name": "libpsl - C library to handle the Public Suffix List",
+          "QDocModule": "qtnetwork",
+          "Description": "Libpsl allows checking domains against the Public Suffix List.",
+          "Files": [
+            "src/lookup_string_in_fixed_set.c",
+            "src/psl-make-dafsa"
+          ],
+          "QtUsage": "Used to compress the embedded copy of publicsuffix list and\nto lookup entries in it.",
+          "Homepage": "https://github.com/rockdaboot/libpsl",
+          "Version": "664f3dc85259ec65e30248a61fa1c45b7b0e4c3f",
+          "PURL": "pkg:github/rockdaboot/libpsl@$<VERSION>",
+          "License": "BSD 3-clause \"New\" or \"Revised\" License",
+          "LicenseFile": "src/LICENSE.chromium",
+          "LicenseId": "BSD-3-Clause",
+          "Copyright": "Copyright 2014-2016 The Chromium Authors. All rights reserved.",
+          "Comment": "no relevant CPE found"
+        }
+      ]
+    },
+    {
+      "path": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sha3/qt_attribution.json",
+      "raw_sha256": "d904a6c21c150d9cac693c0806a469480306cb4e5879cc13c994fbadba71a56e",
+      "parse_method": "json.loads(strict=False) permits literal newlines inside strings",
+      "data": [
+        {
+          "Id": "sha3_endian",
+          "Name": "Secure Hash Algorithm SHA-3 - brg_endian",
+          "QDocModule": "qtcore",
+          "QtUsage": "Used in Qt Core (QCryptographicHash).",
+          "Comment": "no relevant CPE found",
+          "Files": "brg_endian.h",
+          "Description": "SHA-3, originally known as Keccak, is a cryptographic hash function.",
+          "Version": "1.0.0",
+          "PURL": "pkg:github/BrianGladman/sha@$<VERSION>",
+          "License": "BSD 2-clause \"Simplified\" License",
+          "LicenseFile": "BRG_ENDIAN_LICENSE",
+          "LicenseId": "BSD-2-Clause",
+          "Copyright": "Copyright (c) 1998-2013, Brian Gladman, Worcester, UK. All rights reserved."
+        },
+        {
+          "Id": "sha3_keccak",
+          "Name": "Secure Hash Algorithm SHA-3 - Keccak",
+          "QDocModule": "qtcore",
+          "QtUsage": "Used in Qt Core (QCryptographicHash).",
+          "Comment": "no relevant CPE found",
+          "Files": [
+            "KeccakF-1600-32-rvk.macros",
+            "KeccakF-1600-32.macros",
+            "KeccakF-1600-64.macros",
+            "KeccakF-1600-interface.h",
+            "KeccakF-1600-opt32.c",
+            "KeccakF-1600-opt64.c",
+            "KeccakF-1600-unrolling.macros",
+            "KeccakNISTInterface.c",
+            "KeccakNISTInterface.h",
+            "KeccakSponge.c",
+            "KeccakSponge.h"
+          ],
+          "Description": "SHA-3, originally known as Keccak, is a cryptographic hash function.",
+          "Version": "3.2",
+          "PURL": "pkg:generic/sha3_keccak@$<VERSION>?download_url=https://keccak.team/obsolete/KeccakReferenceAndOptimized-3.2.zip",
+          "License": "Creative Commons Zero v1.0 Universal",
+          "LicenseId": "CC0-1.0",
+          "LicenseFile": "CC0_LICENSE",
+          "Copyright": "Guido Bertoni, Joan Daemen, Michaël Peeters and Gilles Van Assche.\nTo the extent possible under law, the implementers have waived all copyright\nand related or neighboring rights to the source code in this file."
+        }
+      ]
+    },
+    {
+      "path": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/xcb/qt_attribution.json",
+      "raw_sha256": "8bae8861957bc0168d586d24da6e8e93edceb11796811c5f614d211f4674d437",
+      "parse_method": "json.loads(strict=False) permits literal newlines inside strings",
+      "data": {
+        "Id": "xcb-xinput",
+        "Name": "XCB-XInput",
+        "QDocModule": "qtgui",
+        "QtUsage": "Used in XCB platform plugin if xcb-xinput was not present on the system\n during Qt configuration or -bundled-xcb-xinput switch was used. To force using xcb-xinput from\n the system, pass -no-bundled-xcb-xinput.",
+        "Description": "XInput 2 extension for XCB (The X protocol C-language Binding) library.",
+        "Homepage": "https://xcb.freedesktop.org/",
+        "PURL": "pkg:generic/xcb-xinput?download_url=http://xcb.freedesktop.org/",
+        "License": "MIT License",
+        "LicenseId": "MIT",
+        "LicenseFile": "LICENSE",
+        "Copyright": [
+          "Copyright (C) 2001-2006 Bart Massey, Jamey Sharp, and Josh Triplett.",
+          "Copyright (C) 2006 Peter Hutterer",
+          "Copyright (C) 2013 Daniel Martin"
+        ],
+        "Comment": "no relevant CPE found"
+      }
+    },
+    {
+      "path": "qt-everywhere-src-6.11.2/qtbase/src/corelib/text/qt_attribution.json",
+      "raw_sha256": "4e23736600be956e4214849ad8baaa955441656db7324713fab6353c1163b4f5",
+      "parse_method": "json.loads(strict=False) permits literal newlines inside strings",
+      "data": [
+        {
+          "Id": "unicode-character-database",
+          "Name": "Unicode Character Database (UCD)",
+          "QDocModule": "qtcore",
+          "QtUsage": "Qt Core uses data obtained from UCD files for working with characters and strings.",
+          "SecurityCritical": false,
+          "Comment": {
+            "Version": [
+              "Don't use the Unicode standard version;",
+              "UCD has its own 'Revision' numbers",
+              "see the 'UAX #44, UCD' page (https://www.unicode.org/reports/tr44/)"
+            ]
+          },
+          "Files": [
+            "qunicodetables_p.h",
+            "qunicodetables.cpp"
+          ],
+          "Description": "The Unicode Character Database (UCD) is a set of files that\n define the Unicode character properties and internal mappings.",
+          "Homepage": "https://www.unicode.org/ucd/",
+          "Version": "36",
+          "License": "Unicode License Agreement - Data Files and Software (2016)",
+          "LicenseId": "Unicode-3.0",
+          "Copyright": "Copyright (C) 1991-2025 Unicode, Inc."
+        },
+        {
+          "Id": "unicode-cldr",
+          "Name": "Unicode Common Locale Data Repository (CLDR)",
+          "QDocModule": "qtcore",
+          "QtUsage": "Used in Qt Core (QTimeZone, QLocale).",
+          "SecurityCritical": false,
+          "Comment": {
+            "Files": "For update, see qtbase/util/locale_database/cldr2qlocalexml.py",
+            "General": "no relevant CPE and PURL found"
+          },
+          "Files": [
+            "qlocale_data_p.h",
+            "../time/qtimezoneprivate_data_p.h",
+            "../time/qtimezonelocale_data_p.h",
+            "../time/qhijricalendar_data_p.h",
+            "../time/qjalalicalendar_data_p.h",
+            "../time/qromancalendar_data_p.h",
+            "../../../util/locale_database/testlocales/localemodel.cpp"
+          ],
+          "Description": "The Unicode CLDR provides key building blocks for software to support the\n world's languages, with the largest and most extensive standard repository of locale data\n available.",
+          "Homepage": "https://cldr.unicode.org/",
+          "Version": "v48.2",
+          "License": "Unicode License v3",
+          "LicenseId": "Unicode-3.0",
+          "Copyright": "Copyright (C) 2004-2025 Unicode, Inc."
+        }
+      ]
+    }
+  ],
+  "resolved_file_count": 5,
+  "additional_component_count": 8,
+  "license_references": [
+    "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/forkfd/LICENSE",
+    "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libpsl/PSL-LICENSE.txt",
+    "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libpsl/src/LICENSE.chromium",
+    "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sha3/BRG_ENDIAN_LICENSE",
+    "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sha3/CC0_LICENSE",
+    "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/xcb/LICENSE"
+  ],
+  "references_present": [
+    "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/forkfd/LICENSE",
+    "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libpsl/src/LICENSE.chromium",
+    "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/xcb/LICENSE"
+  ],
+  "references_missing": [
+    "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libpsl/PSL-LICENSE.txt",
+    "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sha3/BRG_ENDIAN_LICENSE",
+    "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sha3/CC0_LICENSE"
+  ],
+  "limitations": [
+    "Supplemental parsing of five source attribution files; original raw text and earlier record remain unchanged",
+    "Remaining referenced files need collection before claiming complete reference coverage"
+  ]
+}

@@ -124,3 +124,8 @@
 ## 0.1.0 - 2026-08-29
 
 - Initial release
+
+
+## openSUSE Leap 16.1 preview candidate
+
+- 0.3.5 preview candidate for openSUSE Leap 16.1 amd64, including the thumbnail layout fix and dependency notices.

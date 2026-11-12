@@ -1,0 +1,36 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 22ae9c8..bcb0868 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -4,6 +4,8 @@
+ 
+ ## Unreleased
+ 
++- Prepare a Linux amd64 integration proposal with Fedora, openSUSE and AlmaLinux RPM recipes, thumbnail layout fixes and bootloader notice collection. Version 0.3.5 is a private proposal in an isolated copy, not a public platform release.
++
+ - Add signed application and private MuPDF dependency packages, matching source, build tools, and bilingual installation instructions for OpenBSD 8.0 / amd64
+ 
+ - Restrict the Windows build DLL search path to required Python, Windows and Git locations; validate native binary provenance and stop builds that collect binaries from unrelated tools
+diff --git a/CHANGELOG_ja.md b/CHANGELOG_ja.md
+index a2f51ad..ef11cbb 100644
+--- a/CHANGELOG_ja.md
++++ b/CHANGELOG_ja.md
+@@ -4,6 +4,8 @@
+ 
+ ## 未リリース
+ 
++- Linux amd64追加対応の統合案を準備。Fedora・openSUSE・AlmaLinux用RPM処理、サムネイル描画とブートローダー告知収集の修正を含む。0.3.5は専用コピー内の未公開案であり、対応OSの公開を示しません。
++
+ - OpenBSD 8.0 / amd64向けに本体・専用MuPDF依存の署名付きパッケージ、対応ソース、ビルド工具と日英インストール手順を追加
+ 
+ - WindowsビルドのDLL検索パスをPython・Windows・Gitの必要な場所に限定し、無関係なツール由来のDLL混入を防止。ネイティブバイナリの収集元を検査し、想定外の場所ならビルドを停止
+diff --git a/folimeld/__init__.py b/folimeld/__init__.py
+index 34d3dd9..fe02a3e 100644
+--- a/folimeld/__init__.py
++++ b/folimeld/__init__.py
+@@ -1,4 +1,4 @@
+ """Folimeld application package."""
+ 
+-__version__ = "0.3.3"
++__version__ = "0.3.5"
+ __build__ = "1"

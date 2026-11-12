@@ -1,0 +1,457 @@
+{
+  "date_jst": "2026-11-13",
+  "published": false,
+  "fedora_baseline_executable_sha256": "b59faa51dbdc16580eb93c2b978ea85b53b727f6d843067fa37bdd53a4729cf9",
+  "qt_mupdf_native_entries_match_pypi_verified_archives": [
+    {
+      "entry": "PySide6/Qt/lib/libQt6Core.so.6",
+      "sha256": "23651543e0ff970f1d21b2abc1250221f0dd854fe68e3027462925532afbe22b",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6DBus.so.6",
+      "sha256": "548e934455d147fe9c2f9e78a345a4458bcfad846c0d1e7fe0a80d71b0a04e15",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6EglFSDeviceIntegration.so.6",
+      "sha256": "928f596db3959e048c1114579ac4939921f4ad4c8341b2a31960c1309acf779e",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6EglFsKmsSupport.so.6",
+      "sha256": "b052ea1b2ce58f3ac41c16cec684730cd74275f430c32b5dd04061502fae5327",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6Gui.so.6",
+      "sha256": "c1797794be8cfd5e64e324c5068ff9f32bd54fda21af1a637c087550ebae73a0",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6Network.so.6",
+      "sha256": "bdf6d5cedfda840257bdc3e7393f159c250b51124969d4eae388f3c79912e646",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6OpenGL.so.6",
+      "sha256": "7a529f90ab931734fa6a05bc7dce2ef23ee206c073f7f42b0838fb68ae999ec6",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6Qml.so.6",
+      "sha256": "97638fce79b23fb910d1a79094df50262b7bd877cb4930c91d5e1c34dbb5294f",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6QmlMeta.so.6",
+      "sha256": "f188d7a80f4976dce5c62f4c9120b6531524e51f51f8a129175959bceede9cb0",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6QmlModels.so.6",
+      "sha256": "130cf2b916a58142e1fc87d03e5ef473acf55a6f6bd47d67ef8de879bd896126",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6QmlWorkerScript.so.6",
+      "sha256": "f8e39f369fa639195dbfff756ebeb8695dc7679f68af1738020eff1b007db15c",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6Quick.so.6",
+      "sha256": "7969cc04af5e5c5829376b9b7509e690bc9c208763e1483a1835de852fe7460e",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6Svg.so.6",
+      "sha256": "6cc863209dc92d29e2698cc59f61064976b25c3e24fd36c34973a4e880d78e8d",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6WaylandClient.so.6",
+      "sha256": "a2628e71258b5fda3bc4fd920541a34298137fd2d46f447e65cc0d52e0bf4f64",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6Widgets.so.6",
+      "sha256": "0cb5f5ab05e519487b0900a4592351a54420fe703a29bb929e06220a2fc2b616",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6WlShellIntegration.so.6",
+      "sha256": "23e047a07ec4fb78c5640f1493cea17b8c05a9d01cc7cfc874b6cd60fdfc0f0b",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6XcbQpa.so.6",
+      "sha256": "0e582e1461f9fe9fa208d83ff09edab901dcd3ba2702e047f458f72f00f9a9f5",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libicudata.so.73",
+      "sha256": "4d24b3a908dd838bea23414e16aa830d05a2a306c475246ab11ef0a00c3037e9",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libicui18n.so.73",
+      "sha256": "ad5410f3e4eb4f01f91d10ddb3780cdbcbeb902ed04a3bc4d3f562b956578d52",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libicuuc.so.73",
+      "sha256": "8ce3427af0d2bf566bb422ce80a12014137d12ed452fe2dd9ed481ee46181168",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/egldeviceintegrations/libqeglfs-emu-integration.so",
+      "sha256": "b3853427fba0131b7719fdeafad540b30822e0346a8652fe89a4b013a7083a1f",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so",
+      "sha256": "8fcd2e9fd1b2656fa1f025b0bf3ae03af004034b6587f69f9e612c1bdc781154",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/egldeviceintegrations/libqeglfs-x11-integration.so",
+      "sha256": "e9343079ed68fdf2e703949e9e3f06351dce5c5d6cfd99775400e9929e106e1e",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/generic/libqevdevkeyboardplugin.so",
+      "sha256": "41fd1024b7957ea28bf97d5acae9200d362e2266091ff6e8707b64fc1f1bfebf",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/generic/libqevdevmouseplugin.so",
+      "sha256": "76ff27f8a68cdaecb5b3f3d1582afc9508f9ab5f63256e6efb54a68ddfaecd88",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/generic/libqevdevtabletplugin.so",
+      "sha256": "0e04fee3590fb9bb2df0eee0ec0c18240a80f441c537d8dc0f62290fd6ec603d",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/generic/libqevdevtouchplugin.so",
+      "sha256": "17b34f7d52c17994899aa1baef3ae96eda6a6869685e638e0cdf174de2cefd22",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/generic/libqtuiotouchplugin.so",
+      "sha256": "a025e3d60794fa13d39c75e3332588222b9f97e9eeedb51a023a7705d6e41f2f",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/iconengines/libqsvgicon.so",
+      "sha256": "dee247929cbf23f66f4738aadebdb523f304eb1e36089de489e1a1a31dce2b30",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqgif.so",
+      "sha256": "8f602245038c508504445876ea675507508e3442ecf6faa964b39ce1ff2d8c80",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqicns.so",
+      "sha256": "56ba43983778b4ffa90390dcc32ff21e36441cf1debf50738fe29bedde497825",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqico.so",
+      "sha256": "0572f900823c5c1200ec14db0d533f9df8025a6888ad1b11df37ada551dc5c57",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqjpeg.so",
+      "sha256": "3c02b7d32fb1fd564c9409e91e850fe94b274f7fad73d2be84cd6c198e326d71",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqpdf.so",
+      "sha256": "3c1f6b3db424a3afb4f720d7a0e92630c21262d0f17c0022f7aa134af75beed4",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqsvg.so",
+      "sha256": "17f6125ef78e931abad94184dff61874d3f93f21adccb27a246cdf7f11b87fb0",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqtga.so",
+      "sha256": "544f70899386c93a842e0ae1bf90e678da2ccff6f0e4cad544e270f6e4853a60",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqtiff.so",
+      "sha256": "fcf586d90273ee2a107c6bacc3253ef73897cb9d68641d0028a62f30baa16bb0",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqwbmp.so",
+      "sha256": "8db43182afaaa946725cca340a9942b059025142cfb291f3a14d1709693c5f9d",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/imageformats/libqwebp.so",
+      "sha256": "990e4bc0f37aab81a31b6f29db8fe7d4c6d634bae20e5ff7204e7f2ba9df0d28",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/networkinformation/libqconnman.so",
+      "sha256": "b14582e7d81eeda12ce357b1b174bda530a965a904ddc30631f441daef963c4a",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/networkinformation/libqglib.so",
+      "sha256": "793b1b14a5da85941fd69907c6d5da6b8ed7ddf8438875aab15eabdd76dceb1e",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/networkinformation/libqnetworkmanager.so",
+      "sha256": "ea3bb7d4d8a746575d299996a2dc6fd03840ed78cc73283bd1f09bcd846e5b04",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so",
+      "sha256": "d08bff4c3b137632a4498933e7d38c6338b8133e75c42ccb9d5e2e9ecc72696d",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so",
+      "sha256": "92437edcc4cdf67ea3479a3b0b7a8de04a3e536e77621abf7df1dbcfdaedf941",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqeglfs.so",
+      "sha256": "a6129b496524cc373ea947e05a68ff69a3fb6eb730eacc2614443bff1d6342a1",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqlinuxfb.so",
+      "sha256": "f57281999c0fde12ac232590f75c8fddb84fb96a3d577cab68db77cdb9463721",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqminimal.so",
+      "sha256": "eedbedccf3b61bfd42e730f7caf9fb268428e11ace34fd1cc62b9ab56ae26c75",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqminimalegl.so",
+      "sha256": "11f66d34948f29e338bb755e118a022415bac24151d273d6b46ac03cdc045e6b",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqoffscreen.so",
+      "sha256": "4e4f6e0e54234e362a1a9b2fc37c2d10647508e193f18b0218c84f2985e63966",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqvkkhrdisplay.so",
+      "sha256": "27979210d8424a78df8adb968c6865e8e27a647ff947aede783177851705199e",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqvnc.so",
+      "sha256": "81b5a1decd44b711a8634f3dc39eca1973e90e0c9b694411848d0179639b4f7f",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqwayland.so",
+      "sha256": "7a2a9a11ca1718666c6982af0cccfe31297bde4bf38acac129c6be4c6b056aae",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platforms/libqxcb.so",
+      "sha256": "83981915129d4143e1a93d0bc8d190cf430f4f4bed37bfea544244eff18baf2f",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platformthemes/libqgtk3.so",
+      "sha256": "4d29d8f04aac1d990dae98227941680fbd375aff3d91a25475fe8e2111abac99",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/platformthemes/libqxdgdesktopportal.so",
+      "sha256": "30e3ea36831cd5e8be27b965ceec0557096d8573acccff7df3d7cfb193c777ba",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/tls/libqcertonlybackend.so",
+      "sha256": "1b82d5542239101dfbad7a477132a72c18e18fc628823a33b9772b30b73a1e18",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/tls/libqopensslbackend.so",
+      "sha256": "80e3acb3a5185993d0f2a38c6abb8763dede29fb0997d9a57dc454b4da4ba7a5",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-decoration-client/libadwaita.so",
+      "sha256": "e3f12c7c325052f910f9fd7402f49d5433ae47230a7b8af5119cee283a75b087",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-decoration-client/libbradient.so",
+      "sha256": "961aa2a7d85a200e1738990ab07da456d940a3c56c337b67cbb7dcd0834db878",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-graphics-integration-client/libdmabuf-server.so",
+      "sha256": "6d1e9f15c78fddc4f9b10569b6a2511cbf925f967da1f1ca3b9654a401e84930",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-graphics-integration-client/libdrm-egl-server.so",
+      "sha256": "12cc6b2b7a1f349c052bb748995c0b00c1e916b2dab47a557648e2090f74ce2f",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-graphics-integration-client/libqt-plugin-wayland-egl.so",
+      "sha256": "fc6714c83383c892bace2c00eb287acc5b6798683da70a5e9dbd0e966aa12489",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-graphics-integration-client/libshm-emulation-server.so",
+      "sha256": "b961b254c55235b67fccdfe6720fca86efff31adf1e33adf376ffdd0d3f8b7d9",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-graphics-integration-client/libvulkan-server.so",
+      "sha256": "dcaa1c1efb0cac97359993fee7960d797c162291d7e38a8fb50d4714fc972923",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-shell-integration/libfullscreen-shell-v1.so",
+      "sha256": "2a66b4ced1791d02cf0b060045cd61e1177d5a420cc0b14dc6832e6128a5830e",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-shell-integration/libivi-shell.so",
+      "sha256": "b9aacca6f28b10e8ed5f0beac7210064d11024980770a76792cd40ef46745bb9",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-shell-integration/libqt-shell.so",
+      "sha256": "d38581778f99c5dc47830744fc0b7621ec358c7fb45ca9ffe53cf5b6e7544967",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-shell-integration/libwl-shell-plugin.so",
+      "sha256": "bd403bf49eaca767442c37cd42365f78d5946f10ef7d6bc76cdb57bb67b3a893",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/wayland-shell-integration/libxdg-shell.so",
+      "sha256": "f7fc95f585531bf89313d55d555f79d50d44357a9ba98367aaed14047f05b525",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/xcbglintegrations/libqxcb-egl-integration.so",
+      "sha256": "004179d65716c907e594d7ef922ac774e33eb0553dc09ff0cccbfbb12b122d48",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/plugins/xcbglintegrations/libqxcb-glx-integration.so",
+      "sha256": "318a5e905246d26ac0640d34a011d7b34ed2e5302553792388c073176164c7ac",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/QtCore.abi3.so",
+      "sha256": "d040e13f904ba5f6f43f5d97d8610b0eb53bfb12721710dfea16829355fe0cb1",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/QtDBus.abi3.so",
+      "sha256": "1b40eccd88ca3ed4573498295bc0eca3669c676d4f7c6164c61de099c34bd05f",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/QtGui.abi3.so",
+      "sha256": "ac1da875502fd8142dc9083f1572efa20341145a6340b9d004d3318960f6306c",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/QtNetwork.abi3.so",
+      "sha256": "62d57a067da6a3dfc49ec3a567068c7079adf9064a2d36fdc0f4a2645f84c69e",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/QtWidgets.abi3.so",
+      "sha256": "afa3cae8ec4458405abe933f217913dfc550885a5a3d51cccc68e350ae35af2f",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/libpyside6.abi3.so.6.11",
+      "sha256": "e5e300b4cdad95cea882715122308ad25cebd0040dbd813c7ed75031f93cff2f",
+      "wheel": "pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libQt6Pdf.so.6",
+      "sha256": "782708b66cfd40d77ed412d9378e7462d5f885e0c8965cbfb59a21084c7b7fd8",
+      "wheel": "pyside6_addons-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "shiboken6/Shiboken.abi3.so",
+      "sha256": "362781770f80314c13c3bb24394ef8ba3c65d52e5ea94628462ed0bb9a1abd28",
+      "wheel": "shiboken6-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "shiboken6/libshiboken6.abi3.so.6.11",
+      "sha256": "c0ddb602926c9255ce6655f0ec0c7afc731016c99f96c4ada6e0595cddf29dae",
+      "wheel": "shiboken6-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl"
+    },
+    {
+      "entry": "pymupdf/_extra.so",
+      "sha256": "22f946717a91da7e6c03e6e57e2c0dff532bb80f44c4d2e255628a88410aff1b",
+      "wheel": "pymupdf-1.28.2-cp310-abi3-manylinux_2_28_x86_64.whl"
+    },
+    {
+      "entry": "pymupdf/_mupdf.so",
+      "sha256": "d16a4ad71a3477f6a11dfbb0ef53c41180ec35a37b50fd39956e61c8344ec15c",
+      "wheel": "pymupdf-1.28.2-cp310-abi3-manylinux_2_28_x86_64.whl"
+    },
+    {
+      "entry": "pymupdf/libmupdf.so.28.2",
+      "sha256": "64ea1ff04304a3e90d5ae7fb38de4fb8e4057ff776434e747fe5a62d219b1cfa",
+      "wheel": "pymupdf-1.28.2-cp310-abi3-manylinux_2_28_x86_64.whl"
+    },
+    {
+      "entry": "pymupdf/libmupdfcpp.so.28.2",
+      "sha256": "18e57cf53d7b498ab4fe3672e4cb7be6ad946ba00b88b52507426fc50505ff19",
+      "wheel": "pymupdf-1.28.2-cp310-abi3-manylinux_2_28_x86_64.whl"
+    }
+  ],
+  "matched_native_count": 84,
+  "fedora_pillow_vendored_matches": [
+    {
+      "component": "fribidi-shim",
+      "source_path": "src/thirdparty/fribidi-shim/fribidi.c",
+      "sha256": "7e8cfa78dcd21cebeb0ad91c0cd23e0dba6496c0fbd66e1ec3d25c5b1b365d11"
+    },
+    {
+      "component": "pythoncapi_compat",
+      "source_path": "src/thirdparty/pythoncapi_compat.h",
+      "sha256": "97b0e62657965bd01a783b93422a6f7138d64c48546657feacc218ec8319ee0b"
+    },
+    {
+      "component": "raqm",
+      "source_path": "src/thirdparty/raqm/raqm.c",
+      "sha256": "5549e7458674077ca4794033ade277910ba0ad6989651787eba1a8b5513a9f9d"
+    }
+  ],
+  "icu_runtime_version": [
+    73,
+    2,
+    0,
+    0
+  ],
+  "final_material_file_count": 118,
+  "limitations": [
+    "Prior Fedora candidate native correspondence; verify new candidate separately after build",
+    "Fedora Python3.14 Pillow extensions are not compared to Alma Python3.12 extensions",
+    "OS source RPMs and full historical wheel build settings remain incomplete"
+  ]
+}
