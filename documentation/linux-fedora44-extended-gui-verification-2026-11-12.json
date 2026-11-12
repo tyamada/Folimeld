@@ -1,0 +1,79 @@
+{
+  "date_jst": "2026-11-12",
+  "originals_unchanged": true,
+  "original_hashes": {
+    "原本_日本語.pdf": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+    "暗号化.pdf": "48b63c2a0e9c3bf3f4e18d55d1104195310ac3dfa7986c04973f0f8319e70c0f",
+    "画像/画像01.png": "a2c58fbf87ae17ad25b1680400fd9a3d5e627ff599a47286378d0f0111103613"
+  },
+  "encrypted_saved": {
+    "sha256": "5673816bea49f43009df8e602195386d2639c583ef382ef2980be90c5ddee3af",
+    "password_required": true,
+    "wrong_password_rejected": true,
+    "test_password_accepted": true,
+    "pages": 3,
+    "rotations": [
+      90,
+      0,
+      0
+    ],
+    "page_text_preserved": true,
+    "gui_reopen_observed": true
+  },
+  "image_pdf": {
+    "sha256": "bf2834a78d9746decd7c781618a2bc569f3aa5b7a04f1847e41e89be9ae980a2",
+    "pages": 1,
+    "images": 1,
+    "center_rgb": [
+      0,
+      0,
+      255
+    ]
+  },
+  "published": false,
+  "private_application_version": "0.3.3",
+  "rpm_revision": 1,
+  "environment": {
+    "installed_package": "folimeld-0.3.3-1.fc44.x86_64\n",
+    "binary_sha256": "8347c123b1af32f37b98898c3b6e3e9db778798cf09f708ee671ad194bdc15ae",
+    "rpm_verify": "",
+    "dnf_check": "",
+    "additional_packages": "ibus-1.5.34-4.fc44.x86_64\nibus-mozc-2.29.5111.102-18.fc44.x86_64\ndbus-daemon-1.16.2-1.fc44.x86_64\ndbus-tools-1.16.2-1.fc44.x86_64\n",
+    "ime_engine": "mozc-jp",
+    "ime_environment": {
+      "QT_QPA_PLATFORM": "xcb",
+      "QT_IM_MODULE": "ibus",
+      "GTK_IM_MODULE": "ibus",
+      "XMODIFIERS": "@im=ibus"
+    },
+    "logs": {
+      "app.log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+      "ime-app.log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+      "ime-engine.log": "",
+      "ime-session.log": "dbus-daemon[835]: [session uid=1000 pid=835 pidfd=5] Activating service name='org.freedesktop.portal.IBus' requested by ':1.0' (uid=1000 pid=838 comm=\"ibus-daemon --daemonize --xim --panel=disable\" label=\"kernel\")\nNot connected to the ibus bus\ndbus-daemon[835]: [session uid=1000 pid=835 pidfd=5] Activated service 'org.freedesktop.portal.IBus' failed: Process org.freedesktop.portal.IBus exited with status 1\ndbus-daemon[835]: [session uid=1000 pid=835 pidfd=5] Activating service name='org.a11y.Bus' requested by ':1.2' (uid=1000 pid=844 comm=\"/usr/libexec/ibus-extension-gtk3\" label=\"kernel\")\ndbus-daemon[835]: [session uid=1000 pid=835 pidfd=5] Successfully activated service 'org.a11y.Bus'\ndbus-daemon[835]: [session uid=1000 pid=835 pidfd=5] Activating service name='org.freedesktop.portal.Desktop' requested by ':1.4' (uid=1000 pid=844 comm=\"/usr/libexec/ibus-extension-gtk3\" label=\"kernel\")\ndbus-daemon[835]: [session uid=1000 pid=835 pidfd=5] Activating service name='org.freedesktop.impl.portal.PermissionStore' requested by ':1.5' (uid=1000 pid=887 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[835]: [session uid=1000 pid=835 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'\ndbus-daemon[835]: [session uid=1000 pid=835 pidfd=5] Activating service name='org.freedesktop.portal.Documents' requested by ':1.5' (uid=1000 pid=887 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[835]: [session uid=1000 pid=835 pidfd=5] Successfully activated service 'org.freedesktop.portal.Documents'\n\n(/usr/libexec/xdg-desktop-portal:887): xdg-desktop-portal-WARNING **: 08:57:36.186: Choosing gtk.portal for org.freedesktop.impl.portal.Access as a last-resort fallback\ndbus-daemon[835]: [session uid=1000 pid=835 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.5' (uid=1000 pid=887 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[882]: Activating service name='org.a11y.atspi.Registry' requested by ':1.1' (uid=1000 pid=909 comm=\"/usr/libexec/xdg-desktop-portal-gtk\" label=\"kernel\")\ndbus-daemon[835]: [session uid=1000 pid=835 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'\ndbus-daemon[882]: Successfully activated service 'org.a11y.atspi.Registry'\nSpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry\n\n(/usr/libexec/xdg-desktop-portal:887): xdg-desktop-portal-WARNING **: 08:58:26.330: Failed to load RealtimeKit property: Timeout was reached\n"
+    },
+    "verification_gui_terminated": true
+  },
+  "ime_observed": {
+    "roman_input": "nihongo",
+    "hiragana": "にほんご",
+    "kanji": "日本語",
+    "committed": true,
+    "field": "Qt file-open dialog filename; cancelled after test"
+  },
+  "limitations": [
+    "WSLg X11 only; no complete Linux desktop session",
+    "GUI/IME tools added after minimal-dependency tests; no new clean-install/removal cycle",
+    "Single synthetic image and password-protected PDF",
+    "Fedora44 x86_64 only; no ARM64 verification"
+  ],
+  "screenshots": {
+    "01-encrypted-loaded.png": "5036535434e035c5565565751072f6d41e66708199f5d82095974f75b283f08f",
+    "02-encrypted-saved.png": "d835e271e0f76a319f8c6af755555542fda60a9d16446481600d7c5782d284b3",
+    "03-encrypted-reopened.png": "d1a96c9cab95ea1ab1b53124ed8ce005a94945791a1eebbc97db22db6526b76b",
+    "04-image-imported.png": "52a393b46fa629f16cad52be1d0f448c6967b1a6ff893130a0f6ba33021dba18",
+    "05-ime-hiragana.png": "128daff6293935a3536fb32dc4309605e27327807856b0dc9d4fbfe3b19221c5",
+    "06-ime-kanji.png": "df3f13f74fc3cd554e2ee91ef1dcb2ccc0c297f2e2b612f177b10685407ac461",
+    "07-ime-committed.png": "37de887d3057cf40e973c0996acf99efae22295f0e7922d6b85922b955ff56b5"
+  }
+}

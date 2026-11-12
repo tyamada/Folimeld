@@ -1,0 +1,4 @@
+Private Fedora45 amd640.3.5/build1 revision2.
+Fedora OS notices and crypto native records are retained; common Qt/Pillow/MuPDF/ICU sources and supplemental notices were copied by verified hashes.
+Fedora source RPM collection and complete wheel/source/patch review remain incomplete. Shared Alma audit records describe their original scope only.
+No public release or full desktop certification.

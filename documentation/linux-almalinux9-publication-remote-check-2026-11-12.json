@@ -1,0 +1,15 @@
+{
+  "recorded_at_utc": "2026-11-12T13:03:20Z",
+  "read_only": true,
+  "repository": "tyamada/Folimeld",
+  "tag_proposal": "almalinux9-amd64-v0.3.5",
+  "matching_tag_refs": [],
+  "matching_releases_in_first_100": [],
+  "parent_commit_confirmed": "423e59471b576e4732c7d6ec0ad9ab25cbf19582",
+  "sources": [
+    "https://api.github.com/repos/tyamada/Folimeld/git/matching-refs/tags/almalinux9-amd64-v0.3.5",
+    "https://api.github.com/repos/tyamada/Folimeld/releases?per_page=100",
+    "https://api.github.com/repos/tyamada/Folimeld/commits/423e59471b576e4732c7d6ec0ad9ab25cbf19582"
+  ],
+  "limitation": "Observation for preparation only; recheck immediately before any authorized publication. No remote writes performed."
+}

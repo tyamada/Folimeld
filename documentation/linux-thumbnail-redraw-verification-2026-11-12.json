@@ -1,0 +1,255 @@
+{
+  "verification_date_jst": "2026-11-12",
+  "published": false,
+  "root_cause": "Asynchronously filled icons retained the position calculated for an empty decoration, extending beyond their fixed grid cell",
+  "fix": "Emit the delegate sizeHintChanged signal after installing each rendered icon",
+  "qt_reference": "https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHintChanged",
+  "build": {
+    "package": "/home/folimeld-build/folimeld-candidates/fedora45-20261112/packages/folimeld-0.3.3-4.fc45.x86_64.rpm",
+    "package_bytes": 104881028,
+    "package_sha256": "8cd4a8a4257a0543f1b6f40a3848711c14711ce67f54efe14fbd9394a65c4090",
+    "binary_sha256": "88d3979a88ebdefb59cc064c01bb7a1d14ce81a3832407cf488111310a659800",
+    "source_archive": "Folimeld-source-10a40d99a435f1399e3474474935e5de5a145fde7189665bb1183324f1cd4afe.zip",
+    "source_sha256": "10a40d99a435f1399e3474474935e5de5a145fde7189665bb1183324f1cd4afe",
+    "git_commit": "423e59471b576e4732c7d6ec0ad9ab25cbf19582",
+    "working_tree_changed": true,
+    "main_sha256": "fa2dd0ed753597fa469ef02bae17b2e6c84604c72c3cce322bc4f2ee8eb0f208",
+    "thumbnail_code_sha256": "1f496a1ddf3d8253ba3b5e5204f7a8a55242f48deaf28915043a6e7b10002bd7",
+    "python": "3.14.10 (main, Oct 26 2026, 00:00:00) [GCC 16.2.1 20260819 (Red Hat 16.2.1-2)]",
+    "virtualkeyboard_entries": 0,
+    "association": {
+      "artifact": "folimeld-0.3.3-4.fc45.x86_64.rpm",
+      "artifact_sha256": "8cd4a8a4257a0543f1b6f40a3848711c14711ce67f54efe14fbd9394a65c4090",
+      "executable": "folimeld",
+      "executable_sha256": "88d3979a88ebdefb59cc064c01bb7a1d14ce81a3832407cf488111310a659800",
+      "association": "packaging script supplied executable; verify package contents before publication",
+      "source_archive": "Folimeld-source-10a40d99a435f1399e3474474935e5de5a145fde7189665bb1183324f1cd4afe.zip",
+      "source_sha256": "10a40d99a435f1399e3474474935e5de5a145fde7189665bb1183324f1cd4afe",
+      "git_commit": "423e59471b576e4732c7d6ec0ad9ab25cbf19582",
+      "working_tree_changed": true,
+      "dependency_sources": "NOT INCLUDED: obtain matching dependency sources and review bundled native components before distribution"
+    },
+    "source_timer_diagnostic": [
+      {
+        "label": "before_rotation",
+        "pending": [],
+        "timer_active": false,
+        "paused": false,
+        "icons_null": [
+          false,
+          false,
+          false
+        ],
+        "renders": [
+          {
+            "page": 0,
+            "rotation": 0
+          },
+          {
+            "page": 1,
+            "rotation": 0
+          },
+          {
+            "page": 2,
+            "rotation": 0
+          }
+        ]
+      },
+      {
+        "label": "immediately_after_rotation",
+        "pending": [
+          0
+        ],
+        "timer_active": true,
+        "paused": false,
+        "icons_null": [
+          true,
+          false,
+          false
+        ],
+        "renders": [
+          {
+            "page": 0,
+            "rotation": 0
+          },
+          {
+            "page": 1,
+            "rotation": 0
+          },
+          {
+            "page": 2,
+            "rotation": 0
+          }
+        ]
+      },
+      {
+        "label": "one_second_after_rotation",
+        "pending": [],
+        "timer_active": false,
+        "paused": false,
+        "icons_null": [
+          false,
+          false,
+          false
+        ],
+        "renders": [
+          {
+            "page": 0,
+            "rotation": 0
+          },
+          {
+            "page": 1,
+            "rotation": 0
+          },
+          {
+            "page": 2,
+            "rotation": 0
+          },
+          {
+            "page": 0,
+            "rotation": 90
+          }
+        ]
+      }
+    ],
+    "pixel_diagnostic": {
+      "item_rect_before": [
+        133,
+        0,
+        294,
+        230
+      ],
+      "icon_size": [
+        288,
+        210
+      ],
+      "icon_extrema": [
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ],
+        [
+          0,
+          255
+        ]
+      ],
+      "item_rect_after": [
+        9,
+        0,
+        294,
+        230
+      ]
+    },
+    "regression_before": "F                                                                        [100%]\n=================================== FAILURES ===================================\n__________ test_async_rotation_keeps_thumbnail_inside_first_grid_cell __________\n\n    def test_async_rotation_keeps_thumbnail_inside_first_grid_cell():\n        app = QApplication.instance() or QApplication([])\n        with patch('folimeld.app.is_packaged', return_value=False):\n            window = MainWindow()\n        try:\n            window.model.doc = fitz.open()\n            for _ in range(3):\n                page = window.model.doc.new_page(width=400, height=550)\n                page.insert_text((40, 70), 'Visible after rotation', fontsize=25)\n            window.show()\n            window.refresh([0])\n            wait_for_thumbnail_icons(window)\n            window.rotate(90)\n            wait_for_thumbnail_icons(window)\n            item = window.pages.item(0)\n            icon_size = item.icon().actualSize(window.pages.iconSize())\n            assert icon_size.width() > icon_size.height()\n            assert window.pages.visualItemRect(item).width() >= icon_size.width()\n            assert window.pages.visualItemRect(item).height() >= icon_size.height()\n            # Qt may update the decoration width but retain the position computed\n            # for an empty icon, clipping content outside its fixed grid cell.\n            assert window.pages.visualItemRect(item).left() >= 0\n>           assert window.pages.visualItemRect(item).right() < window.pages.gridSize().width()\nE           assert 426 < 312\nE            +  where 426 = <built-in method right of PySide6.QtCore.QRect object at 0x77165e8a4d40>()\nE            +    where <built-in method right of PySide6.QtCore.QRect object at 0x77165e8a4d40> = PySide6.QtCore.QRect(133, 0, 294, 230).right\nE            +      where PySide6.QtCore.QRect(133, 0, 294, 230) = <built-in method visualItemRect of ThumbnailList object at 0x77165db13080>(<PySide6.QtWidgets.QListWidgetItem object at 0x77165c04a040>)\nE            +        where <built-in method visualItemRect of ThumbnailList object at 0x77165db13080> = <folimeld.widgets.ThumbnailList(0x61138cd30b20) at 0x77165db13080>.visualItemRect\nE            +          where <folimeld.widgets.ThumbnailList(0x61138cd30b20) at 0x77165db13080> = <folimeld.app.MainWindow(0x771658004610) at 0x77165d54c2c0>.pages\nE            +  and   312 = <built-in method width of PySide6.QtCore.QSize object at 0x77165c086f40>()\nE            +    where <built-in method width of PySide6.QtCore.QSize object at 0x77165c086f40> = PySide6.QtCore.QSize(312, 332).width\nE            +      where PySide6.QtCore.QSize(312, 332) = <built-in method gridSize of ThumbnailList object at 0x77165db13080>()\nE            +        where <built-in method gridSize of ThumbnailList object at 0x77165db13080> = <folimeld.widgets.ThumbnailList(0x61138cd30b20) at 0x77165db13080>.gridSize\nE            +          where <folimeld.widgets.ThumbnailList(0x61138cd30b20) at 0x77165db13080> = <folimeld.app.MainWindow(0x771658004610) at 0x77165d54c2c0>.pages\n\ntests/test_thumbnails.py:54: AssertionError\n=========================== short test summary info ============================\nFAILED tests/test_thumbnails.py::test_async_rotation_keeps_thumbnail_inside_first_grid_cell\n1 failed, 8 deselected in 0.51s\n",
+    "thumbnail_tests_after": ".........                                                                [100%]\n9 passed in 1.15s\n",
+    "full_regression": "........................................................................ [ 67%]\n...................................              [100%]\n107 passed, 24 subtests passed in 5.95s\n",
+    "lint": "All checks passed!\n"
+  },
+  "test": {
+    "frozen_diagnostic": [
+      {
+        "label": "immediately_after_rotation",
+        "pending": [
+          0
+        ],
+        "timer_active": true,
+        "remaining_time": 1,
+        "paused": false,
+        "document_current": true,
+        "icons_null": [
+          true,
+          false,
+          false
+        ],
+        "exposed": true,
+        "visible": true,
+        "viewport_updates_enabled": true
+      },
+      {
+        "label": "100ms_after_rotation",
+        "pending": [],
+        "timer_active": false,
+        "remaining_time": -1,
+        "paused": false,
+        "document_current": true,
+        "icons_null": [
+          false,
+          false,
+          false
+        ],
+        "exposed": true,
+        "visible": true,
+        "viewport_updates_enabled": true
+      },
+      {
+        "label": "1s_after_rotation",
+        "pending": [],
+        "timer_active": false,
+        "remaining_time": -1,
+        "paused": false,
+        "document_current": true,
+        "icons_null": [
+          false,
+          false,
+          false
+        ],
+        "exposed": true,
+        "visible": true,
+        "viewport_updates_enabled": true
+      },
+      {
+        "label": "before_widget_grab",
+        "pending": [],
+        "timer_active": false,
+        "remaining_time": -1,
+        "paused": false,
+        "document_current": true,
+        "icons_null": [
+          false,
+          false,
+          false
+        ],
+        "exposed": true,
+        "visible": true,
+        "viewport_updates_enabled": true
+      }
+    ],
+    "upgrade_result": {
+      "command": [
+        "dnf",
+        "-y",
+        "--setopt=install_weak_deps=False",
+        "install",
+        "/opt/folimeld-verification/folimeld-0.3.3-4.fc45.x86_64.rpm"
+      ],
+      "exit_code": 0
+    },
+    "installed_package": "folimeld-0.3.3-4.fc45.x86_64",
+    "installed_binary_sha256": "88d3979a88ebdefb59cc064c01bb7a1d14ce81a3832407cf488111310a659800",
+    "original_pdf_sha256": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+    "normal_app_log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+  },
+  "ubuntu_python312_tests": ".........                                                                [100%]\n9 passed in 1.29s\n",
+  "gui_observations": [
+    "Initial thumbnails centered inside their grid cells",
+    "Rotation rendered without saving, relaunching, or performing another edit",
+    "Undo and Redo also rendered the full thumbnail"
+  ],
+  "limitations": [
+    "Fedora revision4 tested in the existing dedicated test distro after GUI tools were added",
+    "No new minimal-environment installation/removal cycle for revision4; revision2/3 results remain separate",
+    "Ubuntu source tests only; DEB/Kali packages have not yet been rebuilt with this fix",
+    "Windows, macOS and full Linux desktop sessions untested for this change"
+  ],
+  "screenshots": {
+    "01-before-fix.png": "b3a084048e9b1c9cd903604de841431d719798894ae54ed05889e79983b96d62",
+    "02-fixed-loaded.png": "2fafcef6f651ce202c3ee9d49d99fe9bd20f4b52db0f4a69b629b8274c7122c9",
+    "03-fixed-rotated.png": "5af60f0dac83f038e306e4a332efd3ea2855ab02f3e2003f7572843d830de2d9",
+    "04-fixed-undo.png": "64e074065efdd4b13cdb17af29f33b9310c2d37de9fdd89953661dfd4f2b1b2c",
+    "05-fixed-redo.png": "5af60f0dac83f038e306e4a332efd3ea2855ab02f3e2003f7572843d830de2d9"
+  }
+}

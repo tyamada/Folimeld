@@ -1,0 +1,143 @@
+{
+  "verification_date_jst": "2026-11-12",
+  "release_candidate": false,
+  "build": {
+    "build_root": "/home/tyamada22/folimeld-candidates/script-validation-20261112",
+    "git_commit": "423e59471b576e4732c7d6ec0ad9ab25cbf19582",
+    "working_tree_changed": true,
+    "virtualkeyboard_entries": [],
+    "source_hash_verified": true,
+    "embedded_source_archive": "Folimeld-source-5a8e7cd573f1a81f088a3374b3ecb6b65cb1ce50421f72926c06aaee006a1254.zip",
+    "packages": [
+      {
+        "name": "PySide6",
+        "version": "6.11.2"
+      },
+      {
+        "name": "PySide6_Addons",
+        "version": "6.11.2"
+      },
+      {
+        "name": "PySide6_Essentials",
+        "version": "6.11.2"
+      },
+      {
+        "name": "altgraph",
+        "version": "0.17.5"
+      },
+      {
+        "name": "cffi",
+        "version": "2.1.1"
+      },
+      {
+        "name": "cryptography",
+        "version": "50.0.2"
+      },
+      {
+        "name": "packaging",
+        "version": "26.3"
+      },
+      {
+        "name": "pillow",
+        "version": "12.3.0"
+      },
+      {
+        "name": "pip",
+        "version": "26.3"
+      },
+      {
+        "name": "pycparser",
+        "version": "3.12"
+      },
+      {
+        "name": "pyinstaller",
+        "version": "6.22.2"
+      },
+      {
+        "name": "pyinstaller-hooks-contrib",
+        "version": "2026.7"
+      },
+      {
+        "name": "pymupdf",
+        "version": "1.28.2"
+      },
+      {
+        "name": "setuptools",
+        "version": "84.0.0"
+      },
+      {
+        "name": "shiboken6",
+        "version": "6.11.2"
+      }
+    ],
+    "artifacts": [
+      {
+        "path": "/home/tyamada22/folimeld-candidates/script-validation-20261112/source/dist/folimeld",
+        "bytes": 106671208,
+        "sha256": "069c37286f892e1ff1242ab65be56b8ac0e408cc22996c2783ffcd1c6723e17d"
+      },
+      {
+        "path": "/home/tyamada22/folimeld-candidates/script-validation-20261112/packages/folimeld_0.3.3_amd64.deb",
+        "bytes": 105118334,
+        "sha256": "ede8751b69311f57d26783099923a7742207af6ce018967e16b59c25929d30af"
+      }
+    ],
+    "logs": {
+      "pytest-build-tools.log": "..............                                                           [100%]\n14 passed in 0.27s\n",
+      "overwrite-refusal.log": "Refusing to overwrite existing package: /home/tyamada22/folimeld-candidates/script-validation-20261112/packages/folimeld_0.3.3_amd64.deb\nSet FOLIMELD_LINUX_OUTPUT to a new candidate directory.\n",
+      "gui.log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+    },
+    "deb_build_tail": [
+      "40347 INFO: Appending PKG archive to custom ELF section in EXE",
+      "40591 INFO: Building EXE from EXE-00.toc completed successfully.",
+      "41164 INFO: Build complete! The results are available in: /home/tyamada22/folimeld-candidates/script-validation-20261112/source/dist",
+      "Folimeld source snapshot: /home/tyamada22/folimeld-candidates/script-validation-20261112/source/dist/source/Folimeld-source-6b22672035a1457ff4b7a9df530ad624b0f59f3ab5564a7426e43dc5ee133c94.zip",
+      "Artifact/source association: /home/tyamada22/folimeld-candidates/script-validation-20261112/source/dist/source/folimeld-b021d344c29849eaf2e67ba969b1c3df954bba69a0caa3b33b79eb305c77cf00.json",
+      "dpkg-deb: building package 'folimeld' in '/home/tyamada22/folimeld-candidates/script-validation-20261112/packages/folimeld_0.3.3_amd64.deb'.",
+      "Artifact/source association: dist/source/folimeld_0.3.3_amd64.deb-ede8751b69311f57d26783099923a7742207af6ce018967e16b59c25929d30af.json",
+      "",
+      "Built standalone executable: dist/folimeld",
+      "Built DEB package: /home/tyamada22/folimeld-candidates/script-validation-20261112/packages/folimeld_0.3.3_amd64.deb"
+    ],
+    "binary_build_tail": [
+      "41348 INFO: Building EXE because EXE-00.toc is non existent",
+      "41348 INFO: Building EXE from EXE-00.toc",
+      "41356 INFO: Copying bootloader EXE to /home/tyamada22/folimeld-candidates/script-validation-20261112/source/dist/folimeld",
+      "41356 INFO: Appending PKG archive to custom ELF section in EXE",
+      "41558 INFO: Building EXE from EXE-00.toc completed successfully.",
+      "42130 INFO: Build complete! The results are available in: /home/tyamada22/folimeld-candidates/script-validation-20261112/source/dist",
+      "Folimeld source snapshot: /home/tyamada22/folimeld-candidates/script-validation-20261112/source/dist/source/Folimeld-source-5a8e7cd573f1a81f088a3374b3ecb6b65cb1ce50421f72926c06aaee006a1254.zip",
+      "Artifact/source association: /home/tyamada22/folimeld-candidates/script-validation-20261112/source/dist/source/folimeld-069c37286f892e1ff1242ab65be56b8ac0e408cc22996c2783ffcd1c6723e17d.json",
+      "Built standalone executable: dist/folimeld",
+      "Matching source and build records: dist/source/"
+    ]
+  },
+  "extracted_startup": {
+    "Folimeld-Ubuntu-24.04-Amd64-034-Test": {
+      "os_release": "PRETTY_NAME=\"Ubuntu 24.04.4 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.4 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+      "package_sha256": "ede8751b69311f57d26783099923a7742207af6ce018967e16b59c25929d30af",
+      "executable_sha256": "b021d344c29849eaf2e67ba969b1c3df954bba69a0caa3b33b79eb305c77cf00",
+      "alive_after_12_seconds": true,
+      "exit_code_after_test": -15,
+      "installed_before": "folimeld\t0.3.4",
+      "installed_after": "folimeld\t0.3.4",
+      "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nThis plugin does not support propagateSizeHints()\n"
+    },
+    "Folimeld-Debian-Amd64-034-Test": {
+      "os_release": "PRETTY_NAME=\"Debian GNU/Linux 13 (trixie)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"13\"\nVERSION=\"13 (trixie)\"\nVERSION_CODENAME=trixie\nDEBIAN_VERSION_FULL=13.6\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"\n",
+      "package_sha256": "ede8751b69311f57d26783099923a7742207af6ce018967e16b59c25929d30af",
+      "executable_sha256": "b021d344c29849eaf2e67ba969b1c3df954bba69a0caa3b33b79eb305c77cf00",
+      "alive_after_12_seconds": true,
+      "exit_code_after_test": -15,
+      "installed_before": "folimeld\t0.3.4",
+      "installed_after": "folimeld\t0.3.4",
+      "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nThis plugin does not support propagateSizeHints()\n"
+    }
+  },
+  "limitations": [
+    "No package installation, upgrade, or uninstall test",
+    "No clean-environment certification",
+    "WSLg capture returned another window; GUI and IME remain unverified",
+    "Internal and package version remain 0.3.3; not for release"
+  ]
+}
