@@ -39,6 +39,12 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.5 Fedora 45 amd64試験版 - 2026-11-13
+
+- Fedora 45のWSL2／WSLgで検証したamd64 RPM（0.3.5-2）を[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5)で試験公開（日本時間）。
+- PDF編集・日本語名保存と再読込・暗号化PDF・画像PDF・日本語入力・GIO、更新・削除再導入・新規最小依存installrootでのoffscreen起動を確認。通常デスクトップ・Fedora 44・ARM64・公開Ubuntu／Debian 0.3.4からの移行は未検証。
+- 対応ソース785入力を専用コミットへ固定し、依存ソース別添・第三者告知・検証記録・制限事項・SHA-256チェックサムを含む11件を添付。RPMとチェックサムは未署名。既存配布物とlatestは保持。
+
 ## 0.3.5 AlmaLinux 9 amd64試験版 - 2026-11-12
 
 - AlmaLinux 9.8のWSL2／WSLgで検証したamd64 RPM（0.3.5-5）を[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5)で試験公開。

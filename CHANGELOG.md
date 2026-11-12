@@ -39,6 +39,12 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.5 Fedora 45 amd64 preview - 2026-11-13
+
+- Publish an amd64 RPM (0.3.5-2) verified on Fedora 45 WSL2/WSLg as a [GitHub preview release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) (Japan time).
+- Verify PDF editing, Japanese filename saving and reopening, password-protected PDFs, image PDFs, Japanese input, GIO, updates, removal/reinstallation, and offscreen startup in a fresh minimal-dependency installroot. Conventional desktops, Fedora 44, ARM64, and migration from public Ubuntu/Debian 0.3.4 remain untested.
+- Freeze 785 matching source inputs in a dedicated commit and attach 11 files including dependency sources, third-party notices, verification records, known limitations, and SHA-256 checksums. The RPM and checksums are unsigned. Preserve existing downloads and the latest release.
+
 ## 0.3.5 AlmaLinux 9 amd64 preview - 2026-11-12
 
 - Publish the amd64 RPM (0.3.5-5), verified on AlmaLinux 9.8 under WSL2/WSLg, as a preview in the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5).
