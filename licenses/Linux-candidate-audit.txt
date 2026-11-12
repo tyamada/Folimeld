@@ -1,0 +1,5 @@
+Private AlmaLinux9.8 amd64 proposed0.3.5/build1 revision5.
+Supplemental ICU73.2 source/license, Qt source notices and additional referenced licenses, MuPDF source/font notices and runtime audit are included.
+Source collections intentionally cover more components than proven linked; no complete historical wheel build provenance is claimed.
+Alma8 libXau signatures match official historical key now expired. ICU detached signatures are retained but unverified; official SHA512 matches.
+Previous candidates and staging remain unchanged. Not a public release.

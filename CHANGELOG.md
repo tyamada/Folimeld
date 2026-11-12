@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+- Prepare the 0.3.5 release candidate for AlmaLinux 9.8 / amd64. Verify RPM installation and upgrades and core PDF operations under WSL2/WSLg; include the thumbnail layout fix, supplemental PyInstaller, LibTIFF LZW, ICU and Qt/MuPDF notices, and source materials. Isolate the distributed-source test inputs. This remains unpublished and does not change public releases for other operating systems.
+
 - Add signed application and private MuPDF dependency packages, matching source, build tools, and bilingual installation instructions for OpenBSD 8.0 / amd64
 
 - Restrict the Windows build DLL search path to required Python, Windows and Git locations; validate native binary provenance and stop builds that collect binaries from unrelated tools

@@ -1,0 +1,110 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "private_application_version": "0.3.3",
+  "build": {
+    "package_path": "/home/folimeld-build/folimeld-candidates/susetw-20261112/packages/folimeld-0.3.3-3.tw20261110.x86_64.rpm",
+    "package_sha256": "7c7dba88bac92b1c8dcbcab6031f496812ba687a2f5c04eec7c2f77606b3f6bb",
+    "association": {
+      "artifact": "folimeld-0.3.3-3.tw20261110.x86_64.rpm",
+      "artifact_sha256": "7c7dba88bac92b1c8dcbcab6031f496812ba687a2f5c04eec7c2f77606b3f6bb",
+      "executable": "folimeld",
+      "executable_sha256": "d5395dec696d6a001633ec642da8a784ac0220ab02ac1a8973392fdde0a20d43",
+      "association": "packaging script supplied executable; verify package contents before publication",
+      "source_archive": "Folimeld-source-7c8aa9f2e878162497ab55c44f5662d33e2e0d93551eeeb3d079e724fb9dcd9d.zip",
+      "source_sha256": "7c8aa9f2e878162497ab55c44f5662d33e2e0d93551eeeb3d079e724fb9dcd9d",
+      "git_commit": "423e59471b576e4732c7d6ec0ad9ab25cbf19582",
+      "working_tree_changed": true,
+      "dependency_sources": "NOT INCLUDED: obtain matching dependency sources and review bundled native components before distribution"
+    },
+    "log_tail": [
+      "+ test -d /home/folimeld-build/folimeld-candidates/susetw-20261112/tmp/folimeld-rpm-el_v2bwt/BUILD/folimeld-0.3.3-build",
+      "+ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w /home/folimeld-build/folimeld-candidates/susetw-20261112/tmp/folimeld-rpm-el_v2bwt/BUILD/folimeld-0.3.3-build",
+      "+ rm -rf /home/folimeld-build/folimeld-candidates/susetw-20261112/tmp/folimeld-rpm-el_v2bwt/BUILD/folimeld-0.3.3-build",
+      "+ RPM_EC=0",
+      "++ jobs -p",
+      "+ exit 0",
+      "Artifact/source association: /home/folimeld-build/folimeld-candidates/susetw-20261112/source/dist/source/folimeld-0.3.3-3.tw20261110.x86_64.rpm-7c7dba88bac92b1c8dcbcab6031f496812ba687a2f5c04eec7c2f77606b3f6bb.json",
+      "Built Tumbleweed package: /home/folimeld-build/folimeld-candidates/susetw-20261112/packages/folimeld-0.3.3-3.tw20261110.x86_64.rpm"
+    ]
+  },
+  "test": {
+    "upgrade": {
+      "command": [
+        "zypper",
+        "--non-interactive",
+        "install",
+        "--allow-unsigned-rpm",
+        "--no-recommends",
+        "/root/folimeld-verification/folimeld-0.3.3-3.tw20261110.x86_64.rpm"
+      ],
+      "exit_code": 0,
+      "before": "folimeld-0.3.3-2.tw20261110.x86_64",
+      "after": "folimeld-0.3.3-3.tw20261110.x86_64",
+      "package_sha256": "7c7dba88bac92b1c8dcbcab6031f496812ba687a2f5c04eec7c2f77606b3f6bb",
+      "binary_unchanged": true,
+      "binary_sha256": "d5395dec696d6a001633ec642da8a784ac0220ab02ac1a8973392fdde0a20d43",
+      "checks": [
+        {
+          "command": [
+            "rpm",
+            "-V",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "zypper",
+            "--non-interactive",
+            "verify",
+            "--dry-run"
+          ],
+          "exit_code": 0,
+          "stdout": "Refreshing service 'openSUSE'.\nLoading repository data...\nReading installed packages...\nDependencies of all installed packages are satisfied.\n",
+          "stderr": ""
+        }
+      ]
+    },
+    "startup_after_upgrade": [
+      {
+        "platform": "offscreen",
+        "alive_after_12_seconds": true,
+        "exit_code_after_test": -15,
+        "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nThis plugin does not support propagateSizeHints()\n"
+      },
+      {
+        "platform": "xcb",
+        "alive_after_12_seconds": true,
+        "exit_code_after_test": -15,
+        "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+      }
+    ]
+  },
+  "nonascii_save": {
+    "saved_name": "保存 結果.pdf",
+    "parent_name": "日本語 パス",
+    "saved_sha256": "ba37c6eeba454bdd1001c10717dd17fc2b8c0b2466151cfd9cc828e70d4313d8",
+    "pages": 3,
+    "rotations": [
+      90,
+      0,
+      0
+    ],
+    "page_text_preserved": true,
+    "original_copy_unchanged": true,
+    "gui_save_and_reopen_observed": true
+  },
+  "limitations": [
+    "Packaging revision upgrade of unchanged executable, not an application-version or settings migration test",
+    "Startup after upgrade used GUI-tool environment, not initial minimal dependency environment",
+    "WSLg X11 and GIO only, not full desktop file-manager double-click"
+  ],
+  "screenshots": {
+    "08-mime-nonascii-loaded.png": "27e7ab6838036c38506702231da2d6be7bc64fbb5ebe8a0c7f8933bf5787f9fb",
+    "09-nonascii-saved.png": "dd2020ec3cc948e961aa91217d214ad15f0b00cc8761d2522e6580baa4ed81fe",
+    "10-nonascii-reopened.png": "b07f9d59840b57cc1b540d7213ed8da457b98229ee2c81cf75cdd988d5590993"
+  }
+}

@@ -23,6 +23,11 @@ a = Analysis(
     noarchive=False,
     optimize=0,
 )
+# Folimeld uses the desktop input method, so omit Qt Virtual Keyboard.
+a.binaries = [entry for entry in a.binaries if "virtualkeyboard" not in entry[0].lower()]
+a.datas = [entry for entry in a.datas if "virtualkeyboard" not in entry[0].lower()]
+a.pure = [entry for entry in a.pure if "virtualkeyboard" not in entry[0].lower()]
+
 pyz = PYZ(a.pure)
 
 exe = EXE(

@@ -1,0 +1,186 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "preparation": {
+    "directory": "/home/folimeld-build/folimeld-candidates/linux-integration-review-20261112",
+    "branch": "linux-amd64-integration-review-20261112",
+    "base_commit": "423e59471b576e4732c7d6ec0ad9ab25cbf19582",
+    "public_linux_commit": "eeacd06a49cda85ddc1d432bd785e507f8006a89",
+    "proposed_version": "0.3.5",
+    "build": "1",
+    "main_version_unchanged": "0.3.3",
+    "preserved_input_hashes": {
+      "folimeld/app.py": "dd25c6b66a66982aaf6c4971ece8f40da07b765faa460b44bea2cf6c2acd05ef",
+      "folimeld/image_import_dialog.py": "13021572fcecf905644c932acd85c101f782c46305cba592fde3cabb2e7a8d07",
+      "folimeld/license_info.py": "089c025134d7ae4259c9c697c6eb0ad3665d8f13650884f6d13a4e3c9c12c1ad",
+      "folimeld/thumbnails.py": "1f496a1ddf3d8253ba3b5e5204f7a8a55242f48deaf28915043a6e7b10002bd7",
+      "tools/source_bundle.py": "dabbea2fcd79f9e4c4cfe4940f66fe478cd84c593632b1dc9164704d1e5dd482",
+      "Folimeld-linux.spec": "6f60707cd7c8f7d11230351264d5e0cb0061c9974f8d1306a0254abf9b155514",
+      "build_linux.sh": "210ac4e1219f0fc46fa96bbefa66c34321e9a6394be49a886d13698ab5669398",
+      "tests/test_license_info.py": "fd61c32c0428ce80ea6de6dc70030e23ab893a303eefebe80ec13b3b3bc3d428",
+      "tests/test_thumbnails.py": "c6ee4efa6048e12e278cda9b95c778963258327e42ea82fdc29e0e3fe6726ed7",
+      "assets/Folimeld-icon-master.png": "5e83455a13be2a1831b0f79d7edcc84e86ec0647ad3e964f1edfe060a19032c2",
+      "assets/Folimeld-icon-source.png": "b42071ddf1385faee996dc15b989be7d63db3a1404d862755e68f55c9d47e81a",
+      "assets/folimeld-supporter-maid.png": "96ce8663c754668e903ff8909665c39141bbe53fd6cb0849ac18577ec664e4eb",
+      "assets/Folimeld.icns": "ea95783f48d5de9d215659389d66e6abd6ca9948d0a71236a0820b33b18d94be",
+      "assets/Folimeld.ico": "a92906796da2c6cdb935d89da4703d6665177a5894ccbd566ddae35faca19d13",
+      "assets/Folimeld.iconset/icon_1024x1024.png": "f84a5f2079db5625269997c0ad9c3dbb32fa2c805de0da1f5ef6e059f0327604",
+      "assets/Folimeld.iconset/icon_128x128.png": "85762426ff130a32817acde50f47702ea6acb8c9e45773078ca554a57fbd2a66",
+      "assets/Folimeld.iconset/icon_16x16.png": "619c0bd5db18929a14c1746a0ec26adf8ffd15ccf36e56481452c0c53e0bebb9",
+      "assets/Folimeld.iconset/icon_256x256.png": "8a4843f1dd3bf5c78eceb5363e18672d18ffaa269e8b710536ab7d6c8cb647a6",
+      "assets/Folimeld.iconset/icon_32x32.png": "2eeb94cdcdc7c82d62028c77af8aecc679cc0a2588f690a6693a9c0da20a20c4",
+      "assets/Folimeld.iconset/icon_512x512.png": "48a00c87b970a4fde7788155614db48e75af866eb0095831213121e6df143767",
+      "assets/Folimeld.iconset/icon_64x64.png": "4fda60faede8e94217f263655aacbaedb26589e850591f701db8041234074ed4"
+    },
+    "public_qt_exclusion_retained": true,
+    "obsolete_linux_inputs_not_restored": [
+      "licenses/Linux-distribution.txt",
+      "packaging/linux/build-release-candidate.sh"
+    ],
+    "changelog_pair_updated_only_in_copy": true,
+    "scope": "Private source review; no merge commit, main edit, binary, tag or publication"
+  },
+  "checks": [
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/linux-integration-review-20261112/test-venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "--basetemp",
+        "/home/folimeld-build/folimeld-candidates/linux-integration-review-20261112/pytest-complete-temp",
+        "-o",
+        "cache_dir=/home/folimeld-build/folimeld-candidates/linux-integration-review-20261112/pytest-complete-cache"
+      ],
+      "exit_code": 0,
+      "log": "........................................s............... [ 13%]\n....................................... [ 22%]\n...................................................... [ 35%]\n........................................................................ [ 52%]\n.......................................................................s [ 70%]\nsssssss................................................................. [ 87%]\n.....................................................                    [100%]\n409 passed, 9 skipped, 67 subtests passed in 16.12s\n"
+    },
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/linux-integration-review-20261112/test-venv/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "folimeld/license_info.py",
+        "folimeld/thumbnails.py",
+        "tests/test_license_info.py",
+        "tests/test_thumbnails.py",
+        "tools/package_linux_rpm.py",
+        "tools/package_linux_suse_rpm.py",
+        "tools/package_linux_tumbleweed_rpm.py",
+        "tools/package_linux_alma_rpm.py"
+      ],
+      "exit_code": 0,
+      "log": "All checks passed!\n"
+    },
+    {
+      "command": [
+        "bash",
+        "-n",
+        "build_linux.sh"
+      ],
+      "exit_code": 0,
+      "log": ""
+    },
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/linux-integration-review-20261112/test-venv/bin/python",
+        "tools/package_linux_alma_rpm.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "/home/folimeld-build/folimeld-candidates/linux-integration-review-20261112/packages/folimeld-0.3.5-1.alma9_8.x86_64.rpm\n"
+    }
+  ],
+  "initial_test_collection_failure": [
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "--basetemp",
+        "/home/folimeld-build/folimeld-candidates/linux-integration-review-20261112/pytest-temp",
+        "-o",
+        "cache_dir=/home/folimeld-build/folimeld-candidates/linux-integration-review-20261112/pytest-cache"
+      ],
+      "exit_code": 2,
+      "log": "\n==================================== ERRORS ====================================\n_________________ ERROR collecting tests/test_benchmark_pdf.py _________________\nImportError while importing test module '/home/folimeld-build/folimeld-candidates/linux-integration-review-20261112/source/tests/test_benchmark_pdf.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/lib64/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntests/test_benchmark_pdf.py:7: in <module>\n    from tools.benchmark_pdf import benchmark, create_fixture, main\ntools/benchmark_pdf.py:26: in <module>\n    import psutil\nE   ModuleNotFoundError: No module named 'psutil'\n------------------------------- Captured stdout --------------------------------\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n=========================== short test summary info ============================\nERROR tests/test_benchmark_pdf.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.81s\n"
+    }
+  ],
+  "test_environment": {
+    "python": "/home/folimeld-build/folimeld-candidates/linux-integration-review-20261112/test-venv/bin/python",
+    "read_only_shared_packages": "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/lib/python3.12/site-packages",
+    "additional_test_dependency_command": [
+      "/home/folimeld-build/folimeld-candidates/linux-integration-review-20261112/test-venv/bin/python",
+      "-m",
+      "pip",
+      "install",
+      "--only-binary=:all:",
+      "--constraint",
+      "/home/folimeld-build/folimeld-candidates/linux-integration-review-20261112/source/constraints-release.txt",
+      "psutil"
+    ],
+    "exit_code": 0,
+    "prior_build_venv_unchanged": true
+  },
+  "proposal_diff_against_head": "diff --git a/CHANGELOG.md b/CHANGELOG.md\nindex 22ae9c8..bcb0868 100644\n--- a/CHANGELOG.md\n+++ b/CHANGELOG.md\n@@ -4,6 +4,8 @@\n \n ## Unreleased\n \n+- Prepare a Linux amd64 integration proposal with Fedora, openSUSE and AlmaLinux RPM recipes, thumbnail layout fixes and bootloader notice collection. Version 0.3.5 is a private proposal in an isolated copy, not a public platform release.\n+\n - Add signed application and private MuPDF dependency packages, matching source, build tools, and bilingual installation instructions for OpenBSD 8.0 / amd64\n \n - Restrict the Windows build DLL search path to required Python, Windows and Git locations; validate native binary provenance and stop builds that collect binaries from unrelated tools\ndiff --git a/CHANGELOG_ja.md b/CHANGELOG_ja.md\nindex a2f51ad..ef11cbb 100644\n--- a/CHANGELOG_ja.md\n+++ b/CHANGELOG_ja.md\n@@ -4,6 +4,8 @@\n \n ## 未リリース\n \n+- Linux amd64追加対応の統合案を準備。Fedora・openSUSE・AlmaLinux用RPM処理、サムネイル描画とブートローダー告知収集の修正を含む。0.3.5は専用コピー内の未公開案であり、対応OSの公開を示しません。\n+\n - OpenBSD 8.0 / amd64向けに本体・専用MuPDF依存の署名付きパッケージ、対応ソース、ビルド工具と日英インストール手順を追加\n \n - WindowsビルドのDLL検索パスをPython・Windows・Gitの必要な場所に限定し、無関係なツール由来のDLL混入を防止。ネイティブバイナリの収集元を検査し、想定外の場所ならビルドを停止\ndiff --git a/folimeld/__init__.py b/folimeld/__init__.py\nindex 34d3dd9..fe02a3e 100644\n--- a/folimeld/__init__.py\n+++ b/folimeld/__init__.py\n@@ -1,4 +1,4 @@\n \"\"\"Folimeld application package.\"\"\"\n \n-__version__ = \"0.3.3\"\n+__version__ = \"0.3.5\"\n __build__ = \"1\"\n",
+  "public_to_proposal_patch": "diff --git a/build_linux.sh b/build_linux.sh\nindex 84bfe04..c7fe60f 100644\n--- a/build_linux.sh\n+++ b/build_linux.sh\n@@ -4,33 +4,102 @@ set -eu\n SCRIPT_DIR=\"$(CDPATH= cd -- \"$(dirname -- \"$0\")\" && pwd)\"\n cd \"$SCRIPT_DIR\"\n \n+FORMAT=\"${1:-deb}\"\n+case \"$FORMAT\" in\n+  deb|binary|rpm|suse-rpm|tumbleweed-rpm|alma-rpm) ;;\n+  --help|-h)\n+    echo \"Usage: $0 [deb|binary|rpm|suse-rpm|tumbleweed-rpm|alma-rpm]\"\n+    echo \"Default: deb. binary builds the standalone executable without DEB packaging.\"\n+    echo \"rpm builds a Fedora-specific RPM on Fedora.\"\n+    echo \"suse-rpm builds an openSUSE Leap 16.1 RPM on that distribution.\"\n+    echo \"tumbleweed-rpm builds an RPM for the current Tumbleweed snapshot.\"\n+    echo \"alma-rpm builds an AlmaLinux 9 RPM on that distribution.\"\n+    exit 0 ;;\n+  *) echo \"Unknown build format: $FORMAT (use deb, binary, rpm, suse-rpm, tumbleweed-rpm or alma-rpm)\" >&2; exit 2 ;;\n+esac\n+if [ \"$#\" -gt 1 ]; then\n+  echo \"Usage: $0 [deb|binary|rpm|suse-rpm|tumbleweed-rpm|alma-rpm]\" >&2\n+  exit 2\n+fi\n+\n if [ \"$(uname -s)\" != \"Linux\" ]; then\n   echo \"This build script must be run on Linux.\" >&2\n   exit 1\n fi\n+BUILD_PYTHON=\"${FOLIMELD_LINUX_PYTHON:-python3}\"\n+\n+if [ \"$FORMAT\" = deb ]; then\n+  for tool in dpkg dpkg-deb getconf; do\n+    command -v \"$tool\" >/dev/null 2>&1 || {\n+      echo \"DEB packaging requires $tool; use binary for other distributions.\" >&2\n+      exit 1\n+    }\n+  done\n+  VERSION=\"$(\"$BUILD_PYTHON\" -c 'from folimeld import __version__; print(__version__)')\"\n+  ARCH=\"$(dpkg --print-architecture)\"\n+  OUTPUT_DIR=\"${FOLIMELD_LINUX_OUTPUT:-$SCRIPT_DIR/releases/ubuntu}\"\n+  mkdir -p \"$OUTPUT_DIR\"\n+  OUTPUT_DIR=\"$(CDPATH= cd -- \"$OUTPUT_DIR\" && pwd)\"\n+  PACKAGE=\"$OUTPUT_DIR/folimeld_${VERSION}_${ARCH}.deb\"\n+  if [ -e \"$PACKAGE\" ]; then\n+    echo \"Refusing to overwrite existing package: $PACKAGE\" >&2\n+    echo \"Set FOLIMELD_LINUX_OUTPUT to a new candidate directory.\" >&2\n+    exit 1\n+  fi\n+fi\n+\n+if [ \"$FORMAT\" = rpm ]; then\n+  \"$BUILD_PYTHON\" \"$SCRIPT_DIR/tools/package_linux_rpm.py\" --check\n+fi\n+if [ \"$FORMAT\" = suse-rpm ]; then\n+  \"$BUILD_PYTHON\" \"$SCRIPT_DIR/tools/package_linux_suse_rpm.py\" --check\n+fi\n+if [ \"$FORMAT\" = tumbleweed-rpm ]; then\n+  \"$BUILD_PYTHON\" \"$SCRIPT_DIR/tools/package_linux_tumbleweed_rpm.py\" --check\n+fi\n+if [ \"$FORMAT\" = alma-rpm ]; then\n+  \"$BUILD_PYTHON\" \"$SCRIPT_DIR/tools/package_linux_alma_rpm.py\" --check\n+fi\n \n VENV_DIR=\"${FOLIMELD_LINUX_VENV:-$SCRIPT_DIR/.venv-linux}\"\n PYTHON_EXE=\"$VENV_DIR/bin/python\"\n if [ ! -x \"$PYTHON_EXE\" ]; then\n   echo \"Creating Python virtual environment...\"\n-  python3 -m venv \"$VENV_DIR\"\n+  \"$BUILD_PYTHON\" -m venv \"$VENV_DIR\"\n fi\n \n \"$PYTHON_EXE\" -m pip install --upgrade pip\n \"$PYTHON_EXE\" -m pip install -r requirements.txt -c constraints-release.txt pyinstaller\n+# Import native modules before freezing: PyInstaller can otherwise finish while\n+# host libraries needed by Qt are missing, leaving incomplete plugin discovery.\n+\"$PYTHON_EXE\" -c 'from PySide6 import QtCore, QtGui, QtWidgets; import pymupdf'\n \"$PYTHON_EXE\" \"$SCRIPT_DIR/tools/make_app_icon.py\"\n \"$PYTHON_EXE\" -m PyInstaller --noconfirm --clean Folimeld-linux.spec\n \n-VERSION=\"$($PYTHON_EXE -c 'from folimeld import __version__; print(__version__)')\"\n-if command -v dpkg >/dev/null 2>&1; then\n-  ARCH=\"$(dpkg --print-architecture)\"\n-else\n-  case \"$(uname -m)\" in\n-    x86_64) ARCH=\"amd64\" ;;\n-    aarch64) ARCH=\"arm64\" ;;\n-    *) echo \"Unsupported architecture: $(uname -m)\" >&2; exit 1 ;;\n-  esac\n+if [ \"$FORMAT\" = binary ]; then\n+  echo \"Built standalone executable: dist/folimeld\"\n+  echo \"Matching source and build records: dist/source/\"\n+  exit 0\n+fi\n+\n+if [ \"$FORMAT\" = rpm ]; then\n+  \"$PYTHON_EXE\" \"$SCRIPT_DIR/tools/package_linux_rpm.py\"\n+  exit 0\n fi\n+if [ \"$FORMAT\" = suse-rpm ]; then\n+  \"$PYTHON_EXE\" \"$SCRIPT_DIR/tools/package_linux_suse_rpm.py\"\n+  exit 0\n+fi\n+if [ \"$FORMAT\" = tumbleweed-rpm ]; then\n+  \"$PYTHON_EXE\" \"$SCRIPT_DIR/tools/package_linux_tumbleweed_rpm.py\"\n+  exit 0\n+fi\n+if [ \"$FORMAT\" = alma-rpm ]; then\n+  \"$PYTHON_EXE\" \"$SCRIPT_DIR/tools/package_linux_alma_rpm.py\"\n+  exit 0\n+fi\n+\n+VERSION=\"$(\"$PYTHON_EXE\" -c 'from folimeld import __version__; print(__version__)')\"\n \n PACKAGE_ROOT=\"$(mktemp -d)\"\n trap 'rm -rf -- \"$PACKAGE_ROOT\"' EXIT\n@@ -46,12 +115,9 @@ sed -e \"s/@VERSION@/$VERSION/\" -e \"s/@ARCH@/$ARCH/\" \\\n   -e \"s/@LIBC_VERSION@/$LIBC_VERSION/\" \\\n   \"$SCRIPT_DIR/packaging/linux/control.in\" > \"$PACKAGE_ROOT/DEBIAN/control\"\n \n-OUTPUT_DIR=\"$SCRIPT_DIR/releases/ubuntu\"\n-mkdir -p \"$OUTPUT_DIR\"\n-PACKAGE=\"$OUTPUT_DIR/folimeld_${VERSION}_${ARCH}.deb\"\n dpkg-deb --root-owner-group --build \"$PACKAGE_ROOT\" \"$PACKAGE\"\n \"$PYTHON_EXE\" tools/source_bundle.py --executable dist/folimeld --artifact \"$PACKAGE\"\n \n echo\n echo \"Built standalone executable: dist/folimeld\"\n-echo \"Built Ubuntu package: releases/ubuntu/$(basename \"$PACKAGE\")\"\n+echo \"Built DEB package: $PACKAGE\"\ndiff --git a/folimeld/__init__.py b/folimeld/__init__.py\nindex fd54092..fe02a3e 100644\n--- a/folimeld/__init__.py\n+++ b/folimeld/__init__.py\n@@ -1,4 +1,4 @@\n \"\"\"Folimeld application package.\"\"\"\n \n-__version__ = \"0.3.4\"\n+__version__ = \"0.3.5\"\n __build__ = \"1\"\ndiff --git a/folimeld/app.py b/folimeld/app.py\nindex 4721790..eedc96c 100644\n--- a/folimeld/app.py\n+++ b/folimeld/app.py\n@@ -251,12 +251,15 @@ class MainWindow(QMainWindow):\n                 QMessageBox.information(self, self.tr_(\"import_images\"), self.tr_(\"image_empty\"))\n                 return\n             dialog = ImageImportDialog(entries, self.tr_, self)\n-            while dialog.exec():\n-                if not self.confirm_discard():\n-                    return\n-                if dialog.convert(self.model):\n-                    self.refresh()\n-                    return\n+            try:\n+                while dialog.exec():\n+                    if not self.confirm_discard():\n+                        return\n+                    if dialog.convert(self.model):\n+                        self.refresh()\n+                        return\n+            finally:\n+                dialog.deleteLater()\n         except Exception as exc:\n             self.error(exc)\n \ndiff --git a/folimeld/image_import_dialog.py b/folimeld/image_import_dialog.py\nindex 632eb86..117f558 100644\n--- a/folimeld/image_import_dialog.py\n+++ b/folimeld/image_import_dialog.py\n@@ -91,6 +91,7 @@ class ImageImportDialog(QDialog):\n             progress.setAutoReset(False)\n             result = []\n             timer = QTimer(progress)\n+            connected = False\n \n             def poll():\n                 try:\n@@ -112,6 +113,7 @@ class ImageImportDialog(QDialog):\n                 process.start()\n                 sender.close()\n                 timer.timeout.connect(poll)\n+                connected = True\n                 timer.start(50)\n                 progress.exec()\n                 timer.stop()\n@@ -132,10 +134,15 @@ class ImageImportDialog(QDialog):\n                     return False\n                 return True\n             finally:\n-                timer.stop()\n-                if process.pid is not None:\n-                    if process.is_alive():\n-                        process.terminate()\n-                    process.join()\n-                receiver.close()\n-                sender.close()\n+                try:\n+                    timer.stop()\n+                    if connected:\n+                        timer.timeout.disconnect(poll)\n+                    if process.pid is not None:\n+                        if process.is_alive():\n+                            process.terminate()\n+                        process.join()\n+                finally:\n+                    receiver.close()\n+                    sender.close()\n+                    progress.deleteLater()\ndiff --git a/folimeld/license_info.py b/folimeld/license_info.py\nindex d78e16a..c57bc1b 100644\n--- a/folimeld/license_info.py\n+++ b/folimeld/license_info.py\n@@ -11,7 +11,7 @@ SOURCE_URL = \"https://github.com/tyamada/Folimeld\"\n def installed_notices(*, strict: bool = True) -> str:\n     \"\"\"Collect notices; packaging requires metadata, source runs may omit it.\"\"\"\n     names = [\"PySide6\", \"PySide6_Essentials\", \"PySide6_Addons\", \"shiboken6\", \"PyMuPDF\", \"Pillow\",\n-             \"cryptography\", \"cffi\", \"pycparser\"]\n+             \"cryptography\", \"cffi\", \"pycparser\", \"PyInstaller\"]\n     if sys.platform == \"win32\":\n         names += [\"winrt-runtime\", \"winrt-Windows.Services.Store\",\n                   \"winrt-Windows.Foundation\", \"winrt-Windows.Foundation.Collections\"]\ndiff --git a/folimeld/thumbnails.py b/folimeld/thumbnails.py\nindex 097ed47..c8a5954 100644\n--- a/folimeld/thumbnails.py\n+++ b/folimeld/thumbnails.py\n@@ -169,6 +169,10 @@ class ThumbnailController(QObject):\n             for row in rows:\n                 item = self.pending.pop(row)\n                 item.setIcon(self.render_icon(self.get_document()[row]))\n+                # The placeholder was laid out before its icon existed. Notify\n+                # Qt that its size hint changed, or the new decoration can keep\n+                # the old position and be clipped outside its grid cell.\n+                self.pages.itemDelegate().sizeHintChanged.emit(self.pages.indexFromItem(item))\n                 self.resident[row] = item\n                 if perf_counter() - started >= 0.016:\n                     break\ndiff --git a/tests/test_license_info.py b/tests/test_license_info.py\nindex fc53d0b..6ef36ce 100644\n--- a/tests/test_license_info.py\n+++ b/tests/test_license_info.py\n@@ -31,6 +31,24 @@ class LicenseInfoTests(unittest.TestCase):\n             with self.assertRaises(PackageNotFoundError):\n                 installed_notices()\n \n+    def test_packaging_includes_bootloader_license_text(self):\n+        with tempfile.TemporaryDirectory() as directory:\n+            copying = Path(directory) / \"COPYING.txt\"\n+            text = \"Bootloader license\\nSpecial exception for distributed executables.\\n\"\n+            copying.write_text(text, encoding=\"utf-8\")\n+\n+            def lookup(name):\n+                return SimpleNamespace(\n+                    version=\"6.22.2\", metadata={},\n+                    files=[Path(\"licenses/COPYING.txt\")] if name == \"PyInstaller\" else [],\n+                    locate_file=lambda file: copying,\n+                )\n+\n+            with patch(\"folimeld.license_info.distribution\", side_effect=lookup):\n+                notices = installed_notices()\n+            self.assertIn(\"PyInstaller 6.22.2\", notices)\n+            self.assertIn(text, notices)\n+\n     def test_source_run_tolerates_missing_python_license_but_packaging_does_not(self):\n         package = SimpleNamespace(version=\"1.2\", metadata={}, files=[])\n         with patch(\"folimeld.license_info.distribution\", return_value=package), \\\ndiff --git a/tests/test_thumbnails.py b/tests/test_thumbnails.py\nindex 06cd3e1..b1b8533 100644\n--- a/tests/test_thumbnails.py\n+++ b/tests/test_thumbnails.py\n@@ -3,10 +3,62 @@ from unittest.mock import patch\n import fitz\n import pytest\n from PySide6.QtWidgets import QApplication\n+from PySide6.QtCore import QEventLoop, QTimer\n \n from folimeld.app import MainWindow\n \n \n+def wait_for_thumbnail_icons(window):\n+    \"\"\"Exercise the real render timer rather than calling render_batch directly.\"\"\"\n+    loop = QEventLoop()\n+    poll = QTimer()\n+    deadline = QTimer()\n+    deadline.setSingleShot(True)\n+\n+    def ready():\n+        return all(not window.pages.item(row).icon().isNull()\n+                   for row in range(window.pages.count()))\n+\n+    poll.timeout.connect(lambda: loop.quit() if ready() else None)\n+    deadline.timeout.connect(loop.quit)\n+    poll.start(5)\n+    deadline.start(2000)\n+    loop.exec()\n+    poll.stop()\n+    deadline.stop()\n+    assert ready(), \"Thumbnails did not finish through the Qt event loop\"\n+\n+\n+def test_async_rotation_keeps_thumbnail_inside_first_grid_cell():\n+    app = QApplication.instance() or QApplication([])\n+    with patch('folimeld.app.is_packaged', return_value=False):\n+        window = MainWindow()\n+    try:\n+        window.model.doc = fitz.open()\n+        for _ in range(3):\n+            page = window.model.doc.new_page(width=400, height=550)\n+            page.insert_text((40, 70), 'Visible after rotation', fontsize=25)\n+        window.show()\n+        window.refresh([0])\n+        wait_for_thumbnail_icons(window)\n+        window.rotate(90)\n+        wait_for_thumbnail_icons(window)\n+        item = window.pages.item(0)\n+        icon_size = item.icon().actualSize(window.pages.iconSize())\n+        assert icon_size.width() > icon_size.height()\n+        assert window.pages.visualItemRect(item).width() >= icon_size.width()\n+        assert window.pages.visualItemRect(item).height() >= icon_size.height()\n+        # Qt may update the decoration width but retain the position computed\n+        # for an empty icon, clipping content outside its fixed grid cell.\n+        assert window.pages.visualItemRect(item).left() >= 0\n+        assert window.pages.visualItemRect(item).right() < window.pages.gridSize().width()\n+    finally:\n+        window.model.dirty = False\n+        window.close()\n+        window.deleteLater()\n+        app.processEvents()\n+\n+\n @pytest.mark.parametrize('size,width', [(144, 700), (288, 700), (432, 700), (288, 1400)])\n def test_viewport_search_matches_full_scan_without_visiting_every_page(size, width):\n     app = QApplication.instance() or QApplication([])\ndiff --git a/tools/source_bundle.py b/tools/source_bundle.py\nindex eda0a80..8c47924 100644\n--- a/tools/source_bundle.py\n+++ b/tools/source_bundle.py\n@@ -9,13 +9,16 @@ from datetime import datetime, timezone\n import hashlib\n from importlib.metadata import distributions\n import json\n+import os\n from pathlib import Path\n import platform\n import re\n+import stat\n import subprocess\n import sys\n+from tempfile import TemporaryDirectory\n from urllib.parse import unquote, urlsplit\n-from zipfile import ZIP_DEFLATED, ZipFile\n+from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo\n \n \n SOURCE_DIRS = {\"folimeld\", \"tools\", \"assets\", \"locales\", \"licenses\", \"packaging\", \"tests\"}\n@@ -99,17 +102,55 @@ def source_paths(root):\n     return selected\n \n \n+def write_reproducible_source_zip(archive, root, paths, packages, manifest, epoch):\n+    \"\"\"Write a stable ZIP with normalized Unix modes and UTC DOS timestamps.\"\"\"\n+    # ZIP stores years from 1980 and timestamps at two-second resolution.\n+    stamp = datetime.fromtimestamp(max(epoch, 315532800), timezone.utc).timetuple()[:6]\n+    for name in paths:\n+        manifest[\"files\"][name] = digest(root / name)\n+    generated = {\n+        \"SOURCE-MANIFEST.json\": (json.dumps(manifest, ensure_ascii=False, indent=2) + \"\\n\").encode(\"utf-8\"),\n+        \"build-requirements.txt\": \"\".join(f\"{n}=={v}\\n\" for n, v in packages).encode(\"utf-8\"),\n+    }\n+    notices = root / \"build\" / \"legal\" / \"Installed-packages.txt\"\n+    if notices.exists():\n+        generated[\"licenses/Installed-packages.txt\"] = notices.read_bytes()\n+    if set(paths) & generated.keys():\n+        raise ValueError(\"Source paths collide with generated ZIP entries\")\n+    for name in sorted(set(paths) | generated.keys()):\n+        if name in generated:\n+            data = generated[name]\n+            mode = 0o644\n+        else:\n+            path = root / name\n+            data = path.read_bytes()\n+            if hashlib.sha256(data).hexdigest() != manifest[\"files\"][name]:\n+                raise ValueError(f\"Source changed while writing snapshot: {name}\")\n+            mode = 0o755 if path.stat().st_mode & stat.S_IXUSR else 0o644\n+        info = ZipInfo(name, stamp)\n+        info.create_system = 3\n+        info.external_attr = (stat.S_IFREG | mode) << 16\n+        archive.writestr(info, data, compress_type=ZIP_DEFLATED, compresslevel=9)\n+\n+\n def source_datas(project_root, target):\n     \"\"\"Called before PyInstaller Analysis, after assets and notices are generated.\"\"\"\n     root = Path(project_root).resolve()\n     if not re.fullmatch(r\"[a-z0-9-]+\", target):\n         raise ValueError(\"Invalid build target\")\n     paths = source_paths(root)\n+    epoch_text = os.environ.get(\"SOURCE_DATE_EPOCH\")\n+    epoch = None\n+    if epoch_text is not None:\n+        if not re.fullmatch(r\"[0-9]+\", epoch_text) or int(epoch_text) > 0xFFFFFFFF:\n+            raise ValueError(\"SOURCE_DATE_EPOCH must be an unsigned 32-bit Unix timestamp\")\n+        epoch = int(epoch_text)\n+    created = datetime.now(timezone.utc) if epoch is None else datetime.fromtimestamp(epoch, timezone.utc)\n     packages = sorted({(d.metadata[\"Name\"], d.version) for d in distributions()})\n     manifest = {\n         \"format\": 1,\n         \"target\": target,\n-        \"created_utc\": datetime.now(timezone.utc).isoformat(),\n+        \"created_utc\": created.isoformat(),\n         \"git_commit\": None,\n         \"working_tree_changed\": None,\n         \"python\": sys.version,\n@@ -124,22 +165,37 @@ def source_datas(project_root, target):\n         manifest[\"working_tree_changed\"] = bool(git(root, \"status\", \"--porcelain\", \"--untracked-files=normal\"))\n     output = root / \"dist\" / \"source\"\n     output.mkdir(parents=True, exist_ok=True)\n-    # A unique draft prevents overwriting records from previous builds.\n-    stamp = datetime.now(timezone.utc).strftime(\"%Y%m%dT%H%M%S%fZ\")\n-    draft = output / f\"Folimeld-{target}-{stamp}.zip\"\n-    with ZipFile(draft, \"x\", ZIP_DEFLATED) as archive:\n-        for name in paths:\n-            data = (root / name).read_bytes()\n-            manifest[\"files\"][name] = hashlib.sha256(data).hexdigest()\n-            archive.writestr(name, data)\n-        archive.writestr(\"SOURCE-MANIFEST.json\", json.dumps(manifest, ensure_ascii=False, indent=2) + \"\\n\")\n-        archive.writestr(\"build-requirements.txt\", \"\".join(f\"{n}=={v}\\n\" for n, v in packages))\n-        notices = root / \"build\" / \"legal\" / \"Installed-packages.txt\"\n-        if notices.exists():\n-            archive.write(notices, \"licenses/Installed-packages.txt\")\n-    archive_hash = digest(draft)\n-    archive_path = output / f\"Folimeld-source-{archive_hash}.zip\"\n-    draft.rename(archive_path)\n+    if epoch is None:\n+        # A unique draft prevents overwriting records from previous builds.\n+        stamp = datetime.now(timezone.utc).strftime(\"%Y%m%dT%H%M%S%fZ\")\n+        draft = output / f\"Folimeld-{target}-{stamp}.zip\"\n+        with ZipFile(draft, \"x\", ZIP_DEFLATED) as archive:\n+            for name in paths:\n+                data = (root / name).read_bytes()\n+                manifest[\"files\"][name] = hashlib.sha256(data).hexdigest()\n+                archive.writestr(name, data)\n+            archive.writestr(\"SOURCE-MANIFEST.json\", json.dumps(manifest, ensure_ascii=False, indent=2) + \"\\n\")\n+            archive.writestr(\"build-requirements.txt\", \"\".join(f\"{n}=={v}\\n\" for n, v in packages))\n+            notices = root / \"build\" / \"legal\" / \"Installed-packages.txt\"\n+            if notices.exists():\n+                archive.write(notices, \"licenses/Installed-packages.txt\")\n+        archive_hash = digest(draft)\n+        archive_path = output / f\"Folimeld-source-{archive_hash}.zip\"\n+        draft.rename(archive_path)\n+    else:\n+        with TemporaryDirectory(dir=output, prefix=f\".Folimeld-{target}-\") as temporary:\n+            draft = Path(temporary) / \"source.zip\"\n+            with ZipFile(draft, \"x\") as archive:\n+                write_reproducible_source_zip(archive, root, paths, packages, manifest, epoch)\n+            draft.chmod(0o644)\n+            archive_hash = digest(draft)\n+            archive_path = output / f\"Folimeld-source-{archive_hash}.zip\"\n+            # Link the completed ZIP atomically and keep any existing identical snapshot.\n+            try:\n+                os.link(draft, archive_path)\n+            except FileExistsError:\n+                if digest(archive_path) != archive_hash:\n+                    raise ValueError(f\"Source archive checksum mismatch: {archive_path}\") from None\n     record = dict(manifest, source_archive=archive_path.name, source_sha256=archive_hash)\n     record_path = root / \"build\" / \"source\" / target / \"Build-source.txt\"\n     record_path.parent.mkdir(parents=True, exist_ok=True)\n",
+  "changelog_relative_link_checks": [
+    {
+      "document": "CHANGELOG_ja.md",
+      "target": "CHANGELOG_ja.md",
+      "exists": true
+    },
+    {
+      "document": "CHANGELOG_ja.md",
+      "target": "CHANGELOG.md",
+      "exists": true
+    },
+    {
+      "document": "CHANGELOG.md",
+      "target": "CHANGELOG_ja.md",
+      "exists": true
+    },
+    {
+      "document": "CHANGELOG.md",
+      "target": "CHANGELOG.md",
+      "exists": true
+    }
+  ],
+  "rpm_names_pure_function_check": [
+    "folimeld-0.3.5-1.fc44.x86_64.rpm",
+    "folimeld-0.3.5-1.fc45.x86_64.rpm",
+    "folimeld-0.3.5-1.lp161.x86_64.rpm",
+    "folimeld-0.3.5-1.tw20261110.x86_64.rpm",
+    "folimeld-0.3.5-1.alma9_8.x86_64.rpm"
+  ],
+  "untracked_implementation_hashes": {
+    "packaging/linux/folimeld-alma.spec.in": "055aff2df75dd503c6e8eaf097a02fbb981ef1c6092e312169fbb33da67f8fee",
+    "packaging/linux/folimeld-fedora.spec.in": "2c07a140d9bff8dd525e2478a2c18e687b69a862951e74bb4c5e0401250cbedc",
+    "packaging/linux/folimeld-suse.spec.in": "acb606a7ee2a2139067c44be1e0e2041c51981e22cf84e9c141ecc87ddb5951d",
+    "tests/test_linux_alma_rpm.py": "1031f79dc14652447c0728fcacd3d27f8b940c193ea889b7b1bcdcdf3972201f",
+    "tests/test_linux_rpm.py": "57d24e9c2c5d7ac6e756e126435bde136069ae879b7409c49cfa1657931320a5",
+    "tests/test_linux_suse_rpm.py": "8fba1f76adb2d69c1afb9e35bdbcfd7470ca5085f03bc8856892b9c593593e81",
+    "tests/test_linux_tumbleweed_rpm.py": "4e6a54e590605dcf53461a4a6d82f2b8fba4e32d55df426566b3c82b559b7f54",
+    "tools/package_linux_alma_rpm.py": "97906870d0579a9c034c581aede81791feb41e094f56e3cd23515d46bd659ecb",
+    "tools/package_linux_rpm.py": "c82cf229408024839d9ec3510664c71943b6a630f1e9de338beecb5365549144",
+    "tools/package_linux_suse_rpm.py": "14e8649bd7ddf8cc61ade21b666eb0233cdd24e3429c7ddde6ef480588a9ae95",
+    "tools/package_linux_tumbleweed_rpm.py": "7a3d803ca642ebd2b9de1d8620902538c4ffd3982d148ae9e30cc99130deba91"
+  },
+  "source_readme_pair_unchanged": true,
+  "main_changelog_pair_sha256": {
+    "CHANGELOG.md": "f4b8ebf75fa36ec296525492c9957967f21099a05044fc9844cda4c340e1d55d",
+    "CHANGELOG_ja.md": "c50ad44940f6b256d52bcbcb7cfaf2359f22427b7331e91065bdea3e40f2cdf9"
+  },
+  "no_binary_or_package_built": true,
+  "limitations": [
+    "Private source proposal only; no merge commit, tag, main version change or publication",
+    "409 tests passed, 9 skipped, 67 subtests; Linux source tests are not Windows/macOS/ARM64 runtime certification",
+    "RPM names on other distributions are pure-function checks, not builds or OS tests",
+    "Linux-specific notice injection and dependency-material manifests must be applied for actual candidate build",
+    "Alma8 libXau signature, wheel provenance, full desktop and application-version migration remain"
+  ],
+  "main_changelog_pair_unchanged": true
+}

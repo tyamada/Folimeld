@@ -1,0 +1,79 @@
+{
+  "date_jst": "2026-11-12",
+  "originals_unchanged": true,
+  "original_hashes": {
+    "原本_日本語.pdf": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+    "暗号化.pdf": "48b63c2a0e9c3bf3f4e18d55d1104195310ac3dfa7986c04973f0f8319e70c0f",
+    "画像/画像01.png": "a2c58fbf87ae17ad25b1680400fd9a3d5e627ff599a47286378d0f0111103613"
+  },
+  "encrypted_saved": {
+    "sha256": "e8dac2241eff8ddb37492638ad53324aa33d8b2466cb11bc19e300fa8e086a24",
+    "password_required": true,
+    "wrong_password_rejected": true,
+    "test_password_accepted": true,
+    "pages": 3,
+    "rotations": [
+      90,
+      0,
+      0
+    ],
+    "page_text_preserved": true,
+    "gui_reopen_observed": true
+  },
+  "image_pdf": {
+    "sha256": "b51cc2979a027deeb2607a099b13b35400cf65f145ac4566834057b24fde2c46",
+    "pages": 1,
+    "images": 1,
+    "center_rgb": [
+      0,
+      0,
+      255
+    ]
+  },
+  "published": false,
+  "private_application_version": "0.3.3",
+  "rpm_revision": 4,
+  "environment": {
+    "installed_package": "folimeld-0.3.3-4.fc45.x86_64\n",
+    "binary_sha256": "88d3979a88ebdefb59cc064c01bb7a1d14ce81a3832407cf488111310a659800",
+    "rpm_verify": "",
+    "dnf_check": "",
+    "additional_packages": "ibus-1.5.35-1.fc45.x86_64\nibus-mozc-2.29.5111.102-21.fc45.x86_64\ndbus-daemon-1.16.2-6.fc45.x86_64\ndbus-tools-1.16.2-6.fc45.x86_64\n",
+    "ime_engine": "mozc-jp",
+    "ime_environment": {
+      "QT_QPA_PLATFORM": "xcb",
+      "QT_IM_MODULE": "ibus",
+      "GTK_IM_MODULE": "ibus",
+      "XMODIFIERS": "@im=ibus"
+    },
+    "logs": {
+      "app.log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+      "ime-app.log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+      "ime-engine.log": "",
+      "ime-session.log": "dbus-daemon[411]: [session uid=1000 pid=411 pidfd=5] Activating service name='org.freedesktop.portal.IBus' requested by ':1.0' (uid=1000 pid=414 comm=\"ibus-daemon --daemonize --xim --panel=disable\" label=\"kernel\")\nNot connected to the ibus bus\ndbus-daemon[411]: [session uid=1000 pid=411 pidfd=5] Activated service 'org.freedesktop.portal.IBus' failed: Process org.freedesktop.portal.IBus exited with status 1\ndbus-daemon[411]: [session uid=1000 pid=411 pidfd=5] Activating service name='org.a11y.Bus' requested by ':1.2' (uid=1000 pid=420 comm=\"/usr/libexec/ibus-extension-gtk3\" label=\"kernel\")\ndbus-daemon[411]: [session uid=1000 pid=411 pidfd=5] Successfully activated service 'org.a11y.Bus'\ndbus-daemon[411]: [session uid=1000 pid=411 pidfd=5] Activating service name='org.freedesktop.portal.Desktop' requested by ':1.4' (uid=1000 pid=420 comm=\"/usr/libexec/ibus-extension-gtk3\" label=\"kernel\")\ndbus-daemon[411]: [session uid=1000 pid=411 pidfd=5] Activating service name='org.freedesktop.impl.portal.PermissionStore' requested by ':1.5' (uid=1000 pid=462 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[411]: [session uid=1000 pid=411 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'\ndbus-daemon[411]: [session uid=1000 pid=411 pidfd=5] Activating service name='org.freedesktop.portal.Documents' requested by ':1.5' (uid=1000 pid=462 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[411]: [session uid=1000 pid=411 pidfd=5] Successfully activated service 'org.freedesktop.portal.Documents'\n\n(/usr/libexec/xdg-desktop-portal:462): xdg-desktop-portal-WARNING **: 07:47:59.238: Choosing gtk.portal for org.freedesktop.impl.portal.Access as a last-resort fallback\ndbus-daemon[411]: [session uid=1000 pid=411 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.5' (uid=1000 pid=462 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[457]: Activating service name='org.a11y.atspi.Registry' requested by ':1.2' (uid=1000 pid=484 comm=\"/usr/libexec/xdg-desktop-portal-gtk\" label=\"kernel\")\ndbus-daemon[411]: [session uid=1000 pid=411 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'\ndbus-daemon[457]: Successfully activated service 'org.a11y.atspi.Registry'\nSpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry\n\n(/usr/libexec/xdg-desktop-portal:462): xdg-desktop-portal-WARNING **: 07:47:59.279: Choosing gtk.portal for org.freedesktop.impl.portal.Settings as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:462): xdg-desktop-portal-WARNING **: 07:47:59.280: Choosing gtk.portal for org.freedesktop.impl.portal.FileChooser as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:462): xdg-desktop-portal-WARNING **: 07:47:59.280: Choosing gtk.portal for org.freedesktop.impl.portal.AppChooser as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:462): xdg-desktop-portal-WARNING **: 07:47:59.281: Choosing gtk.portal for org.freedesktop.impl.portal.Print as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:462): xdg-desktop-portal-WARNING **: 07:47:59.282: Choosing gtk.portal for org.freedesktop.impl.portal.Notification as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:462): xdg-desktop-portal-WARNING **: 07:47:59.283: Choosing gtk.portal for org.freedesktop.impl.portal.Inhibit as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:462): xdg-desktop-portal-WARNING **: 07:47:59.293: Failed to connect to PipeWire: Couldn't connect to PipeWire\n\n(/usr/libexec/xdg-desktop-portal:462): xdg-desktop-portal-WARNING **: 07:47:59.293: Choosing gtk.portal for org.freedesktop.impl.portal.Account as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:462): xdg-desktop-portal-WARNING **: 07:47:59.294: Choosing gtk.portal for org.freedesktop.impl.portal.Email as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:462): xdg-desktop-portal-WARNING **: 07:47:59.294: Choosing gtk.portal for org.freedesktop.impl.portal.DynamicLauncher as a last-resort fallback\ndbus-daemon[411]: [session uid=1000 pid=411 pidfd=5] Successfully activated service 'org.freedesktop.portal.Desktop'\n"
+    },
+    "verification_gui_terminated": true
+  },
+  "ime_observed": {
+    "roman_input": "nihongo",
+    "hiragana": "にほんご",
+    "kanji": "日本語",
+    "committed": true,
+    "field": "Qt file-open dialog filename; cancelled after test"
+  },
+  "limitations": [
+    "WSLg X11 only; no complete Linux desktop session",
+    "GUI/IME tools added after minimal-dependency tests; no new clean-install/removal cycle",
+    "Single synthetic image and password-protected PDF",
+    "Fedora45 x86_64 only; no Fedora44 or ARM64 verification"
+  ],
+  "screenshots": {
+    "01-encrypted-loaded.png": "5036535434e035c5565565751072f6d41e66708199f5d82095974f75b283f08f",
+    "02-encrypted-saved.png": "d835e271e0f76a319f8c6af755555542fda60a9d16446481600d7c5782d284b3",
+    "03-encrypted-reopened.png": "d1a96c9cab95ea1ab1b53124ed8ce005a94945791a1eebbc97db22db6526b76b",
+    "04-image-imported.png": "52a393b46fa629f16cad52be1d0f448c6967b1a6ff893130a0f6ba33021dba18",
+    "05-ime-hiragana.png": "2beb12b3c4a5de20256b31278ebfc2fb92dc45ad6c1421267b15968c7300304e",
+    "06-ime-kanji.png": "ff5a0bf6119ff81b22f5448d18e000343d766d48e534132855ce3cebf775a939",
+    "07-ime-committed.png": "2fa1ef5489f03e9239bd1bd756ac0680af9dcf9ecf15ada4dbb54b095a7b546a"
+  }
+}

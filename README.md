@@ -32,6 +32,10 @@ Choose File → Exit to close the app, with a save prompt for unsaved changes. O
 
 Each BSD preview has its own target OS version, CPU, and verification record. See the OS sections below for the tested scope and installation instructions.
 
+### AlmaLinux 9 amd64 release preparation
+
+A 0.3.5/build1 candidate, RPM revision5, is being prepared after verification on AlmaLinux 9.8 under WSL2/WSLg. It is unpublished; existing Linux 0.3.4 distributions are retained. See the [release-description draft](documentation/linux-almalinux9-release-draft.md) for the tested installation, upgrade, PDF editing and Japanese input scope and remaining limitations. This does not establish support for conventional desktops, ARM64, AlmaLinux 10, or other RPM distributions.
+
 ## Downloads
 
 **Folimeld 1.0.1.0 for Windows 11 (x64)** is available for free on the Microsoft Store in Japan and the United States. [Microsoft Store (Japan)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [Microsoft Store (United States)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)

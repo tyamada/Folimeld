@@ -32,6 +32,10 @@ Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、�
 
 BSDの各配布物は、対象のOS版・CPUと検証記録に対応しています。確認範囲と導入手順は下記の各OS節を参照してください。
 
+### AlmaLinux 9 amd64の公開準備
+
+AlmaLinux 9.8のWSL2／WSLgで確認した0.3.5/build1、RPM revision5の公開候補を準備しています。まだ公開しておらず、既存のLinux 0.3.4配布物は保持します。導入・更新・PDF編集・日本語入力などの確認範囲と、未確認条件は[公開説明案](documentation/linux-almalinux9-release-draft_ja.md)を参照してください。通常デスクトップ、ARM64、AlmaLinux 10や他のRPM系OSの対応を示すものではありません。
+
 ## ダウンロード
 
 Windows版の **Folimeld 1.0.1.0（Windows 11 x64）** は、Microsoft Storeで日本と米国に公開しています。無料で入手できます。 [日本のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [米国のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)

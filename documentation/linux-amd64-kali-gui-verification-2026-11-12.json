@@ -1,0 +1,146 @@
+{
+  "verification_date_jst": "2026-11-12",
+  "original_unchanged": true,
+  "original_sha256": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+  "saved_files": {
+    "日本語": {
+      "sha256": "3344cf2cf8c1a95bdf6d3801354f89387dfb75a04114f136efa15dfc7bf23309",
+      "pages": 3,
+      "rotations": [
+        90,
+        0,
+        0
+      ],
+      "page_text_preserved": true
+    },
+    "日本語.pdf": {
+      "sha256": "c2a0a08dc22003c500d2d67ca28959b058d0b8a6da2ff2a4da697ec8981f4c42",
+      "pages": 3,
+      "rotations": [
+        90,
+        0,
+        0
+      ],
+      "page_text_preserved": true
+    }
+  },
+  "gui_actions_observed": [
+    "Japanese UI and PDF rendering",
+    "rotate right",
+    "insert blank",
+    "undo",
+    "redo",
+    "delete inserted blank",
+    "Mozc romaji-to-kanji conversion",
+    "save as Japanese filename",
+    "reopen saved PDF"
+  ],
+  "image_pdf": {
+    "pages": 1,
+    "embedded_images": 1,
+    "center_rgb": [
+      0,
+      0,
+      255
+    ],
+    "sha256": "187f1bf55dfc5205dd333e37831adfde81c1cd66b4eacc9d9b281c9d7c515ec1"
+  },
+  "image_original_unchanged": true,
+  "encrypted_original_unchanged": true,
+  "encrypted_pdf_password_open_observed": true,
+  "screenshots": "linux-amd64-kali-gui-verification/",
+  "filename_without_extension": "The first save used the exact name 日本語 without auto-appending .pdf",
+  "mime_checks": [
+    {
+      "command": [
+        "desktop-file-validate",
+        "/usr/share/applications/folimeld.desktop"
+      ],
+      "exit_code": 0,
+      "stdout": "/usr/share/applications/folimeld.desktop: hint: value \"Office;Graphics;\" for key \"Categories\" in group \"Desktop Entry\" contains more than one main category; application might appear more than once in the application menu\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "xdg-mime",
+        "query",
+        "default",
+        "application/pdf"
+      ],
+      "exit_code": 0,
+      "stdout": "folimeld.desktop\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "xdg-mime",
+        "query",
+        "filetype",
+        "/home/folimeld-test/verification/gui-20261112/fixtures/日本語.pdf"
+      ],
+      "exit_code": 0,
+      "stdout": "application/pdf\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "gio",
+        "mime",
+        "application/pdf"
+      ],
+      "exit_code": 0,
+      "stdout": "Default application for “application/pdf”: folimeld.desktop\nRegistered applications:\n\tfolimeld.desktop\n\tdisplay-im7.q16.desktop\nRecommended applications:\n\tfolimeld.desktop\n\tdisplay-im7.q16.desktop\n",
+      "stderr": ""
+    }
+  ],
+  "mime_launch": {
+    "command": "gio open 日本語.pdf",
+    "exit_code": 0,
+    "stdout": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+    "stderr": ""
+  },
+  "gui_dependencies": [
+    "desktop-file-utils\t0.28-1",
+    "file\t1:5.47-4",
+    "fonts-noto-cjk\t1:20240730+repack1-1",
+    "ibus\t1.5.35~rc1-1",
+    "ibus-mozc\t2.29.5160.102+dfsg-1.7",
+    "imagemagick\t8:7.1.2.34+dfsg1-1",
+    "libglib2.0-bin\t2.90.1-2",
+    "xdg-utils\t1.2.1-2",
+    "xdotool\t1:3.20160805.1-5.1+b2"
+  ],
+  "app_logs": {
+    "session.log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+    "encrypted-session.log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+  },
+  "regression_tests": {
+    "tests": 16,
+    "subtests": 16,
+    "passed": true,
+    "seconds": 1.59,
+    "files": [
+      "test_thumbnails.py",
+      "test_i18n.py",
+      "test_file_dialog.py"
+    ]
+  },
+  "limitations": [
+    "WSLg X11 verification; a full Linux desktop session was not tested",
+    "Immediate post-rotation capture showed a blank preview; subsequent edit and reopen displayed it correctly",
+    "Synthetic key events sometimes lost release events when a dialog was destroyed; explicit key releases were required",
+    "No extension is appended automatically when the save name omits .pdf",
+    "Version remains a private 0.3.3 build; no publication"
+  ],
+  "screenshot_sha256": {
+    "01-loaded.png": "d76a12a18a179abf04cab5850181fbd3ed9f9031352c70098ec3f76d599f0e4d",
+    "02-rotated.png": "486255b8419c4879bc988c0c7f49576e1ffc0dc2356a3b659b1479dab5f72811",
+    "03-blank-inserted.png": "f681108de67f228823efd427dd19ba8e0698af20f0ee151d0f8c3efe6418259a",
+    "04-mozc-conversion.png": "d78dbe1499b6c44e1370f156fd0830c19336611587c6fec8c868193577c39adb",
+    "05-saved.png": "05a1f9865eaa287eb4a5e2d6e795a9038236bcef7cb20243995f199660bbf732",
+    "06-reopened.png": "8be3c3e1bd446daff5e934746ea8439345d6abb559cc9385bffb5cd6c6649067",
+    "07-encrypted-opened.png": "199db6a105df02c86c4d70c15a0ad0de14c831e3f84b40a21eb8cbd0e39901ab",
+    "08-image-imported.png": "dc99994ffa7a7edc462de46089f0d36bde718d024d6ab0e90c3c20c09c4fe968",
+    "09-mime-launched.png": "2dfc61f4559f1cc5c8b2747e98cf930d6aacec74e81b269dcb1a7138a75d89e4"
+  }
+}

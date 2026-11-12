@@ -9,6 +9,8 @@ Windows / Linux / macOS の PyInstaller spec は `tools/license_bundle.py` を�
 ライセンスを同梱します。MSIX / deb / Mac App Store パッケージもこの実行物を使います。
 ビルド時の文書取得にネットワークは使用しません。
 
+PyInstallerのブートローダー告知も、ビルド環境にあるPyInstallerパッケージのCOPYING全文として収集します。この収集対象への追加は次回ビルドから適用され、既存配布物へは遡及しません。Linux候補の同梱実体・ソースRPM・告知の追加確認は[AlmaLinux9ランタイム調査](linux-almalinux9-native-runtime-source-audit_ja.md)を参照してください。
+
 ## ビルドごとのソース保存
 
 3つの PyInstaller spec は、ライセンス収集後・Analysis 前に
