@@ -39,6 +39,12 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.5 AlmaLinux 9 amd64試験版 - 2026-11-12
+
+- AlmaLinux 9.8のWSL2／WSLgで検証したamd64 RPM（0.3.5-5）を[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5)で試験公開。
+- PDF編集・日本語名での別名保存と再読込・日本語入力、候補間の更新・削除再導入・最小依存起動を確認。通常デスクトップ・ARM64・AlmaLinux 10・公開Ubuntu／Debian 0.3.4からの移行は未検証。
+- サムネイル描画修正とPyInstaller・LibTIFF LZW・ICU・Qt/MuPDFの補足告知を反映。対応ソース、依存ソース資料、検証記録、既知の制約とSHA-256チェックサムを添付。既存Ubuntu／Debian 0.3.4や他OSの配布物は保持。
+
 ## 0.3.4 - 2026-11-10
 
 - 2026年11月10日、Folimeld 0.3.4のLinux版を公開しました。

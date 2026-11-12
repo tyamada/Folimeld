@@ -39,6 +39,12 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.5 AlmaLinux 9 amd64 preview - 2026-11-12
+
+- Publish the amd64 RPM (0.3.5-5), verified on AlmaLinux 9.8 under WSL2/WSLg, as a preview in the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5).
+- Verify PDF editing, Save As with Japanese filenames, reopening, Japanese input, upgrades between candidates, removal/reinstallation, and minimal-dependency startup. Conventional desktops, ARM64, AlmaLinux 10, and migration from public Ubuntu/Debian 0.3.4 remain untested.
+- Include the thumbnail layout fix and supplemental PyInstaller, LibTIFF LZW, ICU, and Qt/MuPDF notices. Attach matching source, dependency-source materials, verification records, known limitations, and SHA-256 checksums. Retain existing Ubuntu/Debian 0.3.4 distributions and releases for other operating systems.
+
 ## 0.3.4 - 2026-11-10
 
 - Released Folimeld 0.3.4 for Linux on November 10, 2026.
