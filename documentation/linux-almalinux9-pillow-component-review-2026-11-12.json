@@ -1,0 +1,96 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "candidate_unchanged": true,
+  "sdist": "/home/folimeld-build/folimeld-candidates/alma9-integration-035-20261112/dependency-materials/crypto/sources/pillow-12.3.0.tar.gz",
+  "sdist_sha256": "3b8182a766685eaa002637e28b4ec8d6b18819a0c71f579bf0dbaa5830297cce",
+  "vendored_matches": [
+    {
+      "component": "fribidi-shim",
+      "sdist_path": "src/thirdparty/fribidi-shim/fribidi.c",
+      "sha256": "7e8cfa78dcd21cebeb0ad91c0cd23e0dba6496c0fbd66e1ec3d25c5b1b365d11",
+      "matches_wheel_sbom": true
+    },
+    {
+      "component": "pythoncapi_compat",
+      "sdist_path": "src/thirdparty/pythoncapi_compat.h",
+      "sha256": "97b0e62657965bd01a783b93422a6f7138d64c48546657feacc218ec8319ee0b",
+      "matches_wheel_sbom": true
+    },
+    {
+      "component": "raqm",
+      "sdist_path": "src/thirdparty/raqm/raqm.c",
+      "sha256": "5549e7458674077ca4794033ade277910ba0ad6989651787eba1a8b5513a9f9d",
+      "matches_wheel_sbom": true
+    }
+  ],
+  "raqm_two_patches_reproduce_sdist_files": true,
+  "raqm_upstream_inputs": [
+    {
+      "url": "https://raw.githubusercontent.com/HOST-Oman/libraqm/v0.10.5/src/raqm.c",
+      "sha256": "6daab856b7ed5a80f260e24ec4cce4cec6aa651efa979d4506dcc09b8550e37d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/HOST-Oman/libraqm/v0.10.5/src/raqm-version.h.in",
+      "sha256": "6d75f3b66f358388fe1ebd26e0f72cd2b1976d960b80b7579602915ad61b7e8b"
+    }
+  ],
+  "libtiff_patch_applies_without_fuzz": true,
+  "patch_commands": [
+    {
+      "command": [
+        "patch",
+        "--batch",
+        "--fuzz=0",
+        "-p1",
+        "-i",
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/pillow-native-audit-20261112/sources/raqm-1.patch"
+      ],
+      "cwd": "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/pillow-component-review-03/raqm",
+      "exit_code": 0,
+      "stdout": "patching file src/raqm-version.h.in\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "patch",
+        "--batch",
+        "--fuzz=0",
+        "-p1",
+        "-i",
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/pillow-native-audit-20261112/sources/raqm-2.patch"
+      ],
+      "cwd": "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/pillow-component-review-03/raqm",
+      "exit_code": 0,
+      "stdout": "patching file src/raqm.c\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "patch",
+        "--batch",
+        "--fuzz=0",
+        "-p0",
+        "-i",
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/pillow-native-audit-20261112/sources/libtiff-1.patch"
+      ],
+      "cwd": "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/pillow-component-review-03/libtiff",
+      "exit_code": 0,
+      "stdout": "patching file libtiff/tif_getimage.c\nHunk #1 succeeded at 2216 (offset -8 lines).\nHunk #2 succeeded at 2356 (offset -8 lines).\nHunk #3 succeeded at 2512 (offset -10 lines).\nHunk #4 succeeded at 2615 (offset -10 lines).\n",
+      "stderr": ""
+    }
+  ],
+  "libtiff_candidate_entry": "pillow.libs/libtiff-fc87e79d.so.6.2.0",
+  "lzw_initialization_symbol_present": true,
+  "berkeley_notice_present_in_candidate_documents": [],
+  "supplement_path": "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/pillow-component-review-03/LibTIFF-LZW.txt",
+  "supplement_sha256": "fd0cb7730e150988dc9114c1093fca290d7c6e356dcaca472ecf5c407f41b86f",
+  "notice_source_file_sha256": "d4195dc068c075bde388edb2542a53794234a2030cc8ca17095f9e0b4162cb0f",
+  "limitations": [
+    "SBOM file hashes bind vendored source files, not complete wheel compiler provenance",
+    "LibTIFF patch application establishes source applicability, not proof of wheel build flags",
+    "Supplement requires inclusion in a new candidate and source association; existing candidate is unchanged"
+  ],
+  "repository_notice_sha256": "1fd35fc142f1d09927e85d944bf181bd89b23d2fed3c42733ed2afd22a70b6bf",
+  "repository_notice_trailing_newline_note": "Host stdout transfer added one trailing newline; copyright and permission text unchanged"
+}

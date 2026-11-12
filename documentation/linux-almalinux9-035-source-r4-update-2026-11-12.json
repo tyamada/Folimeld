@@ -1,0 +1,54 @@
+{
+  "upgrade": {
+    "command": [
+      "dnf",
+      "-y",
+      "--setopt=install_weak_deps=False",
+      "upgrade",
+      "/root/folimeld-verification/folimeld-0.3.5-4.alma9_8.x86_64.rpm"
+    ],
+    "exit_code": 0,
+    "before": "folimeld-0.3.5-3.alma9_8.x86_64",
+    "after": "folimeld-0.3.5-4.alma9_8.x86_64",
+    "package_sha256": "6440af05b100d283ce48b46dd72d0b9bc690c0bca1ed6c019b6b1a3ba8bc99f8",
+    "before_binary_sha256": "026ceba16663ab58d62afed6f5a3fdfec41d0f59841665f05f6420dbf1fb5dbd",
+    "binary_sha256": "bed5def2772161ca1c9a33cffa6aa0684b1944d3d5176bcbefa9c20f0c3e6ee6",
+    "checks": [
+      {
+        "command": [
+          "rpm",
+          "-V",
+          "folimeld"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "dnf",
+          "check"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ]
+  },
+  "startup": [
+    {
+      "platform": "offscreen",
+      "alive_after_12_seconds": true,
+      "exit_code_after_test": -15,
+      "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nThis plugin does not support propagateSizeHints()\n"
+    },
+    {
+      "platform": "xcb",
+      "alive_after_12_seconds": true,
+      "exit_code_after_test": -15,
+      "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+    }
+  ],
+  "date_jst": "2026-11-12",
+  "published": false
+}

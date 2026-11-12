@@ -1,0 +1,203 @@
+{
+  "observed_date_jst": "2026-11-12",
+  "read_only": true,
+  "source": "https://github.com/tyamada/Folimeld/releases",
+  "visible_releases": [
+    {
+      "tag": "macos-source-v0.3.3",
+      "commit": "00c630de5eaabf3db260fa1cb155b270bf9a24c4",
+      "draft": false,
+      "url": "https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.3"
+    },
+    {
+      "tag": "linux-v0.3.4",
+      "commit": "eeacd06a49cda85ddc1d432bd785e507f8006a89",
+      "draft": false,
+      "url": "https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4"
+    },
+    {
+      "tag": "openbsd-aarch64-v0.3.3",
+      "commit": "main",
+      "draft": false,
+      "url": "https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.3"
+    },
+    {
+      "tag": "netbsd-aarch64-v0.3.3",
+      "commit": "main",
+      "draft": false,
+      "url": "https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.3"
+    },
+    {
+      "tag": "freebsd-aarch64-v0.3.3_1",
+      "commit": "main",
+      "draft": false,
+      "url": "https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.3_1"
+    },
+    {
+      "tag": "windows-store-v1.0.1.0",
+      "commit": "a5f3c695044a187586590a11132cf75f097a8a10",
+      "draft": false,
+      "url": "https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.1.0"
+    },
+    {
+      "tag": "openbsd-v0.3.3",
+      "commit": "911d68efcfe6e12e85202bcc12263bcd6f90ff1b",
+      "draft": false,
+      "url": "https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3"
+    },
+    {
+      "tag": "netbsd-v0.3.3",
+      "commit": "98b211eb1afea212bbab0565ad11bd623556bb0f",
+      "draft": false,
+      "url": "https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3"
+    },
+    {
+      "tag": "freebsd-v0.3.3",
+      "commit": "14ab6b647a7dd49bd080be4eff4f2de160ea483e",
+      "draft": false,
+      "url": "https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3"
+    },
+    {
+      "tag": "linux-v0.3.3",
+      "commit": "ccb92e5f7d419f4210bc3c23a56e3cb7882f5840",
+      "draft": false,
+      "url": "https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3"
+    },
+    {
+      "tag": "v0.3.0",
+      "commit": "main",
+      "draft": false,
+      "url": "https://github.com/tyamada/Folimeld/releases/tag/v0.3.0"
+    },
+    {
+      "tag": "v0.2.5",
+      "commit": "main",
+      "draft": false,
+      "url": "https://github.com/tyamada/Folimeld/releases/tag/v0.2.5"
+    },
+    {
+      "tag": "v0.2.0",
+      "commit": "main",
+      "draft": false,
+      "url": "https://github.com/tyamada/Folimeld/releases/tag/v0.2.0"
+    },
+    {
+      "tag": "v0.1.0",
+      "commit": "main",
+      "draft": false,
+      "url": "https://github.com/tyamada/Folimeld/releases/tag/v0.1.0"
+    }
+  ],
+  "linux_034": {
+    "tag": "linux-v0.3.4",
+    "url": "https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4",
+    "target_commit": "eeacd06a49cda85ddc1d432bd785e507f8006a89",
+    "published_at": "2026-11-10T09:44:39Z",
+    "assets": [
+      {
+        "name": "Folimeld-0.3.4-amd64-snap-packaging-source.zip",
+        "sha256": "sha256:dd4525094e25d9c9a5d9f118578c5f61b7e1b67711a2de5dc917ec24eb2acc2c",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/Folimeld-0.3.4-amd64-snap-packaging-source.zip",
+        "bytes": 3757
+      },
+      {
+        "name": "Folimeld-0.3.4-amd64-source-supplement.tar",
+        "sha256": "sha256:13c23bc5071b245582a26ca708102422aa0a02903bdaea543201727683f9c7da",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/Folimeld-0.3.4-amd64-source-supplement.tar",
+        "bytes": 82108928
+      },
+      {
+        "name": "Folimeld-0.3.4-Pillow-wheel-source-and-notice-supplement.zip",
+        "sha256": "sha256:a5811c2c3dfb45344b22f0a1bb19b305034c045f4912e6f6a91dcfa5591790d0",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/Folimeld-0.3.4-Pillow-wheel-source-and-notice-supplement.zip",
+        "bytes": 5853009
+      },
+      {
+        "name": "Folimeld-0.3.4-third-party-source-set.tar",
+        "sha256": "sha256:306c4c9525c5240c5564472b762b05a9c81aff7df362a117dc78049e1c748b7e",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/Folimeld-0.3.4-third-party-source-set.tar",
+        "bytes": 1456230400
+      },
+      {
+        "name": "Folimeld-source-281132ee8d40b75c0233b603bcb04e6132a0dcc856b45419d679ade7a2e51c90.zip",
+        "sha256": "sha256:281132ee8d40b75c0233b603bcb04e6132a0dcc856b45419d679ade7a2e51c90",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/Folimeld-source-281132ee8d40b75c0233b603bcb04e6132a0dcc856b45419d679ade7a2e51c90.zip",
+        "bytes": 15112004
+      },
+      {
+        "name": "Folimeld-source-5483477427254f56e4a82232bab0585d633abe0d5aac73eeb4be0234da197a4a.zip",
+        "sha256": "sha256:5483477427254f56e4a82232bab0585d633abe0d5aac73eeb4be0234da197a4a",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/Folimeld-source-5483477427254f56e4a82232bab0585d633abe0d5aac73eeb4be0234da197a4a.zip",
+        "bytes": 15112001
+      },
+      {
+        "name": "folimeld_0.3.4_amd64.deb",
+        "sha256": "sha256:c45a569b1c5015c3eb3768ce118b04dd8b0a35c1cda82b631978cdebfb0b8256",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/folimeld_0.3.4_amd64.deb",
+        "bytes": 107075008
+      },
+      {
+        "name": "folimeld_0.3.4_amd64.deb-c45a569b1c5015c3eb3768ce118b04dd8b0a35c1cda82b631978cdebfb0b8256.json",
+        "sha256": "sha256:4563015d4310666d08155e05ef4a000d531bbf442451bde2948d79feab8b43a6",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/folimeld_0.3.4_amd64.deb-c45a569b1c5015c3eb3768ce118b04dd8b0a35c1cda82b631978cdebfb0b8256.json",
+        "bytes": 775
+      },
+      {
+        "name": "folimeld_0.3.4_amd64.snap",
+        "sha256": "sha256:127f414cfbfc7ea0657618f187081b6bdc70ede9f773314fac5836acd5d3fbc9",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/folimeld_0.3.4_amd64.snap",
+        "bytes": 107565056
+      },
+      {
+        "name": "folimeld_0.3.4_amd64.snap-127f414cfbfc7ea0657618f187081b6bdc70ede9f773314fac5836acd5d3fbc9.json",
+        "sha256": "sha256:c37ac48b42fa4396deaef3a5ff0529bc5a4aeb9ce36020fd8ef477dbcb4c64e1",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/folimeld_0.3.4_amd64.snap-127f414cfbfc7ea0657618f187081b6bdc70ede9f773314fac5836acd5d3fbc9.json",
+        "bytes": 776
+      },
+      {
+        "name": "folimeld_0.3.4_arm64.deb",
+        "sha256": "sha256:33f5fbc490f189330032be6f33be267d6d1706e46a1c595de814f1b942e78731",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/folimeld_0.3.4_arm64.deb",
+        "bytes": 104525178
+      },
+      {
+        "name": "folimeld_0.3.4_arm64.deb-33f5fbc490f189330032be6f33be267d6d1706e46a1c595de814f1b942e78731.json",
+        "sha256": "sha256:61955a5edcf94cbb9b4ad003fadc82e3432d1a959ae698a99065a504ccfe48f3",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/folimeld_0.3.4_arm64.deb-33f5fbc490f189330032be6f33be267d6d1706e46a1c595de814f1b942e78731.json",
+        "bytes": 775
+      },
+      {
+        "name": "folimeld_0.3.4_arm64.snap",
+        "sha256": "sha256:2467427c2c7e68b9c3082a8aee2ee257adfeccd231f47b8b19e97a76164adc4f",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/folimeld_0.3.4_arm64.snap",
+        "bytes": 104996864
+      },
+      {
+        "name": "folimeld_0.3.4_arm64.snap-2467427c2c7e68b9c3082a8aee2ee257adfeccd231f47b8b19e97a76164adc4f.json",
+        "sha256": "sha256:8f26091df2e519dac7f4c52bfa18381d071cd1f46fe96f257ff83b3085848184",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/folimeld_0.3.4_arm64.snap-2467427c2c7e68b9c3082a8aee2ee257adfeccd231f47b8b19e97a76164adc4f.json",
+        "bytes": 776
+      },
+      {
+        "name": "native-dependency-provenance.json",
+        "sha256": "sha256:ff922263c17584c11d5dc426aa207765ce13cde9139cb028c0dc001ad5e495bf",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/native-dependency-provenance.json",
+        "bytes": 774770
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "sha256": "sha256:783012c9d82a0f48e600656b305d7698bf1a0f91b60bf5ac49a2714b4a7b2303",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/SHA256SUMS.txt",
+        "bytes": 1964
+      },
+      {
+        "name": "third-party-notices.tar.gz",
+        "sha256": "sha256:7d7c304d3ee0e94c4d198b1f216dc0f427eee88446d8bc1db56323ae7eef2997",
+        "url": "https://github.com/tyamada/Folimeld/releases/download/linux-v0.3.4/third-party-notices.tar.gz",
+        "bytes": 2015678
+      }
+    ]
+  },
+  "proposed_next_private_source_version": "0.3.5",
+  "proposal_is_not_public_release_or_main_version_change": true
+}

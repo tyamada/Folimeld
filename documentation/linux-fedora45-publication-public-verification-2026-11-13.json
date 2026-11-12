@@ -1,0 +1,82 @@
+{
+  "date_jst": "2026-11-13",
+  "public_unauthenticated_access_verified": true,
+  "release_url": "https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5",
+  "release_id": 443488626,
+  "published_at": "2026-11-12T20:47:02Z",
+  "draft": false,
+  "prerelease": true,
+  "not_latest": true,
+  "unchanged_latest_release_observed": "linux-v0.3.4",
+  "target_commit": "74366ba8a74a8efe65773ffd660e0fff42445f38",
+  "tag": "fedora45-amd64-v0.3.5",
+  "assets": [
+    {
+      "name": "dependency-source-manifest.json",
+      "bytes": 63794,
+      "digest": "sha256:3171e94c35d44de0516b166547039bb83d2c2c8c18a089cf58f7d1fe30c0d929",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/fedora45-amd64-v0.3.5/dependency-source-manifest.json"
+    },
+    {
+      "name": "folimeld-0.3.5-2.fc45.x86_64.rpm",
+      "bytes": 106437437,
+      "digest": "sha256:03c273625477385a8c92d246c7d7f44b50ed622afe656750f6b94a1b107c539b",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/fedora45-amd64-v0.3.5/folimeld-0.3.5-2.fc45.x86_64.rpm"
+    },
+    {
+      "name": "folimeld-0.3.5-2.fc45.x86_64.rpm-03c273625477385a8c92d246c7d7f44b50ed622afe656750f6b94a1b107c539b.json",
+      "bytes": 782,
+      "digest": "sha256:36b9e1c555ce902a029311c180aa27918fdcdee0ba69fc573836fd141cbc956b",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/fedora45-amd64-v0.3.5/folimeld-0.3.5-2.fc45.x86_64.rpm-03c273625477385a8c92d246c7d7f44b50ed622afe656750f6b94a1b107c539b.json"
+    },
+    {
+      "name": "Folimeld-fedora45-0.3.5-r2-dependency-sources.tar",
+      "bytes": 1788856320,
+      "digest": "sha256:daebd0d729661dad6c40e57e0f9dd8f4cb8965d074c5c71858343a371e3c768c",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/fedora45-amd64-v0.3.5/Folimeld-fedora45-0.3.5-r2-dependency-sources.tar"
+    },
+    {
+      "name": "Folimeld-source-76b4a7c37f071399d602965e1d348ab35cda3277d2ecf2c0b4ffad2392830836.zip",
+      "bytes": 23491783,
+      "digest": "sha256:76b4a7c37f071399d602965e1d348ab35cda3277d2ecf2c0b4ffad2392830836",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/fedora45-amd64-v0.3.5/Folimeld-source-76b4a7c37f071399d602965e1d348ab35cda3277d2ecf2c0b4ffad2392830836.zip"
+    },
+    {
+      "name": "KNOWN-LIMITATIONS.txt",
+      "bytes": 2336,
+      "digest": "sha256:eb3b46a4f9cc57d49b65fd8a5ee5ada53153140082e5b185b6bd54b9e0f2c639",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/fedora45-amd64-v0.3.5/KNOWN-LIMITATIONS.txt"
+    },
+    {
+      "name": "RELEASE-NOTES.txt",
+      "bytes": 5118,
+      "digest": "sha256:d1ef21b00c2dec28af9b0bf271c8b76772a4800c766f499893175f2241bba488",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/fedora45-amd64-v0.3.5/RELEASE-NOTES.txt"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 1115,
+      "digest": "sha256:3c6421c14d66da58b88eb4401a82b0819eb52ced2a660255ecca49d0dee50fdf",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/fedora45-amd64-v0.3.5/SHA256SUMS.txt"
+    },
+    {
+      "name": "third-party-notices.tar.gz",
+      "bytes": 1698985,
+      "digest": "sha256:f41ffcb068612f25a03682cc7aefb888db9e11e1ddd7e90308d8c6b5d3d1c401",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/fedora45-amd64-v0.3.5/third-party-notices.tar.gz"
+    },
+    {
+      "name": "verification-fedora45-amd64-0.3.5.json",
+      "bytes": 2838,
+      "digest": "sha256:bb98c9330ad2be7ff0337acab3d16a39951a4dd21e649d31c51d1054dacb0367",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/fedora45-amd64-v0.3.5/verification-fedora45-amd64-0.3.5.json"
+    },
+    {
+      "name": "verification-records-fedora45-amd64-0.3.5.zip",
+      "bytes": 1741792,
+      "digest": "sha256:1c61577cbe4e1cbf0497a2fa68412d0a5b03a8cb070a9c29d0990e8b8b79b069",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/fedora45-amd64-v0.3.5/verification-records-fedora45-amd64-0.3.5.zip"
+    }
+  ],
+  "public_checksum_download_hash_matches": true
+}

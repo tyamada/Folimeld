@@ -1,0 +1,38 @@
+{
+  "date_jst": "2026-11-13",
+  "published": false,
+  "pushed": false,
+  "bundle": "/home/folimeld-build/folimeld-candidates/fedora45-release-tree-20261113/Folimeld-fedora45-amd64-0.3.5-local-incremental.bundle",
+  "bytes": 6738425,
+  "sha256": "dff1f9f45593902eaebb6c472804bee850b0ebb4cc2f36be8275c8cdf789d52f",
+  "commit": "74366ba8a74a8efe65773ffd660e0fff42445f38",
+  "required_base_commit": "d1407b3efec245babfc8d462f2b3aedf966b413f",
+  "branch": "release/fedora45-amd64-0.3.5",
+  "checks": [
+    {
+      "command": [
+        "git",
+        "-C",
+        "/home/folimeld-build/folimeld-candidates/fedora45-release-tree-20261113/source",
+        "bundle",
+        "verify",
+        "/home/folimeld-build/folimeld-candidates/fedora45-release-tree-20261113/Folimeld-fedora45-amd64-0.3.5-local-incremental.bundle"
+      ],
+      "exit_code": 0,
+      "stdout": "The bundle contains this ref:\n74366ba8a74a8efe65773ffd660e0fff42445f38 refs/heads/release/fedora45-amd64-0.3.5\nThe bundle requires this ref:\nd1407b3efec245babfc8d462f2b3aedf966b413f \nThe bundle uses this hash algorithm: sha1\n",
+      "stderr": "/home/folimeld-build/folimeld-candidates/fedora45-release-tree-20261113/Folimeld-fedora45-amd64-0.3.5-local-incremental.bundle is okay\n"
+    },
+    {
+      "command": [
+        "git",
+        "bundle",
+        "list-heads",
+        "/home/folimeld-build/folimeld-candidates/fedora45-release-tree-20261113/Folimeld-fedora45-amd64-0.3.5-local-incremental.bundle"
+      ],
+      "exit_code": 0,
+      "stdout": "74366ba8a74a8efe65773ffd660e0fff42445f38 refs/heads/release/fedora45-amd64-0.3.5\n",
+      "stderr": ""
+    }
+  ],
+  "scope": "Incremental local transfer bundle requiring the named parent commit; not a full repository backup or publication"
+}

@@ -1,0 +1,600 @@
+{
+  "date_jst": "2026-11-13",
+  "files": [
+    {
+      "path": "common-origin.json",
+      "bytes": 21727,
+      "sha256": "95c914f25c1f340afe4493e911adec254be6c146179e6b15d8ec0219bad6484d"
+    },
+    {
+      "path": "crypto-notices/CFFI-libffi-x64.txt",
+      "bytes": 8725,
+      "sha256": "65c0d03531dcc6346ad1fd8269a347295181bb398ecc43f3d7e803c404a813ac"
+    },
+    {
+      "path": "crypto-notices/Cryptography-Rust.txt",
+      "bytes": 355981,
+      "sha256": "905e4c77b7db6cdbe6910c77708531449e538e220b962d4fd37fb3dc2ad9edab"
+    },
+    {
+      "path": "crypto-notices/OpenSSL.txt",
+      "bytes": 30063,
+      "sha256": "7e488e10f58d519c5d8748280f4a63517e21303c8cf99a8ed38fbf00a23310da"
+    },
+    {
+      "path": "crypto-notices/crypto-native-sources.json",
+      "bytes": 10409,
+      "sha256": "3ff081a91110328c790ca794e3d88322e20f84a4f2956421d6521353b6be1cb4"
+    },
+    {
+      "path": "crypto-upstream/sources/Pillow==12.3.0.json",
+      "bytes": 459,
+      "sha256": "cad322b18f135872eb3a56eaa73e91ff6bb9b5a8dff00fbfb5bb1331b22a2cdb"
+    },
+    {
+      "path": "crypto-upstream/sources/PyMuPDF==1.28.2.json",
+      "bytes": 463,
+      "sha256": "bc624e150fc4318d75153bb6099b4fe3628066428ec2f77d770de021bb815192"
+    },
+    {
+      "path": "crypto-upstream/sources/PySide6==6.11.2.json",
+      "bytes": 138,
+      "sha256": "2d5d7427798f8ae978056822e88e6f25c92c5f7f6f3e35b4247a038eb906bcc3"
+    },
+    {
+      "path": "crypto-upstream/sources/PySide6_Addons==6.11.2.json",
+      "bytes": 152,
+      "sha256": "277509ca7ac1e7406a6d83a56ec4744db48b65d789d3594300776a31daf7815b"
+    },
+    {
+      "path": "crypto-upstream/sources/PySide6_Essentials==6.11.2.json",
+      "bytes": 160,
+      "sha256": "0830fcc14ddf81c4f25a66798410dee8f548a04f16a67b2533907350be792561"
+    },
+    {
+      "path": "crypto-upstream/sources/cffi-2.1.1.tar.gz",
+      "bytes": 530807,
+      "sha256": "dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be"
+    },
+    {
+      "path": "crypto-upstream/sources/cffi==2.1.1.json",
+      "bytes": 447,
+      "sha256": "3a8077c7e9de7962d6c650004c063979a7e5f4ff143ccd94c25b956592b1054a"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-50.0.2.tar.gz",
+      "bytes": 880623,
+      "sha256": "7b46165bb56eb4704e2eaaf86f3c940d19154535d9b0ca7d6d590b04060e00d5"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/asn1-0.24.1.crate",
+      "bytes": 50502,
+      "sha256": "c9795210620c0cb3f9a7ce4f882808c38e1ef7b347c90591dceae0886e031fb1"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/asn1_derive-0.24.1.crate",
+      "bytes": 9534,
+      "sha256": "909e307f1cc32bb8bccbd98f446e6d1bf03fa30f7b53a4337da7181ad30fa11a"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/base64-0.23.0.crate",
+      "bytes": 93578,
+      "sha256": "b25655df2c3cdd83c5e5b293b88acd880332b2ddadd7c30ac43144fdc0033da9"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/bitflags-2.13.1.crate",
+      "bytes": 51395,
+      "sha256": "b588b76d00fde79687d7646a9b5bdf3cc0f655e0bbd080335a95d7e96f3587da"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/cc-1.4.0.crate",
+      "bytes": 97878,
+      "sha256": "5add81bb678e6cb321aff7fa0dc7689ad82b112dbc032cea19f91d6b8e3582b9"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/cfg-if-1.0.4.crate",
+      "bytes": 9360,
+      "sha256": "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/find-msvc-tools-0.1.9.crate",
+      "bytes": 31493,
+      "sha256": "5baebc0774151f905a1a2cc41989300b1e6fbb29aff0ceffa1064fdd3088d582"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/foreign-types-0.3.2.crate",
+      "bytes": 7504,
+      "sha256": "f6f339eb8adc052cd2ca78910fda869aefa38d22d5cb648e6485e4d3fc06f3b1"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/foreign-types-shared-0.1.1.crate",
+      "bytes": 5672,
+      "sha256": "00b0228411908ca8685dba7fc2cdd70ec9990a6e753e89b6ac91a84c40fbaf4b"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/heck-0.5.0.crate",
+      "bytes": 11517,
+      "sha256": "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/itoa-1.0.18.crate",
+      "bytes": 15935,
+      "sha256": "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/libc-0.2.189.crate",
+      "bytes": 851502,
+      "sha256": "3eaf3ede3fee6db1a4c2ee091bf8a8b4dccdc6d17f656fb07896ee72867612f2"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/once_cell-1.21.4.crate",
+      "bytes": 35010,
+      "sha256": "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/openssl-0.10.81.crate",
+      "bytes": 311187,
+      "sha256": "77823a27f0babb03091cb9ed9ef80af3b39dbc82f97e8fa530374b7dafd87a45"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/openssl-macros-0.1.1.crate",
+      "bytes": 5601,
+      "sha256": "a948666b637a0f465e8564c73e89d4dde00d72d4d473cc972f390fc3dcee7d9c"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/openssl-sys-0.9.117.crate",
+      "bytes": 76045,
+      "sha256": "b47e7e6bb2c38cd930d25a23b40fa52e068c10e85f3e03a7f5ba5aaca5713695"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/pem-4.0.0.crate",
+      "bytes": 18770,
+      "sha256": "d354a98a3d1251555de99e8fdd8afda05573c31b82f59063a7b0a29b5527f120"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/pkg-config-0.3.33.crate",
+      "bytes": 21590,
+      "sha256": "19f132c84eca552bf34cab8ec81f1c1dcc229b811638f9d283dceabe58c5569e"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/portable-atomic-1.14.0.crate",
+      "bytes": 200703,
+      "sha256": "3d20d5497ef88037a52ff98267d066e7f11fcc5e99bbfbd58a42336193aacec3"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/proc-macro2-1.0.107.crate",
+      "bytes": 59588,
+      "sha256": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/pyo3-0.29.2.crate",
+      "bytes": 1255741,
+      "sha256": "4688ddedf473e32662b9b067670129a8afb8c18e351482c70d62ba4a88171e8b"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/pyo3-build-config-0.29.2.crate",
+      "bytes": 41104,
+      "sha256": "f41027e41b4bd03f6e60f9f417fe24a6341a6bb744edd62b6f709f2a52ea30e9"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/pyo3-ffi-0.29.2.crate",
+      "bytes": 90029,
+      "sha256": "e591a95526fead067432c3b3a33fc74770b87b1e04e73671090d9c2055a2b327"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/pyo3-macros-0.29.2.crate",
+      "bytes": 9044,
+      "sha256": "73225868fc1cd84eef2c3c230ddb91273bf1de46aeb8a4248da76d32a0924a1c"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/pyo3-macros-backend-0.29.2.crate",
+      "bytes": 93749,
+      "sha256": "571575aa3749fa6216757dd47d2a3e7ef360f329a40f0666a9fbd14889024952"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/quote-1.0.47.crate",
+      "bytes": 31622,
+      "sha256": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/self_cell-1.3.0.crate",
+      "bytes": 23869,
+      "sha256": "2ab42ca02749e120097e328d91d415325bdf43b1c72c4c8badf37375fe40a813"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/shlex-2.0.1.crate",
+      "bytes": 19332,
+      "sha256": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/syn-2.0.119.crate",
+      "bytes": 307407,
+      "sha256": "872831b642d1a07999a962a351ed35b955ea2cfc8f3862091e2a240a84f17297"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/target-lexicon-0.13.5.crate",
+      "bytes": 26928,
+      "sha256": "adb6935a6f5c20170eeceb1a3835a49e12e19d792f6dd344ccc76a985ca5a6ca"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/unicode-ident-1.0.24.crate",
+      "bytes": 49298,
+      "sha256": "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography-rust/vcpkg-0.2.15.crate",
+      "bytes": 228735,
+      "sha256": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426"
+    },
+    {
+      "path": "crypto-upstream/sources/cryptography==50.0.2.json",
+      "bytes": 483,
+      "sha256": "a899869b43594724f9b01329ee2897a91105ed5de4095c70402fa9e3fddfe70c"
+    },
+    {
+      "path": "crypto-upstream/sources/openssl-4.0.3.tar.gz",
+      "bytes": 55235667,
+      "sha256": "325b5c806167c13b40b1ffeadfe0248197c00eccc4cf123ec1e28d2d2fd216d9"
+    },
+    {
+      "path": "crypto-upstream/sources/pillow-12.3.0.tar.gz",
+      "bytes": 47025035,
+      "sha256": "3b8182a766685eaa002637e28b4ec8d6b18819a0c71f579bf0dbaa5830297cce"
+    },
+    {
+      "path": "crypto-upstream/sources/pycparser-3.12.tar.gz",
+      "bytes": 158785,
+      "sha256": "f03387877eab82ce01bbdfd0ba7252ee55a90b1c708d5129e2ce915475cf1db6"
+    },
+    {
+      "path": "crypto-upstream/sources/pycparser==3.12.json",
+      "bytes": 463,
+      "sha256": "3e0765e9cb4c54d118baa1a37bf0b30e3c6a34c9296313784c31195f425d767c"
+    },
+    {
+      "path": "crypto-upstream/sources/pymupdf-1.28.2.tar.gz",
+      "bytes": 87903557,
+      "sha256": "5e0be7908a715aa20333caddd73f1d6f01e4cd0c26e869fa2dd0b7f344da2249"
+    },
+    {
+      "path": "crypto-upstream/sources/shiboken6==6.11.2.json",
+      "bytes": 142,
+      "sha256": "b9a9dd489ea07f8de573716b853aab5accffbfa0d039d76b777c70682f194979"
+    },
+    {
+      "path": "shared-upstream/icu73/ICU-73.2.txt",
+      "bytes": 25570,
+      "sha256": "049a4994d41b0d47a90c5c628113d6cc3d100d043baa9ebf6e11ae53fe1ea2ed"
+    },
+    {
+      "path": "shared-upstream/icu73/SHASUM512.txt",
+      "bytes": 1235,
+      "sha256": "645fb72d95d845bf994724ea7d9c51a9109c0d65abd514e77ec444bc25b22ce2"
+    },
+    {
+      "path": "shared-upstream/icu73/SHASUM512.txt.asc",
+      "bytes": 659,
+      "sha256": "21edc5c3f1fa52e08713b4427a444bb4e9d5a6e4fa144e733f1b6111bf941186"
+    },
+    {
+      "path": "shared-upstream/icu73/icu4c-73_2-src.tgz",
+      "bytes": 26519906,
+      "sha256": "818a80712ed3caacd9b652305e01afc7fa167e6f2e94996da44b90c2ab604ce1"
+    },
+    {
+      "path": "shared-upstream/icu73/icu4c-73_2-src.tgz.asc",
+      "bytes": 659,
+      "sha256": "ee0759320a3093fb3bd55345bfc38acc1b660414b9dde0ce36779616eda76ca7"
+    },
+    {
+      "path": "shared-upstream/icu73/verification.json",
+      "bytes": 2512,
+      "sha256": "206714e4a682aff81018da7638796a7f2758bfca59fd0f22eb59264a8a31b025"
+    },
+    {
+      "path": "shared-upstream/mupdf-runtime/verification.json",
+      "bytes": 9247,
+      "sha256": "3e76e623014d3143b7da7847bf1968ae41ebe492befd7b6e42e00eead9f7a670"
+    },
+    {
+      "path": "shared-upstream/origin-manifest.json",
+      "bytes": 11443,
+      "sha256": "85f832bca9346b4623d6b23d2ee3b5fc6fc066b2732e432b499d69e3eb1d2538"
+    },
+    {
+      "path": "shared-upstream/pillow/RPM-GPG-KEY-AlmaLinux-8",
+      "bytes": 5150,
+      "sha256": "2cbe597b108cefbf571d8d430d238d0a7a6575eebf6c80649be5e10c323e7023"
+    },
+    {
+      "path": "shared-upstream/pillow/codec-source-downloads.json",
+      "bytes": 1480,
+      "sha256": "2c2a43199cf0712c41da86f655f215114aef582f1be481ac35d366db6079ac43"
+    },
+    {
+      "path": "shared-upstream/pillow/collected-sources.json",
+      "bytes": 6838,
+      "sha256": "15c44d5f8008186949030c0a1b2cc3e22d993583d12b1a6c26d7c70f98d82ebf"
+    },
+    {
+      "path": "shared-upstream/pillow/libavif-external-build-references.json",
+      "bytes": 14208,
+      "sha256": "5ab8a4b6149b6c348cc157ac607bc791e3767517bc5696a6663d51713149f177"
+    },
+    {
+      "path": "shared-upstream/pillow/multibuild-pinned-scripts.json",
+      "bytes": 46133,
+      "sha256": "39114b97694c985f593601b596997cf0e481fc8ba454b65301330fa8a6795a2f"
+    },
+    {
+      "path": "shared-upstream/pillow/pillow-build-scripts.json",
+      "bytes": 114395,
+      "sha256": "2e2473c33876d4a8c2f9fd5e5e72766e30f35a964a56542c682d9a803e9bfe8d"
+    },
+    {
+      "path": "shared-upstream/pillow/pillow-dependency-definitions.json",
+      "bytes": 1295,
+      "sha256": "8562e45562767ff5479dd5b50d1f0df0f1f3b684e3a8a98108904c9795d68e69"
+    },
+    {
+      "path": "shared-upstream/pillow/pillow-depends-tree.json",
+      "bytes": 11012,
+      "sha256": "f9716bfc24accf71d614a419a96efb6bd336294503ceb491a49e338c89ac15b7"
+    },
+    {
+      "path": "shared-upstream/pillow/pillow-libXau-isolated-signature.json",
+      "bytes": 1717,
+      "sha256": "40d7fb4fbfd897a71ef3faf0c112bb4118dbb1466241cca19dda3ada6d329d87"
+    },
+    {
+      "path": "shared-upstream/pillow/pillow-libXau-source-attempts.json",
+      "bytes": 449,
+      "sha256": "82789ee56caec19bfdd90d048f9679b385a58af2543674517a86a2e8b9ab4ab4"
+    },
+    {
+      "path": "shared-upstream/pillow/pillow-libXau-source.json",
+      "bytes": 638,
+      "sha256": "87551ed07e68240f20f0aae6de2cd4a4a82b669c7f0e5b0c54051abc4bec7166"
+    },
+    {
+      "path": "shared-upstream/pillow/pillow-tag-tree.json",
+      "bytes": 560793,
+      "sha256": "c4ee2c977904163caad910865523e6714349ae0c106e51903829fd25f59aa242"
+    },
+    {
+      "path": "shared-upstream/pillow/sbom-patches.json",
+      "bytes": 528,
+      "sha256": "cb5b7c922a7714993b745a38e229206f0000ea17af4811a7296c98bb3f092d37"
+    },
+    {
+      "path": "shared-upstream/pillow/source-legal-inventory.json",
+      "bytes": 10668,
+      "sha256": "0db26fadfc48709654c79d8bf91ea7573aed0fffb5a0b16ca40507516dfff78c"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/aom-3.14.1.tar.gz",
+      "bytes": 6437908,
+      "sha256": "1335c548a5ce724e4c715ed3a5c511e2261360f6d5d87537bdaf36f095637488"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/brotli-1.2.0.tar.gz",
+      "bytes": 646315,
+      "sha256": "816c96e8e8f193b40151dad7e8ff37b1221d019dbcb9c35cd3fadbfe6477dfec"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/bzip2-1.0.8.tar.gz",
+      "bytes": 810029,
+      "sha256": "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/dav1d-1.5.3.tar.gz",
+      "bytes": 1713950,
+      "sha256": "cbe212b02faf8c6eed5b6d55ef8a6e363aaab83f15112e960701a9c3df813686"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/freetype-2.14.3.tar.gz",
+      "bytes": 4134916,
+      "sha256": "e61b31ab26358b946e767ed7eb7f4bb2e507da1cfefeb7a8861ace7fd5c899a1"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/fribidi-1.0.16.tar.gz",
+      "bytes": 2144176,
+      "sha256": "5a1d187a33daa58fcee2ad77f0eb9d136dd6fa4096239199ba31e850d397e8a8"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/harfbuzz-14.2.1.tar.xz",
+      "bytes": 19559952,
+      "sha256": "a54a5d8e9380a41fbb762ce367bcbf7704792dfca0d93f1bbca86c5a57902e0e"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/lcms2-2.19.1.tar.gz",
+      "bytes": 5728743,
+      "sha256": "bfc54f7bab59fbc921012014a8032e4cba4abd46db47d46b76416a8c0b2815c8"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/libXau-1.0.9-3.el8.src.rpm",
+      "bytes": 340502,
+      "sha256": "f9e5775417473caa6b5699171eec64253ef90473f36f0efe81d020b52a5de49a"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/libavif-1.4.2.tar.gz",
+      "bytes": 14665927,
+      "sha256": "2b645287340ba5a631d268b551dc2d72bd73ac33335962dd36dcdb6d8366921d"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/libimagequant-4.4.1.tar.gz",
+      "bytes": 88873,
+      "sha256": "2464a3e922b5a220b633d674062b82f0670114f8f3dd30d1935a621c95965f1b"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/libjpeg-turbo-3.1.4.1.tar.gz",
+      "bytes": 2528617,
+      "sha256": "ecae8008e2cc9ade2f2c1bb9d5e6d4fb73e7c433866a056bd82980741571a022"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/libpng-1.6.58.tar.gz",
+      "bytes": 1592190,
+      "sha256": "a9d4df463d36a6e5f9c29bd6f4967312d17e996c1854f3511f833924eb1993cf"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/libtiff-1.patch",
+      "bytes": 1754,
+      "sha256": "76c498bdc9b811799c3b517e3c05479ac346dfb3bd53dee69d2e3fbe2aa046e6"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/libwebp-1.6.0.tar.gz",
+      "bytes": 4296070,
+      "sha256": "e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/libxcb-1.17.0.tar.gz",
+      "bytes": 661593,
+      "sha256": "2c69287424c9e2128cb47ffe92171e10417041ec2963bceafb65cb3fcf8f0b85"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/libyuv-644251f25.tar.gz",
+      "bytes": 598388,
+      "sha256": "ede567609de1104b00bc9799e8c0f92522aded649861e9768be89dcfa1e90c4d"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/openjpeg-2.5.4.tar.gz",
+      "bytes": 2157028,
+      "sha256": "a695fbe19c0165f295a8531b1e4e855cd94d0875d2f88ec4b61080677e27188a"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/raqm-1.patch",
+      "bytes": 769,
+      "sha256": "c3fc16e183734de75c6be9bba8c01cdccab1a84691f97f1109b020c56b097125"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/raqm-2.patch",
+      "bytes": 222,
+      "sha256": "ac1a4941c6690c048abbe0a30ee9a43f1b6488a15e903b5fd213e06fb172a229"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/tiff-4.7.1.tar.gz",
+      "bytes": 4000609,
+      "sha256": "f698d94f3103da8ca7438d84e0344e453fe0ba3b7486e04c5bf7a9a3fabe9b69"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/xz-5.8.3.tar.gz",
+      "bytes": 2771455,
+      "sha256": "3d3a1b973af218114f4f889bbaa2f4c037deaae0c8e815eec381c3d546b974a0"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/zlib-ng-2.3.3.tar.gz",
+      "bytes": 2447397,
+      "sha256": "f9c65aa9c852eb8255b636fd9f07ce1c406f061ec19a2e7d508b318ca0c907d1"
+    },
+    {
+      "path": "shared-upstream/pillow/sources/zstd-1.5.7.tar.gz",
+      "bytes": 2434947,
+      "sha256": "eb33e51f49a15e023950cd7825ca74a4a2b43db8354825ac24fc1b7ee09e6fa3"
+    },
+    {
+      "path": "shared-upstream/pillow/wheel-build-metadata.json",
+      "bytes": 98799,
+      "sha256": "563ebea1aa27d95a54963221a9635970193c65f3da5400a5d37232b1c79639a6"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf/archive-inventory-summary.json",
+      "bytes": 3180,
+      "sha256": "6d71b71d873d1f878be6b21cbf3080db29ed7b4c1700e3df2d86eb2dd86f5d05"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf/mupdf-1.28.2-source.tar.gz",
+      "bytes": 68898646,
+      "sha256": "44075a84e329db55b9bef5f342a70fd26d69e48ad1d33cb89d9664581c641156"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf/mupdf-1.28.2-source.tar.gz-inventory.json",
+      "bytes": 43650,
+      "sha256": "f712443767993d52ddc0b52330711b4b205bd194cf2fba0228dfa85a642e91d7"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf/native-matches.json",
+      "bytes": 27969,
+      "sha256": "8ca329eb94aa238e244cca396a51049d9b0e6d52ec44f710dafe55ebf15c4565"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf/pymupdf-sdist-structure.json",
+      "bytes": 877,
+      "sha256": "a8e00b7289575acc422e6a01ce00d7b3b4ef8d9b23f569ff8751aea5299d6af1"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf/pymupdf-source-link.json",
+      "bytes": 1441,
+      "sha256": "6e60ba8b0fd8cd77d0e0a994765b1c31f5c5a824aa198e0bd0c10f9513a4b56a"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf/pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "bytes": 18053248,
+      "sha256": "cba47efbaad1bedd529725cbc14e21f156c7a19366f07b3edfbb076ffd7afdf8"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf/pyside-setup-everywhere-src-6.11.2.tar.xz-inventory.json",
+      "bytes": 9924,
+      "sha256": "5ea8cf4c744f6a9b57eb5fc0fcd6b4efbcd3ad3071fa438ff4d3d84457ecd0dc"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf/pyside-setup-everywhere-src-6.11.2.tar.xz.sha256",
+      "bytes": 108,
+      "sha256": "885a792beca6eb6928a60816ceb3388aa569ebf7578fae59435c3629c015b5b9"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf/qt-everywhere-src-6.11.2.tar.xz",
+      "bytes": 1019661552,
+      "sha256": "6dcfbca271d76a6502741a2c0dc6fc98ef7dd0b7b4cfd0abcebb285a86a26f33"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf/qt-everywhere-src-6.11.2.tar.xz-inventory.json",
+      "bytes": 1059188,
+      "sha256": "f636b4be055b8ba6cdbac5854193e532e0c034ffcff0c68e882b0fa668080c49"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf/qt-everywhere-src-6.11.2.tar.xz.sha256",
+      "bytes": 98,
+      "sha256": "082bb415897f79e39f513e1d1452ed9126d5a56a39150ae40ffd0493ed681aba"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf/sources.json",
+      "bytes": 2895,
+      "sha256": "5f5cd2584433045779767e61ebb2a9c7a1e4e551643587e52223451ec95d3c25"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf-notices/MuPDF-source-notices.txt",
+      "bytes": 337722,
+      "sha256": "c25bf9c6911cf1621fdb077b7bff8664b70b4b92cb5fa45272bb096c0db1051f"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf-notices/Qt-additional-referenced-licenses.txt",
+      "bytes": 24672,
+      "sha256": "b228737c8600dcbc683b4e7772314c41aea1d44290b98b5109c22bb2b12fe41c"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf-notices/Qt-source-notices.txt",
+      "bytes": 8946735,
+      "sha256": "bd737264006b8494508e7d3b51d8f6564b40f3944b76cdf937693cc749110360"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf-notices/additional-license-verification.json",
+      "bytes": 1039,
+      "sha256": "5b78d555b8e1b1ed2a3178d2e522ed46cf5d720c98038c6a2c69413d050eeec0"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf-notices/attribution-resolution.json",
+      "bytes": 11190,
+      "sha256": "431440ad0542144ed1e18e6f06df9a7620a80fa8b824e355dd84084d1fc2f448"
+    },
+    {
+      "path": "shared-upstream/qt-mupdf-notices/verification.json",
+      "bytes": 613481,
+      "sha256": "a6b86217e1e8b469437102a99673c8d3a34e5d9a1fedc691b265147c565aed6d"
+    },
+    {
+      "path": "ubuntu2404-os-notices.json",
+      "bytes": 94368,
+      "sha256": "67e43c32252f426d9e8f46a5de1cf132bacaa86da21b23510ce9a2ee5cb9814f"
+    }
+  ]
+}

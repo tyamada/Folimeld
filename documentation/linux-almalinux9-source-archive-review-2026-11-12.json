@@ -1,0 +1,47 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "original_archive_unchanged": true,
+  "source_archive_sha256": "2ee6749122db8bb0adf7b61fa377eaf56091a3fa8a0fecb2a798ac9edb9d2a6d",
+  "verified_zip_manifest_files": 683,
+  "source_paths_work_without_git": true,
+  "packaging_preflight": {
+    "exit_code": 0,
+    "stdout": "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/source-archive-review/source/releases/almalinux/9.8/x86_64/folimeld-0.3.5-3.alma9_8.x86_64.rpm\n",
+    "stderr": ""
+  },
+  "initial_test_result": "1 failed,14 passed,9 subtests: source-run test assumed no bundled Installed-packages.txt",
+  "fix": "Test uses isolated temporary license root to exercise missing-metadata fallback independently of distributed snapshots",
+  "modified_test_files_in_extracted_review_copy": [
+    "tests/test_license_info.py"
+  ],
+  "corrected_tests": {
+    "command": [
+      "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/test_license_info.py",
+      "tests/test_source_bundle.py",
+      "tests/test_linux_alma_rpm.py",
+      "--basetemp",
+      "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/source-archive-review/pytest-temp-fixed",
+      "-o",
+      "cache_dir=/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/source-archive-review/pytest-cache-fixed",
+      "-q"
+    ],
+    "exit_code": 0,
+    "stdout": "...............                                                 [100%]\n15 passed, 9 subtests passed in 0.21s\n",
+    "stderr": "",
+    "test_overlay_only": true,
+    "original_archive_unchanged": true
+  },
+  "ruff": {
+    "exit_code": 0,
+    "stdout": "All checks passed!\n"
+  },
+  "limitations": [
+    "Revision3 ZIP still contains the original test; corrected test is currently in main worktree and review overlay only",
+    "Not a second binary rebuild or reproducible-build claim",
+    "Version/release integration and final source decision remain pending"
+  ]
+}

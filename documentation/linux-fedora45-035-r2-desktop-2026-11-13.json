@@ -1,0 +1,890 @@
+{
+  "date_jst": "2026-11-13",
+  "published": false,
+  "package": "folimeld-0.3.5-2.fc45.x86_64",
+  "binary_sha256": "a87ae589b6d5dad22ea7d2a246d0764ec360b2439c47768a17970cc83da5680f",
+  "gio": {
+    "launch": {
+      "env": {
+        "SHELL": "/bin/bash",
+        "WSL2_GUI_APPS_ENABLED": "1",
+        "WSL_DISTRO_NAME": "Folimeld-Fedora45-Amd64-Test",
+        "NAME": "DESKTOP-8MG8TSN",
+        "PWD": "/mnt/c/Users/takum/Downloads/source/Folimeld",
+        "LOGNAME": "folimeld-test",
+        "HOME": "/home/folimeld-test",
+        "LANG": "en_US.UTF-8",
+        "WSL_INTEROP": "/run/WSL/564_interop",
+        "WAYLAND_DISPLAY": "wayland-0",
+        "TERM": "xterm-256color",
+        "USER": "folimeld-test",
+        "DISPLAY": ":0",
+        "SHLVL": "0",
+        "XDG_RUNTIME_DIR": "/home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/runtime",
+        "WSLENV": "",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/takum/AppData/Local/Microsoft/WindowsApps/Microsoft.PowerShell_8wekyb3d8bbwe:/mnt/c/Users/takum/.codex/tmp/arg0-windows/codex-arg0Hww25P:/mnt/c/Program Files/Oracle/VirtualBox:/mnt/c/Program Files/coreutils/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/takum/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/takum/.lmstudio/bin:/mnt/c/Users/takum/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/takum/AppData/Local/Python/bin:/mnt/c/Users/takum/AppData/Local/Python/pythoncore-3.14-64/Scripts:/mnt/c/Users/takum/AppData/Local/Programs/Swift/Toolchains/6.3.2+Asserts/usr/bin/:/mnt/c/Users/takum/AppData/Local/Programs/Swift/Runtimes/6.3.2/usr/bin/:/mnt/c/Users/takum/.dotnet/tools:/mnt/c/Users/takum/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/takum/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/takum/.vscode/extensions/openai.chatgpt-26.1106.51428-win32-x64/bin/windows-x86_64",
+        "HOSTTYPE": "x86_64",
+        "PULSE_SERVER": "unix:/mnt/wslg/PulseServer",
+        "_": "/usr/sbin/python3",
+        "QT_QPA_PLATFORM": "xcb",
+        "QT_IM_MODULE": "compose",
+        "XMODIFIERS": "",
+        "GIO_USE_PORTALS": "0",
+        "TMPDIR": "/home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/tmp",
+        "XDG_CONFIG_HOME": "/home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/config",
+        "XDG_CACHE_HOME": "/home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/cache",
+        "XDG_DATA_HOME": "/home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/data"
+      },
+      "commands": [
+        {
+          "command": [
+            "gio",
+            "info",
+            "-a",
+            "standard::content-type",
+            "/home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/日本語 パス/関連付け 試験.pdf"
+          ],
+          "exit_code": 0,
+          "stdout": "uri: file:///home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/%E6%97%A5%E6%9C%AC%E8%AA%9E%20%E3%83%91%E3%82%B9/%E9%96%A2%E9%80%A3%E4%BB%98%E3%81%91%20%E8%A9%A6%E9%A8%93.pdf\nlocal path: /home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/日本語 パス/関連付け 試験.pdf\nunix mount: /dev/sdd / ext4 rw,relatime,discard,errors=remount-ro,data=ordered\nattributes:\n  standard::content-type: application/pdf\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "gio",
+            "mime",
+            "application/pdf",
+            "folimeld.desktop"
+          ],
+          "exit_code": 0,
+          "stdout": "Set folimeld.desktop as the default for application/pdf\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "gio",
+            "mime",
+            "application/pdf"
+          ],
+          "exit_code": 0,
+          "stdout": "Default application for “application/pdf”: folimeld.desktop\nRegistered applications:\n\tfolimeld.desktop\nRecommended applications:\n\tfolimeld.desktop\n",
+          "stderr": ""
+        }
+      ],
+      "target": "/home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/日本語 パス/関連付け 試験.pdf",
+      "original": "/home/folimeld-test/verification/gui-20261112/fixtures/原本_日本語.pdf",
+      "initial_sha256": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+      "binary_sha256": "a87ae589b6d5dad22ea7d2a246d0764ec360b2439c47768a17970cc83da5680f"
+    },
+    "completed": {
+      "result": {
+        "exit_code": 0,
+        "output_log": "gio-open.log"
+      },
+      "inputs_unchanged": true,
+      "application_processes_stopped": [
+        587,
+        589
+      ],
+      "session_stopped": 578,
+      "gui_observed": true,
+      "pages_observed": 3
+    },
+    "log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+  },
+  "ime": {
+    "engine": "mozc-jp",
+    "environment": {
+      "QT_QPA_PLATFORM": "xcb",
+      "QT_IM_MODULE": "ibus",
+      "GTK_IM_MODULE": "ibus",
+      "XMODIFIERS": "@im=ibus"
+    },
+    "roman_input": "nihongo",
+    "hiragana_observed": "にほんご",
+    "kanji_observed": "日本語",
+    "committed": true,
+    "field": "Qt file-open dialog filename; cancelled without opening or saving"
+  },
+  "license_tabs_observed": [
+    "Folimeld",
+    "ICU-73.2",
+    "LibTIFF-LZW",
+    "Linux-OS-runtime-notices",
+    "MuPDF-source-notices",
+    "Qt-additional-referenced-licenses",
+    "Qt-source-notices"
+  ],
+  "limitations": [
+    "WSLg X11 only; no full desktop or file-manager double-click",
+    "IBus and GUI tools already installed; this is not a minimal installation",
+    "Initial GIO attempt had overbroad process matching and no exit result; isolated gio2 rerun exit 0 and GUI 3 pages observed",
+    "IBus engine setter returned 1; actual engine query exit 0 reported mozc-jp; direct input toggled before conversion"
+  ],
+  "logs": {
+    "version035-r2-desktop-20261113": {
+      "session.log": ""
+    },
+    "version035-r2-desktop-gio2-20261113": {
+      "gio-open.log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+      "session.log": ""
+    },
+    "version035-r2-ime-20261113": {
+      "engine-result.json": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}",
+      "session.log": "dbus-daemon[621]: [session uid=1000 pid=621 pidfd=5] Activating service name='org.freedesktop.portal.IBus' requested by ':1.0' (uid=1000 pid=624 comm=\"ibus-daemon --daemonize --xim --panel=disable\" label=\"kernel\")\ndbus-daemon[621]: [session uid=1000 pid=621 pidfd=5] Successfully activated service 'org.freedesktop.portal.IBus'\ndbus-daemon[621]: [session uid=1000 pid=621 pidfd=5] Activating service name='org.a11y.Bus' requested by ':1.3' (uid=1000 pid=630 comm=\"/usr/libexec/ibus-extension-gtk3\" label=\"kernel\")\ndbus-daemon[621]: [session uid=1000 pid=621 pidfd=5] Successfully activated service 'org.a11y.Bus'\ndbus-daemon[621]: [session uid=1000 pid=621 pidfd=5] Activating service name='org.freedesktop.portal.Desktop' requested by ':1.5' (uid=1000 pid=630 comm=\"/usr/libexec/ibus-extension-gtk3\" label=\"kernel\")\ndbus-daemon[621]: [session uid=1000 pid=621 pidfd=5] Activating service name='org.freedesktop.impl.portal.PermissionStore' requested by ':1.6' (uid=1000 pid=674 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[621]: [session uid=1000 pid=621 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'\ndbus-daemon[621]: [session uid=1000 pid=621 pidfd=5] Activating service name='org.freedesktop.portal.Documents' requested by ':1.6' (uid=1000 pid=674 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[621]: [session uid=1000 pid=621 pidfd=5] Successfully activated service 'org.freedesktop.portal.Documents'\n\n(/usr/libexec/xdg-desktop-portal:674): xdg-desktop-portal-WARNING **: 05:22:30.131: Choosing gtk.portal for org.freedesktop.impl.portal.Access as a last-resort fallback\ndbus-daemon[621]: [session uid=1000 pid=621 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.6' (uid=1000 pid=674 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[669]: Activating service name='org.a11y.atspi.Registry' requested by ':1.2' (uid=1000 pid=696 comm=\"/usr/libexec/xdg-desktop-portal-gtk\" label=\"kernel\")\ndbus-daemon[669]: Successfully activated service 'org.a11y.atspi.Registry'\ndbus-daemon[621]: [session uid=1000 pid=621 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'\nSpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry\n\n(/usr/libexec/xdg-desktop-portal:674): xdg-desktop-portal-WARNING **: 05:22:30.171: Choosing gtk.portal for org.freedesktop.impl.portal.Settings as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:674): xdg-desktop-portal-WARNING **: 05:22:30.172: Choosing gtk.portal for org.freedesktop.impl.portal.FileChooser as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:674): xdg-desktop-portal-WARNING **: 05:22:30.173: Choosing gtk.portal for org.freedesktop.impl.portal.AppChooser as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:674): xdg-desktop-portal-WARNING **: 05:22:30.173: Choosing gtk.portal for org.freedesktop.impl.portal.Print as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:674): xdg-desktop-portal-WARNING **: 05:22:30.174: Choosing gtk.portal for org.freedesktop.impl.portal.Notification as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:674): xdg-desktop-portal-WARNING **: 05:22:30.175: Choosing gtk.portal for org.freedesktop.impl.portal.Inhibit as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:674): xdg-desktop-portal-WARNING **: 05:22:30.185: Failed to connect to PipeWire: Couldn't connect to PipeWire\n\n(/usr/libexec/xdg-desktop-portal:674): xdg-desktop-portal-WARNING **: 05:22:30.185: Choosing gtk.portal for org.freedesktop.impl.portal.Account as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:674): xdg-desktop-portal-WARNING **: 05:22:30.186: Choosing gtk.portal for org.freedesktop.impl.portal.Email as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:674): xdg-desktop-portal-WARNING **: 05:22:30.187: Choosing gtk.portal for org.freedesktop.impl.portal.DynamicLauncher as a last-resort fallback\ndbus-daemon[621]: [session uid=1000 pid=621 pidfd=5] Successfully activated service 'org.freedesktop.portal.Desktop'\nTraceback (most recent call last):\n  File \"/home/folimeld-test/verification/version035-r2-ime-20261113/session.py\", line 8, in <module>\n    (p/'engine-result.json').write_text(json.dumps({'exit_code':r.returncode,'stdout':r.stdout,'stderr':r.stderr}));assert r.returncode==0\n                                                                                                                           ^^^^^^^^^^^^^^^\nAssertionError\n"
+    },
+    "version035-r2-ime2-20261113": {
+      "engine-result.json": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}",
+      "session.log": "dbus-daemon[758]: [session uid=1000 pid=758 pidfd=5] Activating service name='org.freedesktop.portal.IBus' requested by ':1.0' (uid=1000 pid=761 comm=\"ibus-daemon --daemonize --xim --panel=disable\" label=\"kernel\")\ndbus-daemon[758]: [session uid=1000 pid=758 pidfd=5] Successfully activated service 'org.freedesktop.portal.IBus'\ndbus-daemon[758]: [session uid=1000 pid=758 pidfd=5] Activating service name='org.a11y.Bus' requested by ':1.3' (uid=1000 pid=766 comm=\"/usr/libexec/ibus-extension-gtk3\" label=\"kernel\")\ndbus-daemon[758]: [session uid=1000 pid=758 pidfd=5] Successfully activated service 'org.a11y.Bus'\ndbus-daemon[758]: [session uid=1000 pid=758 pidfd=5] Activating service name='org.freedesktop.portal.Desktop' requested by ':1.5' (uid=1000 pid=766 comm=\"/usr/libexec/ibus-extension-gtk3\" label=\"kernel\")\ndbus-daemon[758]: [session uid=1000 pid=758 pidfd=5] Activating service name='org.freedesktop.impl.portal.PermissionStore' requested by ':1.6' (uid=1000 pid=797 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[758]: [session uid=1000 pid=758 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'\ndbus-daemon[758]: [session uid=1000 pid=758 pidfd=5] Activating service name='org.freedesktop.portal.Documents' requested by ':1.6' (uid=1000 pid=797 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[758]: [session uid=1000 pid=758 pidfd=5] Successfully activated service 'org.freedesktop.portal.Documents'\n\n(/usr/libexec/xdg-desktop-portal:797): xdg-desktop-portal-WARNING **: 05:22:54.668: Choosing gtk.portal for org.freedesktop.impl.portal.Access as a last-resort fallback\ndbus-daemon[758]: [session uid=1000 pid=758 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.6' (uid=1000 pid=797 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[792]: Activating service name='org.a11y.atspi.Registry' requested by ':1.2' (uid=1000 pid=819 comm=\"/usr/libexec/xdg-desktop-portal-gtk\" label=\"kernel\")\ndbus-daemon[792]: Successfully activated service 'org.a11y.atspi.Registry'\nSpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry\ndbus-daemon[758]: [session uid=1000 pid=758 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'\n\n(/usr/libexec/xdg-desktop-portal:797): xdg-desktop-portal-WARNING **: 05:22:54.705: Choosing gtk.portal for org.freedesktop.impl.portal.Settings as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:797): xdg-desktop-portal-WARNING **: 05:22:54.706: Choosing gtk.portal for org.freedesktop.impl.portal.FileChooser as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:797): xdg-desktop-portal-WARNING **: 05:22:54.707: Choosing gtk.portal for org.freedesktop.impl.portal.AppChooser as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:797): xdg-desktop-portal-WARNING **: 05:22:54.707: Choosing gtk.portal for org.freedesktop.impl.portal.Print as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:797): xdg-desktop-portal-WARNING **: 05:22:54.708: Choosing gtk.portal for org.freedesktop.impl.portal.Notification as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:797): xdg-desktop-portal-WARNING **: 05:22:54.709: Choosing gtk.portal for org.freedesktop.impl.portal.Inhibit as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:797): xdg-desktop-portal-WARNING **: 05:22:54.712: Failed to connect to PipeWire: Couldn't connect to PipeWire\n\n(/usr/libexec/xdg-desktop-portal:797): xdg-desktop-portal-WARNING **: 05:22:54.712: Choosing gtk.portal for org.freedesktop.impl.portal.Account as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:797): xdg-desktop-portal-WARNING **: 05:22:54.713: Choosing gtk.portal for org.freedesktop.impl.portal.Email as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:797): xdg-desktop-portal-WARNING **: 05:22:54.713: Choosing gtk.portal for org.freedesktop.impl.portal.DynamicLauncher as a last-resort fallback\ndbus-daemon[758]: [session uid=1000 pid=758 pidfd=5] Successfully activated service 'org.freedesktop.portal.Desktop'\nTraceback (most recent call last):\n  File \"/home/folimeld-test/verification/version035-r2-ime2-20261113/session.py\", line 13, in <module>\n    (p/'engine-result.json').write_text(json.dumps({'exit_code':r.returncode,'stdout':r.stdout,'stderr':r.stderr}));assert r.returncode==0\n                                                                                                                           ^^^^^^^^^^^^^^^\nAssertionError\n",
+      "engine-attempts.json": "[{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}, {\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}]"
+    },
+    "version035-r2-ime3-20261113": {
+      "engine-result.json": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}",
+      "session.log": "dbus-daemon[1030]: [session uid=1000 pid=1030 pidfd=5] Activating service name='org.freedesktop.portal.IBus' requested by ':1.0' (uid=1000 pid=1033 comm=\"ibus-daemon --daemonize --xim --panel=disable\" label=\"kernel\")\ndbus-daemon[1030]: [session uid=1000 pid=1030 pidfd=5] Successfully activated service 'org.freedesktop.portal.IBus'\ndbus-daemon[1030]: [session uid=1000 pid=1030 pidfd=5] Activating service name='org.a11y.Bus' requested by ':1.3' (uid=1000 pid=1038 comm=\"/usr/libexec/ibus-extension-gtk3\" label=\"kernel\")\ndbus-daemon[1030]: [session uid=1000 pid=1030 pidfd=5] Successfully activated service 'org.a11y.Bus'\ndbus-daemon[1030]: [session uid=1000 pid=1030 pidfd=5] Activating service name='org.freedesktop.portal.Desktop' requested by ':1.5' (uid=1000 pid=1038 comm=\"/usr/libexec/ibus-extension-gtk3\" label=\"kernel\")\ndbus-daemon[1030]: [session uid=1000 pid=1030 pidfd=5] Activating service name='org.freedesktop.impl.portal.PermissionStore' requested by ':1.6' (uid=1000 pid=1069 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[1030]: [session uid=1000 pid=1030 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'\ndbus-daemon[1030]: [session uid=1000 pid=1030 pidfd=5] Activating service name='org.freedesktop.portal.Documents' requested by ':1.6' (uid=1000 pid=1069 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[1030]: [session uid=1000 pid=1030 pidfd=5] Successfully activated service 'org.freedesktop.portal.Documents'\n\n(/usr/libexec/xdg-desktop-portal:1069): xdg-desktop-portal-WARNING **: 05:23:50.671: Choosing gtk.portal for org.freedesktop.impl.portal.Access as a last-resort fallback\ndbus-daemon[1030]: [session uid=1000 pid=1030 pidfd=5] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.6' (uid=1000 pid=1069 comm=\"/usr/libexec/xdg-desktop-portal\" label=\"kernel\")\ndbus-daemon[1064]: Activating service name='org.a11y.atspi.Registry' requested by ':1.2' (uid=1000 pid=1091 comm=\"/usr/libexec/xdg-desktop-portal-gtk\" label=\"kernel\")\ndbus-daemon[1064]: Successfully activated service 'org.a11y.atspi.Registry'\nSpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry\ndbus-daemon[1030]: [session uid=1000 pid=1030 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'\n\n(/usr/libexec/xdg-desktop-portal:1069): xdg-desktop-portal-WARNING **: 05:23:50.707: Choosing gtk.portal for org.freedesktop.impl.portal.Settings as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:1069): xdg-desktop-portal-WARNING **: 05:23:50.708: Choosing gtk.portal for org.freedesktop.impl.portal.FileChooser as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:1069): xdg-desktop-portal-WARNING **: 05:23:50.709: Choosing gtk.portal for org.freedesktop.impl.portal.AppChooser as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:1069): xdg-desktop-portal-WARNING **: 05:23:50.710: Choosing gtk.portal for org.freedesktop.impl.portal.Print as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:1069): xdg-desktop-portal-WARNING **: 05:23:50.710: Choosing gtk.portal for org.freedesktop.impl.portal.Notification as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:1069): xdg-desktop-portal-WARNING **: 05:23:50.711: Choosing gtk.portal for org.freedesktop.impl.portal.Inhibit as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:1069): xdg-desktop-portal-WARNING **: 05:23:50.713: Failed to connect to PipeWire: Couldn't connect to PipeWire\n\n(/usr/libexec/xdg-desktop-portal:1069): xdg-desktop-portal-WARNING **: 05:23:50.713: Choosing gtk.portal for org.freedesktop.impl.portal.Account as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:1069): xdg-desktop-portal-WARNING **: 05:23:50.714: Choosing gtk.portal for org.freedesktop.impl.portal.Email as a last-resort fallback\n\n(/usr/libexec/xdg-desktop-portal:1069): xdg-desktop-portal-WARNING **: 05:23:50.715: Choosing gtk.portal for org.freedesktop.impl.portal.DynamicLauncher as a last-resort fallback\ndbus-daemon[1030]: [session uid=1000 pid=1030 pidfd=5] Successfully activated service 'org.freedesktop.portal.Desktop'\n",
+      "app.log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+      "engine-attempts.json": "[{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"\"}]",
+      "engine-query.json": "{\"exit_code\": 0, \"stdout\": \"mozc-jp\\n\", \"stderr\": \"\"}"
+    }
+  },
+  "stopped_own_profile_processes": [
+    {
+      "pid": 249,
+      "command": "dbus-daemon --nofork --print-address 4 --session "
+    },
+    {
+      "pid": 579,
+      "command": "dbus-daemon --nofork --print-address 4 --session "
+    },
+    {
+      "pid": 580,
+      "command": "python3 /home/folimeld-test/verification/version035-r2-desktop-gio2-20261113/session.py "
+    },
+    {
+      "pid": 721,
+      "command": "/usr/libexec/mozc/mozc_server "
+    },
+    {
+      "pid": 844,
+      "command": "/usr/libexec/mozc/mozc_server "
+    },
+    {
+      "pid": 1029,
+      "command": "dbus-run-session -- python3 /home/folimeld-test/verification/version035-r2-ime3-20261113/session.py "
+    },
+    {
+      "pid": 1030,
+      "command": "dbus-daemon --nofork --print-address 4 --session "
+    },
+    {
+      "pid": 1031,
+      "command": "python3 /home/folimeld-test/verification/version035-r2-ime3-20261113/session.py "
+    },
+    {
+      "pid": 1033,
+      "command": "ibus-daemon --daemonize --xim --panel=disable "
+    },
+    {
+      "pid": 1041,
+      "command": "/usr/libexec/ibus-x11 --kill-daemon "
+    },
+    {
+      "pid": 1058,
+      "command": "/usr/libexec/at-spi-bus-launcher "
+    },
+    {
+      "pid": 1064,
+      "command": "/usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 12 --address=unix:path=/home/folimeld-test/verification/version035-r2-ime3-20261113/runtime/at-spi/bus_0 "
+    },
+    {
+      "pid": 1069,
+      "command": "/usr/libexec/xdg-desktop-portal "
+    },
+    {
+      "pid": 1075,
+      "command": "/usr/libexec/xdg-permission-store "
+    },
+    {
+      "pid": 1081,
+      "command": "/usr/libexec/xdg-document-portal "
+    },
+    {
+      "pid": 1091,
+      "command": ""
+    },
+    {
+      "pid": 1098,
+      "command": "/usr/libexec/at-spi2-registryd --use-gnome-session "
+    },
+    {
+      "pid": 1116,
+      "command": "/usr/libexec/mozc/mozc_server "
+    },
+    {
+      "pid": 1129,
+      "command": "/usr/bin/folimeld "
+    },
+    {
+      "pid": 1130,
+      "command": ""
+    },
+    {
+      "pid": 1232,
+      "command": "/usr/libexec/mozc/mozc_renderer "
+    }
+  ],
+  "ui_logs": {
+    "version035-r2-desktop-20261113": {
+      "ui-key-1794514830533062911.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "End"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794514857802975491.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600016",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/10-license-mupdf.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-right-1794514857504979188.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "--repeat",
+            "2",
+            "--delay",
+            "150",
+            "Right"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-right-1794514860029243083.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "--repeat",
+            "1",
+            "--delay",
+            "150",
+            "Right"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794514830828462989.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600016",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/05-license-last.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794514786868775959.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600007",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/02-help-menu.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-right-1794514855171521377.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "--repeat",
+            "3",
+            "--delay",
+            "150",
+            "Right"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-right-1794514858943267053.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "--repeat",
+            "3",
+            "--delay",
+            "150",
+            "Right"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794514838807791268.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600016",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/06-license-next.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794514786015728194.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600007",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/01-gio-loaded.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-key-1794514838464500130.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "Right"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-click-1794514786559851554.json": [
+        {
+          "command": [
+            "xdotool",
+            "mousemove",
+            "--window",
+            "0x600007",
+            "165",
+            "10",
+            "click",
+            "1"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794514856510099663.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600016",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/09-license-os.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794514859193321927.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600016",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/11-license-qt-extra.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-click-1794514829792610805.json": [
+        {
+          "command": [
+            "xdotool",
+            "mousemove",
+            "--window",
+            "0x600016",
+            "50",
+            "132",
+            "click",
+            "1"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794514801279452421.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600011",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/03-help.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-click-1794514808227395877.json": [
+        {
+          "command": [
+            "xdotool",
+            "mousemove",
+            "--window",
+            "0x600011",
+            "70",
+            "65",
+            "click",
+            "1"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794514854026029312.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600016",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/07-license-icu.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794514860276566670.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600016",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/12-license-qt-source.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-click-1794514794796943011.json": [
+        {
+          "command": [
+            "xdotool",
+            "mousemove",
+            "--window",
+            "0x600007",
+            "165",
+            "10",
+            "click",
+            "1"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794514855422274673.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600016",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/08-license-tiff.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-right-1794514856266567697.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "--repeat",
+            "1",
+            "--delay",
+            "150",
+            "Right"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-right-1794514853748592027.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "--repeat",
+            "6",
+            "--delay",
+            "150",
+            "Right"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794514820778984228.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600016",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/04-license.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    "version035-r2-desktop-gio2-20261113": {
+      "ui-shot-1794514949393982666.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0x600007",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/13-gio-retest.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    "version035-r2-ime-20261113": {},
+    "version035-r2-ime2-20261113": {},
+    "version035-r2-ime3-20261113": {
+      "ui-key-1794515068602849325.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "BackSpace"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-key-1794515067836027356.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "ctrl+a"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-click-1794515081178819995.json": [
+        {
+          "command": [
+            "xdotool",
+            "mousemove",
+            "--window",
+            "0xe00011",
+            "580",
+            "392",
+            "click",
+            "1"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794515080638936293.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0xe00011",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/17-ime-committed.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-key-1794515069337921081.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "Zenkaku_Hankaku"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794515059068939547.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0xe00011",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/14-ime-preedit.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-type-1794515071191446527.json": [
+        {
+          "command": [
+            "xdotool",
+            "type",
+            "--clearmodifiers",
+            "--delay",
+            "150",
+            "nihongo"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794515071440704890.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0xe00011",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/15-ime-hiragana.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-click-1794515056116907881.json": [
+        {
+          "command": [
+            "xdotool",
+            "mousemove",
+            "--window",
+            "0xe00011",
+            "220",
+            "360",
+            "click",
+            "1"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-open-1794515043934869751.json": [
+        {
+          "command": [
+            "xdotool",
+            "mousemove",
+            "--window",
+            "0xe00007",
+            "20",
+            "40",
+            "click",
+            "1"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-type-1794515058758511245.json": [
+        {
+          "command": [
+            "xdotool",
+            "type",
+            "--clearmodifiers",
+            "--delay",
+            "150",
+            "nihongo"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-open-1794515044546540930.json": [
+        {
+          "command": [
+            "xdotool",
+            "mousemove",
+            "--window",
+            "0xe00007",
+            "20",
+            "40",
+            "click",
+            "1"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-key-1794515080367613348.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "Return"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-key-1794515056887676468.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "ctrl+a"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-shot-1794515072373542468.json": [
+        {
+          "command": [
+            "timeout",
+            "3",
+            "import",
+            "-window",
+            "0xe00011",
+            "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-fedora45-035-r2-desktop/16-ime-kanji.png"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "ui-key-1794515072144803341.json": [
+        {
+          "command": [
+            "xdotool",
+            "key",
+            "--clearmodifiers",
+            "space"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    }
+  },
+  "screenshots": {
+    "documentation/linux-fedora45-035-r2-desktop/01-gio-loaded.png": "3c6d8cd6edb2a835b6e52d5705639a95143f0b0f3850a51b261a6a201580e86f",
+    "documentation/linux-fedora45-035-r2-desktop/02-help-menu.png": "3c6d8cd6edb2a835b6e52d5705639a95143f0b0f3850a51b261a6a201580e86f",
+    "documentation/linux-fedora45-035-r2-desktop/03-help.png": "d14691f29caa361d6e9c06e88066975ab95cb538cef1c907e04ca4fa57a971c4",
+    "documentation/linux-fedora45-035-r2-desktop/04-license.png": "58ba28312b143ab58fc00b0fc7159a8e8d874f0800ca91e17efc6298ba6fae26",
+    "documentation/linux-fedora45-035-r2-desktop/05-license-last.png": "58ba28312b143ab58fc00b0fc7159a8e8d874f0800ca91e17efc6298ba6fae26",
+    "documentation/linux-fedora45-035-r2-desktop/06-license-next.png": "a97b85881a4edc4c2440a276b4c6dcfef27f6c25ad222c3c16cc1823c6d24f5b",
+    "documentation/linux-fedora45-035-r2-desktop/07-license-icu.png": "8dd82b727fa3915a5fd72ee0ab1fcb1b904e889ed0f9a53e3ab291379ed403a5",
+    "documentation/linux-fedora45-035-r2-desktop/08-license-tiff.png": "ea47273868cd5ef0a56d5a4af8294b6fb980d1993072f608787f8a275141349a",
+    "documentation/linux-fedora45-035-r2-desktop/09-license-os.png": "197d9f4ce2102120f8194652f0145723b8850fd28e310814cb8a93bd81776d1f",
+    "documentation/linux-fedora45-035-r2-desktop/10-license-mupdf.png": "7bdf52d33a653967823fae215b8bf756fdc6a14a8670ae128a68fd4bea9dbbef",
+    "documentation/linux-fedora45-035-r2-desktop/11-license-qt-extra.png": "c04a645b1522bf326987280dbc07821b9f37e8ca7235ac612704af2ac9811a5f",
+    "documentation/linux-fedora45-035-r2-desktop/12-license-qt-source.png": "7fff15a61c9c93c686c4a38736c84a35c1bcdce34f72a1fe2e2771e1ac69e395",
+    "documentation/linux-fedora45-035-r2-desktop/13-gio-retest.png": "3c6d8cd6edb2a835b6e52d5705639a95143f0b0f3850a51b261a6a201580e86f",
+    "documentation/linux-fedora45-035-r2-desktop/14-ime-preedit.png": "ee29bcce3da10365627b64cf585c1a1a940cc13f89040ece060d4500136a99c0",
+    "documentation/linux-fedora45-035-r2-desktop/15-ime-hiragana.png": "aac9fdf6454f42cf455cd01e6100b5c4e6b941a657a08762b33ae57aa4efdd49",
+    "documentation/linux-fedora45-035-r2-desktop/16-ime-kanji.png": "8b840627d2f1591d282f166a0cb52f9e907aa8bd7e274e2870b5c1299c23d037",
+    "documentation/linux-fedora45-035-r2-desktop/17-ime-committed.png": "b880af3ea60d1592a34ca13060606fd5bf0c73a13993108d0d986b4f5ee81161"
+  }
+}

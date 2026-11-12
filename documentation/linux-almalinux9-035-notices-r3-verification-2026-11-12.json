@@ -1,0 +1,85 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "publication_ready": false,
+  "candidate": "/home/folimeld-build/folimeld-candidates/alma9-035-notices-r3-20261112",
+  "package_path": "/home/folimeld-build/folimeld-candidates/alma9-035-notices-r3-20261112/packages/folimeld-0.3.5-3.alma9_8.x86_64.rpm",
+  "package_sha256": "6a79478fb4485de0deaf126bbfed86d9cf003065a2c372e6a825937dbf4c6d69",
+  "executable_sha256": "026ceba16663ab58d62afed6f5a3fdfec41d0f59841665f05f6420dbf1fb5dbd",
+  "source_archive": "/home/folimeld-build/folimeld-candidates/alma9-035-notices-r3-20261112/source/dist/source/Folimeld-source-2ee6749122db8bb0adf7b61fa377eaf56091a3fa8a0fecb2a798ac9edb9d2a6d.zip",
+  "source_sha256": "2ee6749122db8bb0adf7b61fa377eaf56091a3fa8a0fecb2a798ac9edb9d2a6d",
+  "source_files_verified": 683,
+  "supplemental_notice_files_verified": [
+    "ICU-73.2.txt",
+    "Qt-source-notices.txt",
+    "Qt-additional-referenced-licenses.txt",
+    "MuPDF-source-notices.txt"
+  ],
+  "material_files_verified": 162,
+  "notice_sha256": "1fd35fc142f1d09927e85d944bf181bd89b23d2fed3c42733ed2afd22a70b6bf",
+  "notice_in_elf_and_source_zip": true,
+  "unchanged_native_entries": 210,
+  "all_folimeld_source_unchanged": true,
+  "virtualkeyboard_entries": [],
+  "test_log": "...............                                                 [100%]\n15 passed, 9 subtests passed in 0.27s\n",
+  "initial_build_commands": [
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_license_info.py",
+        "tests/test_source_bundle.py",
+        "tests/test_linux_alma_rpm.py",
+        "--basetemp",
+        "/home/folimeld-build/folimeld-candidates/alma9-035-notices-r3-20261112/pytest-temp",
+        "-o",
+        "cache_dir=/home/folimeld-build/folimeld-candidates/alma9-035-notices-r3-20261112/pytest-cache",
+        "-q"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/bin/python",
+        "tools/make_app_icon.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/bin/python",
+        "-m",
+        "PyInstaller",
+        "--noconfirm",
+        "--clean",
+        "Folimeld-linux.spec"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/bin/python",
+        "tools/package_linux_alma_rpm.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "artifact_source_association": {
+    "artifact": "folimeld-0.3.5-3.alma9_8.x86_64.rpm",
+    "artifact_sha256": "6a79478fb4485de0deaf126bbfed86d9cf003065a2c372e6a825937dbf4c6d69",
+    "executable": "folimeld",
+    "executable_sha256": "026ceba16663ab58d62afed6f5a3fdfec41d0f59841665f05f6420dbf1fb5dbd",
+    "association": "packaging script supplied executable; verify package contents before publication",
+    "source_archive": "Folimeld-source-2ee6749122db8bb0adf7b61fa377eaf56091a3fa8a0fecb2a798ac9edb9d2a6d.zip",
+    "source_sha256": "2ee6749122db8bb0adf7b61fa377eaf56091a3fa8a0fecb2a798ac9edb9d2a6d",
+    "git_commit": "423e59471b576e4732c7d6ec0ad9ab25cbf19582",
+    "working_tree_changed": true,
+    "dependency_sources": "NOT INCLUDED: obtain matching dependency sources and review bundled native components before distribution"
+  },
+  "remaining": [
+    "Install revision3 and verify supplemental license display and startup",
+    "Create separate revision3 staging/checksums; previous staging remains historical",
+    "Complete remaining third-party source/notice review and finalize release version"
+  ]
+}

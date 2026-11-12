@@ -1,0 +1,15 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "standalone_review_source_only": true,
+  "source_archive": "/home/folimeld-build/folimeld-candidates/alma9-final-integration-review-20261112-02/source/dist/source/Folimeld-source-578f68cdc6caf09dd56a22a32f7db05fcec989200ceafed01433c3002d636b14.zip",
+  "source_sha256": "578f68cdc6caf09dd56a22a32f7db05fcec989200ceafed01433c3002d636b14",
+  "verified_input_files": 686,
+  "paired_docs_in_snapshot": true,
+  "artifact_association_created": false,
+  "limitations": [
+    "This review snapshot is not the source archive embedded in revision4 RPM",
+    "A binary built from these documentation-updated inputs needs its own immutable artifact/source association before publication",
+    "No main-worktree changes, commits, tags or publication"
+  ]
+}

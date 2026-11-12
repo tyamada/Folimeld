@@ -1,0 +1,1 @@
+Ubuntu 24.04 amd64 DEB 0.3.5 candidate. OS copyright files collected locally; common upstream sources reused by hash. Exact native source mapping and deployment/GUI verification pending. Unpublished.

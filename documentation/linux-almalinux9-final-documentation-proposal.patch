@@ -1,0 +1,48 @@
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -4,7 +4,7 @@
+ 
+ ## Unreleased
+ 
+-- Prepare a Linux amd64 integration proposal with Fedora, openSUSE and AlmaLinux RPM recipes, thumbnail layout fixes and bootloader notice collection. Version 0.3.5 is a private proposal in an isolated copy, not a public platform release.
++- Prepare the 0.3.5 release candidate for AlmaLinux 9.8 / amd64. Verify RPM installation and upgrades and core PDF operations under WSL2/WSLg; include the thumbnail layout fix, supplemental PyInstaller, LibTIFF LZW, ICU and Qt/MuPDF notices, and source materials. Isolate the distributed-source test inputs. This remains unpublished and does not change public releases for other operating systems.
+ 
+ - Add signed application and private MuPDF dependency packages, matching source, build tools, and bilingual installation instructions for OpenBSD 8.0 / amd64
+ 
+--- a/CHANGELOG_ja.md
++++ b/CHANGELOG_ja.md
+@@ -4,7 +4,7 @@
+ 
+ ## 未リリース
+ 
+-- Linux amd64追加対応の統合案を準備。Fedora・openSUSE・AlmaLinux用RPM処理、サムネイル描画とブートローダー告知収集の修正を含む。0.3.5は専用コピー内の未公開案であり、対応OSの公開を示しません。
++- AlmaLinux 9.8 / amd64向け0.3.5公開候補を準備。RPMの導入・更新とWSL2/WSLg上の主要PDF操作を検証し、サムネイル描画修正、PyInstaller・LibTIFF LZW・ICU・Qt/MuPDF補足告知と対応ソース資料を収録。配布ソースのテストを独立した入力へ修正。まだ未公開で、他OSの公開版は変更しません。
+ 
+ - OpenBSD 8.0 / amd64向けに本体・専用MuPDF依存の署名付きパッケージ、対応ソース、ビルド工具と日英インストール手順を追加
+ 
+--- a/README.md
++++ b/README.md
+@@ -31,6 +31,10 @@
+ - Available for Windows 11, macOS, Ubuntu, and Debian, with previews for FreeBSD, NetBSD, and OpenBSD (see the table below for OS versions and CPUs)
+ 
+ Each BSD preview has its own target OS version, CPU, and verification record. See the OS sections below for the tested scope and installation instructions.
++
++### AlmaLinux 9 amd64 release preparation
++
++A 0.3.5/build1 candidate, RPM revision4, is being prepared after verification on AlmaLinux 9.8 under WSL2/WSLg. It is unpublished; existing Linux 0.3.4 distributions are retained. See the [release-description draft](documentation/linux-almalinux9-release-draft.md) for the tested installation, upgrade, PDF editing and Japanese input scope and remaining limitations. This does not establish support for conventional desktops, ARM64, AlmaLinux 10, or other RPM distributions.
+ 
+ ## Downloads
+ 
+--- a/README_ja.md
++++ b/README_ja.md
+@@ -31,6 +31,10 @@
+ - Windows 11、macOS、Ubuntu、Debianで利用可能。FreeBSD、NetBSD、OpenBSD向けに試験配布（対応OS版・CPUは下表を参照）
+ 
+ BSDの各配布物は、対象のOS版・CPUと検証記録に対応しています。確認範囲と導入手順は下記の各OS節を参照してください。
++
++### AlmaLinux 9 amd64の公開準備
++
++AlmaLinux 9.8のWSL2／WSLgで確認した0.3.5/build1、RPM revision4の公開候補を準備しています。まだ公開しておらず、既存のLinux 0.3.4配布物は保持します。導入・更新・PDF編集・日本語入力などの確認範囲と、未確認条件は[公開説明案](documentation/linux-almalinux9-release-draft_ja.md)を参照してください。通常デスクトップ、ARM64、AlmaLinux 10や他のRPM系OSの対応を示すものではありません。
+ 
+ ## ダウンロード
+ 

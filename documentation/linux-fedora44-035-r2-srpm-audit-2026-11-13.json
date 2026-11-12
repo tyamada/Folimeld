@@ -1,0 +1,2180 @@
+{
+  "date_jst": "2026-11-13",
+  "published": false,
+  "exact_srpms_required": 37,
+  "verified_srpms": 37,
+  "source_rpms": [
+    {
+      "name": "brotli",
+      "version": "1.2.1",
+      "release": "1.fc44",
+      "filename": "brotli-1.2.1-1.fc44.src.rpm",
+      "dnf_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/b/brotli-1.2.1-1.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/b/brotli-1.2.1-1.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/brotli-1.2.1-1.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/b/brotli-1.2.1-1.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/brotli-1.2.1-1.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "brotli|1.2.1|1.fc44|i686",
+          "bytes": 685889,
+          "sha256": "cc1697dd087f4a0049f09e161a478edd35ac58634d07e38d6fcaa75168b755a5"
+        }
+      ],
+      "bytes": 685889,
+      "sha256": "cc1697dd087f4a0049f09e161a478edd35ac58634d07e38d6fcaa75168b755a5"
+    },
+    {
+      "name": "bzip2",
+      "version": "1.0.8",
+      "release": "23.fc44",
+      "filename": "bzip2-1.0.8-23.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/b/bzip2-1.0.8-23.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/b/bzip2-1.0.8-23.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/bzip2-1.0.8-23.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/b/bzip2-1.0.8-23.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/bzip2-1.0.8-23.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "bzip2|1.0.8|23.fc44|i686",
+          "bytes": 848267,
+          "sha256": "42c4c2a3a6dabf3ce89e06dbf9c448bbdb76c8634d9680bde806a083a413d595"
+        }
+      ],
+      "bytes": 848267,
+      "sha256": "42c4c2a3a6dabf3ce89e06dbf9c448bbdb76c8634d9680bde806a083a413d595"
+    },
+    {
+      "name": "dbus",
+      "version": "1.16.2",
+      "release": "1.fc44",
+      "filename": "dbus-1.16.2-1.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/d/dbus-1.16.2-1.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/d/dbus-1.16.2-1.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/dbus-1.16.2-1.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/d/dbus-1.16.2-1.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/dbus-1.16.2-1.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "dbus|1.16.2|1.fc44|i686",
+          "bytes": 1218835,
+          "sha256": "427db36b938e69e01e526294cdc818b2e2ef432254c47d13717f074bd7b716ed"
+        }
+      ],
+      "bytes": 1218835,
+      "sha256": "427db36b938e69e01e526294cdc818b2e2ef432254c47d13717f074bd7b716ed"
+    },
+    {
+      "name": "e2fsprogs",
+      "version": "1.47.3",
+      "release": "4.fc44",
+      "filename": "e2fsprogs-1.47.3-4.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/e/e2fsprogs-1.47.3-4.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/e/e2fsprogs-1.47.3-4.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/e2fsprogs-1.47.3-4.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/e/e2fsprogs-1.47.3-4.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/e2fsprogs-1.47.3-4.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "e2fsprogs|1.47.3|4.fc44|i686",
+          "bytes": 7738806,
+          "sha256": "c9fb7311f0e72d27d8afe99770f665d6a647d36d6e64f24f7eb74bb783d9ac49"
+        }
+      ],
+      "bytes": 7738806,
+      "sha256": "c9fb7311f0e72d27d8afe99770f665d6a647d36d6e64f24f7eb74bb783d9ac49"
+    },
+    {
+      "name": "expat",
+      "version": "2.9.0",
+      "release": "1.fc44",
+      "filename": "expat-2.9.0-1.fc44.src.rpm",
+      "dnf_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/e/expat-2.9.0-1.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/e/expat-2.9.0-1.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/expat-2.9.0-1.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/e/expat-2.9.0-1.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/expat-2.9.0-1.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "expat|2.9.0|1.fc44|i686",
+          "bytes": 898121,
+          "sha256": "f5e2f60bf5c84c9f46fc1d41a8612d6cfd2c48f595bda4bce7d88c86e011ea84"
+        }
+      ],
+      "bytes": 898121,
+      "sha256": "f5e2f60bf5c84c9f46fc1d41a8612d6cfd2c48f595bda4bce7d88c86e011ea84"
+    },
+    {
+      "name": "fontconfig",
+      "version": "2.17.0",
+      "release": "4.fc44",
+      "filename": "fontconfig-2.17.0-4.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/f/fontconfig-2.17.0-4.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/f/fontconfig-2.17.0-4.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/fontconfig-2.17.0-4.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/f/fontconfig-2.17.0-4.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/fontconfig-2.17.0-4.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "fontconfig|2.17.0|4.fc44|i686",
+          "bytes": 1398138,
+          "sha256": "acc6564f8838a7d9e0b7a7fb9c5dbc0cd350c8f557c583f2a70a747bca00a8b2"
+        }
+      ],
+      "bytes": 1398138,
+      "sha256": "acc6564f8838a7d9e0b7a7fb9c5dbc0cd350c8f557c583f2a70a747bca00a8b2"
+    },
+    {
+      "name": "freetype",
+      "version": "2.14.3",
+      "release": "1.fc44",
+      "filename": "freetype-2.14.3-1.fc44.src.rpm",
+      "dnf_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/f/freetype-2.14.3-1.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/f/freetype-2.14.3-1.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/freetype-2.14.3-1.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/f/freetype-2.14.3-1.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/freetype-2.14.3-1.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "freetype|2.14.3|1.fc44|i686",
+          "bytes": 5267220,
+          "sha256": "26e13ab40351bfb970e0ee9f97805b75c0e4cb829a68e527846a712ed7afbbc1"
+        }
+      ],
+      "bytes": 5267220,
+      "sha256": "26e13ab40351bfb970e0ee9f97805b75c0e4cb829a68e527846a712ed7afbbc1"
+    },
+    {
+      "name": "gcc",
+      "version": "16.2.1",
+      "release": "3.fc44",
+      "filename": "gcc-16.2.1-3.fc44.src.rpm",
+      "dnf_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/g/gcc-16.2.1-3.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/g/gcc-16.2.1-3.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/gcc-16.2.1-3.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/g/gcc-16.2.1-3.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/gcc-16.2.1-3.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "gcc|16.2.1|3.fc44|i686",
+          "bytes": 104062449,
+          "sha256": "fd19463bd76aa0218330c6ce190a3c6e3a5a71950dbce5482a7ef898a34aff75"
+        }
+      ],
+      "bytes": 104062449,
+      "sha256": "fd19463bd76aa0218330c6ce190a3c6e3a5a71950dbce5482a7ef898a34aff75"
+    },
+    {
+      "name": "glib2",
+      "version": "2.88.4",
+      "release": "1.fc44",
+      "filename": "glib2-2.88.4-1.fc44.src.rpm",
+      "dnf_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/g/glib2-2.88.4-1.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/g/glib2-2.88.4-1.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/glib2-2.88.4-1.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/g/glib2-2.88.4-1.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/glib2-2.88.4-1.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "glib2|2.88.4|1.fc44|i686",
+          "bytes": 5886046,
+          "sha256": "e01f27c0dc697a6d6e746ceb6d3cf760c8ab2accde5786491bb9c4ba257ced06"
+        }
+      ],
+      "bytes": 5886046,
+      "sha256": "e01f27c0dc697a6d6e746ceb6d3cf760c8ab2accde5786491bb9c4ba257ced06"
+    },
+    {
+      "name": "graphite2",
+      "version": "1.3.14",
+      "release": "20.fc44",
+      "filename": "graphite2-1.3.14-20.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/g/graphite2-1.3.14-20.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/g/graphite2-1.3.14-20.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/graphite2-1.3.14-20.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/g/graphite2-1.3.14-20.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/graphite2-1.3.14-20.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "graphite2|1.3.14|20.fc44|i686",
+          "bytes": 6323883,
+          "sha256": "63c5192896e7cc747d9a1624bb29e74401ec837678990e977c0b8a1afa7a6b18"
+        }
+      ],
+      "bytes": 6323883,
+      "sha256": "63c5192896e7cc747d9a1624bb29e74401ec837678990e977c0b8a1afa7a6b18"
+    },
+    {
+      "name": "harfbuzz",
+      "version": "14.1.0",
+      "release": "2.fc44",
+      "filename": "harfbuzz-14.1.0-2.fc44.src.rpm",
+      "dnf_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/h/harfbuzz-14.1.0-2.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/h/harfbuzz-14.1.0-2.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/harfbuzz-14.1.0-2.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/h/harfbuzz-14.1.0-2.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/harfbuzz-14.1.0-2.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "harfbuzz|14.1.0|2.fc44|i686",
+          "bytes": 19561643,
+          "sha256": "6c3583416187570d8e2ec334d0ba63beb7e1678d3c40069f12a5ea6d3e10e274"
+        }
+      ],
+      "bytes": 19561643,
+      "sha256": "6c3583416187570d8e2ec334d0ba63beb7e1678d3c40069f12a5ea6d3e10e274"
+    },
+    {
+      "name": "keyutils",
+      "version": "1.6.3",
+      "release": "7.fc44",
+      "filename": "keyutils-1.6.3-7.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/k/keyutils-1.6.3-7.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/k/keyutils-1.6.3-7.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/keyutils-1.6.3-7.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/k/keyutils-1.6.3-7.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/keyutils-1.6.3-7.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "keyutils|1.6.3|7.fc44|i686",
+          "bytes": 163592,
+          "sha256": "107604addb854fc9d6798c5effa69dbc21c19c9980793308e33ab239803ce302"
+        }
+      ],
+      "bytes": 163592,
+      "sha256": "107604addb854fc9d6798c5effa69dbc21c19c9980793308e33ab239803ce302"
+    },
+    {
+      "name": "krb5",
+      "version": "1.22.2",
+      "release": "4.fc44",
+      "filename": "krb5-1.22.2-4.fc44.src.rpm",
+      "dnf_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/k/krb5-1.22.2-4.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/k/krb5-1.22.2-4.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/krb5-1.22.2-4.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/k/krb5-1.22.2-4.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/krb5-1.22.2-4.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "krb5|1.22.2|4.fc44|i686",
+          "bytes": 9068387,
+          "sha256": "927727bd555228d18840f2f44c1aa3519d66f7579082da20b8063a876933ff9f"
+        }
+      ],
+      "bytes": 9068387,
+      "sha256": "927727bd555228d18840f2f44c1aa3519d66f7579082da20b8063a876933ff9f"
+    },
+    {
+      "name": "libX11",
+      "version": "1.8.13",
+      "release": "3.fc44",
+      "filename": "libX11-1.8.13-3.fc44.src.rpm",
+      "dnf_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/l/libX11-1.8.13-3.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/l/libX11-1.8.13-3.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libX11-1.8.13-3.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/l/libX11-1.8.13-3.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libX11-1.8.13-3.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libX11|1.8.13|3.fc44|i686",
+          "bytes": 1836413,
+          "sha256": "3ae3b7a6016d7cf18b0542de7f35e2cde32d9855b412020d2b9dfc9e0fc16311"
+        }
+      ],
+      "bytes": 1836413,
+      "sha256": "3ae3b7a6016d7cf18b0542de7f35e2cde32d9855b412020d2b9dfc9e0fc16311"
+    },
+    {
+      "name": "libXau",
+      "version": "1.0.12",
+      "release": "4.fc44",
+      "filename": "libXau-1.0.12-4.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libXau-1.0.12-4.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libXau-1.0.12-4.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libXau-1.0.12-4.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libXau-1.0.12-4.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libXau-1.0.12-4.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libXau|1.0.12|4.fc44|i686",
+          "bytes": 311076,
+          "sha256": "e39b047d43a7e472e3e959211ecf4fec37566d48c456e2d37b260f148a429644"
+        }
+      ],
+      "bytes": 311076,
+      "sha256": "e39b047d43a7e472e3e959211ecf4fec37566d48c456e2d37b260f148a429644"
+    },
+    {
+      "name": "libXext",
+      "version": "1.3.6",
+      "release": "5.fc44",
+      "filename": "libXext-1.3.6-5.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libXext-1.3.6-5.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libXext-1.3.6-5.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libXext-1.3.6-5.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libXext-1.3.6-5.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libXext-1.3.6-5.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libXext|1.3.6|5.fc44|i686",
+          "bytes": 371428,
+          "sha256": "818af0c2c3b5c88904037f63807ba6cd643ec1818b6e4231cd42cc84ecb5f0f2"
+        }
+      ],
+      "bytes": 371428,
+      "sha256": "818af0c2c3b5c88904037f63807ba6cd643ec1818b6e4231cd42cc84ecb5f0f2"
+    },
+    {
+      "name": "libffi",
+      "version": "3.5.2",
+      "release": "2.fc44",
+      "filename": "libffi-3.5.2-2.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libffi-3.5.2-2.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libffi-3.5.2-2.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libffi-3.5.2-2.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libffi-3.5.2-2.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libffi-3.5.2-2.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libffi|3.5.2|2.fc44|i686",
+          "bytes": 1457752,
+          "sha256": "adaf4ac5cfb2f2dcec1045a8ea215a1d9564974e5ca8e87523c601cab7b0f868"
+        }
+      ],
+      "bytes": 1457752,
+      "sha256": "adaf4ac5cfb2f2dcec1045a8ea215a1d9564974e5ca8e87523c601cab7b0f868"
+    },
+    {
+      "name": "libpng",
+      "version": "1.6.59",
+      "release": "1.fc44",
+      "filename": "libpng-1.6.59-1.fc44.src.rpm",
+      "dnf_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/l/libpng-1.6.59-1.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/l/libpng-1.6.59-1.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libpng-1.6.59-1.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/l/libpng-1.6.59-1.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libpng-1.6.59-1.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libpng|1.6.59|1.fc44|i686",
+          "bytes": 1646686,
+          "sha256": "6307550a7b1ef97ae351f76723f36766d3051835fe9de54ff2d8dbbd43e0fd54"
+        }
+      ],
+      "bytes": 1646686,
+      "sha256": "6307550a7b1ef97ae351f76723f36766d3051835fe9de54ff2d8dbbd43e0fd54"
+    },
+    {
+      "name": "libselinux",
+      "version": "3.11",
+      "release": "2.fc44",
+      "filename": "libselinux-3.11-2.fc44.src.rpm",
+      "dnf_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/l/libselinux-3.11-2.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/l/libselinux-3.11-2.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libselinux-3.11-2.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/l/libselinux-3.11-2.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libselinux-3.11-2.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libselinux|3.11|2.fc44|i686",
+          "bytes": 407999,
+          "sha256": "5b2f8106134a6917fa797955af13492c55aa1020eaf118bb4296290f9058f75c"
+        }
+      ],
+      "bytes": 407999,
+      "sha256": "5b2f8106134a6917fa797955af13492c55aa1020eaf118bb4296290f9058f75c"
+    },
+    {
+      "name": "libxcb",
+      "version": "1.17.0",
+      "release": "7.fc44",
+      "filename": "libxcb-1.17.0-7.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libxcb-1.17.0-7.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libxcb-1.17.0-7.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libxcb-1.17.0-7.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libxcb-1.17.0-7.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libxcb-1.17.0-7.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libxcb|1.17.0|7.fc44|i686",
+          "bytes": 483622,
+          "sha256": "792d195bf3c0e29df4fa5ce545b18fc2428c75ad9f6a679707f66672b6ba75b6"
+        }
+      ],
+      "bytes": 483622,
+      "sha256": "792d195bf3c0e29df4fa5ce545b18fc2428c75ad9f6a679707f66672b6ba75b6"
+    },
+    {
+      "name": "libxkbcommon",
+      "version": "1.13.1",
+      "release": "2.fc44",
+      "filename": "libxkbcommon-1.13.1-2.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libxkbcommon-1.13.1-2.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libxkbcommon-1.13.1-2.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libxkbcommon-1.13.1-2.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libxkbcommon-1.13.1-2.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libxkbcommon-1.13.1-2.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libxkbcommon|1.13.1|2.fc44|i686",
+          "bytes": 1255277,
+          "sha256": "52928361da3ccd42c897e7db097c0c5f36dad88c5b143612135cc082d1e8d624"
+        }
+      ],
+      "bytes": 1255277,
+      "sha256": "52928361da3ccd42c897e7db097c0c5f36dad88c5b143612135cc082d1e8d624"
+    },
+    {
+      "name": "libxml2",
+      "version": "2.12.10",
+      "release": "6.fc44",
+      "filename": "libxml2-2.12.10-6.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libxml2-2.12.10-6.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libxml2-2.12.10-6.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libxml2-2.12.10-6.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libxml2-2.12.10-6.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/libxml2-2.12.10-6.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "libxml2|2.12.10|6.fc44|i686",
+          "bytes": 11721351,
+          "sha256": "48b9934c315765ea81e3b6053116f9acd886c0af5133245d768b296494bf8fcf"
+        }
+      ],
+      "bytes": 11721351,
+      "sha256": "48b9934c315765ea81e3b6053116f9acd886c0af5133245d768b296494bf8fcf"
+    },
+    {
+      "name": "mpdecimal",
+      "version": "4.0.1",
+      "release": "3.fc44",
+      "filename": "mpdecimal-4.0.1-3.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/m/mpdecimal-4.0.1-3.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/m/mpdecimal-4.0.1-3.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/mpdecimal-4.0.1-3.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/m/mpdecimal-4.0.1-3.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/mpdecimal-4.0.1-3.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "mpdecimal|4.0.1|3.fc44|i686",
+          "bytes": 1089321,
+          "sha256": "8d80c753242f964cced28119f58ed8e570050ff78b7157a4c32da8a22a27b722"
+        }
+      ],
+      "bytes": 1089321,
+      "sha256": "8d80c753242f964cced28119f58ed8e570050ff78b7157a4c32da8a22a27b722"
+    },
+    {
+      "name": "openssl",
+      "version": "3.5.9",
+      "release": "1.fc44",
+      "filename": "openssl-3.5.9-1.fc44.src.rpm",
+      "dnf_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/o/openssl-3.5.9-1.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/o/openssl-3.5.9-1.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/openssl-3.5.9-1.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/o/openssl-3.5.9-1.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/openssl-3.5.9-1.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "openssl|3.5.9|1.fc44|i686",
+          "bytes": 54104883,
+          "sha256": "7fcba40b5e09fde30a74552dca48b7a7ac70bc7fe088ab070d6234dbb1e45c49"
+        }
+      ],
+      "bytes": 54104883,
+      "sha256": "7fcba40b5e09fde30a74552dca48b7a7ac70bc7fe088ab070d6234dbb1e45c49"
+    },
+    {
+      "name": "pcre2",
+      "version": "10.49",
+      "release": "1.fc44",
+      "filename": "pcre2-10.49-1.fc44.src.rpm",
+      "dnf_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/p/pcre2-10.49-1.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/p/pcre2-10.49-1.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/pcre2-10.49-1.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/p/pcre2-10.49-1.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/pcre2-10.49-1.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "pcre2|10.49|1.fc44|i686",
+          "bytes": 2247221,
+          "sha256": "309012bbc44e63ebd22af013c94fdc1868b9603042820735a07dc923cae48eef"
+        }
+      ],
+      "bytes": 2247221,
+      "sha256": "309012bbc44e63ebd22af013c94fdc1868b9603042820735a07dc923cae48eef"
+    },
+    {
+      "name": "python3.14",
+      "version": "3.14.10",
+      "release": "1.fc44",
+      "filename": "python3.14-3.14.10-1.fc44.src.rpm",
+      "dnf_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/p/python3.14-3.14.10-1.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/p/python3.14-3.14.10-1.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/python3.14-3.14.10-1.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/p/python3.14-3.14.10-1.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/python3.14-3.14.10-1.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "python3.14|3.14.10|1.fc44|i686",
+          "bytes": 26510688,
+          "sha256": "ebc223830f5cb3d88b4829988526e04342dbbcd85d0e4b6328563309fab6ac0c"
+        }
+      ],
+      "bytes": 26510688,
+      "sha256": "ebc223830f5cb3d88b4829988526e04342dbbcd85d0e4b6328563309fab6ac0c"
+    },
+    {
+      "name": "systemd",
+      "version": "259.10",
+      "release": "1.fc44",
+      "filename": "systemd-259.10-1.fc44.src.rpm",
+      "dnf_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/s/systemd-259.10-1.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/s/systemd-259.10-1.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/systemd-259.10-1.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/s/systemd-259.10-1.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/systemd-259.10-1.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "systemd|259.10|1.fc44|i686",
+          "bytes": 17712307,
+          "sha256": "c5c75b64bcf9f21613310c301f5a768a8e92b7ef27607e99eb5acdbb18f376b2"
+        }
+      ],
+      "bytes": 17712307,
+      "sha256": "c5c75b64bcf9f21613310c301f5a768a8e92b7ef27607e99eb5acdbb18f376b2"
+    },
+    {
+      "name": "util-linux",
+      "version": "2.41.6",
+      "release": "1.fc44",
+      "filename": "util-linux-2.41.6-1.fc44.src.rpm",
+      "dnf_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/u/util-linux-2.41.6-1.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/u/util-linux-2.41.6-1.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/util-linux-2.41.6-1.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/u/util-linux-2.41.6-1.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/util-linux-2.41.6-1.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "util-linux|2.41.6|1.fc44|i686",
+          "bytes": 9543704,
+          "sha256": "ec6d85432583517b742bb2006af6e2ab4d9308e4e99e8a6f693f4f5d5b39aadd"
+        }
+      ],
+      "bytes": 9543704,
+      "sha256": "ec6d85432583517b742bb2006af6e2ab4d9308e4e99e8a6f693f4f5d5b39aadd"
+    },
+    {
+      "name": "xcb-util",
+      "version": "0.4.1",
+      "release": "9.fc44",
+      "filename": "xcb-util-0.4.1-9.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-0.4.1-9.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-0.4.1-9.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/xcb-util-0.4.1-9.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-0.4.1-9.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/xcb-util-0.4.1-9.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "xcb-util|0.4.1|9.fc44|i686",
+          "bytes": 291431,
+          "sha256": "2947cb5b16e5a16e10e8d589a7667c68213650d7a4808164260dec6fd3dff6ef"
+        }
+      ],
+      "bytes": 291431,
+      "sha256": "2947cb5b16e5a16e10e8d589a7667c68213650d7a4808164260dec6fd3dff6ef"
+    },
+    {
+      "name": "xcb-util-cursor",
+      "version": "0.1.6",
+      "release": "2.fc44",
+      "filename": "xcb-util-cursor-0.1.6-2.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-cursor-0.1.6-2.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-cursor-0.1.6-2.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/xcb-util-cursor-0.1.6-2.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-cursor-0.1.6-2.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/xcb-util-cursor-0.1.6-2.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "xcb-util-cursor|0.1.6|2.fc44|i686",
+          "bytes": 293522,
+          "sha256": "e0a71daf8c4fd458231203427d8c5c1bea0ec63fb326a9def5c4435ca9bf5fe1"
+        }
+      ],
+      "bytes": 293522,
+      "sha256": "e0a71daf8c4fd458231203427d8c5c1bea0ec63fb326a9def5c4435ca9bf5fe1"
+    },
+    {
+      "name": "xcb-util-image",
+      "version": "0.4.1",
+      "release": "9.fc44",
+      "filename": "xcb-util-image-0.4.1-9.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-image-0.4.1-9.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-image-0.4.1-9.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/xcb-util-image-0.4.1-9.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-image-0.4.1-9.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/xcb-util-image-0.4.1-9.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "xcb-util-image|0.4.1|9.fc44|i686",
+          "bytes": 309981,
+          "sha256": "34c82b89674fec1b7bf7092db6aabd4cf41669fc870fea7384284f1e43c2ed8c"
+        }
+      ],
+      "bytes": 309981,
+      "sha256": "34c82b89674fec1b7bf7092db6aabd4cf41669fc870fea7384284f1e43c2ed8c"
+    },
+    {
+      "name": "xcb-util-keysyms",
+      "version": "0.4.1",
+      "release": "9.fc44",
+      "filename": "xcb-util-keysyms-0.4.1-9.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-keysyms-0.4.1-9.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-keysyms-0.4.1-9.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/xcb-util-keysyms-0.4.1-9.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-keysyms-0.4.1-9.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/xcb-util-keysyms-0.4.1-9.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "xcb-util-keysyms|0.4.1|9.fc44|i686",
+          "bytes": 280611,
+          "sha256": "d6559879fa5fc79112b6e9dcd40a2dfb5658208af76bd463c6f48e39af06acb0"
+        }
+      ],
+      "bytes": 280611,
+      "sha256": "d6559879fa5fc79112b6e9dcd40a2dfb5658208af76bd463c6f48e39af06acb0"
+    },
+    {
+      "name": "xcb-util-renderutil",
+      "version": "0.3.10",
+      "release": "9.fc44",
+      "filename": "xcb-util-renderutil-0.3.10-9.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-renderutil-0.3.10-9.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-renderutil-0.3.10-9.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/xcb-util-renderutil-0.3.10-9.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-renderutil-0.3.10-9.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/xcb-util-renderutil-0.3.10-9.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "xcb-util-renderutil|0.3.10|9.fc44|i686",
+          "bytes": 282711,
+          "sha256": "83a489082bb2f33ea630a7110a764ab56fc90aad53f09fe65e230d11177622fc"
+        }
+      ],
+      "bytes": 282711,
+      "sha256": "83a489082bb2f33ea630a7110a764ab56fc90aad53f09fe65e230d11177622fc"
+    },
+    {
+      "name": "xcb-util-wm",
+      "version": "0.4.2",
+      "release": "9.fc44",
+      "filename": "xcb-util-wm-0.4.2-9.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-wm-0.4.2-9.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-wm-0.4.2-9.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/xcb-util-wm-0.4.2-9.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-wm-0.4.2-9.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/xcb-util-wm-0.4.2-9.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "xcb-util-wm|0.4.2|9.fc44|i686",
+          "bytes": 306287,
+          "sha256": "d77ec39f9f98e1cbe4f32bfa4e3bf2c32762edea58ef72ed997b4e6350d340e8"
+        }
+      ],
+      "bytes": 306287,
+      "sha256": "d77ec39f9f98e1cbe4f32bfa4e3bf2c32762edea58ef72ed997b4e6350d340e8"
+    },
+    {
+      "name": "xz",
+      "version": "5.8.2",
+      "release": "2.fc44",
+      "filename": "xz-5.8.2-2.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xz-5.8.2-2.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xz-5.8.2-2.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/xz-5.8.2-2.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xz-5.8.2-2.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/xz-5.8.2-2.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "xz|5.8.2|2.fc44|i686",
+          "bytes": 2738055,
+          "sha256": "e77c06b3e9baedc9b0af5cf5f3f9e7040f40858655c4de2310cdc0adba0e8d3b"
+        }
+      ],
+      "bytes": 2738055,
+      "sha256": "e77c06b3e9baedc9b0af5cf5f3f9e7040f40858655c4de2310cdc0adba0e8d3b"
+    },
+    {
+      "name": "zlib-ng",
+      "version": "2.3.3",
+      "release": "3.fc44",
+      "filename": "zlib-ng-2.3.3-3.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/z/zlib-ng-2.3.3-3.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/z/zlib-ng-2.3.3-3.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/zlib-ng-2.3.3-3.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/z/zlib-ng-2.3.3-3.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/zlib-ng-2.3.3-3.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "zlib-ng|2.3.3|3.fc44|i686",
+          "bytes": 2467915,
+          "sha256": "adf10259cb65005693c3f21b632640c224b5a5725d6e7e49219cba68417a9191"
+        }
+      ],
+      "bytes": 2467915,
+      "sha256": "adf10259cb65005693c3f21b632640c224b5a5725d6e7e49219cba68417a9191"
+    },
+    {
+      "name": "zstd",
+      "version": "1.5.7",
+      "release": "5.fc44",
+      "filename": "zstd-1.5.7-5.fc44.src.rpm",
+      "dnf_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/z/zstd-1.5.7-5.fc44.src.rpm",
+      "verified": true,
+      "attempts": [
+        {
+          "url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/z/zstd-1.5.7-5.fc44.src.rpm",
+          "path": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/zstd-1.5.7-5.fc44.src.rpm.attempt-1",
+          "resolved_url": "https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/z/zstd-1.5.7-5.fc44.src.rpm",
+          "signature_exit": 0,
+          "signature_stdout": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/srpms/zstd-1.5.7-5.fc44.src.rpm.attempt-1:\n    Header OpenPGP V4 RSA/SHA256 signature, key fingerprint: 36f612dcf27f7d1a48a835e4dbfcf71c6d9f90a6: OK\n    Header SHA256 digest: OK\n    Payload SHA256 digest: OK\n",
+          "signature_stderr": "",
+          "status": "verified",
+          "metadata": "zstd|1.5.7|5.fc44|i686",
+          "bytes": 2477604,
+          "sha256": "498f6cfd46e3a8c5d1b56a30df1ae32fffd11743911e89caa64b1e03b9b7c6df"
+        }
+      ],
+      "bytes": 2477604,
+      "sha256": "498f6cfd46e3a8c5d1b56a30df1ae32fffd11743911e89caa64b1e03b9b7c6df"
+    }
+  ],
+  "keys": [
+    {
+      "path": "/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-44-primary",
+      "sha256": "93642aec521a1e5e96dd715f7ae0ec0850ebc9de09a94ce03cae5263f26cc18a"
+    },
+    {
+      "path": "/usr/share/pki/rpm-gpg/RPM-GPG-KEY-fedora-44-primary",
+      "sha256": "93642aec521a1e5e96dd715f7ae0ec0850ebc9de09a94ce03cae5263f26cc18a"
+    }
+  ],
+  "isolated_rpmdb": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113/fedora-source-audit/isolated-rpmdb",
+  "system_trust_unchanged": true,
+  "existing_candidate_unchanged": true,
+  "limitations": [
+    "SRPM name/version/release matches installed RPM SOURCERPM metadata; not independent reproducible compilation",
+    "DNF-selected mirror HTTPS source and isolated Fedora44-key signature verification; failed attempts retained",
+    "Additional source audit is not yet included in revision2 embedded material manifest"
+  ],
+  "corrected_source_query": {
+    "date_jst": "2026-11-13",
+    "published": false,
+    "candidate_unchanged": true,
+    "os_native_entries": 102,
+    "owner_packages": [
+      "bzip2-libs|1.0.8|23.fc44|x86_64",
+      "dbus-libs|1.16.2|1.fc44|x86_64",
+      "expat|2.9.0|1.fc44|x86_64",
+      "fontconfig|2.17.0|4.fc44|x86_64",
+      "freetype|2.14.3|1.fc44|x86_64",
+      "glib2|2.88.4|1.fc44|x86_64",
+      "graphite2|1.3.14|20.fc44|x86_64",
+      "harfbuzz|14.1.0|2.fc44|x86_64",
+      "keyutils-libs|1.6.3|7.fc44|x86_64",
+      "krb5-libs|1.22.2|4.fc44|x86_64",
+      "libX11-xcb|1.8.13|3.fc44|x86_64",
+      "libX11|1.8.13|3.fc44|x86_64",
+      "libXau|1.0.12|4.fc44|x86_64",
+      "libXext|1.3.6|5.fc44|x86_64",
+      "libblkid|2.41.6|1.fc44|x86_64",
+      "libbrotli|1.2.1|1.fc44|x86_64",
+      "libcom_err|1.47.3|4.fc44|x86_64",
+      "libffi|3.5.2|2.fc44|x86_64",
+      "libgcc|16.2.1|3.fc44|x86_64",
+      "libmount|2.41.6|1.fc44|x86_64",
+      "libpng|1.6.59|1.fc44|x86_64",
+      "libselinux|3.11|2.fc44|x86_64",
+      "libstdc++|16.2.1|3.fc44|x86_64",
+      "libxcb|1.17.0|7.fc44|x86_64",
+      "libxkbcommon-x11|1.13.1|2.fc44|x86_64",
+      "libxkbcommon|1.13.1|2.fc44|x86_64",
+      "libxml2|2.12.10|6.fc44|x86_64",
+      "libzstd|1.5.7|5.fc44|x86_64",
+      "mpdecimal|4.0.1|3.fc44|x86_64",
+      "openssl-libs|3.5.9|1.fc44|x86_64",
+      "pcre2|10.49|1.fc44|x86_64",
+      "python3-libs|3.14.10|1.fc44|x86_64",
+      "systemd-libs|259.10|1.fc44|x86_64",
+      "xcb-util-cursor|0.1.6|2.fc44|x86_64",
+      "xcb-util-image|0.4.1|9.fc44|x86_64",
+      "xcb-util-keysyms|0.4.1|9.fc44|x86_64",
+      "xcb-util-renderutil|0.3.10|9.fc44|x86_64",
+      "xcb-util-wm|0.4.2|9.fc44|x86_64",
+      "xcb-util|0.4.1|9.fc44|x86_64",
+      "xz-libs|5.8.2|2.fc44|x86_64",
+      "zlib-ng-compat|2.3.3|3.fc44|x86_64"
+    ],
+    "exact_source_rpm_names": [
+      "brotli-1.2.1-1.fc44.src.rpm",
+      "bzip2-1.0.8-23.fc44.src.rpm",
+      "dbus-1.16.2-1.fc44.src.rpm",
+      "e2fsprogs-1.47.3-4.fc44.src.rpm",
+      "expat-2.9.0-1.fc44.src.rpm",
+      "fontconfig-2.17.0-4.fc44.src.rpm",
+      "freetype-2.14.3-1.fc44.src.rpm",
+      "gcc-16.2.1-3.fc44.src.rpm",
+      "glib2-2.88.4-1.fc44.src.rpm",
+      "graphite2-1.3.14-20.fc44.src.rpm",
+      "harfbuzz-14.1.0-2.fc44.src.rpm",
+      "keyutils-1.6.3-7.fc44.src.rpm",
+      "krb5-1.22.2-4.fc44.src.rpm",
+      "libX11-1.8.13-3.fc44.src.rpm",
+      "libXau-1.0.12-4.fc44.src.rpm",
+      "libXext-1.3.6-5.fc44.src.rpm",
+      "libffi-3.5.2-2.fc44.src.rpm",
+      "libpng-1.6.59-1.fc44.src.rpm",
+      "libselinux-3.11-2.fc44.src.rpm",
+      "libxcb-1.17.0-7.fc44.src.rpm",
+      "libxkbcommon-1.13.1-2.fc44.src.rpm",
+      "libxml2-2.12.10-6.fc44.src.rpm",
+      "mpdecimal-4.0.1-3.fc44.src.rpm",
+      "openssl-3.5.9-1.fc44.src.rpm",
+      "pcre2-10.49-1.fc44.src.rpm",
+      "python3.14-3.14.10-1.fc44.src.rpm",
+      "systemd-259.10-1.fc44.src.rpm",
+      "util-linux-2.41.6-1.fc44.src.rpm",
+      "xcb-util-0.4.1-9.fc44.src.rpm",
+      "xcb-util-cursor-0.1.6-2.fc44.src.rpm",
+      "xcb-util-image-0.4.1-9.fc44.src.rpm",
+      "xcb-util-keysyms-0.4.1-9.fc44.src.rpm",
+      "xcb-util-renderutil-0.3.10-9.fc44.src.rpm",
+      "xcb-util-wm-0.4.2-9.fc44.src.rpm",
+      "xz-5.8.2-2.fc44.src.rpm",
+      "zlib-ng-2.3.3-3.fc44.src.rpm",
+      "zstd-1.5.7-5.fc44.src.rpm"
+    ],
+    "entries": [
+      {
+        "entry": "libX11-xcb.so.1",
+        "origin": "/usr/lib64/libX11-xcb.so.1.0.0",
+        "sha256": "57cdf71a9b30e068f7b00112b6e879a804fb8d451d351e3dff8260a34718f408",
+        "owners": [
+          {
+            "rpm": "libX11-xcb|1.8.13|3.fc44|x86_64",
+            "source_rpm": "libX11-1.8.13-3.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libX11.so.6",
+        "origin": "/usr/lib64/libX11.so.6.4.0",
+        "sha256": "95b9ecfbde1b73c7f7380ae643e8ade9555234607a47d7e131ae6365a9899244",
+        "owners": [
+          {
+            "rpm": "libX11|1.8.13|3.fc44|x86_64",
+            "source_rpm": "libX11-1.8.13-3.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libXau.so.6",
+        "origin": "/usr/lib64/libXau.so.6.0.0",
+        "sha256": "78e2e7a514a6844530b099c7dfb184a9992f7b0681c30105281ddb8e48dc8a59",
+        "owners": [
+          {
+            "rpm": "libXau|1.0.12|4.fc44|x86_64",
+            "source_rpm": "libXau-1.0.12-4.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libXext.so.6",
+        "origin": "/usr/lib64/libXext.so.6.4.0",
+        "sha256": "09056dd620dc643dc1c2ed20041fa11de6a981dd0f618d6785124b4bdc607a1e",
+        "owners": [
+          {
+            "rpm": "libXext|1.3.6|5.fc44|x86_64",
+            "source_rpm": "libXext-1.3.6-5.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libblkid.so.1",
+        "origin": "/usr/lib64/libblkid.so.1.1.0",
+        "sha256": "8d4e7b5997800669d104decf15a7d36c55fb5256cb91e20579af8cfd7e1c4772",
+        "owners": [
+          {
+            "rpm": "libblkid|2.41.6|1.fc44|x86_64",
+            "source_rpm": "util-linux-2.41.6-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libbrotlicommon.so.1",
+        "origin": "/usr/lib64/libbrotlicommon.so.1.2.1",
+        "sha256": "d0501f380203f533498674319b3a6b7423d73291d275745d83f42e192b432b7b",
+        "owners": [
+          {
+            "rpm": "libbrotli|1.2.1|1.fc44|x86_64",
+            "source_rpm": "brotli-1.2.1-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libbrotlidec.so.1",
+        "origin": "/usr/lib64/libbrotlidec.so.1.2.1",
+        "sha256": "21868d1903d40115e32d81cf2b1bb6995ce3d418e149793d88dbf4780542d987",
+        "owners": [
+          {
+            "rpm": "libbrotli|1.2.1|1.fc44|x86_64",
+            "source_rpm": "brotli-1.2.1-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libbz2.so.1",
+        "origin": "/usr/lib64/libbz2.so.1.0.8",
+        "sha256": "ef3c4ed7e70d03d7c406fb1cea9552e74d0b20006e7d8f66a60dc1a6009f4800",
+        "owners": [
+          {
+            "rpm": "bzip2-libs|1.0.8|23.fc44|x86_64",
+            "source_rpm": "bzip2-1.0.8-23.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libcom_err.so.2",
+        "origin": "/usr/lib64/libcom_err.so.2.1",
+        "sha256": "fd86ff884b7b6b441844d7f89afecbb7f53b7602c7f7515abc4c8bd5b8e83500",
+        "owners": [
+          {
+            "rpm": "libcom_err|1.47.3|4.fc44|x86_64",
+            "source_rpm": "e2fsprogs-1.47.3-4.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libcrypto.so.3",
+        "origin": "/usr/lib64/libcrypto.so.3.5.9",
+        "sha256": "695648ac8dc5e6a2b70e5e72399940de0f84bf24fddb7dd18949ba40bc575c72",
+        "owners": [
+          {
+            "rpm": "openssl-libs|3.5.9|1.fc44|x86_64",
+            "source_rpm": "openssl-3.5.9-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libdbus-1.so.3",
+        "origin": "/usr/lib64/libdbus-1.so.3.38.3",
+        "sha256": "5c6ed93ed3e31e36a45e4e52725355b5e31248bb075d495bea29aa090e5f995f",
+        "owners": [
+          {
+            "rpm": "dbus-libs|1.16.2|1.fc44|x86_64",
+            "source_rpm": "dbus-1.16.2-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libexpat.so.1",
+        "origin": "/usr/lib64/libexpat.so.1.13.0",
+        "sha256": "9b16cd9bcb8c1b7b037eb01229143b021b6e70572b89478e5294e8448738275e",
+        "owners": [
+          {
+            "rpm": "expat|2.9.0|1.fc44|x86_64",
+            "source_rpm": "expat-2.9.0-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libffi.so.8",
+        "origin": "/usr/lib64/libffi.so.8.2.0",
+        "sha256": "05bf4048cc0fd016140d7d880c4a4ec402096732f60463c8fb87b98d877d3628",
+        "owners": [
+          {
+            "rpm": "libffi|3.5.2|2.fc44|x86_64",
+            "source_rpm": "libffi-3.5.2-2.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libfontconfig.so.1",
+        "origin": "/usr/lib64/libfontconfig.so.1.16.0",
+        "sha256": "ab67796a1071ee7fe53d89d4ece93a3805134d9c21931687a4f05fa5132036fd",
+        "owners": [
+          {
+            "rpm": "fontconfig|2.17.0|4.fc44|x86_64",
+            "source_rpm": "fontconfig-2.17.0-4.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libfreetype.so.6",
+        "origin": "/usr/lib64/libfreetype.so.6.20.6",
+        "sha256": "8b3027d90bfcbdf021679e4ea72b8479d59b51bb3c4af4839fc4e32c51d07018",
+        "owners": [
+          {
+            "rpm": "freetype|2.14.3|1.fc44|x86_64",
+            "source_rpm": "freetype-2.14.3-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libgcc_s.so.1",
+        "origin": "/usr/lib64/libgcc_s-16-20261029.so.1",
+        "sha256": "5a52ae4a6f1b119aa092aa1483c967e19d9ba036b1b0c2133236a8a2ce826ebf",
+        "owners": [
+          {
+            "rpm": "libgcc|16.2.1|3.fc44|x86_64",
+            "source_rpm": "gcc-16.2.1-3.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libgio-2.0.so.0",
+        "origin": "/usr/lib64/libgio-2.0.so.0.8800.4",
+        "sha256": "bca91d16d1ed9ee423d99284ab8bd749348fff7e75dda3bffe9b4f9f3e4907a0",
+        "owners": [
+          {
+            "rpm": "glib2|2.88.4|1.fc44|x86_64",
+            "source_rpm": "glib2-2.88.4-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libglib-2.0.so.0",
+        "origin": "/usr/lib64/libglib-2.0.so.0.8800.4",
+        "sha256": "e9a6099dac743c8f910fb201da63f45ad6d7b4025110409474ec2661e57fa91e",
+        "owners": [
+          {
+            "rpm": "glib2|2.88.4|1.fc44|x86_64",
+            "source_rpm": "glib2-2.88.4-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libgmodule-2.0.so.0",
+        "origin": "/usr/lib64/libgmodule-2.0.so.0.8800.4",
+        "sha256": "d2a88cf9db4db6531ce84619149b017c46728b8797251018b4ceb706de8d6705",
+        "owners": [
+          {
+            "rpm": "glib2|2.88.4|1.fc44|x86_64",
+            "source_rpm": "glib2-2.88.4-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libgobject-2.0.so.0",
+        "origin": "/usr/lib64/libgobject-2.0.so.0.8800.4",
+        "sha256": "60a60bc3961c5cdfba3730f0976124eae34d9c3789b7fc91e8be1088f6e37c15",
+        "owners": [
+          {
+            "rpm": "glib2|2.88.4|1.fc44|x86_64",
+            "source_rpm": "glib2-2.88.4-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libgraphite2.so.3",
+        "origin": "/usr/lib64/libgraphite2.so.3.2.1",
+        "sha256": "1e1e6f204c01d7e790d4d8fa55205ac030926863565327724ad1bea0b05071b8",
+        "owners": [
+          {
+            "rpm": "graphite2|1.3.14|20.fc44|x86_64",
+            "source_rpm": "graphite2-1.3.14-20.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libgssapi_krb5.so.2",
+        "origin": "/usr/lib64/libgssapi_krb5.so.2.2",
+        "sha256": "4985d7c137097a00b5b20b09e208ea33514d96e098df37025f39ec4dedf1a65c",
+        "owners": [
+          {
+            "rpm": "krb5-libs|1.22.2|4.fc44|x86_64",
+            "source_rpm": "krb5-1.22.2-4.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libgthread-2.0.so.0",
+        "origin": "/usr/lib64/libgthread-2.0.so.0.8800.4",
+        "sha256": "b5bc38e92e338fc750bfc8c3f4a5715c297b7a4374d863c098d45767e571553d",
+        "owners": [
+          {
+            "rpm": "glib2|2.88.4|1.fc44|x86_64",
+            "source_rpm": "glib2-2.88.4-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libharfbuzz.so.0",
+        "origin": "/usr/lib64/libharfbuzz.so.0.61410.0",
+        "sha256": "1ad30cd84f030ac9aa2bda6edba150d612cab3534da0e42fd1102dffc286e5e5",
+        "owners": [
+          {
+            "rpm": "harfbuzz|14.1.0|2.fc44|x86_64",
+            "source_rpm": "harfbuzz-14.1.0-2.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libk5crypto.so.3",
+        "origin": "/usr/lib64/libk5crypto.so.3.1",
+        "sha256": "b2ca21d597a72b833d0816116cadc3493b624880d69819a9c7c33de8e93367f6",
+        "owners": [
+          {
+            "rpm": "krb5-libs|1.22.2|4.fc44|x86_64",
+            "source_rpm": "krb5-1.22.2-4.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libkeyutils.so.1",
+        "origin": "/usr/lib64/libkeyutils.so.1.10",
+        "sha256": "26ce5c6b6d9d9691437b0476dabe62fbc6e22ad0781b78d3df78906466dea121",
+        "owners": [
+          {
+            "rpm": "keyutils-libs|1.6.3|7.fc44|x86_64",
+            "source_rpm": "keyutils-1.6.3-7.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libkrb5.so.3",
+        "origin": "/usr/lib64/libkrb5.so.3.3",
+        "sha256": "4256ace2d584f14c5de4d0e045a8ab0258938c0bc9adf16fb49eadbe023c4453",
+        "owners": [
+          {
+            "rpm": "krb5-libs|1.22.2|4.fc44|x86_64",
+            "source_rpm": "krb5-1.22.2-4.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libkrb5support.so.0",
+        "origin": "/usr/lib64/libkrb5support.so.0.1",
+        "sha256": "171e649fbbcc92fb05b83929ac15e9b073fb703d796800b02265cf2d2cf8689f",
+        "owners": [
+          {
+            "rpm": "krb5-libs|1.22.2|4.fc44|x86_64",
+            "source_rpm": "krb5-1.22.2-4.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "liblzma.so.5",
+        "origin": "/usr/lib64/liblzma.so.5.8.2",
+        "sha256": "18b4994cd29a3e39f35ad719702925740703e76057fb2ce8c0eb7c7ce7a3acef",
+        "owners": [
+          {
+            "rpm": "xz-libs|5.8.2|2.fc44|x86_64",
+            "source_rpm": "xz-5.8.2-2.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libmount.so.1",
+        "origin": "/usr/lib64/libmount.so.1.1.0",
+        "sha256": "9036a1d3aae70be060caea1e79f7b96441935b3618d0a0cf3aec6898e4f8ee07",
+        "owners": [
+          {
+            "rpm": "libmount|2.41.6|1.fc44|x86_64",
+            "source_rpm": "util-linux-2.41.6-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libmpdec.so.4",
+        "origin": "/usr/lib64/libmpdec.so.4.0.1",
+        "sha256": "d1f901335a4a691a90b70a3bd0cb6a0ae2c64eaab59abda7fc60e653df643394",
+        "owners": [
+          {
+            "rpm": "mpdecimal|4.0.1|3.fc44|x86_64",
+            "source_rpm": "mpdecimal-4.0.1-3.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libpcre2-8.so.0",
+        "origin": "/usr/lib64/libpcre2-8.so.0.16.1",
+        "sha256": "2993edd0e39039306ea31368eff16879f03502c3938d4ea3e7ec6c7216d933f8",
+        "owners": [
+          {
+            "rpm": "pcre2|10.49|1.fc44|x86_64",
+            "source_rpm": "pcre2-10.49-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libpng16.so.16",
+        "origin": "/usr/lib64/libpng16.so.16.59.0",
+        "sha256": "536a1ed876bffe5a7e9204aae387d4da2d4a969bf716bbcf4a03c30a8dea0cde",
+        "owners": [
+          {
+            "rpm": "libpng|1.6.59|1.fc44|x86_64",
+            "source_rpm": "libpng-1.6.59-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libpython3.14.so.1.0",
+        "origin": "/usr/lib64/libpython3.14.so.1.0",
+        "sha256": "efaf73a3d22a3cbd1a397ccb5fbb6a8d06f67818690abd9e75ced7f9fa88f717",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libselinux.so.1",
+        "origin": "/usr/lib64/libselinux.so.1",
+        "sha256": "cc9f8b1691e4f8cc807b2d8fe4a1ce2e0bdb96386285fdc7769849ffab0aaa7e",
+        "owners": [
+          {
+            "rpm": "libselinux|3.11|2.fc44|x86_64",
+            "source_rpm": "libselinux-3.11-2.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libssl.so.3",
+        "origin": "/usr/lib64/libssl.so.3.5.9",
+        "sha256": "970950c1a999fa48ec8fc8df075ad0b211f3cd0bc35573ba4e788d20c3141796",
+        "owners": [
+          {
+            "rpm": "openssl-libs|3.5.9|1.fc44|x86_64",
+            "source_rpm": "openssl-3.5.9-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libstdc++.so.6",
+        "origin": "/usr/lib64/libstdc++.so.6.0.36",
+        "sha256": "49811507d8fc0283d8f8023546613774c673f876fe823b1b99d0c8d46039deda",
+        "owners": [
+          {
+            "rpm": "libstdc++|16.2.1|3.fc44|x86_64",
+            "source_rpm": "gcc-16.2.1-3.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libsystemd.so.0",
+        "origin": "/usr/lib64/libsystemd.so.0.42.0",
+        "sha256": "f0e7a49adc0c3191c434643d788020fc062d2d1bc1b00db66409a333ab73bf7a",
+        "owners": [
+          {
+            "rpm": "systemd-libs|259.10|1.fc44|x86_64",
+            "source_rpm": "systemd-259.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxcb-cursor.so.0",
+        "origin": "/usr/lib64/libxcb-cursor.so.0.0.0",
+        "sha256": "144e1bed53dd94c123cfb07b332f3d15fa1b92e0d1dad8cc96ec456ed6ef38f3",
+        "owners": [
+          {
+            "rpm": "xcb-util-cursor|0.1.6|2.fc44|x86_64",
+            "source_rpm": "xcb-util-cursor-0.1.6-2.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxcb-glx.so.0",
+        "origin": "/usr/lib64/libxcb-glx.so.0.0.0",
+        "sha256": "288b70b287fb07960a8e094688bc5103eaf5e05be17b7d6f57395cdea149e686",
+        "owners": [
+          {
+            "rpm": "libxcb|1.17.0|7.fc44|x86_64",
+            "source_rpm": "libxcb-1.17.0-7.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxcb-icccm.so.4",
+        "origin": "/usr/lib64/libxcb-icccm.so.4.0.0",
+        "sha256": "6d1040c2c8ff2fa82e2474dd3f2ab1ac20b19a0041fb03e8c95deb88c196a7e2",
+        "owners": [
+          {
+            "rpm": "xcb-util-wm|0.4.2|9.fc44|x86_64",
+            "source_rpm": "xcb-util-wm-0.4.2-9.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxcb-image.so.0",
+        "origin": "/usr/lib64/libxcb-image.so.0.0.0",
+        "sha256": "7a8991e79e02bcd6ef1570f342d478d936e2d1a9888d7621fe764fea397e2d17",
+        "owners": [
+          {
+            "rpm": "xcb-util-image|0.4.1|9.fc44|x86_64",
+            "source_rpm": "xcb-util-image-0.4.1-9.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxcb-keysyms.so.1",
+        "origin": "/usr/lib64/libxcb-keysyms.so.1.0.0",
+        "sha256": "229819257f894e9c049bc9414d7967134792c6c329b4178e14b105b389c13d82",
+        "owners": [
+          {
+            "rpm": "xcb-util-keysyms|0.4.1|9.fc44|x86_64",
+            "source_rpm": "xcb-util-keysyms-0.4.1-9.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxcb-randr.so.0",
+        "origin": "/usr/lib64/libxcb-randr.so.0.1.0",
+        "sha256": "bd9493e1eaec84ad952388095d5c64165a3b345c342ecacf2dc7fdcc9ddf3abb",
+        "owners": [
+          {
+            "rpm": "libxcb|1.17.0|7.fc44|x86_64",
+            "source_rpm": "libxcb-1.17.0-7.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxcb-render-util.so.0",
+        "origin": "/usr/lib64/libxcb-render-util.so.0.0.0",
+        "sha256": "a4aac1ca61ce969c1fc1c0b0fbf1ac2055d0d46bd01cc8367d0e41ab3317b778",
+        "owners": [
+          {
+            "rpm": "xcb-util-renderutil|0.3.10|9.fc44|x86_64",
+            "source_rpm": "xcb-util-renderutil-0.3.10-9.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxcb-render.so.0",
+        "origin": "/usr/lib64/libxcb-render.so.0.0.0",
+        "sha256": "7f7098ad9a9a0e09f93c0e8b5ffefc810741035f29e6f96414d1921b9f3c934c",
+        "owners": [
+          {
+            "rpm": "libxcb|1.17.0|7.fc44|x86_64",
+            "source_rpm": "libxcb-1.17.0-7.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxcb-shape.so.0",
+        "origin": "/usr/lib64/libxcb-shape.so.0.0.0",
+        "sha256": "f37715a75850eb25ca17a76fe28d2769b5cf4975d2f72533888c685d50ee033c",
+        "owners": [
+          {
+            "rpm": "libxcb|1.17.0|7.fc44|x86_64",
+            "source_rpm": "libxcb-1.17.0-7.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxcb-shm.so.0",
+        "origin": "/usr/lib64/libxcb-shm.so.0.0.0",
+        "sha256": "fe83f32f3c5d3337e2c6c1b36949e4087877697d32317c52611743c70ab7e13c",
+        "owners": [
+          {
+            "rpm": "libxcb|1.17.0|7.fc44|x86_64",
+            "source_rpm": "libxcb-1.17.0-7.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxcb-sync.so.1",
+        "origin": "/usr/lib64/libxcb-sync.so.1.0.0",
+        "sha256": "70a683c72408b0b2b4c3db6217eafb7e54c6c27659ff09444277586394fe4da8",
+        "owners": [
+          {
+            "rpm": "libxcb|1.17.0|7.fc44|x86_64",
+            "source_rpm": "libxcb-1.17.0-7.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxcb-util.so.1",
+        "origin": "/usr/lib64/libxcb-util.so.1.0.0",
+        "sha256": "ac383e43896bbd9edb1ed837c458753633d53a6ad45f7b2eb8c2b4229dc74c3c",
+        "owners": [
+          {
+            "rpm": "xcb-util|0.4.1|9.fc44|x86_64",
+            "source_rpm": "xcb-util-0.4.1-9.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxcb-xfixes.so.0",
+        "origin": "/usr/lib64/libxcb-xfixes.so.0.0.0",
+        "sha256": "3ba1cf11d47c26f03f2efa573acbdcc71e4a4e95b9438a1958e25b15a0f020fa",
+        "owners": [
+          {
+            "rpm": "libxcb|1.17.0|7.fc44|x86_64",
+            "source_rpm": "libxcb-1.17.0-7.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxcb-xkb.so.1",
+        "origin": "/usr/lib64/libxcb-xkb.so.1.0.0",
+        "sha256": "109b0bebc62c10231038d803c720b948e3d1dc541628593875896194df0c4d1b",
+        "owners": [
+          {
+            "rpm": "libxcb|1.17.0|7.fc44|x86_64",
+            "source_rpm": "libxcb-1.17.0-7.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxkbcommon-x11.so.0",
+        "origin": "/usr/lib64/libxkbcommon-x11.so.0.13.1",
+        "sha256": "d91c5d91c2fe4f5bbf5815e3b58cecfe3e473228696e7b3cac4e8adbec46ea7d",
+        "owners": [
+          {
+            "rpm": "libxkbcommon-x11|1.13.1|2.fc44|x86_64",
+            "source_rpm": "libxkbcommon-1.13.1-2.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxkbcommon.so.0",
+        "origin": "/usr/lib64/libxkbcommon.so.0.13.1",
+        "sha256": "4ca0a8544873c3b7feafe4b0086ddf74e389e3a739da1e3a940a2aa15a441819",
+        "owners": [
+          {
+            "rpm": "libxkbcommon|1.13.1|2.fc44|x86_64",
+            "source_rpm": "libxkbcommon-1.13.1-2.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libxml2.so.2",
+        "origin": "/usr/lib64/libxml2.so.2.12.10",
+        "sha256": "8473a76caaed1e702f5c4f2dfac69b4aa92d2f18217edcf23c73214ea7750ab5",
+        "owners": [
+          {
+            "rpm": "libxml2|2.12.10|6.fc44|x86_64",
+            "source_rpm": "libxml2-2.12.10-6.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libz.so.1",
+        "origin": "/usr/lib64/libz.so.1.3.1.zlib-ng",
+        "sha256": "bbde8faec092a7c67b8bd76bbba4a826e61b05c171b97004ce6b308c5a090351",
+        "owners": [
+          {
+            "rpm": "zlib-ng-compat|2.3.3|3.fc44|x86_64",
+            "source_rpm": "zlib-ng-2.3.3-3.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "libzstd.so.1",
+        "origin": "/usr/lib64/libzstd.so.1.5.7",
+        "sha256": "70ec54d150f4052f28fb1e8f8a1c6ca35e1a499e4744c6f6d9d783537618f80b",
+        "owners": [
+          {
+            "rpm": "libzstd|1.5.7|5.fc44|x86_64",
+            "source_rpm": "zstd-1.5.7-5.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_bisect.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_bisect.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "acf7750a94aa9efd75690d2103f48c6433271ff5c78ea5b8c72dde3f8bba1f6e",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_blake2.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_blake2.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "88cbf87322c22daa91826fce398918ef6f84cd2e6c7c0413b55b923e0460e456",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_bz2.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_bz2.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "296dca18aa9ec2f748f31e02c1ea02a1ebed14635c236cfbdd66e673e205f883",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_codecs_cn.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_codecs_cn.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "00f0f640d91a0f46b910ec534661c1748a2d34b3f3a7b1fd4be350f532b7c758",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_codecs_hk.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_codecs_hk.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "e88f0d4f35c9539ddf191b595a2210f58dbb6a1d16149e86b32987088ff21459",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_codecs_iso2022.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_codecs_iso2022.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "a84f26770e4172553c70ef85c2a48a1dbe45695ea64f94f852c13b85292a2697",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_codecs_jp.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_codecs_jp.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "c334bc8df9eeac974ed1756e1deff043bd28e25d3b1f11645448710b12aa1a29",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_codecs_kr.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_codecs_kr.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "4be06468ff70a365c35e57b6f776a087c43e04fcabf37d90531e17399cafe8af",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_codecs_tw.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_codecs_tw.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "122ec951c0de3f576904f6ed522e463c4f11acabccba684fb91d99a7477d7cf2",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_csv.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_csv.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "ec5f1a98efa97140d9a9d579968db80493aebc6c763118c3a53ebd445e953cbb",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_ctypes.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_ctypes.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "d9360eefa4fb1abb804c435fcc060e3c35178596b40e5f1ae644f557c7f32405",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_decimal.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_decimal.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "25cf4fe67c0aaa7187a2c0390a2db3cd775c5949a935fad3c76f906416cd0838",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_elementtree.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_elementtree.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "9f5d16ca8049bdd58fd224e4cd908158eb5e761059c0b17cc66f282da5138b81",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_hashlib.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_hashlib.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "0b91b264ca3d88aa17266e45247b4bf2c9a387b7227b17dfe3cade0b1dd2bc5b",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_heapq.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_heapq.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "f6b3db4eb37aebae7f2d28b818d8bd945677955b8a3746ff85f4a2c02282fe73",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_hmac.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_hmac.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "1159b4e4296d19285ade7bebf5b71f4327cf168a27ba97a1aa97c6459567b07c",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_json.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_json.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "7a1aeed9c6bd176d32fab727e741bb0a2e4c3dcc07f1da931016979524e43345",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_lzma.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_lzma.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "00f9543642b9da76187dcee4bcef355967027ff48431e512b9aeea932b39e719",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_md5.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_md5.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "79d518dd2c0ea3cfcd0710a6821e8ba233314fb12676eac25a9f775f6da7ce1f",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_multibytecodec.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_multibytecodec.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "73aa3d4aef9ddc257826adaf977fccc4cdcb4a7375205baafa31a19651e09748",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_multiprocessing.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_multiprocessing.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "c5c61cdd80c6ed6bc1866aeea9b58fed19d64550897124e82588c923f51d6e60",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_pickle.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_pickle.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "2aee7089058fd2d225470489de41fe681829403281ac2a6b28fd8e3adf9cf214",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_posixshmem.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_posixshmem.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "4c198c93aa1cae60deea39a9fb65b990b270ffc33f872b31883556e2f77f53e1",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_posixsubprocess.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_posixsubprocess.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "be2975ba2c8a47466e818f1b7410d998f60b94e904fb806fd766077da814c019",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_queue.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_queue.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "868bdc106dfb131dd61047a9a4031b59e67480b459d5457f2d11d09e084e4541",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_random.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_random.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "2f96b95154704fe3d20364b9d4e5571c29135326053dbd756267acee56856656",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_sha1.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_sha1.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "9b66a39f3d855f6e384ba94a920d099d1c41382b00b05b56c24a872c4feb014f",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_sha2.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_sha2.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "2df80c9ebcfcab8870b7e5bf28f3f1a64b1341c6da40ade748088a55614afced",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_sha3.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_sha3.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "9be4ef478e44c7797eeb1058c8c5d4052cdc35dd2d1242397cf0a260b818449b",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_socket.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_socket.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "8b577282e5fc7f276c05a35bd9db0f6073da3fccd61953ee398e60732b6d617a",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_ssl.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_ssl.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "c8001f6a4ebb7f61eb8082df5a279341cfaef2f71f0819281916ded13a4d7ea7",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_statistics.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_statistics.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "82fe66a45148a8fc071a2a36e9e12cb6a76f6a369ecc89a2133e4cb01d24c0a4",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_struct.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_struct.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "ecb97c7f8921141078135a006f25b13b705b66de7a35ef0ecee00808be725d33",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/_zstd.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/_zstd.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "1c492aa696289df2db7628ff83c2a0c11f0b5613d6a17c896ed1d7e0d4c77e13",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/array.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/array.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "5b98285d165cff6b209ebb3a00fbf108d63c815841092901a238362e33b1b550",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/binascii.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/binascii.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "ff5f9a9740fe0a7c00adee7d18f88417720360ea0cd9476fef65aa8b90e538eb",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/fcntl.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/fcntl.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "84c539633cece0ce1b8fc8d0209890dadb08868cfcdc77739b98520460be9614",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/grp.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/grp.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "d9cdab743a3b22f890ad3470d2be5a3f08866cff4c3ce11acbd12dc624dbc21d",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/math.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/math.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "475b4e991227e7433524e63196764fa3cfe50888a45646ae7e0f1b937d8bcf15",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/mmap.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/mmap.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "86c2a699a293358949d1ab154789cabfaf887dbd62bde8f42d8592c3117b4173",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/pyexpat.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/pyexpat.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "12a36f0d485aec4ce80c68ca0c23d01f7917016fe734f87c21f1e5f31496cf8c",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/resource.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/resource.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "42e420980298d7a686479dc5dcca0418c8b2cc0b3a3b27cb10fc912edba5727e",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/select.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/select.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "4f30ee86829bdf62a63b3045580cee7d8632fc8d37632ee95775d2fd3fdc478b",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/unicodedata.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/unicodedata.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "77414783c5271af5fb51f5ecf445fb4d00fa85b49e8655dde253db44830c8744",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      },
+      {
+        "entry": "python3.14/lib-dynload/zlib.cpython-314-x86_64-linux-gnu.so",
+        "origin": "/usr/lib64/python3.14/lib-dynload/zlib.cpython-314-x86_64-linux-gnu.so",
+        "sha256": "81dfa3de94bba8f2c19429f73336bcf4ff15b2ed99b450971fe115baea7cab58",
+        "owners": [
+          {
+            "rpm": "python3-libs|3.14.10|1.fc44|x86_64",
+            "source_rpm": "python3.14-3.14.10-1.fc44.src.rpm"
+          }
+        ]
+      }
+    ],
+    "scope": "Exact x86_64 ownership from actual Fedora44 Analysis and candidate bytes; not Fedora45 source mapping"
+  },
+  "exact_dnf_query": {
+    "command": [
+      "dnf",
+      "--repo=fedora-source",
+      "--repo=updates-source",
+      "--setopt=timeout=30",
+      "--setopt=retries=2",
+      "repoquery",
+      "--available",
+      "--arch=src",
+      "--queryformat=%{name}|%{version}|%{release}|%{location}\n",
+      "brotli-1.2.1-1.fc44.src",
+      "bzip2-1.0.8-23.fc44.src",
+      "dbus-1.16.2-1.fc44.src",
+      "e2fsprogs-1.47.3-4.fc44.src",
+      "expat-2.9.0-1.fc44.src",
+      "fontconfig-2.17.0-4.fc44.src",
+      "freetype-2.14.3-1.fc44.src",
+      "gcc-16.2.1-3.fc44.src",
+      "glib2-2.88.4-1.fc44.src",
+      "graphite2-1.3.14-20.fc44.src",
+      "harfbuzz-14.1.0-2.fc44.src",
+      "keyutils-1.6.3-7.fc44.src",
+      "krb5-1.22.2-4.fc44.src",
+      "libX11-1.8.13-3.fc44.src",
+      "libXau-1.0.12-4.fc44.src",
+      "libXext-1.3.6-5.fc44.src",
+      "libffi-3.5.2-2.fc44.src",
+      "libpng-1.6.59-1.fc44.src",
+      "libselinux-3.11-2.fc44.src",
+      "libxcb-1.17.0-7.fc44.src",
+      "libxkbcommon-1.13.1-2.fc44.src",
+      "libxml2-2.12.10-6.fc44.src",
+      "mpdecimal-4.0.1-3.fc44.src",
+      "openssl-3.5.9-1.fc44.src",
+      "pcre2-10.49-1.fc44.src",
+      "python3.14-3.14.10-1.fc44.src",
+      "systemd-259.10-1.fc44.src",
+      "util-linux-2.41.6-1.fc44.src",
+      "xcb-util-0.4.1-9.fc44.src",
+      "xcb-util-cursor-0.1.6-2.fc44.src",
+      "xcb-util-image-0.4.1-9.fc44.src",
+      "xcb-util-keysyms-0.4.1-9.fc44.src",
+      "xcb-util-renderutil-0.3.10-9.fc44.src",
+      "xcb-util-wm-0.4.2-9.fc44.src",
+      "xz-5.8.2-2.fc44.src",
+      "zlib-ng-2.3.3-3.fc44.src",
+      "zstd-1.5.7-5.fc44.src"
+    ],
+    "exit_code": 0,
+    "stdout": "brotli|1.2.1|1.fc44|https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/b/brotli-1.2.1-1.fc44.src.rpm\nbzip2|1.0.8|23.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/b/bzip2-1.0.8-23.fc44.src.rpm\ndbus|1.16.2|1.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/d/dbus-1.16.2-1.fc44.src.rpm\ne2fsprogs|1.47.3|4.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/e/e2fsprogs-1.47.3-4.fc44.src.rpm\nexpat|2.9.0|1.fc44|https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/e/expat-2.9.0-1.fc44.src.rpm\nfontconfig|2.17.0|4.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/f/fontconfig-2.17.0-4.fc44.src.rpm\nfreetype|2.14.3|1.fc44|https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/f/freetype-2.14.3-1.fc44.src.rpm\ngcc|16.2.1|3.fc44|https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/g/gcc-16.2.1-3.fc44.src.rpm\nglib2|2.88.4|1.fc44|https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/g/glib2-2.88.4-1.fc44.src.rpm\ngraphite2|1.3.14|20.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/g/graphite2-1.3.14-20.fc44.src.rpm\nharfbuzz|14.1.0|2.fc44|https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/h/harfbuzz-14.1.0-2.fc44.src.rpm\nkeyutils|1.6.3|7.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/k/keyutils-1.6.3-7.fc44.src.rpm\nkrb5|1.22.2|4.fc44|https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/k/krb5-1.22.2-4.fc44.src.rpm\nlibX11|1.8.13|3.fc44|https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/l/libX11-1.8.13-3.fc44.src.rpm\nlibXau|1.0.12|4.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libXau-1.0.12-4.fc44.src.rpm\nlibXext|1.3.6|5.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libXext-1.3.6-5.fc44.src.rpm\nlibffi|3.5.2|2.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libffi-3.5.2-2.fc44.src.rpm\nlibpng|1.6.59|1.fc44|https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/l/libpng-1.6.59-1.fc44.src.rpm\nlibselinux|3.11|2.fc44|https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/l/libselinux-3.11-2.fc44.src.rpm\nlibxcb|1.17.0|7.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libxcb-1.17.0-7.fc44.src.rpm\nlibxkbcommon|1.13.1|2.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libxkbcommon-1.13.1-2.fc44.src.rpm\nlibxml2|2.12.10|6.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/l/libxml2-2.12.10-6.fc44.src.rpm\nmpdecimal|4.0.1|3.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/m/mpdecimal-4.0.1-3.fc44.src.rpm\nopenssl|3.5.9|1.fc44|https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/o/openssl-3.5.9-1.fc44.src.rpm\npcre2|10.49|1.fc44|https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/p/pcre2-10.49-1.fc44.src.rpm\npython3.14|3.14.10|1.fc44|https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/p/python3.14-3.14.10-1.fc44.src.rpm\nsystemd|259.10|1.fc44|https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/s/systemd-259.10-1.fc44.src.rpm\nutil-linux|2.41.6|1.fc44|https://mirror.twds.com.tw/fedora/fedora/linux/updates/44/Everything/source/tree/Packages/u/util-linux-2.41.6-1.fc44.src.rpm\nxcb-util-cursor|0.1.6|2.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-cursor-0.1.6-2.fc44.src.rpm\nxcb-util-image|0.4.1|9.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-image-0.4.1-9.fc44.src.rpm\nxcb-util-keysyms|0.4.1|9.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-keysyms-0.4.1-9.fc44.src.rpm\nxcb-util-renderutil|0.3.10|9.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-renderutil-0.3.10-9.fc44.src.rpm\nxcb-util-wm|0.4.2|9.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-wm-0.4.2-9.fc44.src.rpm\nxcb-util|0.4.1|9.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xcb-util-0.4.1-9.fc44.src.rpm\nxz|5.8.2|2.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/x/xz-5.8.2-2.fc44.src.rpm\nzlib-ng|2.3.3|3.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/z/zlib-ng-2.3.3-3.fc44.src.rpm\nzstd|1.5.7|5.fc44|https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/releases/44/Everything/source/tree/Packages/z/zstd-1.5.7-5.fc44.src.rpm\n",
+    "stderr": "Updating and loading repositories:\n Fedora 44 - Source                     100% |   2.1 MiB/s |   5.9 MiB |  00m03s\n Fedora 44 - Updates Source             100% |   1.0 MiB/s |   4.7 MiB |  00m05s\nRepositories loaded.\n"
+  }
+}

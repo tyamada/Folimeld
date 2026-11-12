@@ -1,0 +1,327 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "candidate_unchanged": true,
+  "runtime_version": "1.28.2",
+  "libraries": [
+    {
+      "entry": "pymupdf/libmupdf.so.28.2",
+      "sha256": "64ea1ff04304a3e90d5ae7fb38de4fb8e4057ff776434e747fe5a62d219b1cfa"
+    },
+    {
+      "entry": "pymupdf/libmupdfcpp.so.28.2",
+      "sha256": "18e57cf53d7b498ab4fe3672e4cb7be6ad946ba00b88b52507426fc50505ff19"
+    },
+    {
+      "entry": "pymupdf/_mupdf.so",
+      "sha256": "d16a4ad71a3477f6a11dfbb0ef53c41180ec35a37b50fd39956e61c8344ec15c"
+    },
+    {
+      "entry": "pymupdf/_extra.so",
+      "sha256": "22f946717a91da7e6c03e6e57e2c0dff532bb80f44c4d2e255628a88410aff1b"
+    }
+  ],
+  "component_symbol_indicators": {
+    "FreeType": {
+      "defined_symbol_count": 167,
+      "examples": [
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "FT_Activate_Size"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "FT_Add_Default_Modules"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "FT_Add_Module"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "FT_Angle_Diff"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "FT_Atan2"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "FT_Attach_File"
+        }
+      ],
+      "interpretation": "Defined symbols indicate included implementation; not complete version/build provenance"
+    },
+    "HarfBuzz": {
+      "defined_symbol_count": 0,
+      "examples": [],
+      "interpretation": "No match in selected dynamic symbol tables; absence does not establish exclusion"
+    },
+    "libjpeg": {
+      "defined_symbol_count": 138,
+      "examples": [
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "jpeg_abort"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "jpeg_abort_compress"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "jpeg_abort_decompress"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "jpeg_add_quant_table"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "jpeg_alloc_huff_table"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "jpeg_alloc_quant_table"
+        }
+      ],
+      "interpretation": "Defined symbols indicate included implementation; not complete version/build provenance"
+    },
+    "OpenJPEG": {
+      "defined_symbol_count": 0,
+      "examples": [],
+      "interpretation": "No match in selected dynamic symbol tables; absence does not establish exclusion"
+    },
+    "jbig2dec": {
+      "defined_symbol_count": 92,
+      "examples": [
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "jbig2_alloc"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "jbig2_arith_decode"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "jbig2_arith_iaid_ctx_free"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "jbig2_arith_iaid_ctx_new"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "jbig2_arith_iaid_decode"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "jbig2_arith_int_ctx_free"
+        }
+      ],
+      "interpretation": "Defined symbols indicate included implementation; not complete version/build provenance"
+    },
+    "MuJS": {
+      "defined_symbol_count": 173,
+      "examples": [
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "js_atpanic"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "js_call"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "js_compare"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "js_concat"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "js_construct"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "js_copy"
+        }
+      ],
+      "interpretation": "Defined symbols indicate included implementation; not complete version/build provenance"
+    },
+    "LittleCMS": {
+      "defined_symbol_count": 6,
+      "examples": [
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "cmsGetHeaderCMM"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "cmsGetTagOffsetAndSize"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "cmsGetTransformGamutCheckPipeline"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "cmsGetTransformInputColorants"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "cmsGetTransformOutputColorants"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "cmsGetTransformPipeline"
+        }
+      ],
+      "interpretation": "Defined symbols indicate included implementation; not complete version/build provenance"
+    },
+    "zlib": {
+      "defined_symbol_count": 18,
+      "examples": [
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "deflate"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "deflateBound"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "deflateBound_z"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "deflateCopy"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "deflate_copyright"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "deflateEnd"
+        }
+      ],
+      "interpretation": "Defined symbols indicate included implementation; not complete version/build provenance"
+    },
+    "Brotli": {
+      "defined_symbol_count": 36,
+      "examples": [
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "BrotliDecoderAttachDictionary"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "BrotliDecoderCreateInstance"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "BrotliDecoderDecompress"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "BrotliDecoderDecompressStream"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "BrotliDecoderDestroyInstance"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "BrotliDecoderErrorString"
+        }
+      ],
+      "interpretation": "Defined symbols indicate included implementation; not complete version/build provenance"
+    },
+    "Tesseract": {
+      "defined_symbol_count": 72,
+      "examples": [
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "TessBaseAPIAllWordConfidences"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "TessBaseAPIAnalyseLayout"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "TessBaseAPIClear"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "TessBaseAPIClearPersistentCache"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "TessBaseAPICreate"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "TessBaseAPIDelete"
+        }
+      ],
+      "interpretation": "Defined symbols indicate included implementation; not complete version/build provenance"
+    },
+    "Leptonica": {
+      "defined_symbol_count": 8,
+      "examples": [
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "pixCreate"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "pixCreateFromPixcomp"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "pixCreateHeader"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "pixCreateNoInit"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "pixCreateRGBImage"
+        },
+        {
+          "library": "libmupdf.so.28.2",
+          "symbol": "pixCreateTemplate"
+        }
+      ],
+      "interpretation": "Defined symbols indicate included implementation; not complete version/build provenance"
+    }
+  },
+  "embedded_font_matches": {
+    "helv": {
+      "bytes": 33151,
+      "sha256": "366720e054067fa49d030f58005c739fc787dcc9727a9327a28767777791d706",
+      "source_matches": [
+        "mupdf-1.28.2-source/resources/fonts/urw/NimbusSans-Regular.cff"
+      ]
+    },
+    "cjk": {
+      "bytes": 3556308,
+      "sha256": "ee38813ea00c3e32add4268fff7fff9e39417b4913cb13be2415164a47807cc2",
+      "source_matches": [
+        "mupdf-1.28.2-source/resources/fonts/droid/DroidSansFallback.ttf"
+      ]
+    }
+  },
+  "limitations": [
+    "Two runtime font selections, not all embedded fonts",
+    "Dynamic exported symbols cannot establish full transitive components or compile flags",
+    "QtPdf private PDFium symbols and generated build notices remain a separate review item"
+  ]
+}

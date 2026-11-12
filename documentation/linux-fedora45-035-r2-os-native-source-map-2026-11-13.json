@@ -1,0 +1,1251 @@
+{
+  "date_jst": "2026-11-13",
+  "published": false,
+  "candidate_unchanged": true,
+  "candidate_os_elf_entries": 103,
+  "wheel_elf_entries_separately_verified": 105,
+  "total_native_entries": 208,
+  "verified_source_rpm_count": 38,
+  "entries": [
+    {
+      "entry": "libX11-xcb.so.1",
+      "sha256": "96fc7b6c0b80dca371105ce1409096d8e5400f09b0f968e4bf4dd3df536e5b51",
+      "origin": "/usr/lib64/libX11-xcb.so.1.0.0",
+      "owners": [
+        {
+          "rpm": "libX11-xcb|1.8.13|3.fc45|x86_64|libX11-1.8.13-3.fc45.src.rpm",
+          "source_rpm": "libX11-1.8.13-3.fc45.src.rpm",
+          "source_sha256": "9749660f022d671f00b564ccef266c6c56f0f578653a255879ff7c01ee668cd2"
+        }
+      ]
+    },
+    {
+      "entry": "libX11.so.6",
+      "sha256": "1d2e454493d37a1e75e14d447d32b5489490cac57169861bd2fcd4f4e2df3887",
+      "origin": "/usr/lib64/libX11.so.6.4.0",
+      "owners": [
+        {
+          "rpm": "libX11|1.8.13|3.fc45|x86_64|libX11-1.8.13-3.fc45.src.rpm",
+          "source_rpm": "libX11-1.8.13-3.fc45.src.rpm",
+          "source_sha256": "9749660f022d671f00b564ccef266c6c56f0f578653a255879ff7c01ee668cd2"
+        }
+      ]
+    },
+    {
+      "entry": "libXau.so.6",
+      "sha256": "f097d73b4ad3023ef226c8f671a538e7b605650163f3375fe314c163d610bff3",
+      "origin": "/usr/lib64/libXau.so.6.0.0",
+      "owners": [
+        {
+          "rpm": "libXau|1.0.12|5.fc45|x86_64|libXau-1.0.12-5.fc45.src.rpm",
+          "source_rpm": "libXau-1.0.12-5.fc45.src.rpm",
+          "source_sha256": "9ab70a08ad091717ec1499c5d7cbba7dab5681c37595d5b4493fe8e0658e8b5c"
+        }
+      ]
+    },
+    {
+      "entry": "libXext.so.6",
+      "sha256": "d5e5b1e594780db80f18a59e10948c69bdd96957d81f0b2fb307dc54adb25bc1",
+      "origin": "/usr/lib64/libXext.so.6.4.0",
+      "owners": [
+        {
+          "rpm": "libXext|1.3.6|6.fc45|x86_64|libXext-1.3.6-6.fc45.src.rpm",
+          "source_rpm": "libXext-1.3.6-6.fc45.src.rpm",
+          "source_sha256": "d58fcd8e691387e8bb48144be70ed836464195cf2d79173b2ccd199d4247d1a7"
+        }
+      ]
+    },
+    {
+      "entry": "libblkid.so.1",
+      "sha256": "faa3c9b3a8fff0d3cc836db3b0a2693f5bd24f05288fe6f79ad6a9c3f6036c4f",
+      "origin": "/usr/lib64/libblkid.so.1.1.0",
+      "owners": [
+        {
+          "rpm": "libblkid|2.42.4|1.fc45|x86_64|util-linux-2.42.4-1.fc45.src.rpm",
+          "source_rpm": "util-linux-2.42.4-1.fc45.src.rpm",
+          "source_sha256": "72a7fde7d2cd980b3376b29a3c9c194d3f805460c293850b29bd6818252765d8"
+        }
+      ]
+    },
+    {
+      "entry": "libbrotlicommon.so.1",
+      "sha256": "b6d9339a53dead246b465c14ae24b2da19542608c920e7b030453d58a1c10844",
+      "origin": "/usr/lib64/libbrotlicommon.so.1.2.1",
+      "owners": [
+        {
+          "rpm": "libbrotli|1.2.1|1.fc45|x86_64|brotli-1.2.1-1.fc45.src.rpm",
+          "source_rpm": "brotli-1.2.1-1.fc45.src.rpm",
+          "source_sha256": "d973c0cce0f6fdae031105e9e38b6588505fbe6cd7992249416a30998f9729d9"
+        }
+      ]
+    },
+    {
+      "entry": "libbrotlidec.so.1",
+      "sha256": "5a3925de59317b5a95611ba7f728cee4e01c91c7f65ef173be2a259dd6e4feeb",
+      "origin": "/usr/lib64/libbrotlidec.so.1.2.1",
+      "owners": [
+        {
+          "rpm": "libbrotli|1.2.1|1.fc45|x86_64|brotli-1.2.1-1.fc45.src.rpm",
+          "source_rpm": "brotli-1.2.1-1.fc45.src.rpm",
+          "source_sha256": "d973c0cce0f6fdae031105e9e38b6588505fbe6cd7992249416a30998f9729d9"
+        }
+      ]
+    },
+    {
+      "entry": "libbz2.so.1",
+      "sha256": "9911b43735fe91042f694df846ec738b3945cfebed8823c0fc4b61fd9c777db9",
+      "origin": "/usr/lib64/libbz2.so.1.0.8",
+      "owners": [
+        {
+          "rpm": "bzip2-libs|1.0.8|24.fc45|x86_64|bzip2-1.0.8-24.fc45.src.rpm",
+          "source_rpm": "bzip2-1.0.8-24.fc45.src.rpm",
+          "source_sha256": "64fedb00a1df0634c14c7076dcff352dec973cfc061abcdba4f5f04f61637988"
+        }
+      ]
+    },
+    {
+      "entry": "libcom_err.so.2",
+      "sha256": "30f6b8553e9258559a5f855baad770ed3dd8bd75fd4699dc201adbc817cc2655",
+      "origin": "/usr/lib64/libcom_err.so.2.1",
+      "owners": [
+        {
+          "rpm": "libcom_err|1.47.4|2.fc45|x86_64|e2fsprogs-1.47.4-2.fc45.src.rpm",
+          "source_rpm": "e2fsprogs-1.47.4-2.fc45.src.rpm",
+          "source_sha256": "de2cbf783f68eff71ab8b30a31fd5df8d5fb59a412dce0c77c00d86bb9d15ecc"
+        }
+      ]
+    },
+    {
+      "entry": "libcrypto.so.3",
+      "sha256": "a10387fd055e5bf3cf7b2d1703c61c68434732c923c1bf343b3df36f24990521",
+      "origin": "/usr/lib64/libcrypto.so.3.5.9",
+      "owners": [
+        {
+          "rpm": "openssl3-libs|3.5.9|1.fc45|x86_64|openssl3-3.5.9-1.fc45.src.rpm",
+          "source_rpm": "openssl3-3.5.9-1.fc45.src.rpm",
+          "source_sha256": "4aeff1958b5b8756ad3b4ac57dc31476d4f2b25fb10b35e474478b88d1bb8a01"
+        }
+      ]
+    },
+    {
+      "entry": "libcrypto.so.4",
+      "sha256": "d7a694d6c0504aab4cbaf1d209d19c846f1407e4356f9f13a8c8638b51fa3f90",
+      "origin": "/usr/lib64/libcrypto.so.4.0.3",
+      "owners": [
+        {
+          "rpm": "openssl-libs|4.0.3|1.fc45|x86_64|openssl-4.0.3-1.fc45.src.rpm",
+          "source_rpm": "openssl-4.0.3-1.fc45.src.rpm",
+          "source_sha256": "c302f1b70dc9e991af3d25e932f693935125ccf5551f71e1f8adc0b68ee856bb"
+        }
+      ]
+    },
+    {
+      "entry": "libdbus-1.so.3",
+      "sha256": "f48f0e3d7d9948f98210922124c16817bf77124258e7491a7203a6ccf361607a",
+      "origin": "/usr/lib64/libdbus-1.so.3.38.3",
+      "owners": [
+        {
+          "rpm": "dbus-libs|1.16.2|6.fc45|x86_64|dbus-1.16.2-6.fc45.src.rpm",
+          "source_rpm": "dbus-1.16.2-6.fc45.src.rpm",
+          "source_sha256": "13ca12efc215230eac6e07321842ef7f63058993a5a6351e432189ae6c3c79a6"
+        }
+      ]
+    },
+    {
+      "entry": "libexpat.so.1",
+      "sha256": "dc0ea7c843f5408e3b1a1630a1fdd96d141c5bc868ed296f5b844b5107e99151",
+      "origin": "/usr/lib64/libexpat.so.1.13.0",
+      "owners": [
+        {
+          "rpm": "expat|2.9.0|1.fc45|x86_64|expat-2.9.0-1.fc45.src.rpm",
+          "source_rpm": "expat-2.9.0-1.fc45.src.rpm",
+          "source_sha256": "a375e6290c310dc3af1c759715130e6ab74bf20e8861865a7fe6c88be1096d25"
+        }
+      ]
+    },
+    {
+      "entry": "libffi.so.8",
+      "sha256": "7ce42bdd960a488576dfe79458f1255d211cbc5375eaf1fd24fe264aea80d389",
+      "origin": "/usr/lib64/libffi.so.8.2.0",
+      "owners": [
+        {
+          "rpm": "libffi|3.5.2|3.fc45|x86_64|libffi-3.5.2-3.fc45.src.rpm",
+          "source_rpm": "libffi-3.5.2-3.fc45.src.rpm",
+          "source_sha256": "8f10055008ae4c4da5b58f4f65ba6b1b3cf880ef35d01c11709b682cd9852caa"
+        }
+      ]
+    },
+    {
+      "entry": "libfontconfig.so.1",
+      "sha256": "31c2adfa74cfccc409b575119e6cd357eddedc0f0ff7010a6b71630a116386d8",
+      "origin": "/usr/lib64/libfontconfig.so.1.17.0",
+      "owners": [
+        {
+          "rpm": "fontconfig|2.18.3|2.fc45|x86_64|fontconfig-2.18.3-2.fc45.src.rpm",
+          "source_rpm": "fontconfig-2.18.3-2.fc45.src.rpm",
+          "source_sha256": "31f1434bc1c1110f438f4396962a24697b0aedebae6d08c27e6b83fc7971257f"
+        }
+      ]
+    },
+    {
+      "entry": "libfreetype.so.6",
+      "sha256": "c75ae8b7eeff3528046eeac0de8cc6dbd80e56db25e74053ee19d44a13c1f0cd",
+      "origin": "/usr/lib64/libfreetype.so.6.20.6",
+      "owners": [
+        {
+          "rpm": "freetype|2.14.3|3.fc45|x86_64|freetype-2.14.3-3.fc45.src.rpm",
+          "source_rpm": "freetype-2.14.3-3.fc45.src.rpm",
+          "source_sha256": "7461bd02c7072272945de0d0ee730f0e97f899ae8f6eef3a0867cac08e9e96d0"
+        }
+      ]
+    },
+    {
+      "entry": "libgcc_s.so.1",
+      "sha256": "91e0dd0a46dcb5abb5c704a73cac0b841edffcfad3f1bc211b2b28acf4a58033",
+      "origin": "/usr/lib64/libgcc_s-16-20261029.so.1",
+      "owners": [
+        {
+          "rpm": "libgcc|16.2.1|3.fc45|x86_64|gcc-16.2.1-3.fc45.src.rpm",
+          "source_rpm": "gcc-16.2.1-3.fc45.src.rpm",
+          "source_sha256": "2cd86e16d008273a91a9241fc2c38fa0352a2255e4754c84b275544e99f960c5"
+        }
+      ]
+    },
+    {
+      "entry": "libgio-2.0.so.0",
+      "sha256": "e2f7e82a190ae65460f10ef6d430447536140e352e690b43e29e7d0e0ca55610",
+      "origin": "/usr/lib64/libgio-2.0.so.0.9000.1",
+      "owners": [
+        {
+          "rpm": "glib2|2.90.1|1.fc45|x86_64|glib2-2.90.1-1.fc45.src.rpm",
+          "source_rpm": "glib2-2.90.1-1.fc45.src.rpm",
+          "source_sha256": "98f21f0b7d0a279d261761e918a883b5224a3ed8a3324ad1f0d29549f7492fa9"
+        }
+      ]
+    },
+    {
+      "entry": "libglib-2.0.so.0",
+      "sha256": "502432210ffedbc2720595dae508d8fc675e2b8436d39080a901b4b34bf59cea",
+      "origin": "/usr/lib64/libglib-2.0.so.0.9000.1",
+      "owners": [
+        {
+          "rpm": "glib2|2.90.1|1.fc45|x86_64|glib2-2.90.1-1.fc45.src.rpm",
+          "source_rpm": "glib2-2.90.1-1.fc45.src.rpm",
+          "source_sha256": "98f21f0b7d0a279d261761e918a883b5224a3ed8a3324ad1f0d29549f7492fa9"
+        }
+      ]
+    },
+    {
+      "entry": "libgmodule-2.0.so.0",
+      "sha256": "8012073d8a84aae0d062d622ff7508b88113ad57e2c09448aec491e23b235f3b",
+      "origin": "/usr/lib64/libgmodule-2.0.so.0.9000.1",
+      "owners": [
+        {
+          "rpm": "glib2|2.90.1|1.fc45|x86_64|glib2-2.90.1-1.fc45.src.rpm",
+          "source_rpm": "glib2-2.90.1-1.fc45.src.rpm",
+          "source_sha256": "98f21f0b7d0a279d261761e918a883b5224a3ed8a3324ad1f0d29549f7492fa9"
+        }
+      ]
+    },
+    {
+      "entry": "libgobject-2.0.so.0",
+      "sha256": "9b58e8782f215360803b3363d90d6683b6013a5e423bd77061d26983fa5727aa",
+      "origin": "/usr/lib64/libgobject-2.0.so.0.9000.1",
+      "owners": [
+        {
+          "rpm": "glib2|2.90.1|1.fc45|x86_64|glib2-2.90.1-1.fc45.src.rpm",
+          "source_rpm": "glib2-2.90.1-1.fc45.src.rpm",
+          "source_sha256": "98f21f0b7d0a279d261761e918a883b5224a3ed8a3324ad1f0d29549f7492fa9"
+        }
+      ]
+    },
+    {
+      "entry": "libgraphite2.so.3",
+      "sha256": "a981193f1ada35518da09883ca7e9177eaa744ed748925ec7edba6c7a06b28d5",
+      "origin": "/usr/lib64/libgraphite2.so.3.2.1",
+      "owners": [
+        {
+          "rpm": "graphite2|1.3.14|22.fc45|x86_64|graphite2-1.3.14-22.fc45.src.rpm",
+          "source_rpm": "graphite2-1.3.14-22.fc45.src.rpm",
+          "source_sha256": "31b2639be5679d79fa25c32b868e546406f92c2a5ae58e1568e3bbec75b197f2"
+        }
+      ]
+    },
+    {
+      "entry": "libgssapi_krb5.so.2",
+      "sha256": "2bba78f61a7475ee3b52503511143fe34ca097cbb065b99527aa48815b8840c0",
+      "origin": "/usr/lib64/libgssapi_krb5.so.2.2",
+      "owners": [
+        {
+          "rpm": "krb5-libs|1.22.2|11.fc45|x86_64|krb5-1.22.2-11.fc45.src.rpm",
+          "source_rpm": "krb5-1.22.2-11.fc45.src.rpm",
+          "source_sha256": "037cddb572799a82882aa9532cba0e08c6cc9ae90179908eb95709b32bf09323"
+        }
+      ]
+    },
+    {
+      "entry": "libgthread-2.0.so.0",
+      "sha256": "88d52e44211b8f5fc2c6333c1c38e2b808e6d14fdbc9e1cac09364a7cfcc5ce5",
+      "origin": "/usr/lib64/libgthread-2.0.so.0.9000.1",
+      "owners": [
+        {
+          "rpm": "glib2|2.90.1|1.fc45|x86_64|glib2-2.90.1-1.fc45.src.rpm",
+          "source_rpm": "glib2-2.90.1-1.fc45.src.rpm",
+          "source_sha256": "98f21f0b7d0a279d261761e918a883b5224a3ed8a3324ad1f0d29549f7492fa9"
+        }
+      ]
+    },
+    {
+      "entry": "libharfbuzz.so.0",
+      "sha256": "297d2ce5526b3a2221640c847af91984681deeb90bf49011b2381327f1d7d511",
+      "origin": "/usr/lib64/libharfbuzz.so.0.61500.0",
+      "owners": [
+        {
+          "rpm": "harfbuzz|15.0.0|2.fc45|x86_64|harfbuzz-15.0.0-2.fc45.src.rpm",
+          "source_rpm": "harfbuzz-15.0.0-2.fc45.src.rpm",
+          "source_sha256": "941c4e4c5cc6c11d82df16b19fb4ec5e2252aac13685f7052e39476749d68203"
+        }
+      ]
+    },
+    {
+      "entry": "libk5crypto.so.3",
+      "sha256": "b1a64e515961665c344020c88a00c00eff957718d359eadd8e814399317d7b50",
+      "origin": "/usr/lib64/libk5crypto.so.3.1",
+      "owners": [
+        {
+          "rpm": "krb5-libs|1.22.2|11.fc45|x86_64|krb5-1.22.2-11.fc45.src.rpm",
+          "source_rpm": "krb5-1.22.2-11.fc45.src.rpm",
+          "source_sha256": "037cddb572799a82882aa9532cba0e08c6cc9ae90179908eb95709b32bf09323"
+        }
+      ]
+    },
+    {
+      "entry": "libkeyutils.so.1",
+      "sha256": "4510f6eff39786750063968cc2a8e33dab016f1c9fcb07a261b4c0498a8a14b1",
+      "origin": "/usr/lib64/libkeyutils.so.1.10",
+      "owners": [
+        {
+          "rpm": "keyutils-libs|1.6.3|8.fc45|x86_64|keyutils-1.6.3-8.fc45.src.rpm",
+          "source_rpm": "keyutils-1.6.3-8.fc45.src.rpm",
+          "source_sha256": "783c2b447128aac22c20e0c49731f5e1810aa373cb0fd202a838abc9c10c1674"
+        }
+      ]
+    },
+    {
+      "entry": "libkrb5.so.3",
+      "sha256": "d1c23e2f6071cab455e70133f185534a67b909ae79c7e4c95fd1387abbf8c0d4",
+      "origin": "/usr/lib64/libkrb5.so.3.3",
+      "owners": [
+        {
+          "rpm": "krb5-libs|1.22.2|11.fc45|x86_64|krb5-1.22.2-11.fc45.src.rpm",
+          "source_rpm": "krb5-1.22.2-11.fc45.src.rpm",
+          "source_sha256": "037cddb572799a82882aa9532cba0e08c6cc9ae90179908eb95709b32bf09323"
+        }
+      ]
+    },
+    {
+      "entry": "libkrb5support.so.0",
+      "sha256": "42e850ec9b4479deeca1e9b23ab4cad67ca7995c449f6003dc1bdb065e863475",
+      "origin": "/usr/lib64/libkrb5support.so.0.1",
+      "owners": [
+        {
+          "rpm": "krb5-libs|1.22.2|11.fc45|x86_64|krb5-1.22.2-11.fc45.src.rpm",
+          "source_rpm": "krb5-1.22.2-11.fc45.src.rpm",
+          "source_sha256": "037cddb572799a82882aa9532cba0e08c6cc9ae90179908eb95709b32bf09323"
+        }
+      ]
+    },
+    {
+      "entry": "liblzma.so.5",
+      "sha256": "1d6722b63c8d4cca0d83f995e62d979434e6282a961c65c2f44d72b80cd1fcc8",
+      "origin": "/usr/lib64/liblzma.so.5.8.3",
+      "owners": [
+        {
+          "rpm": "xz-libs|5.8.3|2.fc45|x86_64|xz-5.8.3-2.fc45.src.rpm",
+          "source_rpm": "xz-5.8.3-2.fc45.src.rpm",
+          "source_sha256": "aec4e3b940c25cc4c919b89fc1f46329dda56c5f9119502576a823e26ec4fba2"
+        }
+      ]
+    },
+    {
+      "entry": "libmount.so.1",
+      "sha256": "dbb287fa0f926f99ea9a6095fd671e9ecbaee80eefbe9cfea94ad367c2d2a0c7",
+      "origin": "/usr/lib64/libmount.so.1.1.0",
+      "owners": [
+        {
+          "rpm": "libmount|2.42.4|1.fc45|x86_64|util-linux-2.42.4-1.fc45.src.rpm",
+          "source_rpm": "util-linux-2.42.4-1.fc45.src.rpm",
+          "source_sha256": "72a7fde7d2cd980b3376b29a3c9c194d3f805460c293850b29bd6818252765d8"
+        }
+      ]
+    },
+    {
+      "entry": "libmpdec.so.4",
+      "sha256": "a332cb6924f5458dd9c1e333393c1723d685f51f93b37aca7ef74d841cc19fe1",
+      "origin": "/usr/lib64/libmpdec.so.4.0.1",
+      "owners": [
+        {
+          "rpm": "mpdecimal|4.0.1|4.fc45|x86_64|mpdecimal-4.0.1-4.fc45.src.rpm",
+          "source_rpm": "mpdecimal-4.0.1-4.fc45.src.rpm",
+          "source_sha256": "f58b0a31ef52d9c21623bc5e659a0a6be1a3c4c64276cd566ece24ec970f070c"
+        }
+      ]
+    },
+    {
+      "entry": "libpcre2-8.so.0",
+      "sha256": "377439dc82a0a178b1e3e4a565299f6a498e69ade35e9676e657cf3fad802cce",
+      "origin": "/usr/lib64/libpcre2-8.so.0.16.1",
+      "owners": [
+        {
+          "rpm": "pcre2|10.49|1.fc45|x86_64|pcre2-10.49-1.fc45.src.rpm",
+          "source_rpm": "pcre2-10.49-1.fc45.src.rpm",
+          "source_sha256": "ae9bb995b022f44fbd5497b0ac3a7ceb44782fa75c0f389c303368863a216432"
+        }
+      ]
+    },
+    {
+      "entry": "libpng16.so.16",
+      "sha256": "fd35e695df31e880a25ec99e68bcd1f163e8717dc4d0af2f988f6412849883c6",
+      "origin": "/usr/lib64/libpng16.so.16.59.0",
+      "owners": [
+        {
+          "rpm": "libpng|1.6.59|1.fc45|x86_64|libpng-1.6.59-1.fc45.src.rpm",
+          "source_rpm": "libpng-1.6.59-1.fc45.src.rpm",
+          "source_sha256": "fee1f106075d6f55612e28dbdc60212067fc4bba1dd5f53a1430d701cf5f075f"
+        }
+      ]
+    },
+    {
+      "entry": "libpython3.14.so.1.0",
+      "sha256": "400410298865abe56aae82591e408955c350e090d90b2e3a89bb6afc1b9a377f",
+      "origin": "/usr/lib64/libpython3.14.so.1.0",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "libselinux.so.1",
+      "sha256": "41579067440ce593b606999241a6343db867e4c9c3e2b6e1e96348ab6a9cab75",
+      "origin": "/usr/lib64/libselinux.so.1",
+      "owners": [
+        {
+          "rpm": "libselinux|3.11|5.fc45|x86_64|libselinux-3.11-5.fc45.src.rpm",
+          "source_rpm": "libselinux-3.11-5.fc45.src.rpm",
+          "source_sha256": "754b23fef47fc75c071b794287d69f147b1f6add814884cfe8000cc6a37f3fd6"
+        }
+      ]
+    },
+    {
+      "entry": "libssl.so.3",
+      "sha256": "b403808b41dc94160cfa4ccce5346eb24b3802b5630a17d8ec37c68f2e27e8a4",
+      "origin": "/usr/lib64/libssl.so.3.5.9",
+      "owners": [
+        {
+          "rpm": "openssl3-libs|3.5.9|1.fc45|x86_64|openssl3-3.5.9-1.fc45.src.rpm",
+          "source_rpm": "openssl3-3.5.9-1.fc45.src.rpm",
+          "source_sha256": "4aeff1958b5b8756ad3b4ac57dc31476d4f2b25fb10b35e474478b88d1bb8a01"
+        }
+      ]
+    },
+    {
+      "entry": "libstdc++.so.6",
+      "sha256": "baa3610188cd93cec0d71ed1925b532dc3bc286637fa5a9b4e013cce1c49ab2b",
+      "origin": "/usr/lib64/libstdc++.so.6.0.36",
+      "owners": [
+        {
+          "rpm": "libstdc++|16.2.1|3.fc45|x86_64|gcc-16.2.1-3.fc45.src.rpm",
+          "source_rpm": "gcc-16.2.1-3.fc45.src.rpm",
+          "source_sha256": "2cd86e16d008273a91a9241fc2c38fa0352a2255e4754c84b275544e99f960c5"
+        }
+      ]
+    },
+    {
+      "entry": "libsystemd.so.0",
+      "sha256": "250736d138dcf2b69caf066d937429dd13b4c1a608e3acc1c5fe826f62eec567",
+      "origin": "/usr/lib64/libsystemd.so.0.45.0",
+      "owners": [
+        {
+          "rpm": "systemd-libs|262.1|1.fc45|x86_64|systemd-262.1-1.fc45.src.rpm",
+          "source_rpm": "systemd-262.1-1.fc45.src.rpm",
+          "source_sha256": "ab93a2babd70be49a77e3e3cd6d335aa0f4ab18943000e1c5ff7ea98aea86254"
+        }
+      ]
+    },
+    {
+      "entry": "libxcb-cursor.so.0",
+      "sha256": "defe9af6ed2977f2f9a301fcdfe8951f608b2cd9d8139c6cdd1e9d86cb28f6c8",
+      "origin": "/usr/lib64/libxcb-cursor.so.0.0.0",
+      "owners": [
+        {
+          "rpm": "xcb-util-cursor|0.1.6|3.fc45|x86_64|xcb-util-cursor-0.1.6-3.fc45.src.rpm",
+          "source_rpm": "xcb-util-cursor-0.1.6-3.fc45.src.rpm",
+          "source_sha256": "8b7e6c3ad4e0ba9b867f36ee0ad903349e836ff343edaab71c97233e4500ae33"
+        }
+      ]
+    },
+    {
+      "entry": "libxcb-glx.so.0",
+      "sha256": "a7cb6af73060828ee45f86ba0001149e4b6183405c8eed5dc6ca87a37c854fbf",
+      "origin": "/usr/lib64/libxcb-glx.so.0.0.0",
+      "owners": [
+        {
+          "rpm": "libxcb|1.17.0|8.fc45|x86_64|libxcb-1.17.0-8.fc45.src.rpm",
+          "source_rpm": "libxcb-1.17.0-8.fc45.src.rpm",
+          "source_sha256": "8e85f7e282d766209048216c96ec7d7af831c5faa9e0dc24081714b989b52698"
+        }
+      ]
+    },
+    {
+      "entry": "libxcb-icccm.so.4",
+      "sha256": "d29b91190e38dfcb0c7113cb8c8920d1e0226b1a87db39b3e63f9bf98e3c2fa5",
+      "origin": "/usr/lib64/libxcb-icccm.so.4.0.0",
+      "owners": [
+        {
+          "rpm": "xcb-util-wm|0.4.2|10.fc45|x86_64|xcb-util-wm-0.4.2-10.fc45.src.rpm",
+          "source_rpm": "xcb-util-wm-0.4.2-10.fc45.src.rpm",
+          "source_sha256": "eb8e283eacac38a70734f1fed01e9c09f86c9dddfa74f338d7018848f8f8e1ef"
+        }
+      ]
+    },
+    {
+      "entry": "libxcb-image.so.0",
+      "sha256": "9d9589ec5b3e8953c7ab0d1e6d42f173224a041c8cafeee355b4221baea5fc86",
+      "origin": "/usr/lib64/libxcb-image.so.0.0.0",
+      "owners": [
+        {
+          "rpm": "xcb-util-image|0.4.1|10.fc45|x86_64|xcb-util-image-0.4.1-10.fc45.src.rpm",
+          "source_rpm": "xcb-util-image-0.4.1-10.fc45.src.rpm",
+          "source_sha256": "679b86b4812abcc5c55e63dd59a599427928750a3e5690a6753fa6d712f466d1"
+        }
+      ]
+    },
+    {
+      "entry": "libxcb-keysyms.so.1",
+      "sha256": "04a632992bae6ad4bb4d3288f3087b1ad0ab1e34d3a991e47a6a21652eba4875",
+      "origin": "/usr/lib64/libxcb-keysyms.so.1.0.0",
+      "owners": [
+        {
+          "rpm": "xcb-util-keysyms|0.4.1|10.fc45|x86_64|xcb-util-keysyms-0.4.1-10.fc45.src.rpm",
+          "source_rpm": "xcb-util-keysyms-0.4.1-10.fc45.src.rpm",
+          "source_sha256": "f6769b7a70740915c1aa889b1a27d6a9b8acce873fc449ad2ed8684c3d29ea9b"
+        }
+      ]
+    },
+    {
+      "entry": "libxcb-randr.so.0",
+      "sha256": "8bb404fae3a6ed451a0a7bd62006bee4c790e7c6808349c5e9480d544d41876b",
+      "origin": "/usr/lib64/libxcb-randr.so.0.1.0",
+      "owners": [
+        {
+          "rpm": "libxcb|1.17.0|8.fc45|x86_64|libxcb-1.17.0-8.fc45.src.rpm",
+          "source_rpm": "libxcb-1.17.0-8.fc45.src.rpm",
+          "source_sha256": "8e85f7e282d766209048216c96ec7d7af831c5faa9e0dc24081714b989b52698"
+        }
+      ]
+    },
+    {
+      "entry": "libxcb-render-util.so.0",
+      "sha256": "ef60fd6ab7e134e7b63594cb7a8a7ce2fa9e23bae5253d4bcad956a0f80c1db9",
+      "origin": "/usr/lib64/libxcb-render-util.so.0.0.0",
+      "owners": [
+        {
+          "rpm": "xcb-util-renderutil|0.3.10|10.fc45|x86_64|xcb-util-renderutil-0.3.10-10.fc45.src.rpm",
+          "source_rpm": "xcb-util-renderutil-0.3.10-10.fc45.src.rpm",
+          "source_sha256": "f1dd48ec9d6593781ee19a19a9b1218af12618eb02f8e1bfe142fe34e3095968"
+        }
+      ]
+    },
+    {
+      "entry": "libxcb-render.so.0",
+      "sha256": "d2932a841a77566df7b9e155307acc693a00d7b599055b1a9da1eda7047ca24d",
+      "origin": "/usr/lib64/libxcb-render.so.0.0.0",
+      "owners": [
+        {
+          "rpm": "libxcb|1.17.0|8.fc45|x86_64|libxcb-1.17.0-8.fc45.src.rpm",
+          "source_rpm": "libxcb-1.17.0-8.fc45.src.rpm",
+          "source_sha256": "8e85f7e282d766209048216c96ec7d7af831c5faa9e0dc24081714b989b52698"
+        }
+      ]
+    },
+    {
+      "entry": "libxcb-shape.so.0",
+      "sha256": "2392786c5e1a2039d52804563a1d90d1563cb1c8fc0df344bdc6835e788ee4fb",
+      "origin": "/usr/lib64/libxcb-shape.so.0.0.0",
+      "owners": [
+        {
+          "rpm": "libxcb|1.17.0|8.fc45|x86_64|libxcb-1.17.0-8.fc45.src.rpm",
+          "source_rpm": "libxcb-1.17.0-8.fc45.src.rpm",
+          "source_sha256": "8e85f7e282d766209048216c96ec7d7af831c5faa9e0dc24081714b989b52698"
+        }
+      ]
+    },
+    {
+      "entry": "libxcb-shm.so.0",
+      "sha256": "e96fbcba1569948a6c0dc06fd5c45a7996b03f3bc6b73af79250a9769ab1c9d2",
+      "origin": "/usr/lib64/libxcb-shm.so.0.0.0",
+      "owners": [
+        {
+          "rpm": "libxcb|1.17.0|8.fc45|x86_64|libxcb-1.17.0-8.fc45.src.rpm",
+          "source_rpm": "libxcb-1.17.0-8.fc45.src.rpm",
+          "source_sha256": "8e85f7e282d766209048216c96ec7d7af831c5faa9e0dc24081714b989b52698"
+        }
+      ]
+    },
+    {
+      "entry": "libxcb-sync.so.1",
+      "sha256": "a560f5b6ac23f9be4894f31703c48aad7e27d0a536a9401562e65523ee58eb0d",
+      "origin": "/usr/lib64/libxcb-sync.so.1.0.0",
+      "owners": [
+        {
+          "rpm": "libxcb|1.17.0|8.fc45|x86_64|libxcb-1.17.0-8.fc45.src.rpm",
+          "source_rpm": "libxcb-1.17.0-8.fc45.src.rpm",
+          "source_sha256": "8e85f7e282d766209048216c96ec7d7af831c5faa9e0dc24081714b989b52698"
+        }
+      ]
+    },
+    {
+      "entry": "libxcb-util.so.1",
+      "sha256": "9cb01575ef6f125b252c27d8a7ff5b898d28e07263bea20047b89fe6c9643418",
+      "origin": "/usr/lib64/libxcb-util.so.1.0.0",
+      "owners": [
+        {
+          "rpm": "xcb-util|0.4.1|10.fc45|x86_64|xcb-util-0.4.1-10.fc45.src.rpm",
+          "source_rpm": "xcb-util-0.4.1-10.fc45.src.rpm",
+          "source_sha256": "110bb406f0a65c3a1c8745eca1deb3cdedab75e72402aa8d0f96f46c81f0f408"
+        }
+      ]
+    },
+    {
+      "entry": "libxcb-xfixes.so.0",
+      "sha256": "78058191e6dc5c6c9cd0fe6f7932930158690f8d4f3f14a89b3531f7d86f4968",
+      "origin": "/usr/lib64/libxcb-xfixes.so.0.0.0",
+      "owners": [
+        {
+          "rpm": "libxcb|1.17.0|8.fc45|x86_64|libxcb-1.17.0-8.fc45.src.rpm",
+          "source_rpm": "libxcb-1.17.0-8.fc45.src.rpm",
+          "source_sha256": "8e85f7e282d766209048216c96ec7d7af831c5faa9e0dc24081714b989b52698"
+        }
+      ]
+    },
+    {
+      "entry": "libxcb-xkb.so.1",
+      "sha256": "95fc9e0b74912b6e9b3709b81ec9b0bd0957b62ac004f22f1cd46e1e0d1a3de4",
+      "origin": "/usr/lib64/libxcb-xkb.so.1.0.0",
+      "owners": [
+        {
+          "rpm": "libxcb|1.17.0|8.fc45|x86_64|libxcb-1.17.0-8.fc45.src.rpm",
+          "source_rpm": "libxcb-1.17.0-8.fc45.src.rpm",
+          "source_sha256": "8e85f7e282d766209048216c96ec7d7af831c5faa9e0dc24081714b989b52698"
+        }
+      ]
+    },
+    {
+      "entry": "libxkbcommon-x11.so.0",
+      "sha256": "cf5f870375b6c13a37532d7cb31c69db3802af6b3564d7e109ee566ab5f8ea22",
+      "origin": "/usr/lib64/libxkbcommon-x11.so.0.13.1",
+      "owners": [
+        {
+          "rpm": "libxkbcommon-x11|1.13.1|4.fc45|x86_64|libxkbcommon-1.13.1-4.fc45.src.rpm",
+          "source_rpm": "libxkbcommon-1.13.1-4.fc45.src.rpm",
+          "source_sha256": "7d856ca73893faaec96db9ab0fd2b022bcba888ee1167260df85d52db69fae13"
+        }
+      ]
+    },
+    {
+      "entry": "libxkbcommon.so.0",
+      "sha256": "e26f44dd67b57cc2d632d51db87890480e76826fc8223f16cc73c94dd64f1eee",
+      "origin": "/usr/lib64/libxkbcommon.so.0.13.1",
+      "owners": [
+        {
+          "rpm": "libxkbcommon|1.13.1|4.fc45|x86_64|libxkbcommon-1.13.1-4.fc45.src.rpm",
+          "source_rpm": "libxkbcommon-1.13.1-4.fc45.src.rpm",
+          "source_sha256": "7d856ca73893faaec96db9ab0fd2b022bcba888ee1167260df85d52db69fae13"
+        }
+      ]
+    },
+    {
+      "entry": "libxml2.so.16",
+      "sha256": "06b1884fd69ed14a74e36dd0f20455be9ea4d0b44a731a5483aa812551418eda",
+      "origin": "/usr/lib64/libxml2.so.16.1.4",
+      "owners": [
+        {
+          "rpm": "libxml2|2.15.4|1.fc45|x86_64|libxml2-2.15.4-1.fc45.src.rpm",
+          "source_rpm": "libxml2-2.15.4-1.fc45.src.rpm",
+          "source_sha256": "fac63bee88fcd66e40dba003a81716f7baf3e62b17ac7384baa2845c8a2ded37"
+        }
+      ]
+    },
+    {
+      "entry": "libz.so.1",
+      "sha256": "bcc97bb783dd4986a54482af2182841712728646ed19236aac3f4aad6605e172",
+      "origin": "/usr/lib64/libz.so.1.3.1.zlib-ng",
+      "owners": [
+        {
+          "rpm": "zlib-ng-compat|2.3.3|6.fc45|x86_64|zlib-ng-2.3.3-6.fc45.src.rpm",
+          "source_rpm": "zlib-ng-2.3.3-6.fc45.src.rpm",
+          "source_sha256": "2c12f10165dd9936254566cb6a609687e7716a31461b05c228cb45ba311e8a83"
+        }
+      ]
+    },
+    {
+      "entry": "libzstd.so.1",
+      "sha256": "fbcf5cff976a8f4e047a3978839e22f422598390112665703602304bf0e7d781",
+      "origin": "/usr/lib64/libzstd.so.1.5.7",
+      "owners": [
+        {
+          "rpm": "libzstd|1.5.7|6.fc45|x86_64|zstd-1.5.7-6.fc45.src.rpm",
+          "source_rpm": "zstd-1.5.7-6.fc45.src.rpm",
+          "source_sha256": "d889226ca681bea335bf54b1bd7c39ec6b886e46c7bc72b31024e858e4dc1f67"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_bisect.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "6f388871145a9b9c72240d13879905715604a8a0ec569f0f0d92e7a1b20c7eb3",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_bisect.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_blake2.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "560f1dab7ed0fc7555440aeaa23ba1f0a31204c5e46a0f726382e7414e196d10",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_blake2.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_bz2.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "17a47bd9469e182d0e1615de09991f38aa1423b4d83f8b56a620344881bb0bab",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_bz2.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_codecs_cn.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "5ae40eced2956b1fbaf30739b42909396c935be9ff8e526ed3915411b1c3871c",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_codecs_cn.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_codecs_hk.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "200c0c32053e62a841791fa13614c67bc2cc57946a31f2ade91b7ac44f3d3136",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_codecs_hk.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_codecs_iso2022.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "a338a8ef71cd261683a71e60e3d175f966fef3644e57bc17f13f7a27868b9e3e",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_codecs_iso2022.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_codecs_jp.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "746ef9d645eab80b88e2e066b0506dd749b4cbc7d7c14030c28eea9775dae94f",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_codecs_jp.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_codecs_kr.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "71da629e56b3ac80fe39b5ad4ae920650e78082123c6a313541def95fcf8e155",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_codecs_kr.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_codecs_tw.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "48e187afb94cde42dcc021ca4032bc01704943d968b570ff6976e48ba9be2539",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_codecs_tw.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_csv.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "471adccf51b4a7f35c253c017ba9588ede504f357b2ee36a938b5d6e7021b0de",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_csv.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_ctypes.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "3fbd9feae8e743ba286c6c578302e9fea42ba558f601d3974f2d19b9d204e706",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_ctypes.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_decimal.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "509bcbd624e9ae1dd3f8fb6f8585a7ee326175a6520c340bc16ab931ac56f34c",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_decimal.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_elementtree.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "0b4372961fb07c2d46b9976741de7f29fe7d338ea3c2ce78e4eef32630ef2505",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_elementtree.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_hashlib.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "ead0b733622da8f1f8ddf5d4e6aa3c25117cf3a8739db37de87980421a484b52",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_hashlib.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_heapq.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "59d580206114db7f591833f7b2fbb1e60bc81cc7ce051ba9aa07518a7a4df48e",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_heapq.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_hmac.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "833614a1d5af9c2943f07563f7aefcbd2b3a43bccc4e1f987b317e5eb5a9451e",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_hmac.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_json.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "f6eea1870fa00b9c1651650b705861b5bb79e548c81fb3e9119251c34a465a37",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_json.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_lzma.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "537d49da46cae0e81999b468438537a6da605a14633f0b7754fe28549863583d",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_lzma.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_md5.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "7f81e162b3856fbb6bd6aac8111775192e26f94b95282d3c62a3b50df33d1de2",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_md5.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_multibytecodec.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "4a30adc2d4937083d22fa11bf2ae0f5d1cc4dbdf0ce063e86c12fe7650c596e2",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_multibytecodec.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_multiprocessing.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "ed5f83c375a57594bf53577d951b9d05642208527581a55eaaa94ee4ddee84de",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_multiprocessing.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_pickle.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "509e64110c494bb71813a0538237e13731d576b4af848c9d1ac02dde8e53e38d",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_pickle.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_posixshmem.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "64b54c8963770c85299435b35e9d88ba1acd3377d2073cce33aa05e3e043826b",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_posixshmem.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_posixsubprocess.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "c16f71f24194d4492ac0ca4a45176b303c55ad98224785b5acccf18a06d103dc",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_posixsubprocess.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_queue.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "5cbbf56fe17a4412ea08567fa9a0137b28268d933daa02b3e06854028ae6846f",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_queue.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_random.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "ea51b9375725d16ef25799fbd1701cda4cb9e5530554a301c48c42038051f4d9",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_random.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_sha1.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "a5f665f6836ce539d577f56b0bdec3fa1b216ae68a44045574c3ad7072ebf932",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_sha1.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_sha2.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "29c1882990227fae2f3068083312bd83c0592a070695b266a29672854feffb30",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_sha2.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_sha3.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "8a0393b382ef5d390e7714fc49d09071159a074d41a6f91dac1f39ccb76a7193",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_sha3.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_socket.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "cab914c34ad35794233b12987faf85443e17145faf5015498665d26a308b756f",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_socket.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_ssl.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "5800af31310890e8e087dd2baa3dcb35b58fac8c7c055ce63dd196db848b0e4f",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_ssl.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_statistics.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "e9fb23ca472d57108d9d44447ea7fd11e73fbf4ba301de46e457b8a5543311c7",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_statistics.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_struct.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "e0ff95215dcb76c986e65201a433b20a2a9692410ae3b4273e1c1f7c6f4d2d40",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_struct.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/_zstd.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "8d23f6c5ab247b2f9516bfbaec16821fcb9fb36542dcd0785acc622bd6243c94",
+      "origin": "/usr/lib64/python3.14/lib-dynload/_zstd.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/array.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "a176eec0271d1ed65c5d3ecb012e1e54d22e6f7ecd873b7e3ccc311c436d9be3",
+      "origin": "/usr/lib64/python3.14/lib-dynload/array.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/binascii.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "6fac897baf551300f1ef58b1376923271b150cd19767f518c4517761c793f98e",
+      "origin": "/usr/lib64/python3.14/lib-dynload/binascii.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/fcntl.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "edcbf5f3d69bc2d0b7277e61f9fb370d8551b99ab865df3a9db3edf037e675da",
+      "origin": "/usr/lib64/python3.14/lib-dynload/fcntl.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/grp.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "84a40e9d13e26d5df8b39920711d53f2ed6596f5e7c3a2855d1ba92dd42022c6",
+      "origin": "/usr/lib64/python3.14/lib-dynload/grp.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/math.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "f074df51c839847be6f918cb28241757fcd22e5b9d240422e1dbd6b4f6b2f6e7",
+      "origin": "/usr/lib64/python3.14/lib-dynload/math.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/mmap.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "c7cb61430416b071dd6a3f8acb5b64b001b2ecf4b355de343bea0f2d007af949",
+      "origin": "/usr/lib64/python3.14/lib-dynload/mmap.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/pyexpat.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "423abaae7d8dc89fc62561f8a7f7bf2eafc9d66707541820fb63608e9cb07479",
+      "origin": "/usr/lib64/python3.14/lib-dynload/pyexpat.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/resource.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "402202e0ca2b476a0bdda0f717a7635f7557dbf7077e2141d11a47fa22854aeb",
+      "origin": "/usr/lib64/python3.14/lib-dynload/resource.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/select.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "9c5e9844b3b36acdce02dd57ef1327dfbf8dfefe694eacc7180771d8d9a9d8b1",
+      "origin": "/usr/lib64/python3.14/lib-dynload/select.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/unicodedata.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "7812c94cc63e3565498ab7e306c40c362a82fd83d6eb42ca14bf64390384a96d",
+      "origin": "/usr/lib64/python3.14/lib-dynload/unicodedata.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    },
+    {
+      "entry": "python3.14/lib-dynload/zlib.cpython-314-x86_64-linux-gnu.so",
+      "sha256": "61c6f539ee0945d1fac54e0f81c4d7d883cc7d125d9a68a32504fa3679c20329",
+      "origin": "/usr/lib64/python3.14/lib-dynload/zlib.cpython-314-x86_64-linux-gnu.so",
+      "owners": [
+        {
+          "rpm": "python3.14-libs|3.14.10|1.fc45|x86_64|python3.14-3.14.10-1.fc45.src.rpm",
+          "source_rpm": "python3.14-3.14.10-1.fc45.src.rpm",
+          "source_sha256": "7a1e3a3d65fcba6042ca11a1df5e6f88517629a3e680ea8c8f7e887c1d26dcc9"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "RPM ownership and exact named signed SRPM mapping; not independent recompilation proof",
+    "Source audit is additional to revision2 embedded118-file material manifest; not silently rewritten"
+  ]
+}

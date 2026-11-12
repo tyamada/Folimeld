@@ -1,0 +1,64 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "candidate_unchanged": true,
+  "runtime_version": [
+    73,
+    2,
+    0,
+    0
+  ],
+  "native_matches": [
+    {
+      "entry": "PySide6/Qt/lib/libicudata.so.73",
+      "sha256": "4d24b3a908dd838bea23414e16aa830d05a2a306c475246ab11ef0a00c3037e9"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libicui18n.so.73",
+      "sha256": "ad5410f3e4eb4f01f91d10ddb3780cdbcbeb902ed04a3bc4d3f562b956578d52"
+    },
+    {
+      "entry": "PySide6/Qt/lib/libicuuc.so.73",
+      "sha256": "8ce3427af0d2bf566bb422ce80a12014137d12ed452fe2dd9ed481ee46181168"
+    }
+  ],
+  "source_version": "73.2",
+  "sources": [
+    {
+      "filename": "SHASUM512.txt",
+      "url": "https://github.com/unicode-org/icu/releases/download/release-73-2/SHASUM512.txt",
+      "bytes": 1235,
+      "sha256": "645fb72d95d845bf994724ea7d9c51a9109c0d65abd514e77ec444bc25b22ce2"
+    },
+    {
+      "filename": "SHASUM512.txt.asc",
+      "url": "https://github.com/unicode-org/icu/releases/download/release-73-2/SHASUM512.txt.asc",
+      "bytes": 659,
+      "sha256": "21edc5c3f1fa52e08713b4427a444bb4e9d5a6e4fa144e733f1b6111bf941186"
+    },
+    {
+      "filename": "icu4c-73_2-src.tgz",
+      "url": "https://github.com/unicode-org/icu/releases/download/release-73-2/icu4c-73_2-src.tgz",
+      "bytes": 26519906,
+      "sha256": "818a80712ed3caacd9b652305e01afc7fa167e6f2e94996da44b90c2ab604ce1"
+    },
+    {
+      "filename": "icu4c-73_2-src.tgz.asc",
+      "url": "https://github.com/unicode-org/icu/releases/download/release-73-2/icu4c-73_2-src.tgz.asc",
+      "bytes": 659,
+      "sha256": "ee0759320a3093fb3bd55345bfc38acc1b660414b9dde0ce36779616eda76ca7"
+    }
+  ],
+  "source_sha512": "76dd782db6205833f289d7eb68b60860dddfa3f614f0ba03fe7ec13117077f82109f0dc1becabcdf4c8a9c628b94478ab0a46134bdb06f4302be55f74027ce62",
+  "official_sha512_matches": true,
+  "detached_signatures_downloaded": true,
+  "detached_signatures_verified": false,
+  "notice_present_in_revision2": [],
+  "notice_sha256": "049a4994d41b0d47a90c5c628113d6cc3d100d043baa9ebf6e11ae53fe1ea2ed",
+  "notice_path": "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/icu73-source-review/ICU-73.2.txt",
+  "limitations": [
+    "Official HTTPS checksum match, not independent OpenPGP signature verification",
+    "Matching runtime/source version and byte origin, not historical wheel compiler provenance",
+    "New source and notice are supplementary; revision2 embedded source manifest/staging remain unchanged"
+  ]
+}
