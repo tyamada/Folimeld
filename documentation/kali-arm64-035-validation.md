@@ -15,3 +15,5 @@ Original CFFI wheel statically embeds libffi without sufficient exact-version pr
 Unsigned GitHub preview,glibc>=2.43,not official Kali package. Other Kali versions/current rolling/other distributions,physical ARM,full XFCE/GNOME/KDE/Wayland,IME,encryption/forms GUI,associations,cross-version upgrade/rollback untested. No amd64/other-OS acceptance reused. See BUILD/KNOWN-LIMITATIONS/evidence. Complete all public redownloads,main integration and X announcement before next release.
 
 Publication complete:all16attachments redownloaded after publication,sizes/SHA256 match,prior public assets/latest preserved. X announcement follows main integration.
+
+X announcement complete:https://x.com/tyamada22/status/2121351195285745708 . Posted by tyamada22 after all16public redownload checks and maindbf975b push;verified public text,Release card and 2026-11-14 06:15 JST timestamp.
