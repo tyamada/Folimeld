@@ -46,6 +46,11 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.5 Kali ARM64 preview - 2026-11-14
+
+- Publish [Kali2026.3 ARM64 DEB0.3.5](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5). Fresh ARM64 checks cover PDF editing/image conversion/save,purge/reinstall preserving documents/settings,and minimum-dependency startup. Normal-user Xorg/IceWM,all3GUI exits0.
+- 410tests/69subtests pass,9skip;ruff passes. Verify1011inputs,173AArch64 members,30corresponding source packages and all16public redownloads. CFFI built from official source with dynamic Kali libffi;219upstream tests pass. ELF/DEB match across two output roots. Unsigned GitHub preview,glibc>=2.43. Other versions/current rolling,physical ARM,full desktops/Wayland/IME/upgrades untested. Preserve prior releases/latest.
+
 ## 0.3.5 openSUSE Tumbleweed ARM64 preview - 2026-11-14
 
 - Publish [Tumbleweed20261111 ARM64 RPM0.3.5-1](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5). Normal-user Xorg/IceWM with SELinux Enforcing;all3GUI exits0. Verify PDF editing/image conversion/save,full removal/reinstall preserving documents/settings,and minimum-dependency startup.

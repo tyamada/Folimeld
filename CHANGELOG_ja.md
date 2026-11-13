@@ -46,6 +46,11 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.5 Kali ARM64試験版 - 2026-11-14
+
+- [Kali2026.3 ARM64 DEB0.3.5](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5)を公開。新規ARM64環境でPDF編集/画像変換/保存、完全削除再導入と文書/設定保持、最小依存起動を確認。一般ユーザーXorg/IceWM、GUI3回終了0。
+- 410tests/69subtests成功、9skip、ruff成功。1011入力・173AArch64実体・30対応ソース、全16公開後添付再取得を照合。CFFIは公式ソースと動的Kali libffiで構築し公式219tests成功。ELF/DEBとも2出力先一致。未署名GitHub試験版、glibc>=2.43。他版/current rolling/実機/完全なデスクトップ/Wayland/IME/旧版更新未検証。既存公開物/latestを保持。
+
 ## 0.3.5 openSUSE Tumbleweed ARM64試験版 - 2026-11-14
 
 - [Tumbleweed20261111 ARM64 RPM0.3.5-1](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5)を公開。一般ユーザーXorg/IceWM、SELinux EnforcingでGUI3回終了0、PDF編集/画像変換/保存、完全削除再導入と文書/設定保持、最小依存起動を確認。

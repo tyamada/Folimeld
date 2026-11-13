@@ -52,6 +52,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | openSUSE Tumbleweed 20261110（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) |
 | openSUSE Leap 16.1（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5) |
 | openSUSE Tumbleweed 20261111（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5) |
+| Kali 2026.3 / kali-last-snapshot（ARM64 VMのXorgで検証） | arm64 | DEB / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5) |
 | openSUSE Leap 16.1（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5) |
 | Fedora 44（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.5) |
 | Fedora 44（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5) |
@@ -202,6 +203,8 @@ PDF編集・日本語名保存とGIO再読込・暗号化PDF・画像PDF・Mozc�
 [**Leap 16.1 ARM64 RPM 0.3.5-1**](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5)を公開しました。一般ユーザーXorg/IceWM・SELinux Enforcingで新規導入、PDF編集・保存・日本語パス再読込・画像変換・正常終了、完全削除と同一候補再導入・文書/設定保持を確認。ARM64で410テスト成功、999ソース入力と202 AArch64実体の対応、全16添付の公開後再取得を照合済みです。実行ファイルは別出力先2件で一致しました。Google公式修正版Brotli 1.1.1を変更なしソースからビルドして2ライブラリだけ同梱し、OS側は維持します。GitHubの未署名RPM、glibc 2.40以上。実機ARM・Wayland・IME・旧版更新等は未検証。[検証・制約](documentation/opensuse-leap161-arm64-035-validation_ja.md)。
 
 [**Tumbleweed 20261111 ARM64 RPM 0.3.5-1**](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5)を公開しました。ARM64固有の導入・PDF編集/画像変換/保存・完全削除再導入と文書/設定保持を確認。SELinux Enforcing、GUI3回終了0、410テスト成功。1001ソース入力・201 AArch64実体・対応32signed SRPMと、公開後の全16添付再取得を照合済み。別出力先2件でELF一致。未署名GitHub RPM、glibc>=2.44。別スナップショット・実機ARM・Wayland・IME・旧版更新は未検証。最小デスクトップの日本語ファイル名表示にはCJKフォントが必要です。[検証・制約](documentation/opensuse-tumbleweed-arm64-035-validation_ja.md)。
+
+[**Kali 2026.3 ARM64 DEB 0.3.5**](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5)を公開しました。一般ユーザーXorg/IceWMでPDF編集・画像変換・保存・完全削除再導入と文書/設定保持を確認。GUI3回終了0、410tests/69subtests成功、9skip。1011ソース入力・173AArch64実体・30対応ソースと全16添付の公開後再取得を照合。CFFIは公式ソースと動的Kali libffiから構築し、ELF・DEBは2出力先で一致。未署名GitHub DEB、glibc>=2.43。他Kali版/現在のrolling/実機/完全なデスクトップ/Wayland/IME/旧版更新は未検証。アプリ単位制限はありません。[検証・制約](documentation/kali-arm64-035-validation_ja.md)。
 
 ```bash
 sudo zypper install --allow-unsigned-rpm ./folimeld-0.3.5-1.lp161.aarch64.rpm
