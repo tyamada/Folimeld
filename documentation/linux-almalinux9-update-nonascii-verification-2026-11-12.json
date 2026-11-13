@@ -1,0 +1,107 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "private_application_version": "0.3.3",
+  "build": {
+    "package_path": "/home/folimeld-build/folimeld-candidates/alma9-20261112/packages/folimeld-0.3.3-2.alma9_8.x86_64.rpm",
+    "package_sha256": "bd93161bca6ed6cd45f0b23a1591dc4f5d0f356608a26eaa679536ad6fa772f9",
+    "association": {
+      "artifact": "folimeld-0.3.3-2.alma9_8.x86_64.rpm",
+      "artifact_sha256": "bd93161bca6ed6cd45f0b23a1591dc4f5d0f356608a26eaa679536ad6fa772f9",
+      "executable": "folimeld",
+      "executable_sha256": "e7df5b946593a785d5d2c68ba15caa110903ee86b70b30eea784ba8a56f34914",
+      "association": "packaging script supplied executable; verify package contents before publication",
+      "source_archive": "Folimeld-source-b71dbf33195c5ff8a357b543eec46ee5dc910ff6c46bcd5b77bd856760d7d868.zip",
+      "source_sha256": "b71dbf33195c5ff8a357b543eec46ee5dc910ff6c46bcd5b77bd856760d7d868",
+      "git_commit": "423e59471b576e4732c7d6ec0ad9ab25cbf19582",
+      "working_tree_changed": true,
+      "dependency_sources": "NOT INCLUDED: obtain matching dependency sources and review bundled native components before distribution"
+    },
+    "log_tail": [
+      "+ umask 022",
+      "+ cd /home/folimeld-build/folimeld-candidates/alma9-20261112/tmp/folimeld-rpm-xynhtvrc/BUILD",
+      "+ /usr/bin/rm -rf /home/folimeld-build/folimeld-candidates/alma9-20261112/tmp/folimeld-rpm-xynhtvrc/BUILDROOT/folimeld-0.3.3-2.alma9_8.x86_64",
+      "+ RPM_EC=0",
+      "++ jobs -p",
+      "+ exit 0",
+      "Artifact/source association: /home/folimeld-build/folimeld-candidates/alma9-20261112/source/dist/source/folimeld-0.3.3-2.alma9_8.x86_64.rpm-bd93161bca6ed6cd45f0b23a1591dc4f5d0f356608a26eaa679536ad6fa772f9.json",
+      "Built AlmaLinux package: /home/folimeld-build/folimeld-candidates/alma9-20261112/packages/folimeld-0.3.3-2.alma9_8.x86_64.rpm"
+    ]
+  },
+  "test": {
+    "upgrade": {
+      "command": [
+        "dnf",
+        "-y",
+        "--setopt=install_weak_deps=False",
+        "upgrade",
+        "/root/folimeld-verification/folimeld-0.3.3-2.alma9_8.x86_64.rpm"
+      ],
+      "exit_code": 0,
+      "before": "folimeld-0.3.3-1.alma9_8.x86_64",
+      "after": "folimeld-0.3.3-2.alma9_8.x86_64",
+      "package_sha256": "bd93161bca6ed6cd45f0b23a1591dc4f5d0f356608a26eaa679536ad6fa772f9",
+      "binary_unchanged": true,
+      "binary_sha256": "e7df5b946593a785d5d2c68ba15caa110903ee86b70b30eea784ba8a56f34914",
+      "checks": [
+        {
+          "command": [
+            "rpm",
+            "-V",
+            "folimeld"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "dnf",
+            "check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    "startup_after_upgrade": [
+      {
+        "platform": "offscreen",
+        "alive_after_12_seconds": true,
+        "exit_code_after_test": -15,
+        "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nThis plugin does not support propagateSizeHints()\n"
+      },
+      {
+        "platform": "xcb",
+        "alive_after_12_seconds": true,
+        "exit_code_after_test": -15,
+        "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+      }
+    ]
+  },
+  "nonascii_save": {
+    "saved_name": "保存 結果.pdf",
+    "parent_name": "日本語 パス",
+    "saved_sha256": "50984c86dcfdcad339f26a133cc449d4a5745832137f218174e6a5264705fd5b",
+    "pages": 3,
+    "rotations": [
+      90,
+      0,
+      0
+    ],
+    "page_text_preserved": true,
+    "original_copy_unchanged": true,
+    "gui_save_and_reopen_observed": true
+  },
+  "limitations": [
+    "Packaging revision upgrade of unchanged executable, not an application-version or settings migration test",
+    "Startup after upgrade used GUI-tool environment, not initial minimal dependency environment",
+    "WSLg X11 and GIO only, not full desktop file-manager double-click"
+  ],
+  "screenshots": {
+    "08-mime-nonascii-loaded.png": "046c3895fa09b1a0ffbcf151627e06b4a11367b4280fe932e960058e81d1f7f1",
+    "09-nonascii-saved.png": "5062bee37ef990e36a128e42164edd263e06a0c328809cd7684429f4952e316e",
+    "10-nonascii-reopened.png": "3f0ae7f34d00c3f1eadfc4f65bfaec5c08100bd46302dd626a1ad213b4b51007"
+  }
+}
