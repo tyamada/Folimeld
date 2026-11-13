@@ -132,6 +132,10 @@ sudo snap install --dangerous ./folimeld_0.3.3_arm64.snap
 
 Debian 13ではUbuntu版と同じdebパッケージを使用します。最小構成の環境で `Fontconfig error: Cannot load default config file` が表示される場合は、`sudo apt install fontconfig-config` を実行してください。Debian 13.6のamd64環境（WSL2 / WSLg、X11）でPDFの表示・ページ移動・回転・保存・再読込を確認しています。詳しくは[Debianでの検証記録](documentation/debian-wsl-verification_ja.md)を参照してください。arm64環境（WSL2）でもdebのインストールとPDFを指定した起動を確認済みです。
 
+### Ubuntu / Debian ARM64 DEB修正試験版
+
+[**0.3.4+fix1 ARM64 DEB**](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.4-fix1)は、画像変換後の終了クラッシュを修正する試験版です。Ubuntu 24.04.5 ARM64の一般ユーザーXorgで画像変換・保存・再起動後の再読込・破棄終了・削除再導入を確認しました。Debian 13.7 ARM64の通常PDF受入は同一DEBの2026年11月11日の記録で、今回未再実行です。DEB・正確な対応ソース・依存ソースと告知・検証範囲はReleaseに掲載しています。既存0.3.4/Snapとamd64版は保持しています。
+
 ### Ubuntu / Debian / Kali amd64 DEB試験版
 
 2026年11月13日（日本時間）公開の**Folimeld 0.3.5**は、Ubuntu 24.04で生成し、専用Ubuntu 24.04.4・Debian 13.6・Kali Rolling 2026.3のWSL2／WSLgで検証したamd64 DEB試験版です。既存0.3.4のDEB/SnapとARM64配布物は保持しています。glibc 2.39以上と、Ubuntuでは公式universeリポジトリが必要です。

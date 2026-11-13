@@ -1,0 +1,32 @@
+{
+  "source": "PyInstaller 6.22.2 wheel bootloader Linux-64bit-arm/run",
+  "wheel_sha256": "f5ccb847451df4207bce18bf53a57b124c9bb4e7e4bad08c5ecc627bcf00b28c",
+  "bootloader_sha256": "1e982372134ce6d14969888b50c7df074c24818f47d3ce73dc5fb066cd0eefe8",
+  "sections_verified": [
+    ".comment",
+    ".data",
+    ".data.rel.ro",
+    ".dynamic",
+    ".dynstr",
+    ".dynsym",
+    ".eh_frame",
+    ".fini",
+    ".fini_array",
+    ".gnu.hash",
+    ".gnu.version",
+    ".gnu.version_r",
+    ".got",
+    ".got.plt",
+    ".init",
+    ".init_array",
+    ".interp",
+    ".note.ABI-tag",
+    ".note.gnu.build-id",
+    ".plt",
+    ".rela.dyn",
+    ".rela.plt",
+    ".rodata",
+    ".text"
+  ],
+  "result": "All original non-NOBITS section bytes exactly match. objcopy adds pydata and relocates section table/string table."
+}

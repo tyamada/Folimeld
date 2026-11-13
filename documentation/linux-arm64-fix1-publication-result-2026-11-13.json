@@ -1,0 +1,86 @@
+{
+  "release": "https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.4-fix1",
+  "all_16_public_redownloads_verified": true,
+  "assets": [
+    {
+      "name": "BUILD.txt",
+      "bytes": 1846,
+      "sha256": "54abf0aea0644babf493c81a5b66c63c4eabb34ce6b2fe8c7aa5ae25b3137078"
+    },
+    {
+      "name": "Folimeld-0.3.4-Pillow-wheel-source-and-notice-supplement.zip",
+      "bytes": 5853009,
+      "sha256": "a5811c2c3dfb45344b22f0a1bb19b305034c045f4912e6f6a91dcfa5591790d0"
+    },
+    {
+      "name": "Folimeld-0.3.4-third-party-source-set.tar",
+      "bytes": 1456230400,
+      "sha256": "306c4c9525c5240c5564472b762b05a9c81aff7df362a117dc78049e1c748b7e"
+    },
+    {
+      "name": "Folimeld-arm64-fix1-rebuild-recipe.tar.gz",
+      "bytes": 24213,
+      "sha256": "1be66869480098854cbd854500e3e8ecece0d7730c48ee4bcfa3ae6bf8a97fd8"
+    },
+    {
+      "name": "Folimeld-arm64-fix1-ubuntu-source-supplement.tar",
+      "bytes": 94126080,
+      "sha256": "e48c6a7eb23f3616aecf8abed9f6d5e3112927e566946f3ff92a0fabd34d51ce"
+    },
+    {
+      "name": "Folimeld-source-f7f69ff38f55294d5cc682a98d319a5e92a8fc1f1a0f951905c60d0f49dad522.json",
+      "bytes": 56378,
+      "sha256": "88fda7ee084c09c9c98b4fd8bfc5d0c590efd5d49f5673b40d73ea7a9fc5d9ce"
+    },
+    {
+      "name": "Folimeld-source-f7f69ff38f55294d5cc682a98d319a5e92a8fc1f1a0f951905c60d0f49dad522.zip",
+      "bytes": 15106677,
+      "sha256": "f7f69ff38f55294d5cc682a98d319a5e92a8fc1f1a0f951905c60d0f49dad522"
+    },
+    {
+      "name": "KNOWN-LIMITATIONS.txt",
+      "bytes": 1066,
+      "sha256": "bc46b1ff1bdaf1172d7017f0be3c86417f77ab798ac90cb96108d062e2b3f4ed"
+    },
+    {
+      "name": "RELEASE-NOTES.txt",
+      "bytes": 3859,
+      "sha256": "2c248d8bb26757126a3e228a8dc754575eef6eed57bfc15cc7034e394000e00f"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 1669,
+      "sha256": "1c35661c0dcf7c740d91f43f01545bc81b25566c39cfecd0da0521fd263f78c8"
+    },
+    {
+      "name": "folimeld_0.3.4+fix1_arm64.deb",
+      "bytes": 104546710,
+      "sha256": "1212c9b51961bdef8d5e478deef38df13b0f6203664ce663ef4e89b39391cc99"
+    },
+    {
+      "name": "folimeld_0.3.4+fix1_arm64.deb-1212c9b51961bdef8d5e478deef38df13b0f6203664ce663ef4e89b39391cc99.json",
+      "bytes": 779,
+      "sha256": "c32a5f8072bbb8a9d89daf190e1e2b7db70116436dc4e0f64d4b9565a20f5f46"
+    },
+    {
+      "name": "native-dependency-provenance.json",
+      "bytes": 248911,
+      "sha256": "7ee7c3c74a99bb93f2b1d591d8fc785a952e96702fbe51e5fdeb4f8db013b118"
+    },
+    {
+      "name": "third-party-notices.tar.gz",
+      "bytes": 2015678,
+      "sha256": "7d7c304d3ee0e94c4d198b1f216dc0f427eee88446d8bc1db56323ae7eef2997"
+    },
+    {
+      "name": "verification-deb-arm64-fix1.json",
+      "bytes": 962,
+      "sha256": "26645ea147235f143946559435b970c91b02c48dcf9fad5acc0eb9bb919f9754"
+    },
+    {
+      "name": "verification-records-deb-arm64-fix1.zip",
+      "bytes": 1182481,
+      "sha256": "d1c023a613db840b35d9d021f5f7b7f846f90aed2890dd7a8476da80f36ac0cc"
+    }
+  ]
+}

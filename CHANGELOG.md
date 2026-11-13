@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+- Publish the Linux ARM64 DEB 0.3.4+fix1 preview: image-conversion exit fix, byte-identical rebuild, Ubuntu ARM64 GUI/removal-reinstallation checks, and matching sources for all 210 native files. Debian acceptance uses saved records of the same DEB and was not rerun today. Preserve existing downloads.
+
 - Integrate Linux RPM builds for Fedora, Leap 16.1, Tumbleweed, and AlmaLinux 9, package overwrite refusal, the asynchronous rotated-thumbnail layout fix, and full PyInstaller/LibTIFF LZW notices into main. Synchronize the source version to 0.3.5; existing other-OS downloads remain unchanged.
 - Additionally verify the public DEB 0.3.5 on Ubuntu 24.04.4: Mozc conversion, GIO, encrypted-PDF editing/saving and reauthentication, and image import/saving. These additional features were not retested on Debian/Kali.
 

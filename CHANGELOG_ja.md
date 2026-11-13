@@ -4,6 +4,8 @@
 
 ## 未リリース
 
+- Linux ARM64 DEB 0.3.4+fix1修正試験版を公開。画像変換後の終了クラッシュ修正、再ビルドのバイト一致、Ubuntu ARM64の実画面/削除再導入、210ネイティブ実体の対応ソースを検証。Debianの受入は保存済み同一DEB記録で、今回未再試験。既存配布物を保持。
+
 - Linux向けRPMビルド（Fedora・Leap16.1・Tumbleweed・AlmaLinux9）、既存パッケージの上書き拒否、非同期サムネイル回転の表示修正、PyInstaller全文・LibTIFF LZW告知をmainへ統合。ソース版を0.3.5へ同期（既存の他OS配布物は変更せず）。
 - 公開済みDEB 0.3.5をUbuntu24.04.4で追加検証し、Mozc変換、GIO、暗号化PDFの編集保存・再認証、画像取込保存を確認。Debian/Kaliの追加機能は未再試験。
 

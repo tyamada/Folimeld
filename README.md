@@ -132,6 +132,10 @@ sudo snap install --dangerous ./folimeld_0.3.3_arm64.snap
 
 Debian 13 uses the same deb package as Ubuntu. If a minimal installation displays `Fontconfig error: Cannot load default config file`, run `sudo apt install fontconfig-config`. PDF display, page movement, rotation, saving, and reopening have been verified on Debian 13.6 amd64 (WSL2 / WSLg, X11). See the [Debian verification record](documentation/debian-wsl-verification_ja.md) (in Japanese) for details. Installation of the deb package and startup with a PDF have also been verified on arm64 (WSL2).
 
+### Ubuntu / Debian ARM64 DEB fix preview
+
+[**0.3.4+fix1 ARM64 DEB**](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.4-fix1) is a preview that fixes an exit crash after image conversion. Image conversion, saving, reopening after restart, discard-and-exit, and removal/reinstallation were checked in a regular-user Xorg session on Ubuntu 24.04.5 ARM64. Normal PDF acceptance on Debian 13.7 ARM64 comes from the same DEB's November 11, 2026 records and was not rerun today. The Release provides the DEB, exact application source, dependency sources/notices, and verification scope. Existing 0.3.4/Snap and amd64 downloads remain available.
+
 ### Ubuntu / Debian / Kali amd64 DEB preview
 
 **Folimeld 0.3.5**, published on November 13, 2026 (Japan time), is an amd64 DEB preview built on Ubuntu 24.04 and verified in dedicated Ubuntu 24.04.4, Debian 13.6, and Kali Rolling 2026.3 WSL2/WSLg environments. Existing 0.3.4 DEB/Snap and ARM64 downloads remain available. glibc 2.39 or newer is required, along with the official universe repository on Ubuntu.
