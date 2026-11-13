@@ -13,3 +13,5 @@
 共通0.3.4依存ソースTAR/Pillow補足は依存版共通のため再利用し、現在cp313 Pillowの部品名・版・ソースハッシュ・ライセンスを照合。今回のLeap32SRPM/Brotli補足と現行告知・出所JSONを併用する。歴史的余剰資料はLeap対応表に数えない。
 
 GitHub配布の未署名試験版。glibc2.40以上。実機ARM・完全なGNOME/KDE/Wayland・IME・関連付け・暗号化/フォームGUI・旧版更新・旧Leap/SLE/Tumbleweedは今回未検証。詳細はRelease添付BUILD/KNOWN-LIMITATIONS/verification-recordsへ。既存公開物とlatestを保持し、全添付の公開後再取得とX案内が完了してから次の対象へ進む。
+
+公開完了: 全16添付を公開後に取得しサイズ/SHA256一致、既存公開添付とlatest保持を確認。main791a791へ日英案内を反映後、[X案内](https://x.com/tyamada22/status/2121163624484053498)の公開表示を確認。

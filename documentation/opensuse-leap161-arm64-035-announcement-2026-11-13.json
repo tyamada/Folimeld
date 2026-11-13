@@ -1,0 +1,8 @@
+{
+  "url": "https://x.com/tyamada22/status/2121163624484053498",
+  "account": "tyamada22",
+  "published_display": "午後5:49 · 2026年11月13日",
+  "text": "Folimeld 0.3.5のopenSUSE Leap 16.1 ARM64版RPM試験配布です。PDF編集・保存・画像変換、削除再導入をARM64で検証。対応ソース付き、全16添付を公開後に再取得・SHA-256照合済み。未署名RPM、glibc 2.40以上。制約はReleaseへ。\nhttps://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5",
+  "release_card": "Folimeld0.3.5 openSUSE Leap16.1 ARM64 RPM preview",
+  "verified": true
+}
