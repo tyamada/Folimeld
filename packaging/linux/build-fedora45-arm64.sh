@@ -8,10 +8,10 @@ cd "$root"
 : "${FOLIMELD_BUILD_ROOT:?Use an unused absolute output directory}"
 : "${FOLIMELD_WHEELHOUSE:?Set an exact checksum-verified wheel directory}"
 [[ $FOLIMELD_BUILD_ROOT == /* && ! -e $FOLIMELD_BUILD_ROOT ]]
-[[ $(python3 -c 'from folimeld import __version__; print(__version__)') == 0.3.5 ]]
+[[ $(python3.14 -c 'from folimeld import __version__; print(__version__)') == 0.3.5 ]]
 [[ -z $(git status --porcelain) ]]
 mkdir -p "$FOLIMELD_BUILD_ROOT"
-python3 -m venv "$FOLIMELD_BUILD_ROOT/venv"
+python3.14 -m venv "$FOLIMELD_BUILD_ROOT/venv"
 py="$FOLIMELD_BUILD_ROOT/venv/bin/python"
 "$py" -m pip install --no-index --find-links "$FOLIMELD_WHEELHOUSE" -r requirements.txt -c constraints-release.txt pyinstaller
 "$py" -m pip check
