@@ -13,3 +13,5 @@ GitHubの未署名RPM試験配布でFedora公式パッケージではない。gl
 Releaseの16添付はサイズ・SHA256一覧に固定。公開後の全添付再ダウンロード結果とX URLはmainに別途記録する。VM/ISOは内蔵に保持し、外付け起動や削除は行わない。既存公開物とlatestを保持。
 
 公開後に全16添付を再ダウンロードし、全サイズ/SHA256一致を確認。既存全公開Releaseの添付id/name/size/digestを保持し、latestはlinux-v0.3.4のまま。[公開後照合記録](fedora44-arm64-035-publication.json)。内蔵VM2台は通常停止しディスク一式を保持。X案内URLは別コミットで追加する。
+
+X（@tyamada22）への案内を投稿し、公開本文・Releaseリンクを確認: [https://x.com/tyamada22/status/2121091907719971057](https://x.com/tyamada22/status/2121091907719971057)。公開・全添付照合・main反映後に投稿し、次パッケージの公開は開始していない。
