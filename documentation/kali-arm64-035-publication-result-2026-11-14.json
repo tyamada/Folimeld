@@ -1,0 +1,94 @@
+{
+  "verified_utc": "2026-11-13T21:13:50.626295+00:00",
+  "release_url": "https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5",
+  "tag": "kali-arm64-v0.3.5",
+  "tag_commit": "38db4c6b83b295e5d942e96beeb264a7a7b851a3",
+  "draft": false,
+  "prerelease": true,
+  "latest_unchanged": "linux-v0.3.4",
+  "all_prior_public_assets_preserved": true,
+  "downloaded_after_publication": true,
+  "assets": [
+    {
+      "name": "BUILD.txt",
+      "size": 2763,
+      "sha256": "edac9d2ec568612f7cb269248cd27a4630795c4c256137cb793c92536c808e0b"
+    },
+    {
+      "name": "Folimeld-0.3.4-Pillow-wheel-source-and-notice-supplement.zip",
+      "size": 5853009,
+      "sha256": "a5811c2c3dfb45344b22f0a1bb19b305034c045f4912e6f6a91dcfa5591790d0"
+    },
+    {
+      "name": "Folimeld-0.3.4-third-party-source-set.tar",
+      "size": 1456230400,
+      "sha256": "306c4c9525c5240c5564472b762b05a9c81aff7df362a117dc78049e1c748b7e"
+    },
+    {
+      "name": "Folimeld-kali-arm64-build-recipe.tar.gz",
+      "size": 19869,
+      "sha256": "1edbb4d68942841a147a79ac29dd3651354f9e9be6cfa397130a88f16e4fbcee"
+    },
+    {
+      "name": "Folimeld-kali-arm64-source-supplement.tar",
+      "size": 311326720,
+      "sha256": "3858f3c094ce59164083edcc85f6558f93de32dce93c63628d1c9f94e1d99e56"
+    },
+    {
+      "name": "Folimeld-source-fc82d6f1f0482ef84521439d38a04effb55d3ae5d871c38788c021fc80450241.json",
+      "size": 133551,
+      "sha256": "b4755177bce50d03202c9614f606c80600ce527f89708f0aa27758c74f28b051"
+    },
+    {
+      "name": "Folimeld-source-fc82d6f1f0482ef84521439d38a04effb55d3ae5d871c38788c021fc80450241.zip",
+      "size": 26220101,
+      "sha256": "fc82d6f1f0482ef84521439d38a04effb55d3ae5d871c38788c021fc80450241"
+    },
+    {
+      "name": "KNOWN-LIMITATIONS.txt",
+      "size": 3929,
+      "sha256": "a1b180e3c5fa984ea3c74acefa08bb307d0fef0a0d10cf5c5e4fdfc17f6a148f"
+    },
+    {
+      "name": "RELEASE-NOTES.txt",
+      "size": 4475,
+      "sha256": "70d894f160fb2cd6301bcf656280f354f5458ba7723a41c3d093a9296bd61259"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 1650,
+      "sha256": "98a5d4bd696a9d6e8305ddbbfb68b17f117ace0c59d959ef5904e8eeda88caaf"
+    },
+    {
+      "name": "folimeld_0.3.5_arm64.deb",
+      "size": 99384848,
+      "sha256": "75856ef173d4fd2c1933cdf9d8fcf1665195da00d4ee733d5d2c8e306aae3558"
+    },
+    {
+      "name": "folimeld_0.3.5_arm64.deb-75856ef173d4fd2c1933cdf9d8fcf1665195da00d4ee733d5d2c8e306aae3558.json",
+      "size": 775,
+      "sha256": "22788f1f9f79ab3763b388a3b1e4b77d2489664c5e4cb24651c2f362c48024de"
+    },
+    {
+      "name": "native-dependency-provenance.json",
+      "size": 432083,
+      "sha256": "681ecb738e42db0442161a3a74aaddc4b2c92869fad7b53b2ca42228902c6c91"
+    },
+    {
+      "name": "third-party-notices.tar.gz",
+      "size": 917389,
+      "sha256": "740769ff840450002a9b723f94f096a53e756a2610a297463160d43c81d89cc8"
+    },
+    {
+      "name": "verification-kali-arm64-035.json",
+      "size": 3977,
+      "sha256": "b9a282a00419e7299008b6344dc317f30ca999b897d7afbb59523e50d96a769a"
+    },
+    {
+      "name": "verification-records-kali-arm64-035.zip",
+      "size": 557459,
+      "sha256": "035eb866a2728fabf503e44a2c78f3527bc84e6a1b755bece8bb356204643764"
+    }
+  ],
+  "result": "all sizes and SHA-256 match"
+}

@@ -121,3 +121,5 @@ Tumbleweed ARM64のX案内完了: https://x.com/tyamada22/status/212133557388988
 Kali2026.3/標準kali-last-snapshotの専用ARM64 VMで新規ビルド・検証。[検証・制約](kali-arm64-035-validation_ja.md)を参照。1011入力、173AArch64実体、44DEB/30exact source packageを照合し、CFFIを公式ソースと動的Kali libffiで構築。410tests/69subtests成功、9skip、GUI3回終了0、完全削除再導入で文書/設定保持、最小依存起動、ELF/DEBの2出力先一致を確認。amd64や他OSの結果は流用しない。
 
 最新ユーザー指示に従い、VM・書込作業は新SSD、静的な公開添付・再取得は作業用HDDへ分ける。使用前の実体・UUID・空き・基底参照確認とNAS長期保管を継続。取得済みファイルや過去の台帳は保持し、完了済み移行/削除を再実行しない。既存公開物とTime Machine履歴を保持。公開後全添付照合・main反映・X案内完了までは公開工程未完了。
+
+Kali ARM64公開完了: [kali-arm64-v0.3.5](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5)。本体7963998、検証資料付きタグ38db4c6、全16公開後添付のサイズ/SHA256一致と既存公開物/latest保持を確認。main反映とX案内を終えてから次へ進む。

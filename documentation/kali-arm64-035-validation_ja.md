@@ -13,3 +13,5 @@
 元CFFI wheelの静的libffi版を根拠付きで特定できないため、同梱用だけ公式CFFI2.1.1変更なしソースから構築し、正確なKali libffi3.8.0-2へ動的リンク。libffi-dev入力も公式DEBに照合。公式バックエンド219tests成功、8skip。例外/longオーバーフローを意図する試験の2warningsを保持。元wheel・先行候補・OSライブラリは保持。現行cp314 Pillowの部品名/版/ソースハッシュ/告知を先行ソース補足と新規比較した。共通0.3.4上流ソースTAR/Pillow補足と今回のKaliソース補足・告知・出所JSONを併用する。歴史的x64資料は現在の根拠にしない。その他wheelの独立再ビルドは未実施。
 
 GitHubの未署名DEB試験版、glibc>=2.43。Kali公式パッケージではない。他Kali版/現在のrolling/他ディストリ/実機ARM/完全なXFCE・GNOME・KDE・Wayland/IME/暗号化・フォームGUI/関連付け/旧版更新・rollbackは今回未検証。amd64や他OSの合格は流用しない。詳細は添付BUILD/KNOWN-LIMITATIONS/検証記録へ。全添付の公開後再取得・main反映・X案内完了まで次の公開へ進まない。
+
+公開完了: 全16添付を公開後に再取得し、サイズ/SHA256一致、既存公開添付とlatest保持を確認。main反映後にX案内を行う。
