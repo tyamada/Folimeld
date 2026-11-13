@@ -1,0 +1,503 @@
+{
+  "repository": "tyamada/Folimeld",
+  "branch": "release/fedora45-amd64-0.3.5",
+  "commit": "74366ba8a74a8efe65773ffd660e0fff42445f38",
+  "tag": "fedora45-amd64-v0.3.5",
+  "published": true,
+  "assets": [
+    {
+      "id": 741024007,
+      "name": "Folimeld-fedora45-0.3.5-r2-dependency-sources.tar",
+      "bytes": 1788856320,
+      "digest": "sha256:daebd0d729661dad6c40e57e0f9dd8f4cb8965d074c5c71858343a371e3c768c",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-a2450beb8f027934b315/Folimeld-fedora45-0.3.5-r2-dependency-sources.tar",
+      "upload_seconds": 95.64
+    },
+    {
+      "id": 741028130,
+      "name": "Folimeld-source-76b4a7c37f071399d602965e1d348ab35cda3277d2ecf2c0b4ffad2392830836.zip",
+      "bytes": 23491783,
+      "digest": "sha256:76b4a7c37f071399d602965e1d348ab35cda3277d2ecf2c0b4ffad2392830836",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-a2450beb8f027934b315/Folimeld-source-76b4a7c37f071399d602965e1d348ab35cda3277d2ecf2c0b4ffad2392830836.zip",
+      "upload_seconds": 2.17
+    },
+    {
+      "id": 741028234,
+      "name": "KNOWN-LIMITATIONS.txt",
+      "bytes": 2336,
+      "digest": "sha256:eb3b46a4f9cc57d49b65fd8a5ee5ada53153140082e5b185b6bd54b9e0f2c639",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-a2450beb8f027934b315/KNOWN-LIMITATIONS.txt",
+      "upload_seconds": 0.6
+    },
+    {
+      "id": 741028269,
+      "name": "RELEASE-NOTES.txt",
+      "bytes": 5118,
+      "digest": "sha256:d1ef21b00c2dec28af9b0bf271c8b76772a4800c766f499893175f2241bba488",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-a2450beb8f027934b315/RELEASE-NOTES.txt",
+      "upload_seconds": 0.69
+    },
+    {
+      "id": 741028304,
+      "name": "dependency-source-manifest.json",
+      "bytes": 63794,
+      "digest": "sha256:3171e94c35d44de0516b166547039bb83d2c2c8c18a089cf58f7d1fe30c0d929",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-a2450beb8f027934b315/dependency-source-manifest.json",
+      "upload_seconds": 0.65
+    },
+    {
+      "id": 741028335,
+      "name": "folimeld-0.3.5-2.fc45.x86_64.rpm",
+      "bytes": 106437437,
+      "digest": "sha256:03c273625477385a8c92d246c7d7f44b50ed622afe656750f6b94a1b107c539b",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-a2450beb8f027934b315/folimeld-0.3.5-2.fc45.x86_64.rpm",
+      "upload_seconds": 7.27
+    },
+    {
+      "id": 741028727,
+      "name": "folimeld-0.3.5-2.fc45.x86_64.rpm-03c273625477385a8c92d246c7d7f44b50ed622afe656750f6b94a1b107c539b.json",
+      "bytes": 782,
+      "digest": "sha256:36b9e1c555ce902a029311c180aa27918fdcdee0ba69fc573836fd141cbc956b",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-a2450beb8f027934b315/folimeld-0.3.5-2.fc45.x86_64.rpm-03c273625477385a8c92d246c7d7f44b50ed622afe656750f6b94a1b107c539b.json",
+      "upload_seconds": 0.61
+    },
+    {
+      "id": 741028753,
+      "name": "third-party-notices.tar.gz",
+      "bytes": 1698985,
+      "digest": "sha256:f41ffcb068612f25a03682cc7aefb888db9e11e1ddd7e90308d8c6b5d3d1c401",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-a2450beb8f027934b315/third-party-notices.tar.gz",
+      "upload_seconds": 0.67
+    },
+    {
+      "id": 741028808,
+      "name": "verification-fedora45-amd64-0.3.5.json",
+      "bytes": 2838,
+      "digest": "sha256:bb98c9330ad2be7ff0337acab3d16a39951a4dd21e649d31c51d1054dacb0367",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-a2450beb8f027934b315/verification-fedora45-amd64-0.3.5.json",
+      "upload_seconds": 0.63
+    },
+    {
+      "id": 741028829,
+      "name": "verification-records-fedora45-amd64-0.3.5.zip",
+      "bytes": 1741792,
+      "digest": "sha256:1c61577cbe4e1cbf0497a2fa68412d0a5b03a8cb070a9c29d0990e8b8b79b069",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-a2450beb8f027934b315/verification-records-fedora45-amd64-0.3.5.zip",
+      "upload_seconds": 1.06
+    },
+    {
+      "id": 741028874,
+      "name": "SHA256SUMS.txt",
+      "bytes": 1115,
+      "digest": "sha256:3c6421c14d66da58b88eb4401a82b0819eb52ced2a660255ecca49d0dee50fdf",
+      "url": "https://github.com/tyamada/Folimeld/releases/download/untagged-a2450beb8f027934b315/SHA256SUMS.txt",
+      "upload_seconds": 0.58
+    }
+  ],
+  "pushed": true,
+  "tag_created": true,
+  "release_id": 443488626,
+  "release_url": "https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5",
+  "draft": false,
+  "published_at": "2026-11-12T20:47:02Z",
+  "make_latest": false,
+  "preservation_verified": true,
+  "preservation_before": {
+    "main_sha": "d1407b3efec245babfc8d462f2b3aedf966b413f",
+    "latest_tag": "linux-v0.3.4",
+    "releases": [
+      {
+        "id": 440174431,
+        "tag": "linux-v0.3.4",
+        "draft": false,
+        "prerelease": false,
+        "assets": [
+          {
+            "id": 730889253,
+            "name": "Folimeld-0.3.4-Pillow-wheel-source-and-notice-supplement.zip",
+            "bytes": 5853009,
+            "digest": "sha256:a5811c2c3dfb45344b22f0a1bb19b305034c045f4912e6f6a91dcfa5591790d0"
+          },
+          {
+            "id": 730889459,
+            "name": "Folimeld-0.3.4-amd64-snap-packaging-source.zip",
+            "bytes": 3757,
+            "digest": "sha256:dd4525094e25d9c9a5d9f118578c5f61b7e1b67711a2de5dc917ec24eb2acc2c"
+          },
+          {
+            "id": 730889201,
+            "name": "Folimeld-0.3.4-amd64-source-supplement.tar",
+            "bytes": 82108928,
+            "digest": "sha256:13c23bc5071b245582a26ca708102422aa0a02903bdaea543201727683f9c7da"
+          },
+          {
+            "id": 730889154,
+            "name": "Folimeld-0.3.4-third-party-source-set.tar",
+            "bytes": 1456230400,
+            "digest": "sha256:306c4c9525c5240c5564472b762b05a9c81aff7df362a117dc78049e1c748b7e"
+          },
+          {
+            "id": 730889124,
+            "name": "Folimeld-source-281132ee8d40b75c0233b603bcb04e6132a0dcc856b45419d679ade7a2e51c90.zip",
+            "bytes": 15112004,
+            "digest": "sha256:281132ee8d40b75c0233b603bcb04e6132a0dcc856b45419d679ade7a2e51c90"
+          },
+          {
+            "id": 730889086,
+            "name": "Folimeld-source-5483477427254f56e4a82232bab0585d633abe0d5aac73eeb4be0234da197a4a.zip",
+            "bytes": 15112001,
+            "digest": "sha256:5483477427254f56e4a82232bab0585d633abe0d5aac73eeb4be0234da197a4a"
+          },
+          {
+            "id": 730889480,
+            "name": "SHA256SUMS.txt",
+            "bytes": 1964,
+            "digest": "sha256:783012c9d82a0f48e600656b305d7698bf1a0f91b60bf5ac49a2714b4a7b2303"
+          },
+          {
+            "id": 730888827,
+            "name": "folimeld_0.3.4_amd64.deb",
+            "bytes": 107075008,
+            "digest": "sha256:c45a569b1c5015c3eb3768ce118b04dd8b0a35c1cda82b631978cdebfb0b8256"
+          },
+          {
+            "id": 730889309,
+            "name": "folimeld_0.3.4_amd64.deb-c45a569b1c5015c3eb3768ce118b04dd8b0a35c1cda82b631978cdebfb0b8256.json",
+            "bytes": 775,
+            "digest": "sha256:4563015d4310666d08155e05ef4a000d531bbf442451bde2948d79feab8b43a6"
+          },
+          {
+            "id": 730889402,
+            "name": "folimeld_0.3.4_amd64.snap",
+            "bytes": 107565056,
+            "digest": "sha256:127f414cfbfc7ea0657618f187081b6bdc70ede9f773314fac5836acd5d3fbc9"
+          },
+          {
+            "id": 730889432,
+            "name": "folimeld_0.3.4_amd64.snap-127f414cfbfc7ea0657618f187081b6bdc70ede9f773314fac5836acd5d3fbc9.json",
+            "bytes": 776,
+            "digest": "sha256:c37ac48b42fa4396deaef3a5ff0529bc5a4aeb9ce36020fd8ef477dbcb4c64e1"
+          },
+          {
+            "id": 730888825,
+            "name": "folimeld_0.3.4_arm64.deb",
+            "bytes": 104525178,
+            "digest": "sha256:33f5fbc490f189330032be6f33be267d6d1706e46a1c595de814f1b942e78731"
+          },
+          {
+            "id": 730889338,
+            "name": "folimeld_0.3.4_arm64.deb-33f5fbc490f189330032be6f33be267d6d1706e46a1c595de814f1b942e78731.json",
+            "bytes": 775,
+            "digest": "sha256:61955a5edcf94cbb9b4ad003fadc82e3432d1a959ae698a99065a504ccfe48f3"
+          },
+          {
+            "id": 730888823,
+            "name": "folimeld_0.3.4_arm64.snap",
+            "bytes": 104996864,
+            "digest": "sha256:2467427c2c7e68b9c3082a8aee2ee257adfeccd231f47b8b19e97a76164adc4f"
+          },
+          {
+            "id": 730889356,
+            "name": "folimeld_0.3.4_arm64.snap-2467427c2c7e68b9c3082a8aee2ee257adfeccd231f47b8b19e97a76164adc4f.json",
+            "bytes": 776,
+            "digest": "sha256:8f26091df2e519dac7f4c52bfa18381d071cd1f46fe96f257ff83b3085848184"
+          },
+          {
+            "id": 730889217,
+            "name": "native-dependency-provenance.json",
+            "bytes": 774770,
+            "digest": "sha256:ff922263c17584c11d5dc426aa207765ce13cde9139cb028c0dc001ad5e495bf"
+          },
+          {
+            "id": 730889164,
+            "name": "third-party-notices.tar.gz",
+            "bytes": 2015678,
+            "digest": "sha256:7d7c304d3ee0e94c4d198b1f216dc0f427eee88446d8bc1db56323ae7eef2997"
+          }
+        ]
+      },
+      {
+        "id": 442962401,
+        "tag": "almalinux9-amd64-v0.3.5",
+        "draft": false,
+        "prerelease": true,
+        "assets": [
+          {
+            "id": 739530422,
+            "name": "Folimeld-0.3.5-alma9-amd64-dependency-materials.tar",
+            "bytes": 1717278720,
+            "digest": "sha256:c85e44ae33a1d21072eb80a98d5b0b6e167650f0025ecf4031b1c999fc705a5d"
+          },
+          {
+            "id": 739536634,
+            "name": "Folimeld-0.3.5-alma9-amd64-notices.tar.gz",
+            "bytes": 1687806,
+            "digest": "sha256:7be8752ed1a6f13d4ef0f95a662e5a009cce62c1d5efffb774fd709dcf5bacf0"
+          },
+          {
+            "id": 739536711,
+            "name": "Folimeld-source-f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079.json",
+            "bytes": 89002,
+            "digest": "sha256:8999a828de2c570586822736444b2f33625ff9c419c44fb6263b6d09723219e0"
+          },
+          {
+            "id": 739536757,
+            "name": "Folimeld-source-f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079.zip",
+            "bytes": 21838581,
+            "digest": "sha256:f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079"
+          },
+          {
+            "id": 739536868,
+            "name": "KNOWN-LIMITATIONS.txt",
+            "bytes": 1569,
+            "digest": "sha256:60d46b25c74db8be2b87870e3fcd2de6c369ed77e9d780040466d78f95929fe9"
+          },
+          {
+            "id": 739536912,
+            "name": "RELEASE-NOTES.txt",
+            "bytes": 3907,
+            "digest": "sha256:704d37f41a1bb8942925e087ec31c267558c11c6216dd77187f8a408edf67621"
+          },
+          {
+            "id": 739537531,
+            "name": "SHA256SUMS.txt",
+            "bytes": 1322,
+            "digest": "sha256:c342a19f081f98207650eb3e055b746a7454cf1343e96d0275326cc6322f3fa4"
+          },
+          {
+            "id": 739536944,
+            "name": "folimeld-0.3.5-5.alma9_8.x86_64.rpm",
+            "bytes": 103052936,
+            "digest": "sha256:0ba2c7dfc397f61b1ca70679838c93589310d116a267249d67dd822b8cb654bc"
+          },
+          {
+            "id": 739537337,
+            "name": "folimeld-0.3.5-5.alma9_8.x86_64.rpm-0ba2c7dfc397f61b1ca70679838c93589310d116a267249d67dd822b8cb654bc.json",
+            "bytes": 785,
+            "digest": "sha256:2c5fb6f7578c4d4038d271e3ee97008b7494a7491d7e8a3a99e559bffc40b520"
+          },
+          {
+            "id": 739537397,
+            "name": "folimeld-82ada5680df8bb74da15b801ce59793b140a4789766d0caf4b7082a120ca470c.json",
+            "bytes": 693,
+            "digest": "sha256:2a4ad2fd8203c041908b2fec5dfc92e11cb111c88b6a7fe8ddabca45348af88d"
+          },
+          {
+            "id": 739537444,
+            "name": "libXau-gpg-verification.json",
+            "bytes": 5512,
+            "digest": "sha256:9ee0a0b5918236ecd684a441e968fb783459ad356434d37cacbc2014027dbed6"
+          },
+          {
+            "id": 739537488,
+            "name": "verification-almalinux9-amd64-0.3.5.json",
+            "bytes": 1338,
+            "digest": "sha256:04da81460c78770e699436fb68f291f1c2b796051e41277478736f0a14e80eee"
+          }
+        ]
+      }
+    ],
+    "local_head": "d1407b3efec245babfc8d462f2b3aedf966b413f",
+    "tracked_status": " M Folimeld-linux.spec\n M build_linux.sh\n M documentation/license-distribution_ja.md\n M folimeld/license_info.py\n M folimeld/thumbnails.py\n M tests/test_license_info.py\n M tests/test_thumbnails.py\n",
+    "tracked_diff_sha256": "72c52043f70243ef73d9098d9e86596858d8346875677081f0cf014e5e1bc283"
+  },
+  "preservation_after": {
+    "main_sha": "d1407b3efec245babfc8d462f2b3aedf966b413f",
+    "latest_tag": "linux-v0.3.4",
+    "releases": [
+      {
+        "id": 440174431,
+        "tag": "linux-v0.3.4",
+        "draft": false,
+        "prerelease": false,
+        "assets": [
+          {
+            "id": 730889253,
+            "name": "Folimeld-0.3.4-Pillow-wheel-source-and-notice-supplement.zip",
+            "bytes": 5853009,
+            "digest": "sha256:a5811c2c3dfb45344b22f0a1bb19b305034c045f4912e6f6a91dcfa5591790d0"
+          },
+          {
+            "id": 730889459,
+            "name": "Folimeld-0.3.4-amd64-snap-packaging-source.zip",
+            "bytes": 3757,
+            "digest": "sha256:dd4525094e25d9c9a5d9f118578c5f61b7e1b67711a2de5dc917ec24eb2acc2c"
+          },
+          {
+            "id": 730889201,
+            "name": "Folimeld-0.3.4-amd64-source-supplement.tar",
+            "bytes": 82108928,
+            "digest": "sha256:13c23bc5071b245582a26ca708102422aa0a02903bdaea543201727683f9c7da"
+          },
+          {
+            "id": 730889154,
+            "name": "Folimeld-0.3.4-third-party-source-set.tar",
+            "bytes": 1456230400,
+            "digest": "sha256:306c4c9525c5240c5564472b762b05a9c81aff7df362a117dc78049e1c748b7e"
+          },
+          {
+            "id": 730889124,
+            "name": "Folimeld-source-281132ee8d40b75c0233b603bcb04e6132a0dcc856b45419d679ade7a2e51c90.zip",
+            "bytes": 15112004,
+            "digest": "sha256:281132ee8d40b75c0233b603bcb04e6132a0dcc856b45419d679ade7a2e51c90"
+          },
+          {
+            "id": 730889086,
+            "name": "Folimeld-source-5483477427254f56e4a82232bab0585d633abe0d5aac73eeb4be0234da197a4a.zip",
+            "bytes": 15112001,
+            "digest": "sha256:5483477427254f56e4a82232bab0585d633abe0d5aac73eeb4be0234da197a4a"
+          },
+          {
+            "id": 730889480,
+            "name": "SHA256SUMS.txt",
+            "bytes": 1964,
+            "digest": "sha256:783012c9d82a0f48e600656b305d7698bf1a0f91b60bf5ac49a2714b4a7b2303"
+          },
+          {
+            "id": 730888827,
+            "name": "folimeld_0.3.4_amd64.deb",
+            "bytes": 107075008,
+            "digest": "sha256:c45a569b1c5015c3eb3768ce118b04dd8b0a35c1cda82b631978cdebfb0b8256"
+          },
+          {
+            "id": 730889309,
+            "name": "folimeld_0.3.4_amd64.deb-c45a569b1c5015c3eb3768ce118b04dd8b0a35c1cda82b631978cdebfb0b8256.json",
+            "bytes": 775,
+            "digest": "sha256:4563015d4310666d08155e05ef4a000d531bbf442451bde2948d79feab8b43a6"
+          },
+          {
+            "id": 730889402,
+            "name": "folimeld_0.3.4_amd64.snap",
+            "bytes": 107565056,
+            "digest": "sha256:127f414cfbfc7ea0657618f187081b6bdc70ede9f773314fac5836acd5d3fbc9"
+          },
+          {
+            "id": 730889432,
+            "name": "folimeld_0.3.4_amd64.snap-127f414cfbfc7ea0657618f187081b6bdc70ede9f773314fac5836acd5d3fbc9.json",
+            "bytes": 776,
+            "digest": "sha256:c37ac48b42fa4396deaef3a5ff0529bc5a4aeb9ce36020fd8ef477dbcb4c64e1"
+          },
+          {
+            "id": 730888825,
+            "name": "folimeld_0.3.4_arm64.deb",
+            "bytes": 104525178,
+            "digest": "sha256:33f5fbc490f189330032be6f33be267d6d1706e46a1c595de814f1b942e78731"
+          },
+          {
+            "id": 730889338,
+            "name": "folimeld_0.3.4_arm64.deb-33f5fbc490f189330032be6f33be267d6d1706e46a1c595de814f1b942e78731.json",
+            "bytes": 775,
+            "digest": "sha256:61955a5edcf94cbb9b4ad003fadc82e3432d1a959ae698a99065a504ccfe48f3"
+          },
+          {
+            "id": 730888823,
+            "name": "folimeld_0.3.4_arm64.snap",
+            "bytes": 104996864,
+            "digest": "sha256:2467427c2c7e68b9c3082a8aee2ee257adfeccd231f47b8b19e97a76164adc4f"
+          },
+          {
+            "id": 730889356,
+            "name": "folimeld_0.3.4_arm64.snap-2467427c2c7e68b9c3082a8aee2ee257adfeccd231f47b8b19e97a76164adc4f.json",
+            "bytes": 776,
+            "digest": "sha256:8f26091df2e519dac7f4c52bfa18381d071cd1f46fe96f257ff83b3085848184"
+          },
+          {
+            "id": 730889217,
+            "name": "native-dependency-provenance.json",
+            "bytes": 774770,
+            "digest": "sha256:ff922263c17584c11d5dc426aa207765ce13cde9139cb028c0dc001ad5e495bf"
+          },
+          {
+            "id": 730889164,
+            "name": "third-party-notices.tar.gz",
+            "bytes": 2015678,
+            "digest": "sha256:7d7c304d3ee0e94c4d198b1f216dc0f427eee88446d8bc1db56323ae7eef2997"
+          }
+        ]
+      },
+      {
+        "id": 442962401,
+        "tag": "almalinux9-amd64-v0.3.5",
+        "draft": false,
+        "prerelease": true,
+        "assets": [
+          {
+            "id": 739530422,
+            "name": "Folimeld-0.3.5-alma9-amd64-dependency-materials.tar",
+            "bytes": 1717278720,
+            "digest": "sha256:c85e44ae33a1d21072eb80a98d5b0b6e167650f0025ecf4031b1c999fc705a5d"
+          },
+          {
+            "id": 739536634,
+            "name": "Folimeld-0.3.5-alma9-amd64-notices.tar.gz",
+            "bytes": 1687806,
+            "digest": "sha256:7be8752ed1a6f13d4ef0f95a662e5a009cce62c1d5efffb774fd709dcf5bacf0"
+          },
+          {
+            "id": 739536711,
+            "name": "Folimeld-source-f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079.json",
+            "bytes": 89002,
+            "digest": "sha256:8999a828de2c570586822736444b2f33625ff9c419c44fb6263b6d09723219e0"
+          },
+          {
+            "id": 739536757,
+            "name": "Folimeld-source-f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079.zip",
+            "bytes": 21838581,
+            "digest": "sha256:f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079"
+          },
+          {
+            "id": 739536868,
+            "name": "KNOWN-LIMITATIONS.txt",
+            "bytes": 1569,
+            "digest": "sha256:60d46b25c74db8be2b87870e3fcd2de6c369ed77e9d780040466d78f95929fe9"
+          },
+          {
+            "id": 739536912,
+            "name": "RELEASE-NOTES.txt",
+            "bytes": 3907,
+            "digest": "sha256:704d37f41a1bb8942925e087ec31c267558c11c6216dd77187f8a408edf67621"
+          },
+          {
+            "id": 739537531,
+            "name": "SHA256SUMS.txt",
+            "bytes": 1322,
+            "digest": "sha256:c342a19f081f98207650eb3e055b746a7454cf1343e96d0275326cc6322f3fa4"
+          },
+          {
+            "id": 739536944,
+            "name": "folimeld-0.3.5-5.alma9_8.x86_64.rpm",
+            "bytes": 103052936,
+            "digest": "sha256:0ba2c7dfc397f61b1ca70679838c93589310d116a267249d67dd822b8cb654bc"
+          },
+          {
+            "id": 739537337,
+            "name": "folimeld-0.3.5-5.alma9_8.x86_64.rpm-0ba2c7dfc397f61b1ca70679838c93589310d116a267249d67dd822b8cb654bc.json",
+            "bytes": 785,
+            "digest": "sha256:2c5fb6f7578c4d4038d271e3ee97008b7494a7491d7e8a3a99e559bffc40b520"
+          },
+          {
+            "id": 739537397,
+            "name": "folimeld-82ada5680df8bb74da15b801ce59793b140a4789766d0caf4b7082a120ca470c.json",
+            "bytes": 693,
+            "digest": "sha256:2a4ad2fd8203c041908b2fec5dfc92e11cb111c88b6a7fe8ddabca45348af88d"
+          },
+          {
+            "id": 739537444,
+            "name": "libXau-gpg-verification.json",
+            "bytes": 5512,
+            "digest": "sha256:9ee0a0b5918236ecd684a441e968fb783459ad356434d37cacbc2014027dbed6"
+          },
+          {
+            "id": 739537488,
+            "name": "verification-almalinux9-amd64-0.3.5.json",
+            "bytes": 1338,
+            "digest": "sha256:04da81460c78770e699436fb68f291f1c2b796051e41277478736f0a14e80eee"
+          }
+        ]
+      }
+    ],
+    "local_head": "d1407b3efec245babfc8d462f2b3aedf966b413f",
+    "tracked_status": " M Folimeld-linux.spec\n M build_linux.sh\n M documentation/license-distribution_ja.md\n M folimeld/license_info.py\n M folimeld/thumbnails.py\n M tests/test_license_info.py\n M tests/test_thumbnails.py\n",
+    "tracked_diff_sha256": "72c52043f70243ef73d9098d9e86596858d8346875677081f0cf014e5e1bc283"
+  }
+}

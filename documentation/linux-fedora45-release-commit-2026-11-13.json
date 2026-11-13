@@ -1,0 +1,25 @@
+{
+  "date_jst": "2026-11-13",
+  "published": false,
+  "pushed": false,
+  "tag_created": false,
+  "local_commit_created": true,
+  "source_directory": "/home/folimeld-build/folimeld-candidates/fedora45-release-tree-20261113/source",
+  "branch": "release/fedora45-amd64-0.3.5",
+  "commit": "74366ba8a74a8efe65773ffd660e0fff42445f38",
+  "tree": "d22f09c7c27e66b300bca11a39bbf58fc919dbd2",
+  "parent": "d1407b3efec245babfc8d462f2b3aedf966b413f",
+  "message": "Prepare Fedora 45 amd64 0.3.5 release candidate\n\nFreeze revision2 source inputs, bilingual release preparation and Linux notices.\nRetain existing tracked files and public distributions.\nThis local commit does not publish a release or certify other platforms.\n",
+  "source_archive_sha256": "76b4a7c37f071399d602965e1d348ab35cda3277d2ecf2c0b4ffad2392830836",
+  "rpm_sha256": "03c273625477385a8c92d246c7d7f44b50ed622afe656750f6b94a1b107c539b",
+  "verified_candidate_input_blobs": 785,
+  "tracked_deletions": 0,
+  "retained_previous_paths": 48,
+  "author_from_existing_user_git_config": true,
+  "commit_signing": "unsigned local preparation commit",
+  "limitations": [
+    "Local isolated branch only; original repository refs/index/worktree unchanged",
+    "Build-source captured the pre-commit build environment; this commit is associated by exact input blob hashes, not a rewrite of embedded build metadata",
+    "Publication and tag creation remain unperformed"
+  ]
+}
