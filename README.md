@@ -46,6 +46,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | macOS 15 or later | Apple Silicon (arm64) | Homebrew / 0.3.3 (source) | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.3) |
 | Ubuntu 24.04 | amd64 / arm64 | DEB / Snap / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
 | Debian 13 | amd64 / arm64 | DEB / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
+| Ubuntu 24.04.5 / Debian 13.7 (verified with Xorg in ARM64 VMs) | arm64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5) |
 | Ubuntu 24.04.4 / Debian 13.6 / Kali Rolling 2026.3 (verified on WSL2/WSLg) | amd64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) |
 | openSUSE Tumbleweed 20261110 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) |
 | openSUSE Leap 16.1 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5) |
@@ -131,6 +132,14 @@ sudo snap install --dangerous ./folimeld_0.3.3_arm64.snap
 ```
 
 Debian 13 uses the same deb package as Ubuntu. If a minimal installation displays `Fontconfig error: Cannot load default config file`, run `sudo apt install fontconfig-config`. PDF display, page movement, rotation, saving, and reopening have been verified on Debian 13.6 amd64 (WSL2 / WSLg, X11). See the [Debian verification record](documentation/debian-wsl-verification_ja.md) (in Japanese) for details. Installation of the deb package and startup with a PDF have also been verified on arm64 (WSL2).
+
+### Ubuntu/Debian ARM64 DEB 0.3.5 preview
+
+[**0.3.5 ARM64 DEB**](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5) is available. Fresh regular-user Xorg checks on Ubuntu 24.04.5 / Debian 13.7 ARM64 covered rotation, undo/redo, movement, blank insertion/deletion, Save As, Japanese-path reopening, image conversion/save, clean exit, removal/reinstallation and document/settings preservation. Saved PDF internals, 409 passing ARM64 tests (9 skipped), minimal-Ubuntu startup and byte-identical DEBs from separate build roots on the same VM were verified. Matching materials for 961 source inputs and 210 AArch64 files, plus post-publication redownload verification of all 16 assets, are provided. Japanese IME, Wayland, physical ARM hardware and encryption/forms GUI were not retested. Existing downloads and latest remain unchanged. [Verification and limitations (Japanese)](documentation/linux-deb-arm64-035-validation_ja.md).
+
+```bash
+sudo apt install ./folimeld_0.3.5_arm64.deb
+```
 
 ### Ubuntu / Debian ARM64 DEB fix preview
 

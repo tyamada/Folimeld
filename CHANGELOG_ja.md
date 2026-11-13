@@ -46,6 +46,11 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.5 Linux DEB ARM64試験版 - 2026-11-13
+
+- [Ubuntu24.04／Debian13向けARM64 DEB 0.3.5](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5)を公開。両OSで主要PDF編集・画像変換・正常終了・削除再導入と文書/設定保持を今回検証し、保存PDFの順序/回転/画素を照合。
+- ARM64テスト409 passed/9 skipped、最小Ubuntu起動、同一VM内の別ビルド先でDEB一致、961入力/210 AArch64実体の対応資料、全16添付の公開後再ダウンロード照合を記録。IME/Wayland/実機/暗号化・フォームGUIは今回未再試験。既存公開物とlatestを保持。
+
 ## 0.3.5 Linux DEB amd64試験版 - 2026-11-13
 
 - Ubuntu 24.04.4・Debian 13.6・Kali Rolling 2026.3の専用WSL2/WSLgで更新・削除再導入・起動と日本語PDF回転/Undoを確認した[amd64 DEB試験版](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5)を公開。Ubuntuでは追加の編集・保存再読込・最小chroot起動も確認。

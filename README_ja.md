@@ -46,6 +46,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | macOS 15以降 | Apple Silicon（arm64） | Homebrew / 0.3.3（ソース配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.3) |
 | Ubuntu 24.04 | amd64 / arm64 | DEB・Snap / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
 | Debian 13 | amd64 / arm64 | DEB / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
+| Ubuntu 24.04.5 / Debian 13.7（ARM64 VMのXorgで検証） | arm64 | DEB / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5) |
 | Ubuntu 24.04.4 / Debian 13.6 / Kali Rolling 2026.3（WSL2／WSLgで検証） | amd64 | DEB / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) |
 | openSUSE Tumbleweed 20261110（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) |
 | openSUSE Leap 16.1（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5) |
@@ -131,6 +132,14 @@ sudo snap install --dangerous ./folimeld_0.3.3_arm64.snap
 ```
 
 Debian 13ではUbuntu版と同じdebパッケージを使用します。最小構成の環境で `Fontconfig error: Cannot load default config file` が表示される場合は、`sudo apt install fontconfig-config` を実行してください。Debian 13.6のamd64環境（WSL2 / WSLg、X11）でPDFの表示・ページ移動・回転・保存・再読込を確認しています。詳しくは[Debianでの検証記録](documentation/debian-wsl-verification_ja.md)を参照してください。arm64環境（WSL2）でもdebのインストールとPDFを指定した起動を確認済みです。
+
+### Ubuntu／Debian ARM64 DEB 0.3.5試験版
+
+[**0.3.5 ARM64 DEB**](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5)を公開しました。Ubuntu 24.04.5／Debian 13.7 ARM64の一般ユーザーXorgで回転・Undo/Redo・移動・白紙挿入/削除・別名保存・日本語名の再読込・画像変換/保存・正常終了、削除再導入と文書/設定保持を今回確認。保存PDFの内部照合、ARM64の409テスト合格（9 skip）、最小Ubuntu環境での起動、同一VMの別ビルド先でDEBのバイト一致も確認しています。961ソース入力と210 AArch64実体の対応資料、全16添付の公開後再ダウンロード照合を提供します。日本語IME・Wayland・実機ARM・暗号化/フォームGUIは今回未再試験。既存公開物とlatestは保持しています。[検証・制約](documentation/linux-deb-arm64-035-validation_ja.md)。
+
+```bash
+sudo apt install ./folimeld_0.3.5_arm64.deb
+```
 
 ### Ubuntu / Debian ARM64 DEB修正試験版
 

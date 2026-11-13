@@ -46,6 +46,11 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.5 Linux DEB ARM64 preview - 2026-11-13
+
+- Publish [ARM64 DEB 0.3.5 for Ubuntu 24.04 / Debian 13](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5). Fresh checks on both OSes cover major PDF editing, image conversion, clean exits, removal/reinstallation and document/settings preservation; verify saved page order, rotation and image pixels.
+- Record 409 passing ARM64 tests/9 skipped, minimal-Ubuntu startup, byte-identical DEBs from separate build roots on the same VM, matching materials for 961 inputs/210 AArch64 files, and post-publication redownload checks of all 16 assets. IME/Wayland/physical hardware/encryption and forms GUI were not retested. Preserve existing downloads and latest.
+
 ## 0.3.5 Linux DEB amd64 preview - 2026-11-13
 
 - Publish an [amd64 DEB preview](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) verified for updates, removal/reinstallation, startup, and Japanese PDF rotation/undo in dedicated Ubuntu 24.04.4, Debian 13.6, and Kali Rolling 2026.3 WSL2/WSLg environments. Ubuntu additionally passed editing, saving/reopening, and minimal-chroot startup.
