@@ -1,0 +1,1166 @@
+{
+  "binary_sha256": "2abe33953f482b723bbd9c15a132bd7bad114ae1e998d3ee6105c96bfd096c98",
+  "checks": [
+    {
+      "command": [
+        "rpm",
+        "-q",
+        "folimeld"
+      ],
+      "exit_code": 0,
+      "stdout": "folimeld-0.3.5-1.alma9_8.x86_64\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "rpm",
+        "-V",
+        "folimeld"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "dnf",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "ime": {
+    "engine": "mozc-jp",
+    "hiragana_observed": "にほんご",
+    "kanji_and_commit_observed": "日本語",
+    "session": "isolated dbus-run-session",
+    "ibus_exit": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "test_gui_pid_terminated": 4961
+  },
+  "app_log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+  "ime_app_log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+  "ime_session_log": "dbus-daemon[4883]: [session uid=1000 pid=4883] Activating service name='org.freedesktop.portal.IBus' requested by ':1.0' (uid=1000 pid=4886 comm=\"ibus-daemon --daemonize --xim --panel=disable \" label=\"kernel\")\nNot connected to the ibus bus\ndbus-daemon[4883]: [session uid=1000 pid=4883] Activated service 'org.freedesktop.portal.IBus' failed: Process org.freedesktop.portal.IBus exited with status 1\ndbus-daemon[4883]: [session uid=1000 pid=4883] Activating service name='org.a11y.Bus' requested by ':1.2' (uid=1000 pid=4893 comm=\"/usr/libexec/ibus-extension-gtk3 \" label=\"kernel\")\ndbus-daemon[4883]: [session uid=1000 pid=4883] Successfully activated service 'org.a11y.Bus'\ndbus-daemon[4909]: Activating service name='org.a11y.atspi.Registry' requested by ':1.1' (uid=1000 pid=4895 comm=\"/usr/libexec/ibus-x11 --kill-daemon \" label=\"kernel\")\ndbus-daemon[4883]: [session uid=1000 pid=4883] Activating service name='org.freedesktop.portal.Desktop' requested by ':1.5' (uid=1000 pid=4893 comm=\"/usr/libexec/ibus-extension-gtk3 \" label=\"kernel\")\ndbus-daemon[4909]: Successfully activated service 'org.a11y.atspi.Registry'\nSpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry\ndbus-daemon[4883]: [session uid=1000 pid=4883] Activating service name='org.freedesktop.portal.Documents' requested by ':1.8' (uid=1000 pid=4917 comm=\"/usr/libexec/xdg-desktop-portal \" label=\"kernel\")\ndbus-daemon[4883]: [session uid=1000 pid=4883] Activating service name='org.freedesktop.impl.portal.PermissionStore' requested by ':1.9' (uid=1000 pid=4924 comm=\"/usr/libexec/xdg-document-portal \" label=\"kernel\")\ndbus-daemon[4883]: [session uid=1000 pid=4883] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'\ndbus-daemon[4883]: [session uid=1000 pid=4883] Successfully activated service 'org.freedesktop.portal.Documents'\ndbus-daemon[4883]: [session uid=1000 pid=4883] Activating service name='org.freedesktop.impl.portal.desktop.gtk' requested by ':1.8' (uid=1000 pid=4917 comm=\"/usr/libexec/xdg-desktop-portal \" label=\"kernel\")\ndbus-daemon[4883]: [session uid=1000 pid=4883] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'\n\n** (/usr/libexec/xdg-desktop-portal:4917): WARNING **: 18:54:22.726: Failed connect to PipeWire: Couldn't connect to PipeWire\ndbus-daemon[4883]: [session uid=1000 pid=4883] Successfully activated service 'org.freedesktop.portal.Desktop'\n",
+  "launch": {
+    "pid": 4372,
+    "binary_sha256": "2abe33953f482b723bbd9c15a132bd7bad114ae1e998d3ee6105c96bfd096c98",
+    "initial_hashes": {
+      "原本_日本語.pdf": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+      "暗号化.pdf": "48b63c2a0e9c3bf3f4e18d55d1104195310ac3dfa7986c04973f0f8319e70c0f",
+      "images/image01.png": "a2c58fbf87ae17ad25b1680400fd9a3d5e627ff599a47286378d0f0111103613"
+    }
+  },
+  "automation_notes": [
+    "Initial synthetic Save As shortcut did not open dialog; selected menu action instead",
+    "All three copied source inputs stayed unchanged; outputs saved under new names"
+  ],
+  "ui_steps": [
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x60004b",
+          "115",
+          "76",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x60004e",
+          "205",
+          "72",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x60004e",
+          "580",
+          "361",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600053",
+          "647",
+          "476",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x60005f",
+          "100",
+          "55",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0xe00011",
+          "580",
+          "392",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "150",
+          "350",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "150",
+          "350",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "782",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/01-rotated.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "116",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/02-undo.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "180",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/03-redo.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "652",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "400",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/04-blank-inserted.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "534",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/05-blank-deleted.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "key",
+          "--window",
+          "0x600007",
+          "--clearmodifiers",
+          "ctrl+shift+s"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "150",
+          "350",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "150",
+          "350",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "782",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/08-encrypted-rotated.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "key",
+          "--window",
+          "0x600007",
+          "--clearmodifiers",
+          "ctrl+shift+s"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "30",
+          "10",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "30",
+          "10",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "30",
+          "10",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "20",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "20",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600007",
+          "20",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0xe00007",
+          "20",
+          "40",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600032",
+          "80",
+          "45",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "type",
+          "--clearmodifiers",
+          "--delay",
+          "150",
+          "test123"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600032",
+          "74",
+          "76",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600046",
+          "80",
+          "45",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "type",
+          "--clearmodifiers",
+          "--delay",
+          "150",
+          "test123"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600046",
+          "74",
+          "76",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600016",
+          "220",
+          "360",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "key",
+          "--window",
+          "0x600016",
+          "--clearmodifiers",
+          "ctrl+a"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "type",
+          "--clearmodifiers",
+          "--delay",
+          "150",
+          "保存 結果.pdf"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600016",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/save-name-0.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600016",
+          "580",
+          "361",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600037",
+          "220",
+          "360",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "key",
+          "--window",
+          "0x600037",
+          "--clearmodifiers",
+          "ctrl+a"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "type",
+          "--clearmodifiers",
+          "--delay",
+          "150",
+          "encrypted-edited.pdf"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600037",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/save-name-1.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600037",
+          "580",
+          "361",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600062",
+          "220",
+          "360",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "key",
+          "--window",
+          "0x600062",
+          "--clearmodifiers",
+          "ctrl+a"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "type",
+          "--clearmodifiers",
+          "--delay",
+          "150",
+          "image-created.pdf"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600062",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/save-name-2.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600062",
+          "580",
+          "361",
+          "click",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600028",
+          "230",
+          "92",
+          "click",
+          "--repeat",
+          "2",
+          "--delay",
+          "150",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x60002d",
+          "230",
+          "132",
+          "click",
+          "--repeat",
+          "2",
+          "--delay",
+          "150",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "xdotool",
+          "mousemove",
+          "--window",
+          "0x600041",
+          "230",
+          "92",
+          "click",
+          "--repeat",
+          "2",
+          "--delay",
+          "150",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/06-edited-reopened.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/07-encrypted-loaded.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/09-encrypted-saved.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/10-encrypted-reopened.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x60004e",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/11-image-folder.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600053",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/12-image-options.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/13-image-imported.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0x600007",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/14-image-saved.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0xe00011",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/15-ime-hiragana.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0xe00011",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/16-ime-kanji.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    [
+      {
+        "command": [
+          "timeout",
+          "3",
+          "import",
+          "-window",
+          "0xe00011",
+          "/mnt/c/Users/takum/Downloads/source/Folimeld/documentation/linux-almalinux9-035-regression/17-ime-committed.png"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ]
+  ],
+  "date_jst": "2026-11-12",
+  "published": false,
+  "data": {
+    "original_and_test_copy_unchanged": true,
+    "original_sha256": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+    "edited": {
+      "saved_name": "new/保存 結果.pdf",
+      "sha256": "4654e184ef48f9d1c955f64b5590bf95f2c6bbd0153d1bfc7b7dceabffa55eb9",
+      "pages": 3,
+      "original_page_order": [
+        2,
+        1,
+        3
+      ],
+      "rotations": [
+        0,
+        90,
+        0
+      ],
+      "text_preserved": true,
+      "gui_reopen_observed": true
+    },
+    "encrypted": {
+      "sha256": "0533528ef63e689631f4144cf193acdcd2297d820912aee557e87f7bbcae8983",
+      "needs_password": true,
+      "wrong_password_rejected": true,
+      "test_password_accepted": true,
+      "pages": 3,
+      "rotations": [
+        90,
+        0,
+        0
+      ],
+      "text_preserved": true,
+      "gui_reauthenticated_and_reopened": true,
+      "input_unchanged": true
+    },
+    "image_pdf": {
+      "sha256": "aa665f5ea0ec838c6c85382bf628ab7b0eaf617e2298044c09abef72164dc19a",
+      "pages": 1,
+      "images": 1,
+      "center_rgb": [
+        0,
+        0,
+        255
+      ],
+      "png_unchanged": true
+    }
+  },
+  "screenshots": {
+    "01-rotated.png": "483996f1d2f4596f67b80a16b1c90b02768e9957fe08c55021adeb7c2939e188",
+    "02-undo.png": "8d4c402e671210a856ac52140223b1509dcbb3655b23fc706f367182e06602a1",
+    "03-redo.png": "6dd1212da57a7851bc1f6bf789e38ebdce0e1da4432c89ded58925267f782310",
+    "04-blank-inserted.png": "5794f7185aa84e1b8cd7de95135ae8d30032f19a08bf37685e5794256f02ff9b",
+    "05-blank-deleted.png": "d0f957c661cf40c136a4fd529174d40e33ce01cee98876e5d601021baf6f3ace",
+    "06-edited-reopened.png": "8d907142a934929a68ea03719eebd7951c21cfa19f96b185f978361b4ba43953",
+    "07-encrypted-loaded.png": "b032165db3228dd42500f9713b017e5ea9d0e9b6021d310270865f175c0fc4e5",
+    "08-encrypted-rotated.png": "483996f1d2f4596f67b80a16b1c90b02768e9957fe08c55021adeb7c2939e188",
+    "09-encrypted-saved.png": "430e27e75fe876c914794ae56457c403977b11531774056d0ccdb74b08e57c79",
+    "10-encrypted-reopened.png": "65376bae562474645e628fc5ab3a1e953d403070a97796dccb8da5c0d4f1bd39",
+    "11-image-folder.png": "f89473b1fe926e66920b86c4d6ca3c978d28973030d9a82f538cf628fe19cc47",
+    "12-image-options.png": "fc6ecfaac2322a170c3674c4b4a634e1665d129d81f85c002a24e39f79730398",
+    "13-image-imported.png": "4c177296ab48aaa69d8529a79861a51e07994315aed46923a1dab477a12d0b7a",
+    "14-image-saved.png": "d57d431a7d94ec0f72737a5bb1502a7848638bd5a1563ae3d694c34f21d8a4db",
+    "15-ime-hiragana.png": "dc692c483ec62adb41121c90e4763aec47c990cf87833a55821f255f20c43b7b",
+    "16-ime-kanji.png": "b6e27a035af9eb556525a1021c3fc09a120b1696112e0b8894c93b7e763393a0",
+    "17-ime-committed.png": "9360415fb55b6dc738f1db4a8ba3449571db84baf18c38c8dade6b4e91335d64",
+    "save-name-0.png": "d3603e573758e1326d476e545f01e85ab19240a0feb1f8c59b6f7a7f69c9aa41",
+    "save-name-1.png": "1f51b77ed4f7494a85663377f989eb231dc4c9a89fdf801e7a0e30397b383928",
+    "save-name-2.png": "fb54446c7a1f2127fd878ffd401a1762dbd10a2ea0046ac652e2f9d43ccce510"
+  },
+  "limitations": [
+    "WSLg X11 in existing dedicated GUI-tool/EPEL environment; not fresh minimal install",
+    "Limited synthetic PDF/AES256/image/IME cases",
+    "GIO association and removal/reinstall not repeated for proposed0.3.5",
+    "Wheel provenance, Alma8 libXau signature, public version integration and full desktop migration remain"
+  ]
+}
