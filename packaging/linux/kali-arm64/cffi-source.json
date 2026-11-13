@@ -1,0 +1,37 @@
+{
+  "version": "2.1.1",
+  "source_archive_sha256": "dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be",
+  "source_input": {
+    "comment_text": null,
+    "core-metadata": false,
+    "digests": {
+      "blake2b_256": "9eef008a1939e372c06329a3fce4279c02f328488f3526744906eeec3da7ad5f",
+      "md5": "32f0067c08d797dd28cef1544105caa3",
+      "sha256": "dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be"
+    },
+    "downloads": -1,
+    "filename": "cffi-2.1.1.tar.gz",
+    "has_sig": false,
+    "md5_digest": "32f0067c08d797dd28cef1544105caa3",
+    "packagetype": "sdist",
+    "python_version": "source",
+    "requires_python": ">=3.10",
+    "size": 530807,
+    "upload_time": "2026-08-03T21:21:18",
+    "upload_time_iso_8601": "2026-08-03T21:21:18.939988Z",
+    "url": "https://files.pythonhosted.org/packages/9e/ef/008a1939e372c06329a3fce4279c02f328488f3526744906eeec3da7ad5f/cffi-2.1.1.tar.gz",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "wheel": "cffi-2.1.1-cp314-cp314-linux_aarch64.whl",
+  "wheel_sha256": "fc0a4357338c205886d999d88c6b95dd302ba5553e1db6556dc64d8560b607fe",
+  "libraries": [
+    {
+      "member": "_cffi_backend.cpython-314-aarch64-linux-gnu.so",
+      "sha256": "a79bd604a181ac3408337b4525b76f5a659953dc43dbe877c269fe064539611b"
+    }
+  ],
+  "libffi": "Kali libffi8/libffi-dev 3.8.0-2; exact signed source libffi3.8.0-2 already collected",
+  "SOURCE_DATE_EPOCH": 1794518400,
+  "scope": "CFFI built locally from official unchanged source with dynamic libffi; official prebuilt CFFI wheel is retained but not bundled."
+}

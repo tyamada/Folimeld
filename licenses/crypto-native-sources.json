@@ -6,7 +6,7 @@
   "platform": "Kali2026.3 kali-last-snapshot ARM64",
   "machine": "aarch64",
   "installed_native_binary_sha256": {
-    "_cffi_backend.cpython-314-aarch64-linux-gnu.so": "6e9697ce5e25a80a7e83c5768f56acafab73ac2b9103d638e7daae7a6ae94d8a",
+    "_cffi_backend.cpython-314-aarch64-linux-gnu.so": "a79bd604a181ac3408337b4525b76f5a659953dc43dbe877c269fe064539611b",
     "cryptography/hazmat/bindings/_rust.abi3.so": "b52e6ae53c343ce97478ee10d93a0263576d778de65333c234577298d1e9ef07"
   },
   "source_archive_sha256": {
@@ -249,7 +249,7 @@
     "CFFI-libffi-x64.txt": "c58c9325338d69ba0a0e139b3acad540a2050369c55b39f3e0e259102452e2ae",
     "OpenSSL.txt": "64db145f3ed1ec256852c3d0068d8df34299bc10da7d5aec1b4f0d8624da7661"
   },
-  "scope": "Actual Kali ARM64 CFFI/cryptography hashes and official wheels; inherited matching upstream CFFI/Cargo/OpenSSL source references. Current OS libraries map to signed Kali Packages/Sources. Historical x64 notices are not ARM64 binary provenance. No independent wheel rebuild claimed.",
+  "scope": "Kali ARM64: CFFI2.1.1 locally built from exact official source, dynamically linked to signed Kali libffi3.8.0-2. Official cryptography50.0.2/OpenSSL4.0.3 source references retained. Prebuilt CFFI wheel and historical x64 notices are not current CFFI provenance. No independent full upstream dependency rebuild claimed.",
   "kali_libffi": [
     {
       "path": "libffi.so.8",
@@ -280,5 +280,42 @@
         "Checksums-Sha256": "\n7ceba1b0bd30f72b811ea59c8c20338efc7a7eaa708f1fba3111b7dc061bdffd 2093 libffi_3.8.0-2.dsc\nbf40d752d8f5fd4505bcd1c7d4208ea87fd12c91f087e359651c776748352dc0 662493 libffi_3.8.0.orig.tar.gz\nd615dc0301d72006ccf857f6936d27fc653ec1b369da5776c25bcf6a4c7d57cf 11124 libffi_3.8.0-2.debian.tar.xz"
       }
     }
-  ]
+  ],
+  "cffi_local_source_build": {
+    "version": "2.1.1",
+    "source_archive_sha256": "dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be",
+    "source_input": {
+      "comment_text": null,
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "9eef008a1939e372c06329a3fce4279c02f328488f3526744906eeec3da7ad5f",
+        "md5": "32f0067c08d797dd28cef1544105caa3",
+        "sha256": "dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be"
+      },
+      "downloads": -1,
+      "filename": "cffi-2.1.1.tar.gz",
+      "has_sig": false,
+      "md5_digest": "32f0067c08d797dd28cef1544105caa3",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": ">=3.10",
+      "size": 530807,
+      "upload_time": "2026-08-03T21:21:18",
+      "upload_time_iso_8601": "2026-08-03T21:21:18.939988Z",
+      "url": "https://files.pythonhosted.org/packages/9e/ef/008a1939e372c06329a3fce4279c02f328488f3526744906eeec3da7ad5f/cffi-2.1.1.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    "wheel": "cffi-2.1.1-cp314-cp314-linux_aarch64.whl",
+    "wheel_sha256": "fc0a4357338c205886d999d88c6b95dd302ba5553e1db6556dc64d8560b607fe",
+    "libraries": [
+      {
+        "member": "_cffi_backend.cpython-314-aarch64-linux-gnu.so",
+        "sha256": "a79bd604a181ac3408337b4525b76f5a659953dc43dbe877c269fe064539611b"
+      }
+    ],
+    "libffi": "Kali libffi8/libffi-dev 3.8.0-2; exact signed source libffi3.8.0-2 already collected",
+    "SOURCE_DATE_EPOCH": 1794518400,
+    "scope": "CFFI built locally from official unchanged source with dynamic libffi; official prebuilt CFFI wheel is retained but not bundled."
+  }
 }
