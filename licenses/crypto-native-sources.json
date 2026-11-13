@@ -3,11 +3,11 @@
   "cffi_version": "2.1.1",
   "openssl_version": "4.0.3",
   "cargo_lock_sha256": "98778208027ce05bfff0db88c290f28355eb20e685f0c728775359fb91a1a4c4",
-  "platform": "Linux 7.3.3-1-default Tumbleweed",
-  "machine": "aarch64",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "machine": "AMD64",
   "installed_native_binary_sha256": {
-    "_cffi_backend.cpython-313-aarch64-linux-gnu.so": "a081e87a8721ffd0c2ef9327398f1c4657254a08a9584c2015064476474fb3da",
-    "cryptography/hazmat/bindings/_rust.abi3.so": "b52e6ae53c343ce97478ee10d93a0263576d778de65333c234577298d1e9ef07"
+    "cryptography/hazmat/bindings/_rust.pyd": "1d4332a447cab13dec8e3a533ad579e0e562b79e40822c931f33769758fc7156",
+    "_cffi_backend.cp314-win_amd64.pyd": "9e99b2184c60f21a88cafc374386ded3559e8694ed7cf111f2869e066d303334"
   },
   "source_archive_sha256": {
     "cryptography-50.0.2.tar.gz": "7b46165bb56eb4704e2eaaf86f3c940d19154535d9b0ca7d6d590b04060e00d5",
@@ -249,27 +249,5 @@
     "CFFI-libffi-x64.txt": "c58c9325338d69ba0a0e139b3acad540a2050369c55b39f3e0e259102452e2ae",
     "OpenSSL.txt": "64db145f3ed1ec256852c3d0068d8df34299bc10da7d5aec1b4f0d8624da7661"
   },
-  "scope": "Actual Tumbleweed ARM64 CFFI/cryptography binary hashes; inherited matching Cargo.lock/OpenSSL upstream source references. CFFI-libffi-x64.txt is retained historical x86/x64 source notice, not ARM64 libffi provenance. Bundled ARM64 libffi.so.8 belongs to the exact Tumbleweed RPM/SRPM mapped separately. Not an independent wheel rebuild or all-platform compliance certification.",
-  "tumbleweed_libffi": [
-    {
-      "path": "libffi.so.8",
-      "sha256": "c8417e85a943c12ea7c8a52b1adad045c6c49d1ba3949ae748092cdeb99f3565",
-      "machine": 183,
-      "analysis_source": "/lib64/libffi.so.8",
-      "opensuse_owner": {
-        "name": "libffi8",
-        "version": "3.5.2",
-        "release": "2.4",
-        "arch": "aarch64",
-        "source_rpm": "libffi-3.5.2-2.4.src.rpm",
-        "license": "MIT",
-        "license_owner_package_candidates": [
-          "libffi8"
-        ],
-        "license_paths": [
-          "/usr/share/licenses/libffi8/LICENSE"
-        ]
-      }
-    }
-  ]
+  "scope": "Cargo.lock superset; CFFI x86/x64 headers; upstream OpenSSL legal files. Not proof of wheel build provenance, complete native notices, or all-platform compliance."
 }
