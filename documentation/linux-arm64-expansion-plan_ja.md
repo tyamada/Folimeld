@@ -40,3 +40,10 @@ VM運用: 今回は3台を内蔵に復元し、圧縮/展開後の照合後に�
 ## Snap公開完了
 
 linux-snap-arm64-v0.3.4-fix1をprerelease/latest=falseで公開し、全16添付の公開後再ダウンロード・サイズ・SHA-256を照合した。[照合JSON](linux-arm64-snap-fix1-publication-result-2026-11-13.json)。専用ブランチrelease/linux-arm64-snap-0.3.4-fix1とタグは56de426。DEB→Snapの順で各公開後照合を完了。既存latestはlinux-v0.3.4を保持。
+
+## X案内と最終引継ぎ
+
+- DEB: https://x.com/tyamada22/status/2121043541908689225
+- Snap（DEB案内への追記）: https://x.com/tyamada22/status/2121046814115979650
+
+各パッケージの専用ブランチ・タグ、日英案内のmain反映、全16添付の公開後照合を完了してから投稿し、本文・リンク・公開表示を確認した。Mac元プロジェクトは未コミット差分0の状態を確認してmainへff-only更新。Windows側の未コミット変更やVMにはアクセス・変更していない。今回、既存公開物の削除/置換とVM/ISO原本の削除はいずれも0件。
