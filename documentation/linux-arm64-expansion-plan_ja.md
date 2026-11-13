@@ -57,3 +57,5 @@ linux-snap-arm64-v0.3.4-fix1をprerelease/latest=falseで公開し、全16添付
 Mac内蔵上のビルド・Ubuntu・Debian VMは通常停止済み。更新済み内蔵ディスクと外付けの元アーカイブを保持し、削除・上書きは0件。次の公開には、このDEBの公開後全添付照合・main反映・X案内を完了してから進む。
 
 公開結果: [linux-deb-arm64-v0.3.5](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5)をprerelease/latest=falseで公開。全16添付（1,686,119,373 bytes）を公開後のURLから全件取得し、サイズとSHA-256が一致した。既存全公開Releaseの添付ID・名前・サイズ・digestが不変、latestはlinux-v0.3.4。[公開後照合JSON](linux-deb-arm64-035-publication-result-2026-11-13.json)。
+
+X案内も完了: https://x.com/tyamada22/status/2121057222788878379 。全16添付の公開後照合とmain e648deeのpush成功後にtyamada22から投稿し、本文・Releaseリンクのカード・公開日時を確認。今回のDEB公開工程は完了。次のパッケージの公開はまだ開始していない。
