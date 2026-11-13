@@ -1,0 +1,68 @@
+Exact signed AlmaLinux9 source RPM license supplements for binary RPMs without shipped license text.
+
+{"package": "libxcb", "source_rpm": "libxcb-1.13.1-9.el9.src.rpm", "srpm_sha256": "e7ae24f0c0786a4ab134ca4ad40c05560af9b13eab2886d602820451fd1c2035", "archive": "libxcb-1.13.1.tar.bz2", "archive_sha256": "a89fb7af7a11f43d2ce84a844a4b38df688c092bf4b67683aef179cdf2a647c4", "member": "libxcb-1.13.1/COPYING", "text_sha256": "c5ffbfeaa501071ceeb97b7de2c0d703fdaa35de01c0fb6cbac1c28453a3e9fd"}
+
+Copyright (C) 2001-2006 Bart Massey, Jamey Sharp, and Josh Triplett.
+All Rights Reserved.
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the
+Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute,
+sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall
+be included in all copies or substantial portions of the
+Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the names of the authors
+or their institutions shall not be used in advertising or
+otherwise to promote the sale, use or other dealings in this
+Software without prior written authorization from the
+authors.
+
+
+{"package": "xcb-util-keysyms", "source_rpm": "xcb-util-keysyms-0.4.0-17.el9.src.rpm", "srpm_sha256": "0915ce02714655f53344d9e1d2bde64da67c06d4f7ed509eafcea1811081381a", "archive": "xcb-util-keysyms-0.4.0.tar.bz2", "archive_sha256": "0ef8490ff1dede52b7de533158547f8b454b241aa3e4dcca369507f66f216dd9", "member": "xcb-util-keysyms-0.4.0/keysyms/keysyms.c", "source_file_sha256": "669bf7579f844223d492f35008905ff1fd7b3fbb71a96ad3b1f5556e7fc1632f", "source_header_license": true, "text_sha256": "2e8452ac017a20176f41bbd73b7b874d591f08b565ffcea2f82ea618ad0ac80d"}
+
+/*
+ * Copyright © 2008 Ian Osgood <iano@quirkster.com>
+ * Copyright © 2008 Jamey Sharp <jamey@minilop.net>
+ * Copyright © 2008 Josh Triplett <josh@freedesktop.org>
+ * Copyright © 2008 Ulrich Eckhardt <doomster@knuut.de>
+ *
+ * Permission is hereby granted, free of charge, to any person
+ * obtaining a copy of this software and associated documentation
+ * files (the "Software"), to deal in the Software without
+ * restriction, including without limitation the rights to use, copy,
+ * modify, merge, publish, distribute, sublicense, and/or sell copies
+ * of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY
+ * CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+ * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *
+ * Except as contained in this notice, the names of the authors or
+ * their institutions shall not be used in advertising or otherwise to
+ * promote the sale, use or other dealings in this Software without
+ * prior written authorization from the authors.
+ */
