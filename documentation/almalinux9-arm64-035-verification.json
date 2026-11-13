@@ -1,0 +1,106 @@
+{
+  "date_jst": "2026-11-13",
+  "package": "folimeld-0.3.5-2.alma9_8.aarch64.rpm",
+  "size": 84706160,
+  "sha256": "ac05b323d271bccbd59c3b461841c576077bed372ca4ae510b8d837771bace14",
+  "executable_sha256": "c68e3762c9adf4e4765ff4e39cd32084e6cc4d4bf902e36b54768b1b4badd89e",
+  "source": {
+    "git_commit": "44dee9d0543f5003160284f21aa458acbe13faa9",
+    "working_tree_changed": false,
+    "files_verified": 994,
+    "source_sha256": "50fcf81a945c9d9bf28e0ad7e4cd7d5968e81307c2ba5fe29a6706a17d542c3e",
+    "result": "Git, ZIP and embedded manifest match"
+  },
+  "reproducibility": "Two clean application output roots in one AlmaLinux9 ARM64 VM, sharing the same fixed locally built Qt/PySide SDK, produce identical ELF. RPM header build times differ. No independent second-VM rebuild of Qt/PySide. Published final-r3 only.",
+  "tests": {
+    "platform": "AlmaLinux9.8 ARM64 Python3.12.15",
+    "passed": 410,
+    "skipped": 9,
+    "subtests_passed": 69,
+    "ruff": "pass"
+  },
+  "acceptance": {
+    "os": "AlmaLinux9.8 ARM64",
+    "kernel": "5.14.0-687.66.2.el9_8.aarch64",
+    "environment": "QEMU HVF on internal Mac, UID1000, Xorg/Mutter",
+    "selinux": "Enforcing, normal unconfined user domain; no Snap-style application confinement",
+    "fresh_install": true,
+    "same_candidate_full_removal_and_reinstall": true,
+    "documents_and_settings_hashes_preserved": true,
+    "operations": [
+      "rotation",
+      "undo/redo",
+      "page move",
+      "blank insertion/deletion",
+      "Save As",
+      "Japanese-path reopen (shell-created copy, not IME)",
+      "image folder conversion/save",
+      "clean exit",
+      "full remove/reinstall",
+      "saved image PDF reopen"
+    ],
+    "gui_exit_statuses": [
+      0,
+      0,
+      0
+    ],
+    "no_folimeld_processes_remain": true,
+    "pdf_validation": {
+      "platform": "AlmaLinux9 ARM64 fresh execution, reused synthetic input labels are historical",
+      "edited_order": [
+        2,
+        1,
+        3
+      ],
+      "rotations": [
+        0,
+        90,
+        0
+      ],
+      "japanese_copy_identical": true,
+      "image_pages": [
+        {
+          "page": 1,
+          "width": 420,
+          "height": 595,
+          "decoded_pixels_identical": true
+        },
+        {
+          "page": 2,
+          "width": 420,
+          "height": 595,
+          "decoded_pixels_identical": true
+        }
+      ],
+      "fixture_hashes_unchanged": true,
+      "pdf_sha256": {
+        "alma-image.pdf": "c98a0df63468b75b5c8db4b290be1799245c129d695b27e2b4f7462b539c7d75",
+        "encrypted.pdf": "2ca64015ea2dd61334dfbaf401b42e19dadb3bfb11a2c053ed118def8b927436",
+        "日本語保存結果.pdf": "f514ea06eb71d0fd5c0540a64a8a26edc4c2e7b3d8f4d2f23017d274db51a715",
+        "alma-edited.pdf": "f514ea06eb71d0fd5c0540a64a8a26edc4c2e7b3d8f4d2f23017d274db51a715",
+        "input.pdf": "734aaee7a9f8b7c0093be023ed039ecf54a1792b69b7aa0c36db3a4e36498732"
+      }
+    }
+  },
+  "minimum_root": {
+    "official_AlmaLinux9_dependencies_only": true,
+    "install_weak_deps": false,
+    "regular_user": 1000,
+    "offscreen_alive_seconds": 15,
+    "timeout_exit": 124,
+    "scope": "Startup liveness, distinct from GUI exit0",
+    "revision1_failure": "Missing libOpenGL.so.0; candidate1 not released; revision2 explicitly requires libOpenGL and passed a fresh minimum root."
+  },
+  "native": {
+    "all_inner_elf_aarch64": 163,
+    "official_wheel_members": 25,
+    "source_built_Qt_PySide_members": 41,
+    "AlmaLinux_RPM_derived_members": 97,
+    "binary_rpms": 42,
+    "signed_source_rpms": 39,
+    "verification": "Full-byte original or replayed exact patchelf RPATH transformation; all frozen hashes verified. Official PyInstaller original bootloader sections verified."
+  },
+  "unsigned_local_RPM": true,
+  "amd64_or_other_distribution_acceptance_used": false,
+  "limitations": "KNOWN-LIMITATIONS.txt"
+}
