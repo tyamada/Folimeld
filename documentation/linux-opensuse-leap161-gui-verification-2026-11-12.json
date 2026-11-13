@@ -1,0 +1,61 @@
+{
+  "original_unchanged": true,
+  "original_sha256": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+  "saved_sha256": "bb37633d4d03124f190e34a815f16b99414b6a0235a2acf7a05f11e9133e9e9b",
+  "pages": 3,
+  "original_page_order": [
+    2,
+    1,
+    3
+  ],
+  "rotations": [
+    0,
+    90,
+    0
+  ],
+  "page_text_preserved": true,
+  "gui_reopen_confirmed": true,
+  "app_log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+  "qsettings": "[General]\nlanguage=ja\nlast_open_directory=/home/folimeld-test/verification/gui-20261112/fixtures\n",
+  "screenshots": {
+    "01-loaded.png": "35b328f69c32fa34584346f4bc2cdde0f1473a85a30a9f7124b5e3b145e88eb5",
+    "02-confirmed-rotated.png": "66b0ae5e1b76a20c174e39cd3b6df8e3fa45bd088442b58595e79d97c26e1557",
+    "02-rotated.png": "cd391ceb231b3c3b9243706e9dd3944a88786e19a3ec92397b1dc6d919084a17",
+    "03-confirmed-undo.png": "c7cbfd952bc9334775d161797e4da679ae4752a84cec29b838de1cdab6000ea5",
+    "03-undo.png": "6cd2171718dc95401f5d4fa6c7576c7a6131847da20d463e872117bfd401f6d7",
+    "04-redo.png": "a69e8ae0ef0892c7f5ee95c5b3e64cd6b20d98a9a3a9eb74447048defe77d717",
+    "05-moved.png": "8fc099a98ad57ad56f53ec79a9a84fdd051173c3c17de5ce73db4701a6ad97f5",
+    "06-blank-inserted.png": "046ea2de3554e5d53029455d1cd83c558ccf3d4a56ee13f3e6fc8b8ac7356236",
+    "07-blank-deleted.png": "9e82ef2994f78b2968c39f98658b63675b43879484de1f0e3a2c48109c7443b2",
+    "08-saved.png": "5465d9f57eab63877965c605df04fd60044dda4bb61a8663be0eec97c2a304c6",
+    "09-reopened.png": "2f7d5f323b02f49411dd98a8cfda93bfed76ae778b009ad4eec7ef7387ad63af"
+  },
+  "verification_date_jst": "2026-11-12",
+  "published": false,
+  "package": "folimeld-0.3.3-2.lp161.x86_64",
+  "environment": {
+    "binary_sha256": "53fb285ac9efa231e4abf40d82bb69be0b411c04de21890cfd609fd3366cf567",
+    "verification_gui_terminated": true,
+    "gui_tools": "python313-3.13.13-160100.2.1.x86_64\nxdotool-3.20211022.1-bp161.1.2.x86_64\nxwininfo-1.1.6-bp161.1.2.x86_64\nImageMagick-7.1.2.31-160100.1.3.x86_64\ngoogle-noto-sans-cjk-fonts-2.004-160100.2.1.noarch\ntar-1.35-160100.4.1.x86_64\n"
+  },
+  "method": "Normal installed RPM, WSLg X11, isolated XDG settings; GUI dependencies added after minimal-dependency tests",
+  "observed": [
+    "Japanese UI/PDF",
+    "immediate rotation preview",
+    "undo",
+    "redo",
+    "page move",
+    "insert and delete blank page",
+    "save as separate PDF",
+    "GUI reopen"
+  ],
+  "excluded_early_captures": [
+    "02-rotated.png",
+    "03-undo.png"
+  ],
+  "limitations": [
+    "Early clicks did not select the page; only confirmed captures support rotation and undo results",
+    "IME, image import, encrypted PDF, MIME and update tests remain",
+    "Full desktop, Tumbleweed and ARM64 untested"
+  ]
+}
