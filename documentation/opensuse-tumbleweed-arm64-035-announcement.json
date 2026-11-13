@@ -1,0 +1,10 @@
+{
+  "account": "tyamada22",
+  "url": "https://x.com/tyamada22/status/2121335573889884511",
+  "displayed_at_jst": "2026-11-14 05:13",
+  "text": "Folimeld 0.3.5のopenSUSE Tumbleweed 20261111 ARM64向けRPM試験版を公開しました。ARM64でビルド・GUI検証、対応ソースと全16添付の公開後照合を完了。未署名RPM／glibc 2.44以上。制約はReleaseをご確認ください。\nhttps://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5",
+  "release_url": "https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5",
+  "posted_after_public_redownloads_and_main_push": true,
+  "main_before_post": "8708cc7",
+  "public_text_link_card_and_timestamp_verified": true
+}

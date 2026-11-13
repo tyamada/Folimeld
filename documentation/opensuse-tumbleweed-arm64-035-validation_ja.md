@@ -13,3 +13,5 @@
 GitHubの未署名試験版、glibc>=2.44、openSUSE公式パッケージではない。別スナップショット・Leap/SLE・実機ARM・完全なGNOME/KDE/Wayland・IME・暗号化/フォームGUI・ファイル関連付け・旧版更新は今回未検証。通常ユーザードメインでSnap同様のアプリ単位制限はない。詳細は添付BUILD/KNOWN-LIMITATIONS/検証資料。amd64や他OSの合格は流用しない。全添付の公開後再取得照合・main反映・X案内完了まで次の公開へ進まない。
 
 公開完了: 新規Releaseの全16添付を公開後に再取得し、サイズ/SHA256一致を確認。既存公開添付とlatestを保持。X案内はmain反映後に行う。
+
+X案内完了: https://x.com/tyamada22/status/2121335573889884511 。全16添付照合・main8708cc7のプッシュ後にtyamada22から投稿し、本文・Releaseカード・2026年11月14日05:13の公開表示を確認。

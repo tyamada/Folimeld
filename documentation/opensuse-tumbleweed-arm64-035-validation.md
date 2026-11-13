@@ -13,3 +13,5 @@ All201AArch64 native members map to105official-wheel members and96exact signed o
 Unsigned GitHub preview,glibc>=2.44,not an official openSUSE package. Other snapshots/Leap/SLE,physical ARM,full GNOME/KDE/Wayland,IME,encryption/forms GUI,associations and cross-version upgrade remain untested. Normal user domain is not Snap-style per-app confinement. No amd64/other-OS acceptance reused. Complete public redownload verification,main integration and X announcement before proceeding to another release. See attached BUILD/KNOWN-LIMITATIONS/evidence.
 
 Publication complete: redownload all16attachments after publication and verify sizes/SHA256; preserve all prior public assets/latest. X announcement follows main integration.
+
+X announcement complete: https://x.com/tyamada22/status/2121335573889884511 . Posted by tyamada22 after all16public redownload checks and main8708cc7 push; verified public text,Release card and 2026-11-14 05:13 JST timestamp.
