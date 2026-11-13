@@ -1,0 +1,24 @@
+{
+  "date_jst": "2026-11-13",
+  "base_commit": "0a4e2366255f2f7096fd73a24a1a69f30019371f",
+  "release_source_commit": "047b3c2acd8bcde336eb98b4c5b5315c9ed0fd27",
+  "source_zip_sha256": "f7f69ff38f55294d5cc682a98d319a5e92a8fc1f1a0f951905c60d0f49dad522",
+  "source_files_verified": 460,
+  "deb_sha256": "1212c9b51961bdef8d5e478deef38df13b0f6203664ce663ef4e89b39391cc99",
+  "exe_sha256": "ec556302b1ebd79aa1a158ee8a7ae0b7722679ea9996a3612dc9c6960bfec99c",
+  "new_rebuild_byte_identical": true,
+  "new_runtime": "Ubuntu 24.04.5 ARM64 / HVF / regular-user Xorg",
+  "runtime_exit_statuses": [
+    0,
+    0,
+    0
+  ],
+  "debian_record": "2026-11-11 normal PDF acceptance, not rerun",
+  "native_total": 210,
+  "native_unchanged": 175,
+  "native_updated": 35,
+  "updated_source_packages": 8,
+  "signature": "Ubuntu Archive Automatic Signing Key (2018), F6ECB3762474EDA9D21B7022871920D1991BC93C",
+  "amd64_results_used": false,
+  "limitations": "KNOWN-LIMITATIONS.txt"
+}
