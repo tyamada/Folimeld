@@ -79,3 +79,11 @@ Snap公開・全添付照合・X案内完了後、Fedora44専用ARM64ビルド/�
 全974ソース入力、同梱200 AArch64実体（公式wheel105/Fedora RPM95）を確認。38署名付きbinary RPMに対応する34exact signed SRPMを添付。別ビルド先ELF一致（RPMヘッダー時刻は異なる）、409テスト成功、3GUI正常終了、完全削除再導入と文書/設定保持、最小依存起動を確認。SELinux維持。実機/Wayland/IME/旧版更新などは未検証。全16公開添付の再ダウンロード照合とX案内を完了してから次へ進む。
 
 専用VM2台を内蔵で通常停止し、QCOW2 overlay・backing image・UEFI vars・seedを保持。外付けChatGPT-Test上での起動0件、VM/ISOの削除・新規外付け退避0件。既存退避計画の削除前コピー/復旧確認条件を変更しない。従来の外付けアーカイブと既存公開物を保持。
+
+## Fedora45 ARM64 RPM 0.3.5への展開（2026-11-13、Fedora44完了後の追加）
+
+Fedora44公開・全添付照合・X案内完了後、Fedora45専用ARM64ビルド/実行VMをMac内蔵に準備。公式イメージの署名・SHA256を確認。最終ソース0b2ee3e（差分なし）、タグfedora45-arm64-v0.3.5は検証文書追加後52b2686。[検証記録](fedora45-arm64-035-validation_ja.md)。Fedora45 ARM64を公開済みへ変更し、AlmaLinux/openSUSE/Kali ARM64は未検証のまま。amd64/Ubuntuの実行結果をFedora ARM64合格には数えない。
+
+全981ソース入力、同梱200 AArch64実体（公式wheel105/Fedora RPM95）を確認。38署名付きbinary RPMに対応する34exact signed SRPMを添付。別ビルド先ELF一致（RPMヘッダー時刻は異なる）、409テスト成功、3GUI正常終了、完全削除再導入と文書/設定保持、最小依存起動を確認。SELinux維持。実機/Wayland/IME/旧版更新などは未検証。全16公開添付の再ダウンロード照合とX案内を完了してから次へ進む。
+
+専用VM2台を内蔵で通常停止し、QCOW2 overlay・backing image・UEFI vars・seedを保持。外付けChatGPT-Test上での起動0件、VM/ISOの削除・新規外付け退避0件。既存退避計画の削除前コピー/復旧確認条件を変更しない。従来の外付けアーカイブと既存公開物を保持。

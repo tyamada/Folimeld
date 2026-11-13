@@ -1,0 +1,26 @@
+{
+  "vm_storage": "Mac internal workspace",
+  "shutdown": "both build/test normal shutdown; QEMU pid files removed",
+  "disks_retained": [
+    "build/disk.qcow2",
+    "build/vars.fd",
+    "build/seed.iso",
+    "test/disk.qcow2",
+    "test/vars.fd",
+    "test/seed.iso",
+    "media/Fedora-Cloud-Base-Generic-45-1.4.aarch64.qcow2"
+  ],
+  "external_VM_starts": 0,
+  "VM_ISO_deletions": 0,
+  "new_external_offloads": 0,
+  "image": {
+    "image": "Fedora-Cloud-Base-Generic-45-1.4.aarch64.qcow2",
+    "size": 596705280,
+    "sha256": "1632acc8bc14d45b6c9596a0acc71b070d3748d1abdcf1a519be5c983bb0286c",
+    "signature_fingerprint": "4F50A6114CD5C6976A7F1179655A4B02F577861E",
+    "signature_and_hash_verified": true,
+    "official_security_page": "https://fedoraproject.org/security/"
+  },
+  "official_image_url": "https://download.fedoraproject.org/pub/fedora/linux/releases/45/Cloud/aarch64/images/Fedora-Cloud-Base-Generic-45-1.4.aarch64.qcow2",
+  "common_rule": "/Users/tyamada22/.codex/AGENTS.md checked. Any future authorized deletion requires a verified size/SHA256 copy to physically confirmed HD-LS2.0TU2D or NAS Codex\u30d0\u30c3\u30af\u30a2\u30c3\u30d7, plus a retention record. Working VM/user data remain separate. No deletion or new offload authorized by the rule itself."
+}

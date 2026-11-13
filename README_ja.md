@@ -53,6 +53,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | openSUSE Leap 16.1（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5) |
 | Fedora 44（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.5) |
 | Fedora 44（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5) |
+| Fedora 45（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-arm64-v0.3.5) |
 | Fedora 45（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) |
 | AlmaLinux 9.8（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5) |
 | FreeBSD 15.1 | amd64 | pkg / 0.3.3_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3) |
@@ -236,6 +237,14 @@ folimeld
 ```
 
 PDF編集・日本語名での別名保存と再読込、暗号化PDF、画像からのPDF作成、日本語入力、GIO起動、更新・削除再導入を確認しています。新規の最小依存installrootではoffscreen起動と整合性を確認しました。通常デスクトップ、他ディストリビューション、ARM64、公開Ubuntu／Debian 0.3.4からの移行は未検証です。最小依存試験は独立WSLのブートや日本語GUI/IMEの確認を意味しません。詳しい確認範囲と来歴の制約はRelease本文と[KNOWN-LIMITATIONS.txt](https://github.com/tyamada/Folimeld/releases/download/fedora44-amd64-v0.3.5/KNOWN-LIMITATIONS.txt)を参照してください。既存配布物とlatestは変更していません。
+
+### Fedora 45 ARM64試験版
+
+[**Fedora 45 ARM64 RPM 0.3.5-1**](https://github.com/tyamada/Folimeld/releases/tag/fedora45-arm64-v0.3.5)を公開しました。一般ユーザーXorg/Openbox・SELinux Enforcingで新規導入、主要PDF編集・保存・日本語パス再読込・画像変換・正常終了、完全削除と同一候補再導入・文書/設定保持を確認。Fedora ARM64/Python3.14.10で409テスト成功、981ソース入力・200 AArch64 ELFの出所、全16添付の公開後再取得を照合済みです。同一VMの別ビルド先で実行ファイルは一致しましたが、RPMヘッダー時刻は異なります。GitHubの未署名RPMで、glibc 2.44以上が必要です。実機ARM・GNOME/Wayland・IME・旧版からの更新等は未検証。[検証・制約](documentation/fedora45-arm64-035-validation_ja.md)。
+
+```bash
+sudo dnf install ./folimeld-0.3.5-1.fc45.aarch64.rpm
+```
 
 ### Fedora 45 amd64試験版
 
