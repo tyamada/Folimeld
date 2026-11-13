@@ -38,6 +38,26 @@ class LicenseInfoTests(unittest.TestCase):
             with self.assertRaises(PackageNotFoundError):
                 installed_notices()
 
+    def test_monolithic_pyside_allows_absent_splits_but_declared_splits_remain_required(self):
+        for split_required in (False, True):
+            with self.subTest(split_required=split_required):
+                def lookup(name):
+                    if name in {"PySide6_Essentials", "PySide6_Addons"}:
+                        raise PackageNotFoundError(name)
+                    return SimpleNamespace(
+                        version="6.11.2", metadata={}, files=[],
+                        requires=["PySide6-Essentials==6.11.2"] if split_required else [],
+                    )
+
+                with patch("folimeld.license_info.distribution", side_effect=lookup), \
+                        patch("folimeld.license_info.Path.exists", return_value=True), \
+                        patch("folimeld.license_info.Path.read_text", return_value="Python notice"):
+                    if split_required:
+                        with self.assertRaises(PackageNotFoundError):
+                            installed_notices()
+                    else:
+                        self.assertIn("not used by this monolithic PySide6", installed_notices())
+
     def test_packaging_includes_bootloader_license_text(self):
         with tempfile.TemporaryDirectory() as directory:
             copying = Path(directory) / "COPYING.txt"
