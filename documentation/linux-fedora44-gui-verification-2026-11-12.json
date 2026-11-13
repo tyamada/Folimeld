@@ -1,0 +1,54 @@
+{
+  "original_unchanged": true,
+  "original_sha256": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+  "saved_sha256": "7b54eee33d7c281a015dae02e2941dd59c317af66d9ec19605cfcf0d2491bab6",
+  "pages": 3,
+  "original_page_order": [
+    2,
+    1,
+    3
+  ],
+  "rotations": [
+    0,
+    90,
+    0
+  ],
+  "page_text_preserved": true,
+  "gui_reopen_confirmed": true,
+  "app_log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+  "qsettings": "[General]\nlanguage=ja\nlast_open_directory=/home/folimeld-test/verification/gui-20261112/fixtures\n",
+  "screenshots": {
+    "01-loaded.png": "3c6d8cd6edb2a835b6e52d5705639a95143f0b0f3850a51b261a6a201580e86f",
+    "02-rotated.png": "e8457606b0af152de279f8a38fb1785589811f6345783be4625930b149ef9a02",
+    "03-undo.png": "31049662fb9e220effe0ad8ce3d9d16aa1f16e1bc6b6ccbccbc1eb49f4e7b350",
+    "04-redo.png": "b6d03de1c705d450011adce4b8740d82fe5cc2b7fcba4522e05e1e66e9072a8b",
+    "05-moved.png": "26257d2f4fed54c4b28d5ab54be6619658650955ad412b79abd93b852c344376",
+    "06-blank-inserted.png": "19a0628f6618e555cf0e672f7d5ffc2ca53b0405d402668fe2fae09fe124316d",
+    "07-blank-deleted.png": "efd363e2c7ae9e35ca4e1c41407514ce0494a10b5dd63d56570695a35f3efcb1",
+    "08-saved.png": "40585837fa2ea3b9067fe93f8870dfcd607e6eb179c9ee23d1cc1436531885aa",
+    "09-reopened.png": "2b0edb76fb99c57e15b15ec7004cb7f6d5d1e78b5e4d659ebcf3084eb610729e"
+  },
+  "verification_date_jst": "2026-11-12",
+  "published": false,
+  "private_application_version": "0.3.3",
+  "rpm": "folimeld-0.3.3-1.fc44.x86_64",
+  "binary_sha256": "8347c123b1af32f37b98898c3b6e3e9db778798cf09f708ee671ad194bdc15ae",
+  "verification_gui_terminated": true,
+  "method": "Installed normal RPM; WSLg X11; isolated XDG directories; GUI tools and Japanese fonts added after minimal-dependency tests",
+  "observed": [
+    "Japanese PDF and UI",
+    "immediate rotation preview",
+    "undo",
+    "redo",
+    "move page backward",
+    "insert same-size blank page",
+    "delete inserted blank",
+    "save as separate PDF",
+    "GUI reopen"
+  ],
+  "limitations": [
+    "Fedora44 IME, image-import, encrypted-PDF and MIME GUI tests remain",
+    "Full Linux desktop and ARM64 untested",
+    "Synthetic three-page PDF only"
+  ]
+}
