@@ -3,11 +3,11 @@
   "cffi_version": "2.1.1",
   "openssl_version": "4.0.3",
   "cargo_lock_sha256": "98778208027ce05bfff0db88c290f28355eb20e685f0c728775359fb91a1a4c4",
-  "platform": "Windows-11-10.0.26300-SP0",
-  "machine": "AMD64",
+  "platform": "Kali2026.3 kali-last-snapshot ARM64",
+  "machine": "aarch64",
   "installed_native_binary_sha256": {
-    "cryptography/hazmat/bindings/_rust.pyd": "1d4332a447cab13dec8e3a533ad579e0e562b79e40822c931f33769758fc7156",
-    "_cffi_backend.cp314-win_amd64.pyd": "9e99b2184c60f21a88cafc374386ded3559e8694ed7cf111f2869e066d303334"
+    "_cffi_backend.cpython-314-aarch64-linux-gnu.so": "6e9697ce5e25a80a7e83c5768f56acafab73ac2b9103d638e7daae7a6ae94d8a",
+    "cryptography/hazmat/bindings/_rust.abi3.so": "b52e6ae53c343ce97478ee10d93a0263576d778de65333c234577298d1e9ef07"
   },
   "source_archive_sha256": {
     "cryptography-50.0.2.tar.gz": "7b46165bb56eb4704e2eaaf86f3c940d19154535d9b0ca7d6d590b04060e00d5",
@@ -249,5 +249,36 @@
     "CFFI-libffi-x64.txt": "c58c9325338d69ba0a0e139b3acad540a2050369c55b39f3e0e259102452e2ae",
     "OpenSSL.txt": "64db145f3ed1ec256852c3d0068d8df34299bc10da7d5aec1b4f0d8624da7661"
   },
-  "scope": "Cargo.lock superset; CFFI x86/x64 headers; upstream OpenSSL legal files. Not proof of wheel build provenance, complete native notices, or all-platform compliance."
+  "scope": "Actual Kali ARM64 CFFI/cryptography hashes and official wheels; inherited matching upstream CFFI/Cargo/OpenSSL source references. Current OS libraries map to signed Kali Packages/Sources. Historical x64 notices are not ARM64 binary provenance. No independent wheel rebuild claimed.",
+  "kali_libffi": [
+    {
+      "path": "libffi.so.8",
+      "sha256": "b24fca956497159aaca1cea6a5b3846606e59e4ee141102914cd319a40209156",
+      "machine": 183,
+      "analysis_source": "/usr/lib/aarch64-linux-gnu/libffi.so.8",
+      "kali_owner": {
+        "binary_package": "libffi8:arm64",
+        "version": "3.8.0-2",
+        "arch": "arm64",
+        "source_package": "libffi",
+        "source_version": "3.8.0-2",
+        "name": "libffi8",
+        "copyright_path": "/usr/share/doc/libffi8/copyright",
+        "copyright_sha256": "25ee86cfccc2b7eb9a156a127f1e1b38c46c231f516ff201912223eaf62ee186"
+      },
+      "official_binary_deb_matches": [
+        {
+          "binary_deb": "libffi8_3.8.0-2_arm64.deb",
+          "binary_deb_sha256": "b6e6930ad3b9423237fb64bcf5fb65fdd36890613b7f083094fcf16041c5e851",
+          "member": "./usr/lib/aarch64-linux-gnu/libffi.so.8.5.0"
+        }
+      ],
+      "signed_source_index_record": {
+        "Package": "libffi",
+        "Version": "3.8.0-2",
+        "Directory": "pool/main/libf/libffi",
+        "Checksums-Sha256": "\n7ceba1b0bd30f72b811ea59c8c20338efc7a7eaa708f1fba3111b7dc061bdffd 2093 libffi_3.8.0-2.dsc\nbf40d752d8f5fd4505bcd1c7d4208ea87fd12c91f087e359651c776748352dc0 662493 libffi_3.8.0.orig.tar.gz\nd615dc0301d72006ccf857f6936d27fc653ec1b369da5776c25bcf6a4c7d57cf 11124 libffi_3.8.0-2.debian.tar.xz"
+      }
+    }
+  ]
 }
