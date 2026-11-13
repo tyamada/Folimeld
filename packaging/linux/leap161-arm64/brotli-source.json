@@ -1,0 +1,9 @@
+{
+  "name": "Brotli",
+  "version": "1.1.1",
+  "commit": "db0631dfea829194206d269bc7b25d0908cdb97d",
+  "url": "https://github.com/google/brotli/archive/db0631dfea829194206d269bc7b25d0908cdb97d.tar.gz",
+  "sha256": "38f9c17ee36c2e930ce00975b50fcd246a8e5594c1bcf43cd56b14118786b82a",
+  "bytes": 512749,
+  "security_release": "https://github.com/google/brotli/releases/tag/v1.1.1"
+}

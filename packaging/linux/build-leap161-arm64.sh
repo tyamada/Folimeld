@@ -6,6 +6,7 @@ cd "$root"
 . /etc/os-release
 [[ $ID:$VERSION_ID == opensuse-leap:16.1 ]]
 : "${FOLIMELD_BUILD_ROOT:?Use an unused absolute output directory}"
+: "${FOLIMELD_BROTLI_LIB_DIR:?Use the verified Brotli 1.1.1 install/lib directory}"
 : "${FOLIMELD_WHEELHOUSE:?Set an exact checksum-verified wheel directory}"
 [[ $FOLIMELD_BUILD_ROOT == /* && ! -e $FOLIMELD_BUILD_ROOT ]]
 [[ $(python3 -c 'from folimeld import __version__; print(__version__)') == 0.3.5 ]]
