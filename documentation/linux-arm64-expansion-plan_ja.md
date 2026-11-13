@@ -69,3 +69,5 @@ DEB公開・全16添付の公開後照合・main反映・X案内完了後に、S
 ビルドVM cとUbuntu-Snap VMは内蔵で実行し、通常停止。外付けアーカイブ・旧公開Snap・VM/ISOとユーザーデータの退避を保持。VM/ISO削除・外付け起動は0件。RPM/Kali ARM64は未検証のまま。今回のSnapの全添付再取得照合とX案内完了まで、別パッケージの公開は開始しない。
 
 公開完了: [linux-snap-arm64-v0.3.5](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5)をprerelease/latest=falseで公開。全16添付（1,690,964,765 bytes）を公開後に全件再取得し、サイズとSHA-256が一致。既存公開Releaseの添付ID・名前・サイズ・digestは不変、latestはlinux-v0.3.4を維持。[公開後照合JSON](linux-snap-arm64-035-publication-result-2026-11-13.json)。
+
+X案内完了: https://x.com/tyamada22/status/2121080042847617395 。全16添付の公開後照合とmain 739e489のpush成功後にtyamada22から投稿し、本文・Releaseカード・公開日時を確認。0.3.5 ARM64 strict Snapの公開工程は完了し、次のパッケージ公開は未開始。

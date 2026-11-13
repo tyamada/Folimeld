@@ -1,0 +1,9 @@
+{
+  "post_url": "https://x.com/tyamada22/status/2121080042847617395",
+  "account": "tyamada22",
+  "release_url": "https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5",
+  "published_after_all_16_redownload_checks": true,
+  "published_after_main_push": "739e489",
+  "body": "Folimeld 0.3.5 ARM64 strict Snap試験版を公開しました。Ubuntu ARM64でPDF編集・画像変換・保存・再導入を確認。AppArmor／Seccompの制限と対応ソースを検証し、全16添付の公開後再ダウンロード照合も完了しました。 https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5 #Folimeld #Linux #ARM64",
+  "public_body_release_card_and_timestamp_observed": true
+}
