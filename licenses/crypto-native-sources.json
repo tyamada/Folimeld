@@ -3,7 +3,7 @@
   "cffi_version": "2.1.1",
   "openssl_version": "4.0.3",
   "cargo_lock_sha256": "98778208027ce05bfff0db88c290f28355eb20e685f0c728775359fb91a1a4c4",
-  "platform": "Linux 6.19.10-300.fc44.aarch64 Fedora44",
+  "platform": "Linux 7.3.3-300.fc45.aarch64 Fedora45",
   "machine": "aarch64",
   "installed_native_binary_sha256": {
     "_cffi_backend.cpython-314-aarch64-linux-gnu.so": "6e9697ce5e25a80a7e83c5768f56acafab73ac2b9103d638e7daae7a6ae94d8a",
@@ -249,19 +249,19 @@
     "CFFI-libffi-x64.txt": "c58c9325338d69ba0a0e139b3acad540a2050369c55b39f3e0e259102452e2ae",
     "OpenSSL.txt": "64db145f3ed1ec256852c3d0068d8df34299bc10da7d5aec1b4f0d8624da7661"
   },
-  "scope": "Actual Fedora44 ARM64 CFFI/cryptography binary hashes; inherited matching Cargo.lock/OpenSSL upstream source references. CFFI-libffi-x64.txt is retained historical x86/x64 source notice, not ARM64 libffi provenance. Bundled ARM64 libffi.so.8 belongs to the exact Fedora RPM/SRPM mapped separately. Not an independent wheel rebuild or all-platform compliance certification.",
+  "scope": "Actual Fedora45 ARM64 CFFI/cryptography binary hashes; inherited matching Cargo.lock/OpenSSL upstream source references. CFFI-libffi-x64.txt is retained historical x86/x64 source notice, not ARM64 libffi provenance. Bundled ARM64 libffi.so.8 belongs to the exact Fedora RPM/SRPM mapped separately. Not an independent wheel rebuild or all-platform compliance certification.",
   "fedora_libffi": [
     {
       "path": "libffi.so.8",
-      "sha256": "74eaf1ef69deca87296b600d50777102cad66b2a8021caefc11df3b296055d86",
+      "sha256": "485cfdb2eb56d4432147cfada214954b9bf8bedf86b864e03dff96d59b7c9635",
       "machine": 183,
       "analysis_source": "/lib64/libffi.so.8",
       "fedora_owner": {
         "name": "libffi",
         "version": "3.5.2",
-        "release": "2.fc44",
+        "release": "3.fc45",
         "arch": "aarch64",
-        "source_rpm": "libffi-3.5.2-2.fc44.src.rpm",
+        "source_rpm": "libffi-3.5.2-3.fc45.src.rpm",
         "license": "MIT AND CC-PDDC AND (GPL-3.0-or-later WITH Texinfo-exception)",
         "license_owner_package_candidates": [
           "libffi"
