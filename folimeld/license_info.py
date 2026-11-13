@@ -2,6 +2,7 @@
 
 from importlib.metadata import PackageNotFoundError, distribution
 from pathlib import Path
+import re
 import sys
 
 
@@ -16,14 +17,24 @@ def installed_notices(*, strict: bool = True) -> str:
         names += ["winrt-runtime", "winrt-Windows.Services.Store",
                   "winrt-Windows.Foundation", "winrt-Windows.Foundation.Collections"]
     sections = []
+    pyside_requires = None
     for name in names:
         try:
             dist = distribution(name)
         except PackageNotFoundError:
+            if (name in {"PySide6_Essentials", "PySide6_Addons"}
+                    and pyside_requires is not None and name.lower() not in pyside_requires):
+                sections.append(f"{name}: not used by this monolithic PySide6 distribution.")
+                continue
             if strict:
                 raise
             sections.append(f"{name}: package metadata is not available in this environment.")
             continue
+        if name == "PySide6":
+            pyside_requires = {
+                re.split(r"[\s<>=!~;\[]", requirement, maxsplit=1)[0].lower().replace("-", "_")
+                for requirement in (getattr(dist, "requires", None) or [])
+            }
         license_name = dist.metadata.get("License-Expression") or dist.metadata.get("License", "")
         sections.append(f"{name} {dist.version}\n{license_name}\n")
         for file in sorted(dist.files or []):
