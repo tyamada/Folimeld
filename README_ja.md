@@ -136,6 +136,10 @@ Debian 13ではUbuntu版と同じdebパッケージを使用します。最小�
 
 [**0.3.4+fix1 ARM64 DEB**](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.4-fix1)は、画像変換後の終了クラッシュを修正する試験版です。Ubuntu 24.04.5 ARM64の一般ユーザーXorgで画像変換・保存・再起動後の再読込・破棄終了・削除再導入を確認しました。Debian 13.7 ARM64の通常PDF受入は同一DEBの2026年11月11日の記録で、今回未再実行です。DEB・正確な対応ソース・依存ソースと告知・検証範囲はReleaseに掲載しています。既存0.3.4/Snapとamd64版は保持しています。
 
+### Ubuntu ARM64 strict Snap修正試験版
+
+[**0.3.4+fix1 ARM64 Snap**](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.4-fix1)は同じ終了クラッシュ修正のstrict Snap試験版です。Ubuntu 24.04.5 ARM64/HVFの一般ユーザーXorgで画像変換・保存・終了0、同一候補x5→x6再導入とPDF/設定保持を確認しました。再試験の1件はOS自動更新によるXorg再起動で中断・終了1となり、更新完了後に再読込・再変換・破棄終了0を確認しました。AppArmor enforce・Seccomp 2を実測しています。ローカル導入するGitHub配布で、Snap Store署名はありません。制約・正確な対応ソース・告知はReleaseを参照してください。
+
 ### Ubuntu / Debian / Kali amd64 DEB試験版
 
 2026年11月13日（日本時間）公開の**Folimeld 0.3.5**は、Ubuntu 24.04で生成し、専用Ubuntu 24.04.4・Debian 13.6・Kali Rolling 2026.3のWSL2／WSLgで検証したamd64 DEB試験版です。既存0.3.4のDEB/SnapとARM64配布物は保持しています。glibc 2.39以上と、Ubuntuでは公式universeリポジトリが必要です。

@@ -136,6 +136,10 @@ Debian 13 uses the same deb package as Ubuntu. If a minimal installation display
 
 [**0.3.4+fix1 ARM64 DEB**](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.4-fix1) is a preview that fixes an exit crash after image conversion. Image conversion, saving, reopening after restart, discard-and-exit, and removal/reinstallation were checked in a regular-user Xorg session on Ubuntu 24.04.5 ARM64. Normal PDF acceptance on Debian 13.7 ARM64 comes from the same DEB's November 11, 2026 records and was not rerun today. The Release provides the DEB, exact application source, dependency sources/notices, and verification scope. Existing 0.3.4/Snap and amd64 downloads remain available.
 
+### Ubuntu ARM64 strict Snap fix preview
+
+[**0.3.4+fix1 ARM64 Snap**](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.4-fix1) is a strict Snap preview of the same exit-crash fix. A regular-user Xorg session on Ubuntu 24.04.5 ARM64/HVF verified image conversion/save/exit 0, same-candidate reinstallation x5→x6, and document/settings preservation. One run was interrupted with exit 1 when automatic OS updates restarted Xorg; after updates finished, reopening/conversion/discard/exit returned 0. Runtime checks confirmed AppArmor enforce and Seccomp 2. This is a locally installed GitHub asset without a Snap Store assertion. See the Release for limitations, exact matching source and notices.
+
 ### Ubuntu / Debian / Kali amd64 DEB preview
 
 **Folimeld 0.3.5**, published on November 13, 2026 (Japan time), is an amd64 DEB preview built on Ubuntu 24.04 and verified in dedicated Ubuntu 24.04.4, Debian 13.6, and Kali Rolling 2026.3 WSL2/WSLg environments. Existing 0.3.4 DEB/Snap and ARM64 downloads remain available. glibc 2.39 or newer is required, along with the official universe repository on Ubuntu.

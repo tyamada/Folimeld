@@ -1,0 +1,39 @@
+{
+  "all_used_vms_stopped": true,
+  "execution_storage": "internal Mac",
+  "original_external_store_preserved": "/Volumes/ChatGPT-Test/Folimeld-VM-storage",
+  "vm_or_iso_deletions": 0,
+  "restored_vms_have_new_changes": "Preserve these updated internal disks. Original archive hashes describe the pre-restoration snapshots, not these updated guests.",
+  "files": [
+    {
+      "path": "/Users/tyamada22/Documents/Codex/2026-11-10/macbook-air-13-inch-m5-folimeld/work/linux-arm64/reproducibility/c/disk.qcow2",
+      "bytes": 8615821312,
+      "sha256_after_shutdown": "1561f7d940bc72c1390cd7ec35abbeca1861d9d77bcc50efd8b4a020b05176d8"
+    },
+    {
+      "path": "/Users/tyamada22/Documents/Codex/2026-11-10/macbook-air-13-inch-m5-folimeld/work/linux-arm64/reproducibility/c/vars.fd",
+      "bytes": 67108864,
+      "sha256_after_shutdown": "80199ff024d440008c25ab7e1229c6f567bb63c68bb89095dafcaf15f714cb41"
+    },
+    {
+      "path": "/Users/tyamada22/Documents/Codex/2026-11-10/macbook-air-13-inch-m5-folimeld/work/linux-arm64/ubuntu/disk.qcow2",
+      "bytes": 9107800064,
+      "sha256_after_shutdown": "04f7fd23b260a1546a501d3414ee003f956ea2a06a2e7c7e919432d40f06f244"
+    },
+    {
+      "path": "/Users/tyamada22/Documents/Codex/2026-11-10/macbook-air-13-inch-m5-folimeld/work/linux-arm64/ubuntu/vars.fd",
+      "bytes": 67108864,
+      "sha256_after_shutdown": "69dd9beb04df2e9102fc185e80b1a4341a0fd7ada80ab24ee03a985fa27a999c"
+    },
+    {
+      "path": "/Users/tyamada22/Documents/Codex/2026-11-10/macbook-air-13-inch-m5-folimeld/work/linux-arm64/ubuntu-snap/disk.qcow2",
+      "bytes": 7581073408,
+      "sha256_after_shutdown": "7658223b86babe3687063992af90f1c5cdafa143457884590c91d250a42f4cce"
+    },
+    {
+      "path": "/Users/tyamada22/Documents/Codex/2026-11-10/macbook-air-13-inch-m5-folimeld/work/linux-arm64/ubuntu-snap/vars.fd",
+      "bytes": 67108864,
+      "sha256_after_shutdown": "86893da7659c09febfc31506f7950c560299815470addae5eef033cf7cc18417"
+    }
+  ]
+}

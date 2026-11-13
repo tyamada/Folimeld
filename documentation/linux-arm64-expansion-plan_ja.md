@@ -17,3 +17,26 @@ VM cとUbuntu受入VMはChatGPT-Testの照合済み保管庫から内蔵の元�
 ## DEB公開完了
 
 2026-11-13 JST、linux-deb-arm64-v0.3.4-fix1をprerelease/latest=falseで公開。専用ブランチrelease/linux-arm64-0.3.4-fix1とタグの参照先は0be2ec8。16添付を公開後に全件再ダウンロードし、サイズ・SHA-256一致を確認。[公開後照合JSON](linux-arm64-fix1-publication-result-2026-11-13.json)を参照。PyInstaller bootloaderも公式wheelの元ELFセクションと一致し、追加pydataとobjcopyによるセクション表の移動を区別した。[照合JSON](linux-arm64-fix1-bootloader-2026-11-13.json)。次順位のSnapは固有の検証・公開を別工程で扱う。
+
+DEBのX案内: https://x.com/tyamada22/status/2121043541908689225 （本文と公開表示を確認）。
+
+Snap追加検証: x5の画像変換・保存・終了は0。x6への同一パッケージ更新後、Documents/設定のハッシュ保持と保存PDFの再読込は成功。次の画像再変換中にapt-daily-upgrade.serviceによるシステムサービス/Xorg再起動が起き、XIO error/終了1となった。これは合格として集計せず、ログを保存して自動更新完了後に再試験する。Snapはこの段階では未公開。
+
+## ARM64候補の最終分類と次工程
+
+| 対象 | 分類 | 根拠・次工程 |
+|---|---|---|
+| Linux 0.3.3 / 0.3.4 ARM64 DEB・Snap | 既存公開済み・保持 | 既存タグ/添付/対応ソースを確認。今回の試験版で置換・削除しない |
+| 0.3.4+fix1 再現性修正版DEB | 公開済み | Ubuntu新規回帰、Debian同一DEBの保存受入、210ネイティブの対応ソース、全16公開後添付照合済み |
+| 0.3.4+fix1 再現性修正版strict Snap | 公開済み | 専用ブランチ56de426、固有X11/制限/画像変換/再導入、更新中断と再試験を別記。全16添付の公開後再ダウンロード照合済み |
+| crashfix1、初期fix1、再現性修正前の再ビルド候補 | 保管・公開候補から除外 | より後の再現可能候補に集約。候補・ログ・ソースの削除なし |
+| main 0.3.5 ARM64 DEB/Snap | 未ビルド・未検証 | amd64 0.3.5の公開をARM64の合格とはしない。次の実装優先候補は既存Ubuntu/Debian環境を再利用できるARM64 DEBの0.3.5同期 |
+| Fedora 44/45、AlmaLinux9、Leap16.1、Tumbleweed ARM64 | 未検証・未公開 | 梱包ヘルパーのaarch64許容を確認。ただしARM64での実ビルド・固有依存ソース監査・導入・GUI受入が必要。新RPM環境を作る場合は固定版Fedora44を先行候補とする |
+| Kali ARM64 | 未検証・未公開 | 共通DEBが動作すると推測して合格扱いにしない。ARM64の専用環境を別途用意する |
+| FreeBSD/NetBSD/OpenBSD ARM64 0.3.3 | 既存公開済み（BSDとして区別） | 専用ARM64タグとパッケージ・対応ソースあり。Linuxの合格件数へ混ぜない |
+
+VM運用: 今回は3台を内蔵に復元し、圧縮/展開後の照合後に起動。使用後はすべて正常停止。更新された内蔵VMは次回用に保持し、外付け保管庫は元スナップショットとして不変。VM/ISO削除0件。内蔵残量は終了確認時約109GiB。再度外付けに退避する場合は元保管物を上書きせず新しい版としてコピー・照合・復旧確認後に原本整理を判断する。
+
+## Snap公開完了
+
+linux-snap-arm64-v0.3.4-fix1をprerelease/latest=falseで公開し、全16添付の公開後再ダウンロード・サイズ・SHA-256を照合した。[照合JSON](linux-arm64-snap-fix1-publication-result-2026-11-13.json)。専用ブランチrelease/linux-arm64-snap-0.3.4-fix1とタグは56de426。DEB→Snapの順で各公開後照合を完了。既存latestはlinux-v0.3.4を保持。
