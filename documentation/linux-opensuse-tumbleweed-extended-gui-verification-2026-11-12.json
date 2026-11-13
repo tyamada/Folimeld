@@ -1,0 +1,84 @@
+{
+  "date_jst": "2026-11-12",
+  "originals_unchanged": true,
+  "original_hashes": {
+    "原本_日本語.pdf": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+    "暗号化.pdf": "48b63c2a0e9c3bf3f4e18d55d1104195310ac3dfa7986c04973f0f8319e70c0f",
+    "画像/画像01.png": "a2c58fbf87ae17ad25b1680400fd9a3d5e627ff599a47286378d0f0111103613"
+  },
+  "encrypted_saved": {
+    "sha256": "8d83008ffe4595bb3e13042dbd7fa2b5db7cb28830c04e83a4e19cbe474557f6",
+    "password_required": true,
+    "wrong_password_rejected": true,
+    "test_password_accepted": true,
+    "pages": 3,
+    "rotations": [
+      90,
+      0,
+      0
+    ],
+    "page_text_preserved": true,
+    "gui_reopen_observed": true
+  },
+  "image_pdf": {
+    "sha256": "977ecce838944b066ff0fe1f54a20a80d734bb218b471a63667b9c88ad81739e",
+    "pages": 1,
+    "images": 1,
+    "center_rgb": [
+      0,
+      0,
+      255
+    ]
+  },
+  "published": false,
+  "private_application_version": "0.3.3",
+  "rpm_revision": 2,
+  "environment": {
+    "os_release": "NAME=\"openSUSE Tumbleweed\"\n# VERSION=\"20261110\"\nID=\"opensuse-tumbleweed\"\nID_LIKE=\"opensuse suse\"\nVERSION_ID=\"20261110\"\nPRETTY_NAME=\"openSUSE Tumbleweed\"\nANSI_COLOR=\"0;32\"\n# CPE 2.3 format, boo#1217921\nCPE_NAME=\"cpe:2.3:o:opensuse:tumbleweed:20261110:*:*:*:*:*:*:*\"\n#CPE 2.2 format\n#CPE_NAME=\"cpe:/o:opensuse:tumbleweed:20261110\"\nBUG_REPORT_URL=\"https://bugzilla.opensuse.org\"\nSUPPORT_URL=\"https://bugs.opensuse.org\"\nHOME_URL=\"https://www.opensuse.org\"\nDOCUMENTATION_URL=\"https://en.opensuse.org/Portal:Tumbleweed\"\nLOGO=\"distributor-logo-Tumbleweed\"\n",
+    "installed_package": "folimeld-0.3.3-2.tw20261110.x86_64\n",
+    "binary_sha256": "d5395dec696d6a001633ec642da8a784ac0220ab02ac1a8973392fdde0a20d43",
+    "rpm_verify": "",
+    "additional_packages": "ibus-1.5.35~rc1-1.1.x86_64\nibus-mozc-3.34.6239-1.1.x86_64\nlibdbus-1-3-1.14.10-5.7.x86_64\ndbus-1-daemon-1.14.10-5.7.x86_64\n",
+    "ime_engine": "mozc-jp",
+    "ime_environment": {
+      "QT_QPA_PLATFORM": "xcb",
+      "QT_IM_MODULE": "ibus",
+      "GTK_IM_MODULE": "ibus",
+      "XMODIFIERS": "@im=ibus"
+    },
+    "logs": {
+      "app.log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+      "ime-app.log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+      "ime-engine.log": "",
+      "ime-session.log": "dbus-daemon[547]: [session uid=1000 pid=547] Activating service name='org.freedesktop.portal.IBus' requested by ':1.0' (uid=1000 pid=550 comm=\"ibus-daemon --daemonize --xim --panel=disable\" label=\"kernel\")\nNot connected to the ibus bus\ndbus-daemon[547]: [session uid=1000 pid=547] Activated service 'org.freedesktop.portal.IBus' failed: Process org.freedesktop.portal.IBus exited with status 1\n"
+    },
+    "verification_gui_terminated": true,
+    "zypper_verify": {
+      "exit_code": 0,
+      "stdout": "Refreshing service 'openSUSE'.\nLoading repository data...\nReading installed packages...\nDependencies of all installed packages are satisfied.\n",
+      "stderr": ""
+    }
+  },
+  "ime_observed": {
+    "roman_input": "nihongo",
+    "hiragana": "にほんご",
+    "kanji": "日本語",
+    "committed": true,
+    "field": "Qt file-open dialog filename; cancelled after test"
+  },
+  "limitations": [
+    "WSLg X11 only; no complete Linux desktop session",
+    "GUI/IME tools added after minimal-dependency tests; no new clean-install/removal cycle",
+    "Single synthetic image and password-protected PDF",
+    "Tumbleweed snapshot20261110 x86_64 only; no ARM64 verification"
+  ],
+  "screenshots": {
+    "01-encrypted-loaded.png": "a7a82bec3d3cf17661dd5977a7710ffd32a0d3c133c3e539eb60b2ddf23689ca",
+    "02-encrypted-saved.png": "8c8ace068b7991cfe390a5073ab421c431278b4e0fe9467be06383e86ef0978e",
+    "03-encrypted-reopened.png": "c0d30ae4220e35e0a42220b9ce4d7bb53b296281d627d260d62bd020c143a7ef",
+    "04-image-imported.png": "2385095feb1639e63f64854a252e1420de5e80ea6461826683b539a2ccc1b7ff",
+    "05-ime-hiragana.png": "ec558d858bb10b92317bb350d59be4ecdf5c67b447375a96f781c241d8370104",
+    "06-ime-kanji.png": "54719d9b3beee28281c8bcacc2f1c1973a0ad41a359c96705f29bf78a7c4ee8c",
+    "07-ime-committed.png": "1a9d147a1044c4a00df6a200854f074f31162155c7fad370b4e081c1ce865d04"
+  }
+}

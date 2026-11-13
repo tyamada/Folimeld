@@ -1,0 +1,56 @@
+{
+  "original_unchanged": true,
+  "original_sha256": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+  "saved_sha256": "1787b4b474f16e980d4ff2a8dfa1b8e1dbee09672babccb82046276d61b211ff",
+  "pages": 3,
+  "original_page_order": [
+    2,
+    1,
+    3
+  ],
+  "rotations": [
+    0,
+    90,
+    0
+  ],
+  "page_text_preserved": true,
+  "gui_reopen_confirmed": true,
+  "app_log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n",
+  "qsettings": "[General]\nlanguage=ja\nlast_open_directory=/home/folimeld-test/verification/gui-20261112/fixtures\n",
+  "screenshots": {
+    "01-loaded.png": "27e7ab6838036c38506702231da2d6be7bc64fbb5ebe8a0c7f8933bf5787f9fb",
+    "02-rotated.png": "4394813d1c6239dc0ed710f31cf2d57991bb3f465b86b38351af7eeb6f1a122f",
+    "03-undo.png": "1d3de93067ec4c4bc549402107c8b3f23e068ecc4bf1da261c01a71a6981d038",
+    "04-redo.png": "ee1542ac9e695ab27882a10132a326894551750400bf0f988ab44548fe4409b2",
+    "05-moved.png": "b4cc9a9f0fd9ef27fbcb358b40a998c73075a96e1416c36f1eea58f4f23e90a8",
+    "06-blank-inserted.png": "09a50317572b93351d2441317870eda754910dcd11b7420669d6474d2070d482",
+    "07-blank-deleted.png": "d35e4dc10844cfffc01885641f8160ee8d668d0d4ff22ed120fb8c97c6beb93e",
+    "08-saved.png": "7fc1c62b6ec0e2857653888ac92ac875a2bd394e22e6f787376f073054496d8d",
+    "09-reopened.png": "c2636508b874271e87e859f07ec487033c3e0b47dcadceec82755708383b3825"
+  },
+  "verification_date_jst": "2026-11-12",
+  "published": false,
+  "package": "folimeld-0.3.3-2.tw20261110.x86_64",
+  "environment": {
+    "binary_sha256": "d5395dec696d6a001633ec642da8a784ac0220ab02ac1a8973392fdde0a20d43",
+    "verification_gui_terminated": true,
+    "os_release": "NAME=\"openSUSE Tumbleweed\"\n# VERSION=\"20261110\"\nID=\"opensuse-tumbleweed\"\nID_LIKE=\"opensuse suse\"\nVERSION_ID=\"20261110\"\nPRETTY_NAME=\"openSUSE Tumbleweed\"\nANSI_COLOR=\"0;32\"\n# CPE 2.3 format, boo#1217921\nCPE_NAME=\"cpe:2.3:o:opensuse:tumbleweed:20261110:*:*:*:*:*:*:*\"\n#CPE 2.2 format\n#CPE_NAME=\"cpe:/o:opensuse:tumbleweed:20261110\"\nBUG_REPORT_URL=\"https://bugzilla.opensuse.org\"\nSUPPORT_URL=\"https://bugs.opensuse.org\"\nHOME_URL=\"https://www.opensuse.org\"\nDOCUMENTATION_URL=\"https://en.opensuse.org/Portal:Tumbleweed\"\nLOGO=\"distributor-logo-Tumbleweed\"\n",
+    "gui_tools": "folimeld-0.3.3-2.tw20261110.x86_64\npython314-3.14.8-2.1.x86_64\nxdotool-4.20260303.1-1.1.x86_64\nxwininfo-1.1.7-1.2.x86_64\nImageMagick-7.1.2.35-2.1.x86_64\ngoogle-noto-sans-cjk-fonts-2.004-7.6.noarch\ntar-1.35-10.1.x86_64\n"
+  },
+  "method": "Normal installed RPM; WSLg X11; dedicated XDG settings; tools added after minimal-dependency test",
+  "observed": [
+    "Japanese UI/PDF",
+    "immediate rotation preview",
+    "undo",
+    "redo",
+    "move page",
+    "insert/delete blank",
+    "save as separate PDF",
+    "GUI reopen"
+  ],
+  "limitations": [
+    "Tumbleweed snapshot20261110 x86_64 only",
+    "IME, image import, encrypted PDF, MIME, non-ASCII save and update remain",
+    "Full desktop and ARM64 untested"
+  ]
+}
