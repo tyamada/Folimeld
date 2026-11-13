@@ -1,0 +1,108 @@
+{
+  "date_jst": "2026-11-13",
+  "package": "folimeld-0.3.5-1.lp161.aarch64.rpm",
+  "size": 97813150,
+  "sha256": "2007446be6e0de760af5904bab3264450065b55d29c5471dc838cb8aac354679",
+  "executable_sha256": "5ebd7a5b21e7eb1a4017fce33b20ed7eb1bdd88803bb83adabe4b2eadc38a79e",
+  "source": {
+    "git_commit": "fa0f0f5d5e04d4a88fe3dde827fbf1b9d843a207",
+    "working_tree_changed": false,
+    "files_verified": 999,
+    "source_sha256": "000d1f69eeb3c081cbed53b73422b76c8cd7284b55c7f1f81b7137efaa7bd6f8",
+    "result": "Git, ZIP and embedded manifest match"
+  },
+  "reproducibility": "Two clean output roots on one Leap16.1 ARM64 VM produce byte-identical ELF. RPM header build time varies; not an independent-host reproduction.",
+  "tests": {
+    "platform": "Leap16.1 aarch64 Python3.13.13",
+    "passed": 410,
+    "skipped": 9,
+    "subtests_passed": 69,
+    "ruff": "pass"
+  },
+  "acceptance": {
+    "os": "openSUSE Leap16.1 aarch64 Cloud Build3.16",
+    "kernel": "6.12.0-160100.9-default",
+    "glibc": "2.40",
+    "environment": "QEMU HVF, normal UID1000, Xorg21.1.21/IceWM3.6.0; final builds and GUI tests on internal storage",
+    "selinux": "Enforcing (1), normal unconfined user domain; no per-app Snap-style confinement",
+    "fresh_install": true,
+    "full_removal_same_candidate_reinstall": true,
+    "documents_settings_hashes_preserved": true,
+    "operations": [
+      "rotate and thumbnail refresh",
+      "undo/redo",
+      "page move",
+      "blank insert/delete",
+      "Save As",
+      "Japanese-path reopen (shell-created copy, not IME)",
+      "image folder conversion/save",
+      "clean exit",
+      "saved image PDF reopen after reinstall"
+    ],
+    "gui_exit_statuses": [
+      0,
+      0,
+      0
+    ],
+    "no_folimeld_processes_remain": true,
+    "pdf_validation": {
+      "page_order": [
+        2,
+        1,
+        3
+      ],
+      "page_rotations": [
+        0,
+        90,
+        0
+      ],
+      "edited_pdf_sha256": "34aa33eff7c6f178071f64714921414de69a87c79b0c36e3c3ecb575d90cb0e9",
+      "japanese_path_copy_byte_identical": true,
+      "image_pdf_sha256": "32386b31e6d07da8f3d19aaa02e289a55f7876fdc237a626c98b000b619b1e0c",
+      "image_pages": [
+        {
+          "page": 1,
+          "width": 420,
+          "height": 595,
+          "decoded_pixels_match_input_png": true
+        },
+        {
+          "page": 2,
+          "width": 420,
+          "height": 595,
+          "decoded_pixels_match_input_png": true
+        }
+      ],
+      "all_original_fixtures_unchanged": true,
+      "gui_exit_statuses": [
+        0,
+        0,
+        0
+      ],
+      "scope": "Fresh Leap16.1 ARM64 execution; synthetic fixtures reused, no prior acceptance reused. Japanese-path copy made by shell, not IME."
+    }
+  },
+  "minimum_root": {
+    "official_Leap_dependencies_only": true,
+    "no_recommends": true,
+    "regular_user": 1000,
+    "offscreen_alive_seconds": 15,
+    "timeout_exit": 124,
+    "scope": "Startup liveness only, distinct from GUI exit0."
+  },
+  "native": {
+    "all_elf_aarch64": 202,
+    "official_wheel_members": 105,
+    "exact_official_openSUSE_RPM_members": 95,
+    "binary_rpms": 47,
+    "signed_source_rpms": 32,
+    "source_built_brotli_members": 2,
+    "brotli_version": "1.1.1",
+    "brotli_source_files_unmodified": true,
+    "brotli_upstream_tests": 14,
+    "bootloader_original_sections_match_official_wheel": true
+  },
+  "unsigned_local_RPM": true,
+  "amd64_acceptance_used": false,
+  "limitations": "KNOWN-LIMITATIONS.txt"
+}
