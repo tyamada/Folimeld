@@ -55,6 +55,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | Fedora 44（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5) |
 | Fedora 45（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-arm64-v0.3.5) |
 | Fedora 45（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) |
+| AlmaLinux 9.8（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5) |
 | AlmaLinux 9.8（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5) |
 | FreeBSD 15.1 | amd64 | pkg / 0.3.3_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3) |
 | FreeBSD 15.1 | aarch64 | pkg / 0.3.3_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.3_1) |
@@ -263,6 +264,14 @@ folimeld
 ```
 
 PDF編集・日本語名での別名保存と再読込、暗号化PDF、画像からのPDF作成、日本語入力、GIO起動、更新・削除再導入を確認しています。新規の最小依存installrootではoffscreen起動と整合性を確認しました。通常デスクトップ、Fedora 44、ARM64、公開Ubuntu／Debian 0.3.4からの移行は未検証です。最小依存試験は独立WSLのブートや日本語GUI/IMEの確認を意味しません。詳しい確認範囲と来歴の制約はRelease本文と[KNOWN-LIMITATIONS.txt](https://github.com/tyamada/Folimeld/releases/download/fedora45-amd64-v0.3.5/KNOWN-LIMITATIONS.txt)を参照してください。既存配布物とlatestは変更していません。
+
+### AlmaLinux 9 ARM64試験版
+
+[**AlmaLinux 9.8 ARM64 RPM 0.3.5-2**](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5)を公開しました。一般ユーザーXorg/Mutter・SELinux Enforcingで新規導入、主要PDF編集・保存・日本語パス再読込・画像変換、完全削除と同じ候補の再導入・文書/設定保持を確認。ARM64/Python3.12.15で410テスト成功、994ソース入力・163 AArch64実体・39署名付き対応ソースRPM・全16添付の公開後再取得を照合済みです。glibc 2.34上でQt/PySide6.11.2をソースビルドし、アプリで使う5モジュールを含みます。Qt標準翻訳カタログは含まず、アプリ独自翻訳は含みます。同じQt SDKを使った2ビルド先でELF一致、RPM時刻は異なります。未署名GitHub RPM、glibc 2.34以上。受入は9.8のみで、実機ARM・GNOME/Wayland・IME・旧版更新等は未検証。[検証・制約](documentation/almalinux9-arm64-035-validation_ja.md)。
+
+```bash
+sudo dnf install ./folimeld-0.3.5-2.alma9_8.aarch64.rpm
+```
 
 ### AlmaLinux 9 amd64試験版
 

@@ -87,3 +87,11 @@ Fedora44公開・全添付照合・X案内完了後、Fedora45専用ARM64ビル�
 全981ソース入力、同梱200 AArch64実体（公式wheel105/Fedora RPM95）を確認。38署名付きbinary RPMに対応する34exact signed SRPMを添付。別ビルド先ELF一致（RPMヘッダー時刻は異なる）、409テスト成功、3GUI正常終了、完全削除再導入と文書/設定保持、最小依存起動を確認。SELinux維持。実機/Wayland/IME/旧版更新などは未検証。全16公開添付の再ダウンロード照合とX案内を完了してから次へ進む。
 
 専用VM2台を内蔵で通常停止し、QCOW2 overlay・backing image・UEFI vars・seedを保持。外付けChatGPT-Test上での起動0件、VM/ISOの削除・新規外付け退避0件。既存退避計画の削除前コピー/復旧確認条件を変更しない。従来の外付けアーカイブと既存公開物を保持。
+
+## AlmaLinux9 ARM64 RPM0.3.5への展開（2026-11-13）
+
+Fedora45の公開・全添付照合・X案内完了後、公式AlmaLinux9.8 ARM64 Cloudイメージの署名・SHA256を確認し、内蔵Macの専用ビルド/実行VMで検証。[公開・検証記録](almalinux9-arm64-035-validation_ja.md)。Alma9 ARM64を公開済みへ変更し、openSUSE/Kali ARM64は未検証のまま。amd64/Ubuntu/Fedoraの結果をAlma合格には数えない。
+
+正確な本体ソース44dee9d0543f5003160284f21aa458acbe13faa9（clean）、タグalmalinux9-arm64-v0.3.5は7e9870f（検証文書追加）。glibc2.34上でQtbase/qtsvg/PySide6.11.2をソースビルド。標準Qt翻訳カタログなし、アプリ翻訳あり、5モジュール限定と任意梱包ガードパッチを記録。994入力、163AArch64実体（公式wheel25/自前Qt41/AlmaRPM由来97）、39exact signed SRPMを確認。RPATH変換は元ファイルへ再現して全バイト一致。410tests/9skips/69subtests、3GUI終了0、完全削除再導入、文書設定保持、最小依存起動。候補1のOpenGL不足をrevision2で修正し新しいrootで合格。同じQt SDKの2ビルド先でELF一致、RPM時刻は異なる。全16公開添付再取得とX案内まで完了してから次へ進む。
+
+VMは内蔵のみで実行。使用済みVMはユーザーの追加指示によりChatGPT-Testへ退避し、コピー/SHA256/内蔵復元/ディスク整合性確認後に内蔵側を整理する。外付け起動は禁止。公式イメージは長期保管HDDまたはNASへの照合保存を別途必要とし、進行状況は作業出力の保管記録を正とする。過去の「退避0件」は当時の記録として保持する。

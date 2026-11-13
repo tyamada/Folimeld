@@ -55,6 +55,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | Fedora 44 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5) |
 | Fedora 45 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-arm64-v0.3.5) |
 | Fedora 45 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) |
+| AlmaLinux 9.8 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5) |
 | AlmaLinux 9.8 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5) |
 | FreeBSD 15.1 | amd64 | pkg / 0.3.3_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3) |
 | FreeBSD 15.1 | aarch64 | pkg / 0.3.3_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.3_1) |
@@ -263,6 +264,14 @@ folimeld
 ```
 
 Verification covered PDF editing, saving under a Japanese filename and reopening, password-protected PDFs, PDF creation from images, Japanese input, GIO launch, updates, and removal/reinstallation. A fresh minimal-dependency installroot passed offscreen startup and consistency checks. Conventional desktops, Fedora 44, ARM64, and migration from public Ubuntu/Debian 0.3.4 packages remain untested. The minimal-dependency test does not verify independent WSL boot or Japanese GUI/IME operation. See the Release body and [KNOWN-LIMITATIONS.txt](https://github.com/tyamada/Folimeld/releases/download/fedora45-amd64-v0.3.5/KNOWN-LIMITATIONS.txt) for the tested scope and provenance limits. Existing downloads and the latest release remain unchanged.
+
+### AlmaLinux 9 ARM64 preview
+
+[**AlmaLinux 9.8 ARM64 RPM 0.3.5-2**](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5) is available. Fresh regular-user Xorg/Mutter checks with SELinux Enforcing cover installation, major PDF editing/save, Japanese-path reopen, image conversion, full removal/same-candidate reinstallation and document/settings preservation. ARM64/Python3.12.15 passed 410 tests. Matching 994 source inputs,163 AArch64 native members,39 signed source RPMs and public redownloads of all16 attachments were verified. Qt/PySide6.11.2 was source-built on glibc2.34 with the5 app modules; Qt standard translation catalogs are absent, while app translations are included. Two app output roots sharing one Qt SDK produce identical ELF; RPM times differ. Unsigned GitHub RPM, glibc>=2.34. Accepted on9.8 only; physical ARM/full GNOME/Wayland/IME/cross-version updates remain untested. [Verification and limitations (Japanese)](documentation/almalinux9-arm64-035-validation_ja.md).
+
+```bash
+sudo dnf install ./folimeld-0.3.5-2.alma9_8.aarch64.rpm
+```
 
 ### AlmaLinux 9 amd64 preview
 

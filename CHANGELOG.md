@@ -46,6 +46,11 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.5 AlmaLinux 9 ARM64 preview - 2026-11-13
+
+- Publish [AlmaLinux9.8 ARM64 RPM0.3.5-2](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5). Source-build Qt/PySide6.11.2 on glibc2.34 with required modules only; omit Qt standard translation catalogs, include app translations. Revision2 fixes the minimum-root OpenGL dependency.
+- Verify editing/save, image PDF, full removal/reinstall with document/settings preservation,3normal GUI exits and minimum dependency startup on an ARM64 execution VM.410passed/9skipped/69subtests;994inputs,163native members,39signed SRPMs and public redownloads of all16attachments matched. Two app roots sharing one Qt SDK yield identical ELF; RPM times differ. Unsigned preview accepted on9.8 only; physical ARM/Wayland/IME/cross-version updates untested. Preserve prior releases/latest.
+
 ## 0.3.5 Fedora 45 ARM64 preview - 2026-11-13
 
 - Publish [Fedora45 ARM64 RPM 0.3.5-1](https://github.com/tyamada/Folimeld/releases/tag/fedora45-arm64-v0.3.5). Fresh ARM64 checks cover installation, editing/save, image PDF, full removal/reinstall with document/settings preservation and minimum-dependency startup. SELinux remained Enforcing; all 3 GUI runs exited normally.

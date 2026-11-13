@@ -46,6 +46,11 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.5 AlmaLinux 9 ARM64試験版 - 2026-11-13
+
+- [AlmaLinux9.8 ARM64 RPM0.3.5-2](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5)を公開。glibc2.34上でQt/PySide6.11.2を必要モジュールに限定してソースビルド。Qt標準翻訳カタログは含まず、アプリ独自翻訳は同梱。revision2で最小環境のOpenGL依存不足を修正。
+- ARM64実行VMで編集保存・画像PDF・完全削除再導入と文書/設定保持・GUI3回正常終了、最小依存起動を検証。410 passed/9 skipped/69 subtests、994入力・163実体・39署名付きSRPM・全16公開添付の再取得を照合。同じQt SDKの2ビルド先でELF一致、RPM時刻は異なる。未署名試験配布、受入は9.8のみ。実機/Wayland/IME/旧版更新等は未検証。既存公開物/latest保持。
+
 ## 0.3.5 Fedora 45 ARM64試験版 - 2026-11-13
 
 - [Fedora45 ARM64 RPM 0.3.5-1](https://github.com/tyamada/Folimeld/releases/tag/fedora45-arm64-v0.3.5)を公開。ARM64固有の新規導入・編集保存・画像PDF・完全削除再導入と文書/設定保持、最小依存構成起動を確認。SELinux Enforcingを維持し、GUI3回正常終了。

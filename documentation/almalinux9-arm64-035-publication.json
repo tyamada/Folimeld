@@ -1,0 +1,94 @@
+{
+  "verified_utc": "2026-11-13T05:40:25.011904+00:00",
+  "release_url": "https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5",
+  "tag": "almalinux9-arm64-v0.3.5",
+  "tag_commit": "7e9870f32f64bcfd72e470a8c929df20fd7a3c34",
+  "draft": false,
+  "prerelease": true,
+  "latest_unchanged": "linux-v0.3.4",
+  "all_prior_public_assets_preserved": true,
+  "downloaded_after_publication": true,
+  "assets": [
+    {
+      "name": "BUILD.txt",
+      "size": 3813,
+      "sha256": "f2ed860414d87c504baa1ce9210fdb654492aafffd84aa3712a51bd0a4d1f37b"
+    },
+    {
+      "name": "Folimeld-0.3.4-Pillow-wheel-source-and-notice-supplement.zip",
+      "size": 5853009,
+      "sha256": "a5811c2c3dfb45344b22f0a1bb19b305034c045f4912e6f6a91dcfa5591790d0"
+    },
+    {
+      "name": "Folimeld-0.3.4-third-party-source-set.tar",
+      "size": 1456230400,
+      "sha256": "306c4c9525c5240c5564472b762b05a9c81aff7df362a117dc78049e1c748b7e"
+    },
+    {
+      "name": "Folimeld-almalinux9-arm64-build-recipe.tar.gz",
+      "size": 37370,
+      "sha256": "8e500f7530a3058d8614223e8349b50f307fdc9a6628b39028e7a9ed15cb8336"
+    },
+    {
+      "name": "Folimeld-almalinux9-arm64-source-supplement.tar",
+      "size": 294051840,
+      "sha256": "6c6ce999e8c74a0adf42c225751135410898ec6e3f96dc8bb9eb65cad18aed8d"
+    },
+    {
+      "name": "Folimeld-source-50fcf81a945c9d9bf28e0ad7e4cd7d5968e81307c2ba5fe29a6706a17d542c3e.json",
+      "size": 131192,
+      "sha256": "dc2988d7dab299539d8aec589bee3d945b5a61198e1d7aabaeb3dfa08da73ed0"
+    },
+    {
+      "name": "Folimeld-source-50fcf81a945c9d9bf28e0ad7e4cd7d5968e81307c2ba5fe29a6706a17d542c3e.zip",
+      "size": 26106306,
+      "sha256": "50fcf81a945c9d9bf28e0ad7e4cd7d5968e81307c2ba5fe29a6706a17d542c3e"
+    },
+    {
+      "name": "KNOWN-LIMITATIONS.txt",
+      "size": 3402,
+      "sha256": "0e033338f0764645ac8b4d9112aad9b29b19b50ca29fe5c9f53a0a4c8ee4ffef"
+    },
+    {
+      "name": "RELEASE-NOTES.txt",
+      "size": 4856,
+      "sha256": "848eb1f0cb870d77d72291f9ec286fe24c67e33feae4da44e991056b6a7f85a5"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 1698,
+      "sha256": "bd2a523701f4b21a9105550838baff10cf73e7b6eb8f37270b68251a88fb8cb3"
+    },
+    {
+      "name": "folimeld-0.3.5-2.alma9_8.aarch64.rpm",
+      "size": 84706160,
+      "sha256": "ac05b323d271bccbd59c3b461841c576077bed372ca4ae510b8d837771bace14"
+    },
+    {
+      "name": "folimeld-0.3.5-2.alma9_8.aarch64.rpm-ac05b323d271bccbd59c3b461841c576077bed372ca4ae510b8d837771bace14.json",
+      "size": 787,
+      "sha256": "56fac4216fb6366cc65d2c86670f4dd9e267497f57dc2dd318386bd7aee9a4ca"
+    },
+    {
+      "name": "native-dependency-provenance.json",
+      "size": 352710,
+      "sha256": "cf504bad4e33a3f7c792bf6e481125c20da267b30d9bf43bb56372e221948552"
+    },
+    {
+      "name": "third-party-notices.tar.gz",
+      "size": 919274,
+      "sha256": "ee0ae90bef8e0d5b904f064a15305b79311cdc5299193ec1ba5005f779720780"
+    },
+    {
+      "name": "verification-almalinux9-arm64-035.json",
+      "size": 3869,
+      "sha256": "828f75b6d33caa5aee1f8d2673093cd5686de0d84482c861f124c1136794f870"
+    },
+    {
+      "name": "verification-records-almalinux9-arm64-035.zip",
+      "size": 691331,
+      "sha256": "2657c92a626922228b32d7c106093e1f32ee1b28e7b1a1658c8302418ec2cb6d"
+    }
+  ],
+  "result": "all sizes and SHA-256 match"
+}
