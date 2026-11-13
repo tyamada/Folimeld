@@ -1,0 +1,30 @@
+{
+  "date_jst": "2026-11-13",
+  "published": false,
+  "checks": [
+    {
+      "url": "https://api.github.com/repos/tyamada/Folimeld/releases/latest",
+      "data": {
+        "tag": "linux-v0.3.4",
+        "url": "https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4",
+        "prerelease": false
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/tyamada/Folimeld/branches/main",
+      "data": {
+        "name": "main",
+        "sha": "ea3f5f13d5c57e70e1d7a912c5eca9361ca0b272"
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/tyamada/Folimeld/git/matching-refs/tags/fedora44-amd64-v0.3.5",
+      "data": []
+    },
+    {
+      "url": "https://api.github.com/repos/tyamada/Folimeld/git/matching-refs/heads/release/fedora44-amd64-0.3.5",
+      "data": []
+    }
+  ],
+  "scope": "Read-only public GitHub preflight; recheck authenticated draft/release/tag/branch conflicts immediately before authorized publication"
+}
