@@ -1,0 +1,25 @@
+{
+  "date_jst": "2026-11-13",
+  "package": "folimeld_0.3.4+fix1_arm64.snap",
+  "bytes": 105000960,
+  "sha256": "b1df00de5554b65757ab643a08ad191dd04532fb96d4d548ff9e9d8b15844b53",
+  "executable_sha256": "ec556302b1ebd79aa1a158ee8a7ae0b7722679ea9996a3612dc9c6960bfec99c",
+  "source_sha256": "f7f69ff38f55294d5cc682a98d319a5e92a8fc1f1a0f951905c60d0f49dad522",
+  "rebuild_byte_identical": true,
+  "confinement": "strict",
+  "apparmor": "snap.folimeld.folimeld (enforce)",
+  "seccomp": 2,
+  "seccomp_filters": 2,
+  "successful_exit_statuses": [
+    0,
+    0
+  ],
+  "interrupted_exit_status": 1,
+  "interruption": "apt-daily-upgrade restarted systemd services and Xorg; rerun after updates",
+  "same_version_reinstall": "x5 -> x6",
+  "files_preserved": true,
+  "native_executable_members": 210,
+  "outer_native_physical_files": 11,
+  "outer_native_paths_with_symlinks": 22,
+  "amd64_results_used": false
+}
