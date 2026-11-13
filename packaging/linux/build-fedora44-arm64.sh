@@ -9,6 +9,7 @@ cd "$root"
 : "${FOLIMELD_WHEELHOUSE:?Set an exact checksum-verified wheel directory}"
 [[ $FOLIMELD_BUILD_ROOT == /* && ! -e $FOLIMELD_BUILD_ROOT ]]
 [[ $(python3 -c 'from folimeld import __version__; print(__version__)') == 0.3.5 ]]
+[[ -z $(git status --porcelain) ]]
 mkdir -p "$FOLIMELD_BUILD_ROOT"
 python3 -m venv "$FOLIMELD_BUILD_ROOT/venv"
 py="$FOLIMELD_BUILD_ROOT/venv/bin/python"
@@ -29,4 +30,5 @@ trap 'rm -f dist/folimeld' EXIT
 FOLIMELD_LINUX_OUTPUT="$FOLIMELD_BUILD_ROOT/packages" FOLIMELD_RPM_REVISION=1 "$py" tools/package_linux_rpm.py
 "$FOLIMELD_BUILD_ROOT/venv/bin/pyi-archive_viewer" -r -b "$FOLIMELD_BUILD_ROOT/dist/folimeld" > "$FOLIMELD_BUILD_ROOT/archive.txt"
 ! grep -Ei 'virtualkeyboard|qtcore_probe_runtime' "$FOLIMELD_BUILD_ROOT/archive.txt"
+git diff --exit-code
 sha256sum "$FOLIMELD_BUILD_ROOT/packages/folimeld-0.3.5-1.fc44.aarch64.rpm" "$FOLIMELD_BUILD_ROOT/dist/folimeld"
