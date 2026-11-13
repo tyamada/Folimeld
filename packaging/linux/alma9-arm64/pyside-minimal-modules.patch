@@ -1,0 +1,22 @@
+--- a/build_scripts/platforms/linux.py
++++ b/build_scripts/platforms/linux.py
+@@ -17,8 +17,8 @@
+ 
+     constrain_modules = None
+     copy_plugins = True
+-    copy_qml = True
+-    copy_translations = True
++    copy_qml = "Qml" in built_modules
++    copy_translations = Path(_vars["qt_translations_dir"]).is_dir()
+     copy_qt_conf = True
+ 
+     log.info("Copying files...")
+@@ -96,7 +96,7 @@
+                 _filter=["*.so"],
+                 recursive=True,
+                 _vars=_vars)
+-        if not is_pypy and not is_android:
++        if not is_pypy and not is_android and "Designer" in built_modules:
+             copydir("{install_dir}/plugins/designer",
+                     plugins_target / "designer",
+                     _filter=["*.so"],

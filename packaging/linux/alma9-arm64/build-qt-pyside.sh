@@ -28,6 +28,7 @@ cd "$b/dependency-build/qtsvg"
 cmake --build . --parallel 4
 cmake --install .
 cd "$b/dependency-source/pyside-setup-everywhere-src-6.11.2"
+patch -p1 --forward --batch < "$(dirname "$(readlink -f "$0")")/pyside-minimal-modules.patch"
 python -m pip install --only-binary=:all: numpy==2.4.6
 export LLVM_INSTALL_DIR=/usr
 python setup.py bdist_wheel --qtpaths="$b/qt6.11.2/bin/qtpaths6" --ignore-git --parallel=3 --module-subset=Core,Gui,Widgets,PrintSupport,Svg --standalone --limited-api=yes --no-qt-tools
