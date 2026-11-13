@@ -1,0 +1,133 @@
+{
+  "date_jst": "2026-11-13",
+  "package": "folimeld_0.3.5_arm64.deb",
+  "package_sha256": "8be1d43bc227c9e7a38c346357670025925dcc6a6cd30d5b1f2155a59b158e18",
+  "source": {
+    "git_commit": "7890a67ef893799ff614646646733b376dd43613",
+    "working_tree_changed": false,
+    "files_verified_against_git_zip_and_manifest": 961,
+    "source_archive_sha256": "b3bd9a9b25703c1573b34255d4f0ed514c6fa6b004a33dc203ba3e5458642a4b",
+    "result": "pass"
+  },
+  "native_count": 210,
+  "native_architecture": "AArch64",
+  "native_all_exactly_match_prior_mapped_arm64_fix1": true,
+  "rebuild": "Two separate clean build roots on the same Ubuntu ARM64 VM; final DEB bytes identical. Not two independent VM hosts.",
+  "tests": {
+    "passed": 409,
+    "skipped": 9,
+    "subtests_passed": 67,
+    "ruff": "pass",
+    "platform": "Ubuntu 24.04 ARM64"
+  },
+  "acceptance": {
+    "ubuntu": "Ubuntu 24.04.5 ARM64",
+    "debian": "Debian 13.7 ARM64",
+    "mode": "regular user Xorg/Openbox on QEMU HVF, internal Mac storage",
+    "operations": [
+      "rotate thumbnail",
+      "undo",
+      "redo",
+      "move page",
+      "insert blank",
+      "delete blank",
+      "save as",
+      "Japanese path reopen (shell-created copy, not IME entry)",
+      "image folder to PDF",
+      "save image PDF",
+      "clean exit",
+      "remove without purge",
+      "reinstall",
+      "reopen saved image PDF",
+      "clean exit after reinstall"
+    ],
+    "gui_exit_statuses": {
+      "ubuntu": [
+        0,
+        0,
+        0
+      ],
+      "debian": [
+        0,
+        0,
+        0
+      ]
+    },
+    "existing_document_configuration_hashes_preserved": true,
+    "fixtures_unchanged": true,
+    "no_remaining_folimeld_processes": true,
+    "pdf_validation": {
+      "ubuntu": {
+        "edited_order": [
+          2,
+          1,
+          3
+        ],
+        "rotations": [
+          0,
+          90,
+          0
+        ],
+        "image_pages": [
+          {
+            "page": 1,
+            "width": 420,
+            "height": 595,
+            "decoded_pixels_identical": true
+          },
+          {
+            "page": 2,
+            "width": 420,
+            "height": 595,
+            "decoded_pixels_identical": true
+          }
+        ],
+        "pdf_sha256": {
+          "ubuntu-image.pdf": "5f6f4594e329fcfaf80badb2c0e21e9695f82e8eefad4ed540ad4c1f6ace0a19",
+          "ubuntu-edited.pdf": "925de2da87515081259725c279be2d53397f223b145f81c112ef204e31467d83"
+        }
+      },
+      "debian": {
+        "edited_order": [
+          2,
+          1,
+          3
+        ],
+        "rotations": [
+          0,
+          90,
+          0
+        ],
+        "image_pages": [
+          {
+            "page": 1,
+            "width": 420,
+            "height": 595,
+            "decoded_pixels_identical": true
+          },
+          {
+            "page": 2,
+            "width": 420,
+            "height": 595,
+            "decoded_pixels_identical": true
+          }
+        ],
+        "pdf_sha256": {
+          "debian-image.pdf": "c01d8c3d85f65e3a219acff413d807a7be9600006541cd725ecd43fbd313d7a6",
+          "debian-edited.pdf": "90a1fda94f2bfe18733e11be5120f20aa2153957ced90bbeefa6d16fbadff580"
+        }
+      }
+    }
+  },
+  "minimal_root": {
+    "release": "Ubuntu noble ARM64 minbase + declared runtime dependencies, no recommends",
+    "developer_python_packages": false,
+    "uid": 1000,
+    "display": "offscreen",
+    "timeout_exit": 124,
+    "meaning": "Application alive until intentional 15-second timeout; not normal GUI shutdown",
+    "dpkg_audit": "pass"
+  },
+  "amd64_results_used": false,
+  "limitations": "KNOWN-LIMITATIONS.txt"
+}
