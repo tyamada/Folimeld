@@ -17,3 +17,5 @@ Fedora45の標準Python3.15は固定PySide6 6.11.2の対応範囲外のため、
 共通運用ルール（/Users/tyamada22/.codex/AGENTS.md、2026-11-13追加）を確認。公式大容量イメージは削除していない。将来許可された削除を行う場合もHD-LS2.0TU2DまたはNAS「Codexバックアップ」の実体と容量を確認し、先にコピー・サイズ/SHA256照合と保管記録を作る。作業VM・ユーザーデータを再取得可能な配布イメージと同一視しない。
 
 公開後に全16添付を再ダウンロードし、全サイズ/SHA256一致を確認。既存全公開Releaseの添付id/name/size/digestを保持し、latestはlinux-v0.3.4のまま。[公開後照合記録](fedora45-arm64-035-publication.json)。内蔵VM2台は通常停止しディスク一式を保持。X案内URLは別コミットで追加する。
+
+X（@tyamada22）への案内を投稿し、公開本文・Releaseリンクを確認: [https://x.com/tyamada22/status/2121100298987221327](https://x.com/tyamada22/status/2121100298987221327)。公開・全添付照合・main反映後に投稿し、次パッケージの公開は開始していない。

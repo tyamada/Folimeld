@@ -1,0 +1,7 @@
+{
+  "account": "tyamada22",
+  "url": "https://x.com/tyamada22/status/2121100298987221327",
+  "text": "Folimeld 0.3.5 Fedora 45 ARM64 RPM\u8a66\u9a13\u7248\u3092\u516c\u958b\u3057\u307e\u3057\u305f\u3002\u7de8\u96c6\u30fb\u4fdd\u5b58\u30fb\u518d\u5c0e\u5165\u3092ARM64\u3067\u691c\u8a3c\u3002\u5bfe\u5fdc\u30bd\u30fc\u30b9\u3092\u6dfb\u4ed8\u3057\u3001\u516816\u6dfb\u4ed8\u306e\u518d\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\u7167\u5408\u3092\u5b8c\u4e86\u3002\u672a\u7f72\u540dRPM\u3001glibc 2.44\u4ee5\u4e0a\u3002\u8a73\u7d30\u30fb\u5236\u7d04\u306f\u3053\u3061\u3089\u3002\nhttps://github.com/tyamada/Folimeld/releases/tag/fedora45-arm64-v0.3.5",
+  "after_full_public_redownload_and_main_push": true,
+  "screenshot_sha256": "a9866eba0b45aa1ca1639cd45c59f36e056452f2178b042d96b9628cad542fa1"
+}
