@@ -27,8 +27,8 @@ export SOURCE_DATE_EPOCH=${SOURCE_DATE_EPOCH:-$(git show -s --format=%ct HEAD)} 
 mkdir -p dist
 cp "$FOLIMELD_BUILD_ROOT/dist/folimeld" dist/folimeld
 trap 'rm -f dist/folimeld' EXIT
-FOLIMELD_LINUX_OUTPUT="$FOLIMELD_BUILD_ROOT/packages" FOLIMELD_RPM_REVISION=1 "$py" tools/package_linux_alma_rpm.py
+FOLIMELD_LINUX_OUTPUT="$FOLIMELD_BUILD_ROOT/packages" FOLIMELD_RPM_REVISION=2 "$py" tools/package_linux_alma_rpm.py
 "$FOLIMELD_BUILD_ROOT/venv/bin/pyi-archive_viewer" -r -b "$FOLIMELD_BUILD_ROOT/dist/folimeld" > "$FOLIMELD_BUILD_ROOT/archive.txt"
 ! grep -Ei 'virtualkeyboard|qtcore_probe_runtime' "$FOLIMELD_BUILD_ROOT/archive.txt"
 git diff --exit-code
-sha256sum "$FOLIMELD_BUILD_ROOT/packages/folimeld-0.3.5-1.alma9_8.aarch64.rpm" "$FOLIMELD_BUILD_ROOT/dist/folimeld"
+sha256sum "$FOLIMELD_BUILD_ROOT/packages/folimeld-0.3.5-2.alma9_8.aarch64.rpm" "$FOLIMELD_BUILD_ROOT/dist/folimeld"
