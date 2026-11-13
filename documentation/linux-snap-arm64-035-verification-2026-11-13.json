@@ -1,0 +1,89 @@
+{
+  "date_jst": "2026-11-13",
+  "package": "folimeld_0.3.5_arm64.snap",
+  "size": 105582592,
+  "sha256": "8a7bb4ac42934d038e830935798dce33e238cfde0dea1051dc54cbae9d369f2c",
+  "executable_sha256": "637f450800945fc53bb4541c422509689603653ed15e437af6a626407f5f647c",
+  "source": {
+    "git_commit": "a77ad2f426f23f8dd0245e04f94674cccb71694a",
+    "working_tree_changed": false,
+    "files_verified": 968,
+    "source_sha256": "6cce8f6ec446a467ef67e099832077894f3236b9579c76703232b76844b7c96a",
+    "result": "Git, ZIP and embedded manifest match"
+  },
+  "reproducibility": "Two clean build roots on the same Ubuntu ARM64 VM produce byte-identical Snap packages; not independent VM hosts.",
+  "tests": {
+    "platform": "Ubuntu24.04 ARM64",
+    "passed": 409,
+    "skipped": 9,
+    "subtests_passed": 67,
+    "ruff": "pass"
+  },
+  "acceptance": {
+    "os": "Ubuntu 24.04.5 ARM64",
+    "environment": "QEMU HVF on internal Mac storage, UID1000, Xorg/Openbox",
+    "version_update": "0.3.4+fix1 x6 -> 0.3.5 x7",
+    "same_candidate_reinstall": "0.3.5 x7 -> x8",
+    "document_and_common_current_settings_hashes_preserved": true,
+    "userdata_protection": "Full pre-update/pre-reinstall folimeld user-data TARs and snap save snapshots retained in the VM. snapd retention dropped older inactive local revisions, not the original release files.",
+    "operations": [
+      "rotation immediate thumbnail",
+      "undo/redo",
+      "page move",
+      "blank insertion/deletion",
+      "Save As",
+      "Japanese-path reopen (copy created via shell, not IME)",
+      "image folder conversion/save",
+      "clean exit",
+      "same-candidate reinstall",
+      "saved image PDF reopen/clean exit"
+    ],
+    "gui_exit_statuses": [
+      0,
+      0,
+      0
+    ],
+    "no_folimeld_processes_remain": true,
+    "fixture_hashes_unchanged": true,
+    "pdf_validation": {
+      "order": [
+        2,
+        1,
+        3
+      ],
+      "rotations": [
+        0,
+        90,
+        0
+      ],
+      "image_pages": 2,
+      "image_decoded_pixels_match_original": true,
+      "pdfs": {
+        "snap-edited.pdf": "830a19c6e5314fdff9c1cd6b2e848e901fdf23364bf788d0e8d6f5ba2d8822b0",
+        "snap-image.pdf": "231e7ac8a1b89861b29d8af3da2ea27185d8c831c2565ff34563e4d3d6cd24e7"
+      }
+    }
+  },
+  "confinement": {
+    "declared": "strict",
+    "runtime": "snap.folimeld.folimeld (enforce)",
+    "seccomp": 2,
+    "seccomp_filters": 2,
+    "reconfirmed_after_reinstall": true,
+    "home_documents_read": "pass",
+    "hidden_home_synthetic_read": "denied",
+    "unconnected_removable_media_synthetic_read": "denied",
+    "audit_denials_observed": true,
+    "scope": "Negative reads used snap run --shell under the same application profile; runtime GUI processes independently verified. Not a complete security audit."
+  },
+  "native": {
+    "inner_aarch64_elf": 210,
+    "outer_physical_aarch64_elf": 11,
+    "outer_paths_including_symlinks": 22,
+    "exact_prior_arm64_mapping": true
+  },
+  "external_content_snaps": "Recorded separately in evidence: core24, gnome-46-2404, mesa-2404, gtk-common-themes and snapd; not bundled in this asset.",
+  "snap_store_assertion": false,
+  "amd64_or_DEB_acceptance_used": false,
+  "limitations": "KNOWN-LIMITATIONS.txt"
+}

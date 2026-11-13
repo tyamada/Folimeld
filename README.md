@@ -47,6 +47,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | Ubuntu 24.04 | amd64 / arm64 | DEB / Snap / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
 | Debian 13 | amd64 / arm64 | DEB / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
 | Ubuntu 24.04.5 / Debian 13.7 (verified with Xorg in ARM64 VMs) | arm64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5) |
+| Ubuntu 24.04.5 (verified with Xorg in an ARM64 VM) | arm64 | strict Snap / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5) |
 | Ubuntu 24.04.4 / Debian 13.6 / Kali Rolling 2026.3 (verified on WSL2/WSLg) | amd64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) |
 | openSUSE Tumbleweed 20261110 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) |
 | openSUSE Leap 16.1 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5) |
@@ -144,6 +145,14 @@ sudo apt install ./folimeld_0.3.5_arm64.deb
 ### Ubuntu / Debian ARM64 DEB fix preview
 
 [**0.3.4+fix1 ARM64 DEB**](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.4-fix1) is a preview that fixes an exit crash after image conversion. Image conversion, saving, reopening after restart, discard-and-exit, and removal/reinstallation were checked in a regular-user Xorg session on Ubuntu 24.04.5 ARM64. Normal PDF acceptance on Debian 13.7 ARM64 comes from the same DEB's November 11, 2026 records and was not rerun today. The Release provides the DEB, exact application source, dependency sources/notices, and verification scope. Existing 0.3.4/Snap and amd64 downloads remain available.
+
+### Ubuntu ARM64 strict Snap 0.3.5 preview
+
+[**0.3.5 ARM64 strict Snap**](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5) is available. Fresh regular-user Xorg checks on Ubuntu24.04.5 ARM64 cover major PDF editing/save, Japanese-path reopen, image conversion/save, clean exits, old-version update, same-candidate reinstallation and document/settings preservation. Runtime processes before/after reinstall confirm AppArmor enforce and Seccomp2; same-profile probes allow ordinary Documents reads and deny synthetic hidden-home/unconnected-media reads. Snap bytes match across separate build roots on one VM. Matching materials for 968 source inputs and 210 internal/11 outer AArch64 native files, plus post-publication redownload checks of all 16 assets, are provided. This GitHub asset has no Snap Store assertion and uses external content/base snaps delivered by snapd. Full removal/reinstallation, IME, Wayland and physical ARM hardware were not newly tested. [Verification and limitations (Japanese)](documentation/linux-snap-arm64-035-validation_ja.md).
+
+```bash
+sudo snap install --dangerous ./folimeld_0.3.5_arm64.snap
+```
 
 ### Ubuntu ARM64 strict Snap fix preview
 

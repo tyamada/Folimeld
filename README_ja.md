@@ -47,6 +47,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | Ubuntu 24.04 | amd64 / arm64 | DEB・Snap / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
 | Debian 13 | amd64 / arm64 | DEB / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
 | Ubuntu 24.04.5 / Debian 13.7（ARM64 VMのXorgで検証） | arm64 | DEB / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5) |
+| Ubuntu 24.04.5（ARM64 VMのXorgで検証） | arm64 | strict Snap / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5) |
 | Ubuntu 24.04.4 / Debian 13.6 / Kali Rolling 2026.3（WSL2／WSLgで検証） | amd64 | DEB / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) |
 | openSUSE Tumbleweed 20261110（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) |
 | openSUSE Leap 16.1（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5) |
@@ -144,6 +145,14 @@ sudo apt install ./folimeld_0.3.5_arm64.deb
 ### Ubuntu / Debian ARM64 DEB修正試験版
 
 [**0.3.4+fix1 ARM64 DEB**](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.4-fix1)は、画像変換後の終了クラッシュを修正する試験版です。Ubuntu 24.04.5 ARM64の一般ユーザーXorgで画像変換・保存・再起動後の再読込・破棄終了・削除再導入を確認しました。Debian 13.7 ARM64の通常PDF受入は同一DEBの2026年11月11日の記録で、今回未再実行です。DEB・正確な対応ソース・依存ソースと告知・検証範囲はReleaseに掲載しています。既存0.3.4/Snapとamd64版は保持しています。
+
+### Ubuntu ARM64 strict Snap 0.3.5試験版
+
+[**0.3.5 ARM64 strict Snap**](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5)を公開しました。Ubuntu24.04.5 ARM64の一般ユーザーXorgで主要PDF編集・保存・日本語名再読込・画像変換/保存・正常終了、旧版更新と同一候補再導入・文書/設定保持を確認。実行中と再導入後のAppArmor enforce・Seccomp2、通常文書の読込成功と合成の隠しホーム/未接続媒体への読込拒否も記録しました。同一VMの別ビルド先でSnap一致、968ソース入力と内部210/外側11 AArch64実体の対応、全16添付の公開後再取得を照合済みです。Snap Store署名のないGitHub配布で、外部content/base Snapをsnapdから取得します。完全削除再導入・IME・Wayland・実機ARM等は今回未検証。[検証・制約](documentation/linux-snap-arm64-035-validation_ja.md)。
+
+```bash
+sudo snap install --dangerous ./folimeld_0.3.5_arm64.snap
+```
 
 ### Ubuntu ARM64 strict Snap修正試験版
 

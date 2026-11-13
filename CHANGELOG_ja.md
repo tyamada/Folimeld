@@ -46,6 +46,11 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.5 Linux strict Snap ARM64試験版 - 2026-11-13
+
+- [Ubuntu24.04向けARM64 strict Snap 0.3.5](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5)を公開。Snap固有の編集・画像変換・保存・正常終了、旧版更新・同一候補再導入と文書/設定保持を今回確認。AppArmor enforce・Seccomp2と限定的な許可/拒否試験を記録。
+- ARM64テスト409 passed/9 skipped、同一VM内の別ビルド先でSnap一致、968入力/内部210・外側11実体の対応資料、全16添付の公開後再取得照合を確認。完全削除再導入・IME/Wayland/実機等は未検証。Store署名のないGitHub配布として、既存公開物とlatestを保持。
+
 ## 0.3.5 Linux DEB ARM64試験版 - 2026-11-13
 
 - [Ubuntu24.04／Debian13向けARM64 DEB 0.3.5](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5)を公開。両OSで主要PDF編集・画像変換・正常終了・削除再導入と文書/設定保持を今回検証し、保存PDFの順序/回転/画素を照合。

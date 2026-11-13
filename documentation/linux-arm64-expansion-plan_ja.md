@@ -59,3 +59,13 @@ Mac内蔵上のビルド・Ubuntu・Debian VMは通常停止済み。更新済�
 公開結果: [linux-deb-arm64-v0.3.5](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5)をprerelease/latest=falseで公開。全16添付（1,686,119,373 bytes）を公開後のURLから全件取得し、サイズとSHA-256が一致した。既存全公開Releaseの添付ID・名前・サイズ・digestが不変、latestはlinux-v0.3.4。[公開後照合JSON](linux-deb-arm64-035-publication-result-2026-11-13.json)。
 
 X案内も完了: https://x.com/tyamada22/status/2121057222788878379 。全16添付の公開後照合とmain e648deeのpush成功後にtyamada22から投稿し、本文・Releaseリンクのカード・公開日時を確認。今回のDEB公開工程は完了。次のパッケージの公開はまだ開始していない。
+
+## 0.3.5 ARM64 strict Snapへの同期（2026-11-13、DEB完了後の追加）
+
+DEB公開・全16添付の公開後照合・main反映・X案内完了後に、Snap固有のビルド・新規受入・制限確認を実施。[検証記録](linux-snap-arm64-035-validation_ja.md)。本体ソースa77ad2f（差分なし）、タグ/専用ブランチは検証資料追加後の3a1a614。0.3.5 ARM64 Snapは公開済みへ変更し、DEB/amd64の実行結果をSnap合格に数えない。
+
+内部210/外側11のAArch64実体と正確な968ソース入力を照合。3回のGUIはすべて終了0。旧x6→0.3.5 x7更新と同一候補x7→x8再導入、文書/common/current設定の保持、再読込・正常終了、AppArmor enforce・Seccomp2、同一プロファイルの限定的な許可/拒否試験を確認。完全削除再導入・revert・snapshot復旧・IME・Wayland・実機ARMは未試験。
+
+ビルドVM cとUbuntu-Snap VMは内蔵で実行し、通常停止。外付けアーカイブ・旧公開Snap・VM/ISOとユーザーデータの退避を保持。VM/ISO削除・外付け起動は0件。RPM/Kali ARM64は未検証のまま。今回のSnapの全添付再取得照合とX案内完了まで、別パッケージの公開は開始しない。
+
+公開完了: [linux-snap-arm64-v0.3.5](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5)をprerelease/latest=falseで公開。全16添付（1,690,964,765 bytes）を公開後に全件再取得し、サイズとSHA-256が一致。既存公開Releaseの添付ID・名前・サイズ・digestは不変、latestはlinux-v0.3.4を維持。[公開後照合JSON](linux-snap-arm64-035-publication-result-2026-11-13.json)。

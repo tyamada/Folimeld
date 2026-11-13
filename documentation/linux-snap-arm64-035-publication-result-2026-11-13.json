@@ -1,0 +1,94 @@
+{
+  "verified_utc": "2026-11-13T03:16:46.557522+00:00",
+  "release_url": "https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5",
+  "tag": "linux-snap-arm64-v0.3.5",
+  "tag_commit": "3a1a614d3d91480c5f72f069d329c7303ad1d630",
+  "draft": false,
+  "prerelease": true,
+  "latest_unchanged": "linux-v0.3.4",
+  "all_prior_public_assets_preserved": true,
+  "downloaded_after_publication": true,
+  "assets": [
+    {
+      "name": "BUILD.txt",
+      "size": 2849,
+      "sha256": "0b1ebfce9ea89f63475d5e1081005a3a6bf14189a1c1369b1ac517fc8bb28969"
+    },
+    {
+      "name": "Folimeld-0.3.4-Pillow-wheel-source-and-notice-supplement.zip",
+      "size": 5853009,
+      "sha256": "a5811c2c3dfb45344b22f0a1bb19b305034c045f4912e6f6a91dcfa5591790d0"
+    },
+    {
+      "name": "Folimeld-0.3.4-third-party-source-set.tar",
+      "size": 1456230400,
+      "sha256": "306c4c9525c5240c5564472b762b05a9c81aff7df362a117dc78049e1c748b7e"
+    },
+    {
+      "name": "Folimeld-arm64-fix1-ubuntu-source-supplement.tar",
+      "size": 94126080,
+      "sha256": "e48c6a7eb23f3616aecf8abed9f6d5e3112927e566946f3ff92a0fabd34d51ce"
+    },
+    {
+      "name": "Folimeld-arm64-snap035-build-recipe.tar.gz",
+      "size": 12421,
+      "sha256": "f31ba55734eb654e285874e67468b169ed0eb3a56a3db1c7faac4888e3723612"
+    },
+    {
+      "name": "Folimeld-source-6cce8f6ec446a467ef67e099832077894f3236b9579c76703232b76844b7c96a.json",
+      "size": 127871,
+      "sha256": "15b92ce49fcf0b2be2ff711901375195589ed1a91619dc87e4004e84b9b70e03"
+    },
+    {
+      "name": "Folimeld-source-6cce8f6ec446a467ef67e099832077894f3236b9579c76703232b76844b7c96a.zip",
+      "size": 25396366,
+      "sha256": "6cce8f6ec446a467ef67e099832077894f3236b9579c76703232b76844b7c96a"
+    },
+    {
+      "name": "KNOWN-LIMITATIONS.txt",
+      "size": 2251,
+      "sha256": "d37ed77863041a1f39ba6fee2754233b89f5ddd226cedc67a8fe24e95eb9ad1e"
+    },
+    {
+      "name": "RELEASE-NOTES.txt",
+      "size": 5206,
+      "sha256": "7592440b6b98719813cb6fb0b51c58063c73976f1dc82095d5d34c157ed903d5"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 1662,
+      "sha256": "2c92af9ddeeab994a40b603e2de551c7a30dd1e544064fd68125149dd1077068"
+    },
+    {
+      "name": "folimeld_0.3.5_arm64.snap",
+      "size": 105582592,
+      "sha256": "8a7bb4ac42934d038e830935798dce33e238cfde0dea1051dc54cbae9d369f2c"
+    },
+    {
+      "name": "folimeld_0.3.5_arm64.snap-8a7bb4ac42934d038e830935798dce33e238cfde0dea1051dc54cbae9d369f2c.json",
+      "size": 776,
+      "sha256": "197c74d751229eb7e67862d32feb3591e4bab012f0660acd22193ac089510c1e"
+    },
+    {
+      "name": "native-dependency-provenance.json",
+      "size": 330295,
+      "sha256": "dfb6d720180b784471042d1b8aee24f4e84865f2301f8613206a8198ce045be3"
+    },
+    {
+      "name": "third-party-notices.tar.gz",
+      "size": 2716282,
+      "sha256": "37370cac2a57836eb1b53512a7824b21ff7f2ce02654ab15bb72a126298131a6"
+    },
+    {
+      "name": "verification-records-snap-arm64-035.zip",
+      "size": 573467,
+      "sha256": "59eedb432c092397c1f296372f1cdc9ed1c9d89e085b0deee9e9b20b29610b25"
+    },
+    {
+      "name": "verification-snap-arm64-035.json",
+      "size": 3238,
+      "sha256": "9b9789185c7b1708c1b007550390b4c019b70f69d7e64f45aae5205711908669"
+    }
+  ],
+  "result": "all sizes and SHA-256 match"
+}

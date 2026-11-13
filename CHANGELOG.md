@@ -46,6 +46,11 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.5 Linux strict Snap ARM64 preview - 2026-11-13
+
+- Publish [ARM64 strict Snap 0.3.5 for Ubuntu24.04](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5). Fresh Snap-specific checks cover editing, image conversion/save, clean exits, old-version update, same-candidate reinstall and document/settings preservation. Record AppArmor enforce, Seccomp2 and limited allow/deny probes.
+- Verify 409 passing ARM64 tests/9 skipped, byte-identical Snaps from separate build roots on one VM, matching materials for 968 inputs/210 internal and 11 outer native files, and public redownload checks of all 16 assets. Full removal/reinstallation, IME/Wayland/physical hardware remain untested. Publish as a GitHub asset without a Snap Store assertion; preserve existing downloads and latest.
+
 ## 0.3.5 Linux DEB ARM64 preview - 2026-11-13
 
 - Publish [ARM64 DEB 0.3.5 for Ubuntu 24.04 / Debian 13](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5). Fresh checks on both OSes cover major PDF editing, image conversion, clean exits, removal/reinstallation and document/settings preservation; verify saved page order, rotation and image pixels.
