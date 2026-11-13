@@ -1,0 +1,21 @@
+{
+  "date_jst": "2026-11-13",
+  "published": false,
+  "candidate_binary_sha256": "c5fea766f7f508255a1c1bfdd68e1e59230d448b564f818d7a4150f0876da7f8",
+  "rpm_sha256": "d3fc22088af7d4fa08b90bc341e64b24b23d350de98a11d9825a0cafa4416574",
+  "application_source_sha256": "957b144ca26d0b13ff91449b1f98165fff2cfa452409fb540cf2d3bbe3d58e3e",
+  "source_inputs_verified": 822,
+  "embedded_material_manifest_sha256": "66a4758e8e2b3dc0e163f9f3688dbf94340198b6eafba74f90b3fc50df98775f",
+  "embedded_manifest_matches_original_build_record_and_elf": true,
+  "supplemental_archive": {
+    "path": "/home/folimeld-build/folimeld-candidates/fedora44-r2-readiness-20261113/Folimeld-fedora44-0.3.5-r2-dependency-sources.tar",
+    "bytes": 1738352640,
+    "sha256": "48c688417ffbd46af8dc23a87f6aac2de99d6fba8500998b05de25ae0c34f0cd",
+    "files_including_manifest": 178
+  },
+  "packet_rechecked": true,
+  "remaining": [
+    "Prepare and review release Git snapshot and bilingual Fedora release notes",
+    "Review publication scope and obtain Fedora publication authorization; no push/tag/release performed"
+  ]
+}

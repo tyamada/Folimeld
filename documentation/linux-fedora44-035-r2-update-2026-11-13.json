@@ -1,0 +1,71 @@
+{
+  "date_jst": "2026-11-13",
+  "published": false,
+  "before": "folimeld-0.3.3-2.fc44.x86_64",
+  "after": "folimeld-0.3.5-2.fc44.x86_64",
+  "package_sha256": "d3fc22088af7d4fa08b90bc341e64b24b23d350de98a11d9825a0cafa4416574",
+  "before_binary_sha256": "8347c123b1af32f37b98898c3b6e3e9db778798cf09f708ee671ad194bdc15ae",
+  "binary_sha256": "c5fea766f7f508255a1c1bfdd68e1e59230d448b564f818d7a4150f0876da7f8",
+  "command": [
+    "dnf",
+    "-y",
+    "--setopt=install_weak_deps=False",
+    "upgrade",
+    "/root/folimeld-verification/folimeld-0.3.5-2.fc44.x86_64.rpm"
+  ],
+  "upgrade_log": "Updating and loading repositories:\n Fedora 44 - x86_64 - Updates           100% |  86.1 KiB/s |  36.2 KiB |  00m00s\nRepositories loaded.\nPackage               Arch   Version        Repository        Size\nUpgrading:\n folimeld             x86_64 0:0.3.5-2.fc44 @commandline 100.8 MiB\n   replacing folimeld x86_64 0:0.3.3-2.fc44 @commandline  98.6 MiB\n\nTransaction Summary:\n Upgrading:          1 package\n Replacing:          1 package\n\nTotal size of inbound packages is 99 MiB. Need to download 0 B.\nAfter this operation, 2 MiB extra will be used (install 101 MiB, remove 99 MiB).\nRunning transaction\n[1/4] Verify package files              100% |   1.0   B/s |   1.0   B |  00m01s\n[2/4] Prepare transaction               100% |  62.0   B/s |   2.0   B |  00m00s\n[3/4] Upgrading folimeld-0:0.3.5-2.fc44 100% | 196.5 MiB/s | 100.8 MiB |  00m01s\n[4/4] Removing folimeld-0:0.3.3-2.fc44. 100% |   8.0   B/s |   4.0   B |  00m00s\nWarning: skipped OpenPGP checks for 1 package from repository: @commandline\nComplete!\n",
+  "checks": [
+    {
+      "command": [
+        "rpm",
+        "-V",
+        "folimeld"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "dnf",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "user_files_preserved": {
+    "/home/folimeld-test/verification/extended-gui-20261112/encrypted-edited.pdf": "5673816bea49f43009df8e602195386d2639c583ef382ef2980be90c5ddee3af",
+    "/home/folimeld-test/verification/extended-gui-20261112/image-created.pdf": "bf2834a78d9746decd7c781618a2bc569f3aa5b7a04f1847e41e89be9ae980a2",
+    "/home/folimeld-test/verification/mime-gui-20261112/\u65e5\u672c\u8a9e \u30d1\u30b9/\u95a2\u9023\u4ed8\u3051 \u8a66\u9a13.pdf": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+    "/home/folimeld-test/verification/mime-gui-20261112/\u65e5\u672c\u8a9e \u30d1\u30b9/\u4fdd\u5b58 \u7d50\u679c.pdf": "b09127fb42ef54dae28bd26e7df01913bf2b81bec02cdf58f44ad5c59808dbc0",
+    "/home/folimeld-test/verification/mime-gui-20261112/config/Folimeld/Folimeld.conf": "9dddf45cdcc64647c53ac10cb70e195a518afd8ba0ee4d2b5f5f5941eea64dba",
+    "/home/folimeld-test/verification/gui-20261112/fixtures/\u539f\u672c_\u65e5\u672c\u8a9e.pdf": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+    "/home/folimeld-test/verification/gui-20261112/fixtures/fedora-edited.pdf": "7b54eee33d7c281a015dae02e2941dd59c317af66d9ec19605cfcf0d2491bab6",
+    "/home/folimeld-test/verification/gui-20261112/fixtures/\u6697\u53f7\u5316.pdf": "48b63c2a0e9c3bf3f4e18d55d1104195310ac3dfa7986c04973f0f8319e70c0f",
+    "/home/folimeld-test/verification/gui-20261112/config/Folimeld/Folimeld.conf": "94853acb40973c2a46bc7757d9cabbe539d8d107852d2cc8e932ce11e872bfd8",
+    "/home/folimeld-test/verification/extended-gui-20261112/config/Folimeld/Folimeld.conf": "3fb8083735063983f06fe28575efbb05652b165b9be5f649acccf9398b905100"
+  },
+  "configs_preserved": {
+    "/home/folimeld-test/verification/mime-gui-20261112/config/Folimeld/Folimeld.conf": "[General]\nlanguage=ja\nlast_open_directory=/home/folimeld-test/verification/mime-gui-20261112/\u65e5\u672c\u8a9e \u30d1\u30b9\n",
+    "/home/folimeld-test/verification/gui-20261112/config/Folimeld/Folimeld.conf": "[General]\nlanguage=ja\nlast_open_directory=/home/folimeld-test/verification/gui-20261112/fixtures\n",
+    "/home/folimeld-test/verification/extended-gui-20261112/config/Folimeld/Folimeld.conf": "[General]\nlanguage=ja\nlast_image_directory=/home/folimeld-test/verification/extended-gui-20261112/image-input\nlast_open_directory=/home/folimeld-test/verification/extended-gui-20261112\n"
+  },
+  "scope": "Existing dedicated Fedora44 Test; package update only; no dependency refresh or global WSL changes",
+  "startup": [
+    {
+      "platform": "offscreen",
+      "alive_after_12_seconds": true,
+      "exit_code_after_test": -15,
+      "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nThis plugin does not support propagateSizeHints()\n"
+    },
+    {
+      "platform": "xcb",
+      "alive_after_12_seconds": true,
+      "exit_code_after_test": -15,
+      "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+    }
+  ],
+  "test_application_stopped": true
+}

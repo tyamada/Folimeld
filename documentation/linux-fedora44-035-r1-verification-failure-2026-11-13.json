@@ -1,0 +1,14 @@
+{
+  "date_jst": "2026-11-13",
+  "published": false,
+  "candidate": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r1-20261113",
+  "build_succeeded": true,
+  "full_tests": "409 passed,9 skipped,67 subtests",
+  "verification_passed": false,
+  "missing_notice_owners": [
+    "dbus-libs",
+    "systemd-libs"
+  ],
+  "next_candidate": "/home/folimeld-build/folimeld-candidates/fedora44-integration-035-r2-20261113",
+  "previous_candidate_preserved": true
+}
