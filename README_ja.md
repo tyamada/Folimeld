@@ -50,6 +50,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | Ubuntu 24.04.5（ARM64 VMのXorgで検証） | arm64 | strict Snap / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5) |
 | Ubuntu 24.04.4 / Debian 13.6 / Kali Rolling 2026.3（WSL2／WSLgで検証） | amd64 | DEB / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) |
 | openSUSE Tumbleweed 20261110（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) |
+| openSUSE Leap 16.1（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5) |
 | openSUSE Leap 16.1（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5) |
 | Fedora 44（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.5) |
 | Fedora 44（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5) |
@@ -194,6 +195,14 @@ folimeld
 ```
 
 PDF編集・日本語名保存とGIO再読込・暗号化PDF・画像PDF・Mozc入力、更新・削除再導入・既存試験PDF/設定保持を確認しました。新規最小installrootでも一般ユーザーのoffscreen起動を確認しましたが、通常のローリングリポジトリから作成したchrootであり、20261110固定の独立WSLブートや最小環境のGUI/IMEは未検証です。通常デスクトップ・ファイルマネージャー操作・他スナップショット・ARM64・公開Ubuntu/Debian 0.3.4からの移行は対象外です。IBus切替コマンドの終了コードと実際の変換確認、来歴等の制約は[Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5)と[KNOWN-LIMITATIONS.txt](https://github.com/tyamada/Folimeld/releases/download/opensuse-tumbleweed20261110-amd64-v0.3.5/KNOWN-LIMITATIONS.txt)を参照してください。
+
+### openSUSE Leap 16.1 ARM64試験版
+
+[**Leap 16.1 ARM64 RPM 0.3.5-1**](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5)を公開しました。一般ユーザーXorg/IceWM・SELinux Enforcingで新規導入、PDF編集・保存・日本語パス再読込・画像変換・正常終了、完全削除と同一候補再導入・文書/設定保持を確認。ARM64で410テスト成功、999ソース入力と202 AArch64実体の対応、全16添付の公開後再取得を照合済みです。実行ファイルは別出力先2件で一致しました。Google公式修正版Brotli 1.1.1を変更なしソースからビルドして2ライブラリだけ同梱し、OS側は維持します。GitHubの未署名RPM、glibc 2.40以上。実機ARM・Wayland・IME・旧版更新等は未検証。[検証・制約](documentation/opensuse-leap161-arm64-035-validation_ja.md)。
+
+```bash
+sudo zypper install --allow-unsigned-rpm ./folimeld-0.3.5-1.lp161.aarch64.rpm
+```
 
 ### openSUSE Leap 16.1 amd64試験版
 

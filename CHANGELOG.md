@@ -46,6 +46,11 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.5 openSUSE Leap 16.1 ARM64 preview - 2026-11-13
+
+- Publish [Leap16.1 ARM64 RPM0.3.5-1](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5). Fresh ARM64 checks cover installation, PDF editing/image conversion/save, full removal/reinstall with document/settings preservation and minimum-dependency startup. SELinux Enforcing; all 3 GUI runs exited 0.
+- Verify 410 passed/9 skipped/69 subtests, identical ELF across two output roots,999inputs, 202AArch64 native members (105 official-wheel / 95 signed OS payload / 2 source-built fixed Brotli), 32 exact signed SRPMs and all 16 public redownloads. Unsigned GitHub preview, glibc>=2.40. Physical ARM/Wayland/IME/cross-version updates untested. Preserve prior releases/latest.
+
 ## 0.3.5 AlmaLinux 9 ARM64 preview - 2026-11-13
 
 - Publish [AlmaLinux9.8 ARM64 RPM0.3.5-2](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5). Source-build Qt/PySide6.11.2 on glibc2.34 with required modules only; omit Qt standard translation catalogs, include app translations. Revision2 fixes the minimum-root OpenGL dependency.

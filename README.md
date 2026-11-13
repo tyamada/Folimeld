@@ -50,6 +50,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | Ubuntu 24.04.5 (verified with Xorg in an ARM64 VM) | arm64 | strict Snap / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5) |
 | Ubuntu 24.04.4 / Debian 13.6 / Kali Rolling 2026.3 (verified on WSL2/WSLg) | amd64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) |
 | openSUSE Tumbleweed 20261110 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) |
+| openSUSE Leap 16.1 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5) |
 | openSUSE Leap 16.1 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5) |
 | Fedora 44 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.5) |
 | Fedora 44 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5) |
@@ -194,6 +195,14 @@ folimeld
 ```
 
 Verification covered PDF editing, Japanese filename saving/GIO reopening, encrypted PDFs, image PDFs, Mozc input, updates, removal/reinstallation, and preservation of existing test PDFs/settings. A fresh minimal installroot passed offscreen startup as a regular user, but this chroot uses regular rolling repositories and does not verify independent WSL boot pinned to 20261110 or GUI/IME in the minimal environment. Conventional desktops, file-manager interaction, other snapshots, ARM64, and migration from public Ubuntu/Debian 0.3.4 are outside the verified scope. See the [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) and [KNOWN-LIMITATIONS.txt](https://github.com/tyamada/Folimeld/releases/download/opensuse-tumbleweed20261110-amd64-v0.3.5/KNOWN-LIMITATIONS.txt) for the IBus switch-command exit status, observed conversion results, and provenance limits.
+
+### openSUSE Leap 16.1 ARM64 preview
+
+[**Leap 16.1 ARM64 RPM 0.3.5-1**](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5) is available. Fresh regular-user Xorg/IceWM checks with SELinux Enforcing cover installation, PDF editing/save, Japanese-path reopen, image conversion, clean exit, full removal/same-candidate reinstall and Documents/settings preservation. ARM64 passed 410 tests; 999 source inputs, 202 AArch64 native members and public redownloads of all 16 attachments were verified. Executable bytes match across two clean output roots on one VM. Two bundled Brotli libraries are source-built from unmodified Google Brotli 1.1.1, while OS libraries remain unchanged. Unsigned GitHub RPM, glibc>=2.40. Physical ARM/Wayland/IME/cross-version updates remain untested. [Validation and limitations](documentation/opensuse-leap161-arm64-035-validation.md).
+
+```bash
+sudo zypper install --allow-unsigned-rpm ./folimeld-0.3.5-1.lp161.aarch64.rpm
+```
 
 ### openSUSE Leap 16.1 amd64 preview
 

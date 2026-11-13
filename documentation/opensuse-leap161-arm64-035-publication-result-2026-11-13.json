@@ -1,0 +1,94 @@
+{
+  "verified_utc": "2026-11-13T08:48:27.400590+00:00",
+  "release_url": "https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5",
+  "tag": "opensuse-leap161-arm64-v0.3.5",
+  "tag_commit": "56788b03dea8b2238aadc630d03d27666b94598d",
+  "draft": false,
+  "prerelease": true,
+  "latest_unchanged": "linux-v0.3.4",
+  "all_prior_public_assets_preserved": true,
+  "downloaded_after_publication": true,
+  "assets": [
+    {
+      "name": "BUILD.txt",
+      "size": 2376,
+      "sha256": "e0bba39d7d2200e168d94ccb6deadcafd8b6dbd0715a276461051f47e6dceefa"
+    },
+    {
+      "name": "Folimeld-0.3.4-Pillow-wheel-source-and-notice-supplement.zip",
+      "size": 5853009,
+      "sha256": "a5811c2c3dfb45344b22f0a1bb19b305034c045f4912e6f6a91dcfa5591790d0"
+    },
+    {
+      "name": "Folimeld-0.3.4-third-party-source-set.tar",
+      "size": 1456230400,
+      "sha256": "306c4c9525c5240c5564472b762b05a9c81aff7df362a117dc78049e1c748b7e"
+    },
+    {
+      "name": "Folimeld-opensuse-leap161-arm64-build-recipe.tar.gz",
+      "size": 31063,
+      "sha256": "40245665c9d86be4119c5c49f5dde21ed8fd9dae6b94d1716b88c61b725aced8"
+    },
+    {
+      "name": "Folimeld-opensuse-leap161-arm64-source-supplement.tar",
+      "size": 248545280,
+      "sha256": "5e7548cbfc6e6ced6ff6092ddaee50972bf43fd8a47993b38406621ffd168993"
+    },
+    {
+      "name": "Folimeld-source-000d1f69eeb3c081cbed53b73422b76c8cd7284b55c7f1f81b7137efaa7bd6f8.json",
+      "size": 131898,
+      "sha256": "78741126bf7cd0f8b5a31db7fe664a683a030411cd80ac9da6c794731b22be24"
+    },
+    {
+      "name": "Folimeld-source-000d1f69eeb3c081cbed53b73422b76c8cd7284b55c7f1f81b7137efaa7bd6f8.zip",
+      "size": 25904408,
+      "sha256": "000d1f69eeb3c081cbed53b73422b76c8cd7284b55c7f1f81b7137efaa7bd6f8"
+    },
+    {
+      "name": "KNOWN-LIMITATIONS.txt",
+      "size": 2996,
+      "sha256": "10e6e18231959794dc6cddf0b6fbcb5081de5a3e1699beed4875b077fbbd2721"
+    },
+    {
+      "name": "RELEASE-NOTES.txt",
+      "size": 4655,
+      "sha256": "c847143a0bf91f9f4088f1b39ffddf0f57909f83f8b89a5032bcc622d8330cec"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 1718,
+      "sha256": "9cf4324f3536f56dab7e75abdd39e08c301d4d3dae7f92751d71ef4d8a226d30"
+    },
+    {
+      "name": "folimeld-0.3.5-1.lp161.aarch64.rpm",
+      "size": 97813150,
+      "sha256": "2007446be6e0de760af5904bab3264450065b55d29c5471dc838cb8aac354679"
+    },
+    {
+      "name": "folimeld-0.3.5-1.lp161.aarch64.rpm-2007446be6e0de760af5904bab3264450065b55d29c5471dc838cb8aac354679.json",
+      "size": 785,
+      "sha256": "af1b4aec23566f3a817c263e5bb1efec0c7f1b98ca0dde233f0b5543f5df2852"
+    },
+    {
+      "name": "native-dependency-provenance.json",
+      "size": 437027,
+      "sha256": "dbb7e28a747709674fae0e37745b232bd89cf7996242f758f9d472e017e9c1d5"
+    },
+    {
+      "name": "third-party-notices.tar.gz",
+      "size": 666155,
+      "sha256": "a9dbccf9a7aeeadae49a5bde6a59d6d662bca65c4b9566fd257190587124d0de"
+    },
+    {
+      "name": "verification-opensuse-leap161-arm64-035.json",
+      "size": 3493,
+      "sha256": "2fcf5a106658966443e0d2e2ebe697eb92b7fe167404ef989920e0c024ef3f9a"
+    },
+    {
+      "name": "verification-records-opensuse-leap161-arm64-035.zip",
+      "size": 1008267,
+      "sha256": "76bea784cfc513ed0d0e1a2884536157117fffa71990198be5f5b23f230c0195"
+    }
+  ],
+  "result": "all sizes and SHA-256 match"
+}

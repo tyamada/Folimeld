@@ -95,3 +95,11 @@ Fedora45の公開・全添付照合・X案内完了後、公式AlmaLinux9.8 ARM6
 正確な本体ソース44dee9d0543f5003160284f21aa458acbe13faa9（clean）、タグalmalinux9-arm64-v0.3.5は7e9870f（検証文書追加）。glibc2.34上でQtbase/qtsvg/PySide6.11.2をソースビルド。標準Qt翻訳カタログなし、アプリ翻訳あり、5モジュール限定と任意梱包ガードパッチを記録。994入力、163AArch64実体（公式wheel25/自前Qt41/AlmaRPM由来97）、39exact signed SRPMを確認。RPATH変換は元ファイルへ再現して全バイト一致。410tests/9skips/69subtests、3GUI終了0、完全削除再導入、文書設定保持、最小依存起動。候補1のOpenGL不足をrevision2で修正し新しいrootで合格。同じQt SDKの2ビルド先でELF一致、RPM時刻は異なる。全16公開添付再取得とX案内まで完了してから次へ進む。
 
 VMは内蔵のみで実行。使用済みVMはユーザーの追加指示によりChatGPT-Testへ退避し、コピー/SHA256/内蔵復元/ディスク整合性確認後に内蔵側を整理する。外付け起動は禁止。公式イメージは長期保管HDDまたはNASへの照合保存を別途必要とし、進行状況は作業出力の保管記録を正とする。過去の「退避0件」は当時の記録として保持する。
+
+## Leap16.1 ARM64 RPM0.3.5の公開（2026-11-13、AlmaLinux9完了後）
+
+[Leap16.1 ARM64](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5)を公開済みへ変更。本体ソースfa0f0f5、検証資料付きタグ56788b0。0.3.5のままARM64で新規ビルド・検証。Tumbleweed/Kali ARM64は未検証のまま。[検証](opensuse-leap161-arm64-035-validation_ja.md)と[全16添付の公開後再取得照合](opensuse-leap161-arm64-035-publication-result-2026-11-13.json)を参照。既存全公開添付のID・名前・容量・digest不変、latestはlinux-v0.3.4を保持。
+
+410テスト成功/9スキップ/69サブテスト、同一VMの別出力先ELF一致、999ソース入力、202AArch64実体（公式wheel105/署名済みOS95/Google Brotli1.1.1ソースビルド2）を照合。47binary RPMと対応32signed SRPM、Brotli公式ソース/14公式テスト/ライセンス/構成を添付。OSの修正版Brotliを保持し、対応ソースが取得できない古い候補へダウングレードしていない。UID1000/Xorg/IceWM・SELinux EnforcingでGUI3回正常終了、完全削除再導入と文書・設定保持、最小依存構成起動を確認。amd64や他OSの合格を流用しない。実機/Wayland/IME/旧版更新等は未検証。
+
+全添付照合後のmain反映とX案内を完了してから次の対象へ進む。保存先の個別運用記録は私的記録として別管理する。

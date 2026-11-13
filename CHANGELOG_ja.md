@@ -46,6 +46,11 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.5 openSUSE Leap 16.1 ARM64試験版 - 2026-11-13
+
+- [Leap16.1 ARM64 RPM 0.3.5-1](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5)を公開。ARM64固有の新規導入、PDF編集/画像変換/保存、完全削除再導入と文書・設定保持、最小依存起動を確認。SELinux Enforcing、GUI3回終了0。
+- 410 passed/9 skipped/69 subtests、別出力先ELF一致、999入力、202AArch64実体（公式wheel105/署名付きOS内容95/修正版Brotliソースビルド2）、対応32SRPM、全16添付の公開後再取得を照合。未署名GitHub試験版、glibc>=2.40。実機/Wayland/IME/旧版更新等は未検証。既存公開物/latestを保持。
+
 ## 0.3.5 AlmaLinux 9 ARM64試験版 - 2026-11-13
 
 - [AlmaLinux9.8 ARM64 RPM0.3.5-2](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5)を公開。glibc2.34上でQt/PySide6.11.2を必要モジュールに限定してソースビルド。Qt標準翻訳カタログは含まず、アプリ独自翻訳は同梱。revision2で最小環境のOpenGL依存不足を修正。
