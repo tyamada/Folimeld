@@ -1,0 +1,173 @@
+{
+  "verification_date_jst": "2026-11-12",
+  "published": false,
+  "private_application_version": "0.3.3",
+  "build": {
+    "package": "/home/tyamada22/folimeld-candidates/script-validation-20261112/packages-thumbnail-fix/folimeld_0.3.3_amd64.deb",
+    "package_bytes": 105117990,
+    "package_sha256": "bb531236e78c9195245a88d6620e840f232b505b97d82968719528f415573875",
+    "binary_sha256": "752d4f389a671196aa15a1b673b08b88d8ebbcc26b67f04822a58fe05102bbc6",
+    "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+    "packages": [
+      {
+        "name": "PySide6",
+        "version": "6.11.2"
+      },
+      {
+        "name": "PySide6_Addons",
+        "version": "6.11.2"
+      },
+      {
+        "name": "PySide6_Essentials",
+        "version": "6.11.2"
+      },
+      {
+        "name": "altgraph",
+        "version": "0.17.5"
+      },
+      {
+        "name": "cffi",
+        "version": "2.1.1"
+      },
+      {
+        "name": "cryptography",
+        "version": "50.0.2"
+      },
+      {
+        "name": "packaging",
+        "version": "26.3"
+      },
+      {
+        "name": "pillow",
+        "version": "12.3.0"
+      },
+      {
+        "name": "pip",
+        "version": "26.3"
+      },
+      {
+        "name": "pycparser",
+        "version": "3.12"
+      },
+      {
+        "name": "pyinstaller",
+        "version": "6.22.2"
+      },
+      {
+        "name": "pyinstaller-hooks-contrib",
+        "version": "2026.7"
+      },
+      {
+        "name": "pymupdf",
+        "version": "1.28.2"
+      },
+      {
+        "name": "setuptools",
+        "version": "84.0.0"
+      },
+      {
+        "name": "shiboken6",
+        "version": "6.11.2"
+      }
+    ],
+    "git_commit": "423e59471b576e4732c7d6ec0ad9ab25cbf19582",
+    "working_tree_changed": true,
+    "source_archive": "Folimeld-source-fcbf135aaf1b5ce6cc628f73716f31751cbc4ac876369ef18e56fca61deefd9d.zip",
+    "source_sha256": "fcbf135aaf1b5ce6cc628f73716f31751cbc4ac876369ef18e56fca61deefd9d",
+    "association": {
+      "artifact": "folimeld_0.3.3_amd64.deb",
+      "artifact_sha256": "bb531236e78c9195245a88d6620e840f232b505b97d82968719528f415573875",
+      "executable": "folimeld",
+      "executable_sha256": "752d4f389a671196aa15a1b673b08b88d8ebbcc26b67f04822a58fe05102bbc6",
+      "association": "packaging script supplied executable; verify package contents before publication",
+      "source_archive": "Folimeld-source-fcbf135aaf1b5ce6cc628f73716f31751cbc4ac876369ef18e56fca61deefd9d.zip",
+      "source_sha256": "fcbf135aaf1b5ce6cc628f73716f31751cbc4ac876369ef18e56fca61deefd9d",
+      "git_commit": "423e59471b576e4732c7d6ec0ad9ab25cbf19582",
+      "working_tree_changed": true,
+      "dependency_sources": "NOT INCLUDED: obtain matching dependency sources and review bundled native components before distribution"
+    },
+    "virtualkeyboard_entries": 0,
+    "main_sha256": "fa2dd0ed753597fa469ef02bae17b2e6c84604c72c3cce322bc4f2ee8eb0f208",
+    "thumbnail_code_sha256": "1f496a1ddf3d8253ba3b5e5204f7a8a55242f48deaf28915043a6e7b10002bd7",
+    "metadata": "Version: 0.3.3\nArchitecture: amd64\nDepends: libc6 (>= 2.39), libegl1, libgl1, libxkbcommon-x11-0, libxcb-cursor0, libxcb-icccm4, libxcb-keysyms1, libxcb-shape0, fontconfig-config\n",
+    "build_tail": [
+      "41797 INFO: Appending PKG archive to custom ELF section in EXE",
+      "42075 INFO: Building EXE from EXE-00.toc completed successfully.",
+      "42644 INFO: Build complete! The results are available in: /home/tyamada22/folimeld-candidates/script-validation-20261112/source/dist",
+      "Folimeld source snapshot: /home/tyamada22/folimeld-candidates/script-validation-20261112/source/dist/source/Folimeld-source-fcbf135aaf1b5ce6cc628f73716f31751cbc4ac876369ef18e56fca61deefd9d.zip",
+      "Artifact/source association: /home/tyamada22/folimeld-candidates/script-validation-20261112/source/dist/source/folimeld-752d4f389a671196aa15a1b673b08b88d8ebbcc26b67f04822a58fe05102bbc6.json",
+      "dpkg-deb: building package 'folimeld' in '/home/tyamada22/folimeld-candidates/script-validation-20261112/packages-thumbnail-fix/folimeld_0.3.3_amd64.deb'.",
+      "Artifact/source association: dist/source/folimeld_0.3.3_amd64.deb-bb531236e78c9195245a88d6620e840f232b505b97d82968719528f415573875.json",
+      "",
+      "Built standalone executable: dist/folimeld",
+      "Built DEB package: /home/tyamada22/folimeld-candidates/script-validation-20261112/packages-thumbnail-fix/folimeld_0.3.3_amd64.deb"
+    ],
+    "source_tests": ".........                                                                [100%]\n9 passed in 1.29s\n"
+  },
+  "kali": {
+    "os_release": "PRETTY_NAME=\"Kali GNU/Linux Rolling\"\nNAME=\"Kali GNU/Linux\"\nVERSION_ID=\"2026.3\"\nVERSION=\"2026.3\"\nVERSION_CODENAME=kali-rolling\nID=kali\nID_LIKE=debian\nHOME_URL=\"https://www.kali.org/\"\nSUPPORT_URL=\"https://forums.kali.org/\"\nBUG_REPORT_URL=\"https://bugs.kali.org/\"\nANSI_COLOR=\"1;31\"\n",
+    "install": {
+      "command": [
+        "apt-get",
+        "-y",
+        "--reinstall",
+        "--no-install-recommends",
+        "install",
+        "/opt/folimeld-verification/thumbnail-fix/folimeld_0.3.3_amd64.deb"
+      ],
+      "exit_code": 0,
+      "before_binary_sha256": "b021d344c29849eaf2e67ba969b1c3df954bba69a0caa3b33b79eb305c77cf00",
+      "after_binary_sha256": "752d4f389a671196aa15a1b673b08b88d8ebbcc26b67f04822a58fe05102bbc6",
+      "package": "folimeld\t0.3.3"
+    },
+    "installed_binary_sha256": "752d4f389a671196aa15a1b673b08b88d8ebbcc26b67f04822a58fe05102bbc6",
+    "installed_package": "folimeld\t0.3.3",
+    "dpkg_audit": ""
+  },
+  "ubuntu_extracted": {
+    "mode": "extracted without installation",
+    "alive_after_12_seconds": true,
+    "exit_code_after_test": -15,
+    "output": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nThis plugin does not support propagateSizeHints()\n",
+    "installed_binary_unchanged": true,
+    "installed_package": "folimeld\t0.3.4",
+    "binary_sha256": "752d4f389a671196aa15a1b673b08b88d8ebbcc26b67f04822a58fe05102bbc6"
+  },
+  "gui_data": {
+    "original_unchanged": true,
+    "original_sha256": "c82a9b0bb388a2120fe570fd4a603e9038868cfc046b2164a301690e99c01610",
+    "saved_sha256": "5213f415e8e15cc3d1f39b61c729e2e9118000d16771fb2b27c4051caa913a96",
+    "pages": 3,
+    "rotations": [
+      90,
+      0,
+      0
+    ],
+    "page_text_preserved": true,
+    "gui_reopen_confirmed": true,
+    "qsettings": "[General]\nlanguage=ja\nlast_open_directory=/home/folimeld-test/verification/thumbnail-fix-20261112\n",
+    "app_log": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\nwarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.\n"
+  },
+  "gui_observations": [
+    "Correct initial thumbnail positions",
+    "Rotation preview without another edit or save",
+    "Undo and Redo redraw",
+    "Save as a separate PDF",
+    "GUI reopen of saved PDF"
+  ],
+  "limitations": [
+    "No new clean-environment dependency or install/removal cycle",
+    "Ubuntu test used extraction without replacing installed 0.3.4",
+    "Same private 0.3.3 package version; SHA-256 identifies this build",
+    "This build did not repeat the earlier IME, image-import, or encrypted-PDF GUI tests",
+    "Full Linux desktop sessions and other architectures untested"
+  ],
+  "screenshots": {
+    "01-kali-loaded.png": "046c3895fa09b1a0ffbcf151627e06b4a11367b4280fe932e960058e81d1f7f1",
+    "02-kali-rotated.png": "6dd1212da57a7851bc1f6bf789e38ebdce0e1da4432c89ded58925267f782310",
+    "03-kali-undo.png": "8d4c402e671210a856ac52140223b1509dcbb3655b23fc706f367182e06602a1",
+    "04-kali-redo.png": "6dd1212da57a7851bc1f6bf789e38ebdce0e1da4432c89ded58925267f782310",
+    "05-kali-saved.png": "ec8a99755ad15fa0142fb132e8835c15dfba457213f12f82dae37fd016aca48e",
+    "06-kali-reopened.png": "d6dafd4ddb6fa547009b46083cfb560132eb77a4fc5066c389b5039fd9d739e1"
+  }
+}
