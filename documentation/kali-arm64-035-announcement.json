@@ -1,0 +1,10 @@
+{
+  "account": "tyamada22",
+  "url": "https://x.com/tyamada22/status/2121351195285745708",
+  "displayed_at_jst": "2026-11-14 06:15",
+  "text": "Folimeld 0.3.5のKali 2026.3 ARM64向けDEB試験版を公開しました。ARM64でビルド・GUI検証、対応ソースと全16添付の公開後照合を完了。未署名DEB／glibc 2.43以上。制約はReleaseへ。\nhttps://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5",
+  "release_url": "https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5",
+  "posted_after_public_redownloads_and_main_push": true,
+  "main_before_post": "dbf975b1e927665d19852ba6bb6cc41844ffca11",
+  "public_text_release_card_and_timestamp_verified": true
+}

@@ -15,3 +15,5 @@
 GitHubの未署名DEB試験版、glibc>=2.43。Kali公式パッケージではない。他Kali版/現在のrolling/他ディストリ/実機ARM/完全なXFCE・GNOME・KDE・Wayland/IME/暗号化・フォームGUI/関連付け/旧版更新・rollbackは今回未検証。amd64や他OSの合格は流用しない。詳細は添付BUILD/KNOWN-LIMITATIONS/検証記録へ。全添付の公開後再取得・main反映・X案内完了まで次の公開へ進まない。
 
 公開完了: 全16添付を公開後に再取得し、サイズ/SHA256一致、既存公開添付とlatest保持を確認。main反映後にX案内を行う。
+
+X案内完了: https://x.com/tyamada22/status/2121351195285745708 。全16公開後添付照合とmaindbf975bのプッシュ後にtyamada22から投稿し、本文・Releaseカード・2026年11月14日06:15の公開表示を確認。
