@@ -1,0 +1,44 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "candidate_unchanged": true,
+  "source_archive_sha256": "f9a6add8b239c0da7f563128242023d880077f89e565cd38eb6ff2c51af4c079",
+  "extracted_source": "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/source-archive-review-r5/source",
+  "git_directory_absent": true,
+  "verified_manifest_files": 686,
+  "source_paths_from_manifest_match": true,
+  "commands": [
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/bin/python",
+        "tools/package_linux_alma_rpm.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/source-archive-review-r5/source/releases/almalinux/9.8/x86_64/folimeld-0.3.5-5.alma9_8.x86_64.rpm\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/folimeld-build/folimeld-candidates/alma9-20261112/build venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_license_info.py",
+        "tests/test_source_bundle.py",
+        "tests/test_linux_alma_rpm.py",
+        "--basetemp",
+        "/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/source-archive-review-r5/pytest-temp",
+        "-o",
+        "cache_dir=/home/folimeld-build/folimeld-candidates/alma9-release-readiness-20261112/source-archive-review-r5/pytest-cache",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "...............                                                 [100%]\n15 passed, 9 subtests passed in 0.20s\n",
+      "stderr": ""
+    }
+  ],
+  "limitations": [
+    "Source archive unpack, manifest-driven input selection, packaging preflight and focused tests; not a second binary rebuild or bit-reproducibility claim",
+    "Fixed existing build dependencies reused; no build environment reconstructed from source in this test"
+  ]
+}

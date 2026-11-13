@@ -1,0 +1,26 @@
+{
+  "date_jst": "2026-11-12",
+  "published": false,
+  "source_archive": "qt-everywhere-src-6.11.2.tar.xz",
+  "references_collected": [
+    {
+      "path": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libpsl/PSL-LICENSE.txt",
+      "bytes": 16726,
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04"
+    },
+    {
+      "path": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sha3/BRG_ENDIAN_LICENSE",
+      "bytes": 645,
+      "sha256": "2fed6f252ca4a7e813811de3cd3cd08183edd4138bdee909410ef6eee394e82c"
+    },
+    {
+      "path": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sha3/CC0_LICENSE",
+      "bytes": 7013,
+      "sha256": "1f2786e2c5befeb4dcba6638db6528bf96ef5d2cf24bc85ab5a81ef00abef59d"
+    }
+  ],
+  "references_missing": [],
+  "supplement_sha256": "b228737c8600dcbc683b4e7772314c41aea1d44290b98b5109c22bb2b12fe41c",
+  "candidate_unchanged": true,
+  "scope": "Completes explicit LicenseFile references in parsed attribution records for the selected modules; not complete linked-component proof"
+}
