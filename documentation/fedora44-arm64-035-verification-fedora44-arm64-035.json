@@ -1,0 +1,104 @@
+{
+  "date_jst": "2026-11-13",
+  "package": "folimeld-0.3.5-1.fc44.aarch64.rpm",
+  "size": 99584591,
+  "sha256": "a0f470cd059e3f7778d77c82ed7b8f183220423b655cc77c208ea6b12f99c504",
+  "executable_sha256": "42f43750a6e198313acaf6d199f9737405c2da56f3134e48ba2ad7b80f1e3e17",
+  "source": {
+    "git_commit": "1c04bd27524e34229212dc9d48e53b223e89e878",
+    "working_tree_changed": false,
+    "files_verified": 974,
+    "source_sha256": "02e8fdefc3d6ee838d8208a8cec2512589a2ee91919c075f31daca156b476228",
+    "result": "Git, ZIP and embedded manifest match"
+  },
+  "reproducibility": "Two clean build roots on one Fedora44 ARM64 VM produce identical ELF; RPM bytes differ because header build time is not normalized. Published candidate is final-r1 only.",
+  "tests": {
+    "platform": "Fedora44 ARM64 Python3.14",
+    "passed": 409,
+    "skipped": 9,
+    "subtests_passed": 67,
+    "ruff": "pass"
+  },
+  "acceptance": {
+    "os": "Fedora44 ARM64",
+    "kernel": "7.3.3-200.fc44.aarch64",
+    "environment": "QEMU HVF on internal Mac storage, UID1000, Xorg/Openbox",
+    "selinux": "Enforcing; application runs in normal unconfined user domain, no Snap-style application confinement claimed",
+    "fresh_install": true,
+    "same_candidate_full_removal_and_reinstall": true,
+    "documents_and_settings_hashes_preserved": true,
+    "operations": [
+      "rotation immediate thumbnail",
+      "undo/redo",
+      "page move",
+      "blank insertion/deletion",
+      "Save As",
+      "Japanese-path reopen (copy created via shell, not IME)",
+      "image folder conversion/save",
+      "clean exit",
+      "full package removal/reinstall",
+      "saved image PDF reopen/clean exit"
+    ],
+    "gui_exit_statuses": [
+      0,
+      0,
+      0
+    ],
+    "no_folimeld_processes_remain": true,
+    "pdf_validation": {
+      "platform": "Fedora44 ARM64 fresh execution, reused synthetic input labels are historical",
+      "edited_order": [
+        2,
+        1,
+        3
+      ],
+      "rotations": [
+        0,
+        90,
+        0
+      ],
+      "japanese_copy_identical": true,
+      "image_pages": [
+        {
+          "page": 1,
+          "width": 420,
+          "height": 595,
+          "decoded_pixels_identical": true
+        },
+        {
+          "page": 2,
+          "width": 420,
+          "height": 595,
+          "decoded_pixels_identical": true
+        }
+      ],
+      "fixture_hashes_unchanged": true,
+      "pdf_sha256": {
+        "fedora-image.pdf": "8f97c17c1c4dc549648938aebbd16e762c8a7a7264b000a5386ef8d6a61c92dd",
+        "encrypted.pdf": "2ca64015ea2dd61334dfbaf401b42e19dadb3bfb11a2c053ed118def8b927436",
+        "\u65e5\u672c\u8a9e\u4fdd\u5b58\u7d50\u679c.pdf": "64acec73312a0c6e5ad8b6097a29044fac52084e070a2dc940eb0aa1223f2626",
+        "input.pdf": "734aaee7a9f8b7c0093be023ed039ecf54a1792b69b7aa0c36db3a4e36498732",
+        "fedora-edited.pdf": "64acec73312a0c6e5ad8b6097a29044fac52084e070a2dc940eb0aa1223f2626"
+      }
+    }
+  },
+  "minimum_root": {
+    "official_Fedora44_dependencies_only": true,
+    "install_weak_deps": false,
+    "regular_user": 1000,
+    "offscreen_alive_seconds": 15,
+    "timeout_exit": 124,
+    "scope": "Startup liveness only, distinct from normal GUI exit0."
+  },
+  "native": {
+    "all_inner_elf_aarch64": 200,
+    "official_wheel_members": 105,
+    "exact_official_Fedora_binary_RPM_members": 95,
+    "binary_rpms": 38,
+    "signed_source_rpms": 34,
+    "bootloader_original_sections_match_official_wheel": true
+  },
+  "unsigned_local_RPM": true,
+  "amd64_or_Ubuntu_acceptance_used": false,
+  "limitations": "KNOWN-LIMITATIONS.txt"
+}

@@ -46,6 +46,11 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.5 Fedora 44 ARM64 preview - 2026-11-13
+
+- Publish [Fedora44 ARM64 RPM 0.3.5-1](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.5). Fresh ARM64 checks cover installation, editing/save, image PDF, full removal/reinstall with document/settings preservation and minimum-dependency startup. SELinux remained Enforcing; all 3 GUI runs exited normally.
+- Verify 409 passing Fedora ARM64 tests/9 skipped/67 subtests, identical ELF from two output roots on one VM, 974 inputs/200 AArch64 native members, 34 signed source RPMs and public redownloads of all 16 attachments. RPM header times differ. Unsigned GitHub preview; physical ARM/Wayland/IME/cross-version upgrade remain untested. Preserve existing downloads and latest.
+
 ## 0.3.5 Linux strict Snap ARM64 preview - 2026-11-13
 
 - Publish [ARM64 strict Snap 0.3.5 for Ubuntu24.04](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5). Fresh Snap-specific checks cover editing, image conversion/save, clean exits, old-version update, same-candidate reinstall and document/settings preservation. Record AppArmor enforce, Seccomp2 and limited allow/deny probes.

@@ -1,0 +1,17 @@
+{
+  "vm_storage": "Mac internal workspace",
+  "shutdown": "both build/test requested normal shutdown; QEMU pid files removed",
+  "disks_retained": [
+    "build/disk.qcow2",
+    "build/vars.fd",
+    "build/seed.iso",
+    "test/disk.qcow2",
+    "test/vars.fd",
+    "test/seed.iso",
+    "media/Fedora-Cloud-Base-Generic-44-1.7.aarch64.qcow2"
+  ],
+  "external_VM_starts": 0,
+  "VM_ISO_deletions": 0,
+  "new_external_offloads": 0,
+  "existing_archive_policy": "unchanged; verify copy and recovery before any future source deletion"
+}

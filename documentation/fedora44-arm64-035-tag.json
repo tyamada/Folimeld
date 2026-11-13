@@ -1,0 +1,37 @@
+{
+  "reference": {
+    "ref": "refs/tags/fedora44-arm64-v0.3.5",
+    "node_id": "REF_kwDOUHFkG79yZWZzL3RhZ3MvZmVkb3JhNDQtYXJtNjQtdjAuMy41",
+    "url": "https://api.github.com/repos/tyamada/Folimeld/git/refs/tags/fedora44-arm64-v0.3.5",
+    "object": {
+      "sha": "823e4cb4cb274eb9d15c6506a10662bde1ad2155",
+      "type": "tag",
+      "url": "https://api.github.com/repos/tyamada/Folimeld/git/tags/823e4cb4cb274eb9d15c6506a10662bde1ad2155"
+    }
+  },
+  "tag": {
+    "node_id": "TA_kwDOUHFkG9oAKDgyM2U0Y2I0Y2IyNzRlYjlkMTVjNjUwNmExMDY2MmJkZTFhZDIxNTU",
+    "sha": "823e4cb4cb274eb9d15c6506a10662bde1ad2155",
+    "url": "https://api.github.com/repos/tyamada/Folimeld/git/tags/823e4cb4cb274eb9d15c6506a10662bde1ad2155",
+    "tagger": {
+      "name": "Takuma Yamada",
+      "email": "takuma.yamada22@gmail.com",
+      "date": "2026-11-13T03:57:51Z"
+    },
+    "object": {
+      "sha": "43ab1cc508187090f05a02c8f505c8a13ffe0569",
+      "type": "commit",
+      "url": "https://api.github.com/repos/tyamada/Folimeld/git/commits/43ab1cc508187090f05a02c8f505c8a13ffe0569"
+    },
+    "tag": "fedora44-arm64-v0.3.5",
+    "message": "Folimeld 0.3.5 Fedora 44 ARM64 RPM preview with matching source and verification records\n",
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "source_commit": "1c04bd27524e34229212dc9d48e53b223e89e878"
+}

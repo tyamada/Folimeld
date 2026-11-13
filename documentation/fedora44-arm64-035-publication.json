@@ -1,0 +1,94 @@
+{
+  "verified_utc": "2026-11-13T04:03:42.720504+00:00",
+  "release_url": "https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.5",
+  "tag": "fedora44-arm64-v0.3.5",
+  "tag_commit": "43ab1cc508187090f05a02c8f505c8a13ffe0569",
+  "draft": false,
+  "prerelease": true,
+  "latest_unchanged": "linux-v0.3.4",
+  "all_prior_public_assets_preserved": true,
+  "downloaded_after_publication": true,
+  "assets": [
+    {
+      "name": "BUILD.txt",
+      "size": 2512,
+      "sha256": "8f715a25e003cff67310293a293b389f47426ab34517d1f51bc2a0389c4b59c1"
+    },
+    {
+      "name": "Folimeld-0.3.4-Pillow-wheel-source-and-notice-supplement.zip",
+      "size": 5853009,
+      "sha256": "a5811c2c3dfb45344b22f0a1bb19b305034c045f4912e6f6a91dcfa5591790d0"
+    },
+    {
+      "name": "Folimeld-0.3.4-third-party-source-set.tar",
+      "size": 1456230400,
+      "sha256": "306c4c9525c5240c5564472b762b05a9c81aff7df362a117dc78049e1c748b7e"
+    },
+    {
+      "name": "Folimeld-fedora44-arm64-build-recipe.tar.gz",
+      "size": 21667,
+      "sha256": "30450d8a24fae503ae040f6d446751e7a2acc3e6f813f796644e31ed249c41c7"
+    },
+    {
+      "name": "Folimeld-fedora44-arm64-source-supplement.tar",
+      "size": 286658560,
+      "sha256": "a77515a3cc55df3d874fab60b2b6b7e42c34e61e4214ddefd09916dc7ade94cd"
+    },
+    {
+      "name": "Folimeld-source-02e8fdefc3d6ee838d8208a8cec2512589a2ee91919c075f31daca156b476228.json",
+      "size": 128751,
+      "sha256": "c03c707c8d3f25ac886696718ef6dda6f1e4e220deeca729733092162286fb89"
+    },
+    {
+      "name": "Folimeld-source-02e8fdefc3d6ee838d8208a8cec2512589a2ee91919c075f31daca156b476228.zip",
+      "size": 24931185,
+      "sha256": "02e8fdefc3d6ee838d8208a8cec2512589a2ee91919c075f31daca156b476228"
+    },
+    {
+      "name": "KNOWN-LIMITATIONS.txt",
+      "size": 2509,
+      "sha256": "c8c4e6ca915e90ccd3151e7b51ddd76902cd00bb189b41d98b6c7e219768e995"
+    },
+    {
+      "name": "RELEASE-NOTES.txt",
+      "size": 4649,
+      "sha256": "c8dc1c7121960c036fe1f6d30e601708b2bff111ebfc8e2e5d876ab73fb6f459"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 1684,
+      "sha256": "82df325b5c1dc5d971f2f63a6a005f332daec9b525a0e78666374148e232e747"
+    },
+    {
+      "name": "folimeld-0.3.5-1.fc44.aarch64.rpm",
+      "size": 99584591,
+      "sha256": "a0f470cd059e3f7778d77c82ed7b8f183220423b655cc77c208ea6b12f99c504"
+    },
+    {
+      "name": "folimeld-0.3.5-1.fc44.aarch64.rpm-a0f470cd059e3f7778d77c82ed7b8f183220423b655cc77c208ea6b12f99c504.json",
+      "size": 784,
+      "sha256": "c690e6bf5e4447b4c9fbc041069e4ef93651540d4881c4753e36a1e98e793940"
+    },
+    {
+      "name": "native-dependency-provenance.json",
+      "size": 297624,
+      "sha256": "797dac59b58d23a2442b095c446457951284fec3b47cb20aa1b9c1dd67a15399"
+    },
+    {
+      "name": "third-party-notices.tar.gz",
+      "size": 417494,
+      "sha256": "ec1a4d2c799abb0e9b72250496775c04acaedc2c1197c7b32805571c212268f9"
+    },
+    {
+      "name": "verification-fedora44-arm64-035.json",
+      "size": 3584,
+      "sha256": "e6297f45378d36d65f57e325a29e40fe3bcd3476523f6daed025cfdcc383b8ba"
+    },
+    {
+      "name": "verification-records-fedora44-arm64-035.zip",
+      "size": 597482,
+      "sha256": "3c4ba84553c0b301a9161ceb01f595c1ec69f98863c7273fc91a9657d1b380ed"
+    }
+  ],
+  "result": "all sizes and SHA-256 match"
+}

@@ -51,6 +51,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | Ubuntu 24.04.4 / Debian 13.6 / Kali Rolling 2026.3（WSL2／WSLgで検証） | amd64 | DEB / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) |
 | openSUSE Tumbleweed 20261110（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) |
 | openSUSE Leap 16.1（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5) |
+| Fedora 44（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.5) |
 | Fedora 44（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5) |
 | Fedora 45（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) |
 | AlmaLinux 9.8（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5) |
@@ -209,6 +210,14 @@ folimeld
 ```
 
 PDF編集・日本語名保存とGIO再読込、暗号化PDF、画像PDF、日本語入力、更新・削除再導入、既存試験PDF/設定の保持、新規最小installrootのoffscreen起動を確認しました。通常デスクトップ・通常ファイルマネージャー操作・ARM64・Tumbleweed・公開Ubuntu/Debian 0.3.4からの移行は対象外です。最小依存試験はchroot内であり、独立WSLブートや最小環境のGUI/IMEは未検証です。合成GUI入力の失敗と再試験、wheel来歴等の制約は[Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5)と[KNOWN-LIMITATIONS.txt](https://github.com/tyamada/Folimeld/releases/download/opensuse-leap161-amd64-v0.3.5/KNOWN-LIMITATIONS.txt)を参照してください。
+
+### Fedora 44 ARM64試験版
+
+[**Fedora 44 ARM64 RPM 0.3.5-1**](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.5)を公開しました。一般ユーザーXorg/Openbox・SELinux Enforcingで新規導入、主要PDF編集・保存・日本語パス再読込・画像変換・正常終了、完全削除と同一候補再導入・文書/設定保持を確認。Fedora ARM64で409テスト成功、974ソース入力・200 AArch64 ELFの出所、全16添付の公開後再取得を照合済みです。同一VMの別ビルド先で実行ファイルは一致しましたが、RPMヘッダー時刻は異なります。GitHubの未署名RPMで、glibc2.43以上が必要です。実機ARM・GNOME/Wayland・IME・旧版からの更新等は未検証。[検証・制約](documentation/fedora44-arm64-035-validation_ja.md)。
+
+```bash
+sudo dnf install ./folimeld-0.3.5-1.fc44.aarch64.rpm
+```
 
 ### Fedora 44 amd64試験版
 

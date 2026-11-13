@@ -71,3 +71,11 @@ DEB公開・全16添付の公開後照合・main反映・X案内完了後に、S
 公開完了: [linux-snap-arm64-v0.3.5](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5)をprerelease/latest=falseで公開。全16添付（1,690,964,765 bytes）を公開後に全件再取得し、サイズとSHA-256が一致。既存公開Releaseの添付ID・名前・サイズ・digestは不変、latestはlinux-v0.3.4を維持。[公開後照合JSON](linux-snap-arm64-035-publication-result-2026-11-13.json)。
 
 X案内完了: https://x.com/tyamada22/status/2121080042847617395 。全16添付の公開後照合とmain 739e489のpush成功後にtyamada22から投稿し、本文・Releaseカード・公開日時を確認。0.3.5 ARM64 strict Snapの公開工程は完了し、次のパッケージ公開は未開始。
+
+## Fedora44 ARM64 RPM 0.3.5への展開（2026-11-13、Snap完了後の追加）
+
+Snap公開・全添付照合・X案内完了後、Fedora44専用ARM64ビルド/実行VMをMac内蔵に準備。公式イメージの署名・SHA256を確認。最終ソース1c04bd2（差分なし）、タグfedora44-arm64-v0.3.5は検証文書追加後43ab1cc。[検証記録](fedora44-arm64-035-validation_ja.md)。Fedora44 ARM64を公開済みへ変更し、他のFedora45/AlmaLinux/openSUSE/Kali ARM64は未検証のまま。amd64/Ubuntuの実行結果をFedora ARM64合格には数えない。
+
+全974ソース入力、同梱200 AArch64実体（公式wheel105/Fedora RPM95）を確認。38署名付きbinary RPMに対応する34exact signed SRPMを添付。別ビルド先ELF一致（RPMヘッダー時刻は異なる）、409テスト成功、3GUI正常終了、完全削除再導入と文書/設定保持、最小依存起動を確認。SELinux維持。実機/Wayland/IME/旧版更新などは未検証。全16公開添付の再ダウンロード照合とX案内を完了してから次へ進む。
+
+専用VM2台を内蔵で通常停止し、QCOW2 overlay・backing image・UEFI vars・seedを保持。外付けChatGPT-Test上での起動0件、VM/ISOの削除・新規外付け退避0件。既存退避計画の削除前コピー/復旧確認条件を変更しない。従来の外付けアーカイブと既存公開物を保持。

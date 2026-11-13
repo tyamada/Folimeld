@@ -46,6 +46,11 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.5 Fedora 44 ARM64試験版 - 2026-11-13
+
+- [Fedora44 ARM64 RPM 0.3.5-1](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.5)を公開。ARM64固有の新規導入・編集保存・画像PDF・完全削除再導入と文書/設定保持、最小依存構成起動を確認。SELinux Enforcingを維持し、GUI3回正常終了。
+- Fedora ARM64テスト409 passed/9 skipped/67 subtests、同一VMの別ビルド先でELF一致、974入力と200 AArch64実体の対応、34署名付きSRPM、全16添付の公開後再取得を照合。RPMヘッダー時刻は異なる。未署名GitHub試験配布で、実機/Wayland/IME/旧版更新等は未検証。既存公開物とlatestを保持。
+
 ## 0.3.5 Linux strict Snap ARM64試験版 - 2026-11-13
 
 - [Ubuntu24.04向けARM64 strict Snap 0.3.5](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5)を公開。Snap固有の編集・画像変換・保存・正常終了、旧版更新・同一候補再導入と文書/設定保持を今回確認。AppArmor enforce・Seccomp2と限定的な許可/拒否試験を記録。

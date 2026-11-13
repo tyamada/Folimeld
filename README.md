@@ -51,6 +51,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | Ubuntu 24.04.4 / Debian 13.6 / Kali Rolling 2026.3 (verified on WSL2/WSLg) | amd64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) |
 | openSUSE Tumbleweed 20261110 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) |
 | openSUSE Leap 16.1 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5) |
+| Fedora 44 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.5) |
 | Fedora 44 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5) |
 | Fedora 45 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) |
 | AlmaLinux 9.8 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5) |
@@ -209,6 +210,14 @@ folimeld
 ```
 
 Verification covered PDF editing, Japanese filename saving and GIO reopening, encrypted PDFs, image PDFs, Japanese input, updates, removal/reinstallation, preservation of existing test PDFs/settings, and offscreen startup in a fresh minimal installroot. Conventional desktops, conventional file-manager interaction, ARM64, Tumbleweed, and migration from public Ubuntu/Debian 0.3.4 are outside this verified scope. The minimal-dependency test uses chroot and does not verify independent WSL boot or GUI/IME in the minimal environment. See the [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5) and [KNOWN-LIMITATIONS.txt](https://github.com/tyamada/Folimeld/releases/download/opensuse-leap161-amd64-v0.3.5/KNOWN-LIMITATIONS.txt) for synthetic GUI input failures/retests and wheel-provenance limits.
+
+### Fedora 44 ARM64 preview
+
+[**Fedora 44 ARM64 RPM 0.3.5-1**](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.5) is available. Fresh regular-user Xorg/Openbox checks with SELinux Enforcing cover installation, major PDF editing/save, Japanese-path reopen, image conversion, clean exits, full removal/same-candidate reinstallation and document/settings preservation. Fedora ARM64 passed 409 tests. Matching 974 source inputs/200 AArch64 ELF and public redownloads of all 16 attachments were verified. Executable bytes match across two clean output roots on one VM; RPM header times differ. This unsigned GitHub RPM requires glibc 2.43 or later. Physical ARM, full GNOME/Wayland, IME and cross-version updates remain untested. [Verification and limitations (Japanese)](documentation/fedora44-arm64-035-validation_ja.md).
+
+```bash
+sudo dnf install ./folimeld-0.3.5-1.fc44.aarch64.rpm
+```
 
 ### Fedora 44 amd64 preview
 
