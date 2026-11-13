@@ -111,3 +111,5 @@ Leap16.1 ARM64のX案内完了: https://x.com/tyamada22/status/21211636244840534
 ユーザー指示により専用の新しい外付けSSDでVMを実行する方針へ変更し、内蔵実空き100GBの再開待ちを解除した。大容量作業はSSD、重要更新はNASにも保管し、既存データ・Time Machine履歴を保持。旧ストレージや完了済み移行・削除手順は再実行しない。これは過去の内蔵限定記録の訂正ではなく現行方針の更新。
 
 次順位は既存梱包処理と公式イメージがあるTumbleweed ARM64をKaliより先行。snapshot20261111向け0.3.5 RPMを新規ARM64環境でビルド・検証した。[検証と制約](opensuse-tumbleweed-arm64-035-validation_ja.md)を参照。410tests/69subtests成功、9skips、GUI3回終了0、文書/設定保持、1001ソース入力、201AArch64実体、32signed SRPMを照合。公開後の全添付再取得・main反映・X案内が完了するまでは公開工程未完了。Kali ARM64は未着手・未検証のまま。
+
+Tumbleweed ARM64公開完了: [opensuse-tumbleweed-arm64-v0.3.5](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5)、タグ74de136、本体c8fb78a。全16添付の公開後サイズ/SHA256照合と既存公開物/latest保持を確認。次のKali ARM64へ進む前にmain反映とX案内を完了する。

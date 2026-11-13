@@ -46,6 +46,11 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.5 openSUSE Tumbleweed ARM64試験版 - 2026-11-14
+
+- [Tumbleweed20261111 ARM64 RPM0.3.5-1](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5)を公開。一般ユーザーXorg/IceWM、SELinux EnforcingでGUI3回終了0、PDF編集/画像変換/保存、完全削除再導入と文書/設定保持、最小依存起動を確認。
+- 410tests/69subtests成功、9skip、ruff成功、別出力先ELF一致。1001入力・201AArch64実体・32signed SRPM・全16公開後添付再取得を照合。未署名GitHub試験版、glibc>=2.44。別スナップショット/実機/Wayland/IME/旧版更新は未検証。最小デスクトップのCJK文字表示には追加フォントが必要。既存公開物/latestを保持。
+
 ## 0.3.5 openSUSE Leap 16.1 ARM64試験版 - 2026-11-13
 
 - [Leap16.1 ARM64 RPM 0.3.5-1](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5)を公開。ARM64固有の新規導入、PDF編集/画像変換/保存、完全削除再導入と文書・設定保持、最小依存起動を確認。SELinux Enforcing、GUI3回終了0。

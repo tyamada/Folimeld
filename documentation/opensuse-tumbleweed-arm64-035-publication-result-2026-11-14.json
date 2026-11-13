@@ -1,0 +1,94 @@
+{
+  "verified_utc": "2026-11-13T20:09:22.074199+00:00",
+  "release_url": "https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5",
+  "tag": "opensuse-tumbleweed-arm64-v0.3.5",
+  "tag_commit": "74de13681d270baf88949865d0f999bae7b9c220",
+  "draft": false,
+  "prerelease": true,
+  "latest_unchanged": "linux-v0.3.4",
+  "all_prior_public_assets_preserved": true,
+  "downloaded_after_publication": true,
+  "assets": [
+    {
+      "name": "BUILD.txt",
+      "size": 2027,
+      "sha256": "f3bb347cc3ffa51564fbc0f8e96b1e1cf27913e8f79a453eace8309a5b58eb29"
+    },
+    {
+      "name": "Folimeld-0.3.4-Pillow-wheel-source-and-notice-supplement.zip",
+      "size": 5853009,
+      "sha256": "a5811c2c3dfb45344b22f0a1bb19b305034c045f4912e6f6a91dcfa5591790d0"
+    },
+    {
+      "name": "Folimeld-0.3.4-third-party-source-set.tar",
+      "size": 1456230400,
+      "sha256": "306c4c9525c5240c5564472b762b05a9c81aff7df362a117dc78049e1c748b7e"
+    },
+    {
+      "name": "Folimeld-opensuse-tumbleweed-arm64-build-recipe.tar.gz",
+      "size": 18694,
+      "sha256": "f3b823df328ade0c774af1e7d9073c822502f47bf98ab1ff34e42c1677c37f48"
+    },
+    {
+      "name": "Folimeld-opensuse-tumbleweed-arm64-source-supplement.tar",
+      "size": 249743360,
+      "sha256": "de19bf83b8b534447a2f97f7bae8280a3ee815fde9fe1f68ddc33f80dde32c2e"
+    },
+    {
+      "name": "Folimeld-source-6a8d14476a7c1cd11b2c7175346076b0705f085cb2e936d8217f55db191992eb.json",
+      "size": 132236,
+      "sha256": "4d37da74111d4e4457ced7ee1a3f6b180108e8fad574cc150ac2ac573da8d0e0"
+    },
+    {
+      "name": "Folimeld-source-6a8d14476a7c1cd11b2c7175346076b0705f085cb2e936d8217f55db191992eb.zip",
+      "size": 25909015,
+      "sha256": "6a8d14476a7c1cd11b2c7175346076b0705f085cb2e936d8217f55db191992eb"
+    },
+    {
+      "name": "KNOWN-LIMITATIONS.txt",
+      "size": 2628,
+      "sha256": "80a3299fd084e47dd88a8ca331854d550631823ac3dd5285a9cc4178ff0235f7"
+    },
+    {
+      "name": "RELEASE-NOTES.txt",
+      "size": 3518,
+      "sha256": "4c6324a11e9271c5add954d65ef609512ee955d6f7f01605a283f426888eeb91"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 1740,
+      "sha256": "0c2e990c2449d82b78dcd82b3018503bd7150eadd532178f994a01f2a24ef145"
+    },
+    {
+      "name": "folimeld-0.3.5-1.tw20261111.aarch64.rpm",
+      "size": 98026359,
+      "sha256": "f4273f98aca2252419b2a8cd9a3ea2e9e5c79a9c846e4c718f38727769397c6a"
+    },
+    {
+      "name": "folimeld-0.3.5-1.tw20261111.aarch64.rpm-f4273f98aca2252419b2a8cd9a3ea2e9e5c79a9c846e4c718f38727769397c6a.json",
+      "size": 790,
+      "sha256": "df204b638ef1feafee2aa216550f374800c28f32079528df96f35f9444a843ed"
+    },
+    {
+      "name": "native-dependency-provenance.json",
+      "size": 383070,
+      "sha256": "7dab91c944f7ee3762e0eeb834f844bb54e6ba394f7bcbdcfc98583ad31de5f2"
+    },
+    {
+      "name": "third-party-notices.tar.gz",
+      "size": 660286,
+      "sha256": "5054faf6a234a0f78f521bcee2499d45f6900eb0aeaf0302403086a254e030f8"
+    },
+    {
+      "name": "verification-opensuse-tumbleweed-arm64-035.json",
+      "size": 2618,
+      "sha256": "abfe3165df9142b5f61857bfeef1312ae1e8340c1045aec7e375362f9dd887a6"
+    },
+    {
+      "name": "verification-records-opensuse-tumbleweed-arm64-035.zip",
+      "size": 599385,
+      "sha256": "a96a16b9928d146355e97bdb6e6bea598a8f234855ffa6bc2859a2f44010d285"
+    }
+  ],
+  "result": "all sizes and SHA-256 match"
+}

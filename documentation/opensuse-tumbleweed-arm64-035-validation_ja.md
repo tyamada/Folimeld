@@ -11,3 +11,5 @@
 同梱201AArch64実体の内訳は公式wheel105・署名付きopenSUSE RPM内容96。48binary RPMの内容と32exact signed SRPMを照合し、不足告知は対応ソースから補足。公式PyInstaller起動部の元セクション一致。全14wheelが先行検証済みARM64入力とSHA256一致するため、共通0.3.4依存ソースTAR/Pillow補足を現在のTumbleweedソース補足・告知・出所JSONと組み合わせる。余剰の過去OS資料は今回の対応表や合格に数えない。wheelの独立再ビルドは未実施。
 
 GitHubの未署名試験版、glibc>=2.44、openSUSE公式パッケージではない。別スナップショット・Leap/SLE・実機ARM・完全なGNOME/KDE/Wayland・IME・暗号化/フォームGUI・ファイル関連付け・旧版更新は今回未検証。通常ユーザードメインでSnap同様のアプリ単位制限はない。詳細は添付BUILD/KNOWN-LIMITATIONS/検証資料。amd64や他OSの合格は流用しない。全添付の公開後再取得照合・main反映・X案内完了まで次の公開へ進まない。
+
+公開完了: 新規Releaseの全16添付を公開後に再取得し、サイズ/SHA256一致を確認。既存公開添付とlatestを保持。X案内はmain反映後に行う。

@@ -46,6 +46,11 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.5 openSUSE Tumbleweed ARM64 preview - 2026-11-14
+
+- Publish [Tumbleweed20261111 ARM64 RPM0.3.5-1](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5). Normal-user Xorg/IceWM with SELinux Enforcing;all3GUI exits0. Verify PDF editing/image conversion/save,full removal/reinstall preserving documents/settings,and minimum-dependency startup.
+- 410tests/69subtests pass,9skips;ruff passes;ELF matches across two output roots. Verify1001inputs,201AArch64 members,32signed SRPMs and all16public redownloads. Unsigned GitHub preview,glibc>=2.44. Other snapshots/physical ARM/Wayland/IME/cross-version updates untested. Minimal desktop requires added fonts for CJK glyphs. Preserve previous releases/latest.
+
 ## 0.3.5 openSUSE Leap 16.1 ARM64 preview - 2026-11-13
 
 - Publish [Leap16.1 ARM64 RPM0.3.5-1](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5). Fresh ARM64 checks cover installation, PDF editing/image conversion/save, full removal/reinstall with document/settings preservation and minimum-dependency startup. SELinux Enforcing; all 3 GUI runs exited 0.
