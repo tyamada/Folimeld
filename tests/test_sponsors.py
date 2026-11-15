@@ -7,14 +7,14 @@ from folimeld.app import MainWindow
 from folimeld.i18n import I18n, LANGUAGES
 
 
-@pytest.mark.parametrize("platform", ["linux", "win32", "darwin"])
-def test_sponsors_entry_is_linux_only(platform):
+@pytest.mark.parametrize("platform", ["linux", "freebsd15", "netbsd11", "openbsd8", "win32", "darwin"])
+def test_sponsors_entry_by_platform(platform):
     app = QApplication.instance() or QApplication([])
     with patch("folimeld.app.sys.platform", platform), patch("folimeld.app.is_packaged", return_value=False):
         window = MainWindow()
     try:
-        assert hasattr(window, "sponsors_action") == (platform == "linux")
-        if platform == "linux":
+        assert hasattr(window, "sponsors_action") == (platform not in {"win32", "darwin"})
+        if platform not in {"win32", "darwin"}:
             with patch("folimeld.support_dialog.QDesktopServices.openUrl", return_value=False) as open_url:
                 window.sponsors_action.trigger()
                 dialog = window.sponsors_dialog

@@ -416,6 +416,8 @@ Microsoft Store版 1.0.1.0 では、応援購入を提供していません。
 
 Linux版では「ヘルプ → 開発を応援する…」に [GitHub Sponsors](https://github.com/sponsors/tyamada) への案内を表示します。案内画面のボタンからブラウザーで支援ページを開けます。支援は任意であり、利用できる機能は支援の有無で変わりません。
 
+次版向けのソースでは、この案内をFreeBSD・NetBSD・OpenBSD、専用ランチャーから起動するmacOS Homebrew版、正規ランチャーから起動するWindows uv版にも追加しています。Homebrew版はFormulaの更新が必要です。公開済みパッケージには遡って反映されません。Store版・従来のmacOSアプリ・通常のWindowsソース起動ではGitHub Sponsorsの案内を表示しません。
+
 ## TODO
 
 - Windows 11 x64で、Store版1.0.1.0からの更新と、設定・PDF操作の保持を検証する。

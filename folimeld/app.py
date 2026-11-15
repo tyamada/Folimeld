@@ -3,6 +3,7 @@ import logging
 from pathlib import Path
 
 from .source_profile import application_settings
+from .distribution import sponsors_available
 
 from PySide6.QtCore import QStandardPaths, QTimer, Qt
 from PySide6.QtGui import QAction, QCloseEvent, QIcon, QKeySequence, QTransform
@@ -143,7 +144,7 @@ class MainWindow(QMainWindow):
             self.support_action = self._action("support_title", self.show_support)
             self.support_action.setIconVisibleInMenu(True)
             help_menu.addAction(self.support_action)
-        if sys.platform == "linux":
+        if sponsors_available():
             self.sponsors_action = self._action("support_title", self.show_sponsors)
             help_menu.addAction(self.sponsors_action)
         toolbar = QToolBar(self.tr_("toolbar")); toolbar.setMovable(False)
@@ -557,8 +558,13 @@ class MainWindow(QMainWindow):
         else: event.ignore()
 
 
-def run(*, source_uv: bool = False) -> int:
+def run(*, source_uv: bool = False, distribution: str | None = None) -> int:
+    if distribution is not None:
+        if (distribution != "homebrew" or sys.platform != "darwin"
+                or getattr(sys, "frozen", False) or source_uv):
+            raise RuntimeError("The Homebrew entry point requires an unfrozen macOS process.")
     app = QApplication(sys.argv)
+    app.setProperty("folimeld_distribution", distribution)
     app.setOrganizationName("Folimeld")
     app.setApplicationName("Folimeld-UV" if source_uv else "Folimeld")
     if source_uv:

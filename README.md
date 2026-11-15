@@ -416,6 +416,8 @@ Microsoft Store version 1.0.1.0 does not offer supporter purchases.
 
 In the Linux edition, **Help → Support development…** displays information about [GitHub Sponsors](https://github.com/sponsors/tyamada). The button in the dialog opens the support page in your browser. Support is optional, and all features remain available whether or not you contribute.
 
+The source for the next release also enables this guidance on FreeBSD, NetBSD and OpenBSD, macOS Homebrew builds using the dedicated launcher, and Windows uv builds using the regular launcher. Homebrew requires a formula update. Published packages are not changed retroactively. GitHub Sponsors guidance is not shown in Store builds, legacy macOS apps or ordinary Windows source launches.
+
 ## TODO
 
 - Verify the Windows 11 x64 upgrade from Store version 1.0.1.0, including preference retention and PDF operations.
