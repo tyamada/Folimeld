@@ -4,7 +4,7 @@ from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
 
-def configure_logging(directory: str | Path) -> None:
+def configure_logging(directory: str | Path, *, strict: bool = False) -> None:
     logger = logging.getLogger('folimeld')
     if logger.handlers:
         return
@@ -14,6 +14,8 @@ def configure_logging(directory: str | Path) -> None:
         handler = RotatingFileHandler(root / 'folimeld.log', maxBytes=1024 * 1024,
                                       backupCount=2, encoding='utf-8')
     except OSError:
+        if strict:
+            raise
         # Diagnostics must not prevent startup on a read-only profile.
         logger.addHandler(logging.NullHandler())
         return

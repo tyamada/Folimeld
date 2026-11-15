@@ -10,7 +10,7 @@ from folimeld.app import BUTTON_STYLES, MainWindow
 def test_button_display_applies_and_persists(mode):
     app = QApplication.instance() or QApplication([])
     settings = {}
-    with (patch("folimeld.app.QSettings") as factory,
+    with (patch("folimeld.app.application_settings") as factory,
           patch("folimeld.app.is_packaged", return_value=False)):
         factory.return_value.value.side_effect = lambda key, default=None: settings.get(key, default)
         factory.return_value.setValue.side_effect = settings.__setitem__
@@ -41,7 +41,7 @@ def test_button_display_applies_and_persists(mode):
 
 def test_invalid_button_display_falls_back_to_text():
     app = QApplication.instance() or QApplication([])
-    with (patch("folimeld.app.QSettings") as factory,
+    with (patch("folimeld.app.application_settings") as factory,
           patch("folimeld.app.is_packaged", return_value=False)):
         factory.return_value.value.side_effect = lambda key, default=None: "unknown" if key == "button_display" else default
         window = MainWindow()

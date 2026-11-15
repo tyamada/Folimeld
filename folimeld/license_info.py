@@ -57,6 +57,12 @@ def installed_notices(*, strict: bool = True) -> str:
 
 def license_documents() -> list[tuple[str, str]]:
     root = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent.parent))
+    from .source_profile import source_profile_active
+
+    if not getattr(sys, 'frozen', False) and source_profile_active():
+        from .uv_license_info import uv_license_documents
+        return uv_license_documents(root)
+
     documents = [("Folimeld", (root / "LICENSE").read_text(encoding="utf-8"))]
     for path in sorted((root / "licenses").glob("*.txt")):
         documents.append((path.stem, path.read_text(encoding="utf-8")))

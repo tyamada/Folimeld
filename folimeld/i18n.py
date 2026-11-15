@@ -4,7 +4,9 @@ import sys
 import ctypes
 from pathlib import Path
 
-from PySide6.QtCore import QLibraryInfo, QLocale, QSettings, QTranslator
+from .source_profile import application_settings
+
+from PySide6.QtCore import QLibraryInfo, QLocale, QTranslator
 
 
 LANGUAGES = {
@@ -38,7 +40,7 @@ def install_qt_translator(app, language: str) -> QTranslator:
 
 class I18n:
     def __init__(self) -> None:
-        settings = QSettings()
+        settings = application_settings()
         saved = settings.value("language", "system")
         system = self._system_language()
         self.language = system if saved == "system" and system in LANGUAGES else saved

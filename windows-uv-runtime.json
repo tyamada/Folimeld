@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "platform": "windows-x86_64",
+  "python": {
+    "version": "3.12.16",
+    "build": "20261110",
+    "archive": "cpython-3.12.16+20261110-x86_64-pc-windows-msvc-install_only.tar.gz",
+    "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.12.16%2B20261110-x86_64-pc-windows-msvc-install_only.tar.gz",
+    "sha256": "e23fe5b16926de1d81661b1a97352e89fb167549c55a6825796ccd0f32ec7f1b"
+  },
+  "uv": {
+    "version": "0.13.8",
+    "url": "https://github.com/astral-sh/uv/releases/download/0.13.8/uv-x86_64-pc-windows-msvc.zip",
+    "sha256": "529e78a9cec6cd7e3e014f7ecd8bda0c113969d4ed0f2efeedb85c30943325b8"
+  },
+  "lock_sha256": "7e994b4c231536fb5c53d79959761bc426bd9ff9585b578165f1fd67ec19077f",
+  "dependencies": {
+    "cffi": "2.1.1",
+    "cryptography": "50.0.2",
+    "pillow": "12.3.0",
+    "pycparser": "3.12",
+    "pymupdf": "1.28.2",
+    "pyside6": "6.11.2",
+    "pyside6-addons": "6.11.2",
+    "pyside6-essentials": "6.11.2",
+    "shiboken6": "6.11.2",
+    "typing-extensions": "4.16.0",
+    "winrt-runtime": "3.2.1",
+    "winrt-windows-foundation": "3.2.1",
+    "winrt-windows-foundation-collections": "3.2.1",
+    "winrt-windows-services-store": "3.2.1"
+  }
+}

@@ -2,7 +2,9 @@ import sys
 import logging
 from pathlib import Path
 
-from PySide6.QtCore import QSettings, QStandardPaths, QTimer, Qt
+from .source_profile import application_settings
+
+from PySide6.QtCore import QStandardPaths, QTimer, Qt
 from PySide6.QtGui import QAction, QCloseEvent, QIcon, QKeySequence, QTransform
 from PySide6.QtWidgets import (QApplication, QFileDialog, QMainWindow, QMessageBox,
                                QInputDialog, QLineEdit, QToolBar, QStyle)
@@ -36,7 +38,7 @@ class MainWindow(QMainWindow):
     def __init__(self, i18n: I18n | None = None) -> None:
         super().__init__()
         self.i18n = i18n or I18n()
-        saved_style = QSettings().value("button_display", "text")
+        saved_style = application_settings().value("button_display", "text")
         self.button_display = saved_style if saved_style in BUTTON_STYLES else "text"
         self.model = PdfDocument()
         self._saving = False
@@ -46,7 +48,7 @@ class MainWindow(QMainWindow):
             lambda number: self.tr_("page", number=number), self.error,
         )
         try:
-            size = int(QSettings().value("thumbnail_size", 288))
+            size = int(application_settings().value("thumbnail_size", 288))
         except (TypeError, ValueError):
             size = 288
         self.thumbnail_size = size if size in THUMBNAIL_SIZES else 288
@@ -237,7 +239,7 @@ class MainWindow(QMainWindow):
         self._open_path(path)
 
     def import_image_folder(self) -> None:
-        settings = QSettings()
+        settings = application_settings()
         initial = str(settings.value("last_image_directory", "") or "")
         if not Path(initial).is_dir():
             initial = QStandardPaths.writableLocation(QStandardPaths.StandardLocation.PicturesLocation)
@@ -265,7 +267,7 @@ class MainWindow(QMainWindow):
 
     def select_pdf(self, title: str) -> str:
         """Select a PDF, starting in and remembering the last-used folder."""
-        settings = QSettings()
+        settings = application_settings()
         saved_directory = str(settings.value("last_open_directory", "") or "")
         pictures_directory = QStandardPaths.writableLocation(
             QStandardPaths.StandardLocation.PicturesLocation,
@@ -338,7 +340,7 @@ class MainWindow(QMainWindow):
         if accepted:
             self.button_display = modes[choices.index(choice)]
             self.toolbar.setToolButtonStyle(BUTTON_STYLES[self.button_display])
-            QSettings().setValue("button_display", self.button_display)
+            application_settings().setValue("button_display", self.button_display)
 
     def change_image_size(self) -> None:
         choices = [f"{size} px" for size in THUMBNAIL_SIZES]
@@ -354,7 +356,7 @@ class MainWindow(QMainWindow):
         selection = self.selected_rows()
         self.thumbnail_size = size
         self.pages.set_thumbnail_size(size)
-        QSettings().setValue("thumbnail_size", size)
+        application_settings().setValue("thumbnail_size", size)
         self.refresh(selection, preserve_scroll=True)
 
     def refresh(self, selection: list[int] | None = None,
@@ -493,7 +495,7 @@ class MainWindow(QMainWindow):
                 self.error(exc)
 
     def change_language(self, language: str) -> None:
-        QSettings().setValue("language", language)
+        application_settings().setValue("language", language)
         QMessageBox.information(self, self.tr_("language"), self.tr_("restart_required"))
 
     def show_help(self) -> None:
@@ -555,12 +557,16 @@ class MainWindow(QMainWindow):
         else: event.ignore()
 
 
-def run() -> int:
+def run(*, source_uv: bool = False) -> int:
     app = QApplication(sys.argv)
     app.setOrganizationName("Folimeld")
-    app.setApplicationName("Folimeld")
-    configure_logging(Path(QStandardPaths.writableLocation(
-        QStandardPaths.StandardLocation.AppLocalDataLocation)) / 'logs')
+    app.setApplicationName("Folimeld-UV" if source_uv else "Folimeld")
+    if source_uv:
+        from .source_profile import activate_source_profile
+        configure_logging(activate_source_profile(__version__), strict=True)
+    else:
+        configure_logging(Path(QStandardPaths.writableLocation(
+            QStandardPaths.StandardLocation.AppLocalDataLocation)) / 'logs')
     app.setDesktopFileName("folimeld")
     i18n = I18n()
     _qt_translator = install_qt_translator(app, i18n.language)

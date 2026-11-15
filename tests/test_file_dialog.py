@@ -35,7 +35,7 @@ class FileDialogTests(unittest.TestCase):
 
             QTimer.singleShot(250, inspect_picker)
             original = select_image_folder
-            with patch("folimeld.app.QSettings", return_value=settings), patch(
+            with patch("folimeld.app.application_settings", return_value=settings), patch(
                 "folimeld.app.select_image_folder",
                 wraps=select_image_folder,
             ) as picker:
@@ -53,7 +53,7 @@ class FileDialogTests(unittest.TestCase):
             parent = object()
             settings = Mock()
             settings.value.return_value = directory
-            with patch("folimeld.app.QSettings", return_value=settings), patch(
+            with patch("folimeld.app.application_settings", return_value=settings), patch(
                 "folimeld.app.QFileDialog.getOpenFileName",
                 return_value=(selected, "PDF (*.pdf)"),
             ) as dialog:
@@ -68,7 +68,7 @@ class FileDialogTests(unittest.TestCase):
             settings = Mock()
             parent = object()
             settings.value.return_value = "missing-directory"
-            with patch("folimeld.app.QSettings", return_value=settings), patch(
+            with patch("folimeld.app.application_settings", return_value=settings), patch(
                 "folimeld.app.QStandardPaths.writableLocation", return_value=pictures,
             ), patch(
                 "folimeld.app.QFileDialog.getOpenFileName", return_value=("", ""),
