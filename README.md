@@ -90,6 +90,48 @@ The standard Windows 11 distribution channel is Microsoft Store. See the [develo
 - Verify the ZIP's SHA-256, extract it into a fresh dedicated directory and follow the included [uv installation guide](documentation/windows-uv-source.md). Launch the generated Folimeld UV shortcut after installation. Settings and logs are stored under `%LOCALAPPDATA%/Folimeld-UV`.
 - Fresh installation from this published ZIP, PDF display/Save As/reopening, image conversion/saving, all three workers and settings persistence after restart have been verified. Production Store coexistence, cross-version updates/rollback, multiple display scales/monitor transitions and effectiveness against the known crash remain unverified. See the Release notes and included guide for details and licensing information.
 
+#### Verify the published ZIP and unblock the unsigned installer
+
+These instructions apply only to the published x64 preview `windows-uv-v0.3.5-preview.1`. Do not reuse this expected hash for another ZIP.
+Run in non-elevated PowerShell 7.2 or later. The example assumes the ZIP is in Downloads; change `$zip` if needed.
+Set `$destination` to a dedicated directory that does not exist. Do not reuse an installation directory.
+
+```powershell
+$ErrorActionPreference = 'Stop'
+$zip = Join-Path $HOME 'Downloads\Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip'
+$expected = '8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA'
+if ((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash -ne $expected) {
+    throw 'ZIP SHA-256 mismatch. Stop without extracting or running it.'
+}
+
+$destination = Join-Path $HOME 'Folimeld-uv-0.3.5'
+if (Test-Path -LiteralPath $destination) {
+    throw 'Destination already exists. Choose a new dedicated folder.'
+}
+Expand-Archive -LiteralPath $zip -DestinationPath $destination
+
+$scripts = @(Get-ChildItem -LiteralPath $destination -Recurse -File -Filter 'install_uv.ps1')
+if ($scripts.Count -ne 1) {
+    throw 'Expected exactly one install_uv.ps1. Stop without running it.'
+}
+$installer = $scripts[0].FullName
+Unblock-File -LiteralPath $installer
+Push-Location -LiteralPath $scripts[0].DirectoryName
+try {
+    pwsh -NoProfile -File $installer
+    if ($LASTEXITCODE -ne 0) { throw 'Installation failed. Retain the error and installation records.' }
+}
+finally {
+    Pop-Location
+}
+```
+
+A hash mismatch stops before extraction or execution. The verified ZIP is extracted into a new directory, and the script requires exactly one `install_uv.ps1` before unblocking only that file with `Unblock-File`. It does not unblock the ZIP or a directory recursively.
+
+Unblocking removes the downloaded-file restriction; it does not digitally sign the script. This addresses an unsigned downloaded script blocked under `RemoteSigned`. `AllSigned`, `Restricted` or organizational policy may still prevent execution. If blocked, retain the full error and the output of `Get-ExecutionPolicy -List` for review. Do not use `Set-ExecutionPolicy` or `-ExecutionPolicy Bypass`; machine, user and process execution policies remain unchanged.
+
+After installation, launch the generated **Folimeld UV** shortcut beside `install_uv.ps1`. Do not run `main.py` directly or move/rename the installation directory afterward.
+
 ### Install on macOS with Homebrew
 
 The Folimeld 0.3.3 Homebrew release supports **Apple Silicon (arm64) Macs running macOS 15 Sequoia or later**. With Homebrew installed, run these commands in Terminal.

@@ -1,4 +1,6 @@
-# Windows x64 ソース＋uv版（未配布・受入前）
+# Windows x64 ソース＋uv版プレビュー
+
+公開済みプレビューの導入手順は以下を参照してください。後半の過去の確認用ZIP・未公開時点の記録は履歴であり、現在の公開ZIPのハッシュとは区別します。
 
 Microsoft Storeを標準配布として維持する。これは上級者向けの追加経路であり、
 Windows 11 x64のみを対象とする。開発PCで正規ランチャーの起動・文書操作・3ワーカー・再起動後の設定保持を確認済み。
@@ -26,6 +28,48 @@ Windows 11 x64のみを対象とする。開発PCで正規ランチャーの起�
 ```powershell
 pwsh -NoProfile -File .\install_uv.ps1
 ```
+
+#### 公開ZIPの照合と未署名スクリプトのブロック解除
+
+この手順は公開済みのx64プレビュー`windows-uv-v0.3.5-preview.1`専用です。他のZIPにこの期待ハッシュを流用しないでください。
+通常権限のPowerShell 7.2以降で実行します。ZIPをDownloadsへ保存した場合の例です。保存先が異なる場合は`$zip`を変更してください。
+既存の導入先を再利用せず、`$destination`には存在しない専用フォルダーを指定します。
+
+```powershell
+$ErrorActionPreference = 'Stop'
+$zip = Join-Path $HOME 'Downloads\Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip'
+$expected = '8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA'
+if ((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash -ne $expected) {
+    throw 'ZIP SHA-256 mismatch. Stop without extracting or running it.'
+}
+
+$destination = Join-Path $HOME 'Folimeld-uv-0.3.5'
+if (Test-Path -LiteralPath $destination) {
+    throw 'Destination already exists. Choose a new dedicated folder.'
+}
+Expand-Archive -LiteralPath $zip -DestinationPath $destination
+
+$scripts = @(Get-ChildItem -LiteralPath $destination -Recurse -File -Filter 'install_uv.ps1')
+if ($scripts.Count -ne 1) {
+    throw 'Expected exactly one install_uv.ps1. Stop without running it.'
+}
+$installer = $scripts[0].FullName
+Unblock-File -LiteralPath $installer
+Push-Location -LiteralPath $scripts[0].DirectoryName
+try {
+    pwsh -NoProfile -File $installer
+    if ($LASTEXITCODE -ne 0) { throw 'Installation failed. Retain the error and installation records.' }
+}
+finally {
+    Pop-Location
+}
+```
+
+SHA-256不一致では展開・実行せず停止します。照合したZIPを新規展開し、見つかった`install_uv.ps1`が1件であることを確認して、その1ファイルだけを`Unblock-File`でブロック解除します。ZIPやフォルダー全体の一括ブロック解除は行いません。
+
+この操作はダウンロード元情報によるブロックを外すもので、デジタル署名を付ける操作ではありません。`RemoteSigned`でダウンロード由来の未署名スクリプトが拒否されている場合の対処です。`AllSigned`・`Restricted`・組織ポリシーなどでは引き続き拒否されることがあります。その場合は`Get-ExecutionPolicy -List`の結果とエラー全文を保存して確認してください。`Set-ExecutionPolicy`や`-ExecutionPolicy Bypass`は使用せず、PC全体・ユーザー・プロセスの実行ポリシーは変更しません。
+
+導入後は`install_uv.ps1`と同じフォルダーに作成される「Folimeld UV」ショートカットから起動します。`main.py`は直接起動しません。導入後のフォルダーは移動・改名しないでください。
 
 `install_uv.ps1`は固定URLからuvとPythonを取得・ハッシュ照合し、ソースフォルダー内の
 `.uv-runtime`と`.venv`にだけ展開・導入する。専用の`uv pip check`とランチャー事前検査後、
