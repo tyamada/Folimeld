@@ -25,13 +25,13 @@ legalのreviewed-files.jsonにはdistribution=windows-desktop-x64とfilesの相�
 これはハッシュ固定のガードであり、ライセンス確認を自動で代替しません。旧cp314由来のlicenses資料やuvの未同梱前提の資料を、実物対応を調べずに転用しません。
 Qt等の対応ソース・パッチ・収録物を点検するまで、このガードを通す架空の資料は作らないでください。
 
-承認後のビルド入口はpython -m tools.desktop_build --output <新規絶対パス> --legal-root <点検済み資料> --version-info <専用版情報> --input-root <照合済み取得物フォルダー> --crt-root <照合済みCRT専用フォルダー>です。
+承認後のビルド入口はpython -m tools.desktop_build --output <新規絶対パス> --legal-root <点検済み資料> --version-info <専用版情報> --input-root <照合済み取得物フォルダー> --crt-root <照合済みCRT専用フォルダー> --inno-root <固定済みInno専用フォルダー>です。
 既存出力先があれば停止。制限PATHと依存版、資料ハッシュを検査し、build-inputs.jsonとpyinstaller.logを保存します。
 アプリの対応ソースZIP・Gitコミット・全入力/全ペイロード・最終setupの対応台帳はビルド段階で別途確定し、公開ゲートで照合します。
 
 ## Inno Setup候補
 
-公式Inno Setup7.1.1 x64配布EXEのハッシュを固定し、署名を確認しました。導入・実行は行っておらず、導入後のISCC版・実体の確認は残件です。
+公式Inno Setup7.1.1 x64配布EXEのハッシュを固定し、署名を確認しました。非管理者の専用ポータブル配置を準備し、全133ファイルをハッシュ化済みです。ISCC --versionは7.1.1、PE工具版情報は0.0.0.0、スタブのリソース値はリリース版を識別しない値として区別します。スクリプトのコンパイルはしていません。
 packaging/windows/Folimeld-desktop.issにDesktopVersion（数値版）、PayloadRoot（確認済みonedir）、OutputRoot（新規専用出力）、PayloadReviewed=1を明示してコンパイルします。
 版の命名、全入力ハッシュ、EXE/インストーラー/アンインストーラー署名方針はビルド前に確定します。
 
@@ -57,13 +57,13 @@ ISCCでのコンパイル・Inno Setup構文のコンパイラ検証・実EXE生
 
 packaging/windows/desktop-runtime.jsonにPython配布ハッシュ、依存14件の版・wheel URL/SHA256、PyInstaller/hooks版を独立保持します。uv設定は参照しません。入力自体のハッシュをbuild-inputs.jsonへ記録します。
 Desktop specだけにtools/desktop_qt.pyを適用。Core/Gui/Widgetsと任意のSVG/OpenGL支援を許可し、VirtualKeyboard・Charts・Graphs・QML/Quick・WebEngine・Pdf・Multimedia等の未使用モジュール、DLL/プラグイン/QMLデータを除外します。保持コードが除外Qtや解決不能Qtに依存する場合、またCore/Gui/Widgets/qwindows欠落時には停止します。除外一覧は将来のworkpath/desktop-qt-exclusions.jsonに記録します。
-動的読込・日本語IME・GPU・実ペイロード受入は未確認。Store/uv specとランチャーは変更しません。ビルド補助は依存取得・環境作成を行いません。工具wheel7件とInno配布EXEのハッシュを固定しました。独立環境構築と導入後の工具の実体対応は残件です。wheelハッシュは再配布許諾やインストール済み全ファイル一致の証明ではありません。告知承認ガードを維持します。
+動的読込・日本語IME・GPU・実ペイロード受入は未確認。Store/uv specとランチャーは変更しません。ビルド補助は依存取得・環境作成を行いません。工具wheel7件とInno配布EXEのハッシュを固定しました。専用環境を準備し、導入後ファイルを固定wheelと照合済みです。環境の再作成再現性とアプリ/インストーラーの受入は残件です。wheelハッシュは再配布許諾やインストール済み全ファイル一致の証明ではありません。告知承認ガードを維持します。
 
 
 ## 配布入力のハッシュ確認（2026-11-15）
 
 固定台帳に工具7件の版/wheelとInno7.1.1 x64配布EXEを追加。読み取り専用の事前検査は--input-rootを必須とし、Python・依存14wheel・工具7wheel・Innoの計23入力を、ビルド出力作成前にハッシュ照合します。欠落・改変・指定領域外への参照は停止します。この照合は入力を導入・実行しません。
-専用desktop-runtime-requirements.txt/desktop-tools-requirements.txtは直接wheel URL、--require-hashes、--only-binary=:all:を指定。インストールには未使用です。wheelメタデータでWindows x64/Python3.12.16の有効な依存19条件（任意extraなし）が固定版で満たされることを確認。取得物は照合済みですが環境は新規作成していません。導入後の全ファイル対応とInno工具内部の確定は残件です。ハッシュ照合は再配布承認を意味しません。ソース/ライセンス審査は未完了です。点検済み資料の承認前に、第三者告知・対応ソース、CRT再配布条件、導入後Innoコンパイラ/スタブとの対応を確定してください。取得物ハッシュだけでこれらの点検を完了扱いにはしません。
+専用desktop-runtime-requirements.txt/desktop-tools-requirements.txtは直接wheel URL、--require-hashes、--only-binary=:all:を指定。元のHTTPS requirementsをpipへ直接渡さず、同じ固定ハッシュを持つローカルファイル指定を派生してオフライン環境を準備しました。wheelメタデータでWindows x64/Python3.12.16の有効な依存19条件（任意extraなし）が固定版で満たされることを確認。取得物を照合し、専用環境のwheel/RECORD対応も確認済みです。準備済みInno実体の固定は下記に記載し、内包物の条件と最終インストーラー受入は残件です。ハッシュ照合は再配布承認を意味しません。ソース/ライセンス審査は未完了です。点検済み資料の承認前に、第三者告知・対応ソース、CRT再配布条件、導入後Innoコンパイラ/スタブとの対応を確定してください。取得物ハッシュだけでこれらの点検を完了扱いにはしません。
 
 
 ## Desktop専用CRT収録
@@ -78,4 +78,10 @@ Desktop specは_internalを明示。COLLECT後に7件の正確な配置/ハッ�
 
 台帳読込時にruntime/工具wheelへ同じ規則を適用します。SHA-256は小文字16進64文字、URLはHTTPSかつホストが正確にfiles.pythonhosted.orgであることを要求。資格情報・ポート・query/fragment・空白・領域移動指定を拒否し、安全な.whl名とURLの復号後末尾名が一致することも確認します。
 requirements2件は--require-hashesと--only-binary=:all:を各1回だけ必須とし、直接wheel指定のみ許可。名前・URL・SHA-256を対応するJSON区分と一致させ、欠落/追加/重複・追加pipオプション・版だけの指定をビルド出力作成前に拒否します。空行/コメントは許可し、配布名はPythonパッケージの名前規則で正規化します。両requirements自体のハッシュもbuild-inputs.jsonへ記録します。
-ローカルファイルの検査のみで、導入・インデックス照会・uv実行・法的承認を行いません。導入後実体との対応、Inno内部工具、ライセンス/対応ソースの点検は残件です。
+ローカルファイルの検査のみで、導入・インデックス照会・uv実行・法的承認を行いません。専用環境の導入後実体対応はローカルで確認済み。最終インストーラー受入、ライセンス/対応ソースの点検は残件です。
+
+
+## Inno工具・スタブの事前検査
+
+packaging/windows/desktop-inno.jsonにInno7.1.1 x64専用配置の全133ファイルを固定。主要工具/スタブ9件に加え、言語入力や圧縮支援も含みます。--inno-rootを必須とし、ビルド出力作成前にファイル集合・領域・サイズ・SHA256を検査。全ハッシュ通過後だけISCC.exe --versionを照会し7.1.1を要求します。台帳・スクリプト・全ファイルのハッシュをbuild-inputs.jsonへ記録。導入やコンパイルはしません。
+SetupArchitecture=x86、UseSetupLdr=x86、WizardStyle=classic lightを明示し、Inno7の既定を維持します。選択スタブはSetup.e32とSetupLdr.e32で、アプリpayload/対象OSはx64のままです。x64コンパイラを使うこととsetup起動部のx64化は別です。別の構成・ローダー/スタイル、重複指示、includeはこの固定スクリプト用ガードで停止し再審査を要求します。一般的なInnoプリプロセッサではありません。現補助は将来承認後にonedirを生成する入口で、ISCCコンパイルは呼びません。将来コンパイル用入口を作る際は直前に再検査し、コマンドライン上書きも管理する必要があります。

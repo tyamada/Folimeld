@@ -15,6 +15,7 @@ from urllib.parse import unquote, urlsplit
 
 from tools.windows_build_environment import build_environment
 from tools.desktop_crt import load_crt_manifest, verify_crt_inputs
+from tools.desktop_inno import load_inno_manifest, verify_inno_inputs
 
 
 def reviewed_legal_datas(root: Path) -> list[tuple[str, str]]:
@@ -151,6 +152,7 @@ def main() -> int:
     parser.add_argument("--version-info", type=Path, required=True)
     parser.add_argument("--input-root", type=Path, required=True)
     parser.add_argument("--crt-root", type=Path, required=True)
+    parser.add_argument("--inno-root", type=Path, required=True)
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     if (sys.platform != "win32" or struct.calcsize("P") != 8
@@ -166,6 +168,8 @@ def main() -> int:
     verified_archives = verify_desktop_archives(profile, args.input_root)
     crt_manifest, crt_manifest_hash = load_crt_manifest(root)
     crt_inputs = verify_crt_inputs(args.crt_root, crt_manifest)
+    inno_manifest, inno_manifest_hash = load_inno_manifest(root)
+    inno_inputs = verify_inno_inputs(args.inno_root, inno_manifest, root / "packaging/windows/Folimeld-desktop.iss")
     reviewed_legal_datas(args.legal_root)
     if not args.version_info.is_file():
         raise FileNotFoundError(args.version_info)
@@ -182,6 +186,7 @@ def main() -> int:
         "pins": pins, "desktop_inputs_sha256": profile_hash,
         "verified_archives": verified_archives,
         "requirements_sha256": requirements_hashes,
+        "inno_manifest_sha256": inno_manifest_hash, "inno_inputs": inno_inputs,
         "crt_manifest_sha256": crt_manifest_hash, "crt_inputs": crt_inputs, "legal_root": str(args.legal_root.resolve()),
         "version_info_sha256": hashlib.sha256(args.version_info.read_bytes()).hexdigest()}, indent=2), encoding="utf-8")
     with (output / "pyinstaller.log").open("w", encoding="utf-8") as log:

@@ -16,6 +16,10 @@
 #endif
 
 [Setup]
+; Preserve Inno 7 defaults explicitly: x86 bootstrap, x64 application payload.
+SetupArchitecture=x86
+UseSetupLdr=x86
+WizardStyle=classic light
 AppId={{9F76A89B-64DC-45C9-95F1-7A353DBBAE12}
 AppName=Folimeld Desktop
 AppVersion={#DesktopVersion}
