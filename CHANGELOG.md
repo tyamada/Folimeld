@@ -46,6 +46,12 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.5 Windows x64 uv preview - 2026-11-15
+
+- Publish the [Windows 11 x64 source + uv preview](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) as a Pre-release, with a source ZIP, internal manifest, source commit association and SHA-256 checksums. Microsoft Store remains the standard Windows distribution channel.
+- Pin CPython 3.12.16, uv 0.13.8 and fourteen dependencies, with dedicated settings and log storage. Verify fresh installation from the release candidate ZIP, regular launch, PDF display/Save As/reopening, image conversion/saving, start/end of all three workers and settings persistence after restart. All four files downloaded from the published Release match their expected sizes and SHA-256 hashes.
+- Production Store coexistence, cross-version updates/rollback, multiple display scales/monitor transitions and effectiveness against the known crash remain unverified.
+
 ## 0.3.5 Kali ARM64 preview - 2026-11-14
 
 - Publish [Kali2026.3 ARM64 DEB0.3.5](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5). Fresh ARM64 checks cover PDF editing/image conversion/save,purge/reinstall preserving documents/settings,and minimum-dependency startup. Normal-user Xorg/IceWM,all3GUI exits0.

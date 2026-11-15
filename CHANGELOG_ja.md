@@ -46,6 +46,12 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.5 Windows x64 uv版プレビュー - 2026-11-15
+
+- Windows 11 x64向けの[ソース＋uv版プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1)をPre-releaseとして公開。ソースZIP・内部台帳・コミットとの対応記録・SHA-256一覧を配布。Microsoft Store配布は引き続き標準のWindows配布経路として維持。
+- CPython 3.12.16・uv 0.13.8・依存14件を固定し、設定・ログを専用保存先へ分離。公開候補ZIPからの新規導入、正規起動、PDF表示・別名保存・再読込、画像変換・保存、3ワーカーの起動終了、再起動後の設定保持を確認。公開先から取得した4ファイルのサイズ・SHA-256が一致。
+- 本番Store版との併存、異なる版への更新・旧版復帰、複数倍率・モニター移動、既知クラッシュへの修正効果は未確認。
+
 ## 0.3.5 Kali ARM64試験版 - 2026-11-14
 
 - [Kali2026.3 ARM64 DEB0.3.5](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5)を公開。新規ARM64環境でPDF編集/画像変換/保存、完全削除再導入と文書/設定保持、最小依存起動を確認。一般ユーザーXorg/IceWM、GUI3回終了0。
