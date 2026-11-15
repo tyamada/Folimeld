@@ -25,13 +25,13 @@ legalのreviewed-files.jsonにはdistribution=windows-desktop-x64とfilesの相�
 これはハッシュ固定のガードであり、ライセンス確認を自動で代替しません。旧cp314由来のlicenses資料やuvの未同梱前提の資料を、実物対応を調べずに転用しません。
 Qt等の対応ソース・パッチ・収録物を点検するまで、このガードを通す架空の資料は作らないでください。
 
-承認後のビルド入口はpython -m tools.desktop_build --output <新規絶対パス> --legal-root <点検済み資料> --version-info <専用版情報> --crt-root <照合済みCRT専用フォルダー>です。
+承認後のビルド入口はpython -m tools.desktop_build --output <新規絶対パス> --legal-root <点検済み資料> --version-info <専用版情報> --input-root <照合済み取得物フォルダー> --crt-root <照合済みCRT専用フォルダー>です。
 既存出力先があれば停止。制限PATHと依存版、資料ハッシュを検査し、build-inputs.jsonとpyinstaller.logを保存します。
 アプリの対応ソースZIP・Gitコミット・全入力/全ペイロード・最終setupの対応台帳はビルド段階で別途確定し、公開ゲートで照合します。
 
 ## Inno Setup候補
 
-公式Inno Setup7.1.1を固定候補とします。導入物の署名・ハッシュとISCC版の実確認は未実施です。
+公式Inno Setup7.1.1 x64配布EXEのハッシュを固定し、署名を確認しました。導入・実行は行っておらず、導入後のISCC版・実体の確認は残件です。
 packaging/windows/Folimeld-desktop.issにDesktopVersion（数値版）、PayloadRoot（確認済みonedir）、OutputRoot（新規専用出力）、PayloadReviewed=1を明示してコンパイルします。
 版の命名、全入力ハッシュ、EXE/インストーラー/アンインストーラー署名方針はビルド前に確定します。
 
@@ -57,7 +57,13 @@ ISCCでのコンパイル・Inno Setup構文のコンパイラ検証・実EXE生
 
 packaging/windows/desktop-runtime.jsonにPython配布ハッシュ、依存14件の版・wheel URL/SHA256、PyInstaller/hooks版を独立保持します。uv設定は参照しません。入力自体のハッシュをbuild-inputs.jsonへ記録します。
 Desktop specだけにtools/desktop_qt.pyを適用。Core/Gui/Widgetsと任意のSVG/OpenGL支援を許可し、VirtualKeyboard・Charts・Graphs・QML/Quick・WebEngine・Pdf・Multimedia等の未使用モジュール、DLL/プラグイン/QMLデータを除外します。保持コードが除外Qtや解決不能Qtに依存する場合、またCore/Gui/Widgets/qwindows欠落時には停止します。除外一覧は将来のworkpath/desktop-qt-exclusions.jsonに記録します。
-動的読込・日本語IME・GPU・実ペイロード受入は未確認。Store/uv specとランチャーは変更しません。依存取得・環境作成は行いません。工具アーカイブ全ハッシュ・Inno確定・独立環境構築/取得時ハッシュ照合は残件です。wheelハッシュは再配布許諾やインストール済み全ファイル一致の証明ではありません。告知承認ガードを維持します。
+動的読込・日本語IME・GPU・実ペイロード受入は未確認。Store/uv specとランチャーは変更しません。ビルド補助は依存取得・環境作成を行いません。工具wheel7件とInno配布EXEのハッシュを固定しました。独立環境構築と導入後の工具の実体対応は残件です。wheelハッシュは再配布許諾やインストール済み全ファイル一致の証明ではありません。告知承認ガードを維持します。
+
+
+## 配布入力のハッシュ確認（2026-11-15）
+
+固定台帳に工具7件の版/wheelとInno7.1.1 x64配布EXEを追加。読み取り専用の事前検査は--input-rootを必須とし、Python・依存14wheel・工具7wheel・Innoの計23入力を、ビルド出力作成前にハッシュ照合します。欠落・改変・指定領域外への参照は停止します。この照合は入力を導入・実行しません。
+専用desktop-runtime-requirements.txt/desktop-tools-requirements.txtは直接wheel URL、--require-hashes、--only-binary=:all:を指定。インストールには未使用です。wheelメタデータでWindows x64/Python3.12.16の有効な依存19条件（任意extraなし）が固定版で満たされることを確認。取得物は照合済みですが環境は新規作成していません。導入後の全ファイル対応とInno工具内部の確定は残件です。ハッシュ照合は再配布承認を意味しません。ソース/ライセンス審査は未完了です。点検済み資料の承認前に、第三者告知・対応ソース、CRT再配布条件、導入後Innoコンパイラ/スタブとの対応を確定してください。取得物ハッシュだけでこれらの点検を完了扱いにはしません。
 
 
 ## Desktop専用CRT収録
@@ -66,3 +72,10 @@ packaging/windows/desktop-crt.jsonに正規Desktop x64 CRT14.44.35211.0の7件�
 Analysis入力に対する従来のPython/Windows由来ガードを維持し、その後に個別照合したCRTだけを追加します。Program Filesや作業領域全体を許可しません。binaries/datas両TOCの承認名CRT重複を正規7件へ統一し、未知CRT・OSのUCRT/API-set収録・名前変更したCRTは停止します。入力ファイルは削除・変更しません。
 Desktop specは_internalを明示。COLLECT後に7件の正確な配置/ハッシュを再検査し、配下/EXE隣への重複、追加CRT、欠落/改変、領域外参照は失敗とします。workにdesktop-crt-inputs.jsonとdesktop-crt-collected.jsonを保存。検査失敗時はビルド失敗とし、途中出力を受入済み候補にしません。
 入力検査・模擬TOC/単体検査は、実凍結アプリのDLL読込・ワーカー・互換性確認の代替ではありません。再配布条件/告知/対応ソースの審査とreviewed-files.jsonは別の必須条件で、CRTハッシュ一致を法的承認にしません。Store/uv specとデータを維持します。
+
+
+## 固定入力の形式・requirements同期検査
+
+台帳読込時にruntime/工具wheelへ同じ規則を適用します。SHA-256は小文字16進64文字、URLはHTTPSかつホストが正確にfiles.pythonhosted.orgであることを要求。資格情報・ポート・query/fragment・空白・領域移動指定を拒否し、安全な.whl名とURLの復号後末尾名が一致することも確認します。
+requirements2件は--require-hashesと--only-binary=:all:を各1回だけ必須とし、直接wheel指定のみ許可。名前・URL・SHA-256を対応するJSON区分と一致させ、欠落/追加/重複・追加pipオプション・版だけの指定をビルド出力作成前に拒否します。空行/コメントは許可し、配布名はPythonパッケージの名前規則で正規化します。両requirements自体のハッシュもbuild-inputs.jsonへ記録します。
+ローカルファイルの検査のみで、導入・インデックス照会・uv実行・法的承認を行いません。導入後実体との対応、Inno内部工具、ライセンス/対応ソースの点検は残件です。

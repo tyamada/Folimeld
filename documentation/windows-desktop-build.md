@@ -25,13 +25,13 @@ legal/reviewed-files.json must contain distribution=windows-desktop-x64 and a fi
 This pins hashes; it does not perform or replace license review. Do not reuse old cp314 records or uv documentation assuming dependencies are not redistributed without matching them to the actual binaries.
 Do not fabricate records merely to pass this gate before Qt/dependency source, patch and payload review.
 
-After approval, use python -m tools.desktop_build --output <new absolute directory> --legal-root <reviewed records> --version-info <dedicated version info> --crt-root <dedicated verified CRT directory>.
+After approval, use python -m tools.desktop_build --output <new absolute directory> --legal-root <reviewed records> --version-info <dedicated version info> --input-root <verified download directory> --crt-root <dedicated verified CRT directory>.
 Existing output stops the build. Validate restricted PATH, dependency versions and legal hashes; retain build-inputs.json and pyinstaller.log.
 At build time, separately finalize matching application source ZIP, Git commit, complete inputs/payload ledger and final setup association; verify them before release.
 
 ## Inno Setup candidate
 
-Inno Setup7.1.1 is the proposed pinned official compiler. Actual compiler version and downloaded signature/hash verification are pending.
+The official Inno Setup7.1.1 x64 installer archive is hash-pinned and its signature was verified. It has not been installed or executed; the installed ISCC/compiler payload still requires verification.
 Compile packaging/windows/Folimeld-desktop.iss with DesktopVersion (numeric), PayloadRoot (verified onedir), OutputRoot (new dedicated output) and PayloadReviewed=1.
 Finalize release numbering, all input hashes and executable/setup/uninstaller signing before building.
 
@@ -57,7 +57,13 @@ No test-PC update, WACK or Hosted API comparison.
 
 Desktop uses packaging/windows/desktop-runtime.json independently: Python archive hash, fourteen runtime versions and wheel URLs/SHA256, PyInstaller/hooks versions. No uv configuration is read. The Desktop input hash is recorded in build-inputs.json.
 Only the Desktop spec uses tools/desktop_qt.py. Core/Gui/Widgets and optional SVG/OpenGL support are allowed. Unused modules (VirtualKeyboard, Charts, Graphs, QML/Quick, WebEngine, Pdf, Multimedia, etc.), native plugins and QML data are excluded. Retained code requiring excluded/unresolved Qt dependencies stops collection. Missing Core/Gui/Widgets/qwindows also stops collection. Exclusions are recorded in future workpath/desktop-qt-exclusions.json.
-Dynamic loading, Japanese IME, GPU behavior and actual payload acceptance remain unverified. Store/uv specs and launchers remain unchanged. No dependency download/environment creation is performed. Tool archive hashes, Inno confirmation and independent environment setup/download hash verification remain pending. Wheel hashes do not establish redistribution rights or installed-file correspondence. The reviewed-legal-input gate remains mandatory.
+Dynamic loading, Japanese IME, GPU behavior and actual payload acceptance remain unverified. Store/uv specs and launchers remain unchanged. The build helper does not download dependencies or create environments. Seven build-tool wheels and the Inno distribution archive now have fixed hashes. Independent environment creation and installed-tool correspondence remain pending. Wheel hashes do not establish redistribution rights or installed-file correspondence. The reviewed-legal-input gate remains mandatory.
+
+
+## Verified archive inputs (2026-11-15)
+
+The fixed manifest now includes seven build-tool versions/wheels and the Inno7.1.1 x64 installer. The read-only preflight requires --input-root and hashes all 23 local archives (Python, fourteen runtime wheels, seven tool wheels, Inno) before creating build output. Missing, changed or escaping paths stop the procedure. Verification does not install or execute inputs.
+The separate desktop-runtime-requirements.txt and desktop-tools-requirements.txt use direct wheel URLs, --require-hashes and --only-binary=:all:. These files were not used for installation. Wheel metadata confirms nineteen active dependency requirements are satisfied for Windows x64/Python3.12.16 without optional extras. Inputs were downloaded and verified; no environment was created. Exact installed-file correspondence and Inno compiler contents remain pending. Hashes do not approve redistribution. Source/license review remains incomplete. In particular, finalize third-party notices and corresponding source, CRT redistribution terms, and the installed Inno compiler/stub correspondence before approving legal inputs. Archive hashes alone do not complete these checks.
 
 
 ## Desktop CRT collection
@@ -66,3 +72,10 @@ Dynamic loading, Japanese IME, GPU behavior and actual payload acceptance remain
 The existing Python/Windows source guard stays in place for Analysis inputs. Only individually verified CRT paths are added afterward; no general Program Files or workspace allowance is introduced. Approved-name CRT duplicates from binaries and data TOCs are replaced with one canonical set. Unknown CRT, system UCRT/API-set copies and renamed CRT files stop collection. Input files are never deleted or modified.
 The Desktop spec explicitly uses `_internal`. After COLLECT, a read-only audit requires the seven exact files there and rejects nested/root duplicates, extra CRT, missing/changed files and escaping paths. The build work directory records desktop-crt-inputs.json and desktop-crt-collected.json. A failed audit fails the build; any partial output is not an accepted candidate.
 Source input and synthetic-TOC/unit checks do not verify real frozen-app DLL loading, worker behavior or runtime compatibility. Redistribution/notice/source review and reviewed-files.json remain separate prerequisites. No legal approval is inferred from the CRT hashes. Store/uv specs and data remain unchanged.
+
+
+## Fixed-input format and requirements synchronization
+
+The manifest loader validates both runtime and tool wheels with the same rules: exactly 64 lowercase hexadecimal SHA-256 characters; HTTPS on the exact files.pythonhosted.org host; no credentials, port, query, fragment, whitespace or traversal; and a safe .whl filename matching the decoded URL basename.
+Both requirements files must have exactly one --require-hashes and --only-binary=:all: flag and only direct-wheel entries. Names, URLs and SHA-256 values must match the corresponding JSON section; missing/extra/duplicate entries, additional pip options and version-only requirements fail before build output creation. Blank/comment lines are allowed. Distribution names are normalized using Python package name rules. The hashes of both requirements files are also recorded in build-inputs.json.
+This validation reads local files only. It does not install packages, query an index, run uv or establish legal approval. Installed-file correspondence, Inno internal tooling and license/source review remain pending.
