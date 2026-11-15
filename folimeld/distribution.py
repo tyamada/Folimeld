@@ -15,6 +15,9 @@ def sponsors_available() -> bool:
         return False
     if sys.platform == "linux" or sys.platform.startswith(("freebsd", "netbsd", "openbsd")):
         return True
+    from .desktop_profile import desktop_profile_active
+    if sys.platform == "win32" and getattr(sys, "frozen", False) and desktop_profile_active():
+        return True
     if getattr(sys, "frozen", False):
         return False
     if sys.platform == "win32":

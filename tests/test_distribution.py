@@ -1,4 +1,5 @@
 import pytest
+from PySide6.QtCore import QSettings
 
 from folimeld import distribution
 from folimeld.app import MainWindow, run
@@ -15,18 +16,27 @@ from folimeld.app import MainWindow, run
     ("darwin", False, None, False, False, False),
     ("darwin", False, "homebrew", True, False, False),
     ("win32", True, None, False, False, True),
+    ("win32", False, "desktop", True, False, True),
+    ("win32", False, "desktop", True, True, False),
+    ("win32", False, "desktop", False, False, False),
     ("win32", False, None, False, False, False),
     ("win32", True, None, True, False, False),
     ("win32", True, "homebrew", False, True, False),
     ("win32", False, "homebrew", False, False, False),
 ])
-def test_distribution_guidance_matrix(qapp, monkeypatch, platform, uv, label,
+def test_distribution_guidance_matrix(qapp, monkeypatch, tmp_path, platform, uv, label,
                                       frozen, packaged, expected):
     previous = qapp.property("folimeld_distribution")
     qapp.setProperty("folimeld_distribution", label)
     monkeypatch.setattr(distribution.sys, "platform", platform)
     monkeypatch.setattr(distribution.sys, "frozen", frozen, raising=False)
     monkeypatch.setattr(distribution, "source_profile_active", lambda: uv)
+    monkeypatch.setattr("folimeld.desktop_profile.desktop_profile_active",
+                        lambda: label == "desktop" and frozen and not packaged)
+    # GUI construction uses the default settings factory; no profile files in this matrix.
+    settings = lambda: QSettings(str(tmp_path / "settings.ini"), QSettings.Format.IniFormat)
+    monkeypatch.setattr("folimeld.app.application_settings", settings)
+    monkeypatch.setattr("folimeld.i18n.application_settings", settings)
     monkeypatch.setattr(distribution, "is_packaged", lambda: packaged)
     monkeypatch.setattr("folimeld.app.is_packaged", lambda: False)
     try:

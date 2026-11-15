@@ -559,15 +559,24 @@ class MainWindow(QMainWindow):
 
 
 def run(*, source_uv: bool = False, distribution: str | None = None) -> int:
-    if distribution is not None:
+    if distribution == "desktop":
+        from .desktop_profile import validate_desktop_environment
+        validate_desktop_environment()
+        if source_uv:
+            raise RuntimeError("Desktop and uv profiles cannot be combined.")
+    elif distribution is not None:
         if (distribution != "homebrew" or sys.platform != "darwin"
                 or getattr(sys, "frozen", False) or source_uv):
             raise RuntimeError("The Homebrew entry point requires an unfrozen macOS process.")
     app = QApplication(sys.argv)
     app.setProperty("folimeld_distribution", distribution)
     app.setOrganizationName("Folimeld")
-    app.setApplicationName("Folimeld-UV" if source_uv else "Folimeld")
-    if source_uv:
+    app.setApplicationName("Folimeld-Desktop" if distribution == "desktop"
+                           else "Folimeld-UV" if source_uv else "Folimeld")
+    if distribution == "desktop":
+        from .desktop_profile import activate_desktop_profile
+        configure_logging(activate_desktop_profile(__version__), strict=True)
+    elif source_uv:
         from .source_profile import activate_source_profile
         configure_logging(activate_source_profile(__version__), strict=True)
     else:
@@ -583,7 +592,8 @@ def run(*, source_uv: bool = False, distribution: str | None = None) -> int:
     if icon_path.exists():
         app.setWindowIcon(QIcon(str(icon_path)))
     try:
-        register_open_with()
+        if distribution != "desktop":
+            register_open_with()
     except OSError:
         # Registry integration must never prevent the editor from starting.
         pass

@@ -16,7 +16,8 @@ def activate_source_profile(version: str) -> Path:
     global _settings_file
     if sys.platform != 'win32' or getattr(sys, 'frozen', False) or is_packaged():
         raise RuntimeError('The uv profile requires an unpackaged Windows source process.')
-    if _settings_file is not None:
+    from .desktop_profile import desktop_profile_active
+    if _settings_file is not None or desktop_profile_active():
         raise RuntimeError('The uv profile is already active.')
     if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9.+_-]*', version):
         raise ValueError('Invalid application version for the uv profile.')
@@ -42,7 +43,10 @@ def activate_source_profile(version: str) -> Path:
 def application_settings():
     """Use the explicit INI for uv; preserve the existing defaults otherwise."""
     from PySide6.QtCore import QSettings
+    from .desktop_profile import desktop_profile_active, desktop_settings
 
+    if desktop_profile_active():
+        return desktop_settings()
     if _settings_file is None:
         return QSettings()
     settings = QSettings(str(_settings_file), QSettings.Format.IniFormat)
