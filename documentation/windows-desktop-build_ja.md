@@ -84,4 +84,14 @@ requirements2件は--require-hashesと--only-binary=:all:を各1回だけ必須�
 ## Inno工具・スタブの事前検査
 
 packaging/windows/desktop-inno.jsonにInno7.1.1 x64専用配置の全133ファイルを固定。主要工具/スタブ9件に加え、言語入力や圧縮支援も含みます。--inno-rootを必須とし、ビルド出力作成前にファイル集合・領域・サイズ・SHA256を検査。全ハッシュ通過後だけISCC.exe --versionを照会し7.1.1を要求します。台帳・スクリプト・全ファイルのハッシュをbuild-inputs.jsonへ記録。導入やコンパイルはしません。
-SetupArchitecture=x86、UseSetupLdr=x86、WizardStyle=classic lightを明示し、Inno7の既定を維持します。選択スタブはSetup.e32とSetupLdr.e32で、アプリpayload/対象OSはx64のままです。x64コンパイラを使うこととsetup起動部のx64化は別です。別の構成・ローダー/スタイル、重複指示、includeはこの固定スクリプト用ガードで停止し再審査を要求します。一般的なInnoプリプロセッサではありません。現補助は将来承認後にonedirを生成する入口で、ISCCコンパイルは呼びません。将来コンパイル用入口を作る際は直前に再検査し、コマンドライン上書きも管理する必要があります。
+SetupArchitecture=x86、UseSetupLdr=x86、WizardStyle=classic lightを明示し、Inno7の既定を維持します。選択スタブはSetup.e32とSetupLdr.e32で、アプリpayload/対象OSはx64のままです。x64コンパイラを使うこととsetup起動部のx64化は別です。別の構成・ローダー/スタイル、重複指示、includeはこの固定スクリプト用ガードで停止し再審査を要求します。一般的なInnoプリプロセッサではありません。現補助は将来承認後にonedirを生成する入口で、ISCCコンパイルは呼びません。下記の独立したコンパイル入口で直前の再検査とコマンドライン上書きの固定を行います。
+
+## 点検済み入力によるInnoコンパイル入口
+
+`python -m tools.desktop_compile`をonedir収集と独立した入口として追加しました。既定は照合のみで、出力ディレクトリを作成せず、コンパイルしません。ハッシュ照合済みISCCの版照会は行います。必須引数は`--payload-root`、`--payload-review`、`--legal-root`、`--inno-root`、`--output`（親が存在する新規ディレクトリ）、4要素の数値`--version`です。将来、明示承認された実行で`--compile`を指定した場合だけISCCを起動します。今回インストーラーはビルドしていません。
+
+別途点検したpayload台帳には`schema_version: 1`、`distribution: windows-desktop-x64`、`status: reviewed-for-desktop-compile`、一致する`version`と、全ファイルのPOSIX相対パス→小文字SHA-256の`files`を記録します。さらに`legal_manifest_sha256`（legal-root/reviewed-files.json）、`inno_manifest_sha256`、`crt_manifest_sha256`、`runtime_manifest_sha256`、`setup_script_sha256`を現在の資料に結び付けます。後4件はpackaging/windowsのDesktop台帳3件とFolimeld-desktop.issです。承認台帳を自動生成する機能はありません。statusは点検記録であり電子署名・再配布権の証明ではありません。実payloadのアプリ版は台帳作成時に点検してください。入口は版の記録とpayload全体のバイトを結び付けますが、PE版リソースとの独立照合は行いません。
+
+payload全件の一致、x64のFolimeldDesktop.exe、python312.dll、変更のないアプリLICENSE、正規CRT 7件、_internal/licenses内の点検済み資料の完全一致を要求します。欠落・追加・変更・リンク・範囲外参照は停止します。元のライセンス資料と固定済みInno全件も再照合します。入力ツリー同士を分離し、出力は入力・リポジトリの外の新規パスに限定します。コンパイラ引数は版・パス・PayloadReviewed=1に固定し、IDEの署名工具設定の継承を無効化します。任意の追加引数は受け付けず、PATHをInnoとWindowsディレクトリに限定します。
+
+出力作成前・コンパイラ起動直前・終了後に全件を照合します。途中の変更、異常終了、想定外・欠落した出力、異なるインストーラーPEアーキテクチャは失敗とします。再照合は原子的なファイルロックではないため、入力を同時編集しないでください。ログと入力ハッシュを保存し、失敗はfailed-not-approvedとして同じ出力先へ自動再試行しません。将来の成功時もサイズ・SHA-256とcompiled-not-release-approvedを記録するだけで、実動作受入・署名・配布条件の承認・公開は別です。今回の自動検査は模擬入力と模擬コンパイラのみです。実運用の点検済みライセンス／payload台帳とインストーラー受入は残件です。uv版の開発中止とStore版の動作を維持します。
