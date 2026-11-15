@@ -16,7 +16,7 @@ Python/uv/PowerShellを利用者へ要求しないPyInstaller onedir＋Inno Setu
 
 ## onedir候補の前提
 
-専用Python3.12.16環境を使用。ランタイム依存版はwindows-uv-runtime.jsonの14件と同じ値を検査しますが、uv自体は導入にも実行にも使いません。
+専用Python3.12.16環境を使用。ランタイム依存版はpackaging/windows/desktop-runtime.jsonの14件と同じ値を検査しますが、uv自体は導入にも実行にも使いません。
 PyInstaller6.22.2、hooks-contrib2026.7を検査します。バイナリ収集元は専用PythonとWindowsに限定し、UPX無効・DPI manifestを維持します。
 収録順を明示ソートしますが、異環境でのバイト再現性は未保証です。Store向けFolimeld.specは変更しません。
 
@@ -51,3 +51,10 @@ QtのOS条件は模擬し、実インストーラー/実Frozenの受入を代替
 ISCCでのコンパイル・Inno Setup構文のコンパイラ検証・実EXE生成はまだ行いません。
 起動速度、PDF/画像操作、3ワーカー、Per-Monitor V2、実画面の支援リンク、併存、更新/削除/復旧、法的資料・署名は今後の受入です。
 試験PC更新・WACK・Hosted API比較は行いません。
+
+
+## Desktop専用固定入力とQt収録方針
+
+packaging/windows/desktop-runtime.jsonにPython配布ハッシュ、依存14件の版・wheel URL/SHA256、PyInstaller/hooks版を独立保持します。uv設定は参照しません。入力自体のハッシュをbuild-inputs.jsonへ記録します。
+Desktop specだけにtools/desktop_qt.pyを適用。Core/Gui/Widgetsと任意のSVG/OpenGL支援を許可し、VirtualKeyboard・Charts・Graphs・QML/Quick・WebEngine・Pdf・Multimedia等の未使用モジュール、DLL/プラグイン/QMLデータを除外します。保持コードが除外Qtや解決不能Qtに依存する場合、またCore/Gui/Widgets/qwindows欠落時には停止します。除外一覧は将来のworkpath/desktop-qt-exclusions.jsonに記録します。
+動的読込・日本語IME・GPU・実ペイロード受入は未確認。Store/uv specとランチャーは変更しません。依存取得・環境作成は行いません。工具アーカイブ全ハッシュ・Inno確定・独立環境構築/取得時ハッシュ照合は残件です。wheelハッシュは再配布許諾やインストール済み全ファイル一致の証明ではありません。告知承認ガードを維持します。

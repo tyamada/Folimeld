@@ -1,6 +1,6 @@
 # Windows x64 Desktop: implementation before building
 
-[日本語](windows-desktop-build_ja.md)
+[譌･譛ｬ隱枉(windows-desktop-build_ja.md)
 
 Unbuilt, unpublished candidate configuration, separate from Store and uv editions.
 PyInstaller onedir plus Inno Setup requires no user-installed Python, uv or PowerShell.
@@ -16,7 +16,7 @@ PyInstaller onedir plus Inno Setup requires no user-installed Python, uv or Powe
 
 ## onedir prerequisites
 
-Use a dedicated CPython3.12.16 environment. Validate the fourteen runtime versions from windows-uv-runtime.json; uv itself is not used for installation or runtime.
+Use a dedicated CPython3.12.16 environment. Validate the fourteen runtime versions from packaging/windows/desktop-runtime.json; uv itself is not used for installation or runtime.
 Validate PyInstaller6.22.2 and hooks-contrib2026.7. Restrict native collection to private Python/Windows roots. Disable UPX and retain the DPI manifest.
 Explicitly sort collection inputs; cross-environment byte reproducibility remains unverified. Leave the Store Folimeld.spec unchanged.
 
@@ -51,3 +51,10 @@ Simulated Qt platform conditions do not replace real installer/frozen-process ac
 No ISCC compilation, compiler validation of the Inno script or executable generation is performed yet.
 Startup timing, PDF/image operations, three workers, Per-Monitor V2, visible support-link behavior, coexistence, update/removal/recovery, legal records and signing remain acceptance tasks.
 No test-PC update, WACK or Hosted API comparison.
+
+
+## Desktop fixed inputs / Qt policy
+
+Desktop uses packaging/windows/desktop-runtime.json independently: Python archive hash, fourteen runtime versions and wheel URLs/SHA256, PyInstaller/hooks versions. No uv configuration is read. The Desktop input hash is recorded in build-inputs.json.
+Only the Desktop spec uses tools/desktop_qt.py. Core/Gui/Widgets and optional SVG/OpenGL support are allowed. Unused modules (VirtualKeyboard, Charts, Graphs, QML/Quick, WebEngine, Pdf, Multimedia, etc.), native plugins and QML data are excluded. Retained code requiring excluded/unresolved Qt dependencies stops collection. Missing Core/Gui/Widgets/qwindows also stops collection. Exclusions are recorded in future workpath/desktop-qt-exclusions.json.
+Dynamic loading, Japanese IME, GPU behavior and actual payload acceptance remain unverified. Store/uv specs and launchers remain unchanged. No dependency download/environment creation is performed. Tool archive hashes, Inno confirmation and independent environment setup/download hash verification remain pending. Wheel hashes do not establish redistribution rights or installed-file correspondence. The reviewed-legal-input gate remains mandatory.
