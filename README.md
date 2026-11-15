@@ -43,6 +43,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | OS | CPU | Distribution and version | Release |
 | --- | --- | --- | --- |
 | Windows 11 | x64 | Microsoft Store / 1.0.1.0 | [Matching source](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.1.0) |
+| Windows 11 | x64 | Source + uv / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) |
 | macOS 15 or later | Apple Silicon (arm64) | Homebrew / 0.3.3 (source) | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.3) |
 | Ubuntu 24.04 | amd64 / arm64 | DEB / Snap / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
 | Debian 13 | amd64 / arm64 | DEB / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
@@ -78,7 +79,16 @@ Versions in the table are specific to each distribution channel. The Windows Sto
 - **Get the source** — Use **Code → Download ZIP** or Git to get the Windows code and build scripts from the [public main branch](https://github.com/tyamada/Folimeld/tree/main).
 - **Source for Store version 1.0.1.0 x64** — [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt) · [Submission association record](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json). Three documentation files were revised for publication. The application source and build files match the submitted build's source snapshot.
 
-Windows 11 releases are distributed through the Microsoft Store. See the [development guide](DEVELOPMENT.md) for the Store MSIX workflow.
+The standard Windows 11 distribution channel is Microsoft Store. See the [development guide](DEVELOPMENT.md) for the Store MSIX workflow.
+
+### Windows 11 x64 source + uv preview
+
+[**Folimeld 0.3.5 Windows x64 uv preview**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) is available as an additional distribution channel. Microsoft Store remains the standard Windows distribution channel. This preview is not an MSIX or standalone EXE.
+
+- [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip) · [Internal manifest](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/source-manifest.json) · [Source commit association](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/SOURCE-ASSOCIATION.txt) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/SHA256SUMS.txt)
+- Requires Windows 11 x64, PowerShell 7.2+, Windows-provided tar and Internet access. CPython 3.12.16, uv 0.13.8 and fourteen dependencies are pinned and downloaded during installation.
+- Verify the ZIP's SHA-256, extract it into a fresh dedicated directory and follow the included [uv installation guide](documentation/windows-uv-source.md). Launch the generated Folimeld UV shortcut after installation. Settings and logs are stored under `%LOCALAPPDATA%/Folimeld-UV`.
+- Fresh installation from this published ZIP, PDF display/Save As/reopening, image conversion/saving, all three workers and settings persistence after restart have been verified. Production Store coexistence, cross-version updates/rollback, multiple display scales/monitor transitions and effectiveness against the known crash remain unverified. See the Release notes and included guide for details and licensing information.
 
 ### Install on macOS with Homebrew
 

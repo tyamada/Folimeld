@@ -43,6 +43,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | OS | CPU | 配布形式・版 | 公開先 |
 | --- | --- | --- | --- |
 | Windows 11 | x64 | Microsoft Store / 1.0.1.0 | [対応ソース](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.1.0) |
+| Windows 11 | x64 | ソース＋uv / 0.3.5（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) |
 | macOS 15以降 | Apple Silicon（arm64） | Homebrew / 0.3.3（ソース配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.3) |
 | Ubuntu 24.04 | amd64 / arm64 | DEB・Snap / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
 | Debian 13 | amd64 / arm64 | DEB / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
@@ -78,7 +79,16 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 - **ソースを取得** — [公開リポジトリのmain](https://github.com/tyamada/Folimeld/tree/main)の「Code → Download ZIP」またはGitから、Windows用コードとビルドスクリプトを取得できます。
 - **Store版1.0.1.0 x64の対応ソース** — [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt) · [提出物との対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json)。公開用ZIPでは文書3件を公開向けに整理し、アプリコードとビルド用ファイルは提出時のソースと同一です。
 
-Windows 11版はMicrosoft Storeで配布します。Store向けMSIXの開発手順は[開発ガイド](DEVELOPMENT_ja.md)を参照してください。
+Windows 11版の標準配布経路はMicrosoft Storeです。Store向けMSIXの開発手順は[開発ガイド](DEVELOPMENT_ja.md)を参照してください。
+
+### Windows 11 x64 ソース＋uv版プレビュー
+
+[**Folimeld 0.3.5 Windows x64 uv版プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1)を追加の配布経路として公開しています。Microsoft Store配布は引き続き標準のWindows配布経路です。このプレビューはMSIXや単独EXEではありません。
+
+- [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip) · [内部台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/source-manifest.json) · [コミットとの対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/SOURCE-ASSOCIATION.txt) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/SHA256SUMS.txt)
+- Windows 11 x64、PowerShell 7.2以降、Windows標準tar、インターネット接続が必要です。CPython 3.12.16・uv 0.13.8・依存14件を固定し、導入時に取得します。
+- ZIPのSHA-256を照合して新しい専用フォルダーへ展開し、同梱の[uv版手順書](documentation/windows-uv-source_ja.md)に従って導入してください。導入後は作成されるFolimeld UVショートカットから起動します。設定・ログは`%LOCALAPPDATA%/Folimeld-UV`へ保存します。
+- この公開ZIPからの新規導入、PDF表示・別名保存・再読込、画像変換・保存、3ワーカー、再起動後の設定保持を確認済みです。本番Store版との併存、異なる版への更新・旧版復帰、複数倍率・モニター移動、既知クラッシュへの修正効果は未確認です。詳細とライセンス情報はRelease本文と同梱手順書を参照してください。
 
 ### macOS版をHomebrewでインストール
 
