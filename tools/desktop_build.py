@@ -12,6 +12,7 @@ import sys
 import struct
 
 from tools.windows_build_environment import build_environment
+from tools.desktop_crt import load_crt_manifest, verify_crt_inputs
 
 
 def reviewed_legal_datas(root: Path) -> list[tuple[str, str]]:
@@ -58,6 +59,7 @@ def main() -> int:
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--legal-root", type=Path, required=True)
     parser.add_argument("--version-info", type=Path, required=True)
+    parser.add_argument("--crt-root", type=Path, required=True)
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     if (sys.platform != "win32" or struct.calcsize("P") != 8
@@ -69,6 +71,8 @@ def main() -> int:
     for name, pin in pins.items():
         if version(name) != pin:
             raise RuntimeError(f"Build dependency drift: {name}")
+    crt_manifest, crt_manifest_hash = load_crt_manifest(root)
+    crt_inputs = verify_crt_inputs(args.crt_root, crt_manifest)
     reviewed_legal_datas(args.legal_root)
     if not args.version_info.is_file():
         raise FileNotFoundError(args.version_info)
@@ -78,10 +82,12 @@ def main() -> int:
     output.mkdir(parents=True)
     environment = build_environment(os.environ, executable=sys.executable,
         base_prefix=sys.base_prefix, git_executable=shutil.which("git"))
+    environment["FOLIMELD_DESKTOP_CRT_ROOT"] = str(args.crt_root.resolve())
     environment["FOLIMELD_DESKTOP_LEGAL_ROOT"] = str(args.legal_root.resolve())
     environment["FOLIMELD_DESKTOP_VERSION_INFO"] = str(args.version_info.resolve())
     (output / "build-inputs.json").write_text(json.dumps({"python": sys.version,
-        "pins": pins, "desktop_inputs_sha256": profile_hash, "legal_root": str(args.legal_root.resolve()),
+        "pins": pins, "desktop_inputs_sha256": profile_hash,
+        "crt_manifest_sha256": crt_manifest_hash, "crt_inputs": crt_inputs, "legal_root": str(args.legal_root.resolve()),
         "version_info_sha256": hashlib.sha256(args.version_info.read_bytes()).hexdigest()}, indent=2), encoding="utf-8")
     with (output / "pyinstaller.log").open("w", encoding="utf-8") as log:
         return subprocess.run([sys.executable, "-m", "PyInstaller", "--clean",

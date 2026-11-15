@@ -25,7 +25,7 @@ legal/reviewed-files.json must contain distribution=windows-desktop-x64 and a fi
 This pins hashes; it does not perform or replace license review. Do not reuse old cp314 records or uv documentation assuming dependencies are not redistributed without matching them to the actual binaries.
 Do not fabricate records merely to pass this gate before Qt/dependency source, patch and payload review.
 
-After approval, use python -m tools.desktop_build --output <new absolute directory> --legal-root <reviewed records> --version-info <dedicated version info>.
+After approval, use python -m tools.desktop_build --output <new absolute directory> --legal-root <reviewed records> --version-info <dedicated version info> --crt-root <dedicated verified CRT directory>.
 Existing output stops the build. Validate restricted PATH, dependency versions and legal hashes; retain build-inputs.json and pyinstaller.log.
 At build time, separately finalize matching application source ZIP, Git commit, complete inputs/payload ledger and final setup association; verify them before release.
 
@@ -58,3 +58,11 @@ No test-PC update, WACK or Hosted API comparison.
 Desktop uses packaging/windows/desktop-runtime.json independently: Python archive hash, fourteen runtime versions and wheel URLs/SHA256, PyInstaller/hooks versions. No uv configuration is read. The Desktop input hash is recorded in build-inputs.json.
 Only the Desktop spec uses tools/desktop_qt.py. Core/Gui/Widgets and optional SVG/OpenGL support are allowed. Unused modules (VirtualKeyboard, Charts, Graphs, QML/Quick, WebEngine, Pdf, Multimedia, etc.), native plugins and QML data are excluded. Retained code requiring excluded/unresolved Qt dependencies stops collection. Missing Core/Gui/Widgets/qwindows also stops collection. Exclusions are recorded in future workpath/desktop-qt-exclusions.json.
 Dynamic loading, Japanese IME, GPU behavior and actual payload acceptance remain unverified. Store/uv specs and launchers remain unchanged. No dependency download/environment creation is performed. Tool archive hashes, Inno confirmation and independent environment setup/download hash verification remain pending. Wheel hashes do not establish redistribution rights or installed-file correspondence. The reviewed-legal-input gate remains mandatory.
+
+
+## Desktop CRT collection
+
+`packaging/windows/desktop-crt.json` pins exactly seven official Desktop x64 CRT files at 14.44.35211.0 by SHA256 and size. `--crt-root` must contain exactly those files. Preflight verifies containment, contents and x64 PE headers without installing or running them. The same checks run again in the spec before collection.
+The existing Python/Windows source guard stays in place for Analysis inputs. Only individually verified CRT paths are added afterward; no general Program Files or workspace allowance is introduced. Approved-name CRT duplicates from binaries and data TOCs are replaced with one canonical set. Unknown CRT, system UCRT/API-set copies and renamed CRT files stop collection. Input files are never deleted or modified.
+The Desktop spec explicitly uses `_internal`. After COLLECT, a read-only audit requires the seven exact files there and rejects nested/root duplicates, extra CRT, missing/changed files and escaping paths. The build work directory records desktop-crt-inputs.json and desktop-crt-collected.json. A failed audit fails the build; any partial output is not an accepted candidate.
+Source input and synthetic-TOC/unit checks do not verify real frozen-app DLL loading, worker behavior or runtime compatibility. Redistribution/notice/source review and reviewed-files.json remain separate prerequisites. No legal approval is inferred from the CRT hashes. Store/uv specs and data remain unchanged.

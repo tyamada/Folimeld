@@ -25,7 +25,7 @@ legalのreviewed-files.jsonにはdistribution=windows-desktop-x64とfilesの相�
 これはハッシュ固定のガードであり、ライセンス確認を自動で代替しません。旧cp314由来のlicenses資料やuvの未同梱前提の資料を、実物対応を調べずに転用しません。
 Qt等の対応ソース・パッチ・収録物を点検するまで、このガードを通す架空の資料は作らないでください。
 
-承認後のビルド入口はpython -m tools.desktop_build --output <新規絶対パス> --legal-root <点検済み資料> --version-info <専用版情報>です。
+承認後のビルド入口はpython -m tools.desktop_build --output <新規絶対パス> --legal-root <点検済み資料> --version-info <専用版情報> --crt-root <照合済みCRT専用フォルダー>です。
 既存出力先があれば停止。制限PATHと依存版、資料ハッシュを検査し、build-inputs.jsonとpyinstaller.logを保存します。
 アプリの対応ソースZIP・Gitコミット・全入力/全ペイロード・最終setupの対応台帳はビルド段階で別途確定し、公開ゲートで照合します。
 
@@ -58,3 +58,11 @@ ISCCでのコンパイル・Inno Setup構文のコンパイラ検証・実EXE生
 packaging/windows/desktop-runtime.jsonにPython配布ハッシュ、依存14件の版・wheel URL/SHA256、PyInstaller/hooks版を独立保持します。uv設定は参照しません。入力自体のハッシュをbuild-inputs.jsonへ記録します。
 Desktop specだけにtools/desktop_qt.pyを適用。Core/Gui/Widgetsと任意のSVG/OpenGL支援を許可し、VirtualKeyboard・Charts・Graphs・QML/Quick・WebEngine・Pdf・Multimedia等の未使用モジュール、DLL/プラグイン/QMLデータを除外します。保持コードが除外Qtや解決不能Qtに依存する場合、またCore/Gui/Widgets/qwindows欠落時には停止します。除外一覧は将来のworkpath/desktop-qt-exclusions.jsonに記録します。
 動的読込・日本語IME・GPU・実ペイロード受入は未確認。Store/uv specとランチャーは変更しません。依存取得・環境作成は行いません。工具アーカイブ全ハッシュ・Inno確定・独立環境構築/取得時ハッシュ照合は残件です。wheelハッシュは再配布許諾やインストール済み全ファイル一致の証明ではありません。告知承認ガードを維持します。
+
+
+## Desktop専用CRT収録
+
+packaging/windows/desktop-crt.jsonに正規Desktop x64 CRT14.44.35211.0の7件だけをSHA256/サイズで固定。--crt-rootはその7ファイルのみを含む専用フォルダーを指定します。事前検査で領域内参照・内容・x64 PEを確認し、specの収録直前にも再照合します。導入・実行はしません。
+Analysis入力に対する従来のPython/Windows由来ガードを維持し、その後に個別照合したCRTだけを追加します。Program Filesや作業領域全体を許可しません。binaries/datas両TOCの承認名CRT重複を正規7件へ統一し、未知CRT・OSのUCRT/API-set収録・名前変更したCRTは停止します。入力ファイルは削除・変更しません。
+Desktop specは_internalを明示。COLLECT後に7件の正確な配置/ハッシュを再検査し、配下/EXE隣への重複、追加CRT、欠落/改変、領域外参照は失敗とします。workにdesktop-crt-inputs.jsonとdesktop-crt-collected.jsonを保存。検査失敗時はビルド失敗とし、途中出力を受入済み候補にしません。
+入力検査・模擬TOC/単体検査は、実凍結アプリのDLL読込・ワーカー・互換性確認の代替ではありません。再配布条件/告知/対応ソースの審査とreviewed-files.jsonは別の必須条件で、CRTハッシュ一致を法的承認にしません。Store/uv specとデータを維持します。
