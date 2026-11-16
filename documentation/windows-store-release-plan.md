@@ -59,9 +59,9 @@ Plan for the next update (Submission 2) adding native Windows 11 ARM64 support (
   - Undo/Redo history disk spooling (AES-256-GCM encrypted temp storage up to 1 GiB).
   - Virtualized thumbnail rendering (smooth scrolling for documents with 1,000+ pages).
   - Batch PDF creation from image folders (PNG, JPEG, TIFF, BMP, WebP).
-- **Package deliverables**:
-  - `dist/Folimeld_1.0.2.0_x64.msix`
-  - `dist/Folimeld_1.0.2.0_arm64.msix`
+- **Package assets (built and preflight verified)**:
+  - `dist/Folimeld_1.0.2.0_x64.msix` (~76.4 MB, SHA-256: `E57D690DE5D07EE956DB25A1173F56ED36B81EFD951F1C42DB651252915B7853`, PE Machine `0x8664`, preflight passed)
+  - `dist/Folimeld_1.0.2.0_arm64.msix` (~62.9 MB, SHA-256: `3BBB94BC7E186533030933DC9F8E99258EACEDC5EBC23149CFF295AA454515AC`, PE Machine `0xAA64`, preflight passed)
   - Uploaded simultaneously in Partner Center Submission 2 Packages step for automatic architecture-specific distribution.
 - **Build and preflight commands**:
   ```powershell

@@ -661,7 +661,7 @@ The source for the next release also enables this guidance on FreeBSD, NetBSD an
 
 ## TODO
 
-- For the next Microsoft Store release (1.0.2.0), verify upgrade retention from Store version 1.0.1.0 and add validation for the native Windows 11 ARM64 MSIX package.
+- Submit and certify the next Microsoft Store release (Submission 2 / 1.0.2.0: x64 + ARM64 dual architecture), and verify upgrade retention from Store version 1.0.1.0 and hardware acceptance.
 
 ## Known issues and limitations
 

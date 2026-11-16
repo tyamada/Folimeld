@@ -59,9 +59,9 @@ Windows 11 x64 に加え、Windows 11 ARM64（Surface Pro 11 等の Copilot+ PC 
   - Undo/Redo 履歴のディスク退避（AES-256-GCM 暗号化、最大 1 GiB）
   - サムネイル仮想化（1,000 ページ超の文書でもメモリ浪費を防ぐ表示最適化）
   - 画像フォルダー一括取り込み（PNG, JPEG, TIFF, BMP, WebP の PDF 化）
-- **パッケージ構成**:
-  - `dist/Folimeld_1.0.2.0_x64.msix`
-  - `dist/Folimeld_1.0.2.0_arm64.msix`
+- **パッケージ構成（生成・静的検査完了）**:
+  - `dist/Folimeld_1.0.2.0_x64.msix`（約 76.4 MB、SHA-256: `E57D690DE5D07EE956DB25A1173F56ED36B81EFD951F1C42DB651252915B7853`、PE Machine `0x8664`、静的検査合格）
+  - `dist/Folimeld_1.0.2.0_arm64.msix`（約 62.9 MB、SHA-256: `3BBB94BC7E186533030933DC9F8E99258EACEDC5EBC23149CFF295AA454515AC`、PE Machine `0xAA64`、静的検査合格）
   - Partner Center の同一申請（Submission 2）のパッケージ画面で両 MSIX をアップロードし、クライアント端末の CPU に応じて自動配信。
 - **ビルド・事前検査コマンド**:
   ```powershell
