@@ -4,6 +4,8 @@
 
 ## 未リリース
 
+- Windows 11向けの3つのプレビューパッケージ（ソース＋uv版、`uv tool install`版、Desktopインストーラー版）について、x86_64とARM64共通の事前準備・ダウンロード・インストール・実行手順を統合・整理し、各アーキテクチャ別のハッシュ照合・Smart App Control対応案内を日英READMEおよびドキュメントに拡充。
+
 - Windows 11 ARM64（Surface Pro 11等のCopilot+ PC / Snapdragon X Elite）向けに3つの試験公開パッケージ（ソース＋uv版、`uv tool install`版、PyInstaller onedir＋Inno Setup Desktopインストーラー版）を追加。
   - Python Software Foundation（PSF）公式署名済み CPython 3.12.10 ARM64（`pythonarm64.3.12.10.nupkg`）およびARM64ネイティブ uv 0.13.8 を採用し、Windows 11 の Smart App Control（スマート アプリ コントロール: SAC）有効環境下で未署名バイナリのロードブロック通知を抑止・防止する構成を確立。
   - `install_uv.ps1`、`launch_uv.py`、`folimeld.uv_tool_launcher`、`folimeld.desktop_profile`、`folimeld.uv_tool_profile`、`pyproject.toml`、`Folimeld-desktop.spec`、`tools.desktop_build`、`tools.desktop_compile`、`tools.uv_tool_build` をARM64ネイティブ（PE Machine `0xAA64`、ARM64 CRT 14.52.37029.0）へ両対応化。

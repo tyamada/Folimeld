@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+- Consolidated and unified the prerequisites, download, installation, and execution guides for all three Windows 11 preview packages (source + uv, `uv tool install`, and Desktop installer) across x86_64 and ARM64 in bilingual READMEs and documentation, with architecture-specific SHA-256 verification and Smart App Control guidance.
+
 - Add three preview packages for Windows 11 ARM64 (such as Copilot+ PCs / Snapdragon X Elite): source + uv edition, `uv tool install` edition, and PyInstaller onedir + Inno Setup Desktop installer edition.
   - Adopt official Python Software Foundation (PSF) signed CPython 3.12.10 ARM64 (`pythonarm64.3.12.10.nupkg`) and native ARM64 uv 0.13.8, establishing an environment setup that prevents unsigned binary block notifications under Windows 11 Smart App Control (SAC).
   - Add native ARM64 support across `install_uv.ps1`, `launch_uv.py`, `folimeld.uv_tool_launcher`, `folimeld.desktop_profile`, `folimeld.uv_tool_profile`, `pyproject.toml`, `Folimeld-desktop.spec`, `tools.desktop_build`, `tools.desktop_compile`, and `tools.uv_tool_build` (PE Machine `0xAA64`, ARM64 CRT 14.52.37029.0).

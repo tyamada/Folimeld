@@ -30,33 +30,41 @@ updates and rollback remain unverified.
 
 ## Installation and launch contract
 
-Use the following instructions for user installation on Windows 11 x64. Administrator privileges, PATH modifications, execution policy changes, and Store registration modifications are not performed.
+Use the following instructions for user installation on Windows 11 x64 and Windows 11 ARM64. Administrator privileges, PATH modifications, execution policy changes, and Store registration modifications are not performed.
 
 ### 1. Prerequisites
 
-- **Target OS**: Windows 11 x64 (x86_64). ARM64 is not supported.
+- **Target OS**: Windows 11 x64 (x86_64) or Windows 11 ARM64 (Surface Pro 11 Copilot+ PCs / Snapdragon X Elite).
 - **Required tools**:
   - **PowerShell 7.2 or later (`pwsh`)**: Use PowerShell 7 rather than Windows-bundled Windows PowerShell 5.1.
   - **tar.exe**: Windows-provided utility (`C:\Windows\System32\tar.exe`; standard on Windows 11).
-- **Internet access**: Required during installer execution to download pinned CPython 3.12.16, uv 0.13.8, and fourteen pinned dependencies.
+- **Internet access**: Required during installer execution to download pinned CPython, uv, and fourteen pinned dependencies.
 - **Privileges**: Runs under standard user privileges. Pre-installing Python or uv manually is not required.
+- **Smart App Control compatibility**: On ARM64 devices, runs under the official Python Software Foundation (PSF) Authenticode-signed CPython 3.12.10 runtime, safely passing Windows 11 Smart App Control without block notifications.
 
 ### 2. Files from GitHub
 
-Download the following archive from GitHub Releases [windows-uv-v0.3.5-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) (typically saved to `$HOME\Downloads`):
+Download the archive matching your PC's architecture from GitHub Releases (typically saved to `$HOME\Downloads`):
 
-- [**Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip) (SHA-256: `8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA`)
+- **x64 edition**: [**Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip) (Release: [windows-uv-v0.3.5-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1), SHA-256: `8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA`)
+- **ARM64 edition**: [**Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.5-preview.1/Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip) (Release: [windows-uv-arm64-v0.3.5-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.5-preview.1), SHA-256: `F362A5431D89FC633C852149E0ECD219C22BDAAD07A92229CF7193DBF5E56B72`)
 
 ### 3. Extraction and installation (SHA-256 verification and unblocking the unsigned installer)
 
-These instructions apply only to the published x64 preview `windows-uv-v0.3.5-preview.1`. Do not reuse this expected hash for another ZIP.
 Run in non-elevated PowerShell 7.2 or later. The example assumes the ZIP is in Downloads; change `$zip` if needed.
 Set `$destination` to a dedicated directory that does not exist. Do not reuse an installation directory.
 
 ```powershell
 $ErrorActionPreference = 'Stop'
-$zip = Join-Path $HOME 'Downloads\Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip'
-$expected = '8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA'
+
+if ([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture -match 'Arm64') {
+    $zip = Join-Path $HOME 'Downloads\Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip'
+    $expected = 'F362A5431D89FC633C852149E0ECD219C22BDAAD07A92229CF7193DBF5E56B72'
+} else {
+    $zip = Join-Path $HOME 'Downloads\Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip'
+    $expected = '8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA'
+}
+
 if ((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash -ne $expected) {
     throw 'ZIP SHA-256 mismatch. Stop without extracting or running it.'
 }

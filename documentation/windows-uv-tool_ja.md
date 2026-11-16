@@ -45,21 +45,26 @@ python -m tools.uv_tool_build --output .\dist\uv-tool-arm64-release --arch arm64
 
 ### 1. 事前準備
 
-Windows 11 x64（x86_64）とuv本体が必要です。通常権限のPowerShellで `uv --version` が動く状態にします。uv未導入の場合は以下で導入し、PowerShellを開き直してください。本プレビューはuv 0.13.8で検証しています。ARM64は対象外です。
+Windows 11（x64 または ARM64）とuv本体が必要です。通常権限のPowerShellで `uv --version` が動く状態にします。uv未導入の場合は以下で導入し、PowerShellを開き直してください。
 
 ```powershell
 winget install --id=Astral.uv -e
 uv --version
 ```
 
-**Python 3.12の事前手動インストールは不要です。** `--python 3.12` は、適合するPythonがない場合に標準設定のuvでCPython 3.12.xを取得します。自動取得が無効の場合や通信制限下では別途準備が必要です。Pythonのパッチ版を固定する指定ではありません。
+- **Python 3.12の事前手動インストールは不要です。** `--python 3.12` は、適合するPythonがない場合に標準設定のuvでCPython 3.12.xを取得します。自動取得が無効の場合や通信制限下では別途準備が必要です。Pythonのパッチ版を固定する指定ではありません。
+- **Smart App Control（スマート アプリ コントロール）対応**: uv tool管理下の署名済みPythonインタプリタにより実行されるため、ARM64環境でもブロック通知を誘発することなく安全に動作します。
 
 ### 2. GitHubから入手するファイル
 
 次の**2ファイルを同じフォルダー**（例: Downloads）へ保存してください。
 
-1. [**folimeld-0.3.5-py3-none-any.whl**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/folimeld-0.3.5-py3-none-any.whl) — アプリ本体のWheel。
-2. [**requirements-windows-uv.lock**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/requirements-windows-uv.lock) — 依存14パッケージの版と配布wheelのSHA-256を記録した固定入力。
+1. **folimeld-0.3.5-py3-none-any.whl** — アプリ本体のPure Python Wheel。
+   - x64 Release: [folimeld-0.3.5-py3-none-any.whl](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/folimeld-0.3.5-py3-none-any.whl)（SHA-256: `759B2FE0052F1741427194E40104DB0AF65184041AD5BAD8BB5D2003874DBDAF`）
+   - ARM64 Release: [folimeld-0.3.5-py3-none-any.whl](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/folimeld-0.3.5-py3-none-any.whl)（SHA-256: `FF06269C5BFC4A53B7BF5B673B48B3CC267744F757F771E29619785CD1150B4E`）
+2. **依存ロックファイル** — 依存14パッケージの版と各アーキテクチャ用wheelのSHA-256を記録した固定入力。
+   - x64用: [**requirements-windows-uv.lock**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/requirements-windows-uv.lock)（SHA-256: `7E994B4C231536FB5C53D79959761BC426BD9FF9585B578165F1FD67EC19077F`）
+   - ARM64用: [**requirements-windows-arm64-uv.lock**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/requirements-windows-arm64-uv.lock)（SHA-256: `B30019EC8BB3DDD9C15CEBB093432CD309566A6792B3EBCCDE821964B5054B67`）
 
 ### 3. 実行場所と保存先
 
@@ -88,15 +93,25 @@ $ErrorActionPreference = 'Stop'
 # 保存場所が異なる場合は変更
 Set-Location -LiteralPath (Join-Path $HOME 'Downloads')
 
-# SHA-256が一致しない場合は中止
-if ((Get-FileHash -LiteralPath .\folimeld-0.3.5-py3-none-any.whl -Algorithm SHA256).Hash -ne '759B2FE0052F1741427194E40104DB0AF65184041AD5BAD8BB5D2003874DBDAF') {
-    throw 'Wheel SHA-256 mismatch.'
-}
-if ((Get-FileHash -LiteralPath .\requirements-windows-uv.lock -Algorithm SHA256).Hash -ne '7E994B4C231536FB5C53D79959761BC426BD9FF9585B578165F1FD67EC19077F') {
-    throw 'Lock SHA-256 mismatch.'
+# アーキテクチャに応じたSHA-256照合と導入
+if ([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture -match 'Arm64') {
+    if ((Get-FileHash -LiteralPath .\folimeld-0.3.5-py3-none-any.whl -Algorithm SHA256).Hash -ne 'FF06269C5BFC4A53B7BF5B673B48B3CC267744F757F771E29619785CD1150B4E') {
+        throw 'Wheel SHA-256 mismatch.'
+    }
+    if ((Get-FileHash -LiteralPath .\requirements-windows-arm64-uv.lock -Algorithm SHA256).Hash -ne 'B30019EC8BB3DDD9C15CEBB093432CD309566A6792B3EBCCDE821964B5054B67') {
+        throw 'Lock SHA-256 mismatch.'
+    }
+    uv tool install --python 3.12 --with-requirements .\requirements-windows-arm64-uv.lock --no-build .\folimeld-0.3.5-py3-none-any.whl
+} else {
+    if ((Get-FileHash -LiteralPath .\folimeld-0.3.5-py3-none-any.whl -Algorithm SHA256).Hash -ne '759B2FE0052F1741427194E40104DB0AF65184041AD5BAD8BB5D2003874DBDAF') {
+        throw 'Wheel SHA-256 mismatch.'
+    }
+    if ((Get-FileHash -LiteralPath .\requirements-windows-uv.lock -Algorithm SHA256).Hash -ne '7E994B4C231536FB5C53D79959761BC426BD9FF9585B578165F1FD67EC19077F') {
+        throw 'Lock SHA-256 mismatch.'
+    }
+    uv tool install --python 3.12 --with-requirements .\requirements-windows-uv.lock --no-build .\folimeld-0.3.5-py3-none-any.whl
 }
 
-uv tool install --python 3.12 --with-requirements .\requirements-windows-uv.lock --no-build .\folimeld-0.3.5-py3-none-any.whl
 if ($LASTEXITCODE -ne 0) { throw 'uv tool install failed.' }
 ```
 

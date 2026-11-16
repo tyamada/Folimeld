@@ -25,33 +25,41 @@ Windows 11 x64およびWindows 11 ARM64（Surface Pro 11等のCopilot+ PC）を�
 
 ## 導入・起動契約
 
-以下は利用者向けの導入手順です。Windows 11 x64のみを対象とし、管理者権限、PATH変更、実行ポリシー変更、Store登録変更は行いません。
+以下は利用者向けの導入手順です。Windows 11 x64およびWindows 11 ARM64を対象とし、管理者権限、PATH変更、実行ポリシー変更、Store登録変更は行いません。
 
 ### 1. 事前準備
 
-- **対象OS**: Windows 11 x64（x86_64）※ARM64は対象外です。
+- **対象OS**: Windows 11 x64（x86_64）または Windows 11 ARM64（Surface Pro 11等のCopilot+ PC / Snapdragon X Elite）。
 - **必要なツール**:
   - **PowerShell 7.2 以降 (`pwsh`)**: Windows標準の Windows PowerShell 5.1 ではなく、PowerShell 7 を使用します。
   - **tar.exe**: Windows標準ツール（`C:\Windows\System32\tar.exe`。通常は標準搭載）。
-- **インターネット接続**: インストールスクリプト実行時に固定CPython 3.12.16、uv 0.13.8、および依存14件を取得します。
+- **インターネット接続**: インストールスクリプト実行時に固定CPython、uv、および依存14件を取得します。
 - **権限**: 通常ユーザー権限で実行します。Python本体やuvの事前手動インストールは不要です。
+- **Smart App Control（スマート アプリ コントロール）**: ARM64環境ではPSF公式署名済みのCPython 3.12.10ランタイムを使用するため、Smart App Controlが有効な環境でもブロック通知を誘発せず安全に動作します。
 
 ### 2. GitHubから入手するファイル
 
-GitHub Releases の [windows-uv-v0.3.5-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) から次のファイルをダウンロードします（例: `$HOME\Downloads`）。
+ご利用のアーキテクチャに応じたZIPアーカイブをGitHub Releasesからダウンロードします（例: `$HOME\Downloads`）。
 
-- [**Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip)（SHA-256: `8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA`）
+- **x64版**: [**Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip)（Release: [windows-uv-v0.3.5-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1)、SHA-256: `8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA`）
+- **ARM64版**: [**Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.5-preview.1/Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip)（Release: [windows-uv-arm64-v0.3.5-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.5-preview.1)、SHA-256: `F362A5431D89FC633C852149E0ECD219C22BDAAD07A92229CF7193DBF5E56B72`）
 
 ### 3. 展開場所とインストール（SHA-256照合・ブロック解除）
 
-この手順は公開済みのx64プレビュー`windows-uv-v0.3.5-preview.1`専用です。他のZIPにこの期待ハッシュを流用しないでください。
 通常権限のPowerShell 7.2以降で実行します。ZIPをDownloadsへ保存した場合の例です。保存先が異なる場合は`$zip`を変更してください。
 既存の導入先を再利用せず、`$destination`には存在しない専用フォルダーを指定します。
 
 ```powershell
 $ErrorActionPreference = 'Stop'
-$zip = Join-Path $HOME 'Downloads\Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip'
-$expected = '8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA'
+
+if ([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture -match 'Arm64') {
+    $zip = Join-Path $HOME 'Downloads\Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip'
+    $expected = 'F362A5431D89FC633C852149E0ECD219C22BDAAD07A92229CF7193DBF5E56B72'
+} else {
+    $zip = Join-Path $HOME 'Downloads\Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip'
+    $expected = '8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA'
+}
+
 if ((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash -ne $expected) {
     throw 'ZIP SHA-256 mismatch. Stop without extracting or running it.'
 }

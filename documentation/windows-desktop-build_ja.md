@@ -16,20 +16,21 @@ Python/uv/PowerShellを利用者へ要求しないPyInstaller onedir＋Inno Setu
 
 ## 利用者向け導入・起動手順
 
-Python・uv・PowerShellの事前導入を不要としたユーザー単位インストーラー [Folimeld 0.3.5.0 Windows x64 Desktop プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) の手順です。
+Python・uv・PowerShellの事前導入を不要としたユーザー単位インストーラー [Folimeld 0.3.5.0 Windows x64 Desktop プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) および [Folimeld 0.3.5.0 Windows ARM64 Desktop プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1) の手順です。
 
 ### 1. 事前準備
 
-- **対象OS**: Windows 11 x64（x86_64）※ARM64機向けには専用のARM64インストーラーを使用します。
-- **必要なツール・ランタイム**: Python、uv、PowerShellの事前インストールは**不要**です。必要なPython 3.12.16ランタイム、PyQt6、依存ライブラリ、Microsoft VC++ Runtime（CRT）がすべて内包されています。
+- **対象OS**: Windows 11 x64（x86_64）または Windows 11 ARM64（Surface Pro 11等のCopilot+ PC / Snapdragon X Elite）。各アーキテクチャのネイティブバイナリで動作します。
+- **必要なツール・ランタイム**: Python、uv、PowerShellの事前インストールは**不要**です。必要なPython 3.12ランタイム、PyQt6、依存ライブラリ、Microsoft VC++ Runtime（CRT）がすべて内包されています。
 - **実行権限**: 通常ユーザー権限で動作します（管理者権限・UAC昇格は不要）。
 - **インターネット接続**: インストーラー内に全ファイルが含まれるため、インストール作業はオフラインでも実行可能です。
 
 ### 2. GitHubから入手するファイル
 
-GitHub Releases の [windows-desktop-v0.3.5.0-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) から次のインストーラーをダウンロードします（例: `$HOME\Downloads`）。
+ご利用のPCのアーキテクチャに応じたインストーラーをGitHub Releasesからダウンロードします（例: `$HOME\Downloads`）：
 
-- [**Folimeld-Desktop-0.3.5.0-x64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-x64-setup.exe)（約47.9 MB、SHA-256: `ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3`）
+- **x64版**: [**Folimeld-Desktop-0.3.5.0-x64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-x64-setup.exe)（約47.9 MB、SHA-256: `ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3`）
+- **ARM64版**: [**Folimeld-Desktop-0.3.5.0-arm64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-arm64-setup.exe)（約37.7 MB、SHA-256: `D19DB07CDD56D5A72C12879CA2BFB5E126AD7532E3F431E2C07413279727633C`）
 
 ### 3. SHA-256照合とインストール手順
 
@@ -38,15 +39,28 @@ GitHub Releases の [windows-desktop-v0.3.5.0-preview.1](https://github.com/tyam
    ```powershell
    $ErrorActionPreference = 'Stop'
    Set-Location -LiteralPath (Join-Path $HOME 'Downloads')
-   $expected = 'ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3'
-   if ((Get-FileHash -LiteralPath .\Folimeld-Desktop-0.3.5.0-x64-setup.exe -Algorithm SHA256).Hash -ne $expected) {
+
+   if ([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture -match 'Arm64') {
+       $file = '.\Folimeld-Desktop-0.3.5.0-arm64-setup.exe'
+       $expected = 'D19DB07CDD56D5A72C12879CA2BFB5E126AD7532E3F431E2C07413279727633C'
+   } else {
+       $file = '.\Folimeld-Desktop-0.3.5.0-x64-setup.exe'
+       $expected = 'ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3'
+   }
+
+   if ((Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash -ne $expected) {
        throw 'Installer SHA-256 mismatch. Stop without running it.'
    }
    ```
 2. **インストーラーの実行**:
-   `Folimeld-Desktop-0.3.5.0-x64-setup.exe` を実行します。未署名試験版のため Windows SmartScreen の警告（「Windows によって PC が保護されました」）が表示された場合は、「**詳細情報**」をクリックして「**実行**」を選択してください。
+   インストーラーEXEを実行します。未署名試験版のため Windows SmartScreen の警告（「Windows によって PC が保護されました」）が表示された場合は、「**詳細情報**」をクリックして「**実行**」を選択してください。
+   > [!NOTE]
+   > **Windows 11 Smart App Control（スマート アプリ コントロール）に関するご案内**
+   > Windows 11（特にARM64 Copilot+ PC）でSmart App Controlが有効（強制）な環境では、Webからダウンロードされた未署名バイナリに対して「アプリの一部がブロックされました」と通知される場合があります。
+   > - 本インストーラーを実行する際、ブロックされた場合はファイルのプロパティで「許可する」を選択して実行してください。
+   > - ブロック通知を完全に回避したい場合は、PSF公式署名済みCPythonを使用するソース＋uv版またはuv tool install版をご利用ください。
 3. **ウィザードの進行**:
-   - **同意画面**: 表示される英語原文ライセンスは同梱の Microsoft Visual C++ Runtime（`14.44.35211.0`）のみに適用されます。「同意する」を選択して「次へ」をクリックします。
+   - **同意画面**: 表示される英語原文ライセンスは同梱の Microsoft Visual C++ Runtime（x64: `14.44.35211.0` / ARM64: `14.52.37029.0`）のみに適用されます。「同意する」を選択して「次へ」をクリックします。
    - **インストール先**: 既定では管理者不要の `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0` へ導入されます。通常はそのまま「次へ」をクリックします。
    - **追加タスク**: 必要に応じてデスクトップショートカット作成を選択し、「インストール」をクリックして完了させます（終了時の自動起動はしません）。
 
