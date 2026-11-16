@@ -24,7 +24,8 @@ def activate_desktop_profile(version: str) -> Path:
     global _settings_file
     validate_desktop_environment()
     from .source_profile import source_profile_active
-    if _settings_file is not None or source_profile_active():
+    from .uv_tool_profile import uv_tool_profile_active
+    if _settings_file is not None or source_profile_active() or uv_tool_profile_active():
         raise RuntimeError("A separate distribution profile is already active.")
     if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9.+_-]*", version):
         raise ValueError("Invalid Desktop version.")

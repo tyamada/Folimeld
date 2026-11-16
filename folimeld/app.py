@@ -564,6 +564,11 @@ def run(*, source_uv: bool = False, distribution: str | None = None) -> int:
         validate_desktop_environment()
         if source_uv:
             raise RuntimeError("Desktop and uv profiles cannot be combined.")
+    elif distribution == "uv-tool":
+        from .uv_tool_profile import validate_uv_tool_runtime_context
+        validate_uv_tool_runtime_context()
+        if source_uv:
+            raise RuntimeError("uv-tool and source uv profiles cannot be combined.")
     elif distribution is not None:
         if (distribution != "homebrew" or sys.platform != "darwin"
                 or getattr(sys, "frozen", False) or source_uv):
@@ -572,10 +577,14 @@ def run(*, source_uv: bool = False, distribution: str | None = None) -> int:
     app.setProperty("folimeld_distribution", distribution)
     app.setOrganizationName("Folimeld")
     app.setApplicationName("Folimeld-Desktop" if distribution == "desktop"
+                           else "Folimeld-UV-Tool" if distribution == "uv-tool"
                            else "Folimeld-UV" if source_uv else "Folimeld")
     if distribution == "desktop":
         from .desktop_profile import activate_desktop_profile
         configure_logging(activate_desktop_profile(__version__), strict=True)
+    elif distribution == "uv-tool":
+        from .uv_tool_profile import activate_uv_tool_profile
+        configure_logging(activate_uv_tool_profile(__version__), strict=True)
     elif source_uv:
         from .source_profile import activate_source_profile
         configure_logging(activate_source_profile(__version__), strict=True)
@@ -585,14 +594,15 @@ def run(*, source_uv: bool = False, distribution: str | None = None) -> int:
     app.setDesktopFileName("folimeld")
     i18n = I18n()
     _qt_translator = install_qt_translator(app, i18n.language)
-    resource_root = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent.parent))
+    from .resources import resource_root as get_resource_root
+    resource_root = get_resource_root()
     icon_path = resource_root / "assets" / "icon_256x256.png"
     if not icon_path.exists():
         icon_path = resource_root / "assets" / "Folimeld.iconset" / "icon_256x256.png"
     if icon_path.exists():
         app.setWindowIcon(QIcon(str(icon_path)))
     try:
-        if distribution != "desktop":
+        if distribution not in {"desktop", "uv-tool"}:
             register_open_with()
     except OSError:
         # Registry integration must never prevent the editor from starting.

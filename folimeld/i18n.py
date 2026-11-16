@@ -2,7 +2,6 @@ import json
 import locale
 import sys
 import ctypes
-from pathlib import Path
 
 from .source_profile import application_settings
 
@@ -68,8 +67,8 @@ class I18n:
         return "en"
 
     def load(self, language: str) -> None:
-        # PyInstaller extracts bundled data under _MEIPASS for one-file builds.
-        root = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent.parent))
+        from .resources import resource_root
+        root = resource_root()
         path = root / "locales" / f"{language}.json"
         fallback = root / "locales" / "en.json"
         with fallback.open(encoding="utf-8") as handle:

@@ -16,6 +16,9 @@ from folimeld.app import MainWindow, run
     ("darwin", False, None, False, False, False),
     ("darwin", False, "homebrew", True, False, False),
     ("win32", True, None, False, False, True),
+    ("win32", False, "uv-tool", False, False, True),
+    ("win32", False, "uv-tool", True, False, False),
+    ("win32", False, "uv-tool", False, True, False),
     ("win32", False, "desktop", True, False, True),
     ("win32", False, "desktop", True, True, False),
     ("win32", False, "desktop", False, False, False),
@@ -33,6 +36,8 @@ def test_distribution_guidance_matrix(qapp, monkeypatch, tmp_path, platform, uv,
     monkeypatch.setattr(distribution, "source_profile_active", lambda: uv)
     monkeypatch.setattr("folimeld.desktop_profile.desktop_profile_active",
                         lambda: label == "desktop" and frozen and not packaged)
+    monkeypatch.setattr("folimeld.uv_tool_profile.uv_tool_profile_active",
+                        lambda: label == "uv-tool" and not frozen and not packaged)
     # GUI construction uses the default settings factory; no profile files in this matrix.
     settings = lambda: QSettings(str(tmp_path / "settings.ini"), QSettings.Format.IniFormat)
     monkeypatch.setattr("folimeld.app.application_settings", settings)

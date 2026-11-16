@@ -4,6 +4,8 @@
 
 ## 未リリース
 
+- Windows 11 x86_64向けの`uv tool install`版（Pure Python Wheel / GitHub Releases配布）を追加。`pyproject.toml`、決定論的Wheel・対応ソースZIP生成と整合検査ツール（`tools.uv_tool_build`）、パッケージ内`_resources`解決（`folimeld.resources`）、専用プロファイル（`%LOCALAPPDATA%\Folimeld-UV-Tool`）、`Local\Folimeld-UV-Tool` MutexとCPython 3.12.xマイナー一致＋固定依存14件を検証する専用ランチャー（`folimeld` / `folimeld-console`）、日英手順書と単体テストを整備し、隔離環境での`uv tool install`導入と起動を確認。
+
 - Linux ARM64 strict Snap 0.3.4+fix1試験版を公開。固有の画像変換/保存/終了、同一候補再導入、制限状態、外側ライブラリの対応資料を確認。自動更新によるXorg中断を別記し、更新後の再試験に成功。
 
 - Linux ARM64 DEB 0.3.4+fix1修正試験版を公開。画像変換後の終了クラッシュ修正、再ビルドのバイト一致、Ubuntu ARM64の実画面/削除再導入、210ネイティブ実体の対応ソースを検証。Debianの受入は保存済み同一DEB記録で、今回未再試験。既存配布物を保持。

@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+- Add the Windows 11 x86_64 `uv tool install` edition (Pure Python Wheel / GitHub Releases distribution): add `pyproject.toml`, deterministic Wheel and corresponding-source ZIP builder/verifier (`tools.uv_tool_build`), packaged `_resources` resolution (`folimeld.resources`), isolated `%LOCALAPPDATA%\Folimeld-UV-Tool` profile, dedicated `folimeld` / `folimeld-console` entry points validating CPython 3.12.x minor version match plus 14 pinned dependencies with the `Local\Folimeld-UV-Tool` mutex, bilingual documentation, and unit/isolated-install verification.
+
 - Publish the Linux ARM64 strict Snap 0.3.4+fix1 preview after dedicated conversion/save/exit, same-candidate reinstall, confinement and outer-library provenance checks. Record the automatic-update Xorg interruption separately and verify the post-update retry.
 
 - Publish the Linux ARM64 DEB 0.3.4+fix1 preview: image-conversion exit fix, byte-identical rebuild, Ubuntu ARM64 GUI/removal-reinstallation checks, and matching sources for all 210 native files. Debian acceptance uses saved records of the same DEB and was not rerun today. Preserve existing downloads.

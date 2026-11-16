@@ -1,6 +1,3 @@
-import sys
-from pathlib import Path
-
 from PySide6.QtCore import Qt, QUrl
 from PySide6.QtGui import QDesktopServices, QIcon
 from PySide6.QtWidgets import QDialog, QLabel, QPushButton, QVBoxLayout
@@ -35,7 +32,8 @@ class SponsorsDialog(QDialog):
 
 def supporter_icon():
     """Load the supporter artwork from source or bundled assets."""
-    root = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent.parent))
+    from .resources import resource_root
+    root = resource_root()
     return QIcon(str(root / "assets" / "folimeld-supporter-maid.png"))
 
 

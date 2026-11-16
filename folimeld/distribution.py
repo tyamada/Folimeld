@@ -21,7 +21,8 @@ def sponsors_available() -> bool:
     if getattr(sys, "frozen", False):
         return False
     if sys.platform == "win32":
-        return source_profile_active()
+        from .uv_tool_profile import uv_tool_profile_active
+        return source_profile_active() or uv_tool_profile_active()
     app = QCoreApplication.instance()
     return (sys.platform == "darwin" and app is not None
             and app.property("folimeld_distribution") == "homebrew")

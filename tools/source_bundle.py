@@ -23,7 +23,15 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 SOURCE_DIRS = {"folimeld", "tools", "assets", "locales", "licenses", "packaging", "tests"}
 ROOT_SUFFIXES = {".py", ".spec", ".sh", ".bat", ".ps1", ".md"}
-ROOT_CONFIG_FILES = {"constraints-release.txt", "mypy.ini", "ruff.toml"}
+ROOT_CONFIG_FILES = {
+    "constraints-release.txt",
+    "mypy.ini",
+    "pyproject.toml",
+    "requirements-windows-uv.in",
+    "requirements-windows-uv.lock",
+    "ruff.toml",
+    "windows-uv-runtime.json",
+}
 DOCUMENTATION_DIR = "documentation"
 
 
@@ -85,8 +93,8 @@ def source_paths(root):
         include = relative.parts[0] in SOURCE_DIRS | {DOCUMENTATION_DIR} or (
             len(relative.parts) == 1 and (
                 relative.suffix in ROOT_SUFFIXES or
-                name in {"LICENSE", ".gitignore", ".gitattributes", "requirements.txt", "requirements-dev.txt",
-                         "constraints-release.txt", "mypy.ini", "ruff.toml"}
+                name in {"LICENSE", ".gitignore", ".gitattributes", "requirements.txt", "requirements-dev.txt"}
+                | ROOT_CONFIG_FILES
             )
         )
         if not include or "__pycache__" in relative.parts or relative.suffix in {".pyc", ".pyo"}:

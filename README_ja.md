@@ -132,6 +132,22 @@ SHA-256不一致では展開・実行せず停止します。照合したZIPを�
 
 導入後は`install_uv.ps1`と同じフォルダーに作成される「Folimeld UV」ショートカットから起動します。`main.py`は直接起動しません。導入後のフォルダーは移動・改名しないでください。
 
+### Windows 11 x64 `uv tool install` 版（Pure Python Wheel）
+
+Microsoft Store版・Desktop版・既存のソース＋uv版とは独立した追加経路として、GitHub Releasesで配布するPure Python Wheel（`folimeld-0.3.5-py3-none-any.whl`）を`uv tool install`で隔離ツール環境へ導入する構成を用意しています。詳細は[uv tool install版仕様・導入手順](documentation/windows-uv-tool_ja.md)を参照してください。
+
+- Windows 11 x64上のCPython 3.12.x（マイナー一致）と固定ランタイム依存14件（`requirements-windows-uv.lock`のSHA-256ハッシュ照合付き）を要求します。
+- 設定とログは`%LOCALAPPDATA%/Folimeld-UV-Tool`へ保存し、Store版・Desktop版（`Folimeld-Desktop`）・ソース＋uv版（`Folimeld-UV`）の設定やレジストリ関連付けを変更しません。多重起動防止には`Local\Folimeld-UV-Tool` Mutexを使用します。
+
+```powershell
+$ErrorActionPreference = 'Stop'
+Get-FileHash .\folimeld-0.3.5-py3-none-any.whl, .\requirements-windows-uv.lock -Algorithm SHA256
+uv tool install --python 3.12 --with-requirements .\requirements-windows-uv.lock --no-build .\folimeld-0.3.5-py3-none-any.whl
+folimeld
+```
+
+通常起動は`folimeld`（コンソールなしGUI）、標準エラー出力を確認する診断起動は`folimeld-console`を使用します。
+
 ### macOS版をHomebrewでインストール
 
 Folimeld 0.3.3のHomebrew配布は、**Apple Silicon（arm64）搭載のMacでmacOS 15 Sequoia以降**が対象です。Homebrewを導入した環境で、ターミナルから次を実行します。

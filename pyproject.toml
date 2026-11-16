@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "folimeld"
+version = "0.3.5"
+description = "Desktop PDF page organizer and editor"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Takuma Yamada" },
+]
+dependencies = [
+  "cffi==2.1.1",
+  "cryptography==50.0.2",
+  "pillow==12.3.0",
+  "pycparser==3.12",
+  "pymupdf==1.28.2",
+  "pyside6==6.11.2",
+  "pyside6-addons==6.11.2",
+  "pyside6-essentials==6.11.2",
+  "shiboken6==6.11.2",
+  "typing-extensions==4.16.0",
+  "winrt-runtime==3.2.1",
+  "winrt-windows-foundation==3.2.1",
+  "winrt-windows-foundation-collections==3.2.1",
+  "winrt-windows-services-store==3.2.1",
+]
+
+[project.urls]
+Homepage = "https://tyamada.github.io/Folimeld/"
+Repository = "https://github.com/tyamada/Folimeld"
+
+[project.gui-scripts]
+folimeld = "folimeld.uv_tool_launcher:main"
+
+[project.scripts]
+folimeld-console = "folimeld.uv_tool_launcher:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["folimeld"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"LICENSE" = "folimeld/_resources/LICENSE"
+"windows-uv-runtime.json" = "folimeld/_resources/windows-uv-runtime.json"
+"locales" = "folimeld/_resources/locales"
+"assets/Folimeld.iconset/icon_256x256.png" = "folimeld/_resources/assets/Folimeld.iconset/icon_256x256.png"
+"assets/folimeld-supporter-maid.png" = "folimeld/_resources/assets/folimeld-supporter-maid.png"
+"documentation/windows-uv-licenses" = "folimeld/_resources/documentation/windows-uv-licenses"

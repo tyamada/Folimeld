@@ -56,10 +56,12 @@ def installed_notices(*, strict: bool = True) -> str:
 
 
 def license_documents() -> list[tuple[str, str]]:
-    root = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent.parent))
+    from .resources import resource_root
     from .source_profile import source_profile_active
+    from .uv_tool_profile import uv_tool_profile_active
 
-    if not getattr(sys, 'frozen', False) and source_profile_active():
+    root = resource_root()
+    if not getattr(sys, 'frozen', False) and (source_profile_active() or uv_tool_profile_active()):
         from .uv_license_info import uv_license_documents
         return uv_license_documents(root)
 

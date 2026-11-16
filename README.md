@@ -132,6 +132,22 @@ Unblocking removes the downloaded-file restriction; it does not digitally sign t
 
 After installation, launch the generated **Folimeld UV** shortcut beside `install_uv.ps1`. Do not run `main.py` directly or move/rename the installation directory afterward.
 
+### Windows 11 x64 `uv tool install` edition (Pure Python Wheel)
+
+As an additional distribution channel separate from the Microsoft Store edition, the Desktop edition, and the source + uv preview, Folimeld supports installing a Pure Python Wheel (`folimeld-0.3.5-py3-none-any.whl`) distributed via GitHub Releases into an isolated `uv tool` environment. See the [uv tool install specification and guide](documentation/windows-uv-tool.md) for details.
+
+- Requires CPython 3.12.x (minor version match) on Windows 11 x64 and exact versions of all fourteen runtime dependencies (hash-verified via `requirements-windows-uv.lock`).
+- Stores settings and logs under `%LOCALAPPDATA%/Folimeld-UV-Tool` without modifying Store, Desktop (`Folimeld-Desktop`), or source + uv (`Folimeld-UV`) profiles or Explorer file associations. Uses the `Local\Folimeld-UV-Tool` mutex for single-instance protection.
+
+```powershell
+$ErrorActionPreference = 'Stop'
+Get-FileHash .\folimeld-0.3.5-py3-none-any.whl, .\requirements-windows-uv.lock -Algorithm SHA256
+uv tool install --python 3.12 --with-requirements .\requirements-windows-uv.lock --no-build .\folimeld-0.3.5-py3-none-any.whl
+folimeld
+```
+
+Run `folimeld` for standard GUI launch without a console window, or `folimeld-console` for diagnostic console output.
+
 ### Install on macOS with Homebrew
 
 The Folimeld 0.3.3 Homebrew release supports **Apple Silicon (arm64) Macs running macOS 15 Sequoia or later**. With Homebrew installed, run these commands in Terminal.
