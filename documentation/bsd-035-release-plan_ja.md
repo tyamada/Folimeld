@@ -53,6 +53,12 @@ folimeld
 - メニュー「ヘルプ → 開発を応援する…」が表示され、GitHub Sponsors 画面が開くことを確認。
 - PDF 読み込み、回転、大容量保存、画像一括取り込みを確認。
 
+### ビルド・受入実績（VirtualBox VM / FreeBSD 15.1-RELEASE-p5 amd64）
+- パッケージ: `dist/freebsd/folimeld-0.3.5_1.pkg`（26,168,773 bytes）
+- SHA-256: `16d3d1801acae0f62bf99d89d53f8a679593e5896d1db60d46cc5b57c15946ae`
+- ビルド記録: `dist/freebsd/build-record.json`（SHA-256: `cf06b58c538bf6ba54cf1afa34bd8f7c3035ca1c0b0ce2190fd43b8361d462f9`）
+- 検証結果: `pkg add -f` による更新導入が成功（MIME・アイコンキャッシュトリガー実行完了）。`pkg info folimeld` で `0.3.5_1` を確認。`QT_QPA_PLATFORM=offscreen timeout 5s /usr/local/bin/folimeld` にてQt GUI初期化、PyMuPDF/fitz読み込み、ウィンドウ生成および正常稼働を確認。
+
 ---
 
 ## 3. NetBSD 11.1（amd64 / aarch64）
@@ -86,6 +92,12 @@ python3.12 tools/build_netbsd_package.py \
 /usr/pkg/sbin/pkg_add ./dist/netbsd/folimeld-0.3.5.tgz
 /usr/pkg/bin/folimeld
 ```
+
+### ビルド・受入実績（VirtualBox VM / NetBSD 11.1 amd64）
+- パッケージ: `dist/netbsd/folimeld-0.3.5.tgz`（37,074,914 bytes）
+- SHA-256: `7dc5c7d68e41b5120a9345fd679e5c99d46fcd7b7b50cf4f49e22d55ffec6e6a`
+- ビルド記録: `dist/netbsd/build-record.json`（SHA-256: `c1ce5d8574785b7f0af1aea20159a487349b45f7b5f2e04b633d43983f4124c4`）
+- 検証結果: `/usr/pkg/sbin/pkg_add -u` による更新導入が成功。`/usr/pkg/sbin/pkg_info` で `folimeld-0.3.5` を確認。`QT_QPA_PLATFORM=offscreen timeout 5s /usr/pkg/bin/folimeld` にてQt GUI初期化、PyMuPDF/fitz読み込み、ウィンドウ生成および正常稼働を確認。
 
 ---
 
@@ -123,6 +135,15 @@ signify -V -p packaging/openbsd/folimeld-80-pkg.pub -m SHA256SUMS.txt -x SHA256S
 pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.5.tgz
 folimeld
 ```
+
+### ビルド・署名・受入実績（VirtualBox VM / OpenBSD 8.0 amd64）
+- 本体パッケージ（署名付き）: `dist/openbsd/folimeld-0.3.5.tgz`（6,009,111 bytes）
+  - SHA-256: `6d0b68373f380622dc1bbbe4bad4d132648f8974fa7246ca9af0c22db9028e63`
+- 専用MuPDF依存（署名付き）: `dist/openbsd/folimeld-mupdf-1.28.2.tgz`（26,822,825 bytes）
+  - SHA-256: `1d537907faf92f11f2f701f967486c03643097e8dd5dff9199e6c6a6aa87bf8c`
+- 署名ファイル: `dist/openbsd/SHA256SUMS.txt`、`dist/openbsd/SHA256SUMS.txt.sig`（`signify -V` 検証合格）
+- ビルド記録: `dist/openbsd/build-record.json`（SHA-256: `b9a53586e99aa77f4e84f5633a73303a015a21ca7663a396cc001e9c83255bbc`）
+- 検証結果: `pkg_add -r` による更新導入が署名照合通過のもと成功。`pkg_info` で `folimeld-0.3.5` および `folimeld-mupdf-1.28.2` を確認。`QT_QPA_PLATFORM=offscreen /usr/local/bin/folimeld` にてQt GUI初期化、PyMuPDF/fitz読み込み、ウィンドウ生成および正常稼働を確認。
 
 ---
 

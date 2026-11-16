@@ -52,6 +52,12 @@ folimeld
 - Confirm "Help → Sponsor Development..." menu appears and opens GitHub Sponsors.
 - Verify PDF opening, rotation, large document saving, and image import.
 
+### Build and acceptance verification (VirtualBox VM / FreeBSD 15.1-RELEASE-p5 amd64)
+- Package: `dist/freebsd/folimeld-0.3.5_1.pkg` (26,168,773 bytes)
+- SHA-256: `16d3d1801acae0f62bf99d89d53f8a679593e5896d1db60d46cc5b57c15946ae`
+- Build record: `dist/freebsd/build-record.json` (SHA-256: `cf06b58c538bf6ba54cf1afa34bd8f7c3035ca1c0b0ce2190fd43b8361d462f9`)
+- Verification results: Verified update installation with `pkg add -f` (MIME and icon cache triggers completed). Verified `0.3.5_1` via `pkg info folimeld`. Confirmed offscreen launch with `QT_QPA_PLATFORM=offscreen timeout 5s /usr/local/bin/folimeld` successfully initializing Qt GUI, loading PyMuPDF/fitz, creating window, and entering event loop.
+
 ---
 
 ## 3. NetBSD 11.1 (amd64 / aarch64)
@@ -85,6 +91,12 @@ python3.12 tools/build_netbsd_package.py \
 /usr/pkg/sbin/pkg_add ./dist/netbsd/folimeld-0.3.5.tgz
 /usr/pkg/bin/folimeld
 ```
+
+### Build and acceptance verification (VirtualBox VM / NetBSD 11.1 amd64)
+- Package: `dist/netbsd/folimeld-0.3.5.tgz` (37,074,914 bytes)
+- SHA-256: `7dc5c7d68e41b5120a9345fd679e5c99d46fcd7b7b50cf4f49e22d55ffec6e6a`
+- Build record: `dist/netbsd/build-record.json` (SHA-256: `c1ce5d8574785b7f0af1aea20159a487349b45f7b5f2e04b633d43983f4124c4`)
+- Verification results: Verified update installation via `/usr/pkg/sbin/pkg_add -u`. Confirmed `folimeld-0.3.5` via `/usr/pkg/sbin/pkg_info`. Verified offscreen launch with `QT_QPA_PLATFORM=offscreen timeout 5s /usr/pkg/bin/folimeld` successfully initializing Qt GUI, loading PyMuPDF/fitz, creating window, and entering event loop.
 
 ---
 
@@ -122,6 +134,15 @@ signify -V -p packaging/openbsd/folimeld-80-pkg.pub -m SHA256SUMS.txt -x SHA256S
 pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.5.tgz
 folimeld
 ```
+
+### Build, signing, and acceptance verification (VirtualBox VM / OpenBSD 8.0 amd64)
+- Main package (signed): `dist/openbsd/folimeld-0.3.5.tgz` (6,009,111 bytes)
+  - SHA-256: `6d0b68373f380622dc1bbbe4bad4d132648f8974fa7246ca9af0c22db9028e63`
+- Private MuPDF dependency (signed): `dist/openbsd/folimeld-mupdf-1.28.2.tgz` (26,822,825 bytes)
+  - SHA-256: `1d537907faf92f11f2f701f967486c03643097e8dd5dff9199e6c6a6aa87bf8c`
+- Signatures: `dist/openbsd/SHA256SUMS.txt`, `dist/openbsd/SHA256SUMS.txt.sig` (verified with `signify -V`)
+- Build record: `dist/openbsd/build-record.json` (SHA-256: `b9a53586e99aa77f4e84f5633a73303a015a21ca7663a396cc001e9c83255bbc`)
+- Verification results: Verified update installation via `pkg_add -r` with full signature verification passed. Confirmed `folimeld-0.3.5` and `folimeld-mupdf-1.28.2` via `pkg_info`. Verified offscreen launch with `QT_QPA_PLATFORM=offscreen /usr/local/bin/folimeld` successfully initializing Qt GUI, loading PyMuPDF/fitz, creating window, and running cleanly.
 
 ---
 

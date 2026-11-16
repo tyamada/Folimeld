@@ -64,11 +64,11 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | Fedora 45 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) |
 | AlmaLinux 9.8 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5) |
 | AlmaLinux 9.8 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5) |
-| FreeBSD 15.1 | amd64 | pkg / 0.3.3_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3) |
+| FreeBSD 15.1 | amd64 | pkg / 0.3.3_1 (preview, 0.3.5_1 build verified) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3) · [0.3.5 guide](documentation/bsd-035-release-plan.md) |
 | FreeBSD 15.1 | aarch64 | pkg / 0.3.5_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.5_1) |
-| NetBSD 11.1 | amd64 | tgz / 0.3.3 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3) |
+| NetBSD 11.1 | amd64 | tgz / 0.3.3 (preview, 0.3.5 build verified) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3) · [0.3.5 guide](documentation/bsd-035-release-plan.md) |
 | NetBSD 11.1 | aarch64 | tgz / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.5) |
-| OpenBSD 8.0 | amd64 | Signed tgz / 0.3.3 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3) |
+| OpenBSD 8.0 | amd64 | Signed tgz / 0.3.3 (preview, 0.3.5 build verified) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3) · [0.3.5 guide](documentation/bsd-035-release-plan.md) |
 | OpenBSD 8.0 | arm64 | Signed tgz / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.5) |
 
 Versions in the table are specific to each distribution channel. The Windows Store edition is available in Japan and the United States. Linux 0.3.3 downloads for Ubuntu 22.04 or later and older installation instructions remain below. BSD ARM64 packages use the name `aarch64` on FreeBSD and NetBSD, and `arm64` on OpenBSD.
@@ -557,7 +557,7 @@ PDF editing, Save As, reopening, Japanese input, upgrades between candidates, an
 
 ### FreeBSD source, package, and installation
 
-**0.3.3 / package revision 1** for FreeBSD 15.1 / amd64 is available as a preview in the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3). This is not an official FreeBSD package. Installation, GUI launch, saving, removal, and reinstallation have been verified.
+**0.3.3 / package revision 1** for FreeBSD 15.1 / amd64 is available as a preview in the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3). This is not an official FreeBSD package. Installation, GUI launch, saving, removal, and reinstallation have been verified. Build and acceptance verification for the Folimeld 0.3.5 baseline package (**0.3.5 / package revision 1**, `folimeld-0.3.5_1.pkg`) has also been completed; see the [BSD and Linux 0.3.5 build and update guide](documentation/bsd-035-release-plan.md) for procedures and verified hashes.
 
 - [Download the amd64 pkg](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/folimeld-0.3.3_1.pkg)
 - [Matching source ZIP for this pkg](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/Folimeld-source-9ceb5ec75dcd3ddb60bb66f0b6996da5e700cf4400bd89b31808f5250b19f23b.zip)
@@ -584,7 +584,7 @@ The release also includes matching source and SHA-256 checksums. The package was
 
 ### NetBSD source, package, and installation
 
-The NetBSD 11.1 / amd64 [package `folimeld-0.3.3.tgz`](https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/folimeld-0.3.3.tgz) and [matching source, dependency sources, and build record](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3) are available as a preview release. Compare `sha256 -r folimeld-0.3.3.tgz` with the [SHA-256 list](https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/SHA256SUMS.txt). PySide6/shiboken6 and PyMuPDF/MuPDF are bundled privately; Python, Qt, and other dependencies use official packages. See the [installation and source build instructions](documentation/netbsd-install.md).
+The NetBSD 11.1 / amd64 [package `folimeld-0.3.3.tgz`](https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/folimeld-0.3.3.tgz) and [matching source, dependency sources, and build record](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3) are available as a preview release. Build and acceptance verification for the Folimeld 0.3.5 baseline package (`folimeld-0.3.5.tgz`) has also been completed; see the [BSD and Linux 0.3.5 build and update guide](documentation/bsd-035-release-plan.md). Compare `sha256 -r folimeld-0.3.3.tgz` with the [SHA-256 list](https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/SHA256SUMS.txt). PySide6/shiboken6 and PyMuPDF/MuPDF are bundled privately; Python, Qt, and other dependencies use official packages. See the [installation and source build instructions](documentation/netbsd-install.md).
 
 After obtaining the package, run as root on NetBSD with an X11 desktop configured.
 
@@ -602,7 +602,7 @@ Run `/usr/pkg/bin/folimeld` or `/usr/pkg/bin/folimeld /path/to/file.pdf` as a re
 
 ### OpenBSD source, packages, and installation
 
-The [application package](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-0.3.3.tgz), [private MuPDF dependency](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-mupdf-1.28.2.tgz), and [matching source, dependency sources, and build records](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3) for OpenBSD 8.0 / amd64 are available as a preview. These are not official OpenBSD packages.
+The [application package](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-0.3.3.tgz), [private MuPDF dependency](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-mupdf-1.28.2.tgz), and [matching source, dependency sources, and build records](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3) for OpenBSD 8.0 / amd64 are available as a preview. These are not official OpenBSD packages. Build, signify signing, and acceptance verification for the Folimeld 0.3.5 baseline package (`folimeld-0.3.5.tgz`) and private MuPDF dependency (`folimeld-mupdf-1.28.2.tgz`) have also been completed; see the [BSD and Linux 0.3.5 build and update guide](documentation/bsd-035-release-plan.md).
 
 The [matching application source ZIP](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/Folimeld-source-f67bd8d6672b4e7377126bfc24e1c7d7661004d454693a3cd1fe622b02e75be9.zip) and [SHA-256 list](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/SHA256SUMS.txt) are also available.
 

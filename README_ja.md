@@ -64,11 +64,11 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | Fedora 45（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) |
 | AlmaLinux 9.8（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5) |
 | AlmaLinux 9.8（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5) |
-| FreeBSD 15.1 | amd64 | pkg / 0.3.3_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3) |
+| FreeBSD 15.1 | amd64 | pkg / 0.3.3_1（試験配布、0.3.5_1ビルド検証済み） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3) · [0.3.5手順書](documentation/bsd-035-release-plan_ja.md) |
 | FreeBSD 15.1 | aarch64 | pkg / 0.3.5_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.5_1) |
-| NetBSD 11.1 | amd64 | tgz / 0.3.3（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3) |
+| NetBSD 11.1 | amd64 | tgz / 0.3.3（試験配布、0.3.5ビルド検証済み） | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3) · [0.3.5手順書](documentation/bsd-035-release-plan_ja.md) |
 | NetBSD 11.1 | aarch64 | tgz / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.5) |
-| OpenBSD 8.0 | amd64 | 署名付き tgz / 0.3.3（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3) |
+| OpenBSD 8.0 | amd64 | 署名付き tgz / 0.3.3（試験配布、0.3.5ビルド検証済み） | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3) · [0.3.5手順書](documentation/bsd-035-release-plan_ja.md) |
 | OpenBSD 8.0 | arm64 | 署名付き tgz / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.5) |
 
 表の版番号は各配布先の版です。WindowsのStore版は日本・米国で提供しています。Linux 0.3.3（Ubuntu 22.04以降）の配布物と旧版の導入手順も下記に掲載しています。BSDのARM64は、FreeBSD・NetBSDで`aarch64`、OpenBSDで`arm64`と表記します。
@@ -557,7 +557,7 @@ PDF編集・別名保存・再読込、日本語入力、候補間の更新、�
 
 ### FreeBSD版のソース・パッケージ・インストール
 
-FreeBSD 15.1 / amd64向けの **0.3.3 / パッケージ改訂1** を[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)で試験配布しています。FreeBSD公式パッケージではありません。導入・GUI起動・保存・削除・再導入を確認済みです。
+FreeBSD 15.1 / amd64向けの **0.3.3 / パッケージ改訂1** を[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)で試験配布しています。FreeBSD公式パッケージではありません。導入・GUI起動・保存・削除・再導入を確認済みです。Folimeld 0.3.5に対応した **0.3.5 / パッケージ改訂1**（`folimeld-0.3.5_1.pkg`）のビルド・受入検証も完了しています。手順とハッシュは[BSD・Linux 0.3.5更新・ビルド手順書](documentation/bsd-035-release-plan_ja.md)を参照してください。
 
 - [amd64版pkgをダウンロード](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/folimeld-0.3.3_1.pkg)
 - [このpkgに対応するソースZIP](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/Folimeld-source-9ceb5ec75dcd3ddb60bb66f0b6996da5e700cf4400bd89b31808f5250b19f23b.zip)
@@ -584,7 +584,7 @@ pkg add ./folimeld-0.3.3_1.pkg
 
 ### NetBSD版のソース・パッケージ・インストール
 
-NetBSD 11.1 / amd64向けの[パッケージ `folimeld-0.3.3.tgz`](https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/folimeld-0.3.3.tgz)と[対応ソース・依存ソース・ビルド記録](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3)を試験配布しています。[SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/SHA256SUMS.txt)と `sha256 -r folimeld-0.3.3.tgz` の結果を照合してください。PySide6/shiboken6とPyMuPDF/MuPDFをアプリ専用領域に同梱し、Python・Qtなどは公式パッケージに依存します。[インストール・ソースビルド手順](documentation/netbsd-install_ja.md)を参照してください。
+NetBSD 11.1 / amd64向けの[パッケージ `folimeld-0.3.3.tgz`](https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/folimeld-0.3.3.tgz)と[対応ソース・依存ソース・ビルド記録](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3)を試験配布しています。Folimeld 0.3.5に対応したパッケージ（`folimeld-0.3.5.tgz`）のビルド・受入検証も完了しています。手順とハッシュは[BSD・Linux 0.3.5更新・ビルド手順書](documentation/bsd-035-release-plan_ja.md)を参照してください。[SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/SHA256SUMS.txt)と `sha256 -r folimeld-0.3.3.tgz` の結果を照合してください。PySide6/shiboken6とPyMuPDF/MuPDFをアプリ専用領域に同梱し、Python・Qtなどは公式パッケージに依存します。[インストール・ソースビルド手順](documentation/netbsd-install_ja.md)を参照してください。
 
 パッケージ入手後、X11デスクトップを構成したNetBSDでrootとして実行します。
 
@@ -602,7 +602,7 @@ export PKG_PATH=https://cdn.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/11.0_20
 
 ### OpenBSD版のソース・パッケージ・インストール
 
-OpenBSD 8.0 / amd64向けの[本体パッケージ](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-0.3.3.tgz)、[専用MuPDF依存](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-mupdf-1.28.2.tgz)、[対応ソース・依存ソース・ビルド記録](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3)を試験配布しています。OpenBSD公式パッケージではありません。
+OpenBSD 8.0 / amd64向けの[本体パッケージ](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-0.3.3.tgz)、[専用MuPDF依存](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-mupdf-1.28.2.tgz)、[対応ソース・依存ソース・ビルド記録](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3)を試験配布しています。OpenBSD公式パッケージではありません。Folimeld 0.3.5に対応した署名付きパッケージ（`folimeld-0.3.5.tgz`）および専用MuPDF依存（`folimeld-mupdf-1.28.2.tgz`）のビルド・署名・受入検証も完了しています。手順とハッシュは[BSD・Linux 0.3.5更新・ビルド手順書](documentation/bsd-035-release-plan_ja.md)を参照してください。
 
 [本体の対応ソースZIP](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/Folimeld-source-f67bd8d6672b4e7377126bfc24e1c7d7661004d454693a3cd1fe622b02e75be9.zip)と[SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/SHA256SUMS.txt)も取得できます。
 

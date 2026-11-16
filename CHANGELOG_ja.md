@@ -16,7 +16,12 @@
 
 - Ubuntu / Debian / Kali Linux 0.3.5 パッケージの整備: 検証済み 0.3.5 DEB（amd64 / arm64）および strict Snap（arm64）のリリースステージングを準備。
 
-- Debian、Ubuntu、およびBSD（FreeBSD、NetBSD、OpenBSD）の各パッケージをFolimeld 0.3.5ベースへ更新する計画を策定。決定論的ソースコードスナップショットZIP（`Folimeld-source-e550bf65ec95b968ddce59592f3ef4fd9e297a88b9e2b7364413592244a14e8a.zip`）の確定と関連付け、FreeBSD（`0.3.5_1`）・NetBSD（`0.3.5`）・OpenBSD（`0.3.5`）のバージョン解決および依存ソース整合性テスト（`tests/test_bsd_packages.py`、`tests/test_freebsd_package.py`）を追加して全件パスを確認。WSL2環境にてUbuntu 24.04 amd64 DEBパッケージ（`folimeld_0.3.5_amd64.deb`、SHA-256: `5b64a696b69cdb7c9fada6e13cd100dd35d76470ecad1408800ee558c4362174`）をビルドし、Ubuntu 24.04 および Debian 13.6（Trixie）環境下にてoffscreen GUI初期化・PyMuPDF読み込み・実行ファイルの整合性を検証。日英の更新・ビルド手順書（`documentation/bsd-035-release-plan_ja.md`、`bsd-035-release-plan.md`）を整備。
+- Debian、Ubuntu、およびBSD（FreeBSD、NetBSD、OpenBSD）の各パッケージをFolimeld 0.3.5ベースへ更新する計画を策定・遂行。決定論的ソースコードスナップショットZIP（`Folimeld-source-e550bf65ec95b968ddce59592f3ef4fd9e297a88b9e2b7364413592244a14e8a.zip`）の確定と関連付け、FreeBSD（`0.3.5_1`）・NetBSD（`0.3.5`）・OpenBSD（`0.3.5`）のバージョン解決および依存ソース整合性テスト（`tests/test_bsd_packages.py`、`tests/test_freebsd_package.py`）を追加して全件パスを確認。
+  - **Linux (amd64)**: WSL2環境にてUbuntu 24.04 amd64 DEBパッケージ（`folimeld_0.3.5_amd64.deb`、SHA-256: `5b64a696b69cdb7c9fada6e13cd100dd35d76470ecad1408800ee558c4362174`）をビルドし、Ubuntu 24.04 および Debian 13.6（Trixie）環境下にてoffscreen GUI初期化・PyMuPDF読み込み・実行ファイルの整合性を検証。
+  - **FreeBSD 15.1 (amd64)**: VirtualBox VM環境にて `folimeld-0.3.5_1.pkg`（SHA-256: `16d3d1801acae0f62bf99d89d53f8a679593e5896d1db60d46cc5b57c15946ae`）をビルドし、`pkg add -f` による更新インストールおよびoffscreen起動を検証。
+  - **NetBSD 11.1 (amd64)**: VirtualBox VM環境にて `folimeld-0.3.5.tgz`（SHA-256: `7dc5c7d68e41b5120a9345fd679e5c99d46fcd7b7b50cf4f49e22d55ffec6e6a`）をビルドし、`pkg_add -u` による更新インストールおよびoffscreen起動を検証。
+  - **OpenBSD 8.0 (amd64)**: VirtualBox VM環境にて ports ビルドにより `folimeld-0.3.5.tgz`（SHA-256: `6d0b68373f380622dc1bbbe4bad4d132648f8974fa7246ca9af0c22db9028e63`）および専用依存 `folimeld-mupdf-1.28.2.tgz`（SHA-256: `1d537907faf92f11f2f701f967486c03643097e8dd5dff9199e6c6a6aa87bf8c`）を生成。`pkg_sign` および `signify` による署名（`SHA256SUMS.txt.sig`）を完了し、署名検証を伴う `pkg_add -r` 更新およびoffscreen起動を検証。
+  - 日英の更新・ビルド手順書（`documentation/bsd-035-release-plan_ja.md`、`bsd-035-release-plan.md`）へ確定パッケージ情報と受入結果を記録。
 
 - Microsoft Store次期リリース（Submission 2 / パッケージ版 1.0.2.0）に向けて、Windows 11 ARM64ネイティブ対応の追加計画、PyInstaller spec（`Folimeld.spec`）のUPX無効化、日英のストア掲載文（新機能欄）および公開計画文書を整備。x64 および ARM64 実機環境にてStore向けネイティブMSIXパッケージ（`Folimeld_1.0.2.0_x64.msix`、`Folimeld_1.0.2.0_arm64.msix`）をビルドし、静的検査（`msix_preflight` 合格）およびソースバンドル関連付けを完了して公開計画書（`windows-store-release-plan_ja.md`）および受入試験表（`windows-store-acceptance_ja.md`）へ確定パッケージ情報を記録。2026年11月16日にPartner Center（Submission 2）へ審査提出を完了。無料アプリのみとして応援購入（アドオン）は無効を維持。
 
