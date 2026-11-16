@@ -48,6 +48,11 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.5 Windows x64 uv tool install 版プレビュー - 2026-11-16
+
+- Windows 11 x86_64向けの[uv tool install版プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1)（Pure Python Wheel / GitHub Releases配布）をPre-releaseとして公開（既存latestは保持）。Wheel・固定依存ロック・ランタイム定義・対応ソースZIP・内部台帳・コミット対応記録・第三者告知・依存ソース台帳・SHA-256一覧の計10ファイルを配布し、公開後の全10添付の再取得とサイズ・SHA-256一致を確認。
+- `pyproject.toml`、決定論的Wheel・対応ソースZIP生成と整合検査ツール（`tools.uv_tool_build`）、パッケージ内`_resources`解決（`folimeld.resources`）、専用プロファイル（`%LOCALAPPDATA%\Folimeld-UV-Tool`）、`Local\Folimeld-UV-Tool` MutexとCPython 3.12.xマイナー一致＋固定依存14件を検証する専用ランチャー（`folimeld` / `folimeld-console`）を実装。隔離環境での`uv tool install`導入、実画面GUIでのPDF編集・画像変換・3ワーカー・Per-Monitor V2 DPI・再起動後の設定保持・Mutex二重起動拒否・他エディションおよびレジストリ非干渉を確認。
+
 ## 0.3.5 Windows x64 uv版プレビュー - 2026-11-15
 
 - Windows 11 x64向けの[ソース＋uv版プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1)をPre-releaseとして公開。ソースZIP・内部台帳・コミットとの対応記録・SHA-256一覧を配布。Microsoft Store配布は引き続き標準のWindows配布経路として維持。

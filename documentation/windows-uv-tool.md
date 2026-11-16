@@ -25,14 +25,17 @@ This document describes the specification and installation procedure for the Pur
 python -m tools.uv_tool_build --output .\dist\uv-tool-release
 ```
 
-Staged artifacts (`dist/windows-uv-tool-0.3.5`):
-- `folimeld-0.3.5-py3-none-any.whl` (2,176,881 bytes, SHA-256: `86aa152ca386f857861b4598258ff95ad14f0bd4485d9024f9c6ef28fb517cdc`, Pure Python Wheel bundling locales, icons, and license notices under `folimeld/_resources/`)
-- `Folimeld-0.3.5-windows-x64-uv-tool-source.zip` / `source-manifest.json` (corresponding source archive and internal manifest; see `SHA256SUMS.txt` for SHA-256)
+Staged and published artifacts ([GitHub Release `windows-uv-tool-v0.3.5-preview.1`](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1) / commit `7aee32a74fe51cf20657f8ff9fd2726790db43a9`):
+- `folimeld-0.3.5-py3-none-any.whl` (2,176,864 bytes, SHA-256: `759b2fe0052f1741427194e40104db0af65184041ad5bad8bb5d2003874dbdaf`, Pure Python Wheel bundling locales, icons, and license notices under `folimeld/_resources/`)
+- `Folimeld-0.3.5-windows-x64-uv-tool-source.zip` (26,715,550 bytes, SHA-256: `7cf388af261a8f9a47a49d1453d87f98d39430bc9cbdf4f2692dd0a0b4756ad7`)
+- `source-manifest.json` (138,318 bytes, SHA-256: `9752f792e2f5bf4bcad90b00d1347dddab8d8ce627c7b3b98d1778838a8ad3d3`)
+- `SOURCE-ASSOCIATION.txt` (506 bytes, SHA-256: `530bd105a65d8725e8847f1c5a2e54274f57b377fbaa470718684e90c5cd8d17`)
 - `requirements-windows-uv.lock` (2,316 bytes, SHA-256: `7e994b4c231536fb5c53d79959761bc426bd9ff9585b578165f1fd67ec19077f`, Windows x64 / CPython 3.12 wheel SHA-256 lockfile)
 - `windows-uv-runtime.json` (1,239 bytes, SHA-256: `49ca2dea68fcc253574d867b9d5ff29524aa50e3b214d7c4687cd441dbdaa1dd`, pinned runtime dependency definitions)
 - `THIRD-PARTY-NOTICES.txt` (622,989 bytes, SHA-256: `21929c232ddf95e158a808561a5cdf21b9cbb9798b2d55f6c577975d5393fd3c`)
 - `DEPENDENCY-SOURCES.json` (24,583 bytes, SHA-256: `5ef42613490d2f807cbd0cca13b51e96e1f73716d880db2a5fc8dce844291609`)
-- `SHA256SUMS.txt` / `uv-tool-release-manifest.json`
+- `SHA256SUMS.txt` (759 bytes, SHA-256: `099dad4c384a4c520fc2047ac52213c5147906e772496adee4c3efc215cada7f`)
+- `uv-tool-release-manifest.json` (1,381 bytes, SHA-256: `883cd08d59fff23949608cbf133542a880266f7c0adb799947b4d4ec45786ad1`)
 
 ## 3. Installation and Launch Procedure
 

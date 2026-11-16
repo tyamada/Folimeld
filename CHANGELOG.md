@@ -48,6 +48,11 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.5 Windows x64 uv tool install preview - 2026-11-16
+
+- Publish the [Windows 11 x86_64 uv tool install preview](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1) (Pure Python Wheel / GitHub Releases distribution) as a Pre-release while preserving `latest`. Distribute 10 assets (Wheel, dependency lock, runtime profile, matching source ZIP, internal manifest, commit association, third-party notices, dependency sources ledger, SHA256SUMS, and release manifest) and verify public redownload sizes and SHA-256 hashes for all 10 files.
+- Implement `pyproject.toml`, deterministic Wheel and corresponding-source ZIP builder/verifier (`tools.uv_tool_build`), packaged `_resources` resolution (`folimeld.resources`), isolated `%LOCALAPPDATA%\Folimeld-UV-Tool` profile, and dedicated `folimeld` / `folimeld-console` entry points validating CPython 3.12.x minor version match plus 14 pinned dependencies with the `Local\Folimeld-UV-Tool` mutex. Verify isolated `uv tool install`, real GUI PDF editing, image conversion, all 3 spawned workers, Per-Monitor V2 DPI, settings persistence across restart, mutex duplicate-launch rejection, and non-interference with other editions and registry entries.
+
 ## 0.3.5 Windows x64 uv preview - 2026-11-15
 
 - Publish the [Windows 11 x64 source + uv preview](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) as a Pre-release, with a source ZIP, internal manifest, source commit association and SHA-256 checksums. Microsoft Store remains the standard Windows distribution channel.
