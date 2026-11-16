@@ -67,3 +67,31 @@ Submission 1はMicrosoft Storeの認定に合格しました。Folimeld 1.0.1.0�
 | 旧ローカルWACKのDPI警告 | 原因は未確認。[過去の診断概要](windows-store-release-plan_ja.md#診断の追跡状況2026-11-04更新)を参照。 |
 | TEST92とTEST88 | Store認定における個別判定は未確認。 |
 | `runFullTrust` | 宣言を含む提出全体は認定に合格。機能単独の判定や審査コメントは未確認。 |
+
+## Store候補1.0.2.0の準備と受入計画（Submission 2: x64 & ARM64）
+
+Windows 11 ARM64 ネイティブ対応および大規模PDF機能強化を含む Submission 2（版番号 `1.0.2.0`）の受入計画です。
+
+### 候補パッケージと静的検査
+
+| 項目 | x64 候補 | ARM64 候補 |
+| --- | --- | --- |
+| パッケージファイル | `dist/Folimeld_1.0.2.0_x64.msix` | `dist/Folimeld_1.0.2.0_arm64.msix` |
+| パッケージ Identity | `TakumaYamada.Folimeld` | `TakumaYamada.Folimeld` |
+| 版番号 | `1.0.2.0` | `1.0.2.0` |
+| 対象CPU (PE Machine) | `x64` (`0x8664`) | `arm64` (`0xAA64`) |
+| パッケージ SHA-256 | `E57D690DE5D07EE956DB25A1173F56ED36B81EFD951F1C42DB651252915B7853` | 未生成（ARM64 実機環境でビルド） |
+| 静的検査 (`msix_preflight`) | 合格 (`build/msix-preflight/store/x64/preflight.json`) | 設定検証合格 (`-ValidateOnly`) |
+| ソースバンドル関連付け | `dist/source/Folimeld_1.0.2.0_x64.msix-e57d690de5d07ee956db25a1173f56ed36b81efd951f1c42db651252915b7853.json` | パッケージ生成時に記録 |
+
+### Submission 2 受入確認項目
+
+| 確認項目 | 対象 | 必要な動作と確認内容 | 状況 |
+| --- | --- | --- | --- |
+| 1.0.1.0 からの更新試験 | x64 | 署名済み 1.0.1.0 導入環境に 1.0.2.0 を更新導入。設定値、履歴、PDF 関連付けが正常に引き継がれることを確認 | 未実施 |
+| ARM64 実機導入・起動 | ARM64 | Copilot+ PC（Snapdragon X Elite 等）の Windows 11 ARM64 でのネイティブ起動、正常終了、UI 操作の確認 | 未実施 |
+| 大規模 PDF 保存高速化 | 両方 | 大規模文書での別プロセス保存、保存中進捗ダイアログ表示、上書き保存時の元ファイル保護を確認 | 単体テスト合格、実機確認待ち |
+| 暗号化 Undo/Redo 履歴退避 | 両方 | メモリ上限（128 MiB）超過時の AES-256-GCM 暗号化一時退避と、復元・安全消去を確認 | 単体テスト合格、実機確認待ち |
+| 画像フォルダー一括取り込み | 両方 | 画像一括取り込みダイアログからの PDF 作成、並び替え、回転、一時ファイル削除を確認 | 単体テスト合格、実機確認待ち |
+| 完全無料アプリ維持 | 両方 | アプリ内購入メニューが表示されず、全機能が無料で利用できることを確認 | 確認済み |
+

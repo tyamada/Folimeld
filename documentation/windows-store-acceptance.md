@@ -67,3 +67,31 @@ The DPI check used `GetWindowDpiAwarenessContext` on the main window and compare
 | Earlier local WACK DPI warning | Cause unconfirmed. See the [historical diagnostic summary](windows-store-release-plan.md#diagnostic-follow-up-updated-2026-11-04). |
 | TEST92 and TEST88 | Individual Store certification outcomes unconfirmed. |
 | `runFullTrust` | Declared in the submission that passed overall. A separate capability decision or review comment remains unconfirmed. |
+
+## Store candidate 1.0.2.0 preparation and acceptance plan (Submission 2: x64 & ARM64)
+
+Acceptance plan for Submission 2 (package version `1.0.2.0`), adding native Windows 11 ARM64 support and large PDF optimizations.
+
+### Candidate packages and preflight status
+
+| Property | x64 candidate | ARM64 candidate |
+| --- | --- | --- |
+| Package file | `dist/Folimeld_1.0.2.0_x64.msix` | `dist/Folimeld_1.0.2.0_arm64.msix` |
+| Package Identity | `TakumaYamada.Folimeld` | `TakumaYamada.Folimeld` |
+| Version | `1.0.2.0` | `1.0.2.0` |
+| Target CPU (PE Machine) | `x64` (`0x8664`) | `arm64` (`0xAA64`) |
+| Package SHA-256 | `E57D690DE5D07EE956DB25A1173F56ED36B81EFD951F1C42DB651252915B7853` | Pending (build on ARM64 hardware) |
+| Preflight (`msix_preflight`) | Passed (`build/msix-preflight/store/x64/preflight.json`) | Settings validated (`-ValidateOnly`) |
+| Source association | `dist/source/Folimeld_1.0.2.0_x64.msix-e57d690de5d07ee956db25a1173f56ed36b81efd951f1c42db651252915b7853.json` | Generated upon package creation |
+
+### Submission 2 acceptance checklist
+
+| Check | Scope | Required behavior and evidence | Status |
+| --- | --- | --- | --- |
+| Upgrade test from 1.0.1.0 | x64 | Install 1.0.2.0 over signed 1.0.1.0; verify settings, history, and PDF file associations are preserved | Pending |
+| ARM64 hardware install & launch | ARM64 | Native launch, exit, and UI interaction on Copilot+ PC (Snapdragon X Elite, etc.) Windows 11 ARM64 | Pending |
+| Large PDF save acceleration | Both | Separate worker process saving, progress dialog display, and original file preservation on failure | Unit tests passed, awaiting hardware |
+| Encrypted Undo/Redo disk spooling | Both | Spool to AES-256-GCM encrypted temporary storage when memory exceeds 128 MiB; restore and secure wipe | Unit tests passed, awaiting hardware |
+| Bulk image import | Both | PDF generation from image import dialog, reordering, rotation, and temp file cleanup | Unit tests passed, awaiting hardware |
+| 100% Free app policy | Both | Supporter purchase menu absent; all features available freely | Confirmed |
+
