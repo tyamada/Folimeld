@@ -46,6 +46,35 @@ For updates, pass the previous MSIX using `-PreviousPackage`. For ARM64, add `-A
 
 Configuration and manifest files are written to `build/msix-preflight/<channel>/<architecture>/`. Generated-MSIX inspection results are saved there as `preflight.json`. Checks cover identity, version, OS settings, executable architecture, PDF association, icons, the license file, and package SHA-256. Successful static checks do not establish matching Partner Center registration, WACK success, hardware acceptance, license compliance, or certification approval.
 
+## Submission 2 release plan (Folimeld 1.0.2.0: x64 + ARM64 dual architecture)
+
+Plan for the next update (Submission 2) adding native Windows 11 ARM64 support (Copilot+ PCs such as Surface Pro 11 / Snapdragon X Elite) alongside Windows 11 x64.
+
+- **Package version**: `1.0.2.0` (greater than previous published version `1.0.1.0`).
+- **Target architectures**: `x64` and `arm64` (native PE Machine `0xAA64`).
+- **Pricing & distribution**: 100% Free (remains a free app with in-app supporter add-ons kept disabled).
+- **Included features**:
+  - Native Windows 11 ARM64 support.
+  - Large PDF saving acceleration (progress dialog, redundant stream check bypass, worker process writing, crash protection).
+  - Undo/Redo history disk spooling (AES-256-GCM encrypted temp storage up to 1 GiB).
+  - Virtualized thumbnail rendering (smooth scrolling for documents with 1,000+ pages).
+  - Batch PDF creation from image folders (PNG, JPEG, TIFF, BMP, WebP).
+- **Package deliverables**:
+  - `dist/Folimeld_1.0.2.0_x64.msix`
+  - `dist/Folimeld_1.0.2.0_arm64.msix`
+  - Uploaded simultaneously in Partner Center Submission 2 Packages step for automatic architecture-specific distribution.
+- **Build and preflight commands**:
+  ```powershell
+  # x64 package generation and preflight verification against previous version
+  powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
+    -Store -StoreConfig .\build\store-config.json -Architecture x64 `
+    -PreviousPackage .\dist\Folimeld_1.0.1.0_x64.msix
+
+  # ARM64 package generation and preflight verification
+  powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
+    -Store -StoreConfig .\build\store-config.json -Architecture arm64
+  ```
+
 ## Official references
 
 - [Distribution path comparison](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/choose-distribution-path)

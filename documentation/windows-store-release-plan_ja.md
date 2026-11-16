@@ -46,6 +46,35 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
 
 設定とマニフェストは `build/msix-preflight/<モード>/<アーキテクチャ>/` に出力する。生成MSIXの検査結果は同じ場所の `preflight.json`。Identity、版番号、OS設定、EXEのCPU種類、PDF関連付け、アイコン、ライセンスファイルとパッケージのSHA-256を確認する。静的検査の成功はPartner Centerとの登録一致、WACK成功、実機試験、ライセンス条件、審査通過を保証しない。
 
+## Submission 2（Folimeld 1.0.2.0: x64 + ARM64 両対応）の公開計画
+
+Windows 11 x64 に加え、Windows 11 ARM64（Surface Pro 11 等の Copilot+ PC / Snapdragon X Elite）へのネイティブ対応を追加した次期アップデート（Submission 2）の計画です。
+
+- **版番号**: `1.0.2.0`（前回公開版 `1.0.1.0` より大きい4要素バージョン番号）
+- **対象アーキテクチャ**: `x64` および `arm64`（PE Machine `0xAA64` ネイティブ）
+- **配布形態・価格**: 完全無料（無料アプリのみとして応援購入・アドオン登録は無効を維持）
+- **反映される新機能**:
+  - Windows 11 ARM64 ネイティブ対応
+  - 大規模 PDF 保存の高速化（進捗ダイアログ、重複ストリーム検査省略、別プロセス書き出し、クラッシュ保護）
+  - Undo/Redo 履歴のディスク退避（AES-256-GCM 暗号化、最大 1 GiB）
+  - サムネイル仮想化（1,000 ページ超の文書でもメモリ浪費を防ぐ表示最適化）
+  - 画像フォルダー一括取り込み（PNG, JPEG, TIFF, BMP, WebP の PDF 化）
+- **パッケージ構成**:
+  - `dist/Folimeld_1.0.2.0_x64.msix`
+  - `dist/Folimeld_1.0.2.0_arm64.msix`
+  - Partner Center の同一申請（Submission 2）のパッケージ画面で両 MSIX をアップロードし、クライアント端末の CPU に応じて自動配信。
+- **ビルド・事前検査コマンド**:
+  ```powershell
+  # x64 パッケージ生成と静的検査（前回版とのバージョン・同一ファミリー比較）
+  powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
+    -Store -StoreConfig .\build\store-config.json -Architecture x64 `
+    -PreviousPackage .\dist\Folimeld_1.0.1.0_x64.msix
+
+  # ARM64 パッケージ生成と静的検査
+  powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
+    -Store -StoreConfig .\build\store-config.json -Architecture arm64
+  ```
+
 ## 公式資料
 
 - [提出方式の比較](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/choose-distribution-path)

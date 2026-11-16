@@ -48,9 +48,9 @@ def fixture(tmp_path, monkeypatch):
         review[key] = dc._sha(path)
     review_path = tmp_path / "synthetic-review.json"
     review_path.write_text(json.dumps(review))
-    monkeypatch.setattr(dc, "verify_runtime_terms", lambda *args: {"synthetic": "terms"})
-    monkeypatch.setattr(dc, "verify_collected_crt", lambda *args: {"synthetic": "crt"})
-    monkeypatch.setattr(dc, "verify_inno_inputs", lambda *args: {"selected_stubs": ["Setup.e32", "SetupLdr.e32"]})
+    monkeypatch.setattr(dc, "verify_runtime_terms", lambda *args, **kwargs: {"synthetic": "terms"})
+    monkeypatch.setattr(dc, "verify_collected_crt", lambda *args, **kwargs: {"synthetic": "crt"})
+    monkeypatch.setattr(dc, "verify_inno_inputs", lambda *args, **kwargs: {"selected_stubs": ["Setup.e32", "SetupLdr.e32"]})
     monkeypatch.setattr(dc.subprocess, "run", lambda *args, **kwargs: pytest.fail("Unexpected compiler execution"))
     return repo, dict(payload_root=payload, payload_review=review_path, legal_root=legal,
                       inno_root=inno, output=tmp_path / "new output", version="1.0.0.0")
@@ -150,7 +150,7 @@ def test_wrong_payload_machine(fixture):
 
 def test_tool_guard_failure(fixture, monkeypatch):
     repo, inputs = fixture
-    def fail(*args):
+    def fail(*args, **kwargs):
         raise ValueError("Tool or stub hash changed")
     monkeypatch.setattr(dc, "verify_inno_inputs", fail)
     with pytest.raises(ValueError, match="stub"):
@@ -167,7 +167,7 @@ def test_output_overlap(fixture):
 
 def test_runtime_terms_failure_prevents_compiler(fixture, monkeypatch):
     repo, inputs = fixture
-    def fail(*args):
+    def fail(*args, **kwargs):
         raise ValueError("Runtime terms invalid")
     monkeypatch.setattr(dc, "verify_runtime_terms", fail)
     with pytest.raises(ValueError, match="Runtime terms"):

@@ -661,8 +661,7 @@ The source for the next release also enables this guidance on FreeBSD, NetBSD an
 
 ## TODO
 
-- Verify the Windows 11 x64 upgrade from Store version 1.0.1.0, including preference retention and PDF operations.
-- Verify dependencies and behavior on Windows 11 ARM64 hardware before deciding whether to distribute a native build.
+- For the next Microsoft Store release (1.0.2.0), verify upgrade retention from Store version 1.0.1.0 and add validation for the native Windows 11 ARM64 MSIX package.
 
 ## Known issues and limitations
 

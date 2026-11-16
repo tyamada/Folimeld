@@ -39,13 +39,25 @@ Copy each feature's text into Partner Center without the Markdown bullet.
 - Change PDF version, page layout and binding direction
 - Set or remove a PDF opening password
 - Interface available in eight languages, including English and Japanese
+- Native performance on Windows 11 ARM64 (Copilot+ PCs)
 <!-- /store:features -->
+
+## What's new in this version (Submission 2 / 1.0.2.0)
+
+<!-- store:whats_new -->
+- Added native support for Windows 11 ARM64 (Copilot+ PCs such as Surface Pro 11).
+- Significantly accelerated PDF saving for large documents and added a save progress dialog.
+- Enabled disk offloading for Undo/Redo history, improving stability when editing large PDFs.
+- Optimized thumbnail rendering for fast and smooth scrolling in documents with 1,000+ pages.
+- Added batch creation of new PDFs from image folders (JPEG, PNG, BMP, TIFF, WebP).
+- Enhanced internal security with encrypted temporary editing buffers.
+<!-- /store:whats_new -->
 
 ## Submission notes (not public listing text)
 
-- Leave What's new blank for the first submission. Do not present GitHub release history as updates already published in the Store.
-- App price, markets, category (candidate: Productivity) and age rating remain undecided. Answer rating questions according to the actual app declaration.
-- If supporter purchases are included, verify product retrieval, purchase and restoration through the actual Store, then align product copy and displayed prices before adding purchase information. No price or purchase-availability promises are made here.
+- For Submission 2, copy the `store:whats_new` text above into "What's new in this version".
+- App price is "Free" with no in-app purchases (add-ons remain disabled).
+- Maintain Productivity category and current age ratings.
 - Confirm publisher, support and policy URLs in the [decision register](windows-store-publication-decisions.md). Do not infer values from the name or automatically use the migration inquiry's sender address.
 
 ### Proposed runFullTrust justification

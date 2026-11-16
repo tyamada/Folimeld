@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+- Prepared next Microsoft Store release plan (Submission 2 / package version 1.0.2.0) with native Windows 11 ARM64 support, disabled UPX in `Folimeld.spec`, and updated bilingual Store listing copy (What's new) and release planning documentation. Maintained free-app-only policy with in-app supporter add-ons kept disabled.
+
 - Consolidated and unified the prerequisites, download, installation, and execution guides for all three Windows 11 preview packages (source + uv, `uv tool install`, and Desktop installer) across x86_64 and ARM64 in bilingual READMEs and documentation, with architecture-specific SHA-256 verification and Smart App Control guidance.
 
 - Add three preview packages for Windows 11 ARM64 (such as Copilot+ PCs / Snapdragon X Elite): source + uv edition, `uv tool install` edition, and PyInstaller onedir + Inno Setup Desktop installer edition.

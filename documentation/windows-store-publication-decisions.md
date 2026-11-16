@@ -13,9 +13,9 @@ Status: pre-publication. Retain the existing registration/name reservation. This
 | Privacy policy URL | Japanese/English drafts exist; destination undecided | Hosting choice, contact/effective date and final-package consistency | Store information, both policies |
 | Support/product website | Undecided | A user-controlled public destination; decide how reserved `docs/` is used if choosing GitHub Pages | Store URLs |
 | Corresponding source publication | Build ZIPs/association JSON and dependency sources saved locally | Final-artifact sources hosted, download/hash verification and overall dependency review | Releases, licensing guidance |
-| App price / supporter purchases | Editing is not gated by in-app purchase; app price/initial purchase offering undecided | User's sales policy; actual Store tests if included, otherwise align entry points and listing | App, add-on, listing |
+| App price / supporter purchases | Editing is not gated by in-app purchase; provided as free app | Confirmed: Free app only; supporter add-ons remain disabled | App, add-on, listing |
 | Markets / category / age rating | Undecided; Productivity is a candidate | User's markets and answers to actual rating questionnaire | Partner Center |
-| Supported platform | Initially Windows 11 x64 | Dynabook tests, final MSIX acceptance/WACK; ARM64 needs separate hardware evidence | Listing, release plan |
+| Supported platform | Windows 11 x64 published; Submission 2 adds Windows 11 ARM64 | x64 and ARM64 hardware acceptance, WACK | Listing, release plan |
 | Release date | Undecided; PC delivery expected 2026-10-30 is not a release date | Microsoft response, decisions, tests and dependency review completed | Publication settings, announcement |
 
 Bundle the first decision request around four items: official publisher, public support contact, app price/supporter policy and hosting destination. Continue copy/procedure preparation while answers are pending. Do not automatically repurpose the migration inquiry's sender as the public contact.
