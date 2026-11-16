@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+- Formulated an update plan to upgrade Debian, Ubuntu, and BSD (FreeBSD, NetBSD, OpenBSD) packages to the Folimeld 0.3.5 baseline, and initiated deterministic source snapshot generation and build script review.
+
 - Prepared next Microsoft Store release plan (Submission 2 / package version 1.0.2.0) with native Windows 11 ARM64 support, disabled UPX in `Folimeld.spec`, and updated bilingual Store listing copy (What's new) and release planning documentation. Built native Store MSIX packages on x64 and ARM64 hardware (`Folimeld_1.0.2.0_x64.msix`, `Folimeld_1.0.2.0_arm64.msix`), passed static checks (`msix_preflight`), completed source bundle association, and recorded verified package information in the release plan (`windows-store-release-plan.md`) and MSIX acceptance documentation (`windows-store-acceptance.md`). Completed submission to Partner Center (Submission 2) on 2026-11-16 for Certification review. Maintained free-app-only policy with in-app supporter add-ons kept disabled.
 
 - Consolidated and unified the prerequisites, download, installation, and execution guides for all three Windows 11 preview packages (source + uv, `uv tool install`, and Desktop installer) across x86_64 and ARM64 in bilingual READMEs and documentation, with architecture-specific SHA-256 verification and Smart App Control guidance.

@@ -662,6 +662,7 @@ The source for the next release also enables this guidance on FreeBSD, NetBSD an
 ## TODO
 
 - Await Microsoft Store certification for Submission 2 (1.0.2.0: x64 + ARM64 dual architecture), and complete upgrade retention verification from Store 1.0.1.0 and native ARM64 hardware acceptance upon publication.
+- Update Debian, Ubuntu, and BSD (FreeBSD, NetBSD, OpenBSD) packages to the 0.3.5 baseline, and prepare verification and releases.
 
 ## Known issues and limitations
 
