@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+- Cleaned up superseded Ubuntu and Debian 0.3.4 entries from the README downloads table in favor of 0.3.5 release rows.
+
 - Update macOS Homebrew formula to 0.3.5: Support Python 3.14 environment, add `launch_homebrew.py` launcher passing distribution identifier (`homebrew`) to enable the "Help -> Support Development..." action, generate lean 5.7 MB source archive, and complete verification for `brew install --build-from-source tyamada/tap/folimeld`, `brew test tyamada/tap/folimeld`, and clean uninstallation.
 
 - Update FreeBSD 15.1 aarch64 package to 0.3.5_1: Update ARM64 packaging tools, build `folimeld-0.3.5_1.pkg`, and verify `pkg add` installation, offscreen GUI execution, and active "Support Development..." menu action.

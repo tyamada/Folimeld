@@ -4,6 +4,8 @@
 
 ## 未リリース
 
+- READMEのダウンロード一覧表から旧版となったUbuntuおよびDebian 0.3.4の記載を整理し、最新の0.3.5配布行へ一本化。
+
 - macOS Homebrew版を 0.3.5 に更新: Python 3.14環境、ランチャー `launch_homebrew.py` を経由した配布元識別子（`homebrew`）の伝達と「ヘルプ → 開発を応援する…」メニューの有効化、5.7 MBの軽量ソースアーカイブ生成、`brew install --build-from-source tyamada/tap/folimeld` および `brew test tyamada/tap/folimeld` による動作確認・アンインストール検証を完了。
 
 - FreeBSD 15.1 aarch64版パッケージを 0.3.5_1 に更新: ARM64向けビルドツール修正、`folimeld-0.3.5_1.pkg` ビルド、`pkg add` による導入、オフスクリーン実行および「開発を応援する…」アクションの動作確認を完了。
