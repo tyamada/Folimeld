@@ -48,6 +48,11 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.5.0 Windows x64 Desktop installer preview - 2026-11-16
+
+- Publish the [Windows 11 x64 Desktop installer preview](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) (PyInstaller onedir + Inno Setup 7.1.1) as a Pre-release while preserving `latest`. Distribute 12 assets (Setup EXE, matching source ZIP, payload review ledger, internal source manifest, commit association, Installed-packages, third-party notices, dependency sources ledger, English/Japanese CRT user notices, compile result, and SHA256SUMS) and verify public redownload sizes and SHA-256 hashes for all 12 files.
+- Verify the Microsoft Runtime-scoped consent page and original RTF hash guard, unused Qt module exclusion, canonical 7-file CRT normalization, `Local\Folimeld-Desktop` mutex protection, and isolated `%LOCALAPPDATA%\Folimeld-Desktop` settings/logs. Verify installer blocking while mutex is held, non-elevated fresh install with all 201 installed files matching `payload-review.json` SHA-256, same-version overwrite refusal, frozen `FolimeldDesktop.exe` CLI PDF launch, Per-Monitor V2 DPI, duplicate-launch rejection, clean exit, and `unins000.exe` removal preserving user settings.
+
 ## 0.3.5 Windows x64 uv tool install preview - 2026-11-16
 
 - Publish the [Windows 11 x86_64 uv tool install preview](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1) (Pure Python Wheel / GitHub Releases distribution) as a Pre-release while preserving `latest`. Distribute 10 assets (Wheel, dependency lock, runtime profile, matching source ZIP, internal manifest, commit association, third-party notices, dependency sources ledger, SHA256SUMS, and release manifest) and verify public redownload sizes and SHA-256 hashes for all 10 files.

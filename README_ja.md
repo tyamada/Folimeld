@@ -43,6 +43,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | OS | CPU | 配布形式・版 | 公開先 |
 | --- | --- | --- | --- |
 | Windows 11 | x64 | Microsoft Store / 1.0.1.0 | [対応ソース](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.1.0) |
+| Windows 11 | x64 | Desktop インストーラー / 0.3.5.0（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) |
 | Windows 11 | x64 | ソース＋uv / 0.3.5（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) |
 | Windows 11 | x64 | uv tool install (Wheel) / 0.3.5（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1) |
 | macOS 15以降 | Apple Silicon（arm64） | Homebrew / 0.3.3（ソース配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.3) |
@@ -154,6 +155,21 @@ folimeld
 ```
 
 通常起動は`folimeld`（コンソールなしGUI）、標準エラー出力を確認する診断起動は`folimeld-console`を使用します。
+
+### Windows 11 x64 Desktop インストーラー版プレビュー（PyInstaller onedir + Inno Setup）
+
+Python・uv・PowerShellの事前導入を不要としたユーザー単位インストーラー [**Folimeld 0.3.5.0 Windows x64 Desktop プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) を試験公開しています。Microsoft Store配布は引き続き標準のWindows配布経路として維持し、Store版・ソース＋uv版・`uv tool install`版とは導入先・設定・ログ・Mutexを分離しています。詳細は[Desktop版仕様・検証記録](documentation/windows-desktop-build_ja.md)と[版別ソース案内](documentation/windows-desktop-sources_ja.md)を参照してください。
+
+- [Setup EXE](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-x64-setup.exe) · [対応ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-0.3.5.0-windows-x64-desktop-source.zip) · [ペイロード台帳](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/payload-review.json) · [内部ソース台帳](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/source-manifest.json) · [コミット対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/SOURCE-ASSOCIATION.txt) · [第三者告知](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/THIRD-PARTY-NOTICES.txt) · [依存ソース台帳](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/DEPENDENCY-SOURCES.json) · [CRT利用者告知](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/CRT-USER-NOTICE_ja.txt) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/SHA256SUMS.txt)
+- 管理者権限不要で `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0` へ導入され、設定とログは `%LOCALAPPDATA%\Folimeld-Desktop` へ保存します（アンインストール時も設定・ログは保持）。多重起動および実行中の更新・削除防止には `Local\Folimeld-Desktop` Mutex を使用します。
+- この試験候補は未署名のため、実行時に Windows SmartScreen 等の警告が表示される場合があります。保護機能を一括無効化せず、公式 Release の HTTPS URL から取得したことと、下記の SHA-256 ハッシュが一致することを必ず照合してから実行してください。インストーラーの同意画面に表示される英語原文ライセンスは同梱の Microsoft Visual C++ Runtime（`14.44.35211.0`）のみに適用され、Folimeld 本体（AGPL-3.0）および他の OSS コンポーネントにはそれぞれのライセンスが適用されます。
+
+```powershell
+$ErrorActionPreference = 'Stop'
+if ((Get-FileHash -LiteralPath .\Folimeld-Desktop-0.3.5.0-x64-setup.exe -Algorithm SHA256).Hash -ne 'ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3') {
+    throw 'Installer SHA-256 mismatch. Stop without running it.'
+}
+```
 
 ### macOS版をHomebrewでインストール
 

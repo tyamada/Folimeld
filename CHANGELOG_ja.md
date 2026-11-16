@@ -48,6 +48,11 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.5.0 Windows x64 Desktop インストーラー版プレビュー - 2026-11-16
+
+- Windows 11 x64向けの[Desktopインストーラー版プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1)（PyInstaller onedir + Inno Setup 7.1.1）をPre-releaseとして公開（既存latestは保持）。Setup EXE・対応ソースZIP・ペイロード台帳・内部ソース台帳・コミット対応記録・第三者告知・依存ソース台帳・CRT利用者告知（日英）・SHA-256一覧の計12ファイルを配布し、公開後の全12添付の再取得とサイズ・SHA-256一致を確認。
+- Microsoft Runtime（14.44.35211.0）に限定した同意ページと原文RTFハッシュガード、不要Qtモジュール除外と正規CRT 7件統一、`Local\Folimeld-Desktop` Mutex保護、`%LOCALAPPDATA%\Folimeld-Desktop` 設定・ログ分離を検証。実機でのMutex保持中インストール拒否、通常権限インストール後の全201ファイルSHA-256一致、同一版上書き拒否、凍結`FolimeldDesktop.exe`でのPDF起動・Per-Monitor V2 DPI・重複起動拒否・正常終了、`unins000.exe`による削除と設定保持を確認。
+
 ## 0.3.5 Windows x64 uv tool install 版プレビュー - 2026-11-16
 
 - Windows 11 x86_64向けの[uv tool install版プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1)（Pure Python Wheel / GitHub Releases配布）をPre-releaseとして公開（既存latestは保持）。Wheel・固定依存ロック・ランタイム定義・対応ソースZIP・内部台帳・コミット対応記録・第三者告知・依存ソース台帳・SHA-256一覧の計10ファイルを配布し、公開後の全10添付の再取得とサイズ・SHA-256一致を確認。

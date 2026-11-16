@@ -115,3 +115,4 @@ reviewed-files.jsonは作成せず、再配布/利用者保護条件の全充足
   - 同一バージョン再実行時の `PrepareToInstall` 上書き拒否（終了コード 7）を確認。
   - 導入された `FolimeldDesktop.exe` での3ページPDF引数起動、メインウィンドウの `DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2` (-4, DPI=144) 一致、重複起動時の `Local\Folimeld-Desktop` ダイアログ表示と終了コード 1、正常終了（終了コード 0）を確認。
   - `unins000.exe` によるアンインストール成功（終了コード 0、`versions\0.3.5.0` とスタートメニューショートカットの削除、`%LOCALAPPDATA%\Folimeld-Desktop` 設定データの保持）を確認。
+- [GitHub Release `windows-desktop-v0.3.5.0-preview.1`](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1)（Pre-release、対応コミット `b0c2ff3`）として全12アセットを試験公開し、未認証 HTTPS による全12ファイルの再ダウンロードとサイズ・SHA-256 一致、既存 `latest` Release の不変を確認。

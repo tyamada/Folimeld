@@ -43,6 +43,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | OS | CPU | Distribution and version | Release |
 | --- | --- | --- | --- |
 | Windows 11 | x64 | Microsoft Store / 1.0.1.0 | [Matching source](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.1.0) |
+| Windows 11 | x64 | Desktop installer / 0.3.5.0 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) |
 | Windows 11 | x64 | Source + uv / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) |
 | Windows 11 | x64 | uv tool install (Wheel) / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1) |
 | macOS 15 or later | Apple Silicon (arm64) | Homebrew / 0.3.3 (source) | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.3) |
@@ -154,6 +155,21 @@ folimeld
 ```
 
 Run `folimeld` for standard GUI launch without a console window, or `folimeld-console` for diagnostic console output.
+
+### Windows 11 x64 Desktop installer preview (PyInstaller onedir + Inno Setup)
+
+[**Folimeld 0.3.5.0 Windows x64 Desktop preview**](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) is available as a per-user installer that requires no pre-installed Python, uv, or PowerShell. The Microsoft Store edition remains the standard Windows distribution channel, and this edition keeps its install directory, settings, logs, and mutex strictly separate from the Store, source + uv, and `uv tool install` editions. See the [Desktop build specification and verification record](documentation/windows-desktop-build.md) and [per-version source guide](documentation/windows-desktop-sources.md) for details.
+
+- [Setup EXE](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-x64-setup.exe) · [Matching source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-0.3.5.0-windows-x64-desktop-source.zip) · [Payload ledger](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/payload-review.json) · [Internal source manifest](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/source-manifest.json) · [Source commit association](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/SOURCE-ASSOCIATION.txt) · [Third-party notices](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/THIRD-PARTY-NOTICES.txt) · [Dependency sources ledger](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/DEPENDENCY-SOURCES.json) · [CRT user notice](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/CRT-USER-NOTICE.txt) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/SHA256SUMS.txt)
+- Installs per-user without elevation under `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0` and stores settings and logs under `%LOCALAPPDATA%\Folimeld-Desktop` (preserved across uninstallation). Uses the `Local\Folimeld-Desktop` mutex to prevent duplicate launches and updates/uninstalls while running.
+- This test candidate is unsigned and may trigger Windows SmartScreen prompts. Do not disable system protections globally; verify that the installer was downloaded over HTTPS from the official Release and matches the SHA-256 checksum below before running. The English license terms shown during setup apply solely to the bundled Microsoft Visual C++ Runtime (`14.44.35211.0`); Folimeld (`AGPL-3.0`) and other open-source components retain their own licenses.
+
+```powershell
+$ErrorActionPreference = 'Stop'
+if ((Get-FileHash -LiteralPath .\Folimeld-Desktop-0.3.5.0-x64-setup.exe -Algorithm SHA256).Hash -ne 'ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3') {
+    throw 'Installer SHA-256 mismatch. Stop without running it.'
+}
+```
 
 ### Install on macOS with Homebrew
 

@@ -115,3 +115,4 @@ This change does not create reviewed-files.json or establish that all redistribu
   - Verified `PrepareToInstall` refuses same-version overwrite (exit code 7).
   - Verified installed `FolimeldDesktop.exe` opens a 3-page PDF passed via CLI, matches `DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2` (-4, DPI=144), rejects duplicate launch via `Local\Folimeld-Desktop` mutex with dialog and exit code 1, and exits cleanly with code 0.
   - Verified `unins000.exe` cleanly removes `versions\0.3.5.0` and the Start menu shortcut (exit code 0) while preserving user settings under `%LOCALAPPDATA%\Folimeld-Desktop`.
+- Published [GitHub Release `windows-desktop-v0.3.5.0-preview.1`](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) (Pre-release, matching commit `b0c2ff3`) with all 12 assets, and verified unauthenticated HTTPS redownload of all 12 files with matching byte sizes and SHA-256 hashes while preserving the existing `latest` Release.
