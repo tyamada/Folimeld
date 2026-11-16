@@ -4,6 +4,16 @@
 
 ## Unreleased
 
+- Update macOS Homebrew formula to 0.3.5: Support Python 3.14 environment, add `launch_homebrew.py` launcher passing distribution identifier (`homebrew`) to enable the "Help -> Support Development..." action, generate lean 5.7 MB source archive, and complete verification for `brew install --build-from-source tyamada/tap/folimeld`, `brew test tyamada/tap/folimeld`, and clean uninstallation.
+
+- Update FreeBSD 15.1 aarch64 package to 0.3.5_1: Update ARM64 packaging tools, build `folimeld-0.3.5_1.pkg`, and verify `pkg add` installation, offscreen GUI execution, and active "Support Development..." menu action.
+
+- Update OpenBSD 8.0 arm64 packages to 0.3.5: Extend `tools/build_openbsd_package.py` to support arm64/aarch64 alongside amd64, build `folimeld-0.3.5.tgz` with Python 3.14 and LLVM 22, apply Signify signatures (embedded gzip signature and `SHA256.sig`), and verify `pkg_add` installation, offscreen execution, and active "Support Development..." action.
+
+- Update NetBSD 11.1 aarch64 package to 0.3.5: Extend `tools/build_netbsd_package.py` to support evbarm/aarch64 alongside amd64, build `folimeld-0.3.5.tgz` with Python 3.12, Qt6, and PySide6 6.11.2, and verify `/usr/pkg/sbin/pkg_add` installation, offscreen execution, and active "Support Development..." action.
+
+- Consolidate Ubuntu / Debian / Kali Linux 0.3.5 packaging: Stage verified 0.3.5 DEB (amd64 / arm64) and strict Snap (arm64) packages for release.
+
 - Formulated an update plan to upgrade Debian, Ubuntu, and BSD (FreeBSD, NetBSD, OpenBSD) packages to the Folimeld 0.3.5 baseline. Captured and associated the deterministic source code snapshot ZIP (`Folimeld-source-e550bf65ec95b968ddce59592f3ef4fd9e297a88b9e2b7364413592244a14e8a.zip`), added test suites for BSD version resolution (FreeBSD `0.3.5_1`, NetBSD `0.3.5`, OpenBSD `0.3.5`) and dependency source integrity (`tests/test_bsd_packages.py`, `tests/test_freebsd_package.py`), and verified all 18 tests passed. Built the Ubuntu 24.04 amd64 DEB package (`folimeld_0.3.5_amd64.deb`, SHA-256: `5b64a696b69cdb7c9fada6e13cd100dd35d76470ecad1408800ee558c4362174`) via WSL2, and verified offscreen GUI initialization, PyMuPDF loading, and standalone binary integrity under both Ubuntu 24.04 and Debian 13.6 (Trixie). Established bilingual release and build procedure guides (`documentation/bsd-035-release-plan_ja.md`, `bsd-035-release-plan.md`).
 
 - Prepared next Microsoft Store release plan (Submission 2 / package version 1.0.2.0) with native Windows 11 ARM64 support, disabled UPX in `Folimeld.spec`, and updated bilingual Store listing copy (What's new) and release planning documentation. Built native Store MSIX packages on x64 and ARM64 hardware (`Folimeld_1.0.2.0_x64.msix`, `Folimeld_1.0.2.0_arm64.msix`), passed static checks (`msix_preflight`), completed source bundle association, and recorded verified package information in the release plan (`windows-store-release-plan.md`) and MSIX acceptance documentation (`windows-store-acceptance.md`). Completed submission to Partner Center (Submission 2) on 2026-11-16 for Certification review. Maintained free-app-only policy with in-app supporter add-ons kept disabled.

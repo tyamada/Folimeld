@@ -1,0 +1,18 @@
+ProductName:		macOS
+ProductVersion:		15.7.7
+BuildVersion:		24G720
+arm64
+System Integrity Protection status: enabled.
+folimeld 0.3.5
+No broken requirements found.
+
+Published README commands verified:
+brew install --build-from-source tyamada/tap/folimeld
+brew test tyamada/tap/folimeld
+folimeld
+
+Verification details:
+- Source archive: folimeld-0.3.5-source.tar.gz (SHA-256: 1602b462fc76fe40c0569479f3985df1c72e729967e35b23ded0b1a650c59ee2)
+- Formula uses launch_homebrew.py wrapper passing distribution="homebrew"
+- Sponsors menu enabled and verified in MainWindow
+- Clean uninstall verified with brew uninstall tyamada/tap/folimeld

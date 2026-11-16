@@ -1,0 +1,14 @@
+OS: OpenBSD 8.0 GENERIC.MP#122 arm64
+Python: 3.14.7 (Clang 22.1.6)
+Packages:
+- folimeld-0.3.5.tgz (Signed, SHA-256: 4b2baaeaf20150d18e8f85f573ef4bc99f0bb3b378eb84a3059ef850be842c94)
+- folimeld-mupdf-1.28.2.tgz (Signed, SHA-256: 62bc7b0a7dd95b9d29ef66a7b3db018ec49ca80ae94611cb894458fa85b8fae9)
+Signify: folimeld-80-pkg.pub (SHA-256: 48ff40c11d4ddbbafbea53e610582745414bb8665bf239258d4dac35494612d5)
+Signatures: Embedded gzip signify signature + SHA256.sig verified
+
+Verification:
+- Clean package build with tools/build_openbsd_package.py
+- Signatures applied with tools/sign_openbsd_packages.sh and verified with signify
+- Package installation with `pkg_add -D update folimeld-mupdf-1.28.2.tgz folimeld-0.3.5.tgz`
+- GUI launch and offscreen execution verified (Folimeld version 0.3.5)
+- Sponsors menu action verified active

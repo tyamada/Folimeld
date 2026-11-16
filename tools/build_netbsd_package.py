@@ -23,8 +23,8 @@ DEPENDENCY_SOURCES = {
 
 
 def build(source_zip, native_prefix, dependency_sources, output):
-    if platform.system() != 'NetBSD' or platform.machine() != 'amd64' or sys.version_info[:2] != (3, 12):
-        raise RuntimeError('Build on NetBSD amd64 with Python 3.12')
+    if platform.system() != 'NetBSD' or platform.machine() not in ('amd64', 'aarch64', 'arm64', 'evbarm') or sys.version_info[:2] != (3, 12):
+        raise RuntimeError('Build on NetBSD (amd64 or evbarm/aarch64) with Python 3.12')
     output.mkdir(parents=True, exist_ok=True)
     for name, expected in DEPENDENCY_SOURCES.items():
         if sha256(dependency_sources / name) != expected:
@@ -94,15 +94,16 @@ def build(source_zip, native_prefix, dependency_sources, output):
         packing.write_text('@name folimeld-' + version + '\n@cwd /usr/pkg\n' +
                            ''.join('@pkgdep ' + dep + '\n' for dep in dependencies) +
                            '\n'.join(files) + '\n')
+        arch = 'aarch64' if platform.machine() in ('aarch64', 'arm64', 'evbarm') else 'x86_64'
         info = work / 'BUILD_INFO'
         info.write_text('OPSYS=NetBSD\nOS_VERSION=' + platform.release() +
-                        '\nMACHINE_ARCH=x86_64\nPKGTOOLS_VERSION=' +
+                        f'\nMACHINE_ARCH={arch}\nPKGTOOLS_VERSION=' +
                         subprocess.check_output(['/usr/pkg/sbin/pkg_create', '-V'], text=True).strip() +
                         '\nLICENSE=gnu-agpl-v3\n')
         package = output / f'folimeld-{version}.tgz'
         subprocess.run(['/usr/pkg/sbin/pkg_create', '-p', str(stage), '-I', '/usr/pkg',
                         '-u', 'root', '-g', 'wheel', '-B', str(info), '-f', str(packing),
-                        '-c', '-Visual PDF page editor', '-d', '-Folimeld for NetBSD amd64.',
+                        '-c', '-Visual PDF page editor', '-d', f'-Folimeld for NetBSD {arch}.',
                         str(package)], check=True)
         record = {'platform': platform.platform(), 'python': sys.version,
                   'source': source_zip.name, 'source_sha256': sha256(source_zip),

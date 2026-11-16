@@ -17,7 +17,11 @@ DEPENDENCY_SOURCES = {
     'pymupdf-1.28.2.tar.gz': '5e0be7908a715aa20333caddd73f1d6f01e4cd0c26e869fa2dd0b7f344da2249',
     'mupdf-1.28.2-source.tar.gz': '44075a84e329db55b9bef5f342a70fd26d69e48ad1d33cb89d9664581c641156',
 }
-WHEEL_SHA256 = '25932378ff47c85f5ef308120ff839472a261c3579bf77b3c370423f674c40b1'
+WHEEL_SHA256 = {
+    'amd64': '25932378ff47c85f5ef308120ff839472a261c3579bf77b3c370423f674c40b1',
+    'arm64': 'ad91f265111bafce5e0c32ba94cdf11eff5d0eebeb43eef3e42aa52b7561a424',
+    'aarch64': 'ad91f265111bafce5e0c32ba94cdf11eff5d0eebeb43eef3e42aa52b7561a424',
+}
 
 
 def run(*args, **kwargs):
@@ -25,7 +29,7 @@ def run(*args, **kwargs):
     return subprocess.run(args, check=True, env=environment, **kwargs)
 
 
-def make_port(directory, stage, package, dependencies, wantlib='', shared_libs=''):
+def make_port(directory, stage, package, dependencies, wantlib='', shared_libs='', arch='amd64'):
     """Use ports for fake installation, shared-library checks and package metadata."""
     directory.mkdir(parents=True, exist_ok=True)
     pkg = directory / 'pkg'
@@ -54,7 +58,7 @@ def make_port(directory, stage, package, dependencies, wantlib='', shared_libs='
         'HOMEPAGE = https://github.com/tyamada/Folimeld\n'
         '# AGPL-3.0-only; matching sources and notices accompany the release.\n'
         'PERMIT_PACKAGE = Yes\n'
-        'ONLY_FOR_ARCHS = amd64\n'
+        f'ONLY_FOR_ARCHS = {arch}\n'
         'DISTFILES =\nNO_BUILD = Yes\nNO_TEST = Yes\n'
         f'RUN_DEPENDS = {dependencies}\n'
         f'WANTLIB = {wantlib}\n'
@@ -65,12 +69,13 @@ def make_port(directory, stage, package, dependencies, wantlib='', shared_libs='
         '.include <bsd.port.mk>\n')
 
 
-def build(source_zip, wheel, dependency_sources, output, work, wheel_sha256=WHEEL_SHA256):
-    if (platform.system(), platform.release(), platform.machine()) != ('OpenBSD', '8.0', 'amd64'):
-        raise RuntimeError('Build on OpenBSD 8.0 amd64')
+def build(source_zip, wheel, dependency_sources, output, work, wheel_sha256=None):
+    if (platform.system(), platform.release()) != ('OpenBSD', '8.0') or platform.machine() not in ('amd64', 'arm64', 'aarch64'):
+        raise RuntimeError('Build on OpenBSD 8.0 (amd64 or arm64)')
     if sys.version_info[:2] != (3, 14):
         raise RuntimeError('Python 3.14 is required')
-    if sha256(wheel) != wheel_sha256:
+    expected_wheel_sha256 = wheel_sha256 or WHEEL_SHA256.get(platform.machine())
+    if sha256(wheel) != expected_wheel_sha256:
         raise ValueError('Wheel differs from the verified LLVM 22 build')
     for name, expected in DEPENDENCY_SOURCES.items():
         if sha256(dependency_sources / name) != expected:
@@ -123,20 +128,23 @@ def build(source_zip, wheel, dependency_sources, output, work, wheel_sha256=WHEE
     app_port = Path('/usr/ports/print/folimeld')
     if native_port.exists() or app_port.exists():
         raise ValueError('Local ports already exist; inspect before rebuilding')
+    ports_arch = 'aarch64' if platform.machine() in ('arm64', 'aarch64') else 'amd64'
     make_port(native_port, native_stage, 'folimeld-mupdf-1.28.2',
               'python->=3.14,<3.15:lang/python/3 gettext-runtime-*:devel/gettext,-runtime',
-              'c c++ c++abi crypto iconv intl m pthread util', 'mupdf 28.2 mupdfcpp 28.2')
+              'c c++ c++abi crypto iconv intl m pthread util', 'mupdf 28.2 mupdfcpp 28.2',
+              arch=ports_arch)
     make_port(app_port, app_stage, f'folimeld-{version}',
               'folimeld-mupdf->=1.28.2,<1.28.3:print/folimeld-mupdf '
               'python->=3.14,<3.15:lang/python/3 pyside6-*:x11/qt6/pyside6/pyside '
               'py3-Pillow->=11:graphics/py-Pillow '
               'py3-cryptography->=46,<51:security/py-cryptography '
-              'py3-psutil-*:sysutils/py-psutil noto-cjk-*:fonts/noto/cjk')
+              'py3-psutil-*:sysutils/py-psutil noto-cjk-*:fonts/noto/cjk',
+              arch=ports_arch)
     for port in (native_port, app_port):
         run('make', 'fake', cwd=port)
         run('make', 'package', cwd=port)
         name = 'folimeld-mupdf-1.28.2' if port == native_port else f'folimeld-{version}'
-        artifact = Path('/usr/ports/packages/amd64/all') / (name + '.tgz')
+        artifact = Path(f'/usr/ports/packages/{ports_arch}/all') / (name + '.tgz')
         shutil.copy2(artifact, output / artifact.name)
         record['packages'][artifact.name] = sha256(artifact)
         record['ports'][port.name] = (port / 'Makefile').read_text()
@@ -151,7 +159,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ('source', 'wheel', 'dependency-sources', 'output', 'work'):
         parser.add_argument('--' + name, type=Path, required=True)
-    parser.add_argument('--wheel-sha256', default=WHEEL_SHA256,
+    parser.add_argument('--wheel-sha256', default=None,
                         help='Expected hash; supply the recorded hash when rebuilding the wheel')
     args = parser.parse_args()
     build(args.source.resolve(), args.wheel.resolve(), args.dependency_sources.resolve(),

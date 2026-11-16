@@ -28,8 +28,8 @@ def extract(archive, destination):
 
 
 def build(source_zip, wheel, output):
-    if platform.system() != 'FreeBSD' or platform.machine() != 'amd64' or sys.version_info[:2] != (3, 12):
-        raise RuntimeError('Build on FreeBSD amd64 with Python 3.12')
+    if platform.system() != 'FreeBSD' or platform.machine() not in ('amd64', 'aarch64', 'arm64') or sys.version_info[:2] != (3, 12):
+        raise RuntimeError('Build on FreeBSD amd64/arm64 with Python 3.12')
     if 'freebsd' not in wheel.name or '1.28.2-' not in wheel.name:
         raise ValueError('A FreeBSD PyMuPDF 1.28.2 wheel is required')
     output.mkdir(parents=True, exist_ok=True)

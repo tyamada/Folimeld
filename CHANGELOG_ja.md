@@ -4,6 +4,16 @@
 
 ## 未リリース
 
+- macOS Homebrew版を 0.3.5 に更新: Python 3.14環境、ランチャー `launch_homebrew.py` を経由した配布元識別子（`homebrew`）の伝達と「ヘルプ → 開発を応援する…」メニューの有効化、5.7 MBの軽量ソースアーカイブ生成、`brew install --build-from-source tyamada/tap/folimeld` および `brew test tyamada/tap/folimeld` による動作確認・アンインストール検証を完了。
+
+- FreeBSD 15.1 aarch64版パッケージを 0.3.5_1 に更新: ARM64向けビルドツール修正、`folimeld-0.3.5_1.pkg` ビルド、`pkg add` による導入、オフスクリーン実行および「開発を応援する…」アクションの動作確認を完了。
+
+- OpenBSD 8.0 arm64版パッケージを 0.3.5 に更新: ARM64向けビルドツール（`tools/build_openbsd_package.py`）両対応化、Python 3.14 / LLVM 22 ベースでの `folimeld-0.3.5.tgz` ビルド、Signify による署名付与（埋め込み署名および `SHA256.sig`）、`pkg_add` による導入、オフスクリーン実行および「開発を応援する…」アクションの動作確認を完了。
+
+- NetBSD 11.1 aarch64版パッケージを 0.3.5 に更新: ARM64向けビルドツール（`tools/build_netbsd_package.py`）両対応化、Python 3.12 / Qt6 / PySide6 6.11.2 ベースでの `folimeld-0.3.5.tgz` ビルド、`/usr/pkg/sbin/pkg_add` による導入、オフスクリーン実行および「開発を応援する…」アクションの動作確認を完了。
+
+- Ubuntu / Debian / Kali Linux 0.3.5 パッケージの整備: 検証済み 0.3.5 DEB（amd64 / arm64）および strict Snap（arm64）のリリースステージングを準備。
+
 - Debian、Ubuntu、およびBSD（FreeBSD、NetBSD、OpenBSD）の各パッケージをFolimeld 0.3.5ベースへ更新する計画を策定。決定論的ソースコードスナップショットZIP（`Folimeld-source-e550bf65ec95b968ddce59592f3ef4fd9e297a88b9e2b7364413592244a14e8a.zip`）の確定と関連付け、FreeBSD（`0.3.5_1`）・NetBSD（`0.3.5`）・OpenBSD（`0.3.5`）のバージョン解決および依存ソース整合性テスト（`tests/test_bsd_packages.py`、`tests/test_freebsd_package.py`）を追加して全件パスを確認。WSL2環境にてUbuntu 24.04 amd64 DEBパッケージ（`folimeld_0.3.5_amd64.deb`、SHA-256: `5b64a696b69cdb7c9fada6e13cd100dd35d76470ecad1408800ee558c4362174`）をビルドし、Ubuntu 24.04 および Debian 13.6（Trixie）環境下にてoffscreen GUI初期化・PyMuPDF読み込み・実行ファイルの整合性を検証。日英の更新・ビルド手順書（`documentation/bsd-035-release-plan_ja.md`、`bsd-035-release-plan.md`）を整備。
 
 - Microsoft Store次期リリース（Submission 2 / パッケージ版 1.0.2.0）に向けて、Windows 11 ARM64ネイティブ対応の追加計画、PyInstaller spec（`Folimeld.spec`）のUPX無効化、日英のストア掲載文（新機能欄）および公開計画文書を整備。x64 および ARM64 実機環境にてStore向けネイティブMSIXパッケージ（`Folimeld_1.0.2.0_x64.msix`、`Folimeld_1.0.2.0_arm64.msix`）をビルドし、静的検査（`msix_preflight` 合格）およびソースバンドル関連付けを完了して公開計画書（`windows-store-release-plan_ja.md`）および受入試験表（`windows-store-acceptance_ja.md`）へ確定パッケージ情報を記録。2026年11月16日にPartner Center（Submission 2）へ審査提出を完了。無料アプリのみとして応援購入（アドオン）は無効を維持。

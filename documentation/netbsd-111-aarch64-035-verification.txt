@@ -1,0 +1,11 @@
+OS: NetBSD 11.1 GENERIC64 evbarm/aarch64
+Python: 3.12.14
+Qt / PySide: 6.11.2
+PyMuPDF: 1.28.2
+Package: folimeld-0.3.5.tgz (SHA-256: 18b76da9158fb760bca7b134d193d5f3083dbf47eecf45cbe27ef3e64f7b6c00)
+
+Verification:
+- Clean package build with tools/build_netbsd_package.py
+- Package installation with `/usr/pkg/sbin/pkg_add -u folimeld-0.3.5.tgz`
+- GUI launch and offscreen execution verified (Folimeld version 0.3.5)
+- Sponsors menu action verified active
