@@ -14,6 +14,53 @@ PyInstaller onedir plus Inno Setup requires no user-installed Python, uv or Powe
 - Sponsors guidance requires an active Desktop profile; Store remains excluded.
 - Hold Local\Folimeld-Desktop mutex during regular launch. Inno checks the same mutex to prevent updating/removing a running app, without forcibly terminating workers.
 
+## User installation and launch guide
+
+Instructions for the per-user installer [Folimeld 0.3.5.0 Windows x64 Desktop preview](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1), requiring no pre-installed Python, uv, or PowerShell.
+
+### 1. Prerequisites
+
+- **Target OS**: Windows 11 x64 (x86_64). For ARM64 devices, see the dedicated ARM64 installer.
+- **Required tools / runtime**: Pre-installing Python, uv, or PowerShell is **not required**. The required Python 3.12.16 runtime, PyQt6, runtime dependencies, and Microsoft VC++ Runtime (CRT) are bundled inside.
+- **Privileges**: Runs under standard user privileges (administrator elevation / UAC is not required).
+- **Internet access**: Not required during installation; the installer is self-contained for offline installation.
+
+### 2. Files from GitHub
+
+Download the installer from GitHub Releases [windows-desktop-v0.3.5.0-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) (typically saved to `$HOME\Downloads`):
+
+- [**Folimeld-Desktop-0.3.5.0-x64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-x64-setup.exe) (~47.9 MB, SHA-256: `ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3`)
+
+### 3. SHA-256 verification and installation steps
+
+1. **SHA-256 verification**:
+   Open PowerShell in your download folder and verify the checksum:
+   ```powershell
+   $ErrorActionPreference = 'Stop'
+   Set-Location -LiteralPath (Join-Path $HOME 'Downloads')
+   $expected = 'ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3'
+   if ((Get-FileHash -LiteralPath .\Folimeld-Desktop-0.3.5.0-x64-setup.exe -Algorithm SHA256).Hash -ne $expected) {
+       throw 'Installer SHA-256 mismatch. Stop without running it.'
+   }
+   ```
+2. **Launch the installer**:
+   Run `Folimeld-Desktop-0.3.5.0-x64-setup.exe`. If Windows SmartScreen displays a warning ("Windows protected your PC") for this unsigned preview, click "**More info**" and select "**Run anyway**".
+3. **Setup wizard steps**:
+   - **License agreement**: The displayed English license terms apply solely to the bundled Microsoft Visual C++ Runtime (`14.44.35211.0`). Select "I accept the agreement" and click "Next".
+   - **Destination**: Installs per-user without elevation to `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0`. Click "Next" to accept the default.
+   - **Additional tasks**: Optionally select "Create a desktop shortcut" and click "Install" to complete setup (the app does not automatically launch upon exit).
+
+### 4. Launch and data storage
+
+- **How to launch**: In the Start Menu, open the "**Folimeld Desktop**" group and click "**Folimeld Desktop**".
+- **Settings and log location**:
+  - Settings: `%LOCALAPPDATA%\Folimeld-Desktop\settings\settings.ini`
+  - Logs: `%LOCALAPPDATA%\Folimeld-Desktop\logs\<version>\<launch-id>\folimeld.log`
+  - Completely isolated from Store, source + uv, and uv tool editions.
+- **Single-instance protection and uninstallation**:
+  - Holds the `Local\Folimeld-Desktop` mutex while running to safely prevent duplicate launches and running updates/uninstalls.
+  - To uninstall, use Windows "Settings" -> "Installed apps" -> "Folimeld Desktop" -> "Uninstall". App binaries and shortcuts are removed while user settings and logs are preserved.
+
 ## onedir prerequisites
 
 Use a dedicated CPython3.12.16 environment. Validate the fourteen runtime versions from packaging/windows/desktop-runtime.json; uv itself is not used for installation or runtime.

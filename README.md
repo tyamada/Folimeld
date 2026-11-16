@@ -240,15 +240,52 @@ folimeld-console
 [**Folimeld 0.3.5.0 Windows x64 Desktop preview**](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) is available as a per-user installer that requires no pre-installed Python, uv, or PowerShell. The Microsoft Store edition remains the standard Windows distribution channel, and this edition keeps its install directory, settings, logs, and mutex strictly separate from the Store, source + uv, and `uv tool install` editions. See the [Desktop build specification and verification record](documentation/windows-desktop-build.md) and [per-version source guide](documentation/windows-desktop-sources.md) for details.
 
 - [Setup EXE](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-x64-setup.exe) · [Matching source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-0.3.5.0-windows-x64-desktop-source.zip) · [Payload ledger](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/payload-review.json) · [Internal source manifest](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/source-manifest.json) · [Source commit association](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/SOURCE-ASSOCIATION.txt) · [Third-party notices](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/THIRD-PARTY-NOTICES.txt) · [Dependency sources ledger](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/DEPENDENCY-SOURCES.json) · [CRT user notice](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/CRT-USER-NOTICE.txt) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/SHA256SUMS.txt)
-- Installs per-user without elevation under `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0` and stores settings and logs under `%LOCALAPPDATA%\Folimeld-Desktop` (preserved across uninstallation). Uses the `Local\Folimeld-Desktop` mutex to prevent duplicate launches and updates/uninstalls while running.
-- This test candidate is unsigned and may trigger Windows SmartScreen prompts. Do not disable system protections globally; verify that the installer was downloaded over HTTPS from the official Release and matches the SHA-256 checksum below before running. The English license terms shown during setup apply solely to the bundled Microsoft Visual C++ Runtime (`14.44.35211.0`); Folimeld (`AGPL-3.0`) and other open-source components retain their own licenses.
 
-```powershell
-$ErrorActionPreference = 'Stop'
-if ((Get-FileHash -LiteralPath .\Folimeld-Desktop-0.3.5.0-x64-setup.exe -Algorithm SHA256).Hash -ne 'ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3') {
-    throw 'Installer SHA-256 mismatch. Stop without running it.'
-}
-```
+#### 1. Prerequisites
+
+- **Target OS**: Windows 11 x64 (x86_64). For ARM64 devices, see the dedicated ARM64 installer below.
+- **Required tools / runtime**:
+  - Pre-installing Python, uv, or PowerShell is **not required**. The required Python 3.12.16 runtime, PyQt6, runtime dependencies, and Microsoft VC++ Runtime (CRT) are bundled inside (onedir format).
+- **Privileges**: Runs under standard user privileges (administrator elevation / UAC is not required).
+- **Internet access**: Not required during installation; the installer package is fully self-contained for offline installation.
+
+#### 2. Files from GitHub
+
+Download the installer from GitHub Releases [windows-desktop-v0.3.5.0-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) (typically saved to `$HOME\Downloads`):
+
+- [**Folimeld-Desktop-0.3.5.0-x64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-x64-setup.exe) (~47.9 MB, SHA-256: `ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3`)
+
+#### 3. SHA-256 verification and installation steps
+
+1. **SHA-256 verification**:
+   Open PowerShell in your download folder and verify the checksum. If it does not match, discard the file without running it.
+   ```powershell
+   $ErrorActionPreference = 'Stop'
+   Set-Location -LiteralPath (Join-Path $HOME 'Downloads')
+   $expected = 'ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3'
+   if ((Get-FileHash -LiteralPath .\Folimeld-Desktop-0.3.5.0-x64-setup.exe -Algorithm SHA256).Hash -ne $expected) {
+       throw 'Installer SHA-256 mismatch. Stop without running it.'
+   }
+   ```
+2. **Launch the installer**:
+   Run `Folimeld-Desktop-0.3.5.0-x64-setup.exe`. If Windows SmartScreen displays a warning ("Windows protected your PC") for this unsigned preview, click "**More info**" and select "**Run anyway**".
+3. **Setup wizard steps**:
+   - **License agreement**: The displayed English license terms apply solely to the bundled Microsoft Visual C++ Runtime (`14.44.35211.0`). Select "I accept the agreement" and click "Next" (Folimeld itself is licensed under AGPL-3.0, and open-source notices are stored under `_internal\licenses\`).
+   - **Destination**: Installs per-user without elevation to `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0`. Click "Next" to accept the default.
+   - **Additional tasks**: Optionally select "Create a desktop shortcut" and click "Install" to complete setup (the app does not automatically launch upon exit).
+
+#### 4. Launch and data storage
+
+- **How to launch**:
+  - In the Start Menu, open the "**Folimeld Desktop**" group and click "**Folimeld Desktop**" (or use the desktop shortcut if created).
+  - Executable path: `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0\FolimeldDesktop.exe`
+- **Settings and log location**:
+  - Settings: `%LOCALAPPDATA%\Folimeld-Desktop\settings\settings.ini`
+  - Logs: `%LOCALAPPDATA%\Folimeld-Desktop\logs\<version>\<launch-id>\folimeld.log`
+  - Completely isolated from Store, source + uv, and uv tool editions.
+- **Single-instance protection and uninstallation**:
+  - Holds the `Local\Folimeld-Desktop` mutex while running to safely prevent duplicate launches and running updates/uninstalls.
+  - To uninstall, use Windows "Settings" -> "Installed apps" -> "Folimeld Desktop" -> "Uninstall". App binaries and shortcuts are removed while user settings and logs are preserved.
 
 ### Windows 11 ARM64 Previews (Copilot+ PCs / Snapdragon X Elite)
 

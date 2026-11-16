@@ -14,6 +14,53 @@ Python/uv/PowerShellを利用者へ要求しないPyInstaller onedir＋Inno Setu
 - SponsorsはDesktop専用プロファイルが有効な場合に表示。Storeでは非表示を維持。
 - Local\Folimeld-Desktop mutexを通常起動の存続中に保持。Inno Setupは同じmutexを確認し、実行中の更新・削除を拒否します。ワーカーを強制終了しません。
 
+## 利用者向け導入・起動手順
+
+Python・uv・PowerShellの事前導入を不要としたユーザー単位インストーラー [Folimeld 0.3.5.0 Windows x64 Desktop プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) の手順です。
+
+### 1. 事前準備
+
+- **対象OS**: Windows 11 x64（x86_64）※ARM64機向けには専用のARM64インストーラーを使用します。
+- **必要なツール・ランタイム**: Python、uv、PowerShellの事前インストールは**不要**です。必要なPython 3.12.16ランタイム、PyQt6、依存ライブラリ、Microsoft VC++ Runtime（CRT）がすべて内包されています。
+- **実行権限**: 通常ユーザー権限で動作します（管理者権限・UAC昇格は不要）。
+- **インターネット接続**: インストーラー内に全ファイルが含まれるため、インストール作業はオフラインでも実行可能です。
+
+### 2. GitHubから入手するファイル
+
+GitHub Releases の [windows-desktop-v0.3.5.0-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) から次のインストーラーをダウンロードします（例: `$HOME\Downloads`）。
+
+- [**Folimeld-Desktop-0.3.5.0-x64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-x64-setup.exe)（約47.9 MB、SHA-256: `ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3`）
+
+### 3. SHA-256照合とインストール手順
+
+1. **SHA-256照合**:
+   ダウンロードしたフォルダーでPowerShellを開き、ハッシュを照合します。
+   ```powershell
+   $ErrorActionPreference = 'Stop'
+   Set-Location -LiteralPath (Join-Path $HOME 'Downloads')
+   $expected = 'ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3'
+   if ((Get-FileHash -LiteralPath .\Folimeld-Desktop-0.3.5.0-x64-setup.exe -Algorithm SHA256).Hash -ne $expected) {
+       throw 'Installer SHA-256 mismatch. Stop without running it.'
+   }
+   ```
+2. **インストーラーの実行**:
+   `Folimeld-Desktop-0.3.5.0-x64-setup.exe` を実行します。未署名試験版のため Windows SmartScreen の警告（「Windows によって PC が保護されました」）が表示された場合は、「**詳細情報**」をクリックして「**実行**」を選択してください。
+3. **ウィザードの進行**:
+   - **同意画面**: 表示される英語原文ライセンスは同梱の Microsoft Visual C++ Runtime（`14.44.35211.0`）のみに適用されます。「同意する」を選択して「次へ」をクリックします。
+   - **インストール先**: 既定では管理者不要の `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0` へ導入されます。通常はそのまま「次へ」をクリックします。
+   - **追加タスク**: 必要に応じてデスクトップショートカット作成を選択し、「インストール」をクリックして完了させます（終了時の自動起動はしません）。
+
+### 4. 起動とデータ保存先
+
+- **起動方法**: スタートメニューの「**Folimeld Desktop**」グループ内の「**Folimeld Desktop**」ショートカットをクリックして起動します。
+- **設定・ログの保存先**:
+  - 設定: `%LOCALAPPDATA%\Folimeld-Desktop\settings\settings.ini`
+  - ログ: `%LOCALAPPDATA%\Folimeld-Desktop\logs\<版>\<起動ID>\folimeld.log`
+  - Store版・ソース＋uv版・uv tool版とは完全に分離されています。
+- **多重起動とアンインストール**:
+  - アプリ実行中は `Local\Folimeld-Desktop` Mutex を保持し、多重起動や実行中の更新・アンインストールを安全に防止します。
+  - アンインストールはWindows「設定」→「インストールされているアプリ」から実行します。アプリ本体ファイルとショートカットが削除され、設定やログは保持されます。
+
 ## onedir候補の前提
 
 専用Python3.12.16環境を使用。ランタイム依存版はpackaging/windows/desktop-runtime.jsonの14件と同じ値を検査しますが、uv自体は導入にも実行にも使いません。

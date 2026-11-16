@@ -240,15 +240,52 @@ folimeld-console
 Python・uv・PowerShellの事前導入を不要としたユーザー単位インストーラー [**Folimeld 0.3.5.0 Windows x64 Desktop プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) を試験公開しています。Microsoft Store配布は引き続き標準のWindows配布経路として維持し、Store版・ソース＋uv版・`uv tool install`版とは導入先・設定・ログ・Mutexを分離しています。詳細は[Desktop版仕様・検証記録](documentation/windows-desktop-build_ja.md)と[版別ソース案内](documentation/windows-desktop-sources_ja.md)を参照してください。
 
 - [Setup EXE](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-x64-setup.exe) · [対応ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-0.3.5.0-windows-x64-desktop-source.zip) · [ペイロード台帳](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/payload-review.json) · [内部ソース台帳](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/source-manifest.json) · [コミット対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/SOURCE-ASSOCIATION.txt) · [第三者告知](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/THIRD-PARTY-NOTICES.txt) · [依存ソース台帳](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/DEPENDENCY-SOURCES.json) · [CRT利用者告知](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/CRT-USER-NOTICE_ja.txt) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/SHA256SUMS.txt)
-- 管理者権限不要で `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0` へ導入され、設定とログは `%LOCALAPPDATA%\Folimeld-Desktop` へ保存します（アンインストール時も設定・ログは保持）。多重起動および実行中の更新・削除防止には `Local\Folimeld-Desktop` Mutex を使用します。
-- この試験候補は未署名のため、実行時に Windows SmartScreen 等の警告が表示される場合があります。保護機能を一括無効化せず、公式 Release の HTTPS URL から取得したことと、下記の SHA-256 ハッシュが一致することを必ず照合してから実行してください。インストーラーの同意画面に表示される英語原文ライセンスは同梱の Microsoft Visual C++ Runtime（`14.44.35211.0`）のみに適用され、Folimeld 本体（AGPL-3.0）および他の OSS コンポーネントにはそれぞれのライセンスが適用されます。
 
-```powershell
-$ErrorActionPreference = 'Stop'
-if ((Get-FileHash -LiteralPath .\Folimeld-Desktop-0.3.5.0-x64-setup.exe -Algorithm SHA256).Hash -ne 'ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3') {
-    throw 'Installer SHA-256 mismatch. Stop without running it.'
-}
-```
+#### 1. 事前準備
+
+- **対象OS**: Windows 11 x64（x86_64）※ARM64機向けには後述のARM64専用インストーラーを使用します。
+- **必要なツール・ランタイム**:
+  - Python、uv、PowerShellの事前インストールは**不要**です。必要なPython 3.12.16ランタイム、PyQt6、依存ライブラリ、Microsoft VC++ Runtime（CRT）がすべて内包（onedir形式）されています。
+- **実行権限**: 通常ユーザー権限で動作します（管理者権限・UAC昇格は不要）。
+- **インターネット接続**: インストーラー内に全ファイルが含まれるため、インストール作業はオフラインでも実行可能です。
+
+#### 2. GitHubから入手するファイル
+
+GitHub Releases の [windows-desktop-v0.3.5.0-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) から次のインストーラーをダウンロードします（例: `$HOME\Downloads`）。
+
+- [**Folimeld-Desktop-0.3.5.0-x64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-x64-setup.exe)（約47.9 MB、SHA-256: `ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3`）
+
+#### 3. SHA-256照合とインストール手順
+
+1. **SHA-256照合**:
+   ダウンロードしたフォルダーでPowerShellを開き、ハッシュを照合します。不一致の場合は実行せず破棄してください。
+   ```powershell
+   $ErrorActionPreference = 'Stop'
+   Set-Location -LiteralPath (Join-Path $HOME 'Downloads')
+   $expected = 'ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3'
+   if ((Get-FileHash -LiteralPath .\Folimeld-Desktop-0.3.5.0-x64-setup.exe -Algorithm SHA256).Hash -ne $expected) {
+       throw 'Installer SHA-256 mismatch. Stop without running it.'
+   }
+   ```
+2. **インストーラーの実行**:
+   `Folimeld-Desktop-0.3.5.0-x64-setup.exe` を実行します。未署名試験版のため Windows SmartScreen の警告（「Windows によって PC が保護されました」）が表示された場合は、「**詳細情報**」をクリックして「**実行**」を選択してください。
+3. **ウィザードの進行**:
+   - **同意画面**: 表示される英語原文ライセンスは同梱の Microsoft Visual C++ Runtime（`14.44.35211.0`）のみに適用されます。「同意する」を選択して「次へ」をクリックします（Folimeld本体はAGPL-3.0、各OSSの告知は導入後の `_internal\licenses\` に収録）。
+   - **インストール先**: 既定では管理者不要の `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0` へ導入されます。通常はそのまま「次へ」をクリックします。
+   - **追加タスク**: 必要に応じてデスクトップショートカット作成を選択し、「インストール」をクリックして完了させます（終了時の自動起動はしません）。
+
+#### 4. 起動とデータ保存先
+
+- **起動方法**:
+  - スタートメニューの「**Folimeld Desktop**」グループ内の「**Folimeld Desktop**」ショートカットをクリックして起動します（デスクトップショートカットを作成した場合はそちらからも起動可能）。
+  - 実体バイナリ: `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0\FolimeldDesktop.exe`
+- **設定・ログの保存先**:
+  - 設定: `%LOCALAPPDATA%\Folimeld-Desktop\settings\settings.ini`
+  - ログ: `%LOCALAPPDATA%\Folimeld-Desktop\logs\<版>\<起動ID>\folimeld.log`
+  - Store版・ソース＋uv版・uv tool版とは完全に分離されています。
+- **多重起動とアンインストール**:
+  - アプリ実行中は `Local\Folimeld-Desktop` Mutex を保持し、多重起動や実行中の更新・アンインストールを安全に防止します。
+  - アンインストールはWindows「設定」→「インストールされているアプリ」から実行します。アプリ本体ファイルとショートカットが削除され、設定やログは保持されます。
 
 ### Windows 11 ARM64 向けプレビュー（Copilot+ PC / Snapdragon X Elite）
 
