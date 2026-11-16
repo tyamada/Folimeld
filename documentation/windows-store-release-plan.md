@@ -61,7 +61,7 @@ Plan for the next update (Submission 2) adding native Windows 11 ARM64 support (
   - Batch PDF creation from image folders (PNG, JPEG, TIFF, BMP, WebP).
 - **Package assets (built and preflight verified)**:
   - `dist/Folimeld_1.0.2.0_x64.msix` (~76.4 MB, SHA-256: `86E1617340093A4F0BC2DDFBCCC15FA5A0B97E3DE5ED229A93415B54F391C421`, PE Machine `0x8664`, preflight passed)
-  - `dist/Folimeld_1.0.2.0_arm64.msix` (~62.9 MB, SHA-256: `3BBB94BC7E186533030933DC9F8E99258EACEDC5EBC23149CFF295AA454515AC`, PE Machine `0xAA64`, preflight passed)
+  - `dist/Folimeld_1.0.2.0_arm64.msix` (~62.9 MB, SHA-256: `6BC0890A56E9AD028F91770167EBE7C3DDE2BD187CD0628BB9914D03B6A516CE`, PE Machine `0xAA64`, preflight passed)
   - Uploaded simultaneously in Partner Center Submission 2 Packages step for automatic architecture-specific distribution.
 - **Build and preflight commands**:
   ```powershell
