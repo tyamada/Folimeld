@@ -25,16 +25,24 @@ Windows 11 x64およびWindows 11 ARM64（Surface Pro 11等のCopilot+ PC）を�
 
 ## 導入・起動契約
 
-以下は利用者向けの導入手順。PowerShell 7.2以降とWindows標準のtarが必要。
-開発PCの隔離環境で行った導入確認は別の確認記録に残し、実機GUI受入とは区別する。
+以下は利用者向けの導入手順です。Windows 11 x64のみを対象とし、管理者権限、PATH変更、実行ポリシー変更、Store登録変更は行いません。
 
-ソースZIP全体のSHA-256を公開台帳と照合し、新しい専用フォルダーへ展開してから実行する。
+### 1. 事前準備
 
-```powershell
-pwsh -NoProfile -File .\install_uv.ps1
-```
+- **対象OS**: Windows 11 x64（x86_64）※ARM64は対象外です。
+- **必要なツール**:
+  - **PowerShell 7.2 以降 (`pwsh`)**: Windows標準の Windows PowerShell 5.1 ではなく、PowerShell 7 を使用します。
+  - **tar.exe**: Windows標準ツール（`C:\Windows\System32\tar.exe`。通常は標準搭載）。
+- **インターネット接続**: インストールスクリプト実行時に固定CPython 3.12.16、uv 0.13.8、および依存14件を取得します。
+- **権限**: 通常ユーザー権限で実行します。Python本体やuvの事前手動インストールは不要です。
 
-#### 公開ZIPの照合と未署名スクリプトのブロック解除
+### 2. GitHubから入手するファイル
+
+GitHub Releases の [windows-uv-v0.3.5-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) から次のファイルをダウンロードします（例: `$HOME\Downloads`）。
+
+- [**Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip)（SHA-256: `8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA`）
+
+### 3. 展開場所とインストール（SHA-256照合・ブロック解除）
 
 この手順は公開済みのx64プレビュー`windows-uv-v0.3.5-preview.1`専用です。他のZIPにこの期待ハッシュを流用しないでください。
 通常権限のPowerShell 7.2以降で実行します。ZIPをDownloadsへ保存した場合の例です。保存先が異なる場合は`$zip`を変更してください。
@@ -74,7 +82,11 @@ SHA-256不一致では展開・実行せず停止します。照合したZIPを�
 
 この操作はダウンロード元情報によるブロックを外すもので、デジタル署名を付ける操作ではありません。`RemoteSigned`でダウンロード由来の未署名スクリプトが拒否されている場合の対処です。`AllSigned`・`Restricted`・組織ポリシーなどでは引き続き拒否されることがあります。その場合は`Get-ExecutionPolicy -List`の結果とエラー全文を保存して確認してください。`Set-ExecutionPolicy`や`-ExecutionPolicy Bypass`は使用せず、PC全体・ユーザー・プロセスの実行ポリシーは変更しません。
 
-導入後は`install_uv.ps1`と同じフォルダーに作成される「Folimeld UV」ショートカットから起動します。`main.py`は直接起動しません。導入後のフォルダーは移動・改名しないでください。
+### 4. 起動とデータ保存先
+
+- **起動方法**: 導入後は`install_uv.ps1`と同じフォルダーに作成される「**Folimeld UV**」ショートカットから起動します。詳細ログ付きの起動には「**Folimeld UV diagnostics**」を使用します。
+- **設定・ログの保存先**: `%LOCALAPPDATA%\Folimeld-UV` へ保存され、Store版・Desktop版・uv tool版と分離されます。
+- **注意点**: `main.py` は直接起動しません。仮想環境内のパスが固定されるため、導入後のフォルダーは移動・改名しないでください。
 
 `install_uv.ps1`は固定URLからuvとPythonを取得・ハッシュ照合し、ソースフォルダー内の
 `.uv-runtime`と`.venv`にだけ展開・導入する。専用の`uv pip check`とランチャー事前検査後、

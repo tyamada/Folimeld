@@ -92,10 +92,24 @@ The standard Windows 11 distribution channel is Microsoft Store. See the [develo
 
 - [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip) · [Internal manifest](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/source-manifest.json) · [Source commit association](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/SOURCE-ASSOCIATION.txt) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/SHA256SUMS.txt)
 - Requires Windows 11 x64, PowerShell 7.2+, Windows-provided tar and Internet access. CPython 3.12.16, uv 0.13.8 and fourteen dependencies are pinned and downloaded during installation.
-- Verify the ZIP's SHA-256, extract it into a fresh dedicated directory and follow the included [uv installation guide](documentation/windows-uv-source.md). Launch the generated Folimeld UV shortcut after installation. Settings and logs are stored under `%LOCALAPPDATA%/Folimeld-UV`.
-- Fresh installation from this published ZIP, PDF display/Save As/reopening, image conversion/saving, all three workers and settings persistence after restart have been verified. Production Store coexistence, cross-version updates/rollback, multiple display scales/monitor transitions and effectiveness against the known crash remain unverified. See the Release notes and included guide for details and licensing information.
+- Fresh installation from this published ZIP, PDF display/Save As/reopening, image conversion/saving, all three workers and settings persistence after restart have been verified. Production Store coexistence, cross-version updates/rollback, multiple display scales/monitor transitions and effectiveness against the known crash remain unverified. See the Release notes and included [uv installation guide](documentation/windows-uv-source.md) for details and licensing information.
 
-#### Verify the published ZIP and unblock the unsigned installer
+#### 1. Prerequisites
+
+- **Target OS**: Windows 11 x64 (x86_64). ARM64 is not supported.
+- **Required tools**:
+  - **PowerShell 7.2 or later (`pwsh`)**: Use PowerShell 7 rather than Windows-bundled Windows PowerShell 5.1 (can be installed via `winget install --id Microsoft.PowerShell -e` if not already installed).
+  - **tar.exe**: Windows-provided utility (`C:\Windows\System32\tar.exe`; standard on Windows 11).
+- **Internet access**: Required during installer execution to download pinned CPython 3.12.16, uv 0.13.8, and fourteen pinned dependencies.
+- **Privileges**: Runs under standard user privileges. Pre-installing Python or uv manually, administrator privileges, PATH modifications, and execution policy changes are not required.
+
+#### 2. Files from GitHub
+
+Download the following archive from GitHub Releases [windows-uv-v0.3.5-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) (typically saved to `$HOME\Downloads`):
+
+- [**Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip) (SHA-256: `8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA`)
+
+#### 3. Extraction and installation (SHA-256 verification and unblocking the unsigned installer)
 
 These instructions apply only to the published x64 preview `windows-uv-v0.3.5-preview.1`. Do not reuse this expected hash for another ZIP.
 Run in non-elevated PowerShell 7.2 or later. The example assumes the ZIP is in Downloads; change `$zip` if needed.
@@ -135,7 +149,11 @@ A hash mismatch stops before extraction or execution. The verified ZIP is extrac
 
 Unblocking removes the downloaded-file restriction; it does not digitally sign the script. This addresses an unsigned downloaded script blocked under `RemoteSigned`. `AllSigned`, `Restricted` or organizational policy may still prevent execution. If blocked, retain the full error and the output of `Get-ExecutionPolicy -List` for review. Do not use `Set-ExecutionPolicy` or `-ExecutionPolicy Bypass`; machine, user and process execution policies remain unchanged.
 
-After installation, launch the generated **Folimeld UV** shortcut beside `install_uv.ps1`. Do not run `main.py` directly or move/rename the installation directory afterward.
+#### 4. Launch and data storage
+
+- **How to launch**: After installation, launch using the generated **Folimeld UV** shortcut beside `install_uv.ps1`. For diagnostic logging, use **Folimeld UV diagnostics**.
+- **Settings and log location**: Stored under `%LOCALAPPDATA%\Folimeld-UV`, isolated from Store, Desktop, and uv tool editions.
+- **Notes**: Do not run `main.py` directly. Do not move or rename the installation directory after installation, as internal virtual environment paths are fixed.
 
 ### Windows 11 x64 `uv tool install` edition (Pure Python Wheel)
 

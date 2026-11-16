@@ -92,10 +92,24 @@ Windows 11版の標準配布経路はMicrosoft Storeです。Store向けMSIXの�
 
 - [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip) · [内部台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/source-manifest.json) · [コミットとの対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/SOURCE-ASSOCIATION.txt) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/SHA256SUMS.txt)
 - Windows 11 x64、PowerShell 7.2以降、Windows標準tar、インターネット接続が必要です。CPython 3.12.16・uv 0.13.8・依存14件を固定し、導入時に取得します。
-- ZIPのSHA-256を照合して新しい専用フォルダーへ展開し、同梱の[uv版手順書](documentation/windows-uv-source_ja.md)に従って導入してください。導入後は作成されるFolimeld UVショートカットから起動します。設定・ログは`%LOCALAPPDATA%/Folimeld-UV`へ保存します。
-- この公開ZIPからの新規導入、PDF表示・別名保存・再読込、画像変換・保存、3ワーカー、再起動後の設定保持を確認済みです。本番Store版との併存、異なる版への更新・旧版復帰、複数倍率・モニター移動、既知クラッシュへの修正効果は未確認です。詳細とライセンス情報はRelease本文と同梱手順書を参照してください。
+- この公開ZIPからの新規導入、PDF表示・別名保存・再読込、画像変換・保存、3ワーカー、再起動後の設定保持を確認済みです。本番Store版との併存、異なる版への更新・旧版復帰、複数倍率・モニター移動、既知クラッシュへの修正効果は未確認です。詳細とライセンス情報はRelease本文と[同梱手順書](documentation/windows-uv-source_ja.md)を参照してください。
 
-#### 公開ZIPの照合と未署名スクリプトのブロック解除
+#### 1. 事前準備
+
+- **対象OS**: Windows 11 x64（x86_64）※ARM64は対象外です。
+- **必要なツール**:
+  - **PowerShell 7.2 以降 (`pwsh`)**: Windows標準の Windows PowerShell 5.1 ではなく、PowerShell 7 を使用します（未導入の場合は `winget install --id Microsoft.PowerShell -e` 等で導入可能）。
+  - **tar.exe**: Windows標準ツール（`C:\Windows\System32\tar.exe`。通常は標準搭載）。
+- **インターネット接続**: インストールスクリプト実行時に固定CPython 3.12.16、uv 0.13.8、および依存14件を取得します。
+- **権限**: 通常ユーザー権限で実行します。Python本体やuvの事前手動インストール、管理者権限、PATH変更、実行ポリシー変更は不要です。
+
+#### 2. GitHubから入手するファイル
+
+GitHub Releases の [windows-uv-v0.3.5-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) から次のファイルをダウンロードします（例: `$HOME\Downloads`）。
+
+- [**Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip)（SHA-256: `8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA`）
+
+#### 3. 展開場所とインストール（SHA-256照合と未署名スクリプトのブロック解除）
 
 この手順は公開済みのx64プレビュー`windows-uv-v0.3.5-preview.1`専用です。他のZIPにこの期待ハッシュを流用しないでください。
 通常権限のPowerShell 7.2以降で実行します。ZIPをDownloadsへ保存した場合の例です。保存先が異なる場合は`$zip`を変更してください。
@@ -135,7 +149,11 @@ SHA-256不一致では展開・実行せず停止します。照合したZIPを�
 
 この操作はダウンロード元情報によるブロックを外すもので、デジタル署名を付ける操作ではありません。`RemoteSigned`でダウンロード由来の未署名スクリプトが拒否されている場合の対処です。`AllSigned`・`Restricted`・組織ポリシーなどでは引き続き拒否されることがあります。その場合は`Get-ExecutionPolicy -List`の結果とエラー全文を保存して確認してください。`Set-ExecutionPolicy`や`-ExecutionPolicy Bypass`は使用せず、PC全体・ユーザー・プロセスの実行ポリシーは変更しません。
 
-導入後は`install_uv.ps1`と同じフォルダーに作成される「Folimeld UV」ショートカットから起動します。`main.py`は直接起動しません。導入後のフォルダーは移動・改名しないでください。
+#### 4. 起動とデータ保存先
+
+- **起動方法**: 導入後は`install_uv.ps1`と同じフォルダーに作成される「**Folimeld UV**」ショートカットから起動します。詳細ログ付きの起動には「**Folimeld UV diagnostics**」を使用します。
+- **設定・ログの保存先**: `%LOCALAPPDATA%\Folimeld-UV` へ保存され、Store版・Desktop版・uv tool版と分離されます。
+- **注意点**: `main.py` は直接起動しません。仮想環境内のパスが固定されるため、導入後のフォルダーは移動・改名しないでください。
 
 ### Windows 11 x64 `uv tool install` 版（Pure Python Wheel）
 
