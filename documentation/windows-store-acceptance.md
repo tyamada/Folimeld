@@ -80,9 +80,9 @@ Acceptance plan for Submission 2 (package version `1.0.2.0`), adding native Wind
 | Package Identity | `TakumaYamada.Folimeld` | `TakumaYamada.Folimeld` |
 | Version | `1.0.2.0` | `1.0.2.0` |
 | Target CPU (PE Machine) | `x64` (`0x8664`) | `arm64` (`0xAA64`) |
-| Package SHA-256 | `E57D690DE5D07EE956DB25A1173F56ED36B81EFD951F1C42DB651252915B7853` | `3BBB94BC7E186533030933DC9F8E99258EACEDC5EBC23149CFF295AA454515AC` |
+| Package SHA-256 | `86E1617340093A4F0BC2DDFBCCC15FA5A0B97E3DE5ED229A93415B54F391C421` | `3BBB94BC7E186533030933DC9F8E99258EACEDC5EBC23149CFF295AA454515AC` |
 | Preflight (`msix_preflight`) | Passed (`build/msix-preflight/store/x64/preflight.json`) | Passed (`build/msix-preflight/store/arm64/preflight.json`) |
-| Source association | `dist/source/Folimeld_1.0.2.0_x64.msix-e57d690de5d07ee956db25a1173f56ed36b81efd951f1c42db651252915b7853.json` | `dist/source/Folimeld_1.0.2.0_arm64.msix-3bbb94bc7e186533030933dc9f8e99258eacedc5ebc23149cff295aa454515ac.json` |
+| Source association | `dist/source/Folimeld_1.0.2.0_x64.msix-86e1617340093a4f0bc2ddfbccc15fa5a0b97e3de5ed229a93415b54f391c421.json` | `dist/source/Folimeld_1.0.2.0_arm64.msix-3bbb94bc7e186533030933dc9f8e99258eacedc5ebc23149cff295aa454515ac.json` |
 
 ### Submission 2 acceptance checklist
 
