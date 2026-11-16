@@ -4,7 +4,7 @@
 
 ## Unreleased
 
-- Prepared next Microsoft Store release plan (Submission 2 / package version 1.0.2.0) with native Windows 11 ARM64 support, disabled UPX in `Folimeld.spec`, and updated bilingual Store listing copy (What's new) and release planning documentation. Added Submission 2 candidate package records and acceptance checklist to MSIX acceptance documentation (`windows-store-acceptance.md`). Maintained free-app-only policy with in-app supporter add-ons kept disabled.
+- Prepared next Microsoft Store release plan (Submission 2 / package version 1.0.2.0) with native Windows 11 ARM64 support, disabled UPX in `Folimeld.spec`, and updated bilingual Store listing copy (What's new) and release planning documentation. Built native Store MSIX package on ARM64 hardware (`Folimeld_1.0.2.0_arm64.msix`, PE Machine `0xAA64`), passed static checks (`msix_preflight`), completed source bundle association, and recorded SHA-256 hash in MSIX acceptance documentation (`windows-store-acceptance.md`). Maintained free-app-only policy with in-app supporter add-ons kept disabled.
 
 - Consolidated and unified the prerequisites, download, installation, and execution guides for all three Windows 11 preview packages (source + uv, `uv tool install`, and Desktop installer) across x86_64 and ARM64 in bilingual READMEs and documentation, with architecture-specific SHA-256 verification and Smart App Control guidance.
 

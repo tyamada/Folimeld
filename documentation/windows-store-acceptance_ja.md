@@ -80,9 +80,9 @@ Windows 11 ARM64 ネイティブ対応および大規模PDF機能強化を含む
 | パッケージ Identity | `TakumaYamada.Folimeld` | `TakumaYamada.Folimeld` |
 | 版番号 | `1.0.2.0` | `1.0.2.0` |
 | 対象CPU (PE Machine) | `x64` (`0x8664`) | `arm64` (`0xAA64`) |
-| パッケージ SHA-256 | `E57D690DE5D07EE956DB25A1173F56ED36B81EFD951F1C42DB651252915B7853` | 未生成（ARM64 実機環境でビルド） |
-| 静的検査 (`msix_preflight`) | 合格 (`build/msix-preflight/store/x64/preflight.json`) | 設定検証合格 (`-ValidateOnly`) |
-| ソースバンドル関連付け | `dist/source/Folimeld_1.0.2.0_x64.msix-e57d690de5d07ee956db25a1173f56ed36b81efd951f1c42db651252915b7853.json` | パッケージ生成時に記録 |
+| パッケージ SHA-256 | `E57D690DE5D07EE956DB25A1173F56ED36B81EFD951F1C42DB651252915B7853` | `3BBB94BC7E186533030933DC9F8E99258EACEDC5EBC23149CFF295AA454515AC` |
+| 静的検査 (`msix_preflight`) | 合格 (`build/msix-preflight/store/x64/preflight.json`) | 合格 (`build/msix-preflight/store/arm64/preflight.json`) |
+| ソースバンドル関連付け | `dist/source/Folimeld_1.0.2.0_x64.msix-e57d690de5d07ee956db25a1173f56ed36b81efd951f1c42db651252915b7853.json` | `dist/source/Folimeld_1.0.2.0_arm64.msix-3bbb94bc7e186533030933dc9f8e99258eacedc5ebc23149cff295aa454515ac.json` |
 
 ### Submission 2 受入確認項目
 
