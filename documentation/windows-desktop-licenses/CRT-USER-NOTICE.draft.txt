@@ -1,0 +1,11 @@
+DRAFT — NOT APPROVED. Use only after the final CRT payload is confirmed.
+
+Microsoft Visual C++ Runtime
+
+This product includes Microsoft Visual C++ Runtime components from Microsoft Corporation. Microsoft Corporation. All rights reserved.
+
+These components are separately subject to the accompanying Microsoft license terms. Folimeld's GNU Affero General Public License (AGPL) does not relicense the Microsoft components.
+
+See the accompanying third-party component list and Microsoft Runtime license terms for the covered files, versions, SHA-256 values and original terms.
+
+This notice does not restrict the rights granted by the respective licenses for Folimeld or other open-source components.

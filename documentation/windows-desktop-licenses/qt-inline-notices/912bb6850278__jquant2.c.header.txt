@@ -1,0 +1,305 @@
+/*
+ * jquant2.c
+ *
+ * This file was part of the Independent JPEG Group's software:
+ * Copyright (C) 1991-1996, Thomas G. Lane.
+ * libjpeg-turbo Modifications:
+ * Copyright (C) 2009, 2014-2015, 2020, 2022-2023, D. R. Commander.
+ * For conditions of distribution and use, see the accompanying README.ijg
+ * file.
+ *
+ * This file contains 2-pass color quantization (color mapping) routines.
+ * These routines provide selection of a custom color map for an image,
+ * followed by mapping of the image to that color map, with optional
+ * Floyd-Steinberg dithering.
+ * It is also possible to use just the second pass to map to an arbitrary
+ * externally-given color map.
+ *
+ * Note: ordered dithering is not supported, since there isn't any fast
+ * way to compute intercolor distances; it's unclear that ordered dither's
+ * fundamental assumptions even hold with an irregularly spaced color map.
+ */
+
+#define JPEG_INTERNALS
+#include "jinclude.h"
+#include "jpeglib.h"
+#include "jsamplecomp.h"
+
+#if defined(QUANT_2PASS_SUPPORTED) && BITS_IN_JSAMPLE != 16
+
+
+/*
+ * This module implements the well-known Heckbert paradigm for color
+ * quantization.  Most of the ideas used here can be traced back to
+ * Heckbert's seminal paper
+ *   Heckbert, Paul.  "Color Image Quantization for Frame Buffer Display",
+ *   Proc. SIGGRAPH '82, Computer Graphics v.16 #3 (July 1982), pp 297-304.
+ *
+ * In the first pass over the image, we accumulate a histogram showing the
+ * usage count of each possible color.  To keep the histogram to a reasonable
+ * size, we reduce the precision of the input; typical practice is to retain
+ * 5 or 6 bits per color, so that 8 or 4 different input values are counted
+ * in the same histogram cell.
+ *
+ * Next, the color-selection step begins with a box representing the whole
+ * color space, and repeatedly splits the "largest" remaining box until we
+ * have as many boxes as desired colors.  Then the mean color in each
+ * remaining box becomes one of the possible output colors.
+ *
+ * The second pass over the image maps each input pixel to the closest output
+ * color (optionally after applying a Floyd-Steinberg dithering correction).
+ * This mapping is logically trivial, but making it go fast enough requires
+ * considerable care.
+ *
+ * Heckbert-style quantizers vary a good deal in their policies for choosing
+ * the "largest" box and deciding where to cut it.  The particular policies
+ * used here have proved out well in experimental comparisons, but better ones
+ * may yet be found.
+ *
+ * In earlier versions of the IJG code, this module quantized in YCbCr color
+ * space, processing the raw upsampled data without a color conversion step.
+ * This allowed the color conversion math to be done only once per colormap
+ * entry, not once per pixel.  However, that optimization precluded other
+ * useful optimizations (such as merging color conversion with upsampling)
+ * and it also interfered with desired capabilities such as quantizing to an
+ * externally-supplied colormap.  We have therefore abandoned that approach.
+ * The present code works in the post-conversion color space, typically RGB.
+ *
+ * To improve the visual quality of the results, we actually work in scaled
+ * RGB space, giving G distances more weight than R, and R in turn more than
+ * B.  To do everything in integer math, we must use integer scale factors.
+ * The 2/3/1 scale factors used here correspond loosely to the relative
+ * weights of the colors in the NTSC grayscale equation.
+ * If you want to use this code to quantize a non-RGB color space, you'll
+ * probably need to change these scale factors.
+ */
+
+#define R_SCALE  2              /* scale R distances by this much */
+#define G_SCALE  3              /* scale G distances by this much */
+#define B_SCALE  1              /* and B by this much */
+
+static const int c_scales[3] = { R_SCALE, G_SCALE, B_SCALE };
+#define C0_SCALE  c_scales[rgb_red[cinfo->out_color_space]]
+#define C1_SCALE  c_scales[rgb_green[cinfo->out_color_space]]
+#define C2_SCALE  c_scales[rgb_blue[cinfo->out_color_space]]
+
+/*
+ * First we have the histogram data structure and routines for creating it.
+ *
+ * The number of bits of precision can be adjusted by changing these symbols.
+ * We recommend keeping 6 bits for G and 5 each for R and B.
+ * If you have plenty of memory and cycles, 6 bits all around gives marginally
+ * better results; if you are short of memory, 5 bits all around will save
+ * some space but degrade the results.
+ * To maintain a fully accurate histogram, we'd need to allocate a "long"
+ * (preferably unsigned long) for each cell.  In practice this is overkill;
+ * we can get by with 16 bits per cell.  Few of the cell counts will overflow,
+ * and clamping those that do overflow to the maximum value will give close-
+ * enough results.  This reduces the recommended histogram size from 256Kb
+ * to 128Kb, which is a useful savings on PC-class machines.
+ * (In the second pass the histogram space is re-used for pixel mapping data;
+ * in that capacity, each cell must be able to store zero to the number of
+ * desired colors.  16 bits/cell is plenty for that too.)
+ * Since the JPEG code is intended to run in small memory model on 80x86
+ * machines, we can't just allocate the histogram in one chunk.  Instead
+ * of a true 3-D array, we use a row of pointers to 2-D arrays.  Each
+ * pointer corresponds to a C0 value (typically 2^5 = 32 pointers) and
+ * each 2-D array has 2^6*2^5 = 2048 or 2^6*2^6 = 4096 entries.
+ */
+
+#define MAXNUMCOLORS  (_MAXJSAMPLE + 1) /* maximum size of colormap */
+
+/* These will do the right thing for either R,G,B or B,G,R color order,
+ * but you may not like the results for other color orders.
+ */
+#define HIST_C0_BITS  5         /* bits of precision in R/B histogram */
+#define HIST_C1_BITS  6         /* bits of precision in G histogram */
+#define HIST_C2_BITS  5         /* bits of precision in B/R histogram */
+
+/* Number of elements along histogram axes. */
+#define HIST_C0_ELEMS  (1 << HIST_C0_BITS)
+#define HIST_C1_ELEMS  (1 << HIST_C1_BITS)
+#define HIST_C2_ELEMS  (1 << HIST_C2_BITS)
+
+/* These are the amounts to shift an input value to get a histogram index. */
+#define C0_SHIFT  (BITS_IN_JSAMPLE - HIST_C0_BITS)
+#define C1_SHIFT  (BITS_IN_JSAMPLE - HIST_C1_BITS)
+#define C2_SHIFT  (BITS_IN_JSAMPLE - HIST_C2_BITS)
+
+
+typedef UINT16 histcell;        /* histogram cell; prefer an unsigned type */
+
+typedef histcell *histptr;      /* for pointers to histogram cells */
+
+typedef histcell hist1d[HIST_C2_ELEMS]; /* typedefs for the array */
+typedef hist1d *hist2d;         /* type for the 2nd-level pointers */
+typedef hist2d *hist3d;         /* type for top-level pointer */
+
+
+/* Declarations for Floyd-Steinberg dithering.
+ *
+ * Errors are accumulated into the array fserrors[], at a resolution of
+ * 1/16th of a pixel count.  The error at a given pixel is propagated
+ * to its not-yet-processed neighbors using the standard F-S fractions,
+ *              ...     (here)  7/16
+ *              3/16    5/16    1/16
+ * We work left-to-right on even rows, right-to-left on odd rows.
+ *
+ * We can get away with a single array (holding one row's worth of errors)
+ * by using it to store the current row's errors at pixel columns not yet
+ * processed, but the next row's errors at columns already processed.  We
+ * need only a few extra variables to hold the errors immediately around the
+ * current column.  (If we are lucky, those variables are in registers, but
+ * even if not, they're probably cheaper to access than array elements are.)
+ *
+ * The fserrors[] array has (#columns + 2) entries; the extra entry at
+ * each end saves us from special-casing the first and last pixels.
+ * Each entry is three values long, one value for each color component.
+ */
+
+#if BITS_IN_JSAMPLE == 8
+typedef INT16 FSERROR;          /* 16 bits should be enough */
+typedef int LOCFSERROR;         /* use 'int' for calculation temps */
+#else
+typedef JLONG FSERROR;          /* may need more than 16 bits */
+typedef JLONG LOCFSERROR;       /* be sure calculation temps are big enough */
+#endif
+
+typedef FSERROR *FSERRPTR;      /* pointer to error array */
+
+
+/* Private subobject */
+
+typedef struct {
+  struct jpeg_color_quantizer pub; /* public fields */
+
+  /* Space for the eventually created colormap is stashed here */
+  _JSAMPARRAY sv_colormap;      /* colormap allocated at init time */
+  int desired;                  /* desired # of colors = size of colormap */
+
+  /* Variables for accumulating image statistics */
+  hist3d histogram;             /* pointer to the histogram */
+
+  boolean needs_zeroed;         /* TRUE if next pass must zero histogram */
+
+  /* Variables for Floyd-Steinberg dithering */
+  FSERRPTR fserrors;            /* accumulated errors */
+  boolean on_odd_row;           /* flag to remember which row we are on */
+  int *error_limiter;           /* table for clamping the applied error */
+} my_cquantizer;
+
+typedef my_cquantizer *my_cquantize_ptr;
+
+
+/*
+ * Prescan some rows of pixels.
+ * In this module the prescan simply updates the histogram, which has been
+ * initialized to zeroes by start_pass.
+ * An output_buf parameter is required by the method signature, but no data
+ * is actually output (in fact the buffer controller is probably passing a
+ * NULL pointer).
+ */
+
+METHODDEF(void)
+prescan_quantize(j_decompress_ptr cinfo, _JSAMPARRAY input_buf,
+                 _JSAMPARRAY output_buf, int num_rows)
+{
+  my_cquantize_ptr cquantize = (my_cquantize_ptr)cinfo->cquantize;
+  register _JSAMPROW ptr;
+  register histptr histp;
+  register hist3d histogram = cquantize->histogram;
+  int row;
+  JDIMENSION col;
+  JDIMENSION width = cinfo->output_width;
+
+  for (row = 0; row < num_rows; row++) {
+    ptr = input_buf[row];
+    for (col = width; col > 0; col--) {
+      /* get pixel value and index into the histogram */
+      histp = &histogram[ptr[0] >> C0_SHIFT]
+                        [ptr[1] >> C1_SHIFT]
+                        [ptr[2] >> C2_SHIFT];
+      /* increment, check for overflow and undo increment if so. */
+      if (++(*histp) <= 0)
+        (*histp)--;
+      ptr += 3;
+    }
+  }
+}
+
+
+/*
+ * Next we have the really interesting routines: selection of a colormap
+ * given the completed histogram.
+ * These routines work with a list of "boxes", each representing a rectangular
+ * subset of the input color space (to histogram precision).
+ */
+
+typedef struct {
+  /* The bounds of the box (inclusive); expressed as histogram indexes */
+  int c0min, c0max;
+  int c1min, c1max;
+  int c2min, c2max;
+  /* The volume (actually 2-norm) of the box */
+  JLONG volume;
+  /* The number of nonzero histogram cells within this box */
+  long colorcount;
+} box;
+
+typedef box *boxptr;
+
+
+LOCAL(boxptr)
+find_biggest_color_pop(boxptr boxlist, int numboxes)
+/* Find the splittable box with the largest color population */
+/* Returns NULL if no splittable boxes remain */
+{
+  register boxptr boxp;
+  register int i;
+  register long maxc = 0;
+  boxptr which = NULL;
+
+  for (i = 0, boxp = boxlist; i < numboxes; i++, boxp++) {
+    if (boxp->colorcount > maxc && boxp->volume > 0) {
+      which = boxp;
+      maxc = boxp->colorcount;
+    }
+  }
+  return which;
+}
+
+
+LOCAL(boxptr)
+find_biggest_volume(boxptr boxlist, int numboxes)
+/* Find the splittable box with the largest (scaled) volume */
+/* Returns NULL if no splittable boxes remain */
+{
+  register boxptr boxp;
+  register int i;
+  register JLONG maxv = 0;
+  boxptr which = NULL;
+
+  for (i = 0, boxp = boxlist; i < numboxes; i++, boxp++) {
+    if (boxp->volume > maxv) {
+      which = boxp;
+      maxv = boxp->volume;
+    }
+  }
+  return which;
+}
+
+
+LOCAL(void)
+update_box(j_decompress_ptr cinfo, boxptr boxp)
+/* Shrink the min/max bounds of a box to enclose only nonzero elements, */
+/* and recompute its volume and population */
+{
+  my_cquantize_ptr cquantize = (my_cquantize_ptr)cinfo->cquantize;
+  hist3d histogram = cquantize->histogram;
+  histptr histp;
+  int c0, c1, c2;
+  int c0min, c0max, c1min, c1max, c2min, c2max;
+  JLONG dist0, dist1, dist2;
+  long ccount;
+
+  

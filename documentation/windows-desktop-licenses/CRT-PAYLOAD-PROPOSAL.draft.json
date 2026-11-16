@@ -1,0 +1,89 @@
+{
+  "status": "PROPOSAL-NOT-IMPLEMENTED",
+  "distribution": "windows-desktop-x64",
+  "version": "14.44.35211.0",
+  "source": "official Visual Studio2022 Desktop x64/Microsoft.VC143.CRT; not onecore/debug",
+  "files": [
+    {
+      "name": "concrt140.dll",
+      "file_version": "14.44.35211.0",
+      "sha256": "2405355f0a58067b258f8df33c327e3a3d716eaac5a3a5aebb757842d85bd376",
+      "bytes": 324208,
+      "approved_for_payload": false,
+      "planned_relative_path": "_internal/concrt140.dll",
+      "static_input_import_count": 2,
+      "role": "static input dependency (not final payload proof)",
+      "adopted": false
+    },
+    {
+      "name": "msvcp140_1.dll",
+      "file_version": "14.44.35211.0",
+      "sha256": "bfad5aef4c63a669e3c140655cdfdf395b6c979b400a447bd5dcb65ed8826c3d",
+      "bytes": 35952,
+      "approved_for_payload": false,
+      "planned_relative_path": "_internal/msvcp140_1.dll",
+      "static_input_import_count": 3,
+      "role": "static input dependency (not final payload proof)",
+      "adopted": false
+    },
+    {
+      "name": "msvcp140_2.dll",
+      "file_version": "14.44.35211.0",
+      "sha256": "3ea06f0ee098b4823cb79599df3780e7f23cce52c19aac31d2a0d47efe33a5e9",
+      "bytes": 280200,
+      "approved_for_payload": false,
+      "planned_relative_path": "_internal/msvcp140_2.dll",
+      "static_input_import_count": 1,
+      "role": "static input dependency (not final payload proof)",
+      "adopted": false
+    },
+    {
+      "name": "msvcp140_codecvt_ids.dll",
+      "file_version": "14.44.35211.0",
+      "sha256": "f2069a52880ec885ee7f0511186100eb7fada0411a2b4948fafea7735b878a18",
+      "bytes": 31872,
+      "approved_for_payload": false,
+      "planned_relative_path": "_internal/msvcp140_codecvt_ids.dll",
+      "static_input_import_count": 0,
+      "role": "conservative-set; no static import observed",
+      "adopted": false
+    },
+    {
+      "name": "msvcp140.dll",
+      "file_version": "14.44.35211.0",
+      "sha256": "0f885b509a685d2bbfa652fed26b5fb31d88fbdab0a978c641d1c7b8aa460aa9",
+      "bytes": 557728,
+      "approved_for_payload": false,
+      "planned_relative_path": "_internal/msvcp140.dll",
+      "static_input_import_count": 31,
+      "role": "static input dependency (not final payload proof)",
+      "adopted": false
+    },
+    {
+      "name": "vcruntime140_1.dll",
+      "file_version": "14.44.35211.0",
+      "sha256": "1f2d41c4aa5db0bc33ebf7b66d72943a817d7ce6cbe880502a9403823633093f",
+      "bytes": 49792,
+      "approved_for_payload": false,
+      "planned_relative_path": "_internal/vcruntime140_1.dll",
+      "static_input_import_count": 30,
+      "role": "static input dependency (not final payload proof)",
+      "adopted": false
+    },
+    {
+      "name": "vcruntime140.dll",
+      "file_version": "14.44.35211.0",
+      "sha256": "d5e4d9a3e835fa679450145d6a7d94e36573a509317111904d9b3712c30d9066",
+      "bytes": 124544,
+      "approved_for_payload": false,
+      "planned_relative_path": "_internal/vcruntime140.dll",
+      "static_input_import_count": 109,
+      "role": "static input dependency (not final payload proof)",
+      "adopted": false
+    }
+  ],
+  "additional_crt_files": "reject pending explicit review",
+  "root_copies": "none proposed; revisit if verified bootloader changes",
+  "nested_duplicates": "remove from proposed TOC only after dedicated implementation; no current file deletion",
+  "actual_dll_load_verified": false
+}

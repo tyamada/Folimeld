@@ -1,0 +1,1927 @@
+{
+  "status": "PREBUILD-DRAFT-NOT-APPROVED",
+  "source_archives": [
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/sources/cffi-2.1.1.tar.gz",
+      "sha256": "dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be",
+      "bytes": 530807,
+      "url": "https://files.pythonhosted.org/packages/9e/ef/008a1939e372c06329a3fce4279c02f328488f3526744906eeec3da7ad5f/cffi-2.1.1.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/sources/cryptography-50.0.2.tar.gz",
+      "sha256": "7b46165bb56eb4704e2eaaf86f3c940d19154535d9b0ca7d6d590b04060e00d5",
+      "bytes": 880623,
+      "url": "https://files.pythonhosted.org/packages/9d/af/182eb91b0df3fe75c4d9f26fe70684569566745f6ba7e5c9c73a862c5252/cryptography-50.0.2.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/sources/pillow-12.3.0.tar.gz",
+      "sha256": "3b8182a766685eaa002637e28b4ec8d6b18819a0c71f579bf0dbaa5830297cce",
+      "bytes": 47025035,
+      "url": "https://files.pythonhosted.org/packages/1c/3d/bb7fca845737cf9d7dbde16ed1843984665ff2e0a518f5db43e77ec540b9/pillow-12.3.0.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/sources/pycparser-3.12.tar.gz",
+      "sha256": "f03387877eab82ce01bbdfd0ba7252ee55a90b1c708d5129e2ce915475cf1db6",
+      "bytes": 158785,
+      "url": "https://files.pythonhosted.org/packages/cb/27/eeb9f307bf07060f3d9f9aa0fb8c15b01bdfded0a941e4b2719c7f94cacd/pycparser-3.12.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/sources/pymupdf-1.28.2.tar.gz",
+      "sha256": "5e0be7908a715aa20333caddd73f1d6f01e4cd0c26e869fa2dd0b7f344da2249",
+      "bytes": 87903557,
+      "url": "https://files.pythonhosted.org/packages/a3/fb/b6761fa2d5266f2cdb24c3b91f4023070ab7848381417678e7a289a1d52a/pymupdf-1.28.2.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/sources/typing_extensions-4.16.0.tar.gz",
+      "sha256": "dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5",
+      "bytes": 113555,
+      "url": "https://files.pythonhosted.org/packages/f6/cc/6253133b5bb138fc3306cebfbda2c520f545d36b5be2c7255cc528bb45d6/typing_extensions-4.16.0.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/sources/winrt_runtime-3.2.1.tar.gz",
+      "sha256": "c8dca19e12b234ae6c3dadf1a4d0761b51e708457492c13beb666556958801ea",
+      "bytes": 21721,
+      "url": "https://files.pythonhosted.org/packages/16/dd/acdd527c1d890c8f852cc2af644aa6c160974e66631289420aa871b05e65/winrt_runtime-3.2.1.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/sources/winrt_windows_foundation-3.2.1.tar.gz",
+      "sha256": "ad2f1fcaa6c34672df45527d7c533731fdf65b67c4638c2b4aca949f6eec0656",
+      "bytes": 30485,
+      "url": "https://files.pythonhosted.org/packages/0c/55/098ce7ea0679efcc1298b269c48768f010b6c68f90c588f654ec874c8a74/winrt_windows_foundation-3.2.1.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/sources/winrt_windows_foundation_collections-3.2.1.tar.gz",
+      "sha256": "0eff1ad0d8d763ad17e9e7bbd0c26a62b27215016393c05b09b046d6503ae6d5",
+      "bytes": 16043,
+      "url": "https://files.pythonhosted.org/packages/ef/62/d21e3f1eeb8d47077887bbf0c3882c49277a84d8f98f7c12bda64d498a07/winrt_windows_foundation_collections-3.2.1.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/sources/winrt_windows_services_store-3.2.1.tar.gz",
+      "sha256": "eb04f60cc736d94324f2b9adba65a3030aa29150a2419232fa01b7cba15be2b0",
+      "bytes": 26864,
+      "url": "https://files.pythonhosted.org/packages/e2/3f/26b5fc590183eb2e8da811ab26345a50e2d9393c621613b91a30346a3d99/winrt_windows_services_store-3.2.1.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/sources/pyinstaller-6.22.2.tar.gz",
+      "sha256": "89b65a3ad07d9dd5832253e37bc45f31872d10d7f9d5c9fd0fdd6088a83829dd",
+      "bytes": 4092631,
+      "url": "https://files.pythonhosted.org/packages/cc/2b/836d9def811c02522e0921d8b8cdf0c16b0545a216e97e71041758057859/pyinstaller-6.22.2.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/sources/pyinstaller_hooks_contrib-2026.7.tar.gz",
+      "sha256": "5fbcaacb22c4f4aac869a127dce283f67a4b4cfcc37d496f2446603e6d68aefa",
+      "bytes": 175992,
+      "url": "https://files.pythonhosted.org/packages/26/60/d881fa1ba8c160c18d8e6f782bb16ec4640c08bc08fc50f704c368ad4f9e/pyinstaller_hooks_contrib-2026.7.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/sources/pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "sha256": "cba47efbaad1bedd529725cbc14e21f156c7a19366f07b3edfbb076ffd7afdf8",
+      "bytes": 18053248,
+      "url": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/desktop-fixed-inputs/altgraph-0.17.5.tar.gz",
+      "sha256": "c87b395dd12fabde9c99573a9749d67da8d29ef9de0125c7f536699b4a9bc9e7",
+      "bytes": 48428,
+      "url": "https://files.pythonhosted.org/packages/7e/f8/97fdf103f38fed6792a1601dbc16cc8aac56e7459a9fff08c812d8ae177a/altgraph-0.17.5.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/desktop-fixed-inputs/packaging-26.3.tar.gz",
+      "sha256": "94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79",
+      "bytes": 313412,
+      "url": "https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/desktop-fixed-inputs/pefile-2024.8.26.tar.gz",
+      "sha256": "3ff6c5d8b43e8c37bb6e6dd5085658d658a7a0bdcd20b6a07b1fcfc1c4e9d632",
+      "bytes": 76008,
+      "url": "https://files.pythonhosted.org/packages/03/4f/2750f7f6f025a1507cd3b7218691671eecfd0bbebebe8b39aa0fe1d360b8/pefile-2024.8.26.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/desktop-fixed-inputs/pywin32-ctypes-0.2.3.tar.gz",
+      "sha256": "d162dc04946d704503b2edc4d55f3dba5c1d539ead017afa00142c38b9885755",
+      "bytes": 29471,
+      "url": "https://files.pythonhosted.org/packages/85/9f/01a1a99704853cb63f253eea009390c88e7131c67e66a0a02099a8c917cb/pywin32-ctypes-0.2.3.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/desktop-fixed-inputs/setuptools-84.0.0.tar.gz",
+      "sha256": "f4695c21257f0d9b537ec2692c941d02ee143b7cc1276941349a546573b2ef73",
+      "bytes": 1168449,
+      "url": "https://files.pythonhosted.org/packages/6d/44/f5da03a8ef95d369145c5bb53050e7877c9f3d312e128605fd9504829143/setuptools-84.0.0.tar.gz",
+      "matches_retained_expected_digest": true,
+      "verification_basis": "Retained source-download ledger (previous official verification); not a fresh independent upstream query"
+    }
+  ],
+  "rust_registry": [
+    {
+      "name": "asn1",
+      "version": "0.24.1",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/asn1-0.24.1.crate",
+      "sha256": "c9795210620c0cb3f9a7ce4f882808c38e1ef7b347c90591dceae0886e031fb1",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/e18df9e54be7__LICENSE"
+      ]
+    },
+    {
+      "name": "asn1_derive",
+      "version": "0.24.1",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/asn1_derive-0.24.1.crate",
+      "sha256": "909e307f1cc32bb8bccbd98f446e6d1bf03fa30f7b53a4337da7181ad30fa11a",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/1bc0a0b49e03__LICENSE"
+      ]
+    },
+    {
+      "name": "base64",
+      "version": "0.23.0",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/base64-0.23.0.crate",
+      "sha256": "b25655df2c3cdd83c5e5b293b88acd880332b2ddadd7c30ac43144fdc0033da9",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/dbcf41d18f1d__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/cbbac28c65ce__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "bitflags",
+      "version": "2.13.1",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/bitflags-2.13.1.crate",
+      "sha256": "b588b76d00fde79687d7646a9b5bdf3cc0f655e0bbd080335a95d7e96f3587da",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/afdda6beb3d5__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/fae84f584201__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "cc",
+      "version": "1.4.0",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/cc-1.4.0.crate",
+      "sha256": "5add81bb678e6cb321aff7fa0dc7689ad82b112dbc032cea19f91d6b8e3582b9",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/fcd6b015d6f1__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/da1ffb66614d__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "cfg-if",
+      "version": "1.0.4",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/cfg-if-1.0.4.crate",
+      "sha256": "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/e85256301d04__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/cd62a1eaedd4__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "find-msvc-tools",
+      "version": "0.1.9",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/find-msvc-tools-0.1.9.crate",
+      "sha256": "5baebc0774151f905a1a2cc41989300b1e6fbb29aff0ceffa1064fdd3088d582",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/f1d7a7bfc16a__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/0b490e6e907c__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "foreign-types",
+      "version": "0.3.2",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/foreign-types-0.3.2.crate",
+      "sha256": "f6f339eb8adc052cd2ca78910fda869aefa38d22d5cb648e6485e4d3fc06f3b1",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/188c95fdbc80__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/921dc419ffbf__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "foreign-types-shared",
+      "version": "0.1.1",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/foreign-types-shared-0.1.1.crate",
+      "sha256": "00b0228411908ca8685dba7fc2cdd70ec9990a6e753e89b6ac91a84c40fbaf4b",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/966987935182__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/47d69e1a3b3d__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "heck",
+      "version": "0.5.0",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/heck-0.5.0.crate",
+      "sha256": "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/7fec52cbc33a__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/8b34edf1bab5__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "itoa",
+      "version": "1.0.18",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/itoa-1.0.18.crate",
+      "sha256": "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/f7b9b263e55a__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/32e36a9ceaf8__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "libc",
+      "version": "0.2.189",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/libc-0.2.189.crate",
+      "sha256": "3eaf3ede3fee6db1a4c2ee091bf8a8b4dccdc6d17f656fb07896ee72867612f2",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/0db3f96280d2__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/2a24fc164b89__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "once_cell",
+      "version": "1.21.4",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/once_cell-1.21.4.crate",
+      "sha256": "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/e213d371c35c__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/8925439f2020__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "openssl",
+      "version": "0.10.81",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/openssl-0.10.81.crate",
+      "sha256": "77823a27f0babb03091cb9ed9ef80af3b39dbc82f97e8fa530374b7dafd87a45",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/48bad0ea57bb__LICENSE",
+        "documentation/windows-desktop-licenses/source-notices-followup/4bd85d5ec322__LICENSE-APACHE"
+      ]
+    },
+    {
+      "name": "openssl-macros",
+      "version": "0.1.1",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/openssl-macros-0.1.1.crate",
+      "sha256": "a948666b637a0f465e8564c73e89d4dde00d72d4d473cc972f390fc3dcee7d9c",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/a926d0381c49__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/ab3b75dc9383__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "openssl-sys",
+      "version": "0.9.117",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/openssl-sys-0.9.117.crate",
+      "sha256": "b47e7e6bb2c38cd930d25a23b40fa52e068c10e85f3e03a7f5ba5aaca5713695",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/936bf8baa5db__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "pem",
+      "version": "4.0.0",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/pem-4.0.0.crate",
+      "sha256": "d354a98a3d1251555de99e8fdd8afda05573c31b82f59063a7b0a29b5527f120",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/0935a0ea0384__LICENSE.md"
+      ]
+    },
+    {
+      "name": "pkg-config",
+      "version": "0.3.33",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/pkg-config-0.3.33.crate",
+      "sha256": "19f132c84eca552bf34cab8ec81f1c1dcc229b811638f9d283dceabe58c5569e",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/6980ee058b10__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/8642e96b36db__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "portable-atomic",
+      "version": "1.14.0",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/portable-atomic-1.14.0.crate",
+      "sha256": "3d20d5497ef88037a52ff98267d066e7f11fcc5e99bbfbd58a42336193aacec3",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/ea83e08683a2__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/720bae5de1df__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "proc-macro2",
+      "version": "1.0.107",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/proc-macro2-1.0.107.crate",
+      "sha256": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/dfdcf7e0b4c8__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/ce359415dd31__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "pyo3",
+      "version": "0.29.2",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/pyo3-0.29.2.crate",
+      "sha256": "4688ddedf473e32662b9b067670129a8afb8c18e351482c70d62ba4a88171e8b",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/2aafc55d887a__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/b93db976b2b2__LICENSE-MIT",
+        "documentation/windows-desktop-licenses/source-notices-followup/805f27ba817e__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/5a36938c37a7__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "pyo3-build-config",
+      "version": "0.29.2",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/pyo3-build-config-0.29.2.crate",
+      "sha256": "f41027e41b4bd03f6e60f9f417fe24a6341a6bb744edd62b6f709f2a52ea30e9",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/6a428650d6f2__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/3700b4f119fe__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "pyo3-ffi",
+      "version": "0.29.2",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/pyo3-ffi-0.29.2.crate",
+      "sha256": "e591a95526fead067432c3b3a33fc74770b87b1e04e73671090d9c2055a2b327",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/c5728f47ed5e__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/f37fded924b9__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "pyo3-macros",
+      "version": "0.29.2",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/pyo3-macros-0.29.2.crate",
+      "sha256": "73225868fc1cd84eef2c3c230ddb91273bf1de46aeb8a4248da76d32a0924a1c",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/326c700a7026__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/98f8be8c059d__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "pyo3-macros-backend",
+      "version": "0.29.2",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/pyo3-macros-backend-0.29.2.crate",
+      "sha256": "571575aa3749fa6216757dd47d2a3e7ef360f329a40f0666a9fbd14889024952",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/3e2c27391823__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/77d196d1a43e__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "quote",
+      "version": "1.0.47",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/quote-1.0.47.crate",
+      "sha256": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/b60047d09eae__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/dd85d8465f46__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "self_cell",
+      "version": "1.3.0",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/self_cell-1.3.0.crate",
+      "sha256": "2ab42ca02749e120097e328d91d415325bdf43b1c72c4c8badf37375fe40a813",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/cee4407050ca__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/a8428013c5dc__LICENSE-GPLv2"
+      ]
+    },
+    {
+      "name": "shlex",
+      "version": "2.0.1",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/shlex-2.0.1.crate",
+      "sha256": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/4528706c8c1b__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/9e2c3861962a__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "syn",
+      "version": "2.0.119",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/syn-2.0.119.crate",
+      "sha256": "872831b642d1a07999a962a351ed35b955ea2cfc8f3862091e2a240a84f17297",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/64e30d428bab__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/ae5aaad23d63__LICENSE-MIT"
+      ]
+    },
+    {
+      "name": "target-lexicon",
+      "version": "0.13.5",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/target-lexicon-0.13.5.crate",
+      "sha256": "adb6935a6f5c20170eeceb1a3835a49e12e19d792f6dd344ccc76a985ca5a6ca",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/2719fb97331a__LICENSE"
+      ]
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.24",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/unicode-ident-1.0.24.crate",
+      "sha256": "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/15f1d6c905f9__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/f80c4c7a1554__LICENSE-MIT",
+        "documentation/windows-desktop-licenses/source-notices-followup/5c7ac87ab2f6__LICENSE-UNICODE"
+      ]
+    },
+    {
+      "name": "vcpkg",
+      "version": "0.2.15",
+      "archive": "outputs/windows-desktop-legal-audit-20261115/sources/rust-crates/vcpkg-0.2.15.crate",
+      "sha256": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+      "notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/397c388f2dfa__LICENSE-APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/e5cd81a92685__LICENSE-MIT"
+      ]
+    }
+  ],
+  "rust_nonregistry": [
+    {
+      "name": "cryptography-cffi",
+      "sbom_version": "0.50.2",
+      "manifest": "cryptography-50.0.2/src/rust/cryptography-cffi/Cargo.toml",
+      "source_version_expression": {
+        "workspace": true
+      },
+      "source_license_expression": {
+        "workspace": true
+      },
+      "name_matched": true,
+      "note": "Workspace version/license inheritance explicitly resolved from the same sdist root Cargo.toml; name/version correspondence is not binary reproducibility proof.",
+      "workspace_manifest": "cryptography-50.0.2/Cargo.toml",
+      "workspace_manifest_sha256": "3394db0f684339a40b53827888616f5b855c2547a857631dfddafb609b5edd9f",
+      "resolved_version": "0.50.2",
+      "resolved_license": "Apache-2.0 OR BSD-3-Clause",
+      "version_matches_sbom": true
+    },
+    {
+      "name": "cryptography-crypto",
+      "sbom_version": "0.50.2",
+      "manifest": "cryptography-50.0.2/src/rust/cryptography-crypto/Cargo.toml",
+      "source_version_expression": {
+        "workspace": true
+      },
+      "source_license_expression": {
+        "workspace": true
+      },
+      "name_matched": true,
+      "note": "Workspace version/license inheritance explicitly resolved from the same sdist root Cargo.toml; name/version correspondence is not binary reproducibility proof.",
+      "workspace_manifest": "cryptography-50.0.2/Cargo.toml",
+      "workspace_manifest_sha256": "3394db0f684339a40b53827888616f5b855c2547a857631dfddafb609b5edd9f",
+      "resolved_version": "0.50.2",
+      "resolved_license": "Apache-2.0 OR BSD-3-Clause",
+      "version_matches_sbom": true
+    },
+    {
+      "name": "cryptography-keepalive",
+      "sbom_version": "0.50.2",
+      "manifest": "cryptography-50.0.2/src/rust/cryptography-keepalive/Cargo.toml",
+      "source_version_expression": {
+        "workspace": true
+      },
+      "source_license_expression": {
+        "workspace": true
+      },
+      "name_matched": true,
+      "note": "Workspace version/license inheritance explicitly resolved from the same sdist root Cargo.toml; name/version correspondence is not binary reproducibility proof.",
+      "workspace_manifest": "cryptography-50.0.2/Cargo.toml",
+      "workspace_manifest_sha256": "3394db0f684339a40b53827888616f5b855c2547a857631dfddafb609b5edd9f",
+      "resolved_version": "0.50.2",
+      "resolved_license": "Apache-2.0 OR BSD-3-Clause",
+      "version_matches_sbom": true
+    },
+    {
+      "name": "cryptography-key-parsing",
+      "sbom_version": "0.50.2",
+      "manifest": "cryptography-50.0.2/src/rust/cryptography-key-parsing/Cargo.toml",
+      "source_version_expression": {
+        "workspace": true
+      },
+      "source_license_expression": {
+        "workspace": true
+      },
+      "name_matched": true,
+      "note": "Workspace version/license inheritance explicitly resolved from the same sdist root Cargo.toml; name/version correspondence is not binary reproducibility proof.",
+      "workspace_manifest": "cryptography-50.0.2/Cargo.toml",
+      "workspace_manifest_sha256": "3394db0f684339a40b53827888616f5b855c2547a857631dfddafb609b5edd9f",
+      "resolved_version": "0.50.2",
+      "resolved_license": "Apache-2.0 OR BSD-3-Clause",
+      "version_matches_sbom": true
+    },
+    {
+      "name": "cryptography-openssl",
+      "sbom_version": "0.50.2",
+      "manifest": "cryptography-50.0.2/src/rust/cryptography-openssl/Cargo.toml",
+      "source_version_expression": {
+        "workspace": true
+      },
+      "source_license_expression": {
+        "workspace": true
+      },
+      "name_matched": true,
+      "note": "Workspace version/license inheritance explicitly resolved from the same sdist root Cargo.toml; name/version correspondence is not binary reproducibility proof.",
+      "workspace_manifest": "cryptography-50.0.2/Cargo.toml",
+      "workspace_manifest_sha256": "3394db0f684339a40b53827888616f5b855c2547a857631dfddafb609b5edd9f",
+      "resolved_version": "0.50.2",
+      "resolved_license": "Apache-2.0 OR BSD-3-Clause",
+      "version_matches_sbom": true
+    },
+    {
+      "name": "cryptography-x509",
+      "sbom_version": "0.50.2",
+      "manifest": "cryptography-50.0.2/src/rust/cryptography-x509/Cargo.toml",
+      "source_version_expression": {
+        "workspace": true
+      },
+      "source_license_expression": {
+        "workspace": true
+      },
+      "name_matched": true,
+      "note": "Workspace version/license inheritance explicitly resolved from the same sdist root Cargo.toml; name/version correspondence is not binary reproducibility proof.",
+      "workspace_manifest": "cryptography-50.0.2/Cargo.toml",
+      "workspace_manifest_sha256": "3394db0f684339a40b53827888616f5b855c2547a857631dfddafb609b5edd9f",
+      "resolved_version": "0.50.2",
+      "resolved_license": "Apache-2.0 OR BSD-3-Clause",
+      "version_matches_sbom": true
+    },
+    {
+      "name": "cryptography-x509-verification",
+      "sbom_version": "0.50.2",
+      "manifest": "cryptography-50.0.2/src/rust/cryptography-x509-verification/Cargo.toml",
+      "source_version_expression": {
+        "workspace": true
+      },
+      "source_license_expression": {
+        "workspace": true
+      },
+      "name_matched": true,
+      "note": "Workspace version/license inheritance explicitly resolved from the same sdist root Cargo.toml; name/version correspondence is not binary reproducibility proof.",
+      "workspace_manifest": "cryptography-50.0.2/Cargo.toml",
+      "workspace_manifest_sha256": "3394db0f684339a40b53827888616f5b855c2547a857631dfddafb609b5edd9f",
+      "resolved_version": "0.50.2",
+      "resolved_license": "Apache-2.0 OR BSD-3-Clause",
+      "version_matches_sbom": true
+    }
+  ],
+  "cffi_x64": {
+    "source_archive_sha256": "dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be",
+    "members": [
+      {
+        "member": "cffi-2.1.1/src/c/libffi_x86_x64/ffi.c",
+        "sha256": "1abda6df884d78f33be1ee8abf99c6dc1c8b60b6f72ac41ac27b42a98329334a",
+        "bytes": 12509
+      },
+      {
+        "member": "cffi-2.1.1/src/c/libffi_x86_x64/ffi.h",
+        "sha256": "96cc1f0392c280471c86164b31a5d5fbbce3141376c352ddc187d531cc740d0f",
+        "bytes": 9298
+      },
+      {
+        "member": "cffi-2.1.1/src/c/libffi_x86_x64/ffi_common.h",
+        "sha256": "70fc6e9f815ba8c6320c0b8a00d6c06ed763a58847708eb694123c687ddd5a65",
+        "bytes": 2114
+      },
+      {
+        "member": "cffi-2.1.1/src/c/libffi_x86_x64/fficonfig.h",
+        "sha256": "742907d362beb3b3308719541c8c94c3b7539a6cb9eb77fe202be45303bae6da",
+        "bytes": 2973
+      },
+      {
+        "member": "cffi-2.1.1/src/c/libffi_x86_x64/ffitarget.h",
+        "sha256": "f4fb7eaffbe13a11035174284eba68934f3cf41eb16d044f157d8bdd966b14da",
+        "bytes": 2699
+      },
+      {
+        "member": "cffi-2.1.1/src/c/libffi_x86_x64/prep_cif.c",
+        "sha256": "e04a2106e3f14333d5f79515d65fbb7b177de59b520b6860e95d5869202bf6af",
+        "bytes": 5720
+      },
+      {
+        "member": "cffi-2.1.1/src/c/libffi_x86_x64/types.c",
+        "sha256": "f398aad1c87cb8168d29f9ad1222e6e250b83847272b3caad21db3319a5ec2a5",
+        "bytes": 3556
+      },
+      {
+        "member": "cffi-2.1.1/src/c/libffi_x86_x64/win32.c",
+        "sha256": "b893d4254903d843c4fa889640e7124a98d39a3eb65b2b916bad7359e6a193c6",
+        "bytes": 4712
+      },
+      {
+        "member": "cffi-2.1.1/src/c/libffi_x86_x64/win64.asm",
+        "sha256": "020ed36b231fadd51fcd93c1a92648c1346df9ec6a536ae892b807aed20cc1ad",
+        "bytes": 3096
+      },
+      {
+        "member": "cffi-2.1.1/src/c/libffi_x86_x64/win64.obj",
+        "sha256": "fa75a54e8ec34f6c4bd67edcfd4d484a75a7c23a0ffc8952ccf9a3fd14d8a3f3",
+        "bytes": 1176
+      }
+    ],
+    "setup_evidence": "cffi-setup.original.txt",
+    "route": "Windows MSVC non-ARM64 uses bundled libffi_x86_x64; x64 removes win32.c and links prebuilt win64.obj; win64.asm also supplied",
+    "bundled_release_version": "not established for x64",
+    "source_scope": "10 exact bundled files, not substituted with an assumed upstream release",
+    "remaining": "Confirm notice coverage for all bundled inputs including asm/object; object regeneration equivalence and exact wheel compiler inputs remain unverified."
+  },
+  "notices": [
+    {
+      "archive": "cffi-2.1.1.tar.gz",
+      "member": "cffi-2.1.1/AUTHORS",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/b8b8d55068d2__AUTHORS",
+      "sha256": "2a67a60bbfb33759d67d645ff131b8e6d6bc4cafc232d751fcac3eda4d314cc8",
+      "bytes": 208,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "cffi-2.1.1.tar.gz",
+      "member": "cffi-2.1.1/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/51cb5e5dc173__LICENSE",
+      "sha256": "5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63",
+      "bytes": 1123,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "cryptography-50.0.2.tar.gz",
+      "member": "cryptography-50.0.2/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/e12a5400b88b__LICENSE",
+      "sha256": "3e0c7c091a948b82533ba98fd7cbb40432d6f1a9acbf85f5922d2f99a93ae6bb",
+      "bytes": 197,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "cryptography-50.0.2.tar.gz",
+      "member": "cryptography-50.0.2/LICENSE.APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/75f476d7c463__LICENSE.APACHE",
+      "sha256": "aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe",
+      "bytes": 11360,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "cryptography-50.0.2.tar.gz",
+      "member": "cryptography-50.0.2/LICENSE.BSD",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/8a5fe38e3124__LICENSE.BSD",
+      "sha256": "602c4c7482de6479dd2e9793cda275e5e63d773dacd1eca689232ab7008fb4fb",
+      "bytes": 1532,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pillow-12.3.0.tar.gz",
+      "member": "pillow-12.3.0/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/8d2a639fb541__LICENSE",
+      "sha256": "15181e7363dca9aed78b79bebebc7fde7f1814b8bd311ea3b87ae8ccadfc185b",
+      "bytes": 1457,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pillow-12.3.0.tar.gz",
+      "member": "pillow-12.3.0/Tests/fonts/DejaVuSans/LICENSE.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/71d80e3d9908__LICENSE.txt",
+      "sha256": "ba4aee7ef5b2ebc285e76df2497953d8a6e7480bc249f4e0a55f1199a3396622",
+      "bytes": 4950,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pillow-12.3.0.tar.gz",
+      "member": "pillow-12.3.0/Tests/fonts/LICENSE.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/210f848b5259__LICENSE.txt",
+      "sha256": "b79f6f6a2fc060b2e0a6e7a6946c446ae199bec07b92a3df1295975e25c4d96b",
+      "bytes": 1676,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pillow-12.3.0.tar.gz",
+      "member": "pillow-12.3.0/Tests/icc/LICENSE.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/27b9cabe077c__LICENSE.txt",
+      "sha256": "09e62757edb34e284bc11c54e3429b438d9db37f46c9cb36bd57b1b25ae36184",
+      "bytes": 1160,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pillow-12.3.0.tar.gz",
+      "member": "pillow-12.3.0/docs/COPYING",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/e23dc0b2bd05__COPYING",
+      "sha256": "d44ce2bbf81806be0eb34ec0ecb0cb013ccd56a94057daf214fb7381adde8f0c",
+      "bytes": 1475,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pillow-12.3.0.tar.gz",
+      "member": "pillow-12.3.0/src/thirdparty/raqm/AUTHORS",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/dca9f3d386d6__AUTHORS",
+      "sha256": "e81eb8c13d248620f229af26700a5d8c928bac0fd971cae6e76e2f88228ea9e2",
+      "bytes": 138,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pillow-12.3.0.tar.gz",
+      "member": "pillow-12.3.0/src/thirdparty/raqm/COPYING",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/542459efe2f5__COPYING",
+      "sha256": "4a574f631d5aee5223d108d3f7ec4f717343685d8a8904f42591be72c907ecba",
+      "bytes": 1180,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pycparser-3.12.tar.gz",
+      "member": "pycparser-3.12/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/d0d24ad25ec1__LICENSE",
+      "sha256": "0a9e78156ae8b96caf1b4f11ac2df424b83de29736f9e757630548a6272fdf90",
+      "bytes": 1543,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pymupdf-1.28.2.tar.gz",
+      "member": "pymupdf-1.28.2/COPYING",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/b68f40d29ab7__COPYING",
+      "sha256": "57c8ff33c9c0cfc3ef00e650a1cc910d7ee479a8bc509f6c9209a7c2a11399d6",
+      "bytes": 34520,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "typing_extensions-4.16.0.tar.gz",
+      "member": "typing_extensions-4.16.0/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/b63764e00dea__LICENSE",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "bytes": 13936,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyinstaller-6.22.2.tar.gz",
+      "member": "pyinstaller-6.22.2/bootloader/waflib/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/ad7188f2b0eb__LICENSE",
+      "sha256": "f1a08e9a6ef535799105fca437e0fb38dc64acb0f224b115ab38fdc458cede53",
+      "bytes": 1338,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyinstaller-6.22.2.tar.gz",
+      "member": "pyinstaller-6.22.2/bootloader/zlib/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/97920b45daaa__LICENSE",
+      "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2",
+      "bytes": 1002,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyinstaller-6.22.2.tar.gz",
+      "member": "pyinstaller-6.22.2/doc/license.rst",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/28296f46231a__license.rst",
+      "sha256": "98be0224c3df051092249a1b1387ef3f6fd01d6d87eb263266244a2237bb7ce3",
+      "bytes": 1223,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyinstaller-6.22.2.tar.gz",
+      "member": "pyinstaller-6.22.2/COPYING.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/e11087e6a838__COPYING.txt",
+      "sha256": "dcf75fdb959db1e3b41c0f8505069d2ece781b5ec6b3d0a4d30975cfc6580245",
+      "bytes": 32138,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyinstaller_hooks_contrib-2026.7.tar.gz",
+      "member": "pyinstaller_hooks_contrib-2026.7/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/153f305cba16__LICENSE",
+      "sha256": "91d0baaff00773038e72c0a1fc9d5d2d38706b7a2b9c04f34296608f931b9cd0",
+      "bytes": 27666,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "member": "pyside-setup-everywhere-src-6.11.2/examples/datavisualization/graphgallery/data/license.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/6d54a0a158f0__license.txt",
+      "sha256": "fb5cbaf2315c9d953bd067b53c8359c6b0e420c05622f85bdb8802872bdf1d72",
+      "bytes": 3502,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "member": "pyside-setup-everywhere-src-6.11.2/examples/graphs/3d/widgetgraphgallery/data/license.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/c3f5b26ae474__license.txt",
+      "sha256": "fb5cbaf2315c9d953bd067b53c8359c6b0e420c05622f85bdb8802872bdf1d72",
+      "bytes": 3502,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "member": "pyside-setup-everywhere-src-6.11.2/examples/webenginequick/nanobrowser/icons/3rdparty/COPYING",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/39b2381bb45f__COPYING",
+      "sha256": "4f740497cf8ad0e564de90d3416a06c3d6b1d69d6883fe539925e3353d68a466",
+      "bytes": 75,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "member": "pyside-setup-everywhere-src-6.11.2/examples/webenginewidgets/simplebrowser/data/3rdparty/COPYING",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/a149e836ad02__COPYING",
+      "sha256": "4f740497cf8ad0e564de90d3416a06c3d6b1d69d6883fe539925e3353d68a466",
+      "bytes": 75,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "member": "pyside-setup-everywhere-src-6.11.2/sources/pyside6/COPYING",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/6ee1a1f84cce__COPYING",
+      "sha256": "3700b1c56fae3813dfaaef1cba101b6ec108167f36b19f4b2cc8824cc829aa2b",
+      "bytes": 26428,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "member": "pyside-setup-everywhere-src-6.11.2/sources/shiboken6/AUTHORS",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/63172428f921__AUTHORS",
+      "sha256": "c8c34b3908d064357783424b12b818a6ac98fde49d556866335bc412ceb93931",
+      "bytes": 474,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "member": "pyside-setup-everywhere-src-6.11.2/sources/shiboken6/COPYING",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/f673b82e3391__COPYING",
+      "sha256": "9bf82b3636570e28118ee558ddab479b8f183d3e20327b7685a7479df52d6493",
+      "bytes": 18086,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "member": "pyside-setup-everywhere-src-6.11.2/sources/shiboken6/COPYING.libsample",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/33c8fffb7cbc__COPYING.libsample",
+      "sha256": "902847d35abac99283b01c6bdd6f358d361de6bb1473c931756af8d68b890b2b",
+      "bytes": 26427,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "member": "pyside-setup-everywhere-src-6.11.2/sources/shiboken6/COPYING.libshiboken",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/ac15d7179c61__COPYING.libshiboken",
+      "sha256": "902847d35abac99283b01c6bdd6f358d361de6bb1473c931756af8d68b890b2b",
+      "bytes": 26427,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "member": "pyside-setup-everywhere-src-6.11.2/sources/shiboken6_generator/ApiExtractor/AUTHORS",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/1c10e3f01fe3__AUTHORS",
+      "sha256": "ba72ec4eb4d3339415a27092f83aff5403035e412d1ad7a98bc05a0e539e2261",
+      "bytes": 317,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "member": "pyside-setup-everywhere-src-6.11.2/sources/shiboken6_generator/ApiExtractor/COPYING",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/95d084c5a071__COPYING",
+      "sha256": "9bf82b3636570e28118ee558ddab479b8f183d3e20327b7685a7479df52d6493",
+      "bytes": 18086,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "member": "pyside-setup-everywhere-src-6.11.2/tools/license_check.py",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/77b1789445b2__license_check.py",
+      "sha256": "60a8f466a365c20acaf3e5947f3db596956e4a8ccac951d3143b09c385228fbb",
+      "bytes": 938,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "altgraph-0.17.5.tar.gz",
+      "member": "altgraph-0.17.5/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/e241f9adaf1a__LICENSE",
+      "sha256": "6c194d6db0c64d45535d10c95142b9b0cda7b7dcc7f1ddee302b3d536f3dbe46",
+      "bytes": 1002,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "altgraph-0.17.5.tar.gz",
+      "member": "altgraph-0.17.5/doc/license.rst",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/b8be527ae02a__license.rst",
+      "sha256": "c6071929fa693cf77461fdfcba69b98ffc76e2600d264adb09d04abd45c8b2c5",
+      "bytes": 1047,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "packaging-26.3.tar.gz",
+      "member": "packaging-26.3/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/98e178799240__LICENSE",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+      "bytes": 197,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "packaging-26.3.tar.gz",
+      "member": "packaging-26.3/LICENSE.APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/09e6b6e5693c__LICENSE.APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "bytes": 10174,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "packaging-26.3.tar.gz",
+      "member": "packaging-26.3/LICENSE.BSD",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/8ff06720ac94__LICENSE.BSD",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+      "bytes": 1344,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pefile-2024.8.26.tar.gz",
+      "member": "pefile-2024.8.26/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/ec45557e12e3__LICENSE",
+      "sha256": "b44409c067c6da52bfb54bb6624fb11a7b52157c3a13ae1400232f8196e86ad3",
+      "bytes": 1083,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "pywin32-ctypes-0.2.3.tar.gz",
+      "member": "pywin32-ctypes-0.2.3/LICENSE.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/1a326380523c__LICENSE.txt",
+      "sha256": "dfa83b3e2709adfcdb838d9ad55823ca674abb780e60563d9dd9544ccbf785e9",
+      "bytes": 1644,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/176ec292dbea__LICENSE",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "bytes": 1023,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/docs/userguide/license_migration.rst",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/2e7d0aa9fddd__license_migration.rst",
+      "sha256": "49e725dd64d57ea335ba61af755273ad03dbe39b8a689882c49e1c820b295944",
+      "bytes": 5005,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/032ba7423568__LICENSE",
+      "sha256": "ade78d04982d69972d444a8e14a94f87a2334dd3855cc80348ea8e240aa0df2d",
+      "bytes": 7634,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/783c0679c29d__LICENSE",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "bytes": 1023,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/licenses/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/d283c87fdc62__LICENSE",
+      "sha256": "458502e12d97bbf64438606a20044aa85eb05fb0a8a807bb35dbec253fd1fc04",
+      "bytes": 10278,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/setuptools/_vendor/jaraco.text-4.0.0.dist-info/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/beee6f3f5836__LICENSE",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "bytes": 1023,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/setuptools/_vendor/jaraco_context-6.1.0.dist-info/licenses/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/e64d668580f3__LICENSE",
+      "sha256": "9755a18519666e5f0f4cae3daad3d7012bcae48a600b31237d75e9fe134e6683",
+      "bytes": 1076,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/setuptools/_vendor/jaraco_functools-4.4.0.dist-info/licenses/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/0ce4ce7d14bb__LICENSE",
+      "sha256": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d",
+      "bytes": 1076,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/setuptools/_vendor/more_itertools-10.8.0.dist-info/licenses/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/6887ed6c75b4__LICENSE",
+      "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+      "bytes": 1053,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/6ceb2efb5208__LICENSE",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+      "bytes": 197,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/61c39a51b343__LICENSE.APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "bytes": 10174,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.BSD",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/68c441602bc9__LICENSE.BSD",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+      "bytes": 1344,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/setuptools/_vendor/platformdirs-4.4.0.dist-info/licenses/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/9eb7b1e667e7__LICENSE",
+      "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+      "bytes": 1089,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/setuptools/_vendor/tomli-2.4.0.dist-info/licenses/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/7c070c2a5813__LICENSE",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+      "bytes": 1072,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/setuptools/_vendor/wheel-0.46.3.dist-info/licenses/LICENSE.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/4ad652951650__LICENSE.txt",
+      "sha256": "30c23618679108f3e8ea1d2a658c7ca417bdfc891c98ef1a89fa4ff0c9828654",
+      "bytes": 1107,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/setuptools/_vendor/zipp-3.23.0.dist-info/licenses/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/a8837d5a1d40__LICENSE",
+      "sha256": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d",
+      "bytes": 1076,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/setuptools/config/NOTICE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/2d81d522b9aa__NOTICE",
+      "sha256": "2dddf08818297a3b89d43d95ff659d8da85741108c9136dfa3a4d856c0623bd8",
+      "bytes": 493,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "setuptools-84.0.0.tar.gz",
+      "member": "setuptools-84.0.0/setuptools/config/_validate_pyproject/NOTICE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/b4fdfb2eb533__NOTICE",
+      "sha256": "09c9bcea95ca086f8bc5bed174e40bc835b297d40fb5f86bbbb570fe0a5581a7",
+      "bytes": 18737,
+      "kind": "source notice; actual payload applicability not yet determined"
+    },
+    {
+      "archive": "asn1-0.24.1.crate",
+      "member": "asn1-0.24.1/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/e18df9e54be7__LICENSE",
+      "sha256": "c6deb2d156619439e147f8b62e1b3928598c8e3652ec8b56cc039490696b3985",
+      "bytes": 1540,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "asn1_derive-0.24.1.crate",
+      "member": "asn1_derive-0.24.1/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/1bc0a0b49e03__LICENSE",
+      "sha256": "c6deb2d156619439e147f8b62e1b3928598c8e3652ec8b56cc039490696b3985",
+      "bytes": 1540,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "base64-0.23.0.crate",
+      "member": "base64-0.23.0/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/dbcf41d18f1d__LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "bytes": 10847,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "base64-0.23.0.crate",
+      "member": "base64-0.23.0/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/cbbac28c65ce__LICENSE-MIT",
+      "sha256": "ab499c75a0f0da8e0fe83bf9ba3a27e5c39705310f07107c6c66b69958d2401c",
+      "bytes": 1093,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "bitflags-2.13.1.crate",
+      "member": "bitflags-2.13.1/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/afdda6beb3d5__LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "bytes": 10847,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "bitflags-2.13.1.crate",
+      "member": "bitflags-2.13.1/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/fae84f584201__LICENSE-MIT",
+      "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+      "bytes": 1071,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "cc-1.4.0.crate",
+      "member": "cc-1.4.0/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/fcd6b015d6f1__LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "bytes": 10847,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "cc-1.4.0.crate",
+      "member": "cc-1.4.0/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/da1ffb66614d__LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+      "bytes": 1057,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "cfg-if-1.0.4.crate",
+      "member": "cfg-if-1.0.4/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/e85256301d04__LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "bytes": 10847,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "cfg-if-1.0.4.crate",
+      "member": "cfg-if-1.0.4/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/cd62a1eaedd4__LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+      "bytes": 1057,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "find-msvc-tools-0.1.9.crate",
+      "member": "find-msvc-tools-0.1.9/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/f1d7a7bfc16a__LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "bytes": 10847,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "find-msvc-tools-0.1.9.crate",
+      "member": "find-msvc-tools-0.1.9/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/0b490e6e907c__LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+      "bytes": 1057,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "foreign-types-0.3.2.crate",
+      "member": "foreign-types-0.3.2/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/188c95fdbc80__LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+      "bytes": 11358,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "foreign-types-0.3.2.crate",
+      "member": "foreign-types-0.3.2/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/921dc419ffbf__LICENSE-MIT",
+      "sha256": "333ea3aaa3cadb819f4acd9f9153f9feee060a995ca8710f32bc5bd9a4b91734",
+      "bytes": 1072,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "foreign-types-shared-0.1.1.crate",
+      "member": "foreign-types-shared-0.1.1/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/966987935182__LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+      "bytes": 11358,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "foreign-types-shared-0.1.1.crate",
+      "member": "foreign-types-shared-0.1.1/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/47d69e1a3b3d__LICENSE-MIT",
+      "sha256": "333ea3aaa3cadb819f4acd9f9153f9feee060a995ca8710f32bc5bd9a4b91734",
+      "bytes": 1072,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "heck-0.5.0.crate",
+      "member": "heck-0.5.0/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/7fec52cbc33a__LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "bytes": 10847,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "heck-0.5.0.crate",
+      "member": "heck-0.5.0/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/8b34edf1bab5__LICENSE-MIT",
+      "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0",
+      "bytes": 1071,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "itoa-1.0.18.crate",
+      "member": "itoa-1.0.18/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/f7b9b263e55a__LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+      "bytes": 9723,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "itoa-1.0.18.crate",
+      "member": "itoa-1.0.18/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/32e36a9ceaf8__LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+      "bytes": 1023,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "libc-0.2.189.crate",
+      "member": "libc-0.2.189/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/0db3f96280d2__LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+      "bytes": 9723,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "libc-0.2.189.crate",
+      "member": "libc-0.2.189/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/2a24fc164b89__LICENSE-MIT",
+      "sha256": "123a331b5dbf04c30097fa43b8f858bc85df671fe776de498d01f3d6b7c1f69e",
+      "bytes": 1066,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "once_cell-1.21.4.crate",
+      "member": "once_cell-1.21.4/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/e213d371c35c__LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "bytes": 10847,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "once_cell-1.21.4.crate",
+      "member": "once_cell-1.21.4/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/8925439f2020__LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+      "bytes": 1023,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "openssl-0.10.81.crate",
+      "member": "openssl-0.10.81/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/48bad0ea57bb__LICENSE",
+      "sha256": "f3d4287b4a21c5176fea2f9bd4ae800696004e2fb8e05cbc818be513f188a941",
+      "bytes": 618,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "openssl-0.10.81.crate",
+      "member": "openssl-0.10.81/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/4bd85d5ec322__LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+      "bytes": 11358,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "openssl-macros-0.1.1.crate",
+      "member": "openssl-macros-0.1.1/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/a926d0381c49__LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+      "bytes": 11358,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "openssl-macros-0.1.1.crate",
+      "member": "openssl-macros-0.1.1/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/ab3b75dc9383__LICENSE-MIT",
+      "sha256": "ea5ab440900ab271811d5c2dc02a9de6e03a6956ac5727e85c11d76df5883d30",
+      "bytes": 1058,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "openssl-sys-0.9.117.crate",
+      "member": "openssl-sys-0.9.117/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/936bf8baa5db__LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+      "bytes": 1057,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "pem-4.0.0.crate",
+      "member": "pem-4.0.0/LICENSE.md",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/0935a0ea0384__LICENSE.md",
+      "sha256": "b7c76ff4466a3aeb6a7d903e81b651335e97d64ecb857e2ee9812a36c6fd1acf",
+      "bytes": 1085,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "pkg-config-0.3.33.crate",
+      "member": "pkg-config-0.3.33/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/6980ee058b10__LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "bytes": 10847,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "pkg-config-0.3.33.crate",
+      "member": "pkg-config-0.3.33/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/8642e96b36db__LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+      "bytes": 1057,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "portable-atomic-1.14.0.crate",
+      "member": "portable-atomic-1.14.0/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/ea83e08683a2__LICENSE-APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "bytes": 10174,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "portable-atomic-1.14.0.crate",
+      "member": "portable-atomic-1.14.0/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/720bae5de1df__LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+      "bytes": 1023,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "proc-macro2-1.0.107.crate",
+      "member": "proc-macro2-1.0.107/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/dfdcf7e0b4c8__LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+      "bytes": 9723,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "proc-macro2-1.0.107.crate",
+      "member": "proc-macro2-1.0.107/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/ce359415dd31__LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+      "bytes": 1023,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "pyo3-0.29.2.crate",
+      "member": "pyo3-0.29.2/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/2aafc55d887a__LICENSE-APACHE",
+      "sha256": "32c76dbe0e73d79100d5ece77c158399f2e2541bc5c78548a4ba45c1cb53c5c9",
+      "bytes": 9807,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "pyo3-0.29.2.crate",
+      "member": "pyo3-0.29.2/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/b93db976b2b2__LICENSE-MIT",
+      "sha256": "afcbe3b2e6b37172b5a9ca869ee4c0b8cdc09316e5d4384864154482c33e5af6",
+      "bytes": 1107,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "pyo3-0.29.2.crate",
+      "member": "pyo3-0.29.2/pyo3-runtime/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/805f27ba817e__LICENSE-APACHE",
+      "sha256": "32c76dbe0e73d79100d5ece77c158399f2e2541bc5c78548a4ba45c1cb53c5c9",
+      "bytes": 9807,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "pyo3-0.29.2.crate",
+      "member": "pyo3-0.29.2/pyo3-runtime/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/5a36938c37a7__LICENSE-MIT",
+      "sha256": "afcbe3b2e6b37172b5a9ca869ee4c0b8cdc09316e5d4384864154482c33e5af6",
+      "bytes": 1107,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "pyo3-build-config-0.29.2.crate",
+      "member": "pyo3-build-config-0.29.2/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/6a428650d6f2__LICENSE-APACHE",
+      "sha256": "32c76dbe0e73d79100d5ece77c158399f2e2541bc5c78548a4ba45c1cb53c5c9",
+      "bytes": 9807,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "pyo3-build-config-0.29.2.crate",
+      "member": "pyo3-build-config-0.29.2/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/3700b4f119fe__LICENSE-MIT",
+      "sha256": "afcbe3b2e6b37172b5a9ca869ee4c0b8cdc09316e5d4384864154482c33e5af6",
+      "bytes": 1107,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "pyo3-ffi-0.29.2.crate",
+      "member": "pyo3-ffi-0.29.2/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/c5728f47ed5e__LICENSE-APACHE",
+      "sha256": "32c76dbe0e73d79100d5ece77c158399f2e2541bc5c78548a4ba45c1cb53c5c9",
+      "bytes": 9807,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "pyo3-ffi-0.29.2.crate",
+      "member": "pyo3-ffi-0.29.2/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/f37fded924b9__LICENSE-MIT",
+      "sha256": "afcbe3b2e6b37172b5a9ca869ee4c0b8cdc09316e5d4384864154482c33e5af6",
+      "bytes": 1107,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "pyo3-macros-0.29.2.crate",
+      "member": "pyo3-macros-0.29.2/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/326c700a7026__LICENSE-APACHE",
+      "sha256": "32c76dbe0e73d79100d5ece77c158399f2e2541bc5c78548a4ba45c1cb53c5c9",
+      "bytes": 9807,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "pyo3-macros-0.29.2.crate",
+      "member": "pyo3-macros-0.29.2/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/98f8be8c059d__LICENSE-MIT",
+      "sha256": "afcbe3b2e6b37172b5a9ca869ee4c0b8cdc09316e5d4384864154482c33e5af6",
+      "bytes": 1107,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "pyo3-macros-backend-0.29.2.crate",
+      "member": "pyo3-macros-backend-0.29.2/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/3e2c27391823__LICENSE-APACHE",
+      "sha256": "32c76dbe0e73d79100d5ece77c158399f2e2541bc5c78548a4ba45c1cb53c5c9",
+      "bytes": 9807,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "pyo3-macros-backend-0.29.2.crate",
+      "member": "pyo3-macros-backend-0.29.2/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/77d196d1a43e__LICENSE-MIT",
+      "sha256": "afcbe3b2e6b37172b5a9ca869ee4c0b8cdc09316e5d4384864154482c33e5af6",
+      "bytes": 1107,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "quote-1.0.47.crate",
+      "member": "quote-1.0.47/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/b60047d09eae__LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+      "bytes": 9723,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "quote-1.0.47.crate",
+      "member": "quote-1.0.47/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/dd85d8465f46__LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+      "bytes": 1023,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "self_cell-1.3.0.crate",
+      "member": "self_cell-1.3.0/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/cee4407050ca__LICENSE-APACHE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "self_cell-1.3.0.crate",
+      "member": "self_cell-1.3.0/LICENSE-GPLv2",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/a8428013c5dc__LICENSE-GPLv2",
+      "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505",
+      "bytes": 18091,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "shlex-2.0.1.crate",
+      "member": "shlex-2.0.1/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/4528706c8c1b__LICENSE-APACHE",
+      "sha256": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583",
+      "bytes": 566,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "shlex-2.0.1.crate",
+      "member": "shlex-2.0.1/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/9e2c3861962a__LICENSE-MIT",
+      "sha256": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1",
+      "bytes": 1092,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "syn-2.0.119.crate",
+      "member": "syn-2.0.119/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/64e30d428bab__LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+      "bytes": 9723,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "syn-2.0.119.crate",
+      "member": "syn-2.0.119/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/ae5aaad23d63__LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+      "bytes": 1023,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "target-lexicon-0.13.5.crate",
+      "member": "target-lexicon-0.13.5/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/2719fb97331a__LICENSE",
+      "sha256": "268872b9816f90fd8e85db5a28d33f8150ebb8dd016653fb39ef1f94f2686bc5",
+      "bytes": 12243,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "unicode-ident-1.0.24.crate",
+      "member": "unicode-ident-1.0.24/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/15f1d6c905f9__LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+      "bytes": 9723,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "unicode-ident-1.0.24.crate",
+      "member": "unicode-ident-1.0.24/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/f80c4c7a1554__LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+      "bytes": 1023,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "unicode-ident-1.0.24.crate",
+      "member": "unicode-ident-1.0.24/LICENSE-UNICODE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/5c7ac87ab2f6__LICENSE-UNICODE",
+      "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1",
+      "bytes": 1995,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "vcpkg-0.2.15.crate",
+      "member": "vcpkg-0.2.15/LICENSE-APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/397c388f2dfa__LICENSE-APACHE",
+      "sha256": "60c93a31f490375aadf64098b75f10715010379541021e00261045d7800611d3",
+      "bytes": 11050,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "vcpkg-0.2.15.crate",
+      "member": "vcpkg-0.2.15/LICENSE-MIT",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/e5cd81a92685__LICENSE-MIT",
+      "sha256": "016d20f335060a70e79d9fcf8dfaa6201114d65d592211f4bdfb8ae9ca2bc1dc",
+      "bytes": 1082,
+      "kind": "Rust registry original notice; build/runtime scope follows SBOM, not assumed"
+    },
+    {
+      "archive": "cffi-2.1.1.tar.gz",
+      "member": "cffi-2.1.1/src/c/libffi_x86_x64/ffi.c.first-comment.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/d8367f1eea0c__ffi.c.first-comment.txt",
+      "sha256": "108731d17591067d0392bcd1fad6554b0f77fb2c60e265b6775e20de4f901bea",
+      "bytes": 1444,
+      "kind": "Source first comment; may be copyright only, not a standalone license"
+    },
+    {
+      "archive": "cffi-2.1.1.tar.gz",
+      "member": "cffi-2.1.1/src/c/libffi_x86_x64/ffi.h.first-comment.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/e9d29e382150__ffi.h.first-comment.txt",
+      "sha256": "9a09f772e1b95b2eb12af72ea6ba091bc856f5b94af6cb0d25eb087ccb1cd8e6",
+      "bytes": 1274,
+      "kind": "Source first comment; may be copyright only, not a standalone license"
+    },
+    {
+      "archive": "cffi-2.1.1.tar.gz",
+      "member": "cffi-2.1.1/src/c/libffi_x86_x64/ffi_common.h.first-comment.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/3ea372024847__ffi_common.h.first-comment.txt",
+      "sha256": "6d4f3926199e26dc8e8d53db6885c1ccfbe2eb929c0017f73a57e94c99563a73",
+      "bytes": 287,
+      "kind": "Source first comment; may be copyright only, not a standalone license"
+    },
+    {
+      "archive": "cffi-2.1.1.tar.gz",
+      "member": "cffi-2.1.1/src/c/libffi_x86_x64/fficonfig.h.first-comment.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/feb22625fb00__fficonfig.h.first-comment.txt",
+      "sha256": "03ab5f99c16356f885613f66eb19efe741d2b20df816b7386920a7068ab0fd4e",
+      "bytes": 82,
+      "kind": "Source first comment; may be copyright only, not a standalone license"
+    },
+    {
+      "archive": "cffi-2.1.1.tar.gz",
+      "member": "cffi-2.1.1/src/c/libffi_x86_x64/ffitarget.h.first-comment.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/7717faa2d9d7__ffitarget.h.first-comment.txt",
+      "sha256": "f6e1b2b3945d8ef608d7428baaed8664f976d69e9d2b115ff1aa640eb3deda18",
+      "bytes": 1320,
+      "kind": "Source first comment; may be copyright only, not a standalone license"
+    },
+    {
+      "archive": "cffi-2.1.1.tar.gz",
+      "member": "cffi-2.1.1/src/c/libffi_x86_x64/prep_cif.c.first-comment.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/38057c0acbbe__prep_cif.c.first-comment.txt",
+      "sha256": "f45f79a1d249632c1d7318810a93d439f50e7c8676272af749393b5699867aa3",
+      "bytes": 1268,
+      "kind": "Source first comment; may be copyright only, not a standalone license"
+    },
+    {
+      "archive": "cffi-2.1.1.tar.gz",
+      "member": "cffi-2.1.1/src/c/libffi_x86_x64/types.c.first-comment.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/5bb4b4438b75__types.c.first-comment.txt",
+      "sha256": "6a96bc0004cfb2d1f379b843cf16f53e8ec1b539b9beb56d5a8486ecfc7c2856",
+      "bytes": 1311,
+      "kind": "Source first comment; may be copyright only, not a standalone license"
+    },
+    {
+      "archive": "cffi-2.1.1.tar.gz",
+      "member": "cffi-2.1.1/src/c/libffi_x86_x64/win32.c.first-comment.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/ccab9d650d74__win32.c.first-comment.txt",
+      "sha256": "ef377f4af46523174cccc5093522ce28c39bc87e3fe0865f85c28b5f754ea0b2",
+      "bytes": 1399,
+      "kind": "Source first comment; may be copyright only, not a standalone license"
+    },
+    {
+      "archive": "cffi-2.1.1-cp312-cp312-win_amd64.whl",
+      "member": "cffi-2.1.1.dist-info/licenses/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/eb997455c716__LICENSE",
+      "sha256": "5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63",
+      "bytes": 1123,
+      "kind": "Runtime wheel original license; parent license does not cover every embedded component"
+    },
+    {
+      "archive": "cryptography-50.0.2-cp311-abi3-win_amd64.whl",
+      "member": "cryptography-50.0.2.dist-info/licenses/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/d9fa9cb85652__LICENSE",
+      "sha256": "3e0c7c091a948b82533ba98fd7cbb40432d6f1a9acbf85f5922d2f99a93ae6bb",
+      "bytes": 197,
+      "kind": "Runtime wheel original license; parent license does not cover every embedded component"
+    },
+    {
+      "archive": "cryptography-50.0.2-cp311-abi3-win_amd64.whl",
+      "member": "cryptography-50.0.2.dist-info/licenses/LICENSE.APACHE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/e19dbcb3c3f7__LICENSE.APACHE",
+      "sha256": "aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe",
+      "bytes": 11360,
+      "kind": "Runtime wheel original license; parent license does not cover every embedded component"
+    },
+    {
+      "archive": "cryptography-50.0.2-cp311-abi3-win_amd64.whl",
+      "member": "cryptography-50.0.2.dist-info/licenses/LICENSE.BSD",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/b72c85c04f04__LICENSE.BSD",
+      "sha256": "602c4c7482de6479dd2e9793cda275e5e63d773dacd1eca689232ab7008fb4fb",
+      "bytes": 1532,
+      "kind": "Runtime wheel original license; parent license does not cover every embedded component"
+    },
+    {
+      "archive": "pillow-12.3.0-cp312-cp312-win_amd64.whl",
+      "member": "pillow-12.3.0.dist-info/licenses/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/d5f5d01768c9__LICENSE",
+      "sha256": "4f7866a74802c6326f81faff59a56546b6aec2b10b91973e0e9308de95e79857",
+      "bytes": 78016,
+      "kind": "Runtime wheel original license; parent license does not cover every embedded component"
+    },
+    {
+      "archive": "pycparser-3.12-py3-none-any.whl",
+      "member": "pycparser-3.12.dist-info/licenses/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/0b4a3de3ed30__LICENSE",
+      "sha256": "0a9e78156ae8b96caf1b4f11ac2df424b83de29736f9e757630548a6272fdf90",
+      "bytes": 1543,
+      "kind": "Runtime wheel original license; parent license does not cover every embedded component"
+    },
+    {
+      "archive": "pymupdf-1.28.2-cp310-abi3-win_amd64.whl",
+      "member": "pymupdf-1.28.2.dist-info/COPYING",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/fc1167c606ed__COPYING",
+      "sha256": "40e60697600535eabfb5ae05f72829d88cfe8d02dd4792f5a754f6f51dabe55b",
+      "bytes": 64,
+      "kind": "Runtime wheel original license; parent license does not cover every embedded component"
+    },
+    {
+      "archive": "pyside6-6.11.2-cp310-abi3-win_amd64.whl",
+      "member": "pyside6-6.11.2.dist-info/licenses/LicenseRef-Qt-Commercial.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/0a93721dccde__LicenseRef-Qt-Commercial.txt",
+      "sha256": "4f54763ac0fe2abd8f7f8d8fe370a94a08ebf84786aa0b91045bd6628deb08a3",
+      "bytes": 470,
+      "kind": "Runtime wheel original license; parent license does not cover every embedded component"
+    },
+    {
+      "archive": "pyside6_addons-6.11.2-cp310-abi3-win_amd64.whl",
+      "member": "pyside6_addons-6.11.2.dist-info/licenses/LicenseRef-Qt-Commercial.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/f2ead6c2e44b__LicenseRef-Qt-Commercial.txt",
+      "sha256": "4f54763ac0fe2abd8f7f8d8fe370a94a08ebf84786aa0b91045bd6628deb08a3",
+      "bytes": 470,
+      "kind": "Runtime wheel original license; parent license does not cover every embedded component"
+    },
+    {
+      "archive": "pyside6_essentials-6.11.2-cp310-abi3-win_amd64.whl",
+      "member": "pyside6_essentials-6.11.2.dist-info/licenses/LicenseRef-Qt-Commercial.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/2b4cc1de4a90__LicenseRef-Qt-Commercial.txt",
+      "sha256": "4f54763ac0fe2abd8f7f8d8fe370a94a08ebf84786aa0b91045bd6628deb08a3",
+      "bytes": 470,
+      "kind": "Runtime wheel original license; parent license does not cover every embedded component"
+    },
+    {
+      "archive": "shiboken6-6.11.2-cp310-abi3-win_amd64.whl",
+      "member": "shiboken6-6.11.2.dist-info/licenses/LicenseRef-Qt-Commercial.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/b8b729df2202__LicenseRef-Qt-Commercial.txt",
+      "sha256": "4f54763ac0fe2abd8f7f8d8fe370a94a08ebf84786aa0b91045bd6628deb08a3",
+      "bytes": 470,
+      "kind": "Runtime wheel original license; parent license does not cover every embedded component"
+    },
+    {
+      "archive": "typing_extensions-4.16.0-py3-none-any.whl",
+      "member": "typing_extensions-4.16.0.dist-info/licenses/LICENSE",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/ec424c932d73__LICENSE",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "bytes": 13936,
+      "kind": "Runtime wheel original license; parent license does not cover every embedded component"
+    },
+    {
+      "archive": "openssl-4.0.3.tar.gz",
+      "member": "openssl-4.0.3/LICENSE.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/10934d51c5bc__LICENSE.txt",
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+      "bytes": 10175,
+      "kind": "OpenSSL original license, separate Python/cryptography chains"
+    },
+    {
+      "archive": "openssl-3.5.9.tar.gz",
+      "member": "openssl-3.5.9/LICENSE.txt",
+      "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/4b2420063dd9__LICENSE.txt",
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+      "bytes": 10175,
+      "kind": "OpenSSL original license, separate Python/cryptography chains"
+    }
+  ],
+  "runtime_wheel_count": 14,
+  "generated_or_compiled": false,
+  "approved_legal_manifest_created": false,
+  "uv_development": "discontinued",
+  "openssl_chains": [
+    {
+      "version": "4.0.3",
+      "consumer": "cryptography",
+      "source_archive": "outputs/windows-desktop-legal-audit-20261115/sources/openssl-4.0.3.tar.gz",
+      "sha256": "325b5c806167c13b40b1ffeadfe0248197c00eccc4cf123ec1e28d2d2fd216d9",
+      "matches_retained_official_expected_digest": true,
+      "notices": [
+        {
+          "archive": "openssl-4.0.3.tar.gz",
+          "member": "openssl-4.0.3/LICENSE.txt",
+          "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/10934d51c5bc__LICENSE.txt",
+          "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+          "bytes": 10175,
+          "kind": "OpenSSL original license, separate Python/cryptography chains"
+        }
+      ]
+    },
+    {
+      "version": "3.5.9",
+      "consumer": "Python/PBS",
+      "source_archive": "outputs/windows-desktop-legal-audit-20261115/sources/openssl-3.5.9.tar.gz",
+      "sha256": "603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a",
+      "matches_retained_official_expected_digest": true,
+      "notices": [
+        {
+          "archive": "openssl-3.5.9.tar.gz",
+          "member": "openssl-3.5.9/LICENSE.txt",
+          "notice_path": "documentation/windows-desktop-licenses/source-notices-followup/4b2420063dd9__LICENSE.txt",
+          "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+          "bytes": 10175,
+          "kind": "OpenSSL original license, separate Python/cryptography chains"
+        }
+      ]
+    }
+  ],
+  "retained_patch_inputs": [
+    {
+      "file": "documentation/windows-desktop-licenses/pillow-declared-patches/libtiff-0.patch",
+      "path_base": "repository",
+      "sha256": "76c498bdc9b811799c3b517e3c05479ac346dfb3bd53dee69d2e3fbe2aa046e6",
+      "bytes": 1754,
+      "scope": "retained original build input/patch; presence does not prove application to wheel"
+    },
+    {
+      "file": "documentation/windows-desktop-licenses/pillow-declared-patches/raqm-0.patch",
+      "path_base": "repository",
+      "sha256": "c3fc16e183734de75c6be9bba8c01cdccab1a84691f97f1109b020c56b097125",
+      "bytes": 769,
+      "scope": "retained original build input/patch; presence does not prove application to wheel"
+    },
+    {
+      "file": "documentation/windows-desktop-licenses/pillow-declared-patches/raqm-1.patch",
+      "path_base": "repository",
+      "sha256": "ac1a4941c6690c048abbe0a30ee9a43f1b6488a15e903b5fd213e06fb172a229",
+      "bytes": 222,
+      "scope": "retained original build input/patch; presence does not prove application to wheel"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/pbs-windows-build-inputs/build.py",
+      "path_base": "development-workspace",
+      "sha256": "f761bb904e664e39a44d88bd5e59b4a690b4d0c8e4785c5b2c913a552b4c9667",
+      "bytes": 64119,
+      "scope": "retained original build input/patch; presence does not prove application to wheel"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/pbs-windows-build-inputs/patch-disable-launchers.patch",
+      "path_base": "development-workspace",
+      "sha256": "f75f27c1fb5c0a2ef60c6d6922b4f370f524ca2bcbf0d73911e442b1d1421c4a",
+      "bytes": 328,
+      "scope": "retained original build input/patch; presence does not prove application to wheel"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/pbs-windows-build-inputs/patch-disable-uwp.patch",
+      "path_base": "development-workspace",
+      "sha256": "bd1ea75b1c3bf160344b09019334e6a1a6c56a0475692d7e255b099e65ab650a",
+      "bytes": 490,
+      "scope": "retained original build input/patch; presence does not prove application to wheel"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/pbs-windows-build-inputs/patch-layout-tcltk-arm64.patch",
+      "path_base": "development-workspace",
+      "sha256": "2d465e6cc2fe0117a953ddc408d2c71b7ac96813b0c811b6105f2ed86b96cf11",
+      "bytes": 520,
+      "scope": "retained original build input/patch; presence does not prove application to wheel"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/pbs-windows-build-inputs/patch-liblzma-5.8-3.14.patch",
+      "path_base": "development-workspace",
+      "sha256": "e03e1552b2e73b75d8342c1911313929fc28130b9c5596261bb32259739af1da",
+      "bytes": 1903,
+      "scope": "retained original build input/patch; presence does not prove application to wheel"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/pbs-windows-build-inputs/patch-liblzma-5.8.patch",
+      "path_base": "development-workspace",
+      "sha256": "f7f7cdb64124567a5638d84d8b67b3a6d526a3d2b943dde9669fd8db0f1fcd5f",
+      "bytes": 1918,
+      "scope": "retained original build input/patch; presence does not prove application to wheel"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/pbs-windows-build-inputs/patch-openssl-applink.patch",
+      "path_base": "development-workspace",
+      "sha256": "cdf97943070a0c4f452f2a07b8d48a8d29613663f2fa9a77c8882d0b911fd8fe",
+      "bytes": 476,
+      "scope": "retained original build input/patch; presence does not prove application to wheel"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/pbs-windows-build-inputs/patch-openssl-uplink.patch",
+      "path_base": "development-workspace",
+      "sha256": "0b6df10a2c1b43cf9f97225d353754627ad3660e1f5dcca0aa5716e8f00a3e76",
+      "bytes": 534,
+      "scope": "retained original build input/patch; presence does not prove application to wheel"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/pbs-windows-build-inputs/patch-sqlite-build-flags-3.15.patch",
+      "path_base": "development-workspace",
+      "sha256": "b3424241339e71d02321accec8b8e51bbc994e5da89606aa24394fe183520a31",
+      "bytes": 900,
+      "scope": "retained original build input/patch; presence does not prove application to wheel"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/pbs-windows-build-inputs/patch-sqlite-build-flags.patch",
+      "path_base": "development-workspace",
+      "sha256": "ce23527380f297b712ecc2376677798f341359678cbc76741fde44606d36b122",
+      "bytes": 850,
+      "scope": "retained original build input/patch; presence does not prove application to wheel"
+    },
+    {
+      "file": "outputs/windows-desktop-legal-audit-20261115/pbs-windows-build-inputs/patch-tkinter-zlib.patch",
+      "path_base": "development-workspace",
+      "sha256": "3f767e926b1fa96656b8867abab8510abb0f462f5ee0ffdee2ec0622ad5dbecb",
+      "bytes": 418,
+      "scope": "retained original build input/patch; presence does not prove application to wheel"
+    }
+  ]
+}

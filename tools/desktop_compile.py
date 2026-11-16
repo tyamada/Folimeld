@@ -12,6 +12,7 @@ import sys
 from tools.desktop_build import reviewed_legal_datas
 from tools.desktop_crt import load_crt_manifest, verify_collected_crt
 from tools.desktop_inno import load_inno_manifest, verify_inno_inputs
+from tools.desktop_runtime_terms import verify_runtime_terms
 
 
 def _sha(path):
@@ -93,6 +94,7 @@ def verify_compile_inputs(repo, *, payload_root, payload_review, legal_root, inn
             or review.get("status") != "reviewed-for-desktop-compile" or review.get("version") != version):
         raise ValueError("An explicit matching Desktop payload review is required.")
     reviewed_legal_datas(legal)
+    runtime_terms = verify_runtime_terms(legal)
     legal_manifest = legal / "reviewed-files.json"
     bindings = {"legal_manifest_sha256": _sha(legal_manifest),
                 "inno_manifest_sha256": _sha(repo / "packaging/windows/desktop-inno.json"),
@@ -123,7 +125,7 @@ def verify_compile_inputs(repo, *, payload_root, payload_review, legal_root, inn
     return {"version": version, "payload_root": str(payload), "legal_root": str(legal),
             "inno_root": str(inno), "output": str(destination), "bindings": bindings,
             "payload_review_sha256": _sha(review_path), "payload_files": actual,
-            "crt": crt, "inno": tools}
+            "crt": crt, "inno": tools, "runtime_terms": runtime_terms}
 
 
 def compiler_command(repo, state):

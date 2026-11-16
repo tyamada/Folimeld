@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!--
+  Description: This xml file defines the valid mime types used by Tika.
+  The mime type data within this file is based on information from various
+  sources like Apache Nutch, Apache HTTP Server, the file(1) command, etc.
+
+  Notes:
+   * Tika supports a wider range of match types than Freedesktop does
+   * Glob patterns must be unique, if there's a clash assign to the most
+     popular format
+   * The main mime type should be the canonical one, use aliases for any
+     other widely used forms
+   * Where there's a hierarchy in the types, list it via a parent
+   * Highly specific magic matches get a high priority
+   * General magic matches which could trigger a false-positive need
+     a low one
+   * The priority for containers normally need to be higher than for
+     the things they contain, so they don't accidently get detected
+     as what's in them
+   * For logic too complex to be expressed in a magic match, do the best
+     you can here, then provide a Custom Detector for the rest
+-->
+<mime-info xmlns:tika="https://tika.apache.org/">
+
+  <!-- Qt additions START -->
+
+  <mime-type type="application/x-zerosize">
+    <comment>Empty document</comment>
+  </mime-type>
+
+  <mime-type type="application/x-desktop">
+    <comment>Desktop file</comment>
+     <glob pattern="*.desktop"/>
+  </mime-type>
+
+  <mime-type type="text/x-qml">
+    <comment>Qt Markup Language file</comment>
+    <sub-class-of type="text/plain"/>
+    <magic>
+      <match type="string" value="/bin/env qml" offset="2:16"/>
+      <match type="string" value="import Qt" offset="0:3000">
+        <match type="string" value="{" offset="9:3009"/>
+      </match>
+      <match type="string" value="import Qml" offset="0:3000">
+        <match type="string" value="{" offset="9:3009"/>
+      </match>
+    </magic>
+    <glob pattern="*.qml"/>
+    <glob pattern="*.qmltypes"/>
+    <glob pattern="*.qmlproject"/>
+  </mime-type>
+
+  <mime-type type="application/x-gzpostscript">
+    <comment>Compressed postscript</comment>
+     <glob pattern="*.ps.gz"/>
+  </mime-type>
+
+  <mime-type type="application/x-core">
+    <comment>Core dump</comment>
+    <glob pattern="core" case-sensitive="true"/>
+  </mime-type>
+
+  <mime-type type="application/x-bzip2-compressed-tar">
+    <comment>BZip2 compressed tar file</comment>
+    <glob pattern="*.tar.bz2"/>
+  </mime-type>
+
+  <mime-type type="inode/directory">
+    <comment>Directory</comment>
+    <generic-icon name="folder"/>
+  </mime-type>
+
+  <!-- Qt additions END -->
+
+  <mime-type type="application/activemessage"/>
+  <mime-type type="application/andrew-inset">
+    <glob pattern="*.ez"/>
+  </mime-type>
+
+  <mime-type type="application/applefile">
+    <magic priority="50">
+      <match value="\x00\x05\x16\x00" type="string" offset="0"/>
+    </magic>
+  </mime-type>
+
+  <mime-type type="application/applixware">
+    <glob pattern="*.aw"/>
+  </mime-type>
+
+  <mime-type type="text/iso19139+xml">
+    <root-XML localName="MD_metadata"/>
+    <root-XML localName="MD_metadata" namespaceURI="http://www.isotc211.org/2005/gmd"/>
+    <glob pattern="*.iso19139"/>
+    <sub-class-of type="application/xml"/>
+   </mime-type>
+
+
+  <mime-type type="application/atom+xml">
+    <root-XML localName="feed" namespaceURI="http://purl.org/atom/ns#"/>
+    <root-XML localName="feed" namespaceURI="http://www.w3.org/2005/Atom"/>
+
+    <glob pattern="*.atom"/>
+  </mime-type>
+
+  <mime-type type="application/atomcat+xml">
+    <glob pattern="*.atomcat"/>
+  </mime-type>
+  <mime-type type="application/atomicmail"/>
+  <mime-type type="application/atomsvc+xml">
+    <glob pattern="*.atomsvc"/>
+  </mime-type>
+  <mime-type type="application/auth-policy+xml"/>
+
+  <mime-type type="application/x-bat">
+    <comment>Windows Batch / Command File</comment>
+    <alias type="application/bat"/>
+    <sub-class-of type="text/plain"/>
+    <magic priority="50">
+      <match value="@echo off" type="string" offset="0" />
+      <match value="rem " type="string" offset="0" />
+    </magic>
+    <glob pattern="*.bat"/>
+    <glob pattern="*.cmd"/>
+  </mime-type>
+
+  <mime-type type="application/batch-smtp"/>
+  <mime-type type="application/beep+xml"/>
+
+  <mime-type type="application/bizagi-modeler">
+    <comment>BizAgi Process Modeler</comment>
+    <sub-class-of type="application/zip"/>
+    <glob pattern="*.bpm"/>
+  </mime-type>
+
+  <mime-type type="application/cals-1840"/>
+
+  <mime-type type="application/cbor">
+    <acronym>CBOR</acronym>
+    <comment>Concise Binary Object Representation container</comment>
+    <tika:link>http://tools.ietf.org/html/rfc7049</tika:link>
+    <magic priority="60">
+      <match value="\xd9\xd9\xf7" type="string" offset="0" />
+    </magic>
+    <glob pattern="*.cbor"/>
+  </mime-type>
+
+  <mime-type type="application/ccxml+xml">
+    <glob pattern="*.ccxml"/>
+  </mime-type>
+  <mime-type type="application/cea-2018+xml"/>
+  <mime-type type="application/cellml+xml"/>
+  <mime-type type="application/cnrp+xml"/>
+  <mime-type type="application/commonground"/>
+  <mime-type type="application/conference-info+xml"/>
+
+  <mime-type type="application/coreldraw">
+     <alias type="application/x-coreldraw"/>
+     <alias type="application/x-cdr"/>
+     <alias type="application/cdr"/>
+     <alias type="image/x-cdr"/>
+     <alias type="image/cdr"/>
+     <comment>CorelDraw</comment>
+     <comment>cdr: CorelDraw</comment>
+     <comment>des: CorelDraw X4 and newer</comment>
+     <magic priority="60">
+        <match value="RIFF" type="string" offset="0">
+           <match value="CDR" type="string" offset="8" />
+           <match value="cdr" type="string" offset="8" />
+           <match value="DES" type="string" offset="8" />
+           <match value="des" type="string" offset="8" />
+        </match>
+     </magic>
+     <glob pattern="*.cdr"/>
+  </mime-type>
+
+  <mime-type type="application/cpl+xml"/>
+  <mime-type type="application/csta+xml"/>
+  <mime-type type="application/cstadata+xml"/>
+  <mime-type type="application/cu-seeme">
+    <glob pattern="*.cu"/>
+  </mime-type>
+  <mime-type type="application/cybercash"/>
+  <mime-type type="application/dash+xml">
+    <glob pattern="*.mpd" />
+      <magic>
+        <match value="&lt;MPD" type="string" offset="0"/>
+      </magic>
+      <sub-class-of type="application/xml"/>
+  </mime-type>
+  <mime-type type="application/davmount+xml">
+    <glob pattern="*.davmount"/>
+  </mime-type>
+  <mime-type type="application/x-dbf">
+    <!-- this looks unique/precise. It isn't. False positives are common. Keep priority low. -->
+    <magic priority="40">
+<!-- DISABLED FOR QT:       <match value="(?s)^[\\x02\\x03\\x30\\x31\\x32\\x43\\x63\\x83\\x8B\\xCB\\xF5\\xE5\\xFB].[\\x01-\\x0C][\\x01-\\x1F].{4}(?:.[^\\x00]|[\\x41-\\xFF].)(?:[^\\x00\\x01].|.[^\\x00]).{31}(?&lt;=[\\x00][^\\x00]{0,10})[A-Z@+]" type="regex" offset="0"/>-->
+    </magic>
+    <glob pattern="*.dbf"/>
+    <glob pattern="*.dbase"/>
+    <glob pattern="*.dbase3"/>
+  </mime-type>
+
+  <mime-type type="application/dca-rft"/>
+  <mime-type type="application/dec-dx"/>
+  <mime-type type="application/dialog-info+xml"/>
+
+  <mime-type type="application/dicom">
+    <comment>DICOM medical imaging data</comment>
+    <magic priority="50">
+      <match value="DICM" type="string" offset="128"/>
+    </magic>
+  </mime-type>
+
+  <mime-type type="application/dita+xml">
+    <sub-class-of type="application/xml"/>
+    <comment>Darwin Information Typing Architecture</comment>
+  </mime-type>
+
+  <mime-type type="application/x-dvd-ifo">
+    <acronym>IFO</acronym>
+    <comment>DVD information file</comment>
+    <magic priority="70">
+      <match value="DVDVIDEO-VTS" type="string" offset="0"/>
+      <match value="DVDVIDEO-VMG" type="string" offset="0"/>
+    </magic>
+    <glob pattern="*.ifo"/>
+    <glob pattern="*.bup"/>
+  </mime-type>
+
+  <mime-type type="application/x-ebu-stl">
+    <acronym>EBU-STL</acronym>
+    <comment>EBU-STL subtitles</comment>
+    <tika:link>https://tech.ebu.ch/docs/tech/tech3264.pdf</tika:link>
+    <magic priority="70">
+      <match value="STL" type="string" offset="3">
+        <match value=".01" type="string" offset="8" />
+      </match>
+    </magic>
+    <glob pattern="*.stl"/> <!-- Re-enabled by Qt -->
+  </mime-type>
+
+  <mime-type type="application/ecmascript">
+    <glob pattern="*.ecma"/>
+  </mime-type>
+  <mime-type type="application/edi-consent"/>
+  <mime-type type="application/edi-x12"/>
+  <mime-type type="application/edifact"/>
+  <mime-type type="application/emma+xml">
+    <glob pattern="*.emma"/>
+  </mime-type>
+  <mime-type type="application/envi.hdr">
+    <glob pattern="*.hdr"/>
+  </mime-type>
+  <mime-type type="application/epp+xml"/>
+
+  <mime-type type="application/epub+zip">
+    <acronym>EPUB</acronym>
+    <comment>Electronic Publication</comment>
+    <magic priority="50">
+      <match value="PK\003\004" type="string" offset="0">
+        <match value="mimetypeapplication/epub+zip" type="string" offset="30"/>
+      </match>
+    </magic>
+    <glob pattern="*.epub"/>
+  </mime-type>
+
+  <mime-type type="application/eshop"/>
+  <mime-type type="application/example"/>
+  <mime-type type="application/fastinfoset"/>
+  <mime-type type="application/fastsoap"/>
+
+  <mime-type type="application/fits">
+    <acronym>FITS</acronym>
+    <comment>Flexible Image Transport System</comment>
+    <tika:link>http://www.digitalpreservation.gov/formats/fdd/fdd000317.shtml</tika:link>
+    <magic priority="50">
+      <match value="SIMPLE  =                    T" type="string" offset="0"/>
+      <match value="SIMPLE  =                T" type="string" offset="0"/>
+    </magic>
+    <glob pattern="*.fits"/>
+    <glob pattern="*.fit"/>
+    <glob pattern="*.fts"/>
+  </mime-type>
+
+  <mime-type type="application/font-tdpfr">
+    <glob pattern="*.pfr"/>
+  </mime-type>
+  <mime-type type="application/h224"/>
+  <mime-type type="application/http"/>
+  <mime-type type="application/hyperstudio">
+    <glob pattern="*.stk"/>
+  </mime-type>
+  <mime-type type="application/ibe-key-request+xml"/>
+  <mime-type type="application/ibe-pkg-reply+xml"/>
+  <mime-type type="application/ibe-pp-data"/>
+  <mime-type type="application/iges"/>
+
+  <mime-type type="application/illustrator">
+    <acronym>AI</acronym>
+    <comment>Adobe Illustrator Artwork</comment>
+    <tika:link>http://en.wikipedia.org/wiki/Adobe_Illustrator_Artwork</tika:link>
+    <glob pattern="*.ai"/>
+    <sub-class-of type="application/pdf"/>
+  </mime-type>
+  <mime-type type="application/illustrator+ps">
+    <acronym>AI</acronym>
+    <comment>Adobe Illustrator Artwork -- the older postscript based AI files</comment>
+    <!-- we can do more specific versions by focusing on the integer in the regex below -->
+    <tika:link>http://justsolve.archiveteam.org/wiki/Adobe_Illustrator_Artwork</tika:link>
+    <magic priority="60">
+<!-- DISABLED FOR QT:       <match value="[\r\n]%AI5_FileFormat [1-4][\r\n]" type="regex" offset="0:8192"/>-->
+    </magic>
+    <sub-class-of type="application/postscript"/>
+  </mime-type>
+
+  <mime-type type="application/im-iscomposing+xml"/>
+  <mime-type type="application/index"/>
+  <mime-type type="application/index.cmd"/>
+  <mime-type type="application/index.obj"/>
+  <mime-type type="application/index.response"/>
+  <mime-type type="application/index.vnd"/>
+
+  

@@ -1,0 +1,2231 @@
+{
+  "status": "PREBUILD-DRAFT-NOT-APPROVED",
+  "source_archive_sha256": "6dcfbca271d76a6502741a2c0dc6fc98ef7dd0b7b4cfd0abcebb285a86a26f33",
+  "rows": [
+    {
+      "id": "emoji-segmenter",
+      "attribution_path": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/emoji-segmenter/qt_attribution.json",
+      "attribution": {
+        "Id": "emoji-segmenter",
+        "Name": "Emoji Segmenter",
+        "QDocModule": "qtgui",
+        "QtUsage": "Used in QtGui for parsing complex emoji sequences. Can be configured using the -emojisegmenter option.",
+        "SecurityCritical": true,
+        "Description": "A parser for emoji sequences.",
+        "Homepage": "https://github.com/google/emoji-segmenter",
+        "Version": "0.4.0",
+        "DownloadLocation": "https://github.com/google/emoji-segmenter/releases/tag/0.4.0",
+        "PURL": "pkg:github/google/emoji-segmenter@$<VERSION>",
+        "Comment": "no relevant CPE found",
+        "License": "Apache License 2.0",
+        "LicenseId": "Apache-2.0",
+        "Copyright": "Copyright 2019 Google LLC"
+      },
+      "source_files": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/emoji-segmenter/CONTRIBUTING.md",
+          "sha256": "7e65a305344a9c8c02fa901eae0a5498d2262a883c734fe75bcf3f9359dd519e",
+          "bytes": 1101,
+          "evidence_file": "source-dbd2437a157705-CONTRIBUTING.md"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/emoji-segmenter/NEWS",
+          "sha256": "1fe91e5bd21c02acb17437abb04a52b52dd57b570a53511f32e39da3a9fb3ede",
+          "bytes": 645,
+          "evidence_file": "source-9391a6f54f9ad2-NEWS"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/emoji-segmenter/README.md",
+          "sha256": "8fc6c12a42d8911b9d72f30bebd8032b28b096a2a2f99ec7cb8a297f1b9d62ba",
+          "bytes": 3605,
+          "evidence_file": "source-3a50518a2855a0-README.md"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/emoji-segmenter/REUSE.toml",
+          "sha256": "9cb410eb8ffc433892bdc34ffc4bf44a493628827124b59dce90d6101b8737d9",
+          "bytes": 158,
+          "evidence_file": "source-a9637a6d574dda-REUSE.toml"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/emoji-segmenter/emoji_presentation_scanner.c",
+          "sha256": "c4ac2e9b1b7ac4df87854729d64036347adc80f6183f8bec9603a3ac7471cf7c",
+          "bytes": 5723,
+          "evidence_file": "source-22651b753a6909-emoji_presentation_scanner.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/emoji-segmenter/patch/0001-Compile-with-warnings-are-errors.patch",
+          "sha256": "12be519882ce6da65d0deb7b0a0da3205e015c765e0fac600ef6b47e9893650c",
+          "bytes": 877,
+          "evidence_file": "source-67eb811863e594-0001-Compile-with-warnings-are-errors.patch"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/emoji-segmenter/qt_attribution.json",
+          "sha256": "9a980fc0f9e478d2a7e9a571d4cd234c259aaf8e2ea3fb60a0a7cf02cc3c3700",
+          "bytes": 682,
+          "evidence_file": "source-14f2c52d717fed-qt_attribution.json"
+        }
+      ],
+      "source_prefix": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/emoji-segmenter/",
+      "declared_notice_members": [],
+      "declared_notice_copies": [],
+      "source_header_samples": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/emoji-segmenter/emoji_presentation_scanner.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/22651b753a69__emoji_presentation_scanner.c.header.txt",
+          "source_sha256": "c4ac2e9b1b7ac4df87854729d64036347adc80f6183f8bec9603a3ac7471cf7c",
+          "header_sha256": "9a212de1287a39dfdc44dac50131a6874f1d261fe22e82148941bd3878f6668f",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        }
+      ],
+      "source_notice_review": "生成Cの先頭にGoogle2019/Apache2.0の許諾・免責と元rl名を確認。",
+      "wheel_correspondence_review": "QtGui内で定数表4組（27/85/24/24 bytes）がソースと完全一致。内部データの対応根拠で、全機械語/生成工具の一致ではない。",
+      "before_build_remaining": "Apache原文と著作権、生成前入力の提供範囲を最終告知へ統合。",
+      "status": "source notice inspected; final applicability/integration not approved"
+    },
+    {
+      "id": "libjpeg",
+      "attribution_path": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/qt_attribution.json",
+      "attribution": {
+        "Id": "libjpeg",
+        "Name": "LibJPEG-turbo",
+        "QDocModule": "qtgui",
+        "QtUsage": "Used in the qjpeg image plugin. Configure with -system-libjpeg or -no-libjpeg to avoid.",
+        "SecurityCritical": true,
+        "Description": "The Independent JPEG Group's JPEG software",
+        "Homepage": "http://libjpeg-turbo.virtualgl.org/",
+        "Version": "3.2.0",
+        "DownloadLocation": "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.2.0/libjpeg-turbo-3.2.0.tar.gz",
+        "PURL": "pkg:github/libjpeg-turbo/libjpeg-turbo@$<VERSION>",
+        "CPE": "cpe:2.3:a:libjpeg-turbo:libjpeg-turbo:$<VERSION>:*:*:*:*:*:*:*",
+        "License": "Independent JPEG Group License and BSD 3-Clause \"New\" or \"Revised\" License",
+        "LicenseId": "IJG AND BSD-3-Clause",
+        "LicenseFiles": [
+          "LICENSE",
+          "ijg-license.txt"
+        ],
+        "CopyrightFile": "COPYRIGHT.txt"
+      },
+      "source_files": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/CMakeLists.txt",
+          "sha256": "e29062ca55a750d1e6988f1c240e080f0d4533a7db38849cc127765199ba0304",
+          "bytes": 4151,
+          "evidence_file": "source-fcb7d8cbcd1809-CMakeLists.txt"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/COPYRIGHT.txt",
+          "sha256": "e5b349c6a98d997a8d0f5fcfe5cc900b1f76bbc32743674c52a70981498748c0",
+          "bytes": 606,
+          "evidence_file": "source-2fbef8e2bd06dc-COPYRIGHT.txt"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/ChangeLog.md",
+          "sha256": "abe27b81f1ab48bb7c5376630aa13c3b3d1963fe5601756b3065fa0b734232b8",
+          "bytes": 137340,
+          "evidence_file": "source-d4125b8fd256c4-ChangeLog.md"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/LICENSE",
+          "sha256": "ba6bceebcba0fdd35488477c2cca8c4632ce82c74dbfbc87d886ce6fc4433579",
+          "bytes": 6077,
+          "evidence_file": "source-058b13cc12014e-LICENSE"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/README.ijg",
+          "sha256": "75815e3bf6484201a3c3d17a1bbf10f2e8e3237f84df10a2357ea896db2a81d6",
+          "bytes": 12799,
+          "evidence_file": "source-9dc37a8d7f6ad6-README.ijg"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/README.md",
+          "sha256": "a44ba17ac66c57edaf0ea7c6e4b31358f08322c780e4e6af092082abb3e20793",
+          "bytes": 17722,
+          "evidence_file": "source-a11e9ef0d0ffb1-README.md"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/REUSE.toml",
+          "sha256": "a2bc6490e117f92943d898852c7e201470cd4dec6be615643e3f5e3c46fa967e",
+          "bytes": 1072,
+          "evidence_file": "source-089b1ed45df517-REUSE.toml"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/generate_copyright.py",
+          "sha256": "76dba1ae2342e5edcf0d75423eacd3c017640fa4b7cc623f89dc34fe473e9d27",
+          "bytes": 3869,
+          "evidence_file": "source-243f608aed29ae-generate_copyright.py"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/ijg-license.txt",
+          "sha256": "1cb448f5e2e6d3aca60943f4eee1a04675628dc0266a074a42bc1560ebc28d61",
+          "bytes": 1815,
+          "evidence_file": "source-d17104f03359e1-ijg-license.txt"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/import_from_libjpeg_tarball.sh",
+          "sha256": "ba5356ed6b83e48dc2e617d86db4b4be189ce494762dc201815598fbcd873900",
+          "bytes": 2799,
+          "evidence_file": "source-1aa638233cac7c-import_from_libjpeg_tarball.sh"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/qt_attribution.json",
+          "sha256": "ed7cb7abdd9124f664acd26cf552ba821c8cf236c4cd34a6737f202215bd41bc",
+          "bytes": 859,
+          "evidence_file": "source-62d637ed701391-qt_attribution.json"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/change.log",
+          "sha256": "a4f2c13e137c5aaf51a0c50c7ded9d10ed7c3297cfb780388d51b9e084905b4c",
+          "bytes": 12879,
+          "evidence_file": "source-a2cd03b2d7dbab-change.log"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jaricom.c",
+          "sha256": "fa144de494da46aa685379a8a0f6f59acaef7a2bb282cbf738a0a8070e1d527e",
+          "bytes": 5132,
+          "evidence_file": "source-8629edc0eb4531-jaricom.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcapimin.c",
+          "sha256": "30b65c9f93c189c5b1a4df665321fb808fc1ae05446ead2cf97b6e9fd462025a",
+          "bytes": 11051,
+          "evidence_file": "source-b0e58631a01fca-jcapimin.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcapistd.c",
+          "sha256": "23c957f45c9d89ceae8fd61b0709469bb45f080b0ab9b795955870a31116ae9c",
+          "bytes": 7145,
+          "evidence_file": "source-9395104d9d7e21-jcapistd.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcarith.c",
+          "sha256": "76b5a23029a6c44f063a35c29c4a5cadd13930e931e83c624d9e2d872e8ce750",
+          "bytes": 29668,
+          "evidence_file": "source-bbaa589708ce7a-jcarith.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jccoefct.c",
+          "sha256": "6813380766fbfdc60914f2c0887d0b0e07bee90bce27b9c84a2bde90c43725bc",
+          "bytes": 18480,
+          "evidence_file": "source-f19ed0d770cfbe-jccoefct.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jccolext.c",
+          "sha256": "fd9227c13a81a40c55dc0d2787845aefe8cbc417e72a398ec64c9428095df4cd",
+          "bytes": 4666,
+          "evidence_file": "source-8d83195d370208-jccolext.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jccolor.c",
+          "sha256": "d33cb8833ea60647a6c0e8d11d8724d05933fd7f2d876fab39b7b4c221481904",
+          "bytes": 21368,
+          "evidence_file": "source-102f8f6ef895bd-jccolor.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcdctmgr.c",
+          "sha256": "884796ccc1775ffb79c35c0933c462929a197552f70afcbdba1e995ebfdc9dc2",
+          "bytes": 24043,
+          "evidence_file": "source-ca870bb81f79d9-jcdctmgr.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcdiffct.c",
+          "sha256": "b4f5817a8b4138ce6c7ceb323ea5dfc93bf756cee0ee5bb48dd154be04860ef4",
+          "bytes": 15125,
+          "evidence_file": "source-0f99f116f1b1ac-jcdiffct.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jchuff.c",
+          "sha256": "7e79a144f3eb36f6e53d9a8972a111fd2cdf68e64f52bfbd2dcedd972534b4a4",
+          "bytes": 36920,
+          "evidence_file": "source-864f74cea8b615-jchuff.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jchuff.h",
+          "sha256": "00cb688c0c824fda5e76e4a2acacbd74fb223b64f0c750174a3d5413787e7b34",
+          "bytes": 1874,
+          "evidence_file": "source-5636bd6b72bb95-jchuff.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcicc.c",
+          "sha256": "021f073e040e474ea73e3b6785c0373cf289fd2faa87895832ae623d9c0e0b39",
+          "bytes": 4072,
+          "evidence_file": "source-4d0ac1a86ca6c3-jcicc.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcinit.c",
+          "sha256": "8856cb2f7de404012e618e8bb9f82ce2b9ac698afc5aca300e693dd72960b2da",
+          "bytes": 5353,
+          "evidence_file": "source-369ca54bb043f7-jcinit.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jclhuff.c",
+          "sha256": "6fc4569ad078429d77349660cf26715e10cb6956488ac6652019f6a3227d0178",
+          "bytes": 18677,
+          "evidence_file": "source-2859ec6e527dd7-jclhuff.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jclossls.c",
+          "sha256": "c1e8cabb1e2bdb57562d710900448b47bc4d0b586fcba36e72dcbbe4643c58ca",
+          "bytes": 9303,
+          "evidence_file": "source-bde79e758659d3-jclossls.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcmainct.c",
+          "sha256": "af40fc22b948ca05ac24fae27d7aa3f9fcb1388a47d5fcdff5a9d37b989ba8eb",
+          "bytes": 6064,
+          "evidence_file": "source-4155dccbdb81c5-jcmainct.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcmarker.c",
+          "sha256": "713a3acfa3ae737b83a46ac0d5e176f2fb1bf83bf4d1868e8bd5c5f87b8f187e",
+          "bytes": 17896,
+          "evidence_file": "source-5c0a1bb0a3d638-jcmarker.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcmaster.c",
+          "sha256": "543f97c76b36356bc8753552bd38be4539686733806cfbd27416991419465d77",
+          "bytes": 28382,
+          "evidence_file": "source-cc852029a8c9ee-jcmaster.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcmaster.h",
+          "sha256": "c755ce4562022a93a756814727f9bf3c61606673d79233f8c6ae1bbef957083a",
+          "bytes": 1376,
+          "evidence_file": "source-47f77ba9c0cc8a-jcmaster.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcomapi.c",
+          "sha256": "f7987d316f0aa7ae36273a33199018ee494e111de913e0098734161390207a23",
+          "bytes": 9012,
+          "evidence_file": "source-1fb155989b09c0-jcomapi.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jconfig.h",
+          "sha256": "4ccda50312651ea2ba5ec8b5e5f79603e0b928558b58165cb47ce4113d6bbb72",
+          "bytes": 359,
+          "evidence_file": "source-b2f0e366dcbf3d-jconfig.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jconfig.h.in",
+          "sha256": "b47159e0fb3486c1a4033d06494c2a399290da20522a2e2a460b18c95e28cab2",
+          "bytes": 2125,
+          "evidence_file": "source-5486657615e330-jconfig.h.in"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jconfigint.h",
+          "sha256": "4ae43ccf108a1b1a9b74de43be18a43389a7017999334adeeb049508005efb81",
+          "bytes": 922,
+          "evidence_file": "source-402b843cab7410-jconfigint.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jconfigint.h.in",
+          "sha256": "01e68c1fa447f79a48c79f478fea361cfa5d5f187a12a67a85d2ff6e5b5ade59",
+          "bytes": 1874,
+          "evidence_file": "source-696c7462fe6461-jconfigint.h.in"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcparam.c",
+          "sha256": "653c5dff550c3947e32f6702c8f2f650d490c6390867c108efef2042ec547fdd",
+          "bytes": 19640,
+          "evidence_file": "source-7113e7f56c7662-jcparam.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcphuff.c",
+          "sha256": "21a8377ad47d53e165b33eda71f2d3325f2dddfb2b5cd0fa9312cba01a247e7c",
+          "bytes": 32786,
+          "evidence_file": "source-351f3ed6d2d5dd-jcphuff.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcprepct.c",
+          "sha256": "fb6d2ec1055a724fe63883c06c0c83f134652213f9e81f3626f844ae8fd5793a",
+          "bytes": 15126,
+          "evidence_file": "source-a558c81cb0835f-jcprepct.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcsample.c",
+          "sha256": "011418104be611f39d6dbfaddef867492a96b945fb4be5c41da1b71cdcdd36d7",
+          "bytes": 20320,
+          "evidence_file": "source-f24d9bc197e86f-jcsample.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jctrans.c",
+          "sha256": "a2abab67d3e603308235bfbc783ddc55bec9d80bc8091b232e2fc35501f3da1f",
+          "bytes": 15276,
+          "evidence_file": "source-dbdb55fa88f445-jctrans.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdapimin.c",
+          "sha256": "7a76bd031d46be14639442e439c390712e4f831783639b0f93a3dc9fb689e466",
+          "bytes": 13849,
+          "evidence_file": "source-6e0d167e92553b-jdapimin.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdapistd.c",
+          "sha256": "23a564be7b26ae60a7d3b595e2ee2081087d5c32e14820c4572e9c55795e0dfe",
+          "bytes": 28933,
+          "evidence_file": "source-182e83ce3779c0-jdapistd.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdarith.c",
+          "sha256": "a0291db89f2a057eefcf234ccf02ad1ea385c00759af13fddec914bab0cfe0d1",
+          "bytes": 25539,
+          "evidence_file": "source-28cbcee84831c2-jdarith.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdatadst.c",
+          "sha256": "03a926f43174a58ecb74c6219a51d460699dddec616a8f8b196eb3b3860d805d",
+          "bytes": 9879,
+          "evidence_file": "source-b346b106d99eb7-jdatadst.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdatasrc.c",
+          "sha256": "25b8689e08ec083106e13a9c5a599b7d79dcf1f182d4565b1600eac014b874d1",
+          "bytes": 10087,
+          "evidence_file": "source-91a651208512c6-jdatasrc.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdcoefct.c",
+          "sha256": "4a095f1c4ebe08ce93b31d066cd7fb268b9f4fd04d05284dbb0978d1c5edde3a",
+          "bytes": 36157,
+          "evidence_file": "source-6b1928fcf0ba2c-jdcoefct.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdcoefct.h",
+          "sha256": "a62860fa7914706e571ea12541bd235f1b320150df7c855a210afdc33047146a",
+          "bytes": 2873,
+          "evidence_file": "source-be2e9b6f9c51df-jdcoefct.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdcol565.c",
+          "sha256": "fc5c3f16be4dbb4f42b6b378570263b56140485dfca3febdf8cd9c4db32565cc",
+          "bytes": 11909,
+          "evidence_file": "source-bf76ee82e80e4b-jdcol565.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdcolext.c",
+          "sha256": "d29fd072d383a3cb96f6004614131185728ad0a31c142ae42d2de53588027593",
+          "bytes": 4390,
+          "evidence_file": "source-d1de6ac4512456-jdcolext.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdcolor.c",
+          "sha256": "68eb80f217675a4d357001b107307d77f57e69fdd26bd9f2e07a9730790a54a3",
+          "bytes": 28248,
+          "evidence_file": "source-e6e141bff476c4-jdcolor.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdct.h",
+          "sha256": "53fb2c602766c854ab8095d732d8dbfd84e5d8d72b29e7aeec7eb19748d81c28",
+          "bytes": 11111,
+          "evidence_file": "source-804ac93e0b1c39-jdct.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jddctmgr.c",
+          "sha256": "3e2b1b8940d38bf69e13e745893eb864a983d02d59dc2902a6c29740eb03117d",
+          "bytes": 11687,
+          "evidence_file": "source-f5b3b6bc876b83-jddctmgr.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jddiffct.c",
+          "sha256": "3bf8fedd2b3b45607f23e93a65077b6fc4daa6ca56026853cbb7005225407205",
+          "bytes": 13681,
+          "evidence_file": "source-3c3a5a68e7c9d2-jddiffct.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdhuff.c",
+          "sha256": "712ecd1b7e2b520ce0648cb742f1dad89f675ab8871dc054227cb28aed84b377",
+          "bytes": 26826,
+          "evidence_file": "source-f9d484a7916585-jdhuff.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdhuff.h",
+          "sha256": "59acd799211b415f821890e1947d7a7a4c9dfb7e15911cc8b413395d47881b43",
+          "bytes": 9903,
+          "evidence_file": "source-de4cef45d11fc7-jdhuff.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdicc.c",
+          "sha256": "f605e2337afa011e020eb84f9c2f5a211f30d380621e97206d07216e4f78f661",
+          "bytes": 5409,
+          "evidence_file": "source-00a8cbb7bdf03b-jdicc.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdinput.c",
+          "sha256": "b3c155ed22ce4b49431d4900392f09354275daa59602450fafc6b9cd7adfcc13",
+          "bytes": 15218,
+          "evidence_file": "source-419e72765e0438-jdinput.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdlhuff.c",
+          "sha256": "ed965925b5961236b6fcd3a7870ea159386b93bbefbc97cd4fb465ad72446da8",
+          "bytes": 10030,
+          "evidence_file": "source-ef4a6f2eb32897-jdlhuff.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdlossls.c",
+          "sha256": "d20d42182813833fb051cff5e733415daa18f1e0fa3fbe01aaf7785b4af9af4a",
+          "bytes": 8924,
+          "evidence_file": "source-6619c7bb65fbff-jdlossls.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmainct.c",
+          "sha256": "995f8132b3a56d251716ef67486d428d7aacf44aac0271d77624de988c55b6b2",
+          "bytes": 20620,
+          "evidence_file": "source-46a453f1caca57-jdmainct.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmainct.h",
+          "sha256": "a47728a202bac48caf2f38a8e99e23e3242ac580cf97606f3103c5025557e6a6",
+          "bytes": 2679,
+          "evidence_file": "source-74a55e03bbeffa-jdmainct.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmarker.c",
+          "sha256": "f1ea7316e9f05c99929bfc70afebecc505b76fa14836c425d60ad33179771033",
+          "bytes": 42678,
+          "evidence_file": "source-2a5c8f0693dc59-jdmarker.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmaster.c",
+          "sha256": "657be679590bfdc5f1d47d345628cba37607cfa1118fa747c9780c8350e3e875",
+          "bytes": 35418,
+          "evidence_file": "source-3dd30e1d5183a9-jdmaster.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmaster.h",
+          "sha256": "2ad7689d61273e464866be6b6b9ad227e70706379fd7b725b5c4535285fa29a4",
+          "bytes": 788,
+          "evidence_file": "source-d19c6416611afe-jdmaster.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmerge.c",
+          "sha256": "27d412d4272206cc00396acd10aa371a1607fe7f79eb4310acfbb8e8e0ad10da",
+          "bytes": 18812,
+          "evidence_file": "source-57b9aa3b146bc4-jdmerge.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmerge.h",
+          "sha256": "4b5e10488c3d8ac982abda2e9e21563f75f25c6e0daa914cad32be9224b11d05",
+          "bytes": 1664,
+          "evidence_file": "source-c68aa6d871b3a4-jdmerge.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmrg565.c",
+          "sha256": "576f1d8d1b02208029033fd5cb48a267875fed59b8c6513d4738a5a846200ac0",
+          "bytes": 11138,
+          "evidence_file": "source-e5f10c49c7ec3b-jdmrg565.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmrgext.c",
+          "sha256": "f91e71adbf16b4f874518648b433318ffbc14e8522a7d58fe68c8f34d57bdd07",
+          "bytes": 5805,
+          "evidence_file": "source-9fcbe44d96d425-jdmrgext.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdphuff.c",
+          "sha256": "fdaf536fed994d433b08a2f0bc39b85bc100d81f465e1164c78caabcfface7d3",
+          "bytes": 22244,
+          "evidence_file": "source-07f7097cca0457-jdphuff.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdpostct.c",
+          "sha256": "42feb659a302a4a1aab2af5fac37b000ec7640d34f4b306f656acd63ddca2315",
+          "bytes": 11992,
+          "evidence_file": "source-1df17334dba6df-jdpostct.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdsample.c",
+          "sha256": "293635c9131416845a581e572f6d03645959d5463b2614ca093f952d632102ac",
+          "bytes": 19394,
+          "evidence_file": "source-ca421680ea5786-jdsample.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdsample.h",
+          "sha256": "2149487f05a459a4ebba48723780a8ee5a912f34ddb3e4ed6f4a984be922ade7",
+          "bytes": 1835,
+          "evidence_file": "source-ea8149ab861526-jdsample.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdtrans.c",
+          "sha256": "b624447657d4f01737efc0b846285a19974f478a21418af1f6c1143c24bcf16c",
+          "bytes": 5624,
+          "evidence_file": "source-740c11063a041b-jdtrans.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jerror.c",
+          "sha256": "1c3661997d30898f587a2765e934b23e706fabb7e4c316490348843f2003d0a0",
+          "bytes": 7566,
+          "evidence_file": "source-a29f23b11fcc23-jerror.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jerror.h",
+          "sha256": "b4e8697b3d2e06071f23a3f32c50f62f782cdee03f7b82e4595eed5e33d67288",
+          "bytes": 16163,
+          "evidence_file": "source-68a955e5953fbe-jerror.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jfdctflt.c",
+          "sha256": "30098eb7e20b4ae42bc7ddc16552c6de59cb5cb045059d5a138c4b1b2b8f4739",
+          "bytes": 5588,
+          "evidence_file": "source-3f6b65968ba638-jfdctflt.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jfdctfst.c",
+          "sha256": "eacf0404692455247cd836ff4e7de0c715edde4cd23c4434eb0028824e677c10",
+          "bytes": 7793,
+          "evidence_file": "source-8e6124d801a7df-jfdctfst.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jfdctint.c",
+          "sha256": "f438c4ef5b5ed70d67e324174059118395d822edc4b5a5c0c783857244b74fb0",
+          "bytes": 11515,
+          "evidence_file": "source-7b6bf9f9148bc1-jfdctint.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jidctflt.c",
+          "sha256": "1e0c8f06f497f9040df5ab747f30b2b91ba7fd4f494cd90d5362eda17e611fa8",
+          "bytes": 9548,
+          "evidence_file": "source-e8bf0504478b86-jidctflt.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jidctfst.c",
+          "sha256": "5c0e4072a19f05363bb737f227f401eeb351cf0739f9a8ef16dad2627913939f",
+          "bytes": 14234,
+          "evidence_file": "source-35b410c6e0a811-jidctfst.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jidctint.c",
+          "sha256": "4ba1bd508d16b3b0d5849a7e7b9dcab79c24cd1701edb054605ef47f5ef8f239",
+          "bytes": 107328,
+          "evidence_file": "source-7f42c37c8d314b-jidctint.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jidctred.c",
+          "sha256": "4987b9df851197e9eecd61ba2bf3aa1af34f79aa4da85c50c1873c163dd64a6a",
+          "bytes": 15374,
+          "evidence_file": "source-b12924cd9a3989-jidctred.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jinclude.h",
+          "sha256": "5b9f31bb7fb5bee3b7c8717ec801f2afe6e813272b502bc3bc96f6324fcfa3e2",
+          "bytes": 3188,
+          "evidence_file": "source-8187ea4229ea38-jinclude.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jlossls.h",
+          "sha256": "248616df72adcab8aaf8c1dd2cdf6d798bab96a91aea03945d2dea94837eaf18",
+          "bytes": 3235,
+          "evidence_file": "source-d39ad970aeba26-jlossls.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jmemmgr.c",
+          "sha256": "635c7e0cca4fc259ee1038c4d015725f7fe8cceed3c7a08e3184aa990d375d8f",
+          "bytes": 50107,
+          "evidence_file": "source-b2ad492b379c86-jmemmgr.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jmemnobs.c",
+          "sha256": "328ff841f437fa7c2de846c4e295e9145cc628b9041aed718a06eb087c55786c",
+          "bytes": 2680,
+          "evidence_file": "source-79bb166ad90120-jmemnobs.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jmemsys.h",
+          "sha256": "441fd978684f5bb8f4b1a512221def17948aab73c507b98b8602cc0bda360d96",
+          "bytes": 6692,
+          "evidence_file": "source-9d21dfe31993c0-jmemsys.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jmorecfg.h",
+          "sha256": "b86b4abf452d39b737cb45503591e04e9ca38c5fd0e90d429387d0464005a28b",
+          "bytes": 14622,
+          "evidence_file": "source-742aae8fd20e22-jmorecfg.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jpeg_nbits.c",
+          "sha256": "b79ca4826d23d3a9124fc7b28cce2eacc86a460fa351e3a05eb8378e9bb0f00d",
+          "bytes": 271113,
+          "evidence_file": "source-8cc0dd9f4c8f87-jpeg_nbits.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jpeg_nbits.h",
+          "sha256": "82ebb5a854c908d07bf77a03a9fb749f49561f7eb6cb6f80a2621a3d0f8d33f5",
+          "bytes": 1729,
+          "evidence_file": "source-95ca559b83fe10-jpeg_nbits.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jpegapicomp.h",
+          "sha256": "7ee0ac1b9307c03a6a715d46f89f611abd28c5795b9b9a410255df3a8d1db92d",
+          "bytes": 1133,
+          "evidence_file": "source-2e015e87728166-jpegapicomp.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jpegint.h",
+          "sha256": "d0f38e87598148afd39701171f25170f1d720029f9530fa17dd7312ff2122ec5",
+          "bytes": 30524,
+          "evidence_file": "source-8821ee5ce568c7-jpegint.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jpeglib.h",
+          "sha256": "dc3e8220f34b7e9f9e48620f5cb8dc070834feb3214bb12bbad78478ebb29e60",
+          "bytes": 55794,
+          "evidence_file": "source-0850edf34ac102-jpeglib.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jquant1.c",
+          "sha256": "c132b33829f8fa3806798e7783e64ee8e986a4ee04db3e8a100159675aae5eaf",
+          "bytes": 32887,
+          "evidence_file": "source-9649f3fcd316c6-jquant1.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jquant2.c",
+          "sha256": "77ffa8a28129ded74b5de8d21925a3f7fef6c73e6f4fa6b87a693f5d40f7c927",
+          "bytes": 49272,
+          "evidence_file": "source-912bb68502782d-jquant2.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jsamplecomp.h",
+          "sha256": "f79c80f1b05a50beb0eaed18e84dfcf0b3b1a842eeaf0c28e8e3c5b37a4ccb4a",
+          "bytes": 12962,
+          "evidence_file": "source-5741d8b770b3f5-jsamplecomp.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jstdhuff.c",
+          "sha256": "79e2cbf605326ce6349a60f58695b97d574510662f8b089474f30c07bf06be28",
+          "bytes": 5355,
+          "evidence_file": "source-e6a1a7c26507d2-jstdhuff.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jutils.c",
+          "sha256": "70c0ba2953ca8f4abd6858d8ed71aa3266f37d529313b8e0cdfa0d1a43e31b2e",
+          "bytes": 4129,
+          "evidence_file": "source-154dee800dfb82-jutils.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jversion.h",
+          "sha256": "ebea70b4a1f7392291e49a6b08300396985ce930c314e5e233bae5380c12997d",
+          "bytes": 669,
+          "evidence_file": "source-f3e25ce42db240-jversion.h"
+        }
+      ],
+      "source_prefix": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/",
+      "declared_notice_members": [
+        "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/LICENSE",
+        "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/ijg-license.txt",
+        "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/COPYRIGHT.txt"
+      ],
+      "declared_notice_copies": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/LICENSE",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/058b13cc1201__LICENSE",
+          "sha256": "ba6bceebcba0fdd35488477c2cca8c4632ce82c74dbfbc87d886ce6fc4433579",
+          "bytes": 6077
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/ijg-license.txt",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/d17104f03359__ijg-license.txt",
+          "sha256": "1cb448f5e2e6d3aca60943f4eee1a04675628dc0266a074a42bc1560ebc28d61",
+          "bytes": 1815
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/COPYRIGHT.txt",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/2fbef8e2bd06__COPYRIGHT.txt",
+          "sha256": "e5b349c6a98d997a8d0f5fcfe5cc900b1f76bbc32743674c52a70981498748c0",
+          "bytes": 606
+        }
+      ],
+      "source_header_samples": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jaricom.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/8629edc0eb45__jaricom.c.header.txt",
+          "source_sha256": "fa144de494da46aa685379a8a0f6f59acaef7a2bb282cbf738a0a8070e1d527e",
+          "header_sha256": "ee7365d9f8ace86022e0cf1515dacd522359ec3a5be4a60a449cd68b1f932ef2",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcapimin.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/b0e58631a01f__jcapimin.c.header.txt",
+          "source_sha256": "30b65c9f93c189c5b1a4df665321fb808fc1ae05446ead2cf97b6e9fd462025a",
+          "header_sha256": "75395f70262dd4ac19f6e552e364c306f88358114bb152f6991a951f3bab573d",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcapistd.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/9395104d9d7e__jcapistd.c.header.txt",
+          "source_sha256": "23c957f45c9d89ceae8fd61b0709469bb45f080b0ab9b795955870a31116ae9c",
+          "header_sha256": "db9cf57ed1ee1da94c34a16f07201b9a66826a65f836ebea38633e12a7d6f703",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcarith.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/bbaa589708ce__jcarith.c.header.txt",
+          "source_sha256": "76b5a23029a6c44f063a35c29c4a5cadd13930e931e83c624d9e2d872e8ce750",
+          "header_sha256": "c495bf36cace4a06088f8a88e7feff35bbfe08c36bf06c90b880cdbbe8af4cd9",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jccoefct.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/f19ed0d770cf__jccoefct.c.header.txt",
+          "source_sha256": "6813380766fbfdc60914f2c0887d0b0e07bee90bce27b9c84a2bde90c43725bc",
+          "header_sha256": "a128af1a3697fd14fe8e7d948d3d4a90527bfd979149be86c8abcae09e5d7818",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jccolext.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/8d83195d3702__jccolext.c.header.txt",
+          "source_sha256": "fd9227c13a81a40c55dc0d2787845aefe8cbc417e72a398ec64c9428095df4cd",
+          "header_sha256": "ba439f50b9e469b32506afea761f2a7513d1992654a291360beb74a38aa9a471",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jccolor.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/102f8f6ef895__jccolor.c.header.txt",
+          "source_sha256": "d33cb8833ea60647a6c0e8d11d8724d05933fd7f2d876fab39b7b4c221481904",
+          "header_sha256": "a2325ad2b52873765c6e6a2ded01043e8e3c022802a9f7d54eada3f6389f82ca",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcdctmgr.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/ca870bb81f79__jcdctmgr.c.header.txt",
+          "source_sha256": "884796ccc1775ffb79c35c0933c462929a197552f70afcbdba1e995ebfdc9dc2",
+          "header_sha256": "ae5b74bb005718354bf0fac5693a563d4db51d209d93dbca6e24d7273d606752",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcdiffct.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/0f99f116f1b1__jcdiffct.c.header.txt",
+          "source_sha256": "b4f5817a8b4138ce6c7ceb323ea5dfc93bf756cee0ee5bb48dd154be04860ef4",
+          "header_sha256": "553e1ce4f96c811673625a6c402944c4f47a8f052172167ed187160ccf879de5",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jchuff.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/864f74cea8b6__jchuff.c.header.txt",
+          "source_sha256": "7e79a144f3eb36f6e53d9a8972a111fd2cdf68e64f52bfbd2dcedd972534b4a4",
+          "header_sha256": "c2df3f60e3937826dbdc0254b93ec21fe987b80e34cfb6356f5a1fa41dbdb177",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jchuff.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/5636bd6b72bb__jchuff.h.header.txt",
+          "source_sha256": "00cb688c0c824fda5e76e4a2acacbd74fb223b64f0c750174a3d5413787e7b34",
+          "header_sha256": "25b856b80985eec45c92d3ad1e00df5d559064cd63301081a62f25276d7d26c5",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcicc.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/4d0ac1a86ca6__jcicc.c.header.txt",
+          "source_sha256": "021f073e040e474ea73e3b6785c0373cf289fd2faa87895832ae623d9c0e0b39",
+          "header_sha256": "8ec4bbfa901d99985101c81b1fb9aa19b4a9e06ef19f7800ebd4c2f556d1461b",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcinit.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/369ca54bb043__jcinit.c.header.txt",
+          "source_sha256": "8856cb2f7de404012e618e8bb9f82ce2b9ac698afc5aca300e693dd72960b2da",
+          "header_sha256": "63bcc6b04f9c9ee9f9debf81640605625693002d4acde627604808dd01de05c1",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jclhuff.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/2859ec6e527d__jclhuff.c.header.txt",
+          "source_sha256": "6fc4569ad078429d77349660cf26715e10cb6956488ac6652019f6a3227d0178",
+          "header_sha256": "89c94a6bc549e12b7e425f2613ca4072bb8edf7394331a433099a676a82517c3",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jclossls.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/bde79e758659__jclossls.c.header.txt",
+          "source_sha256": "c1e8cabb1e2bdb57562d710900448b47bc4d0b586fcba36e72dcbbe4643c58ca",
+          "header_sha256": "ddf5969dc428e371a5c8fbe1e0dcadcb35d387b01f7ccf7f2347afeb29fb2a20",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcmainct.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/4155dccbdb81__jcmainct.c.header.txt",
+          "source_sha256": "af40fc22b948ca05ac24fae27d7aa3f9fcb1388a47d5fcdff5a9d37b989ba8eb",
+          "header_sha256": "11ba969526bbfd1c1814fa4a57a709901150a0d5ac00ffeae0fd1ade532102b6",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcmarker.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/5c0a1bb0a3d6__jcmarker.c.header.txt",
+          "source_sha256": "713a3acfa3ae737b83a46ac0d5e176f2fb1bf83bf4d1868e8bd5c5f87b8f187e",
+          "header_sha256": "c9268a86725b156469670ec849d654531858f7b7cb73b556d92d90bdb33b24e0",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcmaster.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/cc852029a8c9__jcmaster.c.header.txt",
+          "source_sha256": "543f97c76b36356bc8753552bd38be4539686733806cfbd27416991419465d77",
+          "header_sha256": "ee20efef1367429fe4c5a7a00531e85fe188ff15d98b522c4f1f9a43836b8ebf",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcmaster.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/47f77ba9c0cc__jcmaster.h.header.txt",
+          "source_sha256": "c755ce4562022a93a756814727f9bf3c61606673d79233f8c6ae1bbef957083a",
+          "header_sha256": "c129770a85cc108c330ad8fc22aabb9909d5c20e0c10d403aa9fa7bcac53b72c",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcomapi.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/1fb155989b09__jcomapi.c.header.txt",
+          "source_sha256": "f7987d316f0aa7ae36273a33199018ee494e111de913e0098734161390207a23",
+          "header_sha256": "9f5bac3b8ad88f194230846f083c150a4c44c17535e9fb91f645bd731499b4d6",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcparam.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/7113e7f56c76__jcparam.c.header.txt",
+          "source_sha256": "653c5dff550c3947e32f6702c8f2f650d490c6390867c108efef2042ec547fdd",
+          "header_sha256": "c5810f69f9a1bc683e72051c2e0d805f935a1f965801349518beeee4acfa15ca",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcphuff.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/351f3ed6d2d5__jcphuff.c.header.txt",
+          "source_sha256": "21a8377ad47d53e165b33eda71f2d3325f2dddfb2b5cd0fa9312cba01a247e7c",
+          "header_sha256": "c44c45a8e5187c1ec38ca2955cf4d9fc38d2331ee7e00698ce9724edd71b23f7",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcprepct.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/a558c81cb083__jcprepct.c.header.txt",
+          "source_sha256": "fb6d2ec1055a724fe63883c06c0c83f134652213f9e81f3626f844ae8fd5793a",
+          "header_sha256": "f76877342257f578fe66769f7a5ac84ed46d26c025af58c5a6a6571ae20a170f",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jcsample.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/f24d9bc197e8__jcsample.c.header.txt",
+          "source_sha256": "011418104be611f39d6dbfaddef867492a96b945fb4be5c41da1b71cdcdd36d7",
+          "header_sha256": "58b965081d9d17636a2db3d25d623aa21418cffc99b8d1c5abc068ee17cee7b8",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jctrans.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/dbdb55fa88f4__jctrans.c.header.txt",
+          "source_sha256": "a2abab67d3e603308235bfbc783ddc55bec9d80bc8091b232e2fc35501f3da1f",
+          "header_sha256": "d51f9106eb9f53a49eefd4913895954894e912b15940a586d39adb939d27dd45",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdapimin.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/6e0d167e9255__jdapimin.c.header.txt",
+          "source_sha256": "7a76bd031d46be14639442e439c390712e4f831783639b0f93a3dc9fb689e466",
+          "header_sha256": "4324ddd194cc341b6ab2345ab77befaf901e9345f12d9cb869bd2a8ec8524c85",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdapistd.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/182e83ce3779__jdapistd.c.header.txt",
+          "source_sha256": "23a564be7b26ae60a7d3b595e2ee2081087d5c32e14820c4572e9c55795e0dfe",
+          "header_sha256": "a6a8a034baafa2f4694db882e4b89f05bbdaf90bc86528df8b1b9292758d8617",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdarith.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/28cbcee84831__jdarith.c.header.txt",
+          "source_sha256": "a0291db89f2a057eefcf234ccf02ad1ea385c00759af13fddec914bab0cfe0d1",
+          "header_sha256": "8e4d876277fe622d13a6a178c2eac1466a405e3f1c4cc0a9eda904891ee42d2c",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdatadst.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/b346b106d99e__jdatadst.c.header.txt",
+          "source_sha256": "03a926f43174a58ecb74c6219a51d460699dddec616a8f8b196eb3b3860d805d",
+          "header_sha256": "21a95c60865ba091b613117f4a335ea1e70f9ee4daaaecce33b8d0275ecc8608",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdatasrc.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/91a651208512__jdatasrc.c.header.txt",
+          "source_sha256": "25b8689e08ec083106e13a9c5a599b7d79dcf1f182d4565b1600eac014b874d1",
+          "header_sha256": "ceda89ee1fdaa19d271cee6d7cf371a652aba980188d22f08b6242c706a93a4a",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdcoefct.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/6b1928fcf0ba__jdcoefct.c.header.txt",
+          "source_sha256": "4a095f1c4ebe08ce93b31d066cd7fb268b9f4fd04d05284dbb0978d1c5edde3a",
+          "header_sha256": "6a7e819e663fb1f274b7241a6708471ac259f46c5d76086da2ed0356c7649d48",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdcoefct.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/be2e9b6f9c51__jdcoefct.h.header.txt",
+          "source_sha256": "a62860fa7914706e571ea12541bd235f1b320150df7c855a210afdc33047146a",
+          "header_sha256": "d728c0d42cd1544a84333b06a93161c8bf3d0e84af0a7e9bada266bd150f401a",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdcol565.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/bf76ee82e80e__jdcol565.c.header.txt",
+          "source_sha256": "fc5c3f16be4dbb4f42b6b378570263b56140485dfca3febdf8cd9c4db32565cc",
+          "header_sha256": "24c2b6a1884b507caa595a0b3a25e141c260c63c1f55d8fa649051ac82a59667",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdcolext.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/d1de6ac45124__jdcolext.c.header.txt",
+          "source_sha256": "d29fd072d383a3cb96f6004614131185728ad0a31c142ae42d2de53588027593",
+          "header_sha256": "6c9d22363d005289440e42ec521c5ca6d17dd82ed73ed0d7db76eee0a0a3bdac",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdcolor.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/e6e141bff476__jdcolor.c.header.txt",
+          "source_sha256": "68eb80f217675a4d357001b107307d77f57e69fdd26bd9f2e07a9730790a54a3",
+          "header_sha256": "40f8c81184741d2d45ae0af31cddc27e10861f222339dcab2b532fed68f85c27",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdct.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/804ac93e0b1c__jdct.h.header.txt",
+          "source_sha256": "53fb2c602766c854ab8095d732d8dbfd84e5d8d72b29e7aeec7eb19748d81c28",
+          "header_sha256": "db01b9c58ab2453740a7c05fde65de4750f71f1082033c2f7a082b7b2b965197",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jddctmgr.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/f5b3b6bc876b__jddctmgr.c.header.txt",
+          "source_sha256": "3e2b1b8940d38bf69e13e745893eb864a983d02d59dc2902a6c29740eb03117d",
+          "header_sha256": "8596d8a568d5fd427448ed1fbb85c3012dd214c10d81f75cba9c910e2c613839",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jddiffct.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/3c3a5a68e7c9__jddiffct.c.header.txt",
+          "source_sha256": "3bf8fedd2b3b45607f23e93a65077b6fc4daa6ca56026853cbb7005225407205",
+          "header_sha256": "7bdba965b07e5782cad84dd7e4ca265a94854f0beb720d4c443e957ed99babb9",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdhuff.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/f9d484a79165__jdhuff.c.header.txt",
+          "source_sha256": "712ecd1b7e2b520ce0648cb742f1dad89f675ab8871dc054227cb28aed84b377",
+          "header_sha256": "44040b82aac5997268ce912b6e2e278ceecfa911fa44d61f297bf1ee595d10de",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdhuff.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/de4cef45d11f__jdhuff.h.header.txt",
+          "source_sha256": "59acd799211b415f821890e1947d7a7a4c9dfb7e15911cc8b413395d47881b43",
+          "header_sha256": "2149e8296bf551a148ec609edf59489614093867f7926c26d9f1427fc0ea3d45",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdicc.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/00a8cbb7bdf0__jdicc.c.header.txt",
+          "source_sha256": "f605e2337afa011e020eb84f9c2f5a211f30d380621e97206d07216e4f78f661",
+          "header_sha256": "ce7df2770e1764ab4e537ece204c46f897990e0b270eccd2b6923eed5a94fdb3",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdinput.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/419e72765e04__jdinput.c.header.txt",
+          "source_sha256": "b3c155ed22ce4b49431d4900392f09354275daa59602450fafc6b9cd7adfcc13",
+          "header_sha256": "60a6c9207462b463c5641a2d6da1f8fe57f353d44670f56d8885e476f5cf879d",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdlhuff.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/ef4a6f2eb328__jdlhuff.c.header.txt",
+          "source_sha256": "ed965925b5961236b6fcd3a7870ea159386b93bbefbc97cd4fb465ad72446da8",
+          "header_sha256": "ff3581ddfd76db6d6c66bc3607e9f9bd674d3affe2220a05aa8d1de7d4a4a73a",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdlossls.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/6619c7bb65fb__jdlossls.c.header.txt",
+          "source_sha256": "d20d42182813833fb051cff5e733415daa18f1e0fa3fbe01aaf7785b4af9af4a",
+          "header_sha256": "4934dcfc75e89575332b1279975b6df2fa1e225760209f3f99e1fc7b2f8b038a",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmainct.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/46a453f1caca__jdmainct.c.header.txt",
+          "source_sha256": "995f8132b3a56d251716ef67486d428d7aacf44aac0271d77624de988c55b6b2",
+          "header_sha256": "56555d01d65f6c03b6f2545598b5d99714d09b6386aea1b58a7fa67498c2001c",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmainct.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/74a55e03bbef__jdmainct.h.header.txt",
+          "source_sha256": "a47728a202bac48caf2f38a8e99e23e3242ac580cf97606f3103c5025557e6a6",
+          "header_sha256": "720f08b42c98b213573bb03cd6805c38ba71a6b56b7a37bcb481d4fcd23be536",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmarker.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/2a5c8f0693dc__jdmarker.c.header.txt",
+          "source_sha256": "f1ea7316e9f05c99929bfc70afebecc505b76fa14836c425d60ad33179771033",
+          "header_sha256": "76b56103dcaae56b3bf83bd0822edba3945f90d7d15fe7ffd9263287a7ed60eb",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmaster.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/3dd30e1d5183__jdmaster.c.header.txt",
+          "source_sha256": "657be679590bfdc5f1d47d345628cba37607cfa1118fa747c9780c8350e3e875",
+          "header_sha256": "a54b3761831875e9001202cd79b1cb49877d1ccdfb7afbe2ba167d2b91432075",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmaster.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/d19c6416611a__jdmaster.h.header.txt",
+          "source_sha256": "2ad7689d61273e464866be6b6b9ad227e70706379fd7b725b5c4535285fa29a4",
+          "header_sha256": "bb1dd2c1ea741ec9e860237c23ebb486c335acb9cfbaf6e2df41764d0bab4511",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmerge.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/57b9aa3b146b__jdmerge.c.header.txt",
+          "source_sha256": "27d412d4272206cc00396acd10aa371a1607fe7f79eb4310acfbb8e8e0ad10da",
+          "header_sha256": "728f86a8e19c85ec230c7fe3cbe9f7ec796ee3860fbb2855f21c102e28cc9788",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmerge.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/c68aa6d871b3__jdmerge.h.header.txt",
+          "source_sha256": "4b5e10488c3d8ac982abda2e9e21563f75f25c6e0daa914cad32be9224b11d05",
+          "header_sha256": "1c388a1eef49a6d75fcd3d0e385a2c67117020eb742cc1e8fa6fe951ad23d7b4",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmrg565.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/e5f10c49c7ec__jdmrg565.c.header.txt",
+          "source_sha256": "576f1d8d1b02208029033fd5cb48a267875fed59b8c6513d4738a5a846200ac0",
+          "header_sha256": "e4ef77d310d9429edb4f1f74bf06dcf2c374aeb35e196e7454f6db307e098a87",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdmrgext.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/9fcbe44d96d4__jdmrgext.c.header.txt",
+          "source_sha256": "f91e71adbf16b4f874518648b433318ffbc14e8522a7d58fe68c8f34d57bdd07",
+          "header_sha256": "8a208de18e82974dc39318204517bb7bcfd56ae45287aec41b84d5d8a502c71c",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdphuff.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/07f7097cca04__jdphuff.c.header.txt",
+          "source_sha256": "fdaf536fed994d433b08a2f0bc39b85bc100d81f465e1164c78caabcfface7d3",
+          "header_sha256": "4edcb8a6f089c1beb979138506b925244d9fe5b139da954deebac82e52f7fad5",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdpostct.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/1df17334dba6__jdpostct.c.header.txt",
+          "source_sha256": "42feb659a302a4a1aab2af5fac37b000ec7640d34f4b306f656acd63ddca2315",
+          "header_sha256": "686dce7d731f4002b7fd9b49f5ed88a91c3cfa47d3cd88c210bf437e13a7c334",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdsample.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/ca421680ea57__jdsample.c.header.txt",
+          "source_sha256": "293635c9131416845a581e572f6d03645959d5463b2614ca093f952d632102ac",
+          "header_sha256": "35ab5734d1b2ba145b87697b2b4410c13eb97c7ba7da22038322492d4900e1fc",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdsample.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/ea8149ab8615__jdsample.h.header.txt",
+          "source_sha256": "2149487f05a459a4ebba48723780a8ee5a912f34ddb3e4ed6f4a984be922ade7",
+          "header_sha256": "5ec4dbe5641651d5ee837039b56d08643f73e44900538121067fd65b4406dea0",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jdtrans.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/740c11063a04__jdtrans.c.header.txt",
+          "source_sha256": "b624447657d4f01737efc0b846285a19974f478a21418af1f6c1143c24bcf16c",
+          "header_sha256": "e421d2fa1b9c05a95991f971cc9726fd24db4ec96f865b3b99650bc3500e3093",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jerror.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/a29f23b11fcc__jerror.c.header.txt",
+          "source_sha256": "1c3661997d30898f587a2765e934b23e706fabb7e4c316490348843f2003d0a0",
+          "header_sha256": "688064e8eab25fd1c527b10ae6bd9ce9c9cc1cf780cda4ac3a11ec9a5946942e",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jerror.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/68a955e5953f__jerror.h.header.txt",
+          "source_sha256": "b4e8697b3d2e06071f23a3f32c50f62f782cdee03f7b82e4595eed5e33d67288",
+          "header_sha256": "71a81ba3866f8c5d63d3b61db64127a6ec9d68236116ad54cace8e93a23b0f20",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jfdctflt.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/3f6b65968ba6__jfdctflt.c.header.txt",
+          "source_sha256": "30098eb7e20b4ae42bc7ddc16552c6de59cb5cb045059d5a138c4b1b2b8f4739",
+          "header_sha256": "ed02c363117f1d168dbd1183c4b75f0b322f0bd8aac24655f0da56b7aa5030aa",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jfdctfst.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/8e6124d801a7__jfdctfst.c.header.txt",
+          "source_sha256": "eacf0404692455247cd836ff4e7de0c715edde4cd23c4434eb0028824e677c10",
+          "header_sha256": "0777ebddefaa75e262b9debdb4b8b8ba0e1f7efe92a4fecb28006eb89a41e790",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jfdctint.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/7b6bf9f9148b__jfdctint.c.header.txt",
+          "source_sha256": "f438c4ef5b5ed70d67e324174059118395d822edc4b5a5c0c783857244b74fb0",
+          "header_sha256": "2d89d077f759ca44a84dde244e4625f4293335f5019ddaf8ecf0e7ae664721a5",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jidctflt.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/e8bf0504478b__jidctflt.c.header.txt",
+          "source_sha256": "1e0c8f06f497f9040df5ab747f30b2b91ba7fd4f494cd90d5362eda17e611fa8",
+          "header_sha256": "0789237736d9c4ed8361d3b60a91652adb7aff15b83d01217cfc99bfb73c58fa",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jidctfst.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/35b410c6e0a8__jidctfst.c.header.txt",
+          "source_sha256": "5c0e4072a19f05363bb737f227f401eeb351cf0739f9a8ef16dad2627913939f",
+          "header_sha256": "2cab4716507267cb23cdf81e40eda62aec1f29791b44455ec56d8f4b5dbe6927",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jidctint.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/7f42c37c8d31__jidctint.c.header.txt",
+          "source_sha256": "4ba1bd508d16b3b0d5849a7e7b9dcab79c24cd1701edb054605ef47f5ef8f239",
+          "header_sha256": "46331480e438cda46e20821f8e3c90998bd14d9eb382b41209cfe8e450096977",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jidctred.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/b12924cd9a39__jidctred.c.header.txt",
+          "source_sha256": "4987b9df851197e9eecd61ba2bf3aa1af34f79aa4da85c50c1873c163dd64a6a",
+          "header_sha256": "0019d00df3b643dd67b51fdddf86198185666d1d5cdccabbab3a101194c33581",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jinclude.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/8187ea4229ea__jinclude.h.header.txt",
+          "source_sha256": "5b9f31bb7fb5bee3b7c8717ec801f2afe6e813272b502bc3bc96f6324fcfa3e2",
+          "header_sha256": "9a2440690f8944edac68c33005abf384b1b46de4a5466b44624fdad668cfde7b",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jlossls.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/d39ad970aeba__jlossls.h.header.txt",
+          "source_sha256": "248616df72adcab8aaf8c1dd2cdf6d798bab96a91aea03945d2dea94837eaf18",
+          "header_sha256": "aff95abc811632d2b545c169771bcf19628d8a2922ac6978a110081df42087ee",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jmemmgr.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/b2ad492b379c__jmemmgr.c.header.txt",
+          "source_sha256": "635c7e0cca4fc259ee1038c4d015725f7fe8cceed3c7a08e3184aa990d375d8f",
+          "header_sha256": "78279b1c70af312cf7cd1fed66fc3b0b4eed9c787b64df14e1308e53040b7b12",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jmemnobs.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/79bb166ad901__jmemnobs.c.header.txt",
+          "source_sha256": "328ff841f437fa7c2de846c4e295e9145cc628b9041aed718a06eb087c55786c",
+          "header_sha256": "aef413e2cd8f94cf0801794139a94f822ca5a2f6ff50c01338b4a2b8f6c01809",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jmemsys.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/9d21dfe31993__jmemsys.h.header.txt",
+          "source_sha256": "441fd978684f5bb8f4b1a512221def17948aab73c507b98b8602cc0bda360d96",
+          "header_sha256": "fec0259090ef60c6cfea145de594ccbd8930eb75d6f7177aaec861947b985241",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jmorecfg.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/742aae8fd20e__jmorecfg.h.header.txt",
+          "source_sha256": "b86b4abf452d39b737cb45503591e04e9ca38c5fd0e90d429387d0464005a28b",
+          "header_sha256": "87cf0927206d7b86f074e3ffc948342900ff09fe5fbb68c07818b9ee7083cc03",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jpeg_nbits.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/8cc0dd9f4c8f__jpeg_nbits.c.header.txt",
+          "source_sha256": "b79ca4826d23d3a9124fc7b28cce2eacc86a460fa351e3a05eb8378e9bb0f00d",
+          "header_sha256": "d4371b5a6bf1943e0a44d0e5bcfd6f0d5de4b770520578e6d0bd493bb055ba10",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jpeg_nbits.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/95ca559b83fe__jpeg_nbits.h.header.txt",
+          "source_sha256": "82ebb5a854c908d07bf77a03a9fb749f49561f7eb6cb6f80a2621a3d0f8d33f5",
+          "header_sha256": "70b3814acd912499b5e1e1407eb689256e595e219fd6764ea61085a8b4f0c687",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jpegapicomp.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/2e015e877281__jpegapicomp.h.header.txt",
+          "source_sha256": "7ee0ac1b9307c03a6a715d46f89f611abd28c5795b9b9a410255df3a8d1db92d",
+          "header_sha256": "4b44b7b5887c4bea33532a55922b56a466a82ea6cf73184a33faa5d07cea5320",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jpegint.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/8821ee5ce568__jpegint.h.header.txt",
+          "source_sha256": "d0f38e87598148afd39701171f25170f1d720029f9530fa17dd7312ff2122ec5",
+          "header_sha256": "ab04538d120e22424c992297dc8051caa5613f93cc8f45df0068cc6ccd4162a6",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jpeglib.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/0850edf34ac1__jpeglib.h.header.txt",
+          "source_sha256": "dc3e8220f34b7e9f9e48620f5cb8dc070834feb3214bb12bbad78478ebb29e60",
+          "header_sha256": "22e5e02f5c4b00892f57ec23db325e696609d02534c12c515bf0c5039c69cc2c",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jquant1.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/9649f3fcd316__jquant1.c.header.txt",
+          "source_sha256": "c132b33829f8fa3806798e7783e64ee8e986a4ee04db3e8a100159675aae5eaf",
+          "header_sha256": "3ebc0fab762362775b1f4e95549c55e883d8f2fa80d2a1ea0e855bc70d145f8d",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jquant2.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/912bb6850278__jquant2.c.header.txt",
+          "source_sha256": "77ffa8a28129ded74b5de8d21925a3f7fef6c73e6f4fa6b87a693f5d40f7c927",
+          "header_sha256": "20b2f49cf6b44a4e5ddd75aa9bc270bc791c8e0cac23601dfe3a5ce9b7be8c8a",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jsamplecomp.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/5741d8b770b3__jsamplecomp.h.header.txt",
+          "source_sha256": "f79c80f1b05a50beb0eaed18e84dfcf0b3b1a842eeaf0c28e8e3c5b37a4ccb4a",
+          "header_sha256": "e651daaa5b7a01bc84707591627e4a5dbb6f505ce2651f0a71c7b50a3d0340b1",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jstdhuff.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/e6a1a7c26507__jstdhuff.c.header.txt",
+          "source_sha256": "79e2cbf605326ce6349a60f58695b97d574510662f8b089474f30c07bf06be28",
+          "header_sha256": "bb6a62ce4eca4d8f63f35a28faef6e80e3320f436caf3e3c83e5478168687777",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jutils.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/154dee800dfb__jutils.c.header.txt",
+          "source_sha256": "70c0ba2953ca8f4abd6858d8ed71aa3266f37d529313b8e0cdfa0d1a43e31b2e",
+          "header_sha256": "98d4f5ebccd9265a477c48bf444c0952a0a988c4736611912723db6de493ab16",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/src/jversion.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/f3e25ce42db2__jversion.h.header.txt",
+          "source_sha256": "ebea70b4a1f7392291e49a6b08300396985ce930c314e5e233bae5380c12997d",
+          "header_sha256": "a1e2d443be1f146c5793a1adde340397290fc60015d1536cb546de9b2cc19589",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        }
+      ],
+      "source_notice_review": "LicenseFilesのLICENSE/ijg-license.txtとCopyrightFileのCOPYRIGHT.txtを全件取得・ハッシュ化。本文内告知未指定との前回分類を訂正。",
+      "wheel_correspondence_review": "qjpeg.dllに3.2.0文字列が存在し、Qt側attribution版と一致。Pillow側3.1.4.1とは別系統。",
+      "before_build_remaining": "3原文の保持と変更/有効機能・ソース対応の説明を確定。版文字列だけで完全由来を保証しない。",
+      "status": "source notice inspected; final applicability/integration not approved"
+    },
+    {
+      "id": "md4",
+      "attribution_path": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md4/qt_attribution.json",
+      "attribution": {
+        "Id": "md4",
+        "Name": "MD4",
+        "QDocModule": "qtcore",
+        "QtUsage": "Used in Qt Core (QCryptographicHash).",
+        "Comment": "Treat as final version; no upstream known, no relevant CPE or PURL found",
+        "Description": "An OpenSSL-compatible implementation of the RSA Data Security, Inc. MD4 Message-Digest Algorithm.",
+        "License": "Public Domain",
+        "LicenseId": "CC0-1.0",
+        "Copyright": "Written by Alexander Peslyak - better known as Solar Designer <solar@openwall.com> - in 2001, and placed in the public domain. There's absolutely no warranty."
+      },
+      "source_files": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md4/REUSE.toml",
+          "sha256": "145340ef1f238800506adeb45934ff7b93a3bf9c6793707f3fd1beb0d7079f07",
+          "bytes": 290,
+          "evidence_file": "source-7f02449bb1749e-REUSE.toml"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md4/md4.cpp",
+          "sha256": "221066e5a6849d49126e54afc8c0fd2d9375a4d5b08bafd2a8e3194d0ba55c4d",
+          "bytes": 6594,
+          "evidence_file": "source-386e2e112e32e7-md4.cpp"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md4/md4.h",
+          "sha256": "8174fd6527ca22ffe22862d414d82283efd454972d4ccad43a752d2aa1d0071c",
+          "bytes": 725,
+          "evidence_file": "source-b87d9bf2731028-md4.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md4/qt_attribution.json",
+          "sha256": "34bda63a2fcc23c83f2e5364ccd394553b4baa505b1f79ded9cc2161c56a9b4c",
+          "bytes": 574,
+          "evidence_file": "source-4638dabc78d3d3-qt_attribution.json"
+        }
+      ],
+      "source_prefix": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md4/",
+      "declared_notice_members": [],
+      "declared_notice_copies": [],
+      "source_header_samples": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md4/md4.cpp",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/386e2e112e32__md4.cpp.header.txt",
+          "source_sha256": "221066e5a6849d49126e54afc8c0fd2d9375a4d5b08bafd2a8e3194d0ba55c4d",
+          "header_sha256": "9e6b15cc6d735be1783318c28eb18980e9453d6f09ab5d019a630b328a9deb18",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md4/md4.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/b87d9bf27310__md4.h.header.txt",
+          "source_sha256": "8174fd6527ca22ffe22862d414d82283efd454972d4ccad43a752d2aa1d0071c",
+          "header_sha256": "191616a188dc1e276580542eecc7650af8355d073932ea91ea0457525439f626",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        }
+      ],
+      "source_notice_review": "Solar Designer2001のpublic domain/無保証をソース本文で確認。",
+      "wheel_correspondence_review": "QtCoreのQCryptographicHash APIの存在は確認。特定MD4実装の機械語対応は未確定。",
+      "before_build_remaining": "原文の作者/無保証を保持。メタデータのCC0表記へ原文を置換しない。",
+      "status": "source notice inspected; final applicability/integration not approved"
+    },
+    {
+      "id": "md5",
+      "attribution_path": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md5/qt_attribution.json",
+      "attribution": {
+        "Id": "md5",
+        "Name": "MD5",
+        "QDocModule": "qtcore",
+        "QtUsage": "Used in Qt Core (QCryptographicHash).",
+        "Comment": "Treat as final version; no upstream known, no relevant CPE or PURL found",
+        "Description": "MD5 message-digest algorithm.",
+        "License": "Public Domain",
+        "LicenseId": "CC0-1.0",
+        "Copyright": "Written by Colin Plumb in 1993, no copyright is claimed. Ian Jackson <ian@chiark.greenend.org.uk>."
+      },
+      "source_files": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md5/REUSE.toml",
+          "sha256": "f19f21adee8d5cc60be7bab48df4b5816372e2482a5ea9b89b6f2dac28d88ac7",
+          "bytes": 230,
+          "evidence_file": "source-d450219ce2ecd2-REUSE.toml"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md5/md5.cpp",
+          "sha256": "ecc3a072d271c96291fa55689d617b31bdabb44a93694e5ff11aa00e41ac118c",
+          "bytes": 7716,
+          "evidence_file": "source-4d64234118ef5f-md5.cpp"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md5/md5.h",
+          "sha256": "33ea94be23d4decdfb64a9c76fad2698b387dab2f991d9f6f8741f5a1737a79d",
+          "bytes": 1480,
+          "evidence_file": "source-66fd0b178238ac-md5.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md5/qt_attribution.json",
+          "sha256": "20b0f1b17ccd1bd5e8d763b1cdca4b095b8f0c037644b5ee18154536b7d8425e",
+          "bytes": 446,
+          "evidence_file": "source-a27354925cff23-qt_attribution.json"
+        }
+      ],
+      "source_prefix": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md5/",
+      "declared_notice_members": [],
+      "declared_notice_copies": [],
+      "source_header_samples": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md5/md5.cpp",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/4d64234118ef__md5.cpp.header.txt",
+          "source_sha256": "ecc3a072d271c96291fa55689d617b31bdabb44a93694e5ff11aa00e41ac118c",
+          "header_sha256": "964f3f80c289ffc4eeadcb3796e95d5d2cf518c6112752aad4b7331fa1147bbe",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md5/md5.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/66fd0b178238__md5.h.header.txt",
+          "source_sha256": "33ea94be23d4decdfb64a9c76fad2698b387dab2f991d9f6f8741f5a1737a79d",
+          "header_sha256": "8f9c4acdea9f228bc2f55c330471784fe876ada589a2835ebd75adec0040ad25",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        }
+      ],
+      "source_notice_review": "Colin Plumb1993/Ian Jacksonのpublic domain表明をソース本文で確認。",
+      "wheel_correspondence_review": "QtCoreのQCryptographicHash APIの存在は確認。特定MD5実装の機械語対応は未確定。",
+      "before_build_remaining": "原文の作者/public domain表明を保持。親Qtのライセンスで一律に代替しない。",
+      "status": "source notice inspected; final applicability/integration not approved"
+    },
+    {
+      "id": "sha1",
+      "attribution_path": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sha1/qt_attribution.json",
+      "attribution": {
+        "Id": "sha1",
+        "Name": "Secure Hash Algorithm SHA-1",
+        "QDocModule": "qtcore",
+        "QtUsage": "Used in Qt Core (QCryptographicHash).",
+        "Description": "Implements the Secure Hash Algorithms SHA 1",
+        "PURL": "pkg:generic/csha1?download_url=https://www.dominik-reichl.de/projects/csha1/",
+        "Homepage": "http://www.dominik-reichl.de/projects/csha1/",
+        "License": "Public Domain",
+        "LicenseId": "LicenseRef-SHA1-Public-Domain",
+        "Copyright": [
+          "Copyright (C) Dominik Reichl <dominik.reichl@t-online.de>",
+          "Copyright (C) 2016 The Qt Company Ltd"
+        ],
+        "Comment": "no relevant CPE found"
+      },
+      "source_files": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sha1/REUSE.toml",
+          "sha256": "aadc1f36d433903ed5f5fee50bda90c9b8b2d2ec1715e3d5bd7fa046528add64",
+          "bytes": 256,
+          "evidence_file": "source-e1289d4e33fff2-REUSE.toml"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sha1/qt_attribution.json",
+          "sha256": "53cab2c771f7f7ffbf6a58ff759e5846b746e91d98dfe467d5145edf8cd7d306",
+          "bytes": 618,
+          "evidence_file": "source-d75cb1d0ee792c-qt_attribution.json"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sha1/sha1.cpp",
+          "sha256": "cf0635f5a0be705bfbd22037b818700e6a67c9cd9290e659c4443cd5f454a8f3",
+          "bytes": 8590,
+          "evidence_file": "source-d5eef9bbab735f-sha1.cpp"
+        }
+      ],
+      "source_prefix": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sha1/",
+      "declared_notice_members": [],
+      "declared_notice_copies": [],
+      "source_header_samples": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sha1/sha1.cpp",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/d5eef9bbab73__sha1.cpp.header.txt",
+          "source_sha256": "cf0635f5a0be705bfbd22037b818700e6a67c9cd9290e659c4443cd5f454a8f3",
+          "header_sha256": "643648f0ddee770d79e8edd7232002a0dacbaf3fab51661881a4aed86e6d28d9",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        }
+      ],
+      "source_notice_review": "Dominik Reichl/Qt2016の著作権とLicenseRef-SHA1-Public-Domainをソースで確認し、対応するQt原文を追加。",
+      "wheel_correspondence_review": "QtCoreの暗号ハッシュAPIに間接対応。SHA1個別実装/有効設定は未確定。",
+      "before_build_remaining": "個別LicenseRef原文/著作権を最終告知へ対応付ける。",
+      "status": "source notice inspected; final applicability/integration not approved"
+    },
+    {
+      "id": "siphash",
+      "attribution_path": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/siphash/qt_attribution.json",
+      "attribution": {
+        "Id": "siphash",
+        "Name": "SipHash Algorithm",
+        "QDocModule": "qtcore",
+        "QtUsage": "Used in Qt Core (QHash)",
+        "Files": "siphash.cpp",
+        "Description": "Implements the SipHash algorithm.",
+        "Homepage": "https://131002.net/siphash/",
+        "DownloadLocation": "https://raw.githubusercontent.com/veorq/SipHash/adcbf09b1684a718f594faa650ffc56bacdb0777/siphash24.c",
+        "PURL": "pkg:github/veorq/SipHash@adcbf09b1684a718f594faa650ffc56bacdb0777",
+        "License": "Creative Commons Zero v1.0 Universal",
+        "LicenseId": "CC0-1.0",
+        "Copyright": [
+          "Copyright (C) 2012-2014 Jean-Philippe Aumasson",
+          "Copyright (C) 2012-2014 Daniel J. Bernstein <djb@cr.yp.to>",
+          "Copyright (C) 2016 Intel Corporation"
+        ],
+        "Comment": "no relevant CPE found"
+      },
+      "source_files": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/siphash/qt_attribution.json",
+          "sha256": "8614947dfc0ca1d21aad2f88b4400598262ab8c08aa87c4f7acc0c2de6e5619e",
+          "bytes": 793,
+          "evidence_file": "source-973fe83e2e5d92-qt_attribution.json"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/siphash/siphash.cpp",
+          "sha256": "e95eebf552c26d49d75a6b1ca937b0826ece531d88c0b5f52f2509076af53c06",
+          "bytes": 8457,
+          "evidence_file": "source-83fb1d692c7cd3-siphash.cpp"
+        }
+      ],
+      "source_prefix": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/siphash/",
+      "declared_notice_members": [],
+      "declared_notice_copies": [],
+      "source_header_samples": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/siphash/siphash.cpp",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/83fb1d692c7c__siphash.cpp.header.txt",
+          "source_sha256": "e95eebf552c26d49d75a6b1ca937b0826ece531d88c0b5f52f2509076af53c06",
+          "header_sha256": "d67627813fd6a467530bc34efdd9764b1b51d812859240ee5f8f75313af292f7",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        }
+      ],
+      "source_notice_review": "Aumasson/Bernstein/Intelの著作権とCC0-1.0をソースで確認。",
+      "wheel_correspondence_review": "QtCoreのQHashというソース側利用経路はattributionに記載。wheelの当該テンプレート/実装の機械語対応は未確定。",
+      "before_build_remaining": "CC0原文と作者を保持。静的文字列未検出を未収録としない。",
+      "status": "source notice inspected; final applicability/integration not approved"
+    },
+    {
+      "id": "sqlite",
+      "attribution_path": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sqlite/qt_attribution.json",
+      "attribution": {
+        "Id": "sqlite",
+        "Name": "SQLite",
+        "QDocModule": "qtsql",
+        "QtUsage": "Used in Qt SQL Lite plugin. Configure Qt with -system-sqlite or -no-sqlite to avoid.",
+        "SecurityCritical": true,
+        "Description": "SQLite is a small C library that implements a self-contained, embeddable, zero-configuration SQL database engine.",
+        "Homepage": "https://www.sqlite.org/",
+        "Version": "3.53.4",
+        "PURL": "pkg:github/sqlite/sqlite@version-$<VERSION>",
+        "CPE": "cpe:2.3:a:sqlite:sqlite:$<VERSION>:*:*:*:*:*:*:*",
+        "DownloadLocation": "https://www.sqlite.org/2026/sqlite-amalgamation-3530400.zip",
+        "License": "SQLite Blessing",
+        "LicenseId": "blessing",
+        "Copyright": "The authors disclaim copyright to the source code. However, a license can be obtained if needed."
+      },
+      "source_files": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sqlite/REUSE.toml",
+          "sha256": "be2cfb98175e002c10580ebdc0167ae009ffe1dc22577969f949f9255632277d",
+          "bytes": 229,
+          "evidence_file": "source-3d9e53941e9a5f-REUSE.toml"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sqlite/qt_attribution.json",
+          "sha256": "fcba08e23508524b77ee22186a5ef2d35957979fe9e2a604d994c5e9604c8fb9",
+          "bytes": 799,
+          "evidence_file": "source-8141c94e741f60-qt_attribution.json"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sqlite/sqlite3.c",
+          "sha256": "b1dd5d74ec7f29055a6684fa06fb3c2f6821c87dd38f9a458dfd2e8a1db28189",
+          "bytes": 9515341,
+          "evidence_file": "source-633aa7bd1066a7-sqlite3.c"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sqlite/sqlite3.h",
+          "sha256": "919e7f2e8ed1d8f56ac17b412b8971c76aa5d1a879752cc6058f75e7d5910e1d",
+          "bytes": 690838,
+          "evidence_file": "source-6d5a8682a146c1-sqlite3.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sqlite/update_sqlite.sh",
+          "sha256": "f446ec251296b2a0666ae0b37b90233a722b217ea317012f778ca41288586de7",
+          "bytes": 1129,
+          "evidence_file": "source-516ef8f46cd09e-update_sqlite.sh"
+        }
+      ],
+      "source_prefix": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sqlite/",
+      "declared_notice_members": [],
+      "declared_notice_copies": [],
+      "source_header_samples": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sqlite/sqlite3.c",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/633aa7bd1066__sqlite3.c.header.txt",
+          "source_sha256": "b1dd5d74ec7f29055a6684fa06fb3c2f6821c87dd38f9a458dfd2e8a1db28189",
+          "header_sha256": "59ef13f32556e3b29a6110dc5b02245477f770b9628ae1328c35116e4e9de78c",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sqlite/sqlite3.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/6d5a8682a146__sqlite3.h.header.txt",
+          "source_sha256": "919e7f2e8ed1d8f56ac17b412b8971c76aa5d1a879752cc6058f75e7d5910e1d",
+          "header_sha256": "9fd2ef1fe82d7abfac48c86e1c3fc52ebb7cfc5bf8aae354fcee039114c615c4",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        }
+      ],
+      "source_notice_review": "sqlite3.h/cのcopyright放棄とblessing原文を確認。",
+      "wheel_correspondence_review": "qsqlite.dllの3.53.4に加え、完全なSQLITE_SOURCE_IDがソースと一致。現Desktop方針ではSql/SQLプラグインは除外対象。",
+      "before_build_remaining": "入力wheelの部品として索引保持。実payloadでの除外確認は生成後。",
+      "status": "source notice inspected; final applicability/integration not approved"
+    },
+    {
+      "id": "wintab",
+      "attribution_path": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wintab/qt_attribution.json",
+      "attribution": {
+        "Id": "wintab",
+        "Name": "Wintab API",
+        "QDocModule": "qtgui",
+        "QtUsage": "Used in the Qt platform plugin for Windows. Configure with -no-feature-tabletevent to avoid.",
+        "Files": [
+          "pktdef.h",
+          "wintab.h"
+        ],
+        "Description": "Wintab is a de facto API for pointing devices on Windows.",
+        "PackageComment": "Upstream http://www.pointing.com/Wintab.html no longer offers updates; treat as final, no relevant CPE and PURL found",
+        "License": "LCS-Telegraphics License",
+        "LicenseId": "LicenseRef-Lcs-Telegraphics",
+        "Copyright": "Copyright 1991-1998 by LCS/Telegraphics."
+      },
+      "source_files": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wintab/REUSE.toml",
+          "sha256": "eb87802228cbebb422e792089bc65e15f23f189785402dc7938c463f39e68c5d",
+          "bytes": 192,
+          "evidence_file": "source-2c468e02faa17c-REUSE.toml"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wintab/pktdef.h",
+          "sha256": "11f53ac5568c0efcf06e1aaa18e9ac16cfe1b51060d063762c8ba809bbb894df",
+          "bytes": 6376,
+          "evidence_file": "source-5aa23203259186-pktdef.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wintab/qt_attribution.json",
+          "sha256": "b879ea91b719531d45e1cfe33d2241d060a9260200bd91a09ada074b16063f9c",
+          "bytes": 602,
+          "evidence_file": "source-ad66ae774f6b4c-qt_attribution.json"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wintab/wintab.h",
+          "sha256": "27a8d66f8c9db27e7de52b233e3d13ee5b8cf92bed800f21491fdd229a31c0da",
+          "bytes": 21351,
+          "evidence_file": "source-367ceec410a245-wintab.h"
+        }
+      ],
+      "source_prefix": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wintab/",
+      "declared_notice_members": [],
+      "declared_notice_copies": [],
+      "source_header_samples": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wintab/pktdef.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/5aa232032591__pktdef.h.header.txt",
+          "source_sha256": "11f53ac5568c0efcf06e1aaa18e9ac16cfe1b51060d063762c8ba809bbb894df",
+          "header_sha256": "fd028015c3660e3dd589d294830bd977a5f19e9a4a0d56f01c9a957a0b92cbbc",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wintab/wintab.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/367ceec410a2__wintab.h.header.txt",
+          "source_sha256": "27a8d66f8c9db27e7de52b233e3d13ee5b8cf92bed800f21491fdd229a31c0da",
+          "header_sha256": "e0d55171e883163fe1965e6354bf9248b6a49d5478f757a619dce6cd7a6a31c5",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        }
+      ],
+      "source_notice_review": "pktdef.h/wintab.hのLCS/Telegraphics1991-1998の許諾本文を確認。対応するQt LicenseRef原文も追加。",
+      "wheel_correspondence_review": "qwindows.dllにWTInfoW/WTOpenWの参照文字列。API利用経路との対応であり、Wintabドライバー自体の同梱/実行を示さない。",
+      "before_build_remaining": "ヘッダー許諾と著作権を保持。外部ドライバーの配布条件を取得/同梱済みとは扱わない。",
+      "status": "source notice inspected; final applicability/integration not approved"
+    },
+    {
+      "id": "tlexpected",
+      "attribution_path": "qt-everywhere-src-6.11.2/qtbase/src/corelib/global/qt_attribution.json",
+      "attribution": {
+        "Id": "tlexpected",
+        "Name": "tl::expected",
+        "QDocModule": "qtcore",
+        "QtUsage": "Available as a private type in all Qt modules",
+        "Description": "Single header implementation of std::expected with functional-style extensions.",
+        "Files": [
+          "qexpected_p.h"
+        ],
+        "Homepage": "https://github.com/TartanLlama/expected/",
+        "Version": "41d3e1f48d682992a2230b2a715bca38b848b269",
+        "DownloadLocation": "https://github.com/TartanLlama/expected/blob/41d3e1f48d682992a2230b2a715bca38b848b269/include/tl/expected.hpp",
+        "License": "Creative Commons Zero v1.0 Universal",
+        "LicenseId": "CC0-1.0",
+        "Copyright": "To the extent possible under law, Sy Brand has waived all copyright and related or neighboring rights to the expected library. This work is published from: United Kingdom."
+      },
+      "source_files": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/corelib/global/qexpected_p.h",
+          "sha256": "61cf7e096fef0f3dc61a184561fabd9935a7e3a5f68510fb764514fdadf36014",
+          "bytes": 96231,
+          "evidence_file": "source-d5ece8ffdd0aee-qexpected_p.h"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/corelib/global/qt_attribution.json",
+          "sha256": "64698063a65a1502b986bd61163b5eb9c6bde87f93feb28e4eab43ff07a4f10a",
+          "bytes": 814,
+          "evidence_file": "source-47d8b7ccf547c1-qt_attribution.json"
+        }
+      ],
+      "source_prefix": "qt-everywhere-src-6.11.2/qtbase/src/corelib/global/",
+      "declared_notice_members": [],
+      "declared_notice_copies": [],
+      "source_header_samples": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/corelib/global/qexpected_p.h",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/d5ece8ffdd0a__qexpected_p.h.header.txt",
+          "source_sha256": "61cf7e096fef0f3dc61a184561fabd9935a7e3a5f68510fb764514fdadf36014",
+          "header_sha256": "14be787169d865aca51b3c612b0d6e81faeede3cafa4df40552ed1eac16575b5",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        }
+      ],
+      "source_notice_review": "qexpected_p.hのSy Brand2017、CC0による権利放棄/無保証とCC0原文への案内を確認。",
+      "wheel_correspondence_review": "QtCore等で使用され得るヘッダーだがインライン化を含み、実wheelの特定機械語対応は未確定。",
+      "before_build_remaining": "CC0原文と作者の保持を最終資料へ統合。",
+      "status": "source notice inspected; final applicability/integration not approved"
+    },
+    {
+      "id": "tika-mimetypes",
+      "attribution_path": "qt-everywhere-src-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/qt_attribution.json",
+      "attribution": {
+        "Id": "tika-mimetypes",
+        "Name": "Apache Tika MimeType Definitions",
+        "QDocModule": "qtcore",
+        "QtUsage": "Qt Core uses a copy of the Apache Tika MimeType Definitions if shared-mime-info isn't installed on the system.",
+        "Comment": {
+          "Files": "For update, see qtbase/src/corelib/mimetypes/3rdparty/process_tika_mimetypes.py"
+        },
+        "Files": [
+          "tika-mimetypes.xml"
+        ],
+        "Description": "The Apache Tika MimeTypes list many known MIME types and how to match files (using globs and/or 'magic' rules for the file contents)",
+        "Homepage": "https://github.com/apache/tika/tree/main/tika-core/src/main/resources/org/apache/tika/mime",
+        "Version": "c29724782854bb5a319f4a1940d0828a58ace3f9",
+        "DownloadLocation": "https://github.com/apache/tika/blob/c29724782854bb5a319f4a1940d0828a58ace3f9/tika-core/src/main/resources/org/apache/tika/mime/tika-mimetypes.xml",
+        "PURL": "pkg:github/apache/tika@$<VERSION>#tika-core/src/main/resources/org/apache/tika/mime/tika-mimetypes.xml",
+        "CPE": "cpe:2.3:a:apache:tika:*:*:*:*:*:*:*:*",
+        "License": "Apache License 2.0",
+        "LicenseId": "Apache-2.0",
+        "Copyright": "Copyright 2026 The Apache Software Foundation"
+      },
+      "source_files": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/REUSE.toml",
+          "sha256": "4c1597dd9dcc955376ebb3b098b4496da2f7a8c46ded7d38acf29d2d582b511b",
+          "bytes": 153,
+          "evidence_file": "source-617ff080e0d273-REUSE.toml"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/process_tika_mimetypes.py",
+          "sha256": "cacd4c6b87aa17b894814b8bbaf8b19b47e6e6fbe1627eafc7e44eebaf9ead47",
+          "bytes": 8390,
+          "evidence_file": "source-cd5bab6e60b6f5-process_tika_mimetypes.py"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/qt_attribution.json",
+          "sha256": "329652c93e6b47663115543cfd746cb56b96a98d774d540d58e64614bd9739eb",
+          "bytes": 1383,
+          "evidence_file": "source-d70e1d98fd32a3-qt_attribution.json"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/tika-mimetypes.xml",
+          "sha256": "73b26a2bc70c5f78e4c028ce0ce352454e96515dd74c3f098b2c219788acb66b",
+          "bytes": 317384,
+          "evidence_file": "source-ce182434cced67-tika-mimetypes.xml"
+        },
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/update_tika_from_upstream.sh",
+          "sha256": "b8c1b8268663f0ba9d2539b26debe9d0d89e8a7caee8d2163e166ff9ff4212f6",
+          "bytes": 1320,
+          "evidence_file": "source-dcc4453dacfa7c-update_tika_from_upstream.sh"
+        }
+      ],
+      "source_prefix": "qt-everywhere-src-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/",
+      "declared_notice_members": [],
+      "declared_notice_copies": [],
+      "source_header_samples": [
+        {
+          "member": "qt-everywhere-src-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/tika-mimetypes.xml",
+          "path": "documentation/windows-desktop-licenses/qt-inline-notices/ce182434cced__tika-mimetypes.xml.header.txt",
+          "source_sha256": "73b26a2bc70c5f78e4c028ce0ce352454e96515dd74c3f098b2c219788acb66b",
+          "header_sha256": "6015161a206c907394fd623cb84aa940bafacf6c4f70c6f109e776e4c4380862",
+          "scope": "First 12000 characters verbatim, not necessarily a complete license; full source retained in evidence"
+        }
+      ],
+      "source_notice_review": "XML先頭のASF/Apache2.0と上流NOTICE参照を確認。固定コミットのNOTICEと元XMLを取得し、Qt加工版との差分を保存。",
+      "wheel_correspondence_review": "QtCoreにQMimeDatabase APIは存在するが、特定加工XML全体と実wheel埋込データの対応は未確定。",
+      "before_build_remaining": "PRONOM/OGL3の適用範囲を点検し告知案作成済み。追加指定/IPTCを含む表示の最終点検、最終告知・対応ソース提供集合への統合と実wheel構成の説明が残る。",
+      "status": "source notice inspected; final applicability/integration not approved"
+    }
+  ],
+  "wheel": {
+    "filename": "pyside6_essentials-6.11.2-cp310-abi3-win_amd64.whl",
+    "sha256": "c8a29def77032773a30879f7f24415b5395ad08592d147c170824ef4c735dfc1",
+    "native_files": [
+      {
+        "member": "PySide6/Qt6Core.dll",
+        "sha256": "d6a3c37c5263c5d418fc0e80b722bc9fca7c0859e6f635f9624a2fde00bdc653",
+        "bytes": 10363704,
+        "markers": [
+          {
+            "marker": "QCryptographicHash",
+            "encoding": "utf-8",
+            "first_offset": 4859552
+          },
+          {
+            "marker": "QMessageAuthenticationCode",
+            "encoding": "utf-8",
+            "first_offset": 9641500
+          },
+          {
+            "marker": "QMimeDatabase",
+            "encoding": "utf-8",
+            "first_offset": 8984936
+          },
+          {
+            "marker": "tika",
+            "encoding": "utf-16le",
+            "first_offset": 4330910
+          }
+        ],
+        "scope": "Byte/marker evidence only; no direct proof of full source or runtime reachability"
+      },
+      {
+        "member": "PySide6/Qt6Gui.dll",
+        "sha256": "ae29b005f51b6850bf57fa06fced0dc8c7039fd6fafc3bfbcfe76e38adc7abf1",
+        "bytes": 9546552,
+        "markers": [
+          {
+            "marker": "emoji",
+            "encoding": "utf-8",
+            "first_offset": 7231024
+          },
+          {
+            "marker": "Emoji",
+            "encoding": "utf-8",
+            "first_offset": 7231216
+          },
+          {
+            "marker": "Emoji",
+            "encoding": "utf-16le",
+            "first_offset": 7307138
+          }
+        ],
+        "scope": "Byte/marker evidence only; no direct proof of full source or runtime reachability"
+      },
+      {
+        "member": "PySide6/plugins/imageformats/qjpeg.dll",
+        "sha256": "6517345ac19f5c489daeadc029d0018bbdc09d8e1031c60d714557972f22c6d4",
+        "bytes": 591672,
+        "markers": [
+          {
+            "marker": "3.2.0",
+            "encoding": "utf-8",
+            "first_offset": 456110
+          },
+          {
+            "marker": "libjpeg-turbo",
+            "encoding": "utf-8",
+            "first_offset": 448204
+          },
+          {
+            "marker": "JPEG",
+            "encoding": "utf-8",
+            "first_offset": 445630
+          }
+        ],
+        "scope": "Byte/marker evidence only; no direct proof of full source or runtime reachability"
+      },
+      {
+        "member": "PySide6/plugins/sqldrivers/qsqlite.dll",
+        "sha256": "e804520d0e3a3c743009e60e55f319b592d6fe61d7239b7c0d2218d9fb5edf97",
+        "bytes": 1986872,
+        "markers": [
+          {
+            "marker": "3.53.4",
+            "encoding": "utf-8",
+            "first_offset": 1704064
+          },
+          {
+            "marker": "SQLite",
+            "encoding": "utf-8",
+            "first_offset": 1694513
+          }
+        ],
+        "scope": "Byte/marker evidence only; no direct proof of full source or runtime reachability"
+      },
+      {
+        "member": "PySide6/plugins/platforms/qwindows.dll",
+        "sha256": "bf6dbc3009f386fa22f0ced560bea6bbf3e0e0b4442d2fb855db67cffce49dbf",
+        "bytes": 991032,
+        "markers": [
+          {
+            "marker": "WTInfoW",
+            "encoding": "utf-8",
+            "first_offset": 703944
+          },
+          {
+            "marker": "WTOpenW",
+            "encoding": "utf-8",
+            "first_offset": 703928
+          }
+        ],
+        "scope": "Byte/marker evidence only; no direct proof of full source or runtime reachability"
+      }
+    ]
+  },
+  "correction": "Previous single LicenseFile parser missed libjpeg LicenseFiles[LICENSE,ijg-license.txt] and CopyrightFile; previous 43 referenced files were not exhaustive. Nine remaining rows use inline/standard notices.",
+  "build": false,
+  "dll_loaded": false,
+  "reviewed_files_created": false,
+  "uv_development": "discontinued",
+  "standard_license_texts": [
+    {
+      "member": "qt-everywhere-src-6.11.2/qtbase/LICENSES/Apache-2.0.txt",
+      "path": "documentation/windows-desktop-licenses/qt-inline-notices/Apache-2.0.txt",
+      "sha256": "e3ba223bb1423f0aad8c3dfce0fe3148db48926d41e6fbc3afbbf5ff9e1c89cb"
+    },
+    {
+      "member": "qt-everywhere-src-6.11.2/qtbase/LICENSES/CC0-1.0.txt",
+      "path": "documentation/windows-desktop-licenses/qt-inline-notices/CC0-1.0.txt",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "member": "qt-everywhere-src-6.11.2/qtbase/LICENSES/LicenseRef-Lcs-Telegraphics.txt",
+      "path": "documentation/windows-desktop-licenses/qt-inline-notices/LicenseRef-Lcs-Telegraphics.txt",
+      "sha256": "c10225ebbd5191bfdd761b0d7752c785f2453ab665d6c454473fb12d254668aa"
+    },
+    {
+      "member": "qt-everywhere-src-6.11.2/qtbase/LICENSES/LicenseRef-SHA1-Public-Domain.txt",
+      "path": "documentation/windows-desktop-licenses/qt-inline-notices/LicenseRef-SHA1-Public-Domain.txt",
+      "sha256": "65d86b8ec6b1cd8b8f6e64fd8710274ba00d6a3c520e00dfdcd1c3d2071f3305"
+    }
+  ],
+  "tika_upstream": [
+    {
+      "upstream_url": "https://raw.githubusercontent.com/apache/tika/c29724782854bb5a319f4a1940d0828a58ace3f9/NOTICE.txt",
+      "commit": "c29724782854bb5a319f4a1940d0828a58ace3f9",
+      "file": "tika-upstream-NOTICE.txt",
+      "bytes": 80600,
+      "sha256": "4cd09bac8d81bd34decf6b95fb23d42fc9b3d6b653ec4be8ef44674b692c97cd",
+      "git_blob_sha1": "e4713574c826602f94419e2c7c01c6cd0d971288",
+      "retained_path": "documentation/windows-desktop-licenses/qt-inline-notices/Tika-tika-upstream-NOTICE.txt"
+    },
+    {
+      "upstream_url": "https://raw.githubusercontent.com/apache/tika/c29724782854bb5a319f4a1940d0828a58ace3f9/tika-core/src/main/resources/org/apache/tika/mime/tika-mimetypes.xml",
+      "commit": "c29724782854bb5a319f4a1940d0828a58ace3f9",
+      "file": "tika-upstream-tika-mimetypes.xml",
+      "bytes": 329271,
+      "sha256": "b213c35123f215e11a9fa12d7907c9bb0a5b79214a89eeaf343984ba69143e6d",
+      "git_blob_sha1": "f447bf3d976680c53bb77259897a3a6f9b1f5a9b",
+      "qt_source_exact_match": false,
+      "diff_lines": 6159,
+      "note": "Static diff only; Qt processing script not executed.",
+      "retained_path": "documentation/windows-desktop-licenses/qt-inline-notices/Tika-tika-upstream-tika-mimetypes.xml"
+    }
+  ],
+  "stronger_wheel_correspondence": {
+    "emoji_tables": [
+      {
+        "array": "_emoji_presentation_trans_keys",
+        "bytes": 27,
+        "sha256": "b01c4c5ea2159e922c66928fce9a0190a636be0b8dd5d5f489eb2eaeee269e76",
+        "wheel_member": "PySide6/Qt6Gui.dll",
+        "first_offset": 7230896,
+        "exact_sequence_found": true
+      },
+      {
+        "array": "_emoji_presentation_indicies",
+        "bytes": 85,
+        "sha256": "adcf7ea74a144db6dbeb7804dca5e7e0c1737a54fd6f60720b42d40d51c4461d",
+        "wheel_member": "PySide6/Qt6Gui.dll",
+        "first_offset": 7230928,
+        "exact_sequence_found": true
+      },
+      {
+        "array": "_emoji_presentation_trans_targs",
+        "bytes": 24,
+        "sha256": "5e0deb63071e3b2212d37dd3598efb7bf1394714414d93873030303fc0ce32a4",
+        "wheel_member": "PySide6/Qt6Gui.dll",
+        "first_offset": 7231152,
+        "exact_sequence_found": true
+      },
+      {
+        "array": "_emoji_presentation_trans_actions",
+        "bytes": 24,
+        "sha256": "87a710b2170d17dff461d0f0c840b46afd50c0397b0ecb0bab0909a71fdbc6b3",
+        "wheel_member": "PySide6/Qt6Gui.dll",
+        "first_offset": 7231176,
+        "exact_sequence_found": true
+      }
+    ],
+    "sqlite_source_id": {
+      "source_id": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+      "first_offset": 1777046,
+      "exact_string_found": true
+    },
+    "scope": "Exact static data/string agreement; not a whole binary/source correspondence or execution proof"
+  },
+  "pe_metadata": [
+    {
+      "member": "PySide6/Qt6Core.dll",
+      "sha256": "d6a3c37c5263c5d418fc0e80b722bc9fca7c0859e6f635f9624a2fde00bdc653",
+      "machine": "0x8664",
+      "version_resources": {
+        "FileVersion": "6.11.2.0",
+        "ProductName": "Qt6",
+        "ProductVersion": "6.11.2.0"
+      },
+      "imports": [
+        "api-ms-win-core-synch-l1-2-0.dll",
+        "MPR.dll",
+        "USERENV.dll",
+        "ADVAPI32.dll",
+        "AUTHZ.dll",
+        "KERNEL32.dll",
+        "NETAPI32.dll",
+        "ntdll.dll",
+        "ole32.dll",
+        "SHELL32.dll",
+        "USER32.dll",
+        "VERSION.dll",
+        "WINMM.dll",
+        "WS2_32.dll",
+        "icuuc.dll",
+        "MSVCP140.dll",
+        "MSVCP140_1.dll",
+        "VCRUNTIME140.dll",
+        "VCRUNTIME140_1.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-core-winrt-l1-1-0.dll",
+        "api-ms-win-core-winrt-error-l1-1-1.dll",
+        "OLEAUT32.dll"
+      ],
+      "related_export_count": 47,
+      "scope": "PE parse only, no DLL load/execution; public API presence does not prove exact embedded implementation"
+    },
+    {
+      "member": "PySide6/Qt6Gui.dll",
+      "sha256": "ae29b005f51b6850bf57fa06fced0dc8c7039fd6fafc3bfbcfe76e38adc7abf1",
+      "machine": "0x8664",
+      "version_resources": {
+        "FileVersion": "6.11.2.0",
+        "ProductName": "Qt6",
+        "ProductVersion": "6.11.2.0"
+      },
+      "imports": [
+        "d3d11.dll",
+        "dxgi.dll",
+        "d3d12.dll",
+        "GDI32.dll",
+        "ole32.dll",
+        "SHELL32.dll",
+        "USER32.dll",
+        "UxTheme.dll",
+        "DWrite.dll",
+        "Qt6Core.dll",
+        "KERNEL32.dll",
+        "MSVCP140.dll",
+        "MSVCP140_1.dll",
+        "MSVCP140_2.dll",
+        "VCRUNTIME140.dll",
+        "VCRUNTIME140_1.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll"
+      ],
+      "related_export_count": 0,
+      "scope": "PE parse only, no DLL load/execution; public API presence does not prove exact embedded implementation"
+    },
+    {
+      "member": "PySide6/plugins/imageformats/qjpeg.dll",
+      "sha256": "6517345ac19f5c489daeadc029d0018bbdc09d8e1031c60d714557972f22c6d4",
+      "machine": "0x8664",
+      "version_resources": {
+        "FileVersion": "6.11.2.0",
+        "ProductName": "Qt6",
+        "ProductVersion": "6.11.2.0"
+      },
+      "imports": [
+        "Qt6Gui.dll",
+        "Qt6Core.dll",
+        "VCRUNTIME140.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "KERNEL32.dll"
+      ],
+      "related_export_count": 0,
+      "scope": "PE parse only, no DLL load/execution; public API presence does not prove exact embedded implementation"
+    },
+    {
+      "member": "PySide6/plugins/sqldrivers/qsqlite.dll",
+      "sha256": "e804520d0e3a3c743009e60e55f319b592d6fe61d7239b7c0d2218d9fb5edf97",
+      "machine": "0x8664",
+      "version_resources": {
+        "FileVersion": "6.11.2.0",
+        "ProductName": "Qt6",
+        "ProductVersion": "6.11.2.0"
+      },
+      "imports": [
+        "Qt6Sql.dll",
+        "Qt6Core.dll",
+        "KERNEL32.dll",
+        "VCRUNTIME140.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll"
+      ],
+      "related_export_count": 0,
+      "scope": "PE parse only, no DLL load/execution; public API presence does not prove exact embedded implementation"
+    },
+    {
+      "member": "PySide6/plugins/platforms/qwindows.dll",
+      "sha256": "bf6dbc3009f386fa22f0ced560bea6bbf3e0e0b4442d2fb855db67cffce49dbf",
+      "machine": "0x8664",
+      "version_resources": {
+        "FileVersion": "6.11.2.0",
+        "ProductName": "Qt6",
+        "ProductVersion": "6.11.2.0"
+      },
+      "imports": [
+        "ADVAPI32.dll",
+        "dwmapi.dll",
+        "GDI32.dll",
+        "IMM32.dll",
+        "ole32.dll",
+        "OLEAUT32.dll",
+        "SETUPAPI.dll",
+        "SHELL32.dll",
+        "SHLWAPI.dll",
+        "USER32.dll",
+        "WINMM.dll",
+        "WTSAPI32.dll",
+        "api-ms-win-shcore-scaling-l1-1-1.dll",
+        "COMDLG32.dll",
+        "d3d9.dll",
+        "api-ms-win-core-winrt-string-l1-1-0.dll",
+        "api-ms-win-core-winrt-l1-1-0.dll",
+        "UIAutomationCore.DLL",
+        "Qt6Gui.dll",
+        "Qt6Core.dll",
+        "KERNEL32.dll",
+        "MSVCP140.dll",
+        "VCRUNTIME140_1.dll",
+        "VCRUNTIME140.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-core-winrt-error-l1-1-1.dll"
+      ],
+      "related_export_count": 0,
+      "scope": "PE parse only, no DLL load/execution; public API presence does not prove exact embedded implementation"
+    }
+  ],
+  "remaining_before_build": [
+    "Integrate original notices and corresponding source/changes into final reviewed materials.",
+    "Resolve Tika NOTICE PRONOM/OGL3.0 and IPTC applicability; preserve Qt processing changes and corresponding inputs.",
+    "Explain actual Qt wheel-specific feature/patch/source correspondence without interpreting missing markers as absence."
+  ],
+  "separate_reproducibility_unknowns": [
+    "All upstream compiler/SDK/tool versions and flags",
+    "Full binary reproduction and whole machine-code/source correspondence",
+    "Ragel/generated-table rebuilding equivalence; inline template code attribution"
+  ],
+  "tika_pronom_followup": "TIKA-PRONOM-SCOPE.draft.json"
+}

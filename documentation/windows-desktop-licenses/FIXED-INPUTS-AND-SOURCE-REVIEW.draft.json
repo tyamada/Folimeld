@@ -1,0 +1,401 @@
+{
+  "schema_version": 1,
+  "status": "PREBUILD-DRAFT-NOT-APPROVED",
+  "distribution": "windows-desktop-x64",
+  "prepared_date": "2026-11-15",
+  "fixed_archive_inputs": {
+    "input_manifest_sha256": "462aa91314a1bac755ca2c886aff9dc33f5af34e3c0992e63a139828721e1e4c",
+    "verified_count": 23,
+    "archives": {
+      "cpython-3.12.16+20261110-x86_64-pc-windows-msvc-install_only.tar.gz": "e23fe5b16926de1d81661b1a97352e89fb167549c55a6825796ccd0f32ec7f1b",
+      "cffi-2.1.1-cp312-cp312-win_amd64.whl": "f53e442b08449d42821fa4a4fba000095af9f62742a500f978a9f557ec44339a",
+      "cryptography-50.0.2-cp311-abi3-win_amd64.whl": "7afa5a6602a9f29af1f3a2965f831bae7c9d5d597b7cbb716d41ab3b7d89879c",
+      "pillow-12.3.0-cp312-cp312-win_amd64.whl": "a2b55dd6b2a4c4b7d87ffa56bdb33fdc5fdb9a462173861a7bc097f17d91cb09",
+      "pycparser-3.12-py3-none-any.whl": "a076f3f489b39b43ed13563a1dafe42447445bec2e294154ec5c57fcdda4c85e",
+      "pymupdf-1.28.2-cp310-abi3-win_amd64.whl": "ebd244918798502d7b4504c90410d1711a4d7675a32584ca30f1bab419ecbffe",
+      "pyside6-6.11.2-cp310-abi3-win_amd64.whl": "3201d67e3c10be2eaedd3910ff0f02351eca7e88c95a291cde5e7f2f55ef207f",
+      "pyside6_addons-6.11.2-cp310-abi3-win_amd64.whl": "f449ea4431da20e7b86752cca8d166f93434516fe417f981c27e5f8e1b554407",
+      "pyside6_essentials-6.11.2-cp310-abi3-win_amd64.whl": "c8a29def77032773a30879f7f24415b5395ad08592d147c170824ef4c735dfc1",
+      "shiboken6-6.11.2-cp310-abi3-win_amd64.whl": "6ab0eba1c904455df621f9a6df3ca2bb896bab8670572d2bc4e37804ae91f19a",
+      "typing_extensions-4.16.0-py3-none-any.whl": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "winrt_runtime-3.2.1-cp312-cp312-win_amd64.whl": "06510db215d4f0dc45c00fbb1251c6544e91742a0ad928011db33b30677e1576",
+      "winrt_windows_foundation-3.2.1-cp312-cp312-win_amd64.whl": "45550c5b6c2125cde495c409633e6b1ea5aa1677724e3b95eb8140bfccbe30c9",
+      "winrt_windows_foundation_collections-3.2.1-cp312-cp312-win_amd64.whl": "550dfb8c82fe74d9e0728a2a16a9175cc9e34ca2b8ef758d69b2a398894b698b",
+      "winrt_windows_services_store-3.2.1-cp312-cp312-win_amd64.whl": "2b128843ee261ff59f4f4806ff9df586a80e4885abcd62194fe4e0656ef5f90c",
+      "altgraph-0.17.5-py2.py3-none-any.whl": "f3a22400bce1b0c701683820ac4f3b159cd301acab067c51c653e06961600597",
+      "packaging-26.3-py3-none-any.whl": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+      "pefile-2024.8.26-py3-none-any.whl": "76f8b485dcd3b1bb8166f1128d395fa3d87af26360c2358fb75b80019b957c6f",
+      "pyinstaller-6.22.2-py3-none-win_amd64.whl": "9b990fa6bbe143572f06644a984ad0d7aa2e2ccc6929d4916031343a5888e9a7",
+      "pyinstaller_hooks_contrib-2026.7-py3-none-any.whl": "24257a04c7a5a7a034cf28e39dcee20fbeeb9f043076729480f2e1b69904408a",
+      "pywin32_ctypes-0.2.3-py3-none-any.whl": "8a1513379d709975552d202d942d9837758905c8d01eb82b8bcc30918929e7b8",
+      "setuptools-84.0.0-py3-none-any.whl": "51a52592b3b99e102b609654876bd65f19f999935166d1352678931132b0c670",
+      "innosetup-7.1.1-x64.exe": "8a5a6711c3766a6e5fb74f280ba0e3551e719ce94538d901fdbd1f8f9920b3f0"
+    },
+    "build_invoked": false
+  },
+  "tools": {
+    "tools": [
+      {
+        "name": "altgraph",
+        "version": "0.17.5",
+        "filename": "altgraph-0.17.5-py2.py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/a9/ba/000a1996d4308bc65120167c21241a3b205464a2e0b58deda26ae8ac21d1/altgraph-0.17.5-py2.py3-none-any.whl",
+        "sha256": "f3a22400bce1b0c701683820ac4f3b159cd301acab067c51c653e06961600597",
+        "bytes": 21228,
+        "verified": true
+      },
+      {
+        "name": "packaging",
+        "version": "26.3",
+        "filename": "packaging-26.3-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl",
+        "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+        "bytes": 129956,
+        "verified": true
+      },
+      {
+        "name": "pefile",
+        "version": "2024.8.26",
+        "filename": "pefile-2024.8.26-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/54/16/12b82f791c7f50ddec566873d5bdd245baa1491bac11d15ffb98aecc8f8b/pefile-2024.8.26-py3-none-any.whl",
+        "sha256": "76f8b485dcd3b1bb8166f1128d395fa3d87af26360c2358fb75b80019b957c6f",
+        "bytes": 74766,
+        "verified": true
+      },
+      {
+        "name": "pyinstaller",
+        "version": "6.22.2",
+        "filename": "pyinstaller-6.22.2-py3-none-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/3f/53/8ba1d0f6159b490f700eac6161a4be5f0d4672608a6dae9fd73679f183ee/pyinstaller-6.22.2-py3-none-win_amd64.whl",
+        "sha256": "9b990fa6bbe143572f06644a984ad0d7aa2e2ccc6929d4916031343a5888e9a7",
+        "bytes": 1405725,
+        "verified": true
+      },
+      {
+        "name": "pyinstaller-hooks-contrib",
+        "version": "2026.7",
+        "filename": "pyinstaller_hooks_contrib-2026.7-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/0a/67/350377af7b50416344ab8792756d414eef7629c618a73e9a0b13bb1552d9/pyinstaller_hooks_contrib-2026.7-py3-none-any.whl",
+        "sha256": "24257a04c7a5a7a034cf28e39dcee20fbeeb9f043076729480f2e1b69904408a",
+        "bytes": 459445,
+        "verified": true
+      },
+      {
+        "name": "pywin32-ctypes",
+        "version": "0.2.3",
+        "filename": "pywin32_ctypes-0.2.3-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/de/3d/8161f7711c017e01ac9f008dfddd9410dff3674334c233bde66e7ba65bbf/pywin32_ctypes-0.2.3-py3-none-any.whl",
+        "sha256": "8a1513379d709975552d202d942d9837758905c8d01eb82b8bcc30918929e7b8",
+        "bytes": 30756,
+        "verified": true
+      },
+      {
+        "name": "setuptools",
+        "version": "84.0.0",
+        "filename": "setuptools-84.0.0-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/95/9c/c510029fc6ef33a6275cd2c5d3cecd6613dfd6aa401d57c54f1c18852ccf/setuptools-84.0.0-py3-none-any.whl",
+        "sha256": "51a52592b3b99e102b609654876bd65f19f999935166d1352678931132b0c670",
+        "bytes": 818216,
+        "verified": true
+      }
+    ],
+    "inno": {
+      "name": "innosetup-7.1.1-x64.exe",
+      "version": "7.1.1",
+      "url": "https://github.com/jrsoftware/issrc/releases/download/is-7_1_1/innosetup-7.1.1-x64.exe",
+      "sha256": "8a5a6711c3766a6e5fb74f280ba0e3551e719ce94538d901fdbd1f8f9920b3f0",
+      "bytes": 14336568,
+      "release_digest_match": true,
+      "executed": false
+    }
+  },
+  "tool_sources": [
+    {
+      "name": "altgraph",
+      "version": "0.17.5",
+      "filename": "altgraph-0.17.5.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/7e/f8/97fdf103f38fed6792a1601dbc16cc8aac56e7459a9fff08c812d8ae177a/altgraph-0.17.5.tar.gz",
+      "sha256": "c87b395dd12fabde9c99573a9749d67da8d29ef9de0125c7f536699b4a9bc9e7",
+      "bytes": 48428,
+      "verified": true
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "filename": "packaging-26.3.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz",
+      "sha256": "94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79",
+      "bytes": 313412,
+      "verified": true
+    },
+    {
+      "name": "pefile",
+      "version": "2024.8.26",
+      "filename": "pefile-2024.8.26.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/03/4f/2750f7f6f025a1507cd3b7218691671eecfd0bbebebe8b39aa0fe1d360b8/pefile-2024.8.26.tar.gz",
+      "sha256": "3ff6c5d8b43e8c37bb6e6dd5085658d658a7a0bdcd20b6a07b1fcfc1c4e9d632",
+      "bytes": 76008,
+      "verified": true
+    },
+    {
+      "name": "pyinstaller",
+      "version": "6.22.2",
+      "filename": "pyinstaller-6.22.2.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/cc/2b/836d9def811c02522e0921d8b8cdf0c16b0545a216e97e71041758057859/pyinstaller-6.22.2.tar.gz",
+      "sha256": "89b65a3ad07d9dd5832253e37bc45f31872d10d7f9d5c9fd0fdd6088a83829dd",
+      "bytes": 4092631,
+      "verified": true
+    },
+    {
+      "name": "pyinstaller-hooks-contrib",
+      "version": "2026.7",
+      "filename": "pyinstaller_hooks_contrib-2026.7.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/26/60/d881fa1ba8c160c18d8e6f782bb16ec4640c08bc08fc50f704c368ad4f9e/pyinstaller_hooks_contrib-2026.7.tar.gz",
+      "sha256": "5fbcaacb22c4f4aac869a127dce283f67a4b4cfcc37d496f2446603e6d68aefa",
+      "bytes": 175992,
+      "verified": true
+    },
+    {
+      "name": "pywin32-ctypes",
+      "version": "0.2.3",
+      "filename": "pywin32-ctypes-0.2.3.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/85/9f/01a1a99704853cb63f253eea009390c88e7131c67e66a0a02099a8c917cb/pywin32-ctypes-0.2.3.tar.gz",
+      "sha256": "d162dc04946d704503b2edc4d55f3dba5c1d539ead017afa00142c38b9885755",
+      "bytes": 29471,
+      "verified": true
+    },
+    {
+      "name": "setuptools",
+      "version": "84.0.0",
+      "filename": "setuptools-84.0.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/6d/44/f5da03a8ef95d369145c5bb53050e7877c9f3d312e128605fd9504829143/setuptools-84.0.0.tar.gz",
+      "sha256": "f4695c21257f0d9b537ec2692c941d02ee143b7cc1276941349a546573b2ef73",
+      "bytes": 1168449,
+      "verified": true
+    }
+  ],
+  "pillow_transitive_sources": [
+    {
+      "name": "aom",
+      "build_reference": "v3.14.1",
+      "upstream": "https://aomedia.googlesource.com/aom",
+      "commit": "03087864cf4bea6abb0d28f95cf7843511413d8f",
+      "url": "https://aomedia.googlesource.com/aom/+archive/03087864cf4bea6abb0d28f95cf7843511413d8f.tar.gz",
+      "bytes": 6437986,
+      "sha256": "36382632477cdeb77c6e9fb4447b14e6e9f41d5bd8f10dc3915e9649ce2315f5",
+      "hash_status": "locally measured; no independent archive digest",
+      "notices": [
+        {
+          "member": "AUTHORS",
+          "sha256": "1bf4faf64255fc1ffe1428e56f58f36050eeaac47a6401e532ca15823d21e9ac"
+        },
+        {
+          "member": "LICENSE",
+          "sha256": "4764a286d8b2faeaf42f4418e7d7a28d58fc8fd4d00a3d0a7f44b0a4099de7f2"
+        },
+        {
+          "member": "PATENTS",
+          "sha256": "661fb8e504744e95587b556b94a58343448300606a41bea8c7a9b97125696e61"
+        },
+        {
+          "member": "third_party/fastfeat/LICENSE",
+          "sha256": "499041ddee5227b6f29ca06c17803e5fe24d60f243c69635cd76b7ba08d0ddd5"
+        },
+        {
+          "member": "third_party/googletest/src/LICENSE",
+          "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138"
+        },
+        {
+          "member": "third_party/libyuv/LICENSE",
+          "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f"
+        },
+        {
+          "member": "third_party/vector/LICENSE",
+          "sha256": "ff6c857ce2708e87701323078aef115c1872a1f80a9649f86dc899b48083bc60"
+        },
+        {
+          "member": "third_party/x86inc/LICENSE",
+          "sha256": "719d8fa235f2068e0ae6d6a7dceb0a7720d7840f0f0ebed29957989e6ded3cd8"
+        }
+      ]
+    },
+    {
+      "name": "libyuv",
+      "build_reference": "644251f25",
+      "upstream": "https://chromium.googlesource.com/libyuv/libyuv",
+      "commit": "644251f252a84bf8ce91ff0aca86a9b16b069ab8",
+      "url": "https://chromium.googlesource.com/libyuv/libyuv/+archive/644251f252a84bf8ce91ff0aca86a9b16b069ab8.tar.gz",
+      "bytes": 598447,
+      "sha256": "b5d4768c98d765fb19753249872969f22cc478523f4463d365b5458a4ec58d5f",
+      "hash_status": "locally measured; no independent archive digest",
+      "notices": [
+        {
+          "member": "AUTHORS",
+          "sha256": "0c4a51c72a06b3431bb2b750e3b04dbe3694b22e2fcae6e370216424eec56d52"
+        },
+        {
+          "member": "LICENSE",
+          "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f"
+        },
+        {
+          "member": "PATENTS",
+          "sha256": "4da84211f947c6f9f7dd8fbce513e1522e01833407ae732b8c9a2bbb75fed495"
+        }
+      ]
+    },
+    {
+      "name": "dav1d",
+      "build_reference": "1.5.3",
+      "upstream": "https://code.videolan.org/videolan/dav1d",
+      "url": "https://code.videolan.org/videolan/dav1d/-/archive/1.5.3/dav1d-1.5.3.tar.gz",
+      "bytes": 1713950,
+      "sha256": "cbe212b02faf8c6eed5b6d55ef8a6e363aaab83f15112e960701a9c3df813686",
+      "hash_status": "locally measured; no independent archive digest",
+      "notices": [
+        {
+          "member": "dav1d-1.5.3/COPYING",
+          "sha256": "dd92c3c2247c5651606fc23a5e2d6a1ebc5ace9a3e49cbde0e12f05ad1cb1ee5"
+        },
+        {
+          "member": "dav1d-1.5.3/doc/PATENTS",
+          "sha256": "335eca574598bf4ca181b12f708d6669e5a5e78c8e1513e5b35fa1f03901484b"
+        }
+      ]
+    }
+  ],
+  "mupdf": {
+    "tag": "1.28.2",
+    "commit": "fe374accd98a43174a328fa7980d7675e06d5b0d",
+    "submodules": [
+      {
+        "path": "thirdparty/brotli",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "2523f3314501aa5c90e561922b2e668b3ccee26e"
+      },
+      {
+        "path": "thirdparty/cmark-gfm",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "74e0f5b6b62bbdd1e262c92f4bb2c6c871c6307e"
+      },
+      {
+        "path": "thirdparty/curl",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "f43c6fbb2dbdf68dfdd0f0c3399e3711a621614a"
+      },
+      {
+        "path": "thirdparty/extract",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "8750ac39c30a0d65119b426b5a491c5b8e8bf674"
+      },
+      {
+        "path": "thirdparty/freeglut",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "d5e2256d571b3ef66fb60716c99e35e9d3e570a2"
+      },
+      {
+        "path": "thirdparty/freetype",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "0a0221a1347e2f1e07c395263540026e9a0aa7c7"
+      },
+      {
+        "path": "thirdparty/gumbo-parser",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "61bd4e736c3b342e592f65be0d65ec6a0acd8dcb"
+      },
+      {
+        "path": "thirdparty/harfbuzz",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "c28ba35a1e6dc4b6b32e2b1d11fd2a408f6c86bb"
+      },
+      {
+        "path": "thirdparty/jbig2dec",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "dc15c39bbbddc90f79c14563d2eb5a794106be8f"
+      },
+      {
+        "path": "thirdparty/lcms2",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "d69c64417c4a33a4629957fc0e08f4f4c5abcc3d"
+      },
+      {
+        "path": "thirdparty/leptonica",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "7fbe9ea76d1e0c48a02b2ed371d24f92c7bac40c"
+      },
+      {
+        "path": "thirdparty/libjpeg",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "627faae398468d5d11e3d694dc325432f734b5c4"
+      },
+      {
+        "path": "thirdparty/mujs",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "e892c9fdbbddba94e52f656ccb378ed4885e30cc"
+      },
+      {
+        "path": "thirdparty/openjpeg",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "957029eb875eee1118743f200cb86da9d8289de2"
+      },
+      {
+        "path": "thirdparty/tesseract",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "ad0f76d971946512a62c933f490c8111877eddaa"
+      },
+      {
+        "path": "thirdparty/zint",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "7a9fdd6cd00cd5bfd0082705d934c13ef84f25e1"
+      },
+      {
+        "path": "thirdparty/zlib",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "da607da739fa6047df13e66a2af6b8bec7c2a498"
+      },
+      {
+        "path": "thirdparty/zxing-cpp",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "742aef959e12a41eda494df78fd567c2e715ff57"
+      }
+    ],
+    "source_file_comparison": {
+      "exact": 7982,
+      "line_endings_only": 27,
+      "unexplained": 0
+    },
+    "wheel_build_correspondence": "not established"
+  },
+  "crt": {
+    "input_paths": 17,
+    "authenticode_valid": 17,
+    "same_version_differences_explained": "certificate table and PE checksum; remaining PE bytes match",
+    "different_version": "winrt/msvcp140.dll 14.29.30157.0 vs 14.44.35211.0",
+    "redistribution_permission": "not established"
+  },
+  "remaining": [
+    "Pillow: full wheel/source/patch/compiler correspondence and independent transitive archive checksums",
+    "MuPDF: actual Windows wheel configuration/patches and final corresponding-source closure",
+    "CRT: licensed redistribution route, official redistributable byte correspondence and final load paths",
+    "Inno: installed compiler/stub/internal third-party materials and final output rights/attribution",
+    "All: clean environment installed-file correspondence, final payload/license/source ledger, LGPL replacement acceptance"
+  ],
+  "restrictions": "No build, commit, release, test-PC update, WACK or Hosted comparison; uv development remains discontinued"
+}

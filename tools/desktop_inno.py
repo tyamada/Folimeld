@@ -9,7 +9,7 @@ import subprocess
 PRIMARY_FILES = frozenset({"ISCC.exe", "ISCmplr.dll", "ISPP.dll", "Setup.e32", "Setup.e64",
                           "SetupCustomStyle.e32", "SetupCustomStyle.e64", "SetupLdr.e32", "SetupLdr.e64"})
 SETUP_POLICY = {"SetupArchitecture": "x86", "UseSetupLdr": "x86", "WizardStyle": "classic light",
-                "ArchitecturesAllowed": "x64os", "ArchitecturesInstallIn64BitMode": "x64os"}
+                "ArchitecturesAllowed": "x64os", "ArchitecturesInstallIn64BitMode": "x64os", "LicenseFile": '{#PayloadRoot}\\_internal\\licenses\\microsoft-runtime\\MICROSOFT-VC-RUNTIME-14.44-EN.original.rtf'}
 SELECTED_STUBS = ["Setup.e32", "SetupLdr.e32"]
 
 

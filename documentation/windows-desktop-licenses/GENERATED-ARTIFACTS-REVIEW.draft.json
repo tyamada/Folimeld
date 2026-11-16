@@ -1,0 +1,74 @@
+{
+  "status": "PREBUILD-DRAFT-NOT-APPROVED",
+  "files": [
+    {
+      "wheel_file": "pymupdf/mupdf-devel/include/mupdf/classes.h",
+      "generator": "MuPDF scripts/wrap/cpp.py",
+      "generator_lines": "5458-5470 (output set), 6041-6051 (close/record outputs)",
+      "input": "MuPDF include/mupdf/fitz.h, pdf.h; scripts/wrap modules; libclang; generated extra.h",
+      "packaging": "PyMuPDF setup.py:554-569 copies platform/c++/include",
+      "status": "source route and generated-file marker confirmed; not regenerated"
+    },
+    {
+      "wheel_file": "pymupdf/mupdf-devel/include/mupdf/classes2.h",
+      "generator": "MuPDF scripts/wrap/cpp.py",
+      "generator_lines": "5458-5470 (output set), 6041-6051 (close/record outputs)",
+      "input": "MuPDF include/mupdf/fitz.h, pdf.h; scripts/wrap modules; libclang; generated extra.h",
+      "packaging": "PyMuPDF setup.py:554-569 copies platform/c++/include",
+      "status": "source route and generated-file marker confirmed; not regenerated"
+    },
+    {
+      "wheel_file": "pymupdf/mupdf-devel/include/mupdf/exceptions.h",
+      "generator": "MuPDF scripts/wrap/cpp.py",
+      "generator_lines": "5458-5470 (output set), 6041-6051 (close/record outputs)",
+      "input": "MuPDF include/mupdf/fitz.h, pdf.h; scripts/wrap modules; libclang; generated extra.h",
+      "packaging": "PyMuPDF setup.py:554-569 copies platform/c++/include",
+      "status": "source route and generated-file marker confirmed; not regenerated"
+    },
+    {
+      "wheel_file": "pymupdf/mupdf-devel/include/mupdf/extra.h",
+      "generator": "MuPDF scripts/wrap/cpp.py",
+      "generator_lines": "5458-5470 (output set), 6041-6051 (close/record outputs)",
+      "input": "MuPDF include/mupdf/fitz.h, pdf.h; scripts/wrap modules; libclang; generated extra.h",
+      "packaging": "PyMuPDF setup.py:554-569 copies platform/c++/include",
+      "status": "source route and generated-file marker confirmed; not regenerated"
+    },
+    {
+      "wheel_file": "pymupdf/mupdf-devel/include/mupdf/functions.h",
+      "generator": "MuPDF scripts/wrap/cpp.py",
+      "generator_lines": "5458-5470 (output set), 6041-6051 (close/record outputs)",
+      "input": "MuPDF include/mupdf/fitz.h, pdf.h; scripts/wrap modules; libclang; generated extra.h",
+      "packaging": "PyMuPDF setup.py:554-569 copies platform/c++/include",
+      "status": "source route and generated-file marker confirmed; not regenerated"
+    },
+    {
+      "wheel_file": "pymupdf/mupdf-devel/include/mupdf/internal.h",
+      "generator": "MuPDF scripts/wrap/cpp.py",
+      "generator_lines": "5458-5470 (output set), 6041-6051 (close/record outputs)",
+      "input": "MuPDF include/mupdf/fitz.h, pdf.h; scripts/wrap modules; libclang; generated extra.h",
+      "packaging": "PyMuPDF setup.py:554-569 copies platform/c++/include",
+      "status": "source route and generated-file marker confirmed; not regenerated"
+    },
+    {
+      "wheel_file": "pymupdf/extra.py",
+      "generator": "PyMuPDF setup.py:_build_extension; pipcl.py:build_extension",
+      "input": "PyMuPDF src/extra.i; MuPDF headers; SWIG4.4.1",
+      "packaging": "src/build/extra.py -> pymupdf/extra.py",
+      "status": "SWIG marker/version and source call route confirmed; exact pipcl version unresolved; not regenerated"
+    },
+    {
+      "wheel_file": "pymupdf/mupdf.py",
+      "generator": "MuPDF scripts/wrap/swig.py and __main__.py",
+      "input": "generated interface and C++ wrapper headers; SWIG4.4.1",
+      "packaging": "MuPDF build dir/mupdf.py -> pymupdf/mupdf.py",
+      "status": "SWIG marker/version and source call route confirmed; exact pipcl version unresolved; not regenerated"
+    },
+    {
+      "wheel_file": "pymupdf/_build.py",
+      "generator": "PyMuPDF setup.py:574-597",
+      "input": "pipcl.git_info_py, MuPDF location, package version, SWIG version, fake-no-gil flag",
+      "status": "all recorded field generation routes located; build runtime values are self-reported"
+    }
+  ],
+  "actual_generation_executed": false
+}

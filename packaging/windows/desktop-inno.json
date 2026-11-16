@@ -23,7 +23,8 @@
     "UseSetupLdr": "x86",
     "WizardStyle": "classic light",
     "ArchitecturesAllowed": "x64os",
-    "ArchitecturesInstallIn64BitMode": "x64os"
+    "ArchitecturesInstallIn64BitMode": "x64os",
+    "LicenseFile": "{#PayloadRoot}\\_internal\\licenses\\microsoft-runtime\\MICROSOFT-VC-RUNTIME-14.44-EN.original.rtf"
   },
   "files": {
     "Default.isl": {

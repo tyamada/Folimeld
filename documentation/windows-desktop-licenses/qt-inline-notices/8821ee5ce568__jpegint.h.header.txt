@@ -1,0 +1,282 @@
+/*
+ * jpegint.h
+ *
+ * This file was part of the Independent JPEG Group's software:
+ * Copyright (C) 1991-1997, Thomas G. Lane.
+ * Modified 1997-2009 by Guido Vollbeding.
+ * Lossless JPEG Modifications:
+ * Copyright (C) 1999, Ken Murchison.
+ * libjpeg-turbo Modifications:
+ * Copyright (C) 2015-2017, 2019, 2021-2022, 2024-2026, D. R. Commander.
+ * Copyright (C) 2015, Google, Inc.
+ * Copyright (C) 2021, Alex Richardson.
+ * For conditions of distribution and use, see the accompanying README.ijg
+ * file.
+ *
+ * This file provides common declarations for the various JPEG modules.
+ * These declarations are considered internal to the JPEG library; most
+ * applications using the library shouldn't need to include this file.
+ */
+
+
+/* Representation of a spatial difference value.
+ * This should be a signed value of at least 16 bits; int is usually OK.
+ */
+
+typedef int JDIFF;
+
+typedef JDIFF FAR *JDIFFROW;    /* pointer to one row of difference values */
+typedef JDIFFROW *JDIFFARRAY;   /* ptr to some rows (a 2-D diff array) */
+typedef JDIFFARRAY *JDIFFIMAGE; /* a 3-D diff array: top index is color */
+
+
+/* Declarations for both compression & decompression */
+
+typedef enum {            /* Operating modes for buffer controllers */
+  JBUF_PASS_THRU,         /* Plain stripwise operation */
+  /* Remaining modes require a full-image buffer to have been created */
+  JBUF_SAVE_SOURCE,       /* Run source subobject only, save output */
+  JBUF_CRANK_DEST,        /* Run dest subobject only, using saved data */
+  JBUF_SAVE_AND_PASS      /* Run both subobjects, save output */
+} J_BUF_MODE;
+
+/* Values of global_state field (jdapi.c has some dependencies on ordering!) */
+#define CSTATE_START     100    /* after create_compress */
+#define CSTATE_SCANNING  101    /* start_compress done, write_scanlines OK */
+#define CSTATE_RAW_OK    102    /* start_compress done, write_raw_data OK */
+#define CSTATE_WRCOEFS   103    /* jpeg_write_coefficients done */
+#define DSTATE_START     200    /* after create_decompress */
+#define DSTATE_INHEADER  201    /* reading header markers, no SOS yet */
+#define DSTATE_READY     202    /* found SOS, ready for start_decompress */
+#define DSTATE_PRELOAD   203    /* reading multiscan file in start_decompress*/
+#define DSTATE_PRESCAN   204    /* performing dummy pass for 2-pass quant */
+#define DSTATE_SCANNING  205    /* start_decompress done, read_scanlines OK */
+#define DSTATE_RAW_OK    206    /* start_decompress done, read_raw_data OK */
+#define DSTATE_BUFIMAGE  207    /* expecting jpeg_start_output */
+#define DSTATE_BUFPOST   208    /* looking for SOS/EOI in jpeg_finish_output */
+#define DSTATE_RDCOEFS   209    /* reading file in jpeg_read_coefficients */
+#define DSTATE_STOPPING  210    /* looking for EOI in jpeg_finish_decompress */
+
+
+/* JLONG must hold at least signed 32-bit values. */
+typedef long JLONG;
+
+/* JUINTPTR must hold pointer values. */
+#ifdef __UINTPTR_TYPE__
+/*
+ * __UINTPTR_TYPE__ is GNU-specific and available in GCC 4.6+ and Clang 3.0+.
+ * Fortunately, that is sufficient to support the few architectures for which
+ * sizeof(void *) != sizeof(size_t).  The only other options would require C99
+ * or Clang-specific builtins.
+ */
+typedef __UINTPTR_TYPE__ JUINTPTR;
+#else
+typedef size_t JUINTPTR;
+#endif
+
+#define IsExtRGB(cs) \
+  (cs == JCS_RGB || (cs >= JCS_EXT_RGB && cs <= JCS_EXT_ARGB))
+
+/*
+ * Left shift macro that handles a negative operand without causing any
+ * sanitizer warnings
+ */
+
+#define LEFT_SHIFT(a, b)  ((JLONG)((unsigned long)(a) << (b)))
+
+
+/* Declarations for compression modules */
+
+/* Master control module */
+struct jpeg_comp_master {
+  void (*prepare_for_pass) (j_compress_ptr cinfo);
+  void (*pass_startup) (j_compress_ptr cinfo);
+  void (*finish_pass) (j_compress_ptr cinfo);
+
+  /* State variables made visible to other modules */
+  boolean call_pass_startup;    /* True if pass_startup must be called */
+  boolean is_last_pass;         /* True during last pass */
+  boolean lossless;             /* True if lossless mode is enabled */
+
+  /* SIMD-specific variables */
+  unsigned int simd_support;
+  unsigned int simd_huffman;
+
+#ifdef WITH_PROFILE
+  double start, total_start, total_elapsed;
+  double cconvert_elapsed, cconvert_mpixels;
+  double downsample_elapsed, downsample_msamples;
+  double convsamp_elapsed, convsamp_msamples;
+  double fdct_elapsed, fdct_mcoeffs;
+  double quantize_elapsed, quantize_mcoeffs;
+  double entropy_elapsed, entropy_mcoeffs;
+#endif
+};
+
+/* Main buffer control (downsampled-data buffer) */
+struct jpeg_c_main_controller {
+  void (*start_pass) (j_compress_ptr cinfo, J_BUF_MODE pass_mode);
+  void (*process_data) (j_compress_ptr cinfo, JSAMPARRAY input_buf,
+                        JDIMENSION *in_row_ctr, JDIMENSION in_rows_avail);
+  void (*process_data_12) (j_compress_ptr cinfo, J12SAMPARRAY input_buf,
+                           JDIMENSION *in_row_ctr, JDIMENSION in_rows_avail);
+#ifdef C_LOSSLESS_SUPPORTED
+  void (*process_data_16) (j_compress_ptr cinfo, J16SAMPARRAY input_buf,
+                           JDIMENSION *in_row_ctr, JDIMENSION in_rows_avail);
+#endif
+};
+
+/* Compression preprocessing (downsampling input buffer control) */
+struct jpeg_c_prep_controller {
+  void (*start_pass) (j_compress_ptr cinfo, J_BUF_MODE pass_mode);
+  void (*pre_process_data) (j_compress_ptr cinfo, JSAMPARRAY input_buf,
+                            JDIMENSION *in_row_ctr, JDIMENSION in_rows_avail,
+                            JSAMPIMAGE output_buf,
+                            JDIMENSION *out_row_group_ctr,
+                            JDIMENSION out_row_groups_avail);
+  void (*pre_process_data_12) (j_compress_ptr cinfo, J12SAMPARRAY input_buf,
+                               JDIMENSION *in_row_ctr,
+                               JDIMENSION in_rows_avail,
+                               J12SAMPIMAGE output_buf,
+                               JDIMENSION *out_row_group_ctr,
+                               JDIMENSION out_row_groups_avail);
+#ifdef C_LOSSLESS_SUPPORTED
+  void (*pre_process_data_16) (j_compress_ptr cinfo, J16SAMPARRAY input_buf,
+                               JDIMENSION *in_row_ctr,
+                               JDIMENSION in_rows_avail,
+                               J16SAMPIMAGE output_buf,
+                               JDIMENSION *out_row_group_ctr,
+                               JDIMENSION out_row_groups_avail);
+#endif
+};
+
+/* Lossy mode: Coefficient buffer control
+ * Lossless mode: Difference buffer control
+ */
+struct jpeg_c_coef_controller {
+  void (*start_pass) (j_compress_ptr cinfo, J_BUF_MODE pass_mode);
+  boolean (*compress_data) (j_compress_ptr cinfo, JSAMPIMAGE input_buf);
+  boolean (*compress_data_12) (j_compress_ptr cinfo, J12SAMPIMAGE input_buf);
+#ifdef C_LOSSLESS_SUPPORTED
+  boolean (*compress_data_16) (j_compress_ptr cinfo, J16SAMPIMAGE input_buf);
+#endif
+};
+
+/* Colorspace conversion */
+struct jpeg_color_converter {
+  void (*start_pass) (j_compress_ptr cinfo);
+  void (*color_convert) (j_compress_ptr cinfo, JSAMPARRAY input_buf,
+                         JSAMPIMAGE output_buf, JDIMENSION output_row,
+                         int num_rows);
+  void (*color_convert_12) (j_compress_ptr cinfo, J12SAMPARRAY input_buf,
+                            J12SAMPIMAGE output_buf, JDIMENSION output_row,
+                            int num_rows);
+#ifdef C_LOSSLESS_SUPPORTED
+  void (*color_convert_16) (j_compress_ptr cinfo, J16SAMPARRAY input_buf,
+                            J16SAMPIMAGE output_buf, JDIMENSION output_row,
+                            int num_rows);
+#endif
+  void (*color_convert_simd) (JDIMENSION img_width, JSAMPARRAY input_buf,
+                              JSAMPIMAGE output_buf, JDIMENSION output_row,
+                              int num_rows);
+};
+
+/* Downsampling */
+struct jpeg_downsampler {
+  void (*start_pass) (j_compress_ptr cinfo);
+  void (*downsample) (j_compress_ptr cinfo, JSAMPIMAGE input_buf,
+                      JDIMENSION in_row_index, JSAMPIMAGE output_buf,
+                      JDIMENSION out_row_group_index);
+  void (*downsample_12) (j_compress_ptr cinfo, J12SAMPIMAGE input_buf,
+                         JDIMENSION in_row_index, J12SAMPIMAGE output_buf,
+                         JDIMENSION out_row_group_index);
+#ifdef C_LOSSLESS_SUPPORTED
+  void (*downsample_16) (j_compress_ptr cinfo, J16SAMPIMAGE input_buf,
+                         JDIMENSION in_row_index, J16SAMPIMAGE output_buf,
+                         JDIMENSION out_row_group_index);
+#endif
+  void (*h2v1_downsample_simd) (JDIMENSION image_width, int max_v_samp_factor,
+                                JDIMENSION v_samp_factor,
+                                JDIMENSION width_blocks, JSAMPARRAY input_data,
+                                JSAMPARRAY output_data);
+  void (*h2v2_downsample_simd) (JDIMENSION image_width, int max_v_samp_factor,
+                                JDIMENSION v_samp_factor,
+                                JDIMENSION width_blocks, JSAMPARRAY input_data,
+                                JSAMPARRAY output_data);
+
+  boolean need_context_rows;    /* TRUE if need rows above & below */
+};
+
+/* Lossy mode: Forward DCT (also controls coefficient quantization)
+ * Lossless mode: Prediction, sample differencing, and point transform
+ */
+struct jpeg_forward_dct {
+  void (*start_pass) (j_compress_ptr cinfo);
+
+  /* Lossy mode */
+  /* perhaps this should be an array??? */
+  void (*forward_DCT) (j_compress_ptr cinfo, jpeg_component_info *compptr,
+                       JSAMPARRAY sample_data, JBLOCKROW coef_blocks,
+                       JDIMENSION start_row, JDIMENSION start_col,
+                       JDIMENSION num_blocks);
+  void (*forward_DCT_12) (j_compress_ptr cinfo, jpeg_component_info *compptr,
+                          J12SAMPARRAY sample_data, JBLOCKROW coef_blocks,
+                          JDIMENSION start_row, JDIMENSION start_col,
+                          JDIMENSION num_blocks);
+};
+
+/* Entropy encoding */
+struct jpeg_entropy_encoder {
+  void (*start_pass) (j_compress_ptr cinfo, boolean gather_statistics);
+
+  /* Lossy mode */
+  boolean (*encode_mcu) (j_compress_ptr cinfo, JBLOCKROW *MCU_data);
+  /* Lossless mode */
+  JDIMENSION (*encode_mcus) (j_compress_ptr cinfo, JDIFFIMAGE diff_buf,
+                             JDIMENSION MCU_row_num, JDIMENSION MCU_col_num,
+                             JDIMENSION nMCU);
+  JOCTET *(*huff_encode_one_block_simd) (void *state, JOCTET *buffer,
+                                         JCOEFPTR block, int last_dc_val,
+                                         void *dctbl, void *actbl);
+
+  void (*finish_pass) (j_compress_ptr cinfo);
+};
+
+/* Marker writing */
+struct jpeg_marker_writer {
+  void (*write_file_header) (j_compress_ptr cinfo);
+  void (*write_frame_header) (j_compress_ptr cinfo);
+  void (*write_scan_header) (j_compress_ptr cinfo);
+  void (*write_file_trailer) (j_compress_ptr cinfo);
+  void (*write_tables_only) (j_compress_ptr cinfo);
+  /* These routines are exported to allow insertion of extra markers */
+  /* Probably only COM and APPn markers should be written this way */
+  void (*write_marker_header) (j_compress_ptr cinfo, int marker,
+                               unsigned int datalen);
+  void (*write_marker_byte) (j_compress_ptr cinfo, int val);
+};
+
+
+/* Declarations for decompression modules */
+
+/* Master control module */
+struct jpeg_decomp_master {
+  void (*prepare_for_output_pass) (j_decompress_ptr cinfo);
+  void (*finish_output_pass) (j_decompress_ptr cinfo);
+
+  /* State variables made visible to other modules */
+  boolean is_dummy_pass;        /* True during 1st pass for 2-pass quant */
+  boolean lossless;             /* True if decompressing a lossless image */
+
+  /* Partial decompression variables */
+  JDIMENSION first_iMCU_col;
+  JDIMENSION last_iMCU_col;
+  JDIMENSION first_MCU_col[MAX_COMPONENTS];
+  JDIMENSION last_MCU_col[MAX_COMPONENTS];
+  boolean jinit_upsampler_no_alloc;
+
+  /* Last iMCU row that was successfully decoded */
+  JDIMENSION last_good_iMCU_row;
+
+  /* Tail of list of saved markers */
+  jpeg_saved_

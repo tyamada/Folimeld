@@ -48,6 +48,7 @@ def fixture(tmp_path, monkeypatch):
         review[key] = dc._sha(path)
     review_path = tmp_path / "synthetic-review.json"
     review_path.write_text(json.dumps(review))
+    monkeypatch.setattr(dc, "verify_runtime_terms", lambda *args: {"synthetic": "terms"})
     monkeypatch.setattr(dc, "verify_collected_crt", lambda *args: {"synthetic": "crt"})
     monkeypatch.setattr(dc, "verify_inno_inputs", lambda *args: {"selected_stubs": ["Setup.e32", "SetupLdr.e32"]})
     monkeypatch.setattr(dc.subprocess, "run", lambda *args, **kwargs: pytest.fail("Unexpected compiler execution"))
@@ -162,3 +163,13 @@ def test_output_overlap(fixture):
     inputs["output"] = inputs["payload_root"] / "output"
     with pytest.raises(ValueError, match="separate"):
         dc.verify_compile_inputs(repo, **inputs)
+
+
+def test_runtime_terms_failure_prevents_compiler(fixture, monkeypatch):
+    repo, inputs = fixture
+    def fail(*args):
+        raise ValueError("Runtime terms invalid")
+    monkeypatch.setattr(dc, "verify_runtime_terms", fail)
+    with pytest.raises(ValueError, match="Runtime terms"):
+        dc.compile_reviewed(repo, **inputs)
+    assert not inputs["output"].exists()

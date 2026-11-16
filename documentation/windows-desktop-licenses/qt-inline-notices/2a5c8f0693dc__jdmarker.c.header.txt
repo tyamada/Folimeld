@@ -1,0 +1,417 @@
+/*
+ * jdmarker.c
+ *
+ * This file was part of the Independent JPEG Group's software:
+ * Copyright (C) 1991-1998, Thomas G. Lane.
+ * Lossless JPEG Modifications:
+ * Copyright (C) 1999, Ken Murchison.
+ * libjpeg-turbo Modifications:
+ * Copyright (C) 2012, 2015, 2022, 2024, 2026, D. R. Commander.
+ * For conditions of distribution and use, see the accompanying README.ijg
+ * file.
+ *
+ * This file contains routines to decode JPEG datastream markers.
+ * Most of the complexity arises from our desire to support input
+ * suspension: if not all of the data for a marker is available,
+ * we must exit back to the application.  On resumption, we reprocess
+ * the marker.
+ */
+
+#define JPEG_INTERNALS
+#include "jinclude.h"
+#include "jpeglib.h"
+
+
+typedef enum {                  /* JPEG marker codes */
+  M_SOF0  = 0xc0,
+  M_SOF1  = 0xc1,
+  M_SOF2  = 0xc2,
+  M_SOF3  = 0xc3,
+
+  M_SOF5  = 0xc5,
+  M_SOF6  = 0xc6,
+  M_SOF7  = 0xc7,
+
+  M_JPG   = 0xc8,
+  M_SOF9  = 0xc9,
+  M_SOF10 = 0xca,
+  M_SOF11 = 0xcb,
+
+  M_SOF13 = 0xcd,
+  M_SOF14 = 0xce,
+  M_SOF15 = 0xcf,
+
+  M_DHT   = 0xc4,
+
+  M_DAC   = 0xcc,
+
+  M_RST0  = 0xd0,
+  M_RST1  = 0xd1,
+  M_RST2  = 0xd2,
+  M_RST3  = 0xd3,
+  M_RST4  = 0xd4,
+  M_RST5  = 0xd5,
+  M_RST6  = 0xd6,
+  M_RST7  = 0xd7,
+
+  M_SOI   = 0xd8,
+  M_EOI   = 0xd9,
+  M_SOS   = 0xda,
+  M_DQT   = 0xdb,
+  M_DNL   = 0xdc,
+  M_DRI   = 0xdd,
+  M_DHP   = 0xde,
+  M_EXP   = 0xdf,
+
+  M_APP0  = 0xe0,
+  M_APP1  = 0xe1,
+  M_APP2  = 0xe2,
+  M_APP3  = 0xe3,
+  M_APP4  = 0xe4,
+  M_APP5  = 0xe5,
+  M_APP6  = 0xe6,
+  M_APP7  = 0xe7,
+  M_APP8  = 0xe8,
+  M_APP9  = 0xe9,
+  M_APP10 = 0xea,
+  M_APP11 = 0xeb,
+  M_APP12 = 0xec,
+  M_APP13 = 0xed,
+  M_APP14 = 0xee,
+  M_APP15 = 0xef,
+
+  M_JPG0  = 0xf0,
+  M_JPG13 = 0xfd,
+  M_COM   = 0xfe,
+
+  M_TEM   = 0x01,
+
+  M_ERROR = 0x100
+} JPEG_MARKER;
+
+
+/* Private state */
+
+typedef struct {
+  struct jpeg_marker_reader pub; /* public fields */
+
+  /* Application-overridable marker processing methods */
+  jpeg_marker_parser_method process_COM;
+  jpeg_marker_parser_method process_APPn[16];
+
+  /* Limit on marker data length to save for each marker type */
+  unsigned int length_limit_COM;
+  unsigned int length_limit_APPn[16];
+
+  /* Status of COM/APPn marker saving */
+  jpeg_saved_marker_ptr cur_marker;     /* NULL if not processing a marker */
+  unsigned int bytes_read;              /* data bytes read so far in marker */
+  /* Note: cur_marker is not linked into marker_list until it's all read. */
+} my_marker_reader;
+
+typedef my_marker_reader *my_marker_ptr;
+
+
+/*
+ * Macros for fetching data from the data source module.
+ *
+ * At all times, cinfo->src->next_input_byte and ->bytes_in_buffer reflect
+ * the current restart point; we update them only when we have reached a
+ * suitable place to restart if a suspension occurs.
+ */
+
+/* Declare and initialize local copies of input pointer/count */
+#define INPUT_VARS(cinfo) \
+  struct jpeg_source_mgr *datasrc = (cinfo)->src; \
+  const JOCTET *next_input_byte = datasrc->next_input_byte; \
+  size_t bytes_in_buffer = datasrc->bytes_in_buffer
+
+/* Unload the local copies --- do this only at a restart boundary */
+#define INPUT_SYNC(cinfo) \
+  ( datasrc->next_input_byte = next_input_byte, \
+    datasrc->bytes_in_buffer = bytes_in_buffer )
+
+/* Reload the local copies --- used only in MAKE_BYTE_AVAIL */
+#define INPUT_RELOAD(cinfo) \
+  ( next_input_byte = datasrc->next_input_byte, \
+    bytes_in_buffer = datasrc->bytes_in_buffer )
+
+/* Internal macro for INPUT_BYTE and INPUT_2BYTES: make a byte available.
+ * Note we do *not* do INPUT_SYNC before calling fill_input_buffer,
+ * but we must reload the local copies after a successful fill.
+ */
+#define MAKE_BYTE_AVAIL(cinfo, action) \
+  if (bytes_in_buffer == 0) { \
+    if (!(*datasrc->fill_input_buffer) (cinfo)) \
+      { action; } \
+    INPUT_RELOAD(cinfo); \
+  }
+
+/* Read a byte into variable V.
+ * If must suspend, take the specified action (typically "return FALSE").
+ */
+#define INPUT_BYTE(cinfo, V, action) \
+  MAKESTMT( MAKE_BYTE_AVAIL(cinfo, action); \
+            bytes_in_buffer--; \
+            V = *next_input_byte++; )
+
+/* As above, but read two bytes interpreted as an unsigned 16-bit integer.
+ * V should be declared unsigned int or perhaps JLONG.
+ */
+#define INPUT_2BYTES(cinfo, V, action) \
+  MAKESTMT( MAKE_BYTE_AVAIL(cinfo, action); \
+            bytes_in_buffer--; \
+            V = ((unsigned int)(*next_input_byte++)) << 8; \
+            MAKE_BYTE_AVAIL(cinfo, action); \
+            bytes_in_buffer--; \
+            V += *next_input_byte++; )
+
+
+/*
+ * Routines to process JPEG markers.
+ *
+ * Entry condition: JPEG marker itself has been read and its code saved
+ *   in cinfo->unread_marker; input restart point is just after the marker.
+ *
+ * Exit: if return TRUE, have read and processed any parameters, and have
+ *   updated the restart point to point after the parameters.
+ *   If return FALSE, was forced to suspend before reaching end of
+ *   marker parameters; restart point has not been moved.  Same routine
+ *   will be called again after application supplies more input data.
+ *
+ * This approach to suspension assumes that all of a marker's parameters
+ * can fit into a single input bufferload.  This should hold for "normal"
+ * markers.  Some COM/APPn markers might have large parameter segments
+ * that might not fit.  If we are simply dropping such a marker, we use
+ * skip_input_data to get past it, and thereby put the problem on the
+ * source manager's shoulders.  If we are saving the marker's contents
+ * into memory, we use a slightly different convention: when forced to
+ * suspend, the marker processor updates the restart point to the end of
+ * what it's consumed (ie, the end of the buffer) before returning FALSE.
+ * On resumption, cinfo->unread_marker still contains the marker code,
+ * but the data source will point to the next chunk of marker data.
+ * The marker processor must retain internal state to deal with this.
+ *
+ * Note that we don't bother to avoid duplicate trace messages if a
+ * suspension occurs within marker parameters.  Other side effects
+ * require more care.
+ */
+
+
+LOCAL(boolean)
+get_soi(j_decompress_ptr cinfo)
+/* Process an SOI marker */
+{
+  int i;
+
+  TRACEMS(cinfo, 1, JTRC_SOI);
+
+  if (cinfo->marker->saw_SOI)
+    ERREXIT(cinfo, JERR_SOI_DUPLICATE);
+
+  /* Reset all parameters that are defined to be reset by SOI */
+
+  for (i = 0; i < NUM_ARITH_TBLS; i++) {
+    cinfo->arith_dc_L[i] = 0;
+    cinfo->arith_dc_U[i] = 1;
+    cinfo->arith_ac_K[i] = 5;
+  }
+  cinfo->restart_interval = 0;
+
+  /* Set initial assumptions for colorspace etc */
+
+  cinfo->jpeg_color_space = JCS_UNKNOWN;
+  cinfo->CCIR601_sampling = FALSE; /* Assume non-CCIR sampling??? */
+
+  cinfo->saw_JFIF_marker = FALSE;
+  cinfo->JFIF_major_version = 1; /* set default JFIF APP0 values */
+  cinfo->JFIF_minor_version = 1;
+  cinfo->density_unit = 0;
+  cinfo->X_density = 1;
+  cinfo->Y_density = 1;
+  cinfo->saw_Adobe_marker = FALSE;
+  cinfo->Adobe_transform = 0;
+
+  cinfo->marker->saw_SOI = TRUE;
+
+  return TRUE;
+}
+
+
+LOCAL(boolean)
+get_sof(j_decompress_ptr cinfo, boolean is_prog, boolean is_lossless,
+        boolean is_arith)
+/* Process a SOFn marker */
+{
+  JLONG length;
+  int c, ci;
+  jpeg_component_info *compptr;
+  INPUT_VARS(cinfo);
+
+  if (cinfo->marker->saw_SOF)
+    ERREXIT(cinfo, JERR_SOF_DUPLICATE);
+
+  cinfo->progressive_mode = is_prog;
+  cinfo->master->lossless = is_lossless;
+  cinfo->arith_code = is_arith;
+
+  INPUT_2BYTES(cinfo, length, return FALSE);
+
+  INPUT_BYTE(cinfo, cinfo->data_precision, return FALSE);
+  cinfo->master->jpeg_data_precision = cinfo->data_precision;
+  INPUT_2BYTES(cinfo, cinfo->image_height, return FALSE);
+  INPUT_2BYTES(cinfo, cinfo->image_width, return FALSE);
+  INPUT_BYTE(cinfo, cinfo->num_components, return FALSE);
+
+  length -= 8;
+
+  TRACEMS4(cinfo, 1, JTRC_SOF, cinfo->unread_marker,
+           (int)cinfo->image_width, (int)cinfo->image_height,
+           cinfo->num_components);
+
+  /* We don't support files in which the image height is initially specified */
+  /* as 0 and is later redefined by DNL.  As long as we have to check that,  */
+  /* might as well have a general sanity check. */
+  if (cinfo->image_height <= 0 || cinfo->image_width <= 0 ||
+      cinfo->num_components <= 0)
+    ERREXIT(cinfo, JERR_EMPTY_IMAGE);
+
+  if (length != (cinfo->num_components * 3))
+    ERREXIT(cinfo, JERR_BAD_LENGTH);
+
+  if (cinfo->comp_info == NULL) /* do only once, even if suspend */
+    cinfo->comp_info = (jpeg_component_info *)(*cinfo->mem->alloc_small)
+                        ((j_common_ptr)cinfo, JPOOL_IMAGE,
+                         cinfo->num_components * sizeof(jpeg_component_info));
+
+  for (ci = 0, compptr = cinfo->comp_info; ci < cinfo->num_components;
+       ci++, compptr++) {
+    compptr->component_index = ci;
+    INPUT_BYTE(cinfo, compptr->component_id, return FALSE);
+    INPUT_BYTE(cinfo, c, return FALSE);
+    compptr->h_samp_factor = (c >> 4) & 15;
+    compptr->v_samp_factor = (c     ) & 15;
+    INPUT_BYTE(cinfo, compptr->quant_tbl_no, return FALSE);
+
+    TRACEMS4(cinfo, 1, JTRC_SOF_COMPONENT,
+             compptr->component_id, compptr->h_samp_factor,
+             compptr->v_samp_factor, compptr->quant_tbl_no);
+  }
+
+  cinfo->marker->saw_SOF = TRUE;
+
+  INPUT_SYNC(cinfo);
+  return TRUE;
+}
+
+
+LOCAL(boolean)
+get_sos(j_decompress_ptr cinfo)
+/* Process a SOS marker */
+{
+  JLONG length;
+  int i, ci, n, c, cc, pi;
+  jpeg_component_info *compptr;
+  INPUT_VARS(cinfo);
+
+  if (!cinfo->marker->saw_SOF)
+    ERREXIT(cinfo, JERR_SOS_NO_SOF);
+
+  INPUT_2BYTES(cinfo, length, return FALSE);
+
+  INPUT_BYTE(cinfo, n, return FALSE); /* Number of components */
+
+  TRACEMS1(cinfo, 1, JTRC_SOS, n);
+
+  if (length != (n * 2 + 6) || n < 1 || n > MAX_COMPS_IN_SCAN)
+    ERREXIT(cinfo, JERR_BAD_LENGTH);
+
+  cinfo->comps_in_scan = n;
+
+  /* Collect the component-spec parameters */
+
+  for (i = 0; i < MAX_COMPS_IN_SCAN; i++)
+    cinfo->cur_comp_info[i] = NULL;
+
+  for (i = 0; i < n; i++) {
+    INPUT_BYTE(cinfo, cc, return FALSE);
+    INPUT_BYTE(cinfo, c, return FALSE);
+
+    for (ci = 0, compptr = cinfo->comp_info;
+         ci < cinfo->num_components && ci < MAX_COMPS_IN_SCAN;
+         ci++, compptr++) {
+      if (cc == compptr->component_id && !cinfo->cur_comp_info[ci])
+        goto id_found;
+    }
+
+    ERREXIT1(cinfo, JERR_BAD_COMPONENT_ID, cc);
+
+id_found:
+
+    cinfo->cur_comp_info[i] = compptr;
+    compptr->dc_tbl_no = (c >> 4) & 15;
+    compptr->ac_tbl_no = (c     ) & 15;
+
+    TRACEMS3(cinfo, 1, JTRC_SOS_COMPONENT, cc,
+             compptr->dc_tbl_no, compptr->ac_tbl_no);
+
+    /* This CSi (cc) should differ from the previous CSi */
+    for (pi = 0; pi < i; pi++) {
+      if (cinfo->cur_comp_info[pi] == compptr) {
+        ERREXIT1(cinfo, JERR_BAD_COMPONENT_ID, cc);
+      }
+    }
+  }
+
+  /* Collect the additional scan parameters Ss, Se, Ah/Al. */
+  INPUT_BYTE(cinfo, c, return FALSE);
+  cinfo->Ss = c;
+  INPUT_BYTE(cinfo, c, return FALSE);
+  cinfo->Se = c;
+  INPUT_BYTE(cinfo, c, return FALSE);
+  cinfo->Ah = (c >> 4) & 15;
+  cinfo->Al = (c     ) & 15;
+
+  TRACEMS4(cinfo, 1, JTRC_SOS_PARAMS, cinfo->Ss, cinfo->Se,
+           cinfo->Ah, cinfo->Al);
+
+  /* Prepare to scan data & restart markers */
+  cinfo->marker->next_restart_num = 0;
+
+  /* Count another SOS marker */
+  cinfo->input_scan_number++;
+
+  INPUT_SYNC(cinfo);
+  return TRUE;
+}
+
+
+#ifdef D_ARITH_CODING_SUPPORTED
+
+LOCAL(boolean)
+get_dac(j_decompress_ptr cinfo)
+/* Process a DAC marker */
+{
+  JLONG length;
+  int index, val;
+  INPUT_VARS(cinfo);
+
+  INPUT_2BYTES(cinfo, length, return FALSE);
+  length -= 2;
+
+  while (length > 0) {
+    INPUT_BYTE(cinfo, index, return FALSE);
+    INPUT_BYTE(cinfo, val, return FALSE);
+
+    length -= 2;
+
+    TRACEMS2(cinfo, 1, JTRC_DAC, index, val);
+
+    if (index < 0 || index >= (2 * NUM_ARITH_TBLS))
+      ERREXIT1(cinfo, JERR_DAC_INDEX, index);
+
+    if (index >= NUM_ARITH_TBLS) { /* define AC table */
+      cinfo->arith_ac_K[index - NUM_ARITH_TBLS] = (UINT8)val;
+    } else {                    /* define DC table */
+      cinfo->arith_dc_L[index] = (UINT8)(val & 0x0F);
+      cinfo->

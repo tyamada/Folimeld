@@ -1,6 +1,6 @@
 # Windows x64 Desktop: implementation before building
 
-[譌･譛ｬ隱枉(windows-desktop-build_ja.md)
+[日本語](windows-desktop-build_ja.md)
 
 Unbuilt, unpublished candidate configuration, separate from Store and uv editions.
 PyInstaller onedir plus Inno Setup requires no user-installed Python, uv or PowerShell.
@@ -95,3 +95,23 @@ The independently reviewed payload ledger must contain `schema_version: 1`, `dis
 The guard requires the exact payload file set, an x64 FolimeldDesktop.exe, python312.dll, the unchanged application LICENSE, the seven canonical CRT files, and an exact packaged copy of the reviewed legal file set under _internal/licenses. Missing, extra, changed, linked or escaping payload entries fail. Legal source files and the complete pinned Inno tree are checked again. Input trees must be separate; output must be separate from inputs and the repository, and cannot be reused. The fixed compiler command selects the reviewed version/paths and PayloadReviewed=1, disables IDE signing-tool inheritance, and accepts no arbitrary compiler arguments. PATH is restricted to the prepared Inno directory and Windows directories.
 
 A full verification runs before creating output, immediately before compiler invocation, and after it returns. A changed snapshot, nonzero compiler result, missing/unexpected output, or unexpected installer PE architecture fails acceptance. This is a recheck, not an atomic filesystem lock; do not modify inputs concurrently. Logs and input hashes are retained; failures are marked failed-not-approved and are never automatically retried in the same directory. A successful future compile records installer size/SHA-256 and compiled-not-release-approved: runtime acceptance, signing, license approval and publication remain separate. Unit tests use synthetic fixtures and a mock compiler only. Production reviewed license/payload ledgers and real installer acceptance remain pending. uv development remains discontinued; Store behavior is unchanged.
+
+## Microsoft Runtime-only consent and original-text guard
+
+The installer candidate now displays the pinned original English Microsoft Runtime RTF before installation. English/Japanese labels explicitly scope acceptance to the Microsoft Runtime and preserve the separate licences of Folimeld and other OSS. The page offers acceptance and refusal; it does not turn the app's AGPL licence into Microsoft terms. Actual page layout and unattended-install behaviour require future installer acceptance.
+
+`tools/desktop_runtime_terms.py` pins the original 9235-byte RTF (SHA256 8099dc3cf9502c335da829e5c755948a12e3e6de490eb492a99deb673d883d8b) at `microsoft-runtime/MICROSOFT-VC-RUNTIME-14.44-EN.original.rtf`. Before onedir work, the helper and spec require the original bytes and its entry in the Desktop reviewed legal ledger. After COLLECT, the original packaged bytes are checked again without fabricating a review record. The compile entry repeats the source/legal check in every full verification pass. The Inno fixed-directive manifest additionally pins LicenseFile to the corresponding _internal/licenses path.
+
+This change does not create reviewed-files.json or establish that all redistribution/end-user protection requirements are satisfied. Individual development and an unsigned initial test candidate were confirmed by the user; no paid certificate is acquired. Store/uv behaviour remains unchanged and uv development remains discontinued. Build/publication still require completion of the remaining material review and actual acceptance; no compiler was invoked for this change.
+
+## Initial Candidate 0.3.5.0 onedir Build, Inno Setup Compilation, and Acceptance Verification (2026-11-16)
+
+- Fixed three issues surfaced during actual execution: PyInstaller `workpath` binding in `Folimeld-Desktop.spec`, collected-TOC Qt DLL resolution in `tools/desktop_qt.py`, and ISPP string comparison (`#if PayloadReviewed != "1"`) in `packaging/windows/Folimeld-Desktop.iss`.
+- Ran `tools.desktop_build` in the dedicated CPython 3.12.16 environment, passing all 23 archive checks, 7 canonical CRT checks, 133 Inno tool checks, and 10 reviewed legal file checks to produce the 201-file onedir payload (`FolimeldDesktop.exe`, 4,709,397 bytes).
+- Created `payload-review.json` binding all 201 payload file SHA-256 hashes and the 5 manifests, then ran `tools.desktop_compile --compile` with Inno Setup 7.1.1 (`ISCC.exe`) to build `Folimeld-Desktop-0.3.5.0-x64-setup.exe` (49,919,431 bytes, SHA-256: `adbe1b0e983f1dfa9bd62d5782ee173ae47e5f625f3babd24b55cc0b5e6386c3`).
+- Completed installer and frozen-application acceptance verification:
+  - Verified `AppMutex` (`Local\Folimeld-Desktop`) blocks installer execution when held (exit code 1, no install directory created).
+  - Verified non-elevated fresh installation (exit code 0, all 201 installed files under `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0` match `payload-review.json` SHA-256, and Start menu shortcut `Folimeld Desktop.lnk` created).
+  - Verified `PrepareToInstall` refuses same-version overwrite (exit code 7).
+  - Verified installed `FolimeldDesktop.exe` opens a 3-page PDF passed via CLI, matches `DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2` (-4, DPI=144), rejects duplicate launch via `Local\Folimeld-Desktop` mutex with dialog and exit code 1, and exits cleanly with code 0.
+  - Verified `unins000.exe` cleanly removes `versions\0.3.5.0` and the Start menu shortcut (exit code 0) while preserving user settings under `%LOCALAPPDATA%\Folimeld-Desktop`.

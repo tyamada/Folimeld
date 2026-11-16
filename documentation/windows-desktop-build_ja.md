@@ -95,3 +95,23 @@ SetupArchitecture=x86、UseSetupLdr=x86、WizardStyle=classic lightを明示し�
 payload全件の一致、x64のFolimeldDesktop.exe、python312.dll、変更のないアプリLICENSE、正規CRT 7件、_internal/licenses内の点検済み資料の完全一致を要求します。欠落・追加・変更・リンク・範囲外参照は停止します。元のライセンス資料と固定済みInno全件も再照合します。入力ツリー同士を分離し、出力は入力・リポジトリの外の新規パスに限定します。コンパイラ引数は版・パス・PayloadReviewed=1に固定し、IDEの署名工具設定の継承を無効化します。任意の追加引数は受け付けず、PATHをInnoとWindowsディレクトリに限定します。
 
 出力作成前・コンパイラ起動直前・終了後に全件を照合します。途中の変更、異常終了、想定外・欠落した出力、異なるインストーラーPEアーキテクチャは失敗とします。再照合は原子的なファイルロックではないため、入力を同時編集しないでください。ログと入力ハッシュを保存し、失敗はfailed-not-approvedとして同じ出力先へ自動再試行しません。将来の成功時もサイズ・SHA-256とcompiled-not-release-approvedを記録するだけで、実動作受入・署名・配布条件の承認・公開は別です。今回の自動検査は模擬入力と模擬コンパイラのみです。実運用の点検済みライセンス／payload台帳とインストーラー受入は残件です。uv版の開発中止とStore版の動作を維持します。
+
+## Microsoft Runtimeに限定した同意と原文ガード
+
+Inno候補に、固定済みMicrosoft Runtimeの英語原文RTFをインストール前に表示する設定を追加しました。日英のラベルでRuntimeだけの同意であることを明記し、Folimeld/他OSSの独立したライセンスを維持します。同意/拒否を用意し、アプリのAGPLをMicrosoft条件へ置き換えません。実画面の収まり・無人導入時の動作は将来のインストーラー受入で確認します。
+
+`tools/desktop_runtime_terms.py`で9235bytesの原文（SHA256 8099dc3cf9502c335da829e5c755948a12e3e6de490eb492a99deb673d883d8b）と、`microsoft-runtime/MICROSOFT-VC-RUNTIME-14.44-EN.original.rtf`を固定。onedir前の補助/specでは原バイトとDesktop点検台帳への収録を検査し、COLLECT後も同梱バイトを再照合します。後者は承認記録を作らないバイト検査です。Inno入口も各全件検査で繰り返し照合し、固定設定台帳にLicenseFileの_internal/licenses配下パスを追加しました。
+
+reviewed-files.jsonは作成せず、再配布/利用者保護条件の全充足を自動承認したとは扱いません。個人開発・初回未署名候補の方針はユーザー確認済みで、有料証明書は購入しません。Store/uv動作は変更せず、uv開発中止を維持。残る資料点検と実受入は必要で、今回コンパイラは起動していません。
+
+## 初回候補 0.3.5.0 の onedir ビルド・Inno Setup コンパイル・実機受入検証（2026-11-16）
+
+- `Folimeld-Desktop.spec` の PyInstaller `workpath` 参照、`tools/desktop_qt.py` における収集済み TOC 内 Qt DLL の依存解決判定、`packaging/windows/Folimeld-Desktop.iss` の ISPP 文字列比較（`#if PayloadReviewed != "1"`）の3箇所を修正。
+- 専用 CPython 3.12.16 環境で `tools.desktop_build` を実行し、23入力アーカイブ・正規CRT 7件・Inno 133件・法務資料10件のハッシュ照合を経て onedir ペイロード（全201ファイル、`FolimeldDesktop.exe` 4,709,397 bytes）を生成。
+- 生成された全201ファイルの SHA-256 と5つの固定マニフェストを結び付けた `payload-review.json` を作成し、`tools.desktop_compile --compile` で Inno Setup 7.1.1 (`ISCC.exe`) により `Folimeld-Desktop-0.3.5.0-x64-setup.exe`（49,919,431 bytes、SHA-256: `adbe1b0e983f1dfa9bd62d5782ee173ae47e5f625f3babd24b55cc0b5e6386c3`）を生成。
+- インストーラーおよび凍結アプリの実機受入検証を実施：
+  - `Local\Folimeld-Desktop` Mutex 保持中のインストーラー起動拒否（終了コード 1、ディレクトリ未作成）を確認。
+  - 通常権限での新規インストール成功（終了コード 0、`%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0` 配下の全201ファイルが `payload-review.json` と SHA-256 完全一致、スタートメニュー `Folimeld Desktop.lnk` 作成）を確認。
+  - 同一バージョン再実行時の `PrepareToInstall` 上書き拒否（終了コード 7）を確認。
+  - 導入された `FolimeldDesktop.exe` での3ページPDF引数起動、メインウィンドウの `DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2` (-4, DPI=144) 一致、重複起動時の `Local\Folimeld-Desktop` ダイアログ表示と終了コード 1、正常終了（終了コード 0）を確認。
+  - `unins000.exe` によるアンインストール成功（終了コード 0、`versions\0.3.5.0` とスタートメニューショートカットの削除、`%LOCALAPPDATA%\Folimeld-Desktop` 設定データの保持）を確認。

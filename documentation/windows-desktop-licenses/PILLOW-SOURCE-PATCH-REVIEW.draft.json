@@ -1,0 +1,77 @@
+{
+  "upstream_raqm": {
+    "url": "https://github.com/HOST-Oman/libraqm/archive/refs/tags/v0.10.5.tar.gz",
+    "bytes": 301815,
+    "sha256": "7f3dd21b4b3bd28a36f2c911d31d91a9d69341697713923ef1aac65d56ebcafd",
+    "hash_type": "locally measured"
+  },
+  "patch_checks": [
+    {
+      "patch": "raqm-0.patch",
+      "upstream_path": "src/raqm-version.h.in",
+      "pillow_source_path": "src/thirdparty/raqm/raqm-version.h",
+      "hunks": [
+        {
+          "expected_line": 31,
+          "actual_line": 31,
+          "old_lines": 14,
+          "new_lines": 14
+        }
+      ],
+      "patched_sha256": "42c33e878cbc534f166fc8ddd1ac7f0b4d2559528e22d904a187400dfed271d6",
+      "pillow_vendored_sha256": "42c33e878cbc534f166fc8ddd1ac7f0b4d2559528e22d904a187400dfed271d6",
+      "exact_match": true,
+      "newline_normalized_match": true
+    },
+    {
+      "patch": "raqm-1.patch",
+      "upstream_path": "src/raqm.c",
+      "pillow_source_path": "src/thirdparty/raqm/raqm.c",
+      "hunks": [
+        {
+          "expected_line": 36,
+          "actual_line": 36,
+          "old_lines": 7,
+          "new_lines": 11
+        }
+      ],
+      "patched_sha256": "5549e7458674077ca4794033ade277910ba0ad6989651787eba1a8b5513a9f9d",
+      "pillow_vendored_sha256": "5549e7458674077ca4794033ade277910ba0ad6989651787eba1a8b5513a9f9d",
+      "exact_match": true,
+      "newline_normalized_match": true
+    },
+    {
+      "patch": "libtiff-0.patch",
+      "hunks": [
+        {
+          "expected_line": 2224,
+          "actual_line": 2216,
+          "old_lines": 7,
+          "new_lines": 7
+        },
+        {
+          "expected_line": 2364,
+          "actual_line": 2356,
+          "old_lines": 7,
+          "new_lines": 7
+        },
+        {
+          "expected_line": 2522,
+          "actual_line": 2512,
+          "old_lines": 7,
+          "new_lines": 7
+        },
+        {
+          "expected_line": 2625,
+          "actual_line": 2615,
+          "old_lines": 7,
+          "new_lines": 7
+        }
+      ],
+      "patched_sha256": "24befd4d743b46dff4448ec4725066466f79389a263615a74a2edc9452dbfb7f",
+      "binary_correspondence_verified": false
+    }
+  ],
+  "generated_or_compiled": false,
+  "original_files_modified": false
+}

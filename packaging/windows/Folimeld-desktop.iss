@@ -11,7 +11,7 @@
 #ifndef PayloadReviewed
   #error Supply PayloadReviewed=1 only after payload and source/license review
 #endif
-#if PayloadReviewed != 1
+#if PayloadReviewed != "1"
   #error Payload is not reviewed
 #endif
 
@@ -20,6 +20,8 @@
 SetupArchitecture=x86
 UseSetupLdr=x86
 WizardStyle=classic light
+; Original terms apply only to the Microsoft Runtime, not all application code.
+LicenseFile={#PayloadRoot}\_internal\licenses\microsoft-runtime\MICROSOFT-VC-RUNTIME-14.44-EN.original.rtf
 AppId={{9F76A89B-64DC-45C9-95F1-7A353DBBAE12}
 AppName=Folimeld Desktop
 AppVersion={#DesktopVersion}
@@ -47,6 +49,16 @@ DisableProgramGroupPage=yes
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "japanese"; MessagesFile: "compiler:Languages\Japanese.isl"
+
+[Messages]
+english.LicenseLabel=These terms apply only to the bundled Microsoft Visual C++ Runtime.
+english.LicenseLabel3=Read the original English Microsoft terms below. Folimeld and other open-source components retain their own licences. Accept these Runtime terms to continue.
+english.LicenseAccepted=I &accept the Microsoft Runtime terms
+english.LicenseNotAccepted=I &do not accept the Microsoft Runtime terms
+japanese.LicenseLabel=この条件は同梱のMicrosoft Visual C++ Runtimeだけに適用されます。
+japanese.LicenseLabel3=以下はMicrosoftの英語原文です。Folimeldと他のOSSにはそれぞれのライセンスが適用されます。続行するにはRuntime条件に同意してください。
+japanese.LicenseAccepted=Microsoft Runtimeの条件に同意する(&A)
+japanese.LicenseNotAccepted=Microsoft Runtimeの条件に同意しない(&D)
 
 [Files]
 Source: "{#PayloadRoot}\*"; DestDir: "{app}\versions\{#DesktopVersion}"; Flags: recursesubdirs createallsubdirs ignoreversion

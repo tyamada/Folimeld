@@ -16,6 +16,7 @@ from urllib.parse import unquote, urlsplit
 from tools.windows_build_environment import build_environment
 from tools.desktop_crt import load_crt_manifest, verify_crt_inputs
 from tools.desktop_inno import load_inno_manifest, verify_inno_inputs
+from tools.desktop_runtime_terms import verify_runtime_terms
 
 
 def reviewed_legal_datas(root: Path) -> list[tuple[str, str]]:
@@ -171,6 +172,7 @@ def main() -> int:
     inno_manifest, inno_manifest_hash = load_inno_manifest(root)
     inno_inputs = verify_inno_inputs(args.inno_root, inno_manifest, root / "packaging/windows/Folimeld-desktop.iss")
     reviewed_legal_datas(args.legal_root)
+    runtime_terms = verify_runtime_terms(args.legal_root)
     if not args.version_info.is_file():
         raise FileNotFoundError(args.version_info)
     output = args.output.resolve()
@@ -187,7 +189,7 @@ def main() -> int:
         "verified_archives": verified_archives,
         "requirements_sha256": requirements_hashes,
         "inno_manifest_sha256": inno_manifest_hash, "inno_inputs": inno_inputs,
-        "crt_manifest_sha256": crt_manifest_hash, "crt_inputs": crt_inputs, "legal_root": str(args.legal_root.resolve()),
+        "runtime_terms": runtime_terms, "crt_manifest_sha256": crt_manifest_hash, "crt_inputs": crt_inputs, "legal_root": str(args.legal_root.resolve()),
         "version_info_sha256": hashlib.sha256(args.version_info.read_bytes()).hexdigest()}, indent=2), encoding="utf-8")
     with (output / "pyinstaller.log").open("w", encoding="utf-8") as log:
         return subprocess.run([sys.executable, "-m", "PyInstaller", "--clean",

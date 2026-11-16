@@ -1,0 +1,1075 @@
+{
+  "scope": "Source/patch correspondence evidence; not proof of a rebuilt or released binary",
+  "authenticated_wheel_sbom": {
+    "authenticated_wheels": [
+      {
+        "package": "pillow",
+        "filename": "pillow-12.3.0-cp312-cp312-win_amd64.whl",
+        "sha256": "a2b55dd6b2a4c4b7d87ffa56bdb33fdc5fdb9a462173861a7bc097f17d91cb09",
+        "matches_official_wheel_hash": true,
+        "sboms": [
+          {
+            "path": "pillow-12.3.0.dist-info/sboms/pillow-12.3.0.cdx.json",
+            "sha256": "40fa909b0f23405a7b97a6d91671a639a40acea7671b04387da22ba3e9fca50a"
+          }
+        ]
+      },
+      {
+        "package": "cryptography",
+        "filename": "cryptography-50.0.2-cp311-abi3-win_amd64.whl",
+        "sha256": "7afa5a6602a9f29af1f3a2965f831bae7c9d5d597b7cbb716d41ab3b7d89879c",
+        "matches_official_wheel_hash": true,
+        "sboms": [
+          {
+            "path": "cryptography-50.0.2.dist-info/sboms/cryptography-rust.cyclonedx.json",
+            "sha256": "246af194b4c524807c5aaffd2b7ff86c2c9bee3eb3fceeac987709ad76e4e7ef"
+          },
+          {
+            "path": "cryptography-50.0.2.dist-info/sboms/sbom.json",
+            "sha256": "5b5eea08dd952a16eef188f7a85ad439a4409efa0e2bce9ca339a4de9c8db3f0"
+          }
+        ]
+      }
+    ],
+    "openssl_wheel_sbom_source_sha256": "325b5c806167c13b40b1ffeadfe0248197c00eccc4cf123ec1e28d2d2fd216d9",
+    "openssl_source_matches_wheel_sbom": true,
+    "rust_registry_sources_matched_to_wheel_sbom": [
+      {
+        "name": "asn1",
+        "version": "0.24.1",
+        "sha256": "c9795210620c0cb3f9a7ce4f882808c38e1ef7b347c90591dceae0886e031fb1",
+        "url": "https://static.crates.io/crates/asn1/asn1-0.24.1.crate",
+        "bytes": 50502,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "asn1_derive",
+        "version": "0.24.1",
+        "sha256": "909e307f1cc32bb8bccbd98f446e6d1bf03fa30f7b53a4337da7181ad30fa11a",
+        "url": "https://static.crates.io/crates/asn1_derive/asn1_derive-0.24.1.crate",
+        "bytes": 9534,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "base64",
+        "version": "0.23.0",
+        "sha256": "b25655df2c3cdd83c5e5b293b88acd880332b2ddadd7c30ac43144fdc0033da9",
+        "url": "https://static.crates.io/crates/base64/base64-0.23.0.crate",
+        "bytes": 93578,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "bitflags",
+        "version": "2.13.1",
+        "sha256": "b588b76d00fde79687d7646a9b5bdf3cc0f655e0bbd080335a95d7e96f3587da",
+        "url": "https://static.crates.io/crates/bitflags/bitflags-2.13.1.crate",
+        "bytes": 51395,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "cc",
+        "version": "1.4.0",
+        "sha256": "5add81bb678e6cb321aff7fa0dc7689ad82b112dbc032cea19f91d6b8e3582b9",
+        "url": "https://static.crates.io/crates/cc/cc-1.4.0.crate",
+        "bytes": 97878,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "cfg-if",
+        "version": "1.0.4",
+        "sha256": "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801",
+        "url": "https://static.crates.io/crates/cfg-if/cfg-if-1.0.4.crate",
+        "bytes": 9360,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "find-msvc-tools",
+        "version": "0.1.9",
+        "sha256": "5baebc0774151f905a1a2cc41989300b1e6fbb29aff0ceffa1064fdd3088d582",
+        "url": "https://static.crates.io/crates/find-msvc-tools/find-msvc-tools-0.1.9.crate",
+        "bytes": 31493,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "foreign-types-shared",
+        "version": "0.1.1",
+        "sha256": "00b0228411908ca8685dba7fc2cdd70ec9990a6e753e89b6ac91a84c40fbaf4b",
+        "url": "https://static.crates.io/crates/foreign-types-shared/foreign-types-shared-0.1.1.crate",
+        "bytes": 5672,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "foreign-types",
+        "version": "0.3.2",
+        "sha256": "f6f339eb8adc052cd2ca78910fda869aefa38d22d5cb648e6485e4d3fc06f3b1",
+        "url": "https://static.crates.io/crates/foreign-types/foreign-types-0.3.2.crate",
+        "bytes": 7504,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "heck",
+        "version": "0.5.0",
+        "sha256": "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea",
+        "url": "https://static.crates.io/crates/heck/heck-0.5.0.crate",
+        "bytes": 11517,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "itoa",
+        "version": "1.0.18",
+        "sha256": "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682",
+        "url": "https://static.crates.io/crates/itoa/itoa-1.0.18.crate",
+        "bytes": 15935,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "libc",
+        "version": "0.2.189",
+        "sha256": "3eaf3ede3fee6db1a4c2ee091bf8a8b4dccdc6d17f656fb07896ee72867612f2",
+        "url": "https://static.crates.io/crates/libc/libc-0.2.189.crate",
+        "bytes": 851502,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "once_cell",
+        "version": "1.21.4",
+        "sha256": "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50",
+        "url": "https://static.crates.io/crates/once_cell/once_cell-1.21.4.crate",
+        "bytes": 35010,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "openssl-macros",
+        "version": "0.1.1",
+        "sha256": "a948666b637a0f465e8564c73e89d4dde00d72d4d473cc972f390fc3dcee7d9c",
+        "url": "https://static.crates.io/crates/openssl-macros/openssl-macros-0.1.1.crate",
+        "bytes": 5601,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "openssl-sys",
+        "version": "0.9.117",
+        "sha256": "b47e7e6bb2c38cd930d25a23b40fa52e068c10e85f3e03a7f5ba5aaca5713695",
+        "url": "https://static.crates.io/crates/openssl-sys/openssl-sys-0.9.117.crate",
+        "bytes": 76045,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "openssl",
+        "version": "0.10.81",
+        "sha256": "77823a27f0babb03091cb9ed9ef80af3b39dbc82f97e8fa530374b7dafd87a45",
+        "url": "https://static.crates.io/crates/openssl/openssl-0.10.81.crate",
+        "bytes": 311187,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "pem",
+        "version": "4.0.0",
+        "sha256": "d354a98a3d1251555de99e8fdd8afda05573c31b82f59063a7b0a29b5527f120",
+        "url": "https://static.crates.io/crates/pem/pem-4.0.0.crate",
+        "bytes": 18770,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "pkg-config",
+        "version": "0.3.33",
+        "sha256": "19f132c84eca552bf34cab8ec81f1c1dcc229b811638f9d283dceabe58c5569e",
+        "url": "https://static.crates.io/crates/pkg-config/pkg-config-0.3.33.crate",
+        "bytes": 21590,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "portable-atomic",
+        "version": "1.14.0",
+        "sha256": "3d20d5497ef88037a52ff98267d066e7f11fcc5e99bbfbd58a42336193aacec3",
+        "url": "https://static.crates.io/crates/portable-atomic/portable-atomic-1.14.0.crate",
+        "bytes": 200703,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "proc-macro2",
+        "version": "1.0.107",
+        "sha256": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9",
+        "url": "https://static.crates.io/crates/proc-macro2/proc-macro2-1.0.107.crate",
+        "bytes": 59588,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "pyo3-build-config",
+        "version": "0.29.2",
+        "sha256": "f41027e41b4bd03f6e60f9f417fe24a6341a6bb744edd62b6f709f2a52ea30e9",
+        "url": "https://static.crates.io/crates/pyo3-build-config/pyo3-build-config-0.29.2.crate",
+        "bytes": 41104,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "pyo3-ffi",
+        "version": "0.29.2",
+        "sha256": "e591a95526fead067432c3b3a33fc74770b87b1e04e73671090d9c2055a2b327",
+        "url": "https://static.crates.io/crates/pyo3-ffi/pyo3-ffi-0.29.2.crate",
+        "bytes": 90029,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "pyo3-macros-backend",
+        "version": "0.29.2",
+        "sha256": "571575aa3749fa6216757dd47d2a3e7ef360f329a40f0666a9fbd14889024952",
+        "url": "https://static.crates.io/crates/pyo3-macros-backend/pyo3-macros-backend-0.29.2.crate",
+        "bytes": 93749,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "pyo3-macros",
+        "version": "0.29.2",
+        "sha256": "73225868fc1cd84eef2c3c230ddb91273bf1de46aeb8a4248da76d32a0924a1c",
+        "url": "https://static.crates.io/crates/pyo3-macros/pyo3-macros-0.29.2.crate",
+        "bytes": 9044,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "pyo3",
+        "version": "0.29.2",
+        "sha256": "4688ddedf473e32662b9b067670129a8afb8c18e351482c70d62ba4a88171e8b",
+        "url": "https://static.crates.io/crates/pyo3/pyo3-0.29.2.crate",
+        "bytes": 1255741,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "quote",
+        "version": "1.0.47",
+        "sha256": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001",
+        "url": "https://static.crates.io/crates/quote/quote-1.0.47.crate",
+        "bytes": 31622,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "self_cell",
+        "version": "1.3.0",
+        "sha256": "2ab42ca02749e120097e328d91d415325bdf43b1c72c4c8badf37375fe40a813",
+        "url": "https://static.crates.io/crates/self_cell/self_cell-1.3.0.crate",
+        "bytes": 23869,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "shlex",
+        "version": "2.0.1",
+        "sha256": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+        "url": "https://static.crates.io/crates/shlex/shlex-2.0.1.crate",
+        "bytes": 19332,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "syn",
+        "version": "2.0.119",
+        "sha256": "872831b642d1a07999a962a351ed35b955ea2cfc8f3862091e2a240a84f17297",
+        "url": "https://static.crates.io/crates/syn/syn-2.0.119.crate",
+        "bytes": 307407,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "target-lexicon",
+        "version": "0.13.5",
+        "sha256": "adb6935a6f5c20170eeceb1a3835a49e12e19d792f6dd344ccc76a985ca5a6ca",
+        "url": "https://static.crates.io/crates/target-lexicon/target-lexicon-0.13.5.crate",
+        "bytes": 26928,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "unicode-ident",
+        "version": "1.0.24",
+        "sha256": "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75",
+        "url": "https://static.crates.io/crates/unicode-ident/unicode-ident-1.0.24.crate",
+        "bytes": 49298,
+        "matched_wheel_sbom": true
+      },
+      {
+        "name": "vcpkg",
+        "version": "0.2.15",
+        "sha256": "accd4ea62f7bb7a82fe23066fb0957d48ef677f6eeb8215f372f52e48bb32426",
+        "url": "https://static.crates.io/crates/vcpkg/vcpkg-0.2.15.crate",
+        "bytes": 228735,
+        "matched_wheel_sbom": true
+      }
+    ],
+    "rust_nonregistry_components": [
+      {
+        "name": "cryptography-cffi",
+        "version": "0.50.2",
+        "purl": "pkg:cargo/cryptography-cffi@0.50.2?download_url=file://cryptography-cffi"
+      },
+      {
+        "name": "cryptography-crypto",
+        "version": "0.50.2",
+        "purl": "pkg:cargo/cryptography-crypto@0.50.2?download_url=file://cryptography-crypto"
+      },
+      {
+        "name": "cryptography-keepalive",
+        "version": "0.50.2",
+        "purl": "pkg:cargo/cryptography-keepalive@0.50.2?download_url=file://cryptography-keepalive"
+      },
+      {
+        "name": "cryptography-key-parsing",
+        "version": "0.50.2",
+        "purl": "pkg:cargo/cryptography-key-parsing@0.50.2?download_url=file://cryptography-key-parsing"
+      },
+      {
+        "name": "cryptography-openssl",
+        "version": "0.50.2",
+        "purl": "pkg:cargo/cryptography-openssl@0.50.2?download_url=file://cryptography-openssl"
+      },
+      {
+        "name": "cryptography-x509",
+        "version": "0.50.2",
+        "purl": "pkg:cargo/cryptography-x509@0.50.2?download_url=file://cryptography-x509"
+      },
+      {
+        "name": "cryptography-x509-verification",
+        "version": "0.50.2",
+        "purl": "pkg:cargo/cryptography-x509-verification@0.50.2?download_url=file://cryptography-x509-verification"
+      }
+    ],
+    "rust_lock_only": [],
+    "rust_sbom_only": [],
+    "pillow_component_scopes": [
+      {
+        "name": "PIL._avif",
+        "version": "12.3.0",
+        "scope": "not specified",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT-CMU"
+            }
+          }
+        ]
+      },
+      {
+        "name": "PIL._imaging",
+        "version": "12.3.0",
+        "scope": "not specified",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT-CMU"
+            }
+          }
+        ]
+      },
+      {
+        "name": "PIL._imagingcms",
+        "version": "12.3.0",
+        "scope": "not specified",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT-CMU"
+            }
+          }
+        ]
+      },
+      {
+        "name": "PIL._imagingft",
+        "version": "12.3.0",
+        "scope": "not specified",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT-CMU"
+            }
+          }
+        ]
+      },
+      {
+        "name": "PIL._imagingmath",
+        "version": "12.3.0",
+        "scope": "not specified",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT-CMU"
+            }
+          }
+        ]
+      },
+      {
+        "name": "PIL._imagingmorph",
+        "version": "12.3.0",
+        "scope": "not specified",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT-CMU"
+            }
+          }
+        ]
+      },
+      {
+        "name": "PIL._imagingtk",
+        "version": "12.3.0",
+        "scope": "not specified",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT-CMU"
+            }
+          }
+        ]
+      },
+      {
+        "name": "PIL._webp",
+        "version": "12.3.0",
+        "scope": "not specified",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT-CMU"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fribidi-shim",
+        "version": "1.x",
+        "scope": "not specified",
+        "licenses": [
+          {
+            "license": {
+              "id": "LGPL-2.1-or-later"
+            }
+          }
+        ]
+      },
+      {
+        "name": "pythoncapi_compat",
+        "version": null,
+        "scope": "not specified",
+        "licenses": [
+          {
+            "license": {
+              "id": "0BSD"
+            }
+          }
+        ]
+      },
+      {
+        "name": "raqm",
+        "version": "0.10.5",
+        "scope": "not specified",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ]
+      },
+      {
+        "name": "FreeType",
+        "version": "2.14.3",
+        "scope": "optional",
+        "licenses": [
+          {
+            "license": {
+              "id": "FTL"
+            }
+          }
+        ]
+      },
+      {
+        "name": "FriBiDi",
+        "version": "1.0.16",
+        "scope": "optional",
+        "licenses": [
+          {
+            "license": {
+              "id": "LGPL-2.1-or-later"
+            }
+          }
+        ]
+      },
+      {
+        "name": "HarfBuzz",
+        "version": "14.2.1",
+        "scope": "optional",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ]
+      },
+      {
+        "name": "libavif",
+        "version": "1.4.2",
+        "scope": "optional",
+        "licenses": [
+          {
+            "license": {
+              "id": "BSD-2-Clause"
+            }
+          }
+        ]
+      },
+      {
+        "name": "libimagequant",
+        "version": "4.4.1",
+        "scope": "optional",
+        "licenses": [
+          {
+            "license": {
+              "id": "GPL-3.0-or-later"
+            }
+          }
+        ]
+      },
+      {
+        "name": "libjpeg / libjpeg-turbo",
+        "version": "3.1.4.1",
+        "scope": "not specified",
+        "licenses": [
+          {
+            "license": {
+              "id": "IJG"
+            }
+          },
+          {
+            "license": {
+              "id": "BSD-3-Clause"
+            }
+          }
+        ]
+      },
+      {
+        "name": "libtiff",
+        "version": "4.7.1",
+        "scope": "optional",
+        "licenses": [
+          {
+            "license": {
+              "id": "libtiff"
+            }
+          }
+        ]
+      },
+      {
+        "name": "libwebp",
+        "version": "1.6.0",
+        "scope": "optional",
+        "licenses": [
+          {
+            "license": {
+              "id": "BSD-3-Clause"
+            }
+          }
+        ]
+      },
+      {
+        "name": "libxcb",
+        "version": "1.17.0",
+        "scope": "optional",
+        "licenses": [
+          {
+            "license": {
+              "id": "X11"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Little CMS 2",
+        "version": "2.19.1",
+        "scope": "optional",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ]
+      },
+      {
+        "name": "OpenJPEG",
+        "version": "2.5.4",
+        "scope": "optional",
+        "licenses": [
+          {
+            "license": {
+              "id": "BSD-2-Clause"
+            }
+          }
+        ]
+      },
+      {
+        "name": "pybind11",
+        "version": null,
+        "scope": "excluded",
+        "licenses": [
+          {
+            "license": {
+              "id": "BSD-3-Clause"
+            }
+          }
+        ]
+      },
+      {
+        "name": "zlib",
+        "version": "2.3.3",
+        "scope": "not specified",
+        "licenses": [
+          {
+            "license": {
+              "id": "Zlib"
+            }
+          }
+        ]
+      }
+    ],
+    "pillow_declared_patches": [
+      {
+        "component": "raqm",
+        "file": "raqm-0.patch",
+        "type": "unofficial",
+        "bytes": 769,
+        "sha256": "c3fc16e183734de75c6be9bba8c01cdccab1a84691f97f1109b020c56b097125"
+      },
+      {
+        "component": "raqm",
+        "file": "raqm-1.patch",
+        "type": "unofficial",
+        "bytes": 222,
+        "sha256": "ac1a4941c6690c048abbe0a30ee9a43f1b6488a15e903b5fd213e06fb172a229"
+      },
+      {
+        "component": "libtiff",
+        "file": "libtiff-0.patch",
+        "type": "cherry-pick",
+        "bytes": 1754,
+        "sha256": "76c498bdc9b811799c3b517e3c05479ac346dfb3bd53dee69d2e3fbe2aa046e6"
+      }
+    ],
+    "pillow_vendored_source_hash_matches": [
+      {
+        "component": "fribidi-shim",
+        "sha256": "7e8cfa78dcd21cebeb0ad91c0cd23e0dba6496c0fbd66e1ec3d25c5b1b365d11",
+        "matched_sdist_files": [
+          "pillow-12.3.0/src/thirdparty/fribidi-shim/fribidi.c"
+        ]
+      },
+      {
+        "component": "pythoncapi_compat",
+        "sha256": "97b0e62657965bd01a783b93422a6f7138d64c48546657feacc218ec8319ee0b",
+        "matched_sdist_files": [
+          "pillow-12.3.0/src/thirdparty/pythoncapi_compat.h"
+        ]
+      },
+      {
+        "component": "raqm",
+        "sha256": "5549e7458674077ca4794033ade277910ba0ad6989651787eba1a8b5513a9f9d",
+        "matched_sdist_files": [
+          "pillow-12.3.0/src/thirdparty/raqm/raqm.c"
+        ]
+      }
+    ],
+    "limitations": [
+      "SBOM/source equality is not a byte-identical rebuild proof",
+      "Optional Pillow SBOM entries are not proof of inclusion; final payload remains unbuilt"
+    ]
+  },
+  "Pillow_patch_baselines": {
+    "windows_build_patch_baselines": [
+      {
+        "component": "libjpeg",
+        "target": "CMakeLists.txt",
+        "old_text": "if(MSVC_IDE AND CMAKE_GENERATOR_PLATFORM MATCHES \"arm64\")",
+        "replacement": "if({architecture} STREQUAL ARM64)",
+        "old_text_occurrences": 1,
+        "replacement_occurrences_before_patch": 0,
+        "verification": "static baseline text check; not a wheel rebuild"
+      },
+      {
+        "component": "zlib",
+        "target": "CMakeLists.txt",
+        "old_text": "set_target_properties(zlib-ng PROPERTIES OUTPUT_NAME zlibstatic${SUFFIX})",
+        "replacement": "set_target_properties(zlib-ng PROPERTIES OUTPUT_NAME zlib)",
+        "old_text_occurrences": 1,
+        "replacement_occurrences_before_patch": 0,
+        "verification": "static baseline text check; not a wheel rebuild"
+      },
+      {
+        "component": "libwebp",
+        "target": "src\\enc\\picture_csp_enc.c",
+        "old_text": "#include \"sharpyuv/sharpyuv.h\"",
+        "replacement": "#include \"sharpyuv/sharpyuv.h\"\n#pragma comment(lib, \"libsharpyuv.lib\")",
+        "old_text_occurrences": 1,
+        "replacement_occurrences_before_patch": 0,
+        "verification": "static baseline text check; not a wheel rebuild"
+      },
+      {
+        "component": "libtiff",
+        "target": "libtiff\\tif_lzma.c",
+        "old_text": "#ifdef LZMA_SUPPORT",
+        "replacement": "#ifdef LZMA_SUPPORT\n#pragma comment(lib, \"lzma.lib\")",
+        "old_text_occurrences": 1,
+        "replacement_occurrences_before_patch": 0,
+        "verification": "static baseline text check; not a wheel rebuild"
+      },
+      {
+        "component": "libtiff",
+        "target": "libtiff\\tif_webp.c",
+        "old_text": "#ifdef WEBP_SUPPORT",
+        "replacement": "#ifdef WEBP_SUPPORT\n#pragma comment(lib, \"libwebp.lib\")",
+        "old_text_occurrences": 1,
+        "replacement_occurrences_before_patch": 0,
+        "verification": "static baseline text check; not a wheel rebuild"
+      },
+      {
+        "component": "libtiff",
+        "target": "libtiff\\tif_getimage.c",
+        "old_text": "int32_t incr = 3 * w + 4 * toskew;",
+        "replacement": "const tmsize_t incr = 3 * (tmsize_t)w + 4 * (tmsize_t)toskew;",
+        "old_text_occurrences": 1,
+        "replacement_occurrences_before_patch": 0,
+        "verification": "static baseline text check; not a wheel rebuild"
+      },
+      {
+        "component": "libtiff",
+        "target": "libtiff\\tif_getimage.c",
+        "old_text": "int32_t incr = 2 * toskew + w;",
+        "replacement": "const tmsize_t incr = 2 * (tmsize_t)toskew + w;",
+        "old_text_occurrences": 3,
+        "replacement_occurrences_before_patch": 0,
+        "verification": "static baseline text check; not a wheel rebuild"
+      },
+      {
+        "component": "freetype",
+        "target": "builds\\windows\\vc2010\\freetype.vcxproj",
+        "old_text": "<RuntimeLibrary>MultiThreaded</RuntimeLibrary>",
+        "replacement": "<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>",
+        "old_text_occurrences": 3,
+        "replacement_occurrences_before_patch": 3,
+        "verification": "static baseline text check; not a wheel rebuild"
+      },
+      {
+        "component": "freetype",
+        "target": "builds\\windows\\vc2010\\freetype.vcxproj",
+        "old_text": "<PropertyGroup Label=\"Globals\">",
+        "replacement": "<PropertyGroup Label=\"Globals\">\n    <WindowsTargetPlatformVersion>$(WindowsSDKVersion)</WindowsTargetPlatformVersion>",
+        "old_text_occurrences": 1,
+        "replacement_occurrences_before_patch": 0,
+        "verification": "static baseline text check; not a wheel rebuild"
+      },
+      {
+        "component": "freetype",
+        "target": "builds\\windows\\vc2010\\freetype.user.props",
+        "old_text": "<UserDefines></UserDefines>",
+        "replacement": "<UserDefines>FT_CONFIG_OPTION_SYSTEM_ZLIB;FT_CONFIG_OPTION_USE_PNG;FT_CONFIG_OPTION_USE_HARFBUZZ;FT_CONFIG_OPTION_USE_BROTLI</UserDefines>",
+        "old_text_occurrences": 1,
+        "replacement_occurrences_before_patch": 0,
+        "verification": "static baseline text check; not a wheel rebuild"
+      },
+      {
+        "component": "freetype",
+        "target": "builds\\windows\\vc2010\\freetype.user.props",
+        "old_text": "<UserIncludeDirectories></UserIncludeDirectories>",
+        "replacement": "<UserIncludeDirectories>{dir_harfbuzz}\\src;{inc_dir}</UserIncludeDirectories>",
+        "old_text_occurrences": 1,
+        "replacement_occurrences_before_patch": 0,
+        "verification": "static baseline text check; not a wheel rebuild"
+      },
+      {
+        "component": "freetype",
+        "target": "builds\\windows\\vc2010\\freetype.user.props",
+        "old_text": "<UserLibraryDirectories></UserLibraryDirectories>",
+        "replacement": "<UserLibraryDirectories>{lib_dir}</UserLibraryDirectories>",
+        "old_text_occurrences": 1,
+        "replacement_occurrences_before_patch": 0,
+        "verification": "static baseline text check; not a wheel rebuild"
+      },
+      {
+        "component": "freetype",
+        "target": "builds\\windows\\vc2010\\freetype.user.props",
+        "old_text": "<UserDependencies></UserDependencies>",
+        "replacement": "<UserDependencies>zlib.lib;libpng16.lib;brotlicommon.lib;brotlidec.lib</UserDependencies>",
+        "old_text_occurrences": 1,
+        "replacement_occurrences_before_patch": 0,
+        "verification": "static baseline text check; not a wheel rebuild"
+      },
+      {
+        "component": "freetype",
+        "target": "src/autofit/afshaper.c",
+        "old_text": "#ifdef FT_CONFIG_OPTION_USE_HARFBUZZ",
+        "replacement": "#ifdef FT_CONFIG_OPTION_USE_HARFBUZZ\n#pragma comment(lib, \"harfbuzz.lib\")",
+        "old_text_occurrences": 6,
+        "replacement_occurrences_before_patch": 0,
+        "verification": "static baseline text check; not a wheel rebuild"
+      },
+      {
+        "component": "lcms2",
+        "target": "Projects\\VC2022\\lcms2_static\\lcms2_static.vcxproj",
+        "old_text": "<RuntimeLibrary>MultiThreaded</RuntimeLibrary>",
+        "replacement": "<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>",
+        "old_text_occurrences": 3,
+        "replacement_occurrences_before_patch": 0,
+        "verification": "static baseline text check; not a wheel rebuild"
+      },
+      {
+        "component": "lcms2",
+        "target": "Projects\\VC2022\\lcms2_static\\lcms2_static.vcxproj",
+        "old_text": "<PlatformToolset>v143</PlatformToolset>",
+        "replacement": "<PlatformToolset>$(DefaultPlatformToolset)</PlatformToolset>",
+        "old_text_occurrences": 6,
+        "replacement_occurrences_before_patch": 0,
+        "verification": "static baseline text check; not a wheel rebuild"
+      },
+      {
+        "component": "lcms2",
+        "target": "Projects\\VC2022\\lcms2_static\\lcms2_static.vcxproj",
+        "old_text": "<WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>",
+        "replacement": "<WindowsTargetPlatformVersion>$(WindowsSDKVersion)</WindowsTargetPlatformVersion>",
+        "old_text_occurrences": 1,
+        "replacement_occurrences_before_patch": 0,
+        "verification": "static baseline text check; not a wheel rebuild"
+      }
+    ],
+    "wheel_SBOM_libtiff_patch": {
+      "file": "libtiff-0.patch",
+      "commit": "782a11d6b5b61c6dc21e714950a4af5bf89f023c",
+      "target": "libtiff/tif_getimage.c",
+      "hunks": [
+        {
+          "old_start": 2224,
+          "old_lines": 7,
+          "exact_context_match": false,
+          "matching_source_positions": [
+            2216
+          ]
+        },
+        {
+          "old_start": 2364,
+          "old_lines": 7,
+          "exact_context_match": false,
+          "matching_source_positions": [
+            2356
+          ]
+        },
+        {
+          "old_start": 2522,
+          "old_lines": 7,
+          "exact_context_match": false,
+          "matching_source_positions": [
+            2512
+          ]
+        },
+        {
+          "old_start": 2625,
+          "old_lines": 7,
+          "exact_context_match": false,
+          "matching_source_positions": [
+            2615
+          ]
+        }
+      ],
+      "all_context_matches": false
+    },
+    "lcms_version_explanation": {
+      "source_archive": "lcms2-2.19.1.tar.gz",
+      "header_LCMS_VERSION": 2190,
+      "Pillow_version_format": "cmsGetEncodedCMMversion(): 2190 is formatted as 2.19",
+      "assessment": "runtime 2.19 is consistent with tagged 2.19.1 source; not alone a unique build proof"
+    },
+    "upstream_license_texts": [
+      {
+        "component": "libjpeg",
+        "member": "libjpeg-turbo-3.1.4.1/LICENSE.md",
+        "sha256": "e10114e6e40f3d0311c401ca25245ac5ef459a43c20f976fd63f03e816f5741f",
+        "saved_as": "Pillow-native-libjpeg__libjpeg-turbo-3.1.4.1__LICENSE.md"
+      },
+      {
+        "component": "libjpeg",
+        "member": "libjpeg-turbo-3.1.4.1/README.ijg",
+        "sha256": "75815e3bf6484201a3c3d17a1bbf10f2e8e3237f84df10a2357ea896db2a81d6",
+        "saved_as": "Pillow-native-libjpeg__libjpeg-turbo-3.1.4.1__README.ijg"
+      },
+      {
+        "component": "libjpeg",
+        "member": "libjpeg-turbo-3.1.4.1/release/License.rtf",
+        "sha256": "d26120ab237f87dea10aa4fa7fd4243cadffd26e54eb2f3903d5fb0f8ed336b2",
+        "saved_as": "Pillow-native-libjpeg__libjpeg-turbo-3.1.4.1__release__License.rtf"
+      },
+      {
+        "component": "zlib",
+        "member": "zlib-ng-2.3.3/LICENSE.md",
+        "sha256": "6c9f0d975b41afaa34d22f55bb8986ce69e5cb7ad327cb2b28820cd425edf5ee",
+        "saved_as": "Pillow-native-zlib__zlib-ng-2.3.3__LICENSE.md"
+      },
+      {
+        "component": "xz",
+        "member": "xz-5.8.3/COPYING",
+        "sha256": "616a3ad264ce29b8f1cb97e53037b139d406899ca8d1f799651e17bfa09830b8",
+        "saved_as": "Pillow-native-xz__xz-5.8.3__COPYING"
+      },
+      {
+        "component": "xz",
+        "member": "xz-5.8.3/COPYING.0BSD",
+        "sha256": "0b01625d853911cd0e2e088dcfb743261034a091bb379246cb25a14cc4c74bf1",
+        "saved_as": "Pillow-native-xz__xz-5.8.3__COPYING.0BSD"
+      },
+      {
+        "component": "xz",
+        "member": "xz-5.8.3/COPYING.GPLv2",
+        "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
+        "saved_as": "Pillow-native-xz__xz-5.8.3__COPYING.GPLv2"
+      },
+      {
+        "component": "xz",
+        "member": "xz-5.8.3/COPYING.GPLv3",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "saved_as": "Pillow-native-xz__xz-5.8.3__COPYING.GPLv3"
+      },
+      {
+        "component": "xz",
+        "member": "xz-5.8.3/COPYING.LGPLv2.1",
+        "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+        "saved_as": "Pillow-native-xz__xz-5.8.3__COPYING.LGPLv2.1"
+      },
+      {
+        "component": "xz",
+        "member": "xz-5.8.3/build-aux/license-check.sh",
+        "sha256": "2b3fa1d23cb2ab084f3d919908159473cc0e1eed059d106e2a2857c0ec8af98a",
+        "saved_as": "Pillow-native-xz__xz-5.8.3__build-aux__license-check.sh"
+      },
+      {
+        "component": "libwebp",
+        "member": "libwebp-1.6.0/COPYING",
+        "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf",
+        "saved_as": "Pillow-native-libwebp__libwebp-1.6.0__COPYING"
+      },
+      {
+        "component": "libtiff",
+        "member": "tiff-4.7.1/LICENSE.md",
+        "sha256": "0e27c2382d7b8147972bbb746e04059a1152c8d0fda9d03ef1399d1a433c4ade",
+        "saved_as": "Pillow-native-libtiff__tiff-4.7.1__LICENSE.md"
+      },
+      {
+        "component": "libpng",
+        "member": "libpng-1.6.58/LICENSE",
+        "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526",
+        "saved_as": "Pillow-native-libpng__libpng-1.6.58__LICENSE"
+      },
+      {
+        "component": "libpng",
+        "member": "libpng-1.6.58/ci/LICENSE_MIT.txt",
+        "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1",
+        "saved_as": "Pillow-native-libpng__libpng-1.6.58__ci__LICENSE_MIT.txt"
+      },
+      {
+        "component": "brotli",
+        "member": "brotli-1.2.0/LICENSE",
+        "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94",
+        "saved_as": "Pillow-native-brotli__brotli-1.2.0__LICENSE"
+      },
+      {
+        "component": "freetype",
+        "member": "freetype-2.14.3/LICENSE.TXT",
+        "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b",
+        "saved_as": "Pillow-native-freetype__freetype-2.14.3__LICENSE.TXT"
+      },
+      {
+        "component": "lcms2",
+        "member": "lcms2-2.19.1/LICENSE",
+        "sha256": "6dbd60437f8ef91d8de1f08ad75882547fd4931bfcc3566a0735f28db1484d31",
+        "saved_as": "Pillow-native-lcms2__lcms2-2.19.1__LICENSE"
+      },
+      {
+        "component": "openjpeg",
+        "member": "openjpeg-2.5.4/LICENSE",
+        "sha256": "a6af136f3e15038a666b61f376612a07d9a4e48cb7c01adbf3e33b3f14ab49b6",
+        "saved_as": "Pillow-native-openjpeg__openjpeg-2.5.4__LICENSE"
+      },
+      {
+        "component": "harfbuzz",
+        "member": "harfbuzz-14.2.1/COPYING",
+        "sha256": "ba8f810f2455c2f08e2d56bb49b72f37fcf68f1f4fade38977cfd7372050ad64",
+        "saved_as": "Pillow-native-harfbuzz__harfbuzz-14.2.1__COPYING"
+      },
+      {
+        "component": "harfbuzz",
+        "member": "harfbuzz-14.2.1/test/COPYING",
+        "sha256": "9b35b8485f69cd298fccbb3c40a827dc06cf1185553bef827903497d2944a8d7",
+        "saved_as": "Pillow-native-harfbuzz__harfbuzz-14.2.1__test__COPYING"
+      },
+      {
+        "component": "libavif",
+        "member": "libavif-1.4.2/LICENSE",
+        "sha256": "165abf92cc04b39e80d29cadea7a6a7e8fddf59407d4ad2616507a7ebe8216f9",
+        "saved_as": "Pillow-native-libavif__libavif-1.4.2__LICENSE"
+      }
+    ]
+  },
+  "python_OpenSSL_source": {
+    "_comment": "Remember to update OPENSSL_VERSION_INFO in pythonbuild/disttests/ whenever upgrading.",
+    "url": "https://github.com/openssl/openssl/releases/download/openssl-3.5.9/openssl-3.5.9.tar.gz",
+    "size": 53279637,
+    "sha256": "603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a",
+    "version": "3.5.9",
+    "library_names": [
+      "crypto",
+      "ssl"
+    ],
+    "licenses": [
+      "Apache-2.0"
+    ],
+    "license_file": "LICENSE.openssl-3.txt"
+  },
+  "python_Windows_build_patch_inputs": [
+    {
+      "path": "python-build-standalone-20261110/cpython-windows/build.py",
+      "sha256": "f761bb904e664e39a44d88bd5e59b4a690b4d0c8e4785c5b2c913a552b4c9667"
+    },
+    {
+      "path": "python-build-standalone-20261110/cpython-windows/patch-disable-launchers.patch",
+      "sha256": "f75f27c1fb5c0a2ef60c6d6922b4f370f524ca2bcbf0d73911e442b1d1421c4a"
+    },
+    {
+      "path": "python-build-standalone-20261110/cpython-windows/patch-disable-uwp.patch",
+      "sha256": "bd1ea75b1c3bf160344b09019334e6a1a6c56a0475692d7e255b099e65ab650a"
+    },
+    {
+      "path": "python-build-standalone-20261110/cpython-windows/patch-layout-tcltk-arm64.patch",
+      "sha256": "2d465e6cc2fe0117a953ddc408d2c71b7ac96813b0c811b6105f2ed86b96cf11"
+    },
+    {
+      "path": "python-build-standalone-20261110/cpython-windows/patch-liblzma-5.8-3.14.patch",
+      "sha256": "e03e1552b2e73b75d8342c1911313929fc28130b9c5596261bb32259739af1da"
+    },
+    {
+      "path": "python-build-standalone-20261110/cpython-windows/patch-liblzma-5.8.patch",
+      "sha256": "f7f7cdb64124567a5638d84d8b67b3a6d526a3d2b943dde9669fd8db0f1fcd5f"
+    },
+    {
+      "path": "python-build-standalone-20261110/cpython-windows/patch-openssl-applink.patch",
+      "sha256": "cdf97943070a0c4f452f2a07b8d48a8d29613663f2fa9a77c8882d0b911fd8fe"
+    },
+    {
+      "path": "python-build-standalone-20261110/cpython-windows/patch-openssl-uplink.patch",
+      "sha256": "0b6df10a2c1b43cf9f97225d353754627ad3660e1f5dcca0aa5716e8f00a3e76"
+    },
+    {
+      "path": "python-build-standalone-20261110/cpython-windows/patch-sqlite-build-flags-3.15.patch",
+      "sha256": "b3424241339e71d02321accec8b8e51bbc994e5da89606aa24394fe183520a31"
+    },
+    {
+      "path": "python-build-standalone-20261110/cpython-windows/patch-sqlite-build-flags.patch",
+      "sha256": "ce23527380f297b712ecc2376677798f341359678cbc76741fde44606d36b122"
+    },
+    {
+      "path": "python-build-standalone-20261110/cpython-windows/patch-tkinter-zlib.patch",
+      "sha256": "3f767e926b1fa96656b8867abab8510abb0f462f5ee0ffdee2ec0622ad5dbecb"
+    }
+  ],
+  "Qt_source_sha256": "6dcfbca271d76a6502741a2c0dc6fc98ef7dd0b7b4cfd0abcebb285a86a26f33",
+  "Qt_source_bytes": 1019661552,
+  "Qt_attribution_count": 140,
+  "Qt_license_file_count": 402
+}

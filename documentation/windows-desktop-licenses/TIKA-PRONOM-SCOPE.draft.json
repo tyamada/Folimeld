@@ -1,0 +1,483 @@
+{
+  "upstream_mime_entries": 1683,
+  "qt_mime_entries": 1653,
+  "qt_added_types": [
+    "application/x-bzip2-compressed-tar",
+    "application/x-core",
+    "application/x-desktop",
+    "application/x-gzpostscript",
+    "application/x-zerosize",
+    "inode/directory",
+    "text/x-qml"
+  ],
+  "qt_removed_types": [
+    "application/dita+xml;format=concept",
+    "application/dita+xml;format=map",
+    "application/dita+xml;format=task",
+    "application/dita+xml;format=topic",
+    "application/dita+xml;format=val",
+    "application/dns",
+    "application/dvcs",
+    "application/marc",
+    "application/onenote;format=one",
+    "application/onenote;format=onetoc2",
+    "application/x-berkeley-db;format=btree",
+    "application/x-berkeley-db;format=btree;version=2",
+    "application/x-berkeley-db;format=btree;version=3",
+    "application/x-berkeley-db;format=btree;version=4",
+    "application/x-berkeley-db;format=hash",
+    "application/x-berkeley-db;format=hash;version=2",
+    "application/x-berkeley-db;format=hash;version=3",
+    "application/x-berkeley-db;format=hash;version=4",
+    "application/x-berkeley-db;format=hash;version=5",
+    "application/x-berkeley-db;format=log",
+    "application/x-berkeley-db;format=queue",
+    "application/x-msdownload;format=pe",
+    "application/x-msdownload;format=pe-arm7",
+    "application/x-msdownload;format=pe-armLE",
+    "application/x-msdownload;format=pe-itanium",
+    "application/x-msdownload;format=pe32",
+    "application/x-msdownload;format=pe64",
+    "application/x-tika-msoffice-embedded;format=comp_obj",
+    "application/x-tika-msoffice-embedded;format=ole10_native",
+    "application/x-touhou",
+    "application/x-x509-cert;format=der",
+    "application/x-x509-cert;format=pem",
+    "application/x-x509-key;format=der",
+    "application/x-x509-key;format=pem",
+    "image/bmp;format=compressed",
+    "image/vnd.dxf;format=ascii",
+    "image/vnd.dxf;format=binary"
+  ],
+  "explicit_pronom_entries": [
+    {
+      "mime_type": "application/x-fat-diskimage",
+      "upstream_markers": [
+        {
+          "kind": "{https://tika.apache.org/}link",
+          "text": "https://www.nationalarchives.gov.uk/PRONOM/fmt/1087"
+        }
+      ],
+      "qt_entry_present": true,
+      "qt_markers": [
+        {
+          "kind": "{https://tika.apache.org/}link",
+          "text": "https://www.nationalarchives.gov.uk/PRONOM/fmt/1087"
+        }
+      ],
+      "upstream_match_rules": [
+        {
+          "value": "\\xEB",
+          "offset": "0"
+        },
+        {
+          "value": "\\x90",
+          "offset": "2"
+        },
+        {
+          "value": "(\\x01|\\x02|\\x04|\\x08|\\x10|\\x20\\x40|x80)",
+          "type": "regex",
+          "offset": "14"
+        }
+      ],
+      "qt_match_rules": [
+        {
+          "type": "string",
+          "value": "\\xEB",
+          "offset": "0"
+        },
+        {
+          "type": "string",
+          "value": "\\x90",
+          "offset": "2"
+        }
+      ],
+      "qt_commented_rules": [
+        "DISABLED FOR QT:           <match value=\"(\\x01|\\x02|\\x04|\\x08|\\x10|\\x20\\x40|x80)\" type=\"regex\" offset=\"14\"/>"
+      ],
+      "marker_texts_preserved": true,
+      "scope": "Explicit provenance example; not an exhaustive list of all adapted PRONOM data"
+    },
+    {
+      "mime_type": "application/x-mach-o",
+      "upstream_markers": [
+        {
+          "kind": "{https://tika.apache.org/}link",
+          "text": "https://www.nationalarchives.gov.uk/PRONOM/fmt/692"
+        },
+        {
+          "kind": "{https://tika.apache.org/}link",
+          "text": "https://www.nationalarchives.gov.uk/PRONOM/fmt/693"
+        }
+      ],
+      "qt_entry_present": true,
+      "qt_markers": [
+        {
+          "kind": "{https://tika.apache.org/}link",
+          "text": "https://www.nationalarchives.gov.uk/PRONOM/fmt/692"
+        },
+        {
+          "kind": "{https://tika.apache.org/}link",
+          "text": "https://www.nationalarchives.gov.uk/PRONOM/fmt/693"
+        }
+      ],
+      "upstream_match_rules": [
+        {
+          "value": "0xFEEDFACE",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xCEFAEDFE",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xFEEDFACF",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xCFFAEDFE",
+          "type": "string",
+          "offset": "0"
+        }
+      ],
+      "qt_match_rules": [
+        {
+          "value": "\\xFE\\xED\\xFA\\xCE",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "\\xCE\\xFA\\xED\\xFE",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "\\xFE\\xED\\xFA\\xCF",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "\\xCF\\xFA\\xED\\xFE",
+          "type": "string",
+          "offset": "0"
+        }
+      ],
+      "qt_commented_rules": [],
+      "marker_texts_preserved": true,
+      "scope": "Explicit provenance example; not an exhaustive list of all adapted PRONOM data"
+    },
+    {
+      "mime_type": "application/x-ms-compress-szdd",
+      "upstream_markers": [
+        {
+          "kind": "{https://tika.apache.org/}link",
+          "text": "https://www.nationalarchives.gov.uk/PRONOM/fmt/462"
+        }
+      ],
+      "qt_entry_present": true,
+      "qt_markers": [
+        {
+          "kind": "{https://tika.apache.org/}link",
+          "text": "https://www.nationalarchives.gov.uk/PRONOM/fmt/462"
+        }
+      ],
+      "upstream_match_rules": [
+        {
+          "value": "0x535A444488F0273341",
+          "offset": "0"
+        }
+      ],
+      "qt_match_rules": [
+        {
+          "type": "string",
+          "value": "\\x53\\x5A\\x44\\x44\\x88\\xF0\\x27\\x33\\x41",
+          "offset": "0"
+        }
+      ],
+      "qt_commented_rules": [],
+      "marker_texts_preserved": true,
+      "scope": "Explicit provenance example; not an exhaustive list of all adapted PRONOM data"
+    },
+    {
+      "mime_type": "application/x-ms-owner",
+      "upstream_markers": [
+        {
+          "kind": "_comment",
+          "text": "PRONOM fmt-473"
+        }
+      ],
+      "qt_entry_present": true,
+      "qt_markers": [
+        {
+          "kind": "comment",
+          "text": "PRONOM fmt-473"
+        }
+      ],
+      "upstream_match_rules": [
+        {
+          "value": "(?s)^([\\\\x05-\\\\x0F])[\\\\x00\\\\x20-\\\\x7E]{10}.{43}\\\\1\\x00",
+          "type": "regex",
+          "offset": "0"
+        }
+      ],
+      "qt_match_rules": [],
+      "qt_commented_rules": [
+        "DISABLED FOR QT:       <match value=\"(?s)^([\\\\x05-\\\\x0F])[\\\\x00\\\\x20-\\\\x7E]{10}.{43}\\\\1\\x00\" type=\"regex\" offset=\"0\"/>"
+      ],
+      "marker_texts_preserved": true,
+      "scope": "Explicit provenance example; not an exhaustive list of all adapted PRONOM data"
+    },
+    {
+      "mime_type": "audio/mpeg",
+      "upstream_markers": [
+        {
+          "kind": "comment",
+          "text": "MP3 2.5 from pronom"
+        }
+      ],
+      "qt_entry_present": true,
+      "qt_markers": [
+        {
+          "kind": "comment",
+          "text": "MP3 2.5 from pronom"
+        }
+      ],
+      "upstream_match_rules": [
+        {
+          "value": "0xfff2",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfff3",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfff4",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfff5",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfff6",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfff7",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfffa",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfffb",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfffc",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfffd",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xffe3",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "ID3",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "type": "regex",
+          "value": "\\\\xFF[\\\\xE3\\\\xF2-\\\\xF7\\\\xFA-\\\\xFD\\\\xFF]",
+          "offset": "512:8192"
+        },
+        {
+          "value": "(?:\\\\x0D\\\\x0A|\\\\x00{1,1024})(?:\\\\xff[\\\\xe3\\\\xf2\\\\xf3\\\\xf4\\\\xf5\\\\xf6\\\\xf7\\\\xf8\\\\xf9\\\\xfa\\\\xfb\\\\xfc\\\\xfd\\\\xfe\\\\xff]|ID3)",
+          "type": "regex",
+          "offset": "0"
+        },
+        {
+          "value": "ID3",
+          "type": "string",
+          "offset": "0"
+        }
+      ],
+      "qt_match_rules": [
+        {
+          "value": "0xfff2",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfff3",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfff4",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfff5",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfff6",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfff7",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfffa",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfffb",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfffc",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xfffd",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "0xffe3",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "ID3",
+          "type": "string",
+          "offset": "0"
+        },
+        {
+          "value": "ID3",
+          "type": "string",
+          "offset": "0"
+        }
+      ],
+      "qt_commented_rules": [
+        "DISABLED FOR QT:          <match type=\"regex\" value=\"\\\\xFF[\\\\xE3\\\\xF2-\\\\xF7\\\\xFA-\\\\xFD\\\\xFF]\" offset=\"512:8192\" />",
+        "DISABLED FOR QT:       <match value=\"(?:\\\\x0D\\\\x0A|\\\\x00{1,1024})(?:\\\\xff[\\\\xe3\\\\xf2\\\\xf3\\\\xf4\\\\xf5\\\\xf6\\\\xf7\\\\xf8\\\\xf9\\\\xfa\\\\xfb\\\\xfc\\\\xfd\\\\xfe\\\\xff]|ID3)\"",
+        "DISABLED FOR QT:              type=\"regex\" offset=\"0\"/>"
+      ],
+      "marker_texts_preserved": true,
+      "scope": "Explicit provenance example; not an exhaustive list of all adapted PRONOM data"
+    }
+  ],
+  "scope_limit": "Only explicit PRONOM markers; neither complete provenance nor a basis to remove attribution from unmarked rules.",
+  "processing_scripts_executed": false,
+  "status": "PREBUILD-DRAFT-NOT-APPROVED",
+  "reviewed_at": "2026-11-16T07:39:41.958732+09:00",
+  "source_commit": "c29724782854bb5a319f4a1940d0828a58ace3f9",
+  "retained_inputs": {
+    "tika-upstream-NOTICE.txt": {
+      "sha256": "4cd09bac8d81bd34decf6b95fb23d42fc9b3d6b653ec4be8ef44674b692c97cd",
+      "bytes": 80600
+    },
+    "tika-upstream-tika-mimetypes.xml": {
+      "sha256": "b213c35123f215e11a9fa12d7907c9bb0a5b79214a89eeaf343984ba69143e6d",
+      "bytes": 329271
+    },
+    "source-ce182434cced67-tika-mimetypes.xml": {
+      "sha256": "73b26a2bc70c5f78e4c028ce0ce352454e96515dd74c3f098b2c219788acb66b",
+      "bytes": 317384
+    },
+    "source-cd5bab6e60b6f5-process_tika_mimetypes.py": {
+      "sha256": "cacd4c6b87aa17b894814b8bbaf8b19b47e6e6fbe1627eafc7e44eebaf9ead47",
+      "bytes": 8390
+    },
+    "source-dcc4453dacfa7c-update_tika_from_upstream.sh": {
+      "sha256": "b8c1b8268663f0ba9d2539b26debe9d0d89e8a7caee8d2163e166ff9ff4212f6",
+      "bytes": 1320
+    },
+    "tika-upstream-to-qt.diff": {
+      "sha256": "358e4bd3be83a3a51ee1a0b2fa9a9a4aeb44284fd7ddbb03e90fec398b6176f1",
+      "bytes": 263879
+    }
+  },
+  "official_sources": [
+    {
+      "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "final_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "file": "official-ogl3.html",
+      "sha256": "f5b2b9f2af63647cde889fa6c3508f5705925295b74912c68caa28dd37e64aa5",
+      "bytes": 10450
+    },
+    {
+      "url": "https://pronom.nationalarchives.gov.uk/about",
+      "final_url": "https://pronom.nationalarchives.gov.uk/about",
+      "file": "official-pronom-about.html",
+      "sha256": "30755941da034d2177140679404677ca35db6f6203ee060f06dcebd096b79078",
+      "bytes": 38224
+    }
+  ],
+  "scope_conclusion": "Preserve attribution for the whole Tika-derived MIME component conservatively. Explicit five-entry markers do not delimit the entirety of PRONOM-derived information. No claim that every Qt/Folimeld component is OGL-licensed.",
+  "attribution_basis": "Official OGL3 requires provider-specified attribution or its fallback statement if none is specified. In inspected PRONOM about page and fixed Tika NOTICE no bespoke attribution sentence was identified. Draft includes both named provider/PRONOM and exact OGL fallback; final documentation review remains.",
+  "notice_draft": {
+    "path": "documentation/windows-desktop-licenses/TIKA-PRONOM-NOTICE.draft.txt",
+    "sha256": "e90a2ed6aa763960c50b06b7cd5df0e00690bae9d3e108af27e7333f02e0c33d",
+    "previous_sha256": "701aff4737dd7ad57817f87c6ee2d4998deb8ade3d343a7b2d7d631fdc0d508f"
+  },
+  "source_notice_selection": [
+    "Apache Tika\nCopyright 2021 The Apache Software Foundation",
+    "This product includes software developed at\nThe Apache Software Foundation (http://www.apache.org/).",
+    "IPTC Photo Metadata descriptions Copyright 2010 International Press Telecommunications Council.",
+    "Tika-mimetypes.xml includes mimetype definitions that were adapted from the PRONOM Technical Registry\nby The National Archives (http://www.nationalarchives.gov.uk/PRONOM/Default.aspx). PRONOM is published\nunder the Open Government License 3.0 (http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)"
+  ],
+  "before_first_build": [
+    "Integrate this component-specific attribution, relevant Apache NOTICE excerpts and Apache/OGL references into final Desktop notices and source index.",
+    "Check whether the provider supplies any additional attribution statement applicable to the retained historical information; inspected current site and fixed NOTICE do not establish its universal absence.",
+    "Retain Qt processing scripts, original XML, transformed XML and recorded changes in corresponding-source materials; confirm licence/source sufficiency during final review.",
+    "Do not infer actual wheel/payload MIME database inclusion or provenance solely from QMimeDatabase API; explain wheel configuration and verify final payload after authorized build."
+  ],
+  "separate_reproducibility_unknowns": [
+    "Exact historical PRONOM dataset release and per-rule derivation for unmarked content. This is not a reason to omit component-wide attribution.",
+    "Qt XML transformation reproduction was not run; exact generation environment and binary embedded-data correspondence remain unverified.",
+    "Upstream compiler/SDK and complete byte-for-byte Qt wheel reproduction remain unverified."
+  ],
+  "no_approval_ledger_created": true,
+  "new_billing": false,
+  "models_requested": 0,
+  "build": false,
+  "commit": false,
+  "publish": false,
+  "test_pc_update": false,
+  "wack": false,
+  "hosted_api_comparison": false,
+  "uv_development": "discontinued",
+  "delivery_followup": "TIKA-DELIVERY-REVIEW.draft.json"
+}

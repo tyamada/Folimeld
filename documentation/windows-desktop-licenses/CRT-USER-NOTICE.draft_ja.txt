@@ -1,0 +1,11 @@
+【掲載案・未承認】最終CRTセットの確定後に使用する案です。
+
+Microsoft Visual C++ Runtimeについて
+
+本製品にはMicrosoft CorporationのMicrosoft Visual C++ Runtimeコンポーネントが含まれます。Microsoft Corporation. All rights reserved.
+
+これらのコンポーネントには、同梱するMicrosoftの使用許諾条件が別途適用されます。FolimeldのGNU Affero General Public License（AGPL）によってMicrosoftコンポーネントを再許諾するものではありません。
+
+対象ファイル、版、SHA-256および使用許諾条件の原文は、同梱の第三者コンポーネント一覧とMicrosoft Runtime利用条件をご確認ください。
+
+この告知は、Folimeldおよびその他のオープンソースコンポーネントについて、それぞれのライセンスが認める権利を制限するものではありません。

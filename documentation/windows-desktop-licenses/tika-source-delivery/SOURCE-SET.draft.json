@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "status": "PREBUILD-DRAFT-NOT-APPROVED",
+  "scope": "Tika/Qt MIME data source supplement only; not complete Qt/Folimeld corresponding source",
+  "source_commit": "c29724782854bb5a319f4a1940d0828a58ace3f9",
+  "files": [
+    {
+      "path": "qt-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/REUSE.toml",
+      "sha256": "4c1597dd9dcc955376ebb3b098b4496da2f7a8c46ded7d38acf29d2d582b511b",
+      "bytes": 153,
+      "role": "Qt transformed data/build-input source; preserved original bytes",
+      "origin": "qt-everywhere-src-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/REUSE.toml"
+    },
+    {
+      "path": "qt-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/process_tika_mimetypes.py",
+      "sha256": "cacd4c6b87aa17b894814b8bbaf8b19b47e6e6fbe1627eafc7e44eebaf9ead47",
+      "bytes": 8390,
+      "role": "Qt transformed data/build-input source; preserved original bytes",
+      "origin": "qt-everywhere-src-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/process_tika_mimetypes.py"
+    },
+    {
+      "path": "qt-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/qt_attribution.json",
+      "sha256": "329652c93e6b47663115543cfd746cb56b96a98d774d540d58e64614bd9739eb",
+      "bytes": 1383,
+      "role": "Qt transformed data/build-input source; preserved original bytes",
+      "origin": "qt-everywhere-src-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/qt_attribution.json"
+    },
+    {
+      "path": "qt-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/tika-mimetypes.xml",
+      "sha256": "73b26a2bc70c5f78e4c028ce0ce352454e96515dd74c3f098b2c219788acb66b",
+      "bytes": 317384,
+      "role": "Qt transformed data/build-input source; preserved original bytes",
+      "origin": "qt-everywhere-src-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/tika-mimetypes.xml"
+    },
+    {
+      "path": "qt-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/update_tika_from_upstream.sh",
+      "sha256": "b8c1b8268663f0ba9d2539b26debe9d0d89e8a7caee8d2163e166ff9ff4212f6",
+      "bytes": 1320,
+      "role": "Qt transformed data/build-input source; preserved original bytes",
+      "origin": "qt-everywhere-src-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/update_tika_from_upstream.sh"
+    },
+    {
+      "path": "apache-tika/c29724782854bb5a319f4a1940d0828a58ace3f9/tika-core/src/main/resources/org/apache/tika/mime/tika-mimetypes.xml",
+      "sha256": "b213c35123f215e11a9fa12d7907c9bb0a5b79214a89eeaf343984ba69143e6d",
+      "bytes": 329271,
+      "role": "Exact upstream MIME data",
+      "origin": "https://github.com/apache/tika/blob/c29724782854bb5a319f4a1940d0828a58ace3f9/tika-core/src/main/resources/org/apache/tika/mime/tika-mimetypes.xml"
+    },
+    {
+      "path": "reference-only/apache-tika/LICENSE.txt",
+      "sha256": "ad5f4c4d0d4a04ac264ee55539191e1d36eb5d43ff63bbfc2cf97d541dc7ce8c",
+      "bytes": 32149,
+      "role": "Unmodified aggregate source licensing reference; not all subcomponent terms asserted applicable to MIME subset",
+      "origin": null
+    },
+    {
+      "path": "reference-only/apache-tika/tika-core-subcomponents-LICENSE.original.txt",
+      "sha256": "ee2d54b2e7c0141b109690cfd95e4157b52c87db7a5576bd464b5c3a2cb931a4",
+      "bytes": 10173,
+      "role": "Unmodified aggregate source licensing reference; not all subcomponent terms asserted applicable to MIME subset",
+      "origin": null
+    },
+    {
+      "path": "reference-only/apache-tika/NOTICE.original.txt",
+      "sha256": "4cd09bac8d81bd34decf6b95fb23d42fc9b3d6b653ec4be8ef44674b692c97cd",
+      "bytes": 80600,
+      "role": "Unmodified full upstream NOTICE reference; runtime applicability reviewed separately",
+      "origin": null
+    },
+    {
+      "path": "licenses/MIME-file-4.26-BSD.original.txt",
+      "sha256": "3e59f1180538cd9b842be5ea11744ae224c615a5789bc0551112259dc79d969a",
+      "bytes": 1801,
+      "role": "Original MIME-specific third-party notice from fixed Tika core license; retain conditions/disclaimer",
+      "origin": null
+    },
+    {
+      "path": "reference-only/apache-tika/IPTC-2010-terms.original.txt",
+      "sha256": "e0b0081ffd146fbc2ee8036b16beefef57cd57559e6a09030f9606869db93f16",
+      "bytes": 8196,
+      "role": "Historical Photo Metadata terms; two Java classes excluded from this MIME source subset",
+      "origin": null
+    },
+    {
+      "path": "licenses/Apache-2.0.txt",
+      "sha256": "e3ba223bb1423f0aad8c3dfce0fe3148db48926d41e6fbc3afbbf5ff9e1c89cb",
+      "bytes": 10398,
+      "role": "Original Qt/Tika source licence/exception; individual SPDX expressions retained",
+      "origin": "qt-everywhere-src-6.11.2/qtbase/LICENSES/Apache-2.0.txt"
+    },
+    {
+      "path": "licenses/GPL-3.0-only.txt",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "role": "Original Qt/Tika source licence/exception; individual SPDX expressions retained",
+      "origin": "qt-everywhere-src-6.11.2/LICENSES/GPL-3.0-only.txt"
+    },
+    {
+      "path": "licenses/LGPL-3.0-only.txt",
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768",
+      "bytes": 7651,
+      "role": "Original Qt/Tika source licence/exception; individual SPDX expressions retained",
+      "origin": "qt-everywhere-src-6.11.2/LICENSES/LGPL-3.0-only.txt"
+    },
+    {
+      "path": "licenses/Qt-GPL-exception-1.0.txt",
+      "sha256": "40678d338ce53cd93f8b22b281a2ecbcaa3ee65ce60b25ffb0c462b0530846b2",
+      "bytes": 965,
+      "role": "Original Qt/Tika source licence/exception; individual SPDX expressions retained",
+      "origin": "qt-everywhere-src-6.11.2/LICENSES/Qt-GPL-exception-1.0.txt"
+    },
+    {
+      "path": "licenses/OGL-3.0.original.html",
+      "sha256": "f5b2b9f2af63647cde889fa6c3508f5705925295b74912c68caa28dd37e64aa5",
+      "bytes": 10450,
+      "role": "Unmodified official HTML; not an application-wide licence",
+      "origin": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+    },
+    {
+      "path": "changes/tika-upstream-to-Qt6.11.2.diff",
+      "sha256": "358e4bd3be83a3a51ee1a0b2fa9a9a4aeb44284fd7ddbb03e90fec398b6176f1",
+      "bytes": 263879,
+      "role": "Static comparison of original and transformed XML; scripts not run",
+      "origin": null
+    },
+    {
+      "path": "notices/TIKA-PRONOM-NOTICE.draft.txt",
+      "sha256": "e90a2ed6aa763960c50b06b7cd5df0e00690bae9d3e108af27e7333f02e0c33d",
+      "bytes": 4836,
+      "role": "Draft component attribution; not approved",
+      "origin": null
+    },
+    {
+      "path": "README.txt",
+      "sha256": "c38389ea43edc03ec9edebdfce428c1f55ebe13ea6d56b8a34a9375342a873d2",
+      "bytes": 2289,
+      "role": "Supplement instructions and limitations",
+      "origin": null
+    }
+  ],
+  "no_processing_or_build_performed": true,
+  "manifest_self_excluded": true
+}

@@ -1,0 +1,3107 @@
+{
+  "status": "PREBUILD-DRAFT-NOT-APPROVED",
+  "pillow": [
+    {
+      "component": "libjpeg",
+      "archive": "libjpeg-turbo-3.1.4.1.tar.gz",
+      "source_url": "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.4.1/libjpeg-turbo-3.1.4.1.tar.gz",
+      "patch_definition": "{'CMakeLists.txt': {'if(MSVC_IDE AND CMAKE_GENERATOR_PLATFORM MATCHES \"arm64\")': 'if({architecture} STREQUAL ARM64)'}}",
+      "declared_notices": [
+        "README.ijg",
+        "LICENSE.md"
+      ],
+      "binary_correspondence": "Not established solely by this source audit",
+      "independent_upstream_digest": "Fresh official GitHub release asset SHA256 matches retained source",
+      "sha256": "ecae8008e2cc9ade2f2c1bb9d5e6d4fb73e7c433866a056bd82980741571a022",
+      "matches_retained_digest": true,
+      "notices": [
+        {
+          "member": "libjpeg-turbo-3.1.4.1/README.ijg",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/38c6dba48dce__README.ijg",
+          "sha256": "75815e3bf6484201a3c3d17a1bbf10f2e8e3237f84df10a2357ea896db2a81d6",
+          "bytes": 12799,
+          "scope": "Pillow declared source notice; actual wheel applicability separately reviewed"
+        },
+        {
+          "member": "libjpeg-turbo-3.1.4.1/LICENSE.md",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/254ae8d3dc50__LICENSE.md",
+          "sha256": "e10114e6e40f3d0311c401ca25245ac5ef459a43c20f976fd63f03e816f5741f",
+          "bytes": 5622,
+          "scope": "Pillow declared source notice; actual wheel applicability separately reviewed"
+        }
+      ],
+      "missing_notices": [],
+      "official_digest_evidence": {
+        "component": "libjpeg",
+        "api_url": "https://api.github.com/repos/libjpeg-turbo/libjpeg-turbo/releases/tags/3.1.4.1",
+        "local_sha256": "ecae8008e2cc9ade2f2c1bb9d5e6d4fb73e7c433866a056bd82980741571a022",
+        "matching_asset_count": 1,
+        "asset_url": "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.4.1/libjpeg-turbo-3.1.4.1.tar.gz",
+        "asset_digest": "sha256:ecae8008e2cc9ade2f2c1bb9d5e6d4fb73e7c433866a056bd82980741571a022",
+        "independent_digest_match": true
+      }
+    },
+    {
+      "component": "zlib",
+      "archive": "zlib-ng-2.3.3.tar.gz",
+      "source_url": "https://github.com/zlib-ng/zlib-ng/archive/refs/tags/2.3.3.tar.gz",
+      "patch_definition": "{'CMakeLists.txt': {'set_target_properties(zlib-ng PROPERTIES OUTPUT_NAME zlibstatic${{SUFFIX}})': 'set_target_properties(zlib-ng PROPERTIES OUTPUT_NAME zlib)'}}",
+      "declared_notices": "LICENSE.md",
+      "binary_correspondence": "Not established solely by this source audit",
+      "independent_upstream_digest": "Not newly established in this pass",
+      "sha256": "f9c65aa9c852eb8255b636fd9f07ce1c406f061ec19a2e7d508b318ca0c907d1",
+      "matches_retained_digest": true,
+      "notices": [
+        {
+          "member": "zlib-ng-2.3.3/LICENSE.md",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/51d06dd028c8__LICENSE.md",
+          "sha256": "6c9f0d975b41afaa34d22f55bb8986ce69e5cb7ad327cb2b28820cd425edf5ee",
+          "bytes": 867,
+          "scope": "Pillow declared source notice; actual wheel applicability separately reviewed"
+        }
+      ],
+      "missing_notices": []
+    },
+    {
+      "component": "xz",
+      "archive": "xz-5.8.3.tar.gz",
+      "source_url": "https://github.com/tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.gz",
+      "patch_definition": null,
+      "declared_notices": "COPYING",
+      "binary_correspondence": "Not established solely by this source audit",
+      "independent_upstream_digest": "Fresh official GitHub release asset SHA256 matches retained source",
+      "sha256": "3d3a1b973af218114f4f889bbaa2f4c037deaae0c8e815eec381c3d546b974a0",
+      "matches_retained_digest": true,
+      "notices": [
+        {
+          "member": "xz-5.8.3/COPYING",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/d16c447dba86__COPYING",
+          "sha256": "616a3ad264ce29b8f1cb97e53037b139d406899ca8d1f799651e17bfa09830b8",
+          "bytes": 3119,
+          "scope": "Pillow declared source notice; actual wheel applicability separately reviewed"
+        }
+      ],
+      "missing_notices": [],
+      "official_digest_evidence": {
+        "component": "xz",
+        "api_url": "https://api.github.com/repos/tukaani-project/xz/releases/tags/v5.8.3",
+        "local_sha256": "3d3a1b973af218114f4f889bbaa2f4c037deaae0c8e815eec381c3d546b974a0",
+        "matching_asset_count": 1,
+        "asset_url": "https://github.com/tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.gz",
+        "asset_digest": "sha256:3d3a1b973af218114f4f889bbaa2f4c037deaae0c8e815eec381c3d546b974a0",
+        "independent_digest_match": true
+      }
+    },
+    {
+      "component": "libwebp",
+      "archive": "libwebp-1.6.0.tar.gz",
+      "source_url": "http://downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz",
+      "patch_definition": "{'src\\\\enc\\\\picture_csp_enc.c': {'#include \"sharpyuv/sharpyuv.h\"': '#include \"sharpyuv/sharpyuv.h\"\\n#pragma comment(lib, \"libsharpyuv.lib\")'}}",
+      "declared_notices": "COPYING",
+      "binary_correspondence": "Not established solely by this source audit",
+      "independent_upstream_digest": "Not newly established in this pass",
+      "sha256": "e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564",
+      "matches_retained_digest": true,
+      "notices": [
+        {
+          "member": "libwebp-1.6.0/COPYING",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/42e10b4668b0__COPYING",
+          "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf",
+          "bytes": 1496,
+          "scope": "Pillow declared source notice; actual wheel applicability separately reviewed"
+        }
+      ],
+      "missing_notices": []
+    },
+    {
+      "component": "libtiff",
+      "archive": "tiff-4.7.1.tar.gz",
+      "source_url": "https://download.osgeo.org/libtiff/tiff-4.7.1.tar.gz",
+      "patch_definition": "{'libtiff\\\\tif_lzma.c': {'#ifdef LZMA_SUPPORT': '#ifdef LZMA_SUPPORT\\n#pragma comment(lib, \"lzma.lib\")'}, 'libtiff\\\\tif_webp.c': {'#ifdef WEBP_SUPPORT': '#ifdef WEBP_SUPPORT\\n#pragma comment(lib, \"libwebp.lib\")'}, 'libtiff\\\\tif_getimage.c': {'int32_t incr = 3 * w + 4 * toskew;': 'const tmsize_t incr = 3 * (tmsize_t)w + 4 * (tmsize_t)toskew;', 'int32_t incr = 2 * toskew + w;': 'const tmsize_t incr = 2 * (tmsize_t)toskew + w;'}}",
+      "declared_notices": "LICENSE.md",
+      "binary_correspondence": "Not established solely by this source audit",
+      "independent_upstream_digest": "Not newly established in this pass",
+      "sha256": "f698d94f3103da8ca7438d84e0344e453fe0ba3b7486e04c5bf7a9a3fabe9b69",
+      "matches_retained_digest": true,
+      "notices": [
+        {
+          "member": "tiff-4.7.1/LICENSE.md",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/5d719405e86e__LICENSE.md",
+          "sha256": "0e27c2382d7b8147972bbb746e04059a1152c8d0fda9d03ef1399d1a433c4ade",
+          "bytes": 2416,
+          "scope": "Pillow declared source notice; actual wheel applicability separately reviewed"
+        }
+      ],
+      "missing_notices": []
+    },
+    {
+      "component": "libpng",
+      "archive": "libpng-1.6.58.tar.gz",
+      "source_url": "https://sourceforge.net/projects/libpng/files/libpng16/1.6.58/libpng-1.6.58.tar.gz/download",
+      "patch_definition": null,
+      "declared_notices": "LICENSE",
+      "binary_correspondence": "Not established solely by this source audit",
+      "independent_upstream_digest": "Not newly established in this pass",
+      "sha256": "8c9b05b675ca7301a458df2c2e46f26e1d41ff36b8863f8c33530bc58c2e6225",
+      "matches_retained_digest": true,
+      "notices": [
+        {
+          "member": "libpng-1.6.58/LICENSE",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/afa7a6140d5a__LICENSE",
+          "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526",
+          "bytes": 5345,
+          "scope": "Pillow declared source notice; actual wheel applicability separately reviewed"
+        }
+      ],
+      "missing_notices": []
+    },
+    {
+      "component": "brotli",
+      "archive": "brotli-1.2.0.tar.gz",
+      "source_url": "https://github.com/google/brotli/archive/refs/tags/v1.2.0.tar.gz",
+      "patch_definition": null,
+      "declared_notices": "LICENSE",
+      "binary_correspondence": "Not established solely by this source audit",
+      "independent_upstream_digest": "Not newly established in this pass",
+      "sha256": "816c96e8e8f193b40151dad7e8ff37b1221d019dbcb9c35cd3fadbfe6477dfec",
+      "matches_retained_digest": true,
+      "notices": [
+        {
+          "member": "brotli-1.2.0/LICENSE",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/b028514c80d2__LICENSE",
+          "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94",
+          "bytes": 1084,
+          "scope": "Pillow declared source notice; actual wheel applicability separately reviewed"
+        }
+      ],
+      "missing_notices": []
+    },
+    {
+      "component": "freetype",
+      "archive": "freetype-2.14.3.tar.gz",
+      "source_url": "https://download.savannah.gnu.org/releases/freetype/freetype-2.14.3.tar.gz",
+      "patch_definition": "{'builds\\\\windows\\\\vc2010\\\\freetype.vcxproj': {'<RuntimeLibrary>MultiThreaded</RuntimeLibrary>': '<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>', '<PropertyGroup Label=\"Globals\">': '<PropertyGroup Label=\"Globals\">\\n    <WindowsTargetPlatformVersion>$(WindowsSDKVersion)</WindowsTargetPlatformVersion>'}, 'builds\\\\windows\\\\vc2010\\\\freetype.user.props': {'<UserDefines></UserDefines>': '<UserDefines>FT_CONFIG_OPTION_SYSTEM_ZLIB;FT_CONFIG_OPTION_USE_PNG;FT_CONFIG_OPTION_USE_HARFBUZZ;FT_CONFIG_OPTION_USE_BROTLI</UserDefines>', '<UserIncludeDirectories></UserIncludeDirectories>': '<UserIncludeDirectories>{dir_harfbuzz}\\\\src;{inc_dir}</UserIncludeDirectories>', '<UserLibraryDirectories></UserLibraryDirectories>': '<UserLibraryDirectories>{lib_dir}</UserLibraryDirectories>', '<UserDependencies></UserDependencies>': f\"<UserDependencies>zlib.lib;libpng{V['libpng-xy']}.lib;brotlicommon.lib;brotlidec.lib</UserDependencies>\"}, 'src/autofit/afshaper.c': {'#ifdef FT_CONFIG_OPTION_USE_HARFBUZZ': '#ifdef FT_CONFIG_OPTION_USE_HARFBUZZ\\n#pragma comment(lib, \"harfbuzz.lib\")'}}",
+      "declared_notices": [
+        "LICENSE.TXT",
+        "docs\\FTL.TXT",
+        "docs\\GPLv2.TXT"
+      ],
+      "binary_correspondence": "Not established solely by this source audit",
+      "independent_upstream_digest": "Not newly established in this pass",
+      "sha256": "e61b31ab26358b946e767ed7eb7f4bb2e507da1cfefeb7a8861ace7fd5c899a1",
+      "matches_retained_digest": true,
+      "notices": [
+        {
+          "member": "freetype-2.14.3/LICENSE.TXT",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/8f634236e732__LICENSE.TXT",
+          "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b",
+          "bytes": 2149,
+          "scope": "Pillow declared source notice; actual wheel applicability separately reviewed"
+        },
+        {
+          "member": "freetype-2.14.3/docs/FTL.TXT",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/a81ea7198a3e__FTL.TXT",
+          "sha256": "5a5ee54c5001bbad1cdc1a57cc3dd4c42199b2da09d39c7ee41fab002d02967f",
+          "bytes": 6743,
+          "scope": "Pillow declared source notice; actual wheel applicability separately reviewed"
+        },
+        {
+          "member": "freetype-2.14.3/docs/GPLv2.TXT",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/98700132766e__GPLv2.TXT",
+          "sha256": "c4120c6752c910c299e3bd9cb3a46ff262c268303ca2069b61f92f10a5656c18",
+          "bytes": 17994,
+          "scope": "Pillow declared source notice; actual wheel applicability separately reviewed"
+        }
+      ],
+      "missing_notices": []
+    },
+    {
+      "component": "lcms2",
+      "archive": "lcms2-2.19.1.tar.gz",
+      "source_url": "https://sourceforge.net/projects/lcms/files/lcms/2.19.1/lcms2-2.19.1.tar.gz/download",
+      "patch_definition": "{'Projects\\\\VC2022\\\\lcms2_static\\\\lcms2_static.vcxproj': {'<RuntimeLibrary>MultiThreaded</RuntimeLibrary>': '<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>', '<PlatformToolset>v143</PlatformToolset>': '<PlatformToolset>$(DefaultPlatformToolset)</PlatformToolset>', '<WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>': '<WindowsTargetPlatformVersion>$(WindowsSDKVersion)</WindowsTargetPlatformVersion>'}}",
+      "declared_notices": "LICENSE",
+      "binary_correspondence": "Not established solely by this source audit",
+      "independent_upstream_digest": "Not newly established in this pass",
+      "sha256": "bfc54f7bab59fbc921012014a8032e4cba4abd46db47d46b76416a8c0b2815c8",
+      "matches_retained_digest": true,
+      "notices": [
+        {
+          "member": "lcms2-2.19.1/LICENSE",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/86e9597ae049__LICENSE",
+          "sha256": "6dbd60437f8ef91d8de1f08ad75882547fd4931bfcc3566a0735f28db1484d31",
+          "bytes": 1080,
+          "scope": "Pillow declared source notice; actual wheel applicability separately reviewed"
+        }
+      ],
+      "missing_notices": []
+    },
+    {
+      "component": "openjpeg",
+      "archive": "openjpeg-2.5.4.tar.gz",
+      "source_url": "https://github.com/uclouvain/openjpeg/archive/v2.5.4.tar.gz",
+      "patch_definition": null,
+      "declared_notices": "LICENSE",
+      "binary_correspondence": "Not established solely by this source audit",
+      "independent_upstream_digest": "Not newly established in this pass",
+      "sha256": "a695fbe19c0165f295a8531b1e4e855cd94d0875d2f88ec4b61080677e27188a",
+      "matches_retained_digest": true,
+      "notices": [
+        {
+          "member": "openjpeg-2.5.4/LICENSE",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/703ef1de4839__LICENSE",
+          "sha256": "a6af136f3e15038a666b61f376612a07d9a4e48cb7c01adbf3e33b3f14ab49b6",
+          "bytes": 2112,
+          "scope": "Pillow declared source notice; actual wheel applicability separately reviewed"
+        }
+      ],
+      "missing_notices": []
+    },
+    {
+      "component": "libimagequant",
+      "archive": "libimagequant-4.4.1.tar.gz",
+      "source_url": "https://github.com/ImageOptim/libimagequant/archive/{V['libimagequant']}.tar.gz",
+      "patch_definition": null,
+      "declared_notices": "COPYRIGHT",
+      "binary_correspondence": "Not established solely by this source audit",
+      "independent_upstream_digest": "Not newly established in this pass",
+      "state": "source unavailable; optional imagequant, Windows definition no-imagequant; final payload confirmation pending"
+    },
+    {
+      "component": "harfbuzz",
+      "archive": "harfbuzz-14.2.1.tar.xz",
+      "source_url": "https://github.com/harfbuzz/harfbuzz/releases/download/14.2.1/harfbuzz-14.2.1.tar.xz",
+      "patch_definition": null,
+      "declared_notices": "COPYING",
+      "binary_correspondence": "Not established solely by this source audit",
+      "independent_upstream_digest": "Fresh official GitHub release asset SHA256 matches retained source",
+      "sha256": "a54a5d8e9380a41fbb762ce367bcbf7704792dfca0d93f1bbca86c5a57902e0e",
+      "matches_retained_digest": true,
+      "notices": [
+        {
+          "member": "harfbuzz-14.2.1/COPYING",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1aaad8346047__COPYING",
+          "sha256": "ba8f810f2455c2f08e2d56bb49b72f37fcf68f1f4fade38977cfd7372050ad64",
+          "bytes": 1971,
+          "scope": "Pillow declared source notice; actual wheel applicability separately reviewed"
+        }
+      ],
+      "missing_notices": [],
+      "official_digest_evidence": {
+        "component": "harfbuzz",
+        "api_url": "https://api.github.com/repos/harfbuzz/harfbuzz/releases/tags/14.2.1",
+        "local_sha256": "a54a5d8e9380a41fbb762ce367bcbf7704792dfca0d93f1bbca86c5a57902e0e",
+        "matching_asset_count": 1,
+        "asset_url": "https://github.com/harfbuzz/harfbuzz/releases/download/14.2.1/harfbuzz-14.2.1.tar.xz",
+        "asset_digest": "sha256:a54a5d8e9380a41fbb762ce367bcbf7704792dfca0d93f1bbca86c5a57902e0e",
+        "independent_digest_match": true
+      }
+    },
+    {
+      "component": "fribidi",
+      "archive": "fribidi-1.0.16.zip",
+      "source_url": "https://github.com/fribidi/fribidi/archive/v1.0.16.zip",
+      "patch_definition": null,
+      "declared_notices": "COPYING",
+      "binary_correspondence": "Not established solely by this source audit",
+      "independent_upstream_digest": "Not newly established in this pass",
+      "sha256": "1e619b9949db8ff00631a2442d72db8faf53ff104dc4a9bf13cc2c224f7cd2ea",
+      "matches_retained_digest": true,
+      "notices": [
+        {
+          "member": "fribidi-1.0.16/COPYING",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/6b5c25ab99bb__COPYING",
+          "sha256": "32434afcc8666ba060e111d715bfdb6c2d5dd8a35fa4d3ab8ad67d8f850d2f2b",
+          "bytes": 26440,
+          "scope": "Pillow declared source notice; actual wheel applicability separately reviewed"
+        }
+      ],
+      "missing_notices": []
+    },
+    {
+      "component": "libavif",
+      "archive": "libavif-1.4.2.tar.gz",
+      "source_url": "https://github.com/AOMediaCodec/libavif/archive/v1.4.2.tar.gz",
+      "patch_definition": null,
+      "declared_notices": "LICENSE",
+      "binary_correspondence": "Not established solely by this source audit",
+      "independent_upstream_digest": "Not newly established in this pass",
+      "sha256": "2b645287340ba5a631d268b551dc2d72bd73ac33335962dd36dcdb6d8366921d",
+      "matches_retained_digest": true,
+      "notices": [
+        {
+          "member": "libavif-1.4.2/LICENSE",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/64cedf6ddc47__LICENSE",
+          "sha256": "165abf92cc04b39e80d29cadea7a6a7e8fddf59407d4ad2616507a7ebe8216f9",
+          "bytes": 20415,
+          "scope": "Pillow declared source notice; actual wheel applicability separately reviewed"
+        }
+      ],
+      "missing_notices": []
+    }
+  ],
+  "mupdf": [
+    {
+      "path": "thirdparty/brotli",
+      "git_commit": "2523f3314501aa5c90e561922b2e668b3ccee26e",
+      "source_file_count": 187,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/brotli/LICENSE",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/726e6d38c6f1__LICENSE",
+          "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94",
+          "bytes": 1084,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/cmark-gfm",
+      "git_commit": "74e0f5b6b62bbdd1e262c92f4bb2c6c871c6307e",
+      "source_file_count": 147,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/cmark-gfm/COPYING",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/42e1058dee25__COPYING",
+          "sha256": "c22e885f33b821bddb24cf007145e5540655b6c0f403e49e6c76a93c28e6d9a9",
+          "bytes": 7567,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/curl",
+      "git_commit": "f43c6fbb2dbdf68dfdd0f0c3399e3711a621614a",
+      "source_file_count": 1510,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/curl/COPYING",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/84005e5907ea__COPYING",
+          "sha256": "8c8824f50e73a021f5dde1fccbf69685939247399a33a32abab1fa448c9ddabb",
+          "bytes": 1088,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/extract",
+      "git_commit": "8750ac39c30a0d65119b426b5a491c5b8e8bf674",
+      "source_file_count": 53,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/extract/COPYING",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/8d4cff181c81__COPYING",
+          "sha256": "57c8ff33c9c0cfc3ef00e650a1cc910d7ee479a8bc509f6c9209a7c2a11399d6",
+          "bytes": 34520,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/freeglut",
+      "git_commit": "d5e2256d571b3ef66fb60716c99e35e9d3e570a2",
+      "source_file_count": 164,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/freeglut/COPYING",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/c5f682cec78b__COPYING",
+          "sha256": "b6593d5ec4c113a274abb85b10e8615895cb0ddb89f7912af5fe5aa8df38a275",
+          "bytes": 1439,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/freetype",
+      "git_commit": "0a0221a1347e2f1e07c395263540026e9a0aa7c7",
+      "source_file_count": 740,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/freetype/.gitmodules",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/902c82029847__.gitmodules",
+          "sha256": "7f69eb73967e63bf3cbddd406e23e3e456c32cb5eb1a2b70e947d17b02044aeb",
+          "bytes": 84,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        },
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/freetype/LICENSE.TXT",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/936daf912b97__LICENSE.TXT",
+          "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b",
+          "bytes": 2149,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/gumbo-parser",
+      "git_commit": "61bd4e736c3b342e592f65be0d65ec6a0acd8dcb",
+      "source_file_count": 69,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/gumbo-parser/COPYING",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/7da3a978aecc__COPYING",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/harfbuzz",
+      "git_commit": "c28ba35a1e6dc4b6b32e2b1d11fd2a408f6c86bb",
+      "source_file_count": 657,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/harfbuzz/COPYING",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/f2108331fea2__COPYING",
+          "sha256": "ba8f810f2455c2f08e2d56bb49b72f37fcf68f1f4fade38977cfd7372050ad64",
+          "bytes": 1971,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        },
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/harfbuzz/src/ms-use/COPYING",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/c81765d99867__COPYING",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "bytes": 1141,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/jbig2dec",
+      "git_commit": "dc15c39bbbddc90f79c14563d2eb5a794106be8f",
+      "source_file_count": 60,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/jbig2dec/COPYING",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/47a9dc77844c__COPYING",
+          "sha256": "57c8ff33c9c0cfc3ef00e650a1cc910d7ee479a8bc509f6c9209a7c2a11399d6",
+          "bytes": 34520,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        },
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/jbig2dec/LICENSE",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/9e0e99c090e1__LICENSE",
+          "sha256": "1bf5258afe453934484fd0cea97508b72301633a6a78b0ae8a9ee44ac78f26d9",
+          "bytes": 1170,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/lcms2",
+      "git_commit": "d69c64417c4a33a4629957fc0e08f4f4c5abcc3d",
+      "source_file_count": 266,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/lcms2/LICENSE",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1f03fdadec4b__LICENSE",
+          "sha256": "74fe8934cee0e63e8368d4a6b3a703b603e753a62b75b75273572e98a57ebf75",
+          "bytes": 1075,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/leptonica",
+      "git_commit": "7fbe9ea76d1e0c48a02b2ed371d24f92c7bac40c",
+      "source_file_count": 264,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/leptonica/leptonica-license.txt",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/7804688c3c8c__leptonica-license.txt",
+          "sha256": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806",
+          "bytes": 1521,
+          "scope": "Original source notice/readme, mapped to submodule commit; not proof of runtime inclusion"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/libjpeg",
+      "git_commit": "627faae398468d5d11e3d694dc325432f734b5c4",
+      "source_file_count": 201,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/libjpeg/README",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/5a29327e02d6__README",
+          "sha256": "913af09f785683accdf660b85dcf27fdd567d4ad649daa95cb8771b040db79d1",
+          "bytes": 18711,
+          "scope": "Original source notice/readme, mapped to submodule commit; not proof of runtime inclusion"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/mujs",
+      "git_commit": "e892c9fdbbddba94e52f656ccb378ed4885e30cc",
+      "source_file_count": 55,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/mujs/COPYING",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/90a7e7425562__COPYING",
+          "sha256": "0ca9b4fbfbcab8ac7d32475890d866efc02f4cffb6b6da5c0e9a0615cc3d82fe",
+          "bytes": 759,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/openjpeg",
+      "git_commit": "957029eb875eee1118743f200cb86da9d8289de2",
+      "source_file_count": 88,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/openjpeg/LICENSE",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/582d117b6ac2__LICENSE",
+          "sha256": "a6af136f3e15038a666b61f376612a07d9a4e48cb7c01adbf3e33b3f14ab49b6",
+          "bytes": 2112,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/tesseract",
+      "git_commit": "ad0f76d971946512a62c933f490c8111877eddaa",
+      "source_file_count": 646,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/tesseract/LICENSE",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/14afaad622c3__LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/zint",
+      "git_commit": "7a9fdd6cd00cd5bfd0082705d934c13ef84f25e1",
+      "source_file_count": 929,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/zint/LICENSE",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/cb897299e705__LICENSE",
+          "sha256": "d69af7f2442fcde1c3372cbbb43907fa1f4b3a91ef3899be69dd3a726dc255a4",
+          "bytes": 909,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        },
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/zint/backend_qt/COPYING",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/b9e98a693130__COPYING",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+          "bytes": 35147,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        },
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/zint/debian/copyright",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/a38ed5468872__copyright",
+          "sha256": "edec41dba6f270124ad3ba658dc2514bb1e1a9d8c637b7d676cde361114680eb",
+          "bytes": 1325,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        },
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/zint/frontend/COPYING",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/2f20541829dc__COPYING",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+          "bytes": 35147,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        },
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/zint/frontend_qt/COPYING",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/2b90af1ba21e__COPYING",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+          "bytes": 35147,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/zlib",
+      "git_commit": "da607da739fa6047df13e66a2af6b8bec7c2a498",
+      "source_file_count": 98,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/zlib/LICENSE",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/dd232c539f41__LICENSE",
+          "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2",
+          "bytes": 1002,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    },
+    {
+      "path": "thirdparty/zxing-cpp",
+      "git_commit": "742aef959e12a41eda494df78fd567c2e715ff57",
+      "source_file_count": 452,
+      "notices": [
+        {
+          "member": "mupdf-1.28.2-source/thirdparty/zxing-cpp/LICENSE",
+          "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/8ffb01a7694c__LICENSE",
+          "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+          "bytes": 11358,
+          "scope": "MuPDF commit-pinned submodule source notice; feature selection/runtime inclusion not established"
+        }
+      ],
+      "unresolved": "Actual Windows wheel feature/configuration and final payload applicability; source archive commit is not binary attestation"
+    }
+  ],
+  "qt": {
+    "source_archive_sha256": "6dcfbca271d76a6502741a2c0dc6fc98ef7dd0b7b4cfd0abcebb285a86a26f33",
+    "attributions": [
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/cmake/3rdparty/extra-cmake-modules/qt_attribution.json",
+        "id": "extra-cmake-modules",
+        "name": "extra-cmake-modules",
+        "license_id": "BSD-3-Clause",
+        "license_expression": "BSD-3-Clause",
+        "copyright": "Copyright © 2011-2018 The KDE community",
+        "qt_parts": [
+          "tools"
+        ],
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/cmake/3rdparty/extra-cmake-modules/COPYING-CMAKE-SCRIPTS"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/cmake/3rdparty/extra-cmake-modules/COPYING-CMAKE-SCRIPTS",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/576d5391a4dc__COPYING-CMAKE-SCRIPTS",
+            "sha256": "46cde7dc11e64c78d650b4851b88f6704b4665ff60f22a1caf68ceb15e217e5b",
+            "bytes": 1327,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/cmake/3rdparty/kwin/qt_attribution.json",
+        "id": "kwin",
+        "name": "KWin",
+        "license_id": "BSD-3-Clause",
+        "license_expression": "BSD 3-Clause \"New\" or \"Revised\" License",
+        "copyright": [
+          "Copyright 2014 Alex Merry <alex.merry@kde.org>",
+          "Copyright 2014 Martin Gräßlin <mgraesslin@kde.org>",
+          "Copyright (c) 2006,2007 Laurent Montel, <montel@kde.org>"
+        ],
+        "qt_parts": [
+          "tools"
+        ],
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/cmake/3rdparty/kwin/COPYING-CMAKE-SCRIPTS"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/cmake/3rdparty/kwin/COPYING-CMAKE-SCRIPTS",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/70d03840948f__COPYING-CMAKE-SCRIPTS",
+            "sha256": "46cde7dc11e64c78d650b4851b88f6704b4665ff60f22a1caf68ceb15e217e5b",
+            "bytes": 1327,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/D3D12MemoryAllocator/qt_attribution.json",
+        "id": "d3d12memoryallocator",
+        "name": "D3D12 Memory Allocator",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright (c) 2019-2022 Advanced Micro Devices, Inc. All rights reserved.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/D3D12MemoryAllocator/LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/D3D12MemoryAllocator/LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/b7260c5401b4__LICENSE.txt",
+            "sha256": "1b3941c52b26d42c510afbdf205a8b96a6d64f5a7b8ebff0287979fd91dfd52f",
+            "bytes": 1099,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/VulkanMemoryAllocator/qt_attribution.json",
+        "id": "vulkanmemoryallocator",
+        "name": "Vulkan Memory Allocator",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright (c) 2017-2025 Advanced Micro Devices, Inc. All rights reserved.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/VulkanMemoryAllocator/LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/VulkanMemoryAllocator/LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/08416acf54cf__LICENSE.txt",
+            "sha256": "846d97c8b74ccaa92b9ad031140a04363b3b3985f318094552f297b8bda1c68e",
+            "bytes": 1099,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/android/qt_attribution.json",
+        "id": "android-native-style",
+        "name": "Native Style for Android",
+        "license_id": "Apache-2.0",
+        "license_expression": "Apache License 2.0",
+        "copyright": "Copyright (C) 2005 The Android Open Source Project",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/android/LICENSE"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/android/LICENSE",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/167cef72d1a1__LICENSE",
+            "sha256": "4a51cf7f724f51bedb5fa4f9583a2762f1db8d05e43a577e2487c7aab2fdce18",
+            "bytes": 525,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/blake2/qt_attribution.json",
+        "id": "blake2",
+        "name": "BLAKE2 (reference implementation)",
+        "license_id": "CC0-1.0 OR Apache-2.0",
+        "license_expression": "Creative Commons Zero v1.0 Universal or Apache License 2.0",
+        "copyright": "Copyright 2012, Samuel Neves <sneves@dei.uc.pt>",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/blake2/COPYING"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/blake2/COPYING",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/63f733888be8__COPYING",
+            "sha256": "4103f471877ed0bae500752c5fcd7ecca409d4a4a8dc2ad40437daba60f1a2bc",
+            "bytes": 17914,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/double-conversion/qt_attribution.json",
+        "id": "doubleconversion",
+        "name": "Efficient Binary-Decimal and Decimal-Binary Conversion Routines for IEEE Doubles",
+        "license_id": "BSD-3-Clause",
+        "license_expression": "BSD 3-clause \"New\" or \"Revised\" License",
+        "copyright": "Copyright 2006-2012, the V8 project authors",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/double-conversion/LICENSE"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/double-conversion/LICENSE",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/646cb809782a__LICENSE",
+            "sha256": "4af93c12062c58058378de2397dc1c92bbff9ddfb1d583a01c84127557ce97ca",
+            "bytes": 1527,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/easing/qt_attribution.json",
+        "id": "easing",
+        "name": "Easing Equations by Robert Penner",
+        "license_id": "BSD-3-Clause",
+        "license_expression": "BSD 3-clause \"New\" or \"Revised\" License",
+        "copyright": "Copyright (c) 2001 Robert Penner",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/easing/LICENSE"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/easing/LICENSE",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/d777bbcbb1dd__LICENSE",
+            "sha256": "92fac99458f1754b73edf50f9c9983e0efaa06ad96e2afd5e538c79f45b4b191",
+            "bytes": 1505,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/emoji-segmenter/qt_attribution.json",
+        "id": "emoji-segmenter",
+        "name": "Emoji Segmenter",
+        "license_id": "Apache-2.0",
+        "license_expression": "Apache License 2.0",
+        "copyright": "Copyright 2019 Google LLC",
+        "qt_parts": null,
+        "requested_license_files": [],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": true,
+        "standard_text_candidates": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/LICENSES/Apache-2.0.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/683ac2fa2e80__Apache-2.0.txt",
+            "sha256": "e3ba223bb1423f0aad8c3dfce0fe3148db48926d41e6fbc3afbbf5ff9e1c89cb",
+            "bytes": 10398,
+            "scope": "Original source notice/readme, mapped to submodule commit; not proof of runtime inclusion"
+          }
+        ],
+        "coverage": "LicenseFile not declared; attribution copyright/inline source header applicability still requires review even when a generic standard text is available."
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/freetype/qt_attribution.json",
+        "id": "freetype",
+        "name": "Freetype 2",
+        "license_id": "FTL OR GPL-2.0-only",
+        "license_expression": "Freetype Project License or GNU General Public License v2.0 only",
+        "copyright": [
+          "Copyright (c) 2007-2014 Adobe Systems Incorporated",
+          "Copyright (c) 2004-2026 Albert Chin-A-Young",
+          "Copyright (c) 2018-2026 Armin Hasitzka, David Turner, Robert Wilhelm, and Werner Lemberg",
+          "Copyright (c) 2000 Computing Research Labs, New Mexico State University",
+          "Copyright (c) 1996-2026 David Turner, Robert Wilhelm, Dominik Röttsches, and Werner Lemberg",
+          "Copyright (c) 2004-2026 David Turner, Robert Wilhelm, Werner Lemberg and George Williams",
+          "Copyright (c) 2022-2026 David Turner, Robert Wilhelm, Werner Lemberg, and Moazin Khatti",
+          "Copyright (c) 2008-2026 David Turner, Robert Wilhelm, Werner Lemberg, and suzuki toshiya",
+          "Copyright (c) 2003-2026 David Turner, Robert Wilhelm, and Werner Lemberg",
+          "Copyright (c) 2005-2026 David Turner",
+          "Copyright (c) 2007-2026 Derek Clegg and Michael Toftdal",
+          "Copyright (c) 2007 Dmitry Timoshkov for Codeweavers",
+          "Copyright (c) 2001-2015 Francesco Zappa Nardelli",
+          "Copyright (c) 2005, 2007, 2008, 2013 George Williams",
+          "Copyright (c) 2013-2026 Google, Inc. Google Author(s) Behdad Esfahbod and Stuart Gill",
+          "Copyright (c) 2013-2022 Google, Inc.",
+          "Copyright (c) 2003 Huw D M Davies for Codeweavers",
+          "Copyright (c) 2010-2026 Joel Klinghed",
+          "Copyright (c) 1996-2026 Just van Rossum, David Turner, Robert Wilhelm, and Werner Lemberg",
+          "Copyright (c) 2003-2026 Masatake YAMATO and Redhat K.K.",
+          "Copyright (c) 2004-2026 Masatake YAMATO, Redhat K.K, David Turner, Robert Wilhelm, and Werner Lemberg",
+          "Copyright (c) 2019-2026 Nikhil Ramakrishnan, David Turner, Robert Wilhelm, and Werner Lemberg",
+          "Copyright (c) 2009-2026 Oran Agra and Mickey Gabel",
+          "Copyright (c) 2007-2026 Rahul Bhalerao <rahul.bhalerao@redhat.com>",
+          "Copyright (c) 2002-2026 Roberto Alameda",
+          "Copyright (c) 2015-2026 Werner Lemberg",
+          "Copyright (c) 2004-2026 suzuki toshiya, Masatake YAMATO, Red Hat K.K., David Turner, Robert Wilhelm, and Werner Lemberg",
+          "Copyright (c) 2019 nyorain",
+          "Copyright (c) 2022-2026 David Turner, Robert Wilhelm, Werner Lemberg, George Williams, and Dominik Röttsches",
+          "Copyright (C) 2009, 2023  Red Hat, Inc."
+        ],
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/freetype/LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/freetype/LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/16d2de90f21d__LICENSE.txt",
+            "sha256": "bf543cdda11864477b8d2ca2aa9afc2aaa8f9133461b4d962ed6ec73646256a1",
+            "bytes": 26234,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/freetype/qt_attribution.json",
+        "id": "freetype-zlib",
+        "name": "Freetype 2 - zlib",
+        "license_id": "Zlib",
+        "license_expression": "zlib License",
+        "copyright": "Copyright (C) 1995-2024 Jean-loup Gailly and Mark Adler",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/freetype/ZLIB-LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/freetype/ZLIB-LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/eaf1c996d679__ZLIB-LICENSE.txt",
+            "sha256": "2b1f5d615382a151af3eb71462ad17d89e2efee8fa7664058d35d3d9237ebb19",
+            "bytes": 962,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/freetype/qt_attribution.json",
+        "id": "freetype-bdf",
+        "name": "Freetype 2 - Bitmap Distribution Format (BDF) support",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": [
+          "Copyright (c) 2000 Computing Research Labs, New Mexico State University",
+          "Copyright (c) 2001-2014 Francesco Zappa Nardelli"
+        ],
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/freetype/BDF-LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/freetype/BDF-LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/87e0c2172a95__BDF-LICENSE.txt",
+            "sha256": "e4e792f29e66750f2e410fd7b50a567652c180f6ee15e1a4dfa0bb5cde524537",
+            "bytes": 2305,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/freetype/qt_attribution.json",
+        "id": "freetype-pcf",
+        "name": "Freetype 2 - Portable Compiled Format (PCF) support",
+        "license_id": "MIT AND MIT-open-group",
+        "license_expression": "MIT License and MIT Open Group variant",
+        "copyright": [
+          "Copyright (c) 2001, 2012 David Turner, Robert Wilhelm, and Werner Lemberg",
+          "Copyright (c) 2000-2014 Francesco Zappa Nardelli",
+          "Copyright (c) 1990, 1994, 1998 The Open Group"
+        ],
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/freetype/PCF-LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/freetype/PCF-LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/65e11da077ec__PCF-LICENSE.txt",
+            "sha256": "6938597bfdeca0db191a8f9ede52eaf2482c2c71a0094c084747a1235f9958fe",
+            "bytes": 2218,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/gradle/qt_attribution.json",
+        "id": "android-gradle-wrapper",
+        "name": "Gradle wrapper",
+        "license_id": "Apache-2.0",
+        "license_expression": "Apache License 2.0",
+        "copyright": "Copyright (C) 2025 Gradle Inc.",
+        "qt_parts": [
+          "tools"
+        ],
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/gradle/LICENSE"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/gradle/LICENSE",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/16db814e15b3__LICENSE",
+            "sha256": "cf234c4188d773406f640bf89be680d9288f40ff96901c70d643fcea96ad46df",
+            "bytes": 23645,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/harfbuzz-ng/qt_attribution.json",
+        "id": "harfbuzz-ng",
+        "name": "HarfBuzz-NG",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": [
+          "Copyright © 2010-2022  Google, Inc.",
+          "Copyright © 2015-2020  Ebrahim Byagowi",
+          "Copyright © 2019,2020  Facebook, Inc.",
+          "Copyright © 2012,2015  Mozilla Foundation",
+          "Copyright © 2011  Codethink Limited",
+          "Copyright © 2008,2010  Nokia Corporation and/or its subsidiary(-ies)",
+          "Copyright © 2009  Keith Stribley",
+          "Copyright © 2011  Martin Hosken and SIL International",
+          "Copyright © 2007  Chris Wilson",
+          "Copyright © 2005,2006,2020,2021,2022,2023  Behdad Esfahbod",
+          "Copyright © 2004,2007,2008,2009,2010,2013,2021,2022,2023  Red Hat, Inc.",
+          "Copyright © 1998-2005  David Turner and Werner Lemberg",
+          "Copyright © 2016  Igalia S.L.",
+          "Copyright © 2022  Matthias Clasen",
+          "Copyright © 2018,2021  Khaled Hosny",
+          "Copyright © 2018,2019,2020  Adobe, Inc",
+          "Copyright © 2013-2015  Alexei Podtelezhnikov"
+        ],
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/harfbuzz-ng/COPYING"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/harfbuzz-ng/COPYING",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/8919014d65f0__COPYING",
+            "sha256": "ba8f810f2455c2f08e2d56bb49b72f37fcf68f1f4fade38977cfd7372050ad64",
+            "bytes": 1971,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/icc/qt_attribution.json",
+        "id": "icc-srgb-color-profile",
+        "name": "sRGB color profile icc file",
+        "license_id": "LicenseRef-ICC-License",
+        "license_expression": "International Color Consortium License",
+        "copyright": "Copyright International Color Consortium, 2015",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/icc/LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/icc/LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/d8d5514636b3__LICENSE.txt",
+            "sha256": "9e34ff47b3a44814e183342e7e198d127a6740e29d20e8381fba7688dafc79dd",
+            "bytes": 463,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/qt_attribution.json",
+        "id": "libjpeg",
+        "name": "LibJPEG-turbo",
+        "license_id": "IJG AND BSD-3-Clause",
+        "license_expression": "Independent JPEG Group License and BSD 3-Clause \"New\" or \"Revised\" License",
+        "copyright": null,
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/LICENSE",
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/ijg-license.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/LICENSE",
+            "path": "documentation/windows-desktop-licenses/qt-inline-notices/058b13cc1201__LICENSE",
+            "sha256": "ba6bceebcba0fdd35488477c2cca8c4632ce82c74dbfbc87d886ce6fc4433579",
+            "bytes": 6077
+          },
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/ijg-license.txt",
+            "path": "documentation/windows-desktop-licenses/qt-inline-notices/d17104f03359__ijg-license.txt",
+            "sha256": "1cb448f5e2e6d3aca60943f4eee1a04675628dc0266a074a42bc1560ebc28d61",
+            "bytes": 1815
+          },
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/COPYRIGHT.txt",
+            "path": "documentation/windows-desktop-licenses/qt-inline-notices/2fbef8e2bd06__COPYRIGHT.txt",
+            "sha256": "e5b349c6a98d997a8d0f5fcfe5cc900b1f76bbc32743674c52a70981498748c0",
+            "bytes": 606
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": [],
+        "coverage": "Corrected plural LicenseFiles and CopyrightFile; all three originals resolved.",
+        "copyright_file": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libjpeg/COPYRIGHT.txt"
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libpng/qt_attribution.json",
+        "id": "libpng",
+        "name": "LibPNG",
+        "license_id": "Libpng AND libpng-2.0",
+        "license_expression": "libpng License and PNG Reference Library version 2",
+        "copyright": [
+          "Copyright (c) 1995-2026 The PNG Reference Library Authors",
+          "Copyright (c) 2000-2026 Cosmin Truta",
+          "Copyright (c) 1998-2018 Glenn Randers-Pehrson",
+          "Copyright (c) 1996-1997 Andreas Dilger",
+          "Copyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.",
+          "Copyright (c) 2000-2017 Simon-Pierre Cadieux",
+          "Copyright (c) 2000-2017 Eric S. Raymond",
+          "Copyright (c) 2000-2017 Mans Rullgard",
+          "Copyright (c) 2000-2017 Gilles Vollant",
+          "Copyright (c) 2000-2017 James Yu",
+          "Copyright (c) 2000-2017 Mandar Sahastrabuddhe",
+          "Copyright (c) 1998-2000 Tom Lane",
+          "Copyright (c) 1998-2000 Willem van Schaik",
+          "Copyright (c) 1996-1997 John Bowler",
+          "Copyright (c) 1996-1997 Kevin Bracey",
+          "Copyright (c) 1996-1997 Sam Bushell",
+          "Copyright (c) 1996-1997 Magnus Holmgren",
+          "Copyright (c) 1996-1997 Greg Roelofs",
+          "Copyright (c) 1996-1997 Tom Tanner",
+          "Copyright (c) 1995-1996 Dave Martindale",
+          "Copyright (c) 1995-1996 Paul Schmidt",
+          "Copyright (c) 1995-1996 Tim Wegner"
+        ],
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libpng/LICENSE"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/libpng/LICENSE",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/04590aa0c012__LICENSE",
+            "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526",
+            "bytes": 5345,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md4/qt_attribution.json",
+        "id": "md4",
+        "name": "MD4",
+        "license_id": "CC0-1.0",
+        "license_expression": "Public Domain",
+        "copyright": "Written by Alexander Peslyak - better known as Solar Designer <solar@openwall.com> - in 2001, and placed in the public domain. There's absolutely no warranty.",
+        "qt_parts": null,
+        "requested_license_files": [],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": true,
+        "standard_text_candidates": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qt3d/LICENSES/CC0-1.0.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/28085f01cb3a__CC0-1.0.txt",
+            "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+            "bytes": 7048,
+            "scope": "Original source notice/readme, mapped to submodule commit; not proof of runtime inclusion"
+          }
+        ],
+        "coverage": "LicenseFile not declared; attribution copyright/inline source header applicability still requires review even when a generic standard text is available."
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md4c/qt_attribution.json",
+        "id": "md4c",
+        "name": "MD4C",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2016-2024 Martin Mitáš",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md4c/LICENSE.md"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md4c/LICENSE.md",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/e5cbc6f3da6b__LICENSE.md",
+            "sha256": "d30937367d5413e7eaa218b1640b8946ff76fd34d97152f6979fd96169d5d0fc",
+            "bytes": 1096,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/md5/qt_attribution.json",
+        "id": "md5",
+        "name": "MD5",
+        "license_id": "CC0-1.0",
+        "license_expression": "Public Domain",
+        "copyright": "Written by Colin Plumb in 1993, no copyright is claimed. Ian Jackson <ian@chiark.greenend.org.uk>.",
+        "qt_parts": null,
+        "requested_license_files": [],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": true,
+        "standard_text_candidates": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qt3d/LICENSES/CC0-1.0.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/28085f01cb3a__CC0-1.0.txt",
+            "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+            "bytes": 7048,
+            "scope": "Original source notice/readme, mapped to submodule commit; not proof of runtime inclusion"
+          }
+        ],
+        "coverage": "LicenseFile not declared; attribution copyright/inline source header applicability still requires review even when a generic standard text is available."
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/pcre2/qt_attribution.json",
+        "id": "pcre2",
+        "name": "PCRE2",
+        "license_id": "LicenseRef-BSD-3-Clause-with-PCRE2-Binary-Like-Packages-Exception",
+        "license_expression": "BSD 3-clause \"New\" or \"Revised\" License with PCRE2 binary-like Packages Exception",
+        "copyright": [
+          "Copyright (c) 1997-2007 University of Cambridge",
+          "Copyright (c) 2007-2024 Philip Hazel",
+          "Copyright (c) 2010-2024 Zoltan Herczeg"
+        ],
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/pcre2/LICENCE.md"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/pcre2/LICENCE.md",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/597242e585f7__LICENCE.md",
+            "sha256": "197d8a73ffee0d6b09adba2f9c677b5f5aede24edf89258a68e48248d010d811",
+            "bytes": 4011,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/pcre2/qt_attribution.json",
+        "id": "pcre2-sljit",
+        "name": "PCRE2 - Stack-less Just-In-Time Compiler",
+        "license_id": "BSD-2-Clause",
+        "license_expression": "BSD 2-clause \"Simplified\" License",
+        "copyright": "Copyright Zoltan Herczeg",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/pcre2/LICENSE-SLJIT"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/pcre2/LICENSE-SLJIT",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/ca0a43684d14__LICENSE-SLJIT",
+            "sha256": "5f216505c0f6ea3273caec89e766eef93cdeb7bbb0c429f9360116d7c938feeb",
+            "bytes": 1444,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/pixman/qt_attribution.json",
+        "id": "pixman",
+        "name": "Pixman",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2009 Nokia Corporation",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/pixman/LICENSE"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/pixman/LICENSE",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/7826a3b35661__LICENSE",
+            "sha256": "942c4f2a80394d3f53599b8382e9f27349b95c45d92b69b84f26d404f4dd74a5",
+            "bytes": 1092,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/rfc6234/qt_attribution.json",
+        "id": "rfc6234",
+        "name": "Secure Hash Algorithms SHA-384 and SHA-512",
+        "license_id": "BSD-3-Clause",
+        "license_expression": "BSD 3-clause \"New\" or \"Revised\" License",
+        "copyright": "Copyright (c) 2011 IETF Trust and the persons identified as authors of the code.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/rfc6234/LICENSE"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/rfc6234/LICENSE",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/23d475cd5536__LICENSE",
+            "sha256": "7ccebd514aaabc86192f957d773cebf06577c12fe9f25ecd419c6cac5da7a14c",
+            "bytes": 1568,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sha1/qt_attribution.json",
+        "id": "sha1",
+        "name": "Secure Hash Algorithm SHA-1",
+        "license_id": "LicenseRef-SHA1-Public-Domain",
+        "license_expression": "Public Domain",
+        "copyright": [
+          "Copyright (C) Dominik Reichl <dominik.reichl@t-online.de>",
+          "Copyright (C) 2016 The Qt Company Ltd"
+        ],
+        "qt_parts": null,
+        "requested_license_files": [],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": true,
+        "standard_text_candidates": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/LICENSES/LicenseRef-SHA1-Public-Domain.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/02fbaa0f1b16__LicenseRef-SHA1-Public-Domain.txt",
+            "sha256": "65d86b8ec6b1cd8b8f6e64fd8710274ba00d6a3c520e00dfdcd1c3d2071f3305",
+            "bytes": 144,
+            "scope": "Original source notice/readme, mapped to submodule commit; not proof of runtime inclusion"
+          }
+        ],
+        "coverage": "LicenseFile not declared; attribution copyright/inline source header applicability still requires review even when a generic standard text is available."
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/siphash/qt_attribution.json",
+        "id": "siphash",
+        "name": "SipHash Algorithm",
+        "license_id": "CC0-1.0",
+        "license_expression": "Creative Commons Zero v1.0 Universal",
+        "copyright": [
+          "Copyright (C) 2012-2014 Jean-Philippe Aumasson",
+          "Copyright (C) 2012-2014 Daniel J. Bernstein <djb@cr.yp.to>",
+          "Copyright (C) 2016 Intel Corporation"
+        ],
+        "qt_parts": null,
+        "requested_license_files": [],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": true,
+        "standard_text_candidates": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qt3d/LICENSES/CC0-1.0.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/28085f01cb3a__CC0-1.0.txt",
+            "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+            "bytes": 7048,
+            "scope": "Original source notice/readme, mapped to submodule commit; not proof of runtime inclusion"
+          }
+        ],
+        "coverage": "LicenseFile not declared; attribution copyright/inline source header applicability still requires review even when a generic standard text is available."
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/sqlite/qt_attribution.json",
+        "id": "sqlite",
+        "name": "SQLite",
+        "license_id": "blessing",
+        "license_expression": "SQLite Blessing",
+        "copyright": "The authors disclaim copyright to the source code. However, a license can be obtained if needed.",
+        "qt_parts": null,
+        "requested_license_files": [],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": true,
+        "standard_text_candidates": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/LICENSES/blessing.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/981131a8311a__blessing.txt",
+            "sha256": "592db1199aab67aafe4515db9808b420db122083807c5329b2f061951e79acbe",
+            "bytes": 244,
+            "scope": "Original source notice/readme, mapped to submodule commit; not proof of runtime inclusion"
+          }
+        ],
+        "coverage": "LicenseFile not declared; attribution copyright/inline source header applicability still requires review even when a generic standard text is available."
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/tinycbor/qt_attribution.json",
+        "id": "tinycbor",
+        "name": "TinyCBOR",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright (C) 2015-2025 Intel Corporation",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/tinycbor/LICENSE"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/tinycbor/LICENSE",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/7ef362ce0879__LICENSE",
+            "sha256": "3c6ba0b5bfa7830505301ffb336a17b0748e0d61c4d34216e9dc98f10e40395e",
+            "bytes": 1074,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wasm/qt_attribution.json",
+        "id": "dejayvu",
+        "name": "DejaVu Fonts",
+        "license_id": "Bitstream-Vera",
+        "license_expression": "Bitstream Vera Font License",
+        "copyright": [
+          "Copyright (c) 2003 by Bitstream, Inc",
+          "Copyright (c) 2006 by Tavmjong Bah",
+          "(c) American Mathematical Society"
+        ],
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wasm/DEJAVU-LICENSE"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wasm/DEJAVU-LICENSE",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/2073997b1295__DEJAVU-LICENSE",
+            "sha256": "7a083b136e64d064794c3419751e5c7dd10d2f64c108fe5ba161eae5e5958a93",
+            "bytes": 8816,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/appmenu/qt_attribution.json",
+        "id": "appmenu",
+        "name": "Wayland KDE DBus Menu Protocol",
+        "license_id": "LGPL-2.1-or-later",
+        "license_expression": "GNU Lesser General Public License 2.1 or later",
+        "copyright": "Copyright 2017 David Edmundson",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/appmenu/LGPL-2.1-or-later.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/appmenu/LGPL-2.1-or-later.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/117cd9146ed6__LGPL-2.1-or-later.txt",
+            "sha256": "1ccf09bf2f598308df4bed9cd8e9657dc5cd0973d2800318f2e241486e2edf3f",
+            "bytes": 25906,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/color-management/qt_attribution.json",
+        "id": "wayland-color-management-protocol",
+        "name": "Wayland Color Management Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright 2019 Sebastian Wick\nCopyright 2019 Erwin Burema\nCopyright 2020 AMD\nCopyright 2020-2024 Collabora, Ltd.\nCopyright 2024 Xaver Hugl\nCopyright 2022-2025 Red Hat, Inc.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/fractional-scale/qt_attribution.json",
+        "id": "fractional-scale-v1",
+        "name": "Wayland Fractional Scale Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2022 Kenny Levinsen",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/fullscreen-shell/qt_attribution.json",
+        "id": "wayland-fullscreen-protocol",
+        "name": "Wayland Fullscreen Shell Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2016 Yong Bakos\nCopyright © 2015 Jason Ekstrand\nCopyright © 2015 Jonas Ådahl",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/linux-dmabuf/qt_attribution.json",
+        "id": "wayland-linux-dmabuf-unstable-v1",
+        "name": "Wayland Linux Dmabuf Unstable V1 Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2014, 2015 Collabora, Ltd.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/pointer-gestures/qt_attribution.json",
+        "id": "wayland-pointer-gestures-protocol",
+        "name": "Wayland Pointer Gestures Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2015, 2016 Red Hat",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/pointer-warp/qt_attribution.json",
+        "id": "wayland-pointer-warp-protocol",
+        "name": "Wayland Pointer Warp Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2024 Neal Gompa\nCopyright © 2024 Xaver Hugl\nCopyright © 2024 Matthias Klumpp\nCopyright © 2024 Vlad Zahorodnii",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/presentation-time/qt_attribution.json",
+        "id": "presentation-time.xml",
+        "name": "Presentation Time Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2013, 2014 Collabora, Ltd.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/scaler/qt_attribution.json",
+        "id": "wayland-scaler-protocol",
+        "name": "Wayland Scaler Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2013-2014 Collabora, Ltd.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/session-management/qt_attribution.json",
+        "id": "wayland-session-management-protocol",
+        "name": "Wayland Session Management Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright 2018 Mike Blumenkrantz\nCopyright 2018 Samsung Electronics Co., Ltd\nCopyright 2018 Red Hat Inc.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/tablet/qt_attribution.json",
+        "id": "wayland-tablet-protocol",
+        "name": "Wayland Tablet Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright 2014 © Stephen \"Lyude\" Chandler Paul\nCopyright 2015-2016 © Red Hat, Inc.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/text-input/v1/qt_attribution.json",
+        "id": "wayland-text-input-unstable-v1",
+        "name": "Wayland Text Input Protocol v1",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2012, 2013 Intel Corporation",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/text-input/v2/qt_attribution.json",
+        "id": "wayland-text-input-unstable-v2",
+        "name": "Wayland Text Input Protocol v2",
+        "license_id": "HPND",
+        "license_expression": "HPND License",
+        "copyright": "Copyright © 2012, 2013 Intel Corporation\nCopyright © 2015, 2016 Jan Arne Petersen",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/text-input/v2/HPND_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/text-input/v2/HPND_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/cea2c1f19aaf__HPND_LICENSE.txt",
+            "sha256": "8172d52f3b7bba7d10af2f9134c63d0f699ba6b20a47e35f5ac45654c500bfd7",
+            "bytes": 1095,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/text-input/v3/qt_attribution.json",
+        "id": "wayland-text-input-unstable-v3",
+        "name": "Wayland Text Input Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2012, 2013 Intel Corporation\nCopyright © 2015, 2016 Jan Arne Petersen\nCopyright © 2017, 2018 Red Hat, Inc.\nCopyright © 2018       Purism SPC",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/viewporter/qt_attribution.json",
+        "id": "wayland-viewporter-protocol",
+        "name": "Wayland Viewporter Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2013-2016 Collabora, Ltd.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/wayland/qt_attribution.json",
+        "id": "wayland-protocol",
+        "name": "Wayland Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2008-2011 Kristian Høgsberg\nCopyright © 2010-2011 Intel Corporation\nCopyright © 2012-2013 Collabora, Ltd.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/wl-eglstream/qt_attribution.json",
+        "id": "wayland-eglstream-controller",
+        "name": "Wayland EGLStream Controller Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright (c) 2017, NVIDIA CORPORATION. All rights reserved.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/wlr-data-control/qt_attribution.json",
+        "id": "wlr-data-control-unstable-v1-protocol",
+        "name": "Wlr Data Control Unstable V1 Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2018 Simon Ser\nCopyright © 2019 Ivan Molodetskikht",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/wp-primary-selection/qt_attribution.json",
+        "id": "wayland-primary-selection-protocol",
+        "name": "Wayland Primary Selection Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2015, 2016 Red Hat",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/xdg-activation/qt_attribution.json",
+        "id": "wayland-xdg-activation",
+        "name": "Wayland xdg-activation Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2020 Aleix Pol Gonzalez &lt;aleixpol@kde.org&gt;\nCopyright © 2020 Carlos Garnacho &lt;carlosg@gnome.org&gt;",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/xdg-decoration/qt_attribution.json",
+        "id": "wayland-xdg-decoration-protocol",
+        "name": "Wayland xdg-decoration Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2018 Simon Ser",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/xdg-dialog/qt_attribution.json",
+        "id": "xdg-dialog-v1",
+        "name": "Wayland Dialog Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2023 Carlos Garnacho",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/xdg-foreign/qt_attribution.json",
+        "id": "xdg-foreign-unstable-v2",
+        "name": "Wayland XDG Foreign Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2015-2016 Red Hat Inc.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/xdg-output/qt_attribution.json",
+        "id": "wayland-xdg-output-protocol",
+        "name": "Wayland XDG Output Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2017 Red Hat Inc.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/xdg-shell/qt_attribution.json",
+        "id": "wayland-xdg-shell-protocol",
+        "name": "Wayland XDG Shell Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2008-2013 Kristian Høgsberg\nCopyright © 2013      Rafael Antognolli\nCopyright © 2013      Jasper St. Pierre\nCopyright © 2010-2013 Intel Corporation\nCopyright © 2015-2017 Samsung Electronics Co., Ltd\nCopyright © 2015-2017 Red Hat Inc.\n",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/xdg-system-bell/qt_attribution.json",
+        "id": "wayland-xdg-system-bell-protocol",
+        "name": "Wayland XDG System Bell Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2016, 2023 Red Hat\n",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/xdg-toplevel-icon/qt_attribution.json",
+        "id": "wayland-xdg-toplevel-icon-protocol",
+        "name": "Wayland xdg-toplevel-icon Protocol",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright © 2024 Matthias Klumpp 2024 David Edmundson",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wayland/protocols/MIT_LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/1235a2152c66__MIT_LICENSE.txt",
+            "sha256": "a8341b9c90ef447a77f55d550e6691e370d3ac15d60edb584def356e348ab828",
+            "bytes": 1055,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/wintab/qt_attribution.json",
+        "id": "wintab",
+        "name": "Wintab API",
+        "license_id": "LicenseRef-Lcs-Telegraphics",
+        "license_expression": "LCS-Telegraphics License",
+        "copyright": "Copyright 1991-1998 by LCS/Telegraphics.",
+        "qt_parts": null,
+        "requested_license_files": [],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": true,
+        "standard_text_candidates": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/LICENSES/LicenseRef-Lcs-Telegraphics.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/a69a264bc6af__LicenseRef-Lcs-Telegraphics.txt",
+            "sha256": "c10225ebbd5191bfdd761b0d7752c785f2453ab665d6c454473fb12d254668aa",
+            "bytes": 139,
+            "scope": "Original source notice/readme, mapped to submodule commit; not proof of runtime inclusion"
+          }
+        ],
+        "coverage": "LicenseFile not declared; attribution copyright/inline source header applicability still requires review even when a generic standard text is available."
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/zlib/qt_attribution.json",
+        "id": "zlib",
+        "name": "Data Compression Library (zlib)",
+        "license_id": "Zlib",
+        "license_expression": "zlib License",
+        "copyright": "(C) 1995-2026 Jean-loup Gailly and Mark Adler",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/zlib/LICENSE"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/zlib/LICENSE",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/aaefda7eb4c1__LICENSE",
+            "sha256": "d7e3139972874dc8abdbbfce27ec1e6f942b28279dd7d27453630a8b4610e080",
+            "bytes": 1465,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/corelib/global/qt_attribution.json",
+        "id": "tlexpected",
+        "name": "tl::expected",
+        "license_id": "CC0-1.0",
+        "license_expression": "Creative Commons Zero v1.0 Universal",
+        "copyright": "To the extent possible under law, Sy Brand has waived all copyright and related or neighboring rights to the expected library. This work is published from: United Kingdom.",
+        "qt_parts": null,
+        "requested_license_files": [],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": true,
+        "standard_text_candidates": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qt3d/LICENSES/CC0-1.0.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/28085f01cb3a__CC0-1.0.txt",
+            "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+            "bytes": 7048,
+            "scope": "Original source notice/readme, mapped to submodule commit; not proof of runtime inclusion"
+          }
+        ],
+        "coverage": "LicenseFile not declared; attribution copyright/inline source header applicability still requires review even when a generic standard text is available."
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/corelib/kernel/qt_attribution.json",
+        "id": "qeventdispatcher_cf",
+        "name": "QEventDispatcher on macOS",
+        "license_id": "BSD-3-Clause",
+        "license_expression": "BSD 3-clause \"New\" or \"Revised\" License",
+        "copyright": "Copyright (c) 2007-2008, Apple, Inc.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/corelib/kernel/LICENSE.QEVENTDISPATCHER_CF.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/corelib/kernel/LICENSE.QEVENTDISPATCHER_CF.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/c45a95b2e957__LICENSE.QEVENTDISPATCHER_CF.txt",
+            "sha256": "e9e5b9f66d21c0e88a4179525ab39cd8d7eac9af78a8404f322c32b0874783d5",
+            "bytes": 1501,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/corelib/mimetypes/3rdparty/qt_attribution.json",
+        "id": "tika-mimetypes",
+        "name": "Apache Tika MimeType Definitions",
+        "license_id": "Apache-2.0",
+        "license_expression": "Apache License 2.0",
+        "copyright": "Copyright 2026 The Apache Software Foundation",
+        "qt_parts": null,
+        "requested_license_files": [],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": true,
+        "standard_text_candidates": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/LICENSES/Apache-2.0.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/683ac2fa2e80__Apache-2.0.txt",
+            "sha256": "e3ba223bb1423f0aad8c3dfce0fe3148db48926d41e6fbc3afbbf5ff9e1c89cb",
+            "bytes": 10398,
+            "scope": "Original source notice/readme, mapped to submodule commit; not proof of runtime inclusion"
+          }
+        ],
+        "coverage": "LicenseFile not declared; attribution copyright/inline source header applicability still requires review even when a generic standard text is available."
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/dbus/qt_attribution.json",
+        "id": "libdbus-1-headers",
+        "name": "libdbus-1 headers",
+        "license_id": "AFL-2.1 OR GPL-2.0-or-later",
+        "license_expression": "Academic Free License v2.1, or GNU General Public License v2.0 or later",
+        "copyright": [
+          "Copyright (C) 2002, 2003 CodeFactory AB",
+          "Copyright (C) 2004, 2005 Red Hat, Inc."
+        ],
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/dbus/LICENSE.LIBDBUS-1.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/dbus/LICENSE.LIBDBUS-1.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/9614bfbbfd91__LICENSE.LIBDBUS-1.txt",
+            "sha256": "ad90aa08bb1a9b7056aa51e2e215b36630855457cde5dffd36aa0faa7b169f24",
+            "bytes": 27248,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/gui/opengl/qt_attribution.json",
+        "id": "opengl-headers",
+        "name": "OpenGL Headers",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright (c) 2013-2014 The Khronos Group Inc.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/gui/opengl/LICENSE.KHRONOS.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/gui/opengl/LICENSE.KHRONOS.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/f368384066cf__LICENSE.KHRONOS.txt",
+            "sha256": "2e484f3c26ff5008c704a3ca9dd809d43f24a004a1abb6c202660fbff0d19715",
+            "bytes": 1084,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/gui/opengl/qt_attribution.json",
+        "id": "opengl-es2-headers",
+        "name": "OpenGL ES 2 Headers",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright (c) 2013-2014 The Khronos Group Inc.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/gui/opengl/LICENSE.KHRONOS.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/gui/opengl/LICENSE.KHRONOS.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/f368384066cf__LICENSE.KHRONOS.txt",
+            "sha256": "2e484f3c26ff5008c704a3ca9dd809d43f24a004a1abb6c202660fbff0d19715",
+            "bytes": 1084,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/gui/painting/qt_attribution.json",
+        "id": "grayraster",
+        "name": "Anti-aliasing rasterizer from FreeType 2",
+        "license_id": "FTL OR GPL-2.0-only",
+        "license_expression": "Freetype Project License or GNU General Public License v2.0 only",
+        "copyright": "Copyright 2000-2016 by David Turner, Robert Wilhelm, and Werner Lemberg.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/freetype/LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/3rdparty/freetype/LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/16d2de90f21d__LICENSE.txt",
+            "sha256": "bf543cdda11864477b8d2ca2aa9afc2aaa8f9133461b4d962ed6ec73646256a1",
+            "bytes": 26234,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/gui/painting/qt_attribution.json",
+        "id": "smooth-scaling-algorithm",
+        "name": "Smooth Scaling Algorithm",
+        "license_id": "BSD-2-Clause AND Imlib2",
+        "license_expression": "BSD 2-clause \"Simplified\" License and Imlib2 License",
+        "copyright": [
+          "Copyright (C) 2004, 2005 Daniel M. Duley.",
+          "(C) Carsten Haitzler and various contributors.",
+          "(C) Willem Monsuwe <willem@stack.nl>"
+        ],
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/gui/painting/LICENSE.QIMAGETRANSFORM.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/gui/painting/LICENSE.QIMAGETRANSFORM.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/8210966ba408__LICENSE.QIMAGETRANSFORM.txt",
+            "sha256": "46b3cbfa2f2946b93291506351e9be1dd0a28d2a53260f5aa488abd36fbeca9d",
+            "bytes": 3004,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/gui/painting/qt_attribution.json",
+        "id": "xserverhelper",
+        "name": "X Server helper",
+        "license_id": "X11 AND HPND",
+        "license_expression": "X11 License and Historical Permission Notice and Disclaimer",
+        "copyright": [
+          "Copyright (c) 1987, 1988 X Consortium",
+          "Copyright 1987, 1988 by Digital Equipment Corporation, Maynard, Massachusetts."
+        ],
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/gui/painting/LICENSE.XCONSORTIUM.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/gui/painting/LICENSE.XCONSORTIUM.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/d766dcbf39d5__LICENSE.XCONSORTIUM.txt",
+            "sha256": "a216b01291eb38fc1af93cfccf1fc67b48d9923612e517c2a695e95b3f03c22c",
+            "bytes": 2294,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/gui/rhi/qt_attribution.json",
+        "id": "rhi-miniengine-d3d12-mipmap",
+        "name": "Mipmap generator for D3D12",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright (c) 2015 Microsoft",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/gui/rhi/LICENSE.MiniEngine.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/gui/rhi/LICENSE.MiniEngine.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/a4a7104e928b__LICENSE.MiniEngine.txt",
+            "sha256": "cf248820bf1178370bb4f1670a59f8748d46bc96d0f64080cd631511c6046409",
+            "bytes": 1077,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/gui/text/qt_attribution.json",
+        "id": "aglfn",
+        "name": "Adobe Glyph List For New Fonts",
+        "license_id": "BSD-3-Clause",
+        "license_expression": "BSD 3-Clause \"New\" or \"Revised\" License",
+        "copyright": "Copyright 2002, 2003, 2005, 2006, 2008, 2010, 2015 Adobe Systems",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/gui/text/LICENSE.AGLFN.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/gui/text/LICENSE.AGLFN.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/e3f0b776d16b__LICENSE.AGLFN.txt",
+            "sha256": "40818155548ff41c67d3a40edf355e9658992b292c227f4c1147425cedc746c6",
+            "bytes": 1425,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/gui/vulkan/qt_attribution.json",
+        "id": "vulkan-xml-spec",
+        "name": "Vulkan API Registry",
+        "license_id": "Apache-2.0 OR MIT",
+        "license_expression": "Apache License 2.0 or MIT License",
+        "copyright": "Copyright (c) 2015-2025 The Khronos Group Inc.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/gui/vulkan/LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/gui/vulkan/LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/6d95cca0891d__LICENSE.txt",
+            "sha256": "5f618873b0cdd1e84c611c5529212c2524bfc887bdfd7d1f3b568bad3c649612",
+            "bytes": 11473,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/plugins/platforms/cocoa/qt_attribution.json",
+        "id": "cocoa-platform-plugin",
+        "name": "Cocoa Platform Plugin",
+        "license_id": "BSD-3-Clause",
+        "license_expression": "BSD 3-clause \"New\" or \"Revised\" License",
+        "copyright": "Copyright (c) 2007-2008, Apple, Inc.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/plugins/platforms/cocoa/LICENSE.COCOA.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/plugins/platforms/cocoa/LICENSE.COCOA.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/97cbbe5e3d1c__LICENSE.COCOA.txt",
+            "sha256": "e9e5b9f66d21c0e88a4179525ab39cd8d7eac9af78a8404f322c32b0874783d5",
+            "bytes": 1501,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/testinternal/3rdparty/cmake/qt_attribution.json",
+        "id": "cmake-runcmake-test-modules",
+        "name": "cmake-runcmake-test-modules",
+        "license_id": "BSD-3-Clause",
+        "license_expression": "BSD 3-Clause \"New\" or \"Revised\" License",
+        "copyright": "Copyright © 2000-2024 Kitware, Inc. and Contributors",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/testinternal/3rdparty/cmake/Copyright.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/testinternal/3rdparty/cmake/Copyright.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/63bf207c7273__Copyright.txt",
+            "sha256": "0676e30827684487aa0ea8f72f01e9460a6320fa34a2888df0ad1dd3e8a06eb8",
+            "bytes": 5477,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/testlib/3rdparty/catch2/qt_attribution.json",
+        "id": "catch2",
+        "name": "Catch2",
+        "license_id": "BSL-1.0",
+        "license_expression": "Boost Software License 1.0",
+        "copyright": "Copyright (c) 2022 Two Blue Cubes Ltd. All rights reserved.",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/testlib/3rdparty/catch2/LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/testlib/3rdparty/catch2/LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/b5ca0dba3b78__LICENSE.txt",
+            "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+            "bytes": 1338,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/testlib/3rdparty/cycle/qt_attribution.json",
+        "id": "cycle",
+        "name": "Cycle",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": [
+          "Copyright (c) 2003, 2007-14 Matteo Frigo",
+          "Copyright (c) 2003, 2007-14 Massachusetts Institute of Technology"
+        ],
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/testlib/3rdparty/cycle/LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/testlib/3rdparty/cycle/LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/328df48276dd__LICENSE.txt",
+            "sha256": "cb5aedb296c5246d1f22e9099f925a65146f9f0d6b4eebba97fd27a6cdbbab2d",
+            "bytes": 1023,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/testlib/3rdparty/linux/qt_attribution.json",
+        "id": "linuxperf",
+        "name": "Linux Performance Events",
+        "license_id": "GPL-2.0-only WITH Linux-syscall-note",
+        "license_expression": "GNU General Public License v2.0 only with Linux Syscall Note",
+        "copyright": [
+          "Copyright (C) 2008-2009, Thomas Gleixner <tglx@linutronix.de>",
+          "Copyright (C) 2008-2011, Red Hat, Inc., Ingo Molnar",
+          "Copyright (C) 2008-2011, Red Hat, Inc., Peter Zijlstra"
+        ],
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/testlib/3rdparty/linux/LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/testlib/3rdparty/linux/LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/55606d5cf966__LICENSE.txt",
+            "sha256": "ed71cfca021790f74094e9810f42e31288e7f43cf00c8d9ac8d6f904124bd815",
+            "bytes": 18458,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/src/testlib/3rdparty/valgrind/qt_attribution.json",
+        "id": "valgrind",
+        "name": "Valgrind",
+        "license_id": "BSD-4-Clause",
+        "license_expression": "BSD 4-clause \"Original\" or \"Old\" License",
+        "copyright": [
+          "Copyright (C) 2000-2017 Julian Seward",
+          "Copyright (C) 2003-2017 Josef Weidendorfer."
+        ],
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/src/testlib/3rdparty/valgrind/LICENSE.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/src/testlib/3rdparty/valgrind/LICENSE.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/129082c00420__LICENSE.txt",
+            "sha256": "ec72eebd6326165156787da828caaa18386489387aefaa073c9bd40b8b2a400e",
+            "bytes": 1667,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtbase/util/gradientgen/qt_attribution.json",
+        "id": "webgradients",
+        "name": "WebGradients",
+        "license_id": "MIT",
+        "license_expression": "MIT License",
+        "copyright": "Copyright (c) 2017 itmeo",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtbase/util/gradientgen/LICENSE.WEBGRADIENTS.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtbase/util/gradientgen/LICENSE.WEBGRADIENTS.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/c462d832fe7d__LICENSE.WEBGRADIENTS.txt",
+            "sha256": "9be732e45b638c74f9c0e5248541dd54dc7e8e9a5545df96b5c4b7c9ac0c68ba",
+            "bytes": 1062,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      },
+      {
+        "attribution": "qt-everywhere-src-6.11.2/qtsvg/src/svg/qt_attribution.json",
+        "id": "xsvg",
+        "name": "XSVG",
+        "license_id": "HPND-sell-variant",
+        "license_expression": "Historical Permission Notice and Disclaimer - sell variant",
+        "copyright": "Copyright 2002 USC/Information Sciences Institute",
+        "qt_parts": null,
+        "requested_license_files": [
+          "qt-everywhere-src-6.11.2/qtsvg/src/svg/LICENSE.XSVG.txt"
+        ],
+        "inline_license_text": null,
+        "scope": "qtbase/qtsvg source candidate only; may be tools/tests/non-Windows; no final payload inclusion inferred",
+        "notices": [
+          {
+            "member": "qt-everywhere-src-6.11.2/qtsvg/src/svg/LICENSE.XSVG.txt",
+            "path": "documentation/windows-desktop-licenses/qt-pillow-mupdf-notices/5bbe263e2c7d__LICENSE.XSVG.txt",
+            "sha256": "3a946598a9f674d44df764279ca0b85b5d6faba08f3bc75d8e0fcf6cd729a9bd",
+            "bytes": 1185,
+            "scope": "Qt attribution LicenseFile original; not automatic runtime inclusion"
+          }
+        ],
+        "missing_referenced_files": [],
+        "needs_inline_or_source_header_review": false,
+        "standard_text_candidates": []
+      }
+    ],
+    "resolved_unique_files": 43,
+    "missing_referenced_files": [],
+    "entries_without_license_file": [
+      "emoji-segmenter",
+      "md4",
+      "md5",
+      "sha1",
+      "siphash",
+      "sqlite",
+      "wintab",
+      "tlexpected",
+      "tika-mimetypes"
+    ],
+    "module_selection": "Desktop static allowance maps Core/Gui/Widgets/OpenGL to qtbase, SVG to qtsvg; final plugin/third-party selection requires actual payload",
+    "resolved_unique_files_including_copyright_correction": 46,
+    "singular_parser_correction": "Original count43 only covered singular LicenseFile. Added libjpeg LicenseFiles2 + CopyrightFile1. Nine remaining inline notices inspected in QT-INLINE-WHEEL-REVIEW.draft.json; final approval remains pending."
+  },
+  "build": false,
+  "reviewed_files_created": false,
+  "uv_development": "discontinued",
+  "pillow_windows_patch_baselines": [
+    {
+      "component": "libjpeg",
+      "archive": "libjpeg-turbo-3.1.4.1.tar.gz",
+      "target": "libjpeg-turbo-3.1.4.1/CMakeLists.txt",
+      "target_sha256": "4ac805c5bbeb3a221d1d34b0bd908933d444bbaf60130d2829d1103393fef835",
+      "old_text": "if(MSVC_IDE AND CMAKE_GENERATOR_PLATFORM MATCHES \"arm64\")",
+      "replacement": "if({architecture} STREQUAL ARM64)",
+      "source_occurrences": 1,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    },
+    {
+      "component": "zlib",
+      "archive": "zlib-ng-2.3.3.tar.gz",
+      "target": "zlib-ng-2.3.3/CMakeLists.txt",
+      "target_sha256": "095dfb3b21c4402d39cfc1e928893d2ffc53713ea897048617818a7a8b6eaec9",
+      "old_text": "set_target_properties(zlib-ng PROPERTIES OUTPUT_NAME zlibstatic${SUFFIX})",
+      "replacement": "set_target_properties(zlib-ng PROPERTIES OUTPUT_NAME zlib)",
+      "source_occurrences": 1,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    },
+    {
+      "component": "libwebp",
+      "archive": "libwebp-1.6.0.tar.gz",
+      "target": "libwebp-1.6.0/src/enc/picture_csp_enc.c",
+      "target_sha256": "029955602b9752ce92ccb61550d09121da0b4a040e1aaebad4da8bb0f8ed4585",
+      "old_text": "#include \"sharpyuv/sharpyuv.h\"",
+      "replacement": "#include \"sharpyuv/sharpyuv.h\"\n#pragma comment(lib, \"libsharpyuv.lib\")",
+      "source_occurrences": 1,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    },
+    {
+      "component": "libtiff",
+      "archive": "tiff-4.7.1.tar.gz",
+      "target": "tiff-4.7.1/libtiff/tif_lzma.c",
+      "target_sha256": "25f9c68b194513bf2dcbf3fa6ab9a1fe174dd28043fb287e7723be1e483312bd",
+      "old_text": "#ifdef LZMA_SUPPORT",
+      "replacement": "#ifdef LZMA_SUPPORT\n#pragma comment(lib, \"lzma.lib\")",
+      "source_occurrences": 1,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    },
+    {
+      "component": "libtiff",
+      "archive": "tiff-4.7.1.tar.gz",
+      "target": "tiff-4.7.1/libtiff/tif_webp.c",
+      "target_sha256": "cb32140a56067622e39a81e299da85d80ee722dc176c1f3cc250d3cd502d7119",
+      "old_text": "#ifdef WEBP_SUPPORT",
+      "replacement": "#ifdef WEBP_SUPPORT\n#pragma comment(lib, \"libwebp.lib\")",
+      "source_occurrences": 1,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    },
+    {
+      "component": "libtiff",
+      "archive": "tiff-4.7.1.tar.gz",
+      "target": "tiff-4.7.1/libtiff/tif_getimage.c",
+      "target_sha256": "067e430d7144a7c8e01a2f2ebc0bea41d5b9662069c428f0ade948dfa412f066",
+      "old_text": "int32_t incr = 3 * w + 4 * toskew;",
+      "replacement": "const tmsize_t incr = 3 * (tmsize_t)w + 4 * (tmsize_t)toskew;",
+      "source_occurrences": 1,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    },
+    {
+      "component": "libtiff",
+      "archive": "tiff-4.7.1.tar.gz",
+      "target": "tiff-4.7.1/libtiff/tif_getimage.c",
+      "target_sha256": "067e430d7144a7c8e01a2f2ebc0bea41d5b9662069c428f0ade948dfa412f066",
+      "old_text": "int32_t incr = 2 * toskew + w;",
+      "replacement": "const tmsize_t incr = 2 * (tmsize_t)toskew + w;",
+      "source_occurrences": 3,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    },
+    {
+      "component": "freetype",
+      "archive": "freetype-2.14.3.tar.gz",
+      "target": "freetype-2.14.3/builds/windows/vc2010/freetype.vcxproj",
+      "target_sha256": "d90652345a96e81b0a6b17f9ae84282ed180dc273b60b7e80002c8f0c3001971",
+      "old_text": "<RuntimeLibrary>MultiThreaded</RuntimeLibrary>",
+      "replacement": "<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>",
+      "source_occurrences": 3,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    },
+    {
+      "component": "freetype",
+      "archive": "freetype-2.14.3.tar.gz",
+      "target": "freetype-2.14.3/builds/windows/vc2010/freetype.vcxproj",
+      "target_sha256": "d90652345a96e81b0a6b17f9ae84282ed180dc273b60b7e80002c8f0c3001971",
+      "old_text": "<PropertyGroup Label=\"Globals\">",
+      "replacement": "<PropertyGroup Label=\"Globals\">\n    <WindowsTargetPlatformVersion>$(WindowsSDKVersion)</WindowsTargetPlatformVersion>",
+      "source_occurrences": 1,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    },
+    {
+      "component": "freetype",
+      "archive": "freetype-2.14.3.tar.gz",
+      "target": "freetype-2.14.3/builds/windows/vc2010/freetype.user.props",
+      "target_sha256": "2685e4c08175ca075c298d0a44800ed33e6797edf9df1e1cbe876d0668172ff2",
+      "old_text": "<UserDefines></UserDefines>",
+      "replacement": "<UserDefines>FT_CONFIG_OPTION_SYSTEM_ZLIB;FT_CONFIG_OPTION_USE_PNG;FT_CONFIG_OPTION_USE_HARFBUZZ;FT_CONFIG_OPTION_USE_BROTLI</UserDefines>",
+      "source_occurrences": 1,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    },
+    {
+      "component": "freetype",
+      "archive": "freetype-2.14.3.tar.gz",
+      "target": "freetype-2.14.3/builds/windows/vc2010/freetype.user.props",
+      "target_sha256": "2685e4c08175ca075c298d0a44800ed33e6797edf9df1e1cbe876d0668172ff2",
+      "old_text": "<UserIncludeDirectories></UserIncludeDirectories>",
+      "replacement": "<UserIncludeDirectories>{dir_harfbuzz}\\src;{inc_dir}</UserIncludeDirectories>",
+      "source_occurrences": 1,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    },
+    {
+      "component": "freetype",
+      "archive": "freetype-2.14.3.tar.gz",
+      "target": "freetype-2.14.3/builds/windows/vc2010/freetype.user.props",
+      "target_sha256": "2685e4c08175ca075c298d0a44800ed33e6797edf9df1e1cbe876d0668172ff2",
+      "old_text": "<UserLibraryDirectories></UserLibraryDirectories>",
+      "replacement": "<UserLibraryDirectories>{lib_dir}</UserLibraryDirectories>",
+      "source_occurrences": 1,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    },
+    {
+      "component": "freetype",
+      "archive": "freetype-2.14.3.tar.gz",
+      "target": "freetype-2.14.3/builds/windows/vc2010/freetype.user.props",
+      "target_sha256": "2685e4c08175ca075c298d0a44800ed33e6797edf9df1e1cbe876d0668172ff2",
+      "old_text": "<UserDependencies></UserDependencies>",
+      "replacement": "<UserDependencies>zlib.lib;libpng16.lib;brotlicommon.lib;brotlidec.lib</UserDependencies>",
+      "source_occurrences": 1,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    },
+    {
+      "component": "freetype",
+      "archive": "freetype-2.14.3.tar.gz",
+      "target": "freetype-2.14.3/src/autofit/afshaper.c",
+      "target_sha256": "8736862aa348a2c71f53e4f72d623fe48e7ff0d2ce930a7fa928d37dffe3e86a",
+      "old_text": "#ifdef FT_CONFIG_OPTION_USE_HARFBUZZ",
+      "replacement": "#ifdef FT_CONFIG_OPTION_USE_HARFBUZZ\n#pragma comment(lib, \"harfbuzz.lib\")",
+      "source_occurrences": 6,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    },
+    {
+      "component": "lcms2",
+      "archive": "lcms2-2.19.1.tar.gz",
+      "target": "lcms2-2.19.1/Projects/VC2022/lcms2_static/lcms2_static.vcxproj",
+      "target_sha256": "8aa4c975ca13db49f703eb7588b88453bb6b8381dad66abc443424edc31b971f",
+      "old_text": "<RuntimeLibrary>MultiThreaded</RuntimeLibrary>",
+      "replacement": "<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>",
+      "source_occurrences": 3,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    },
+    {
+      "component": "lcms2",
+      "archive": "lcms2-2.19.1.tar.gz",
+      "target": "lcms2-2.19.1/Projects/VC2022/lcms2_static/lcms2_static.vcxproj",
+      "target_sha256": "8aa4c975ca13db49f703eb7588b88453bb6b8381dad66abc443424edc31b971f",
+      "old_text": "<PlatformToolset>v143</PlatformToolset>",
+      "replacement": "<PlatformToolset>$(DefaultPlatformToolset)</PlatformToolset>",
+      "source_occurrences": 6,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    },
+    {
+      "component": "lcms2",
+      "archive": "lcms2-2.19.1.tar.gz",
+      "target": "lcms2-2.19.1/Projects/VC2022/lcms2_static/lcms2_static.vcxproj",
+      "target_sha256": "8aa4c975ca13db49f703eb7588b88453bb6b8381dad66abc443424edc31b971f",
+      "old_text": "<WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>",
+      "replacement": "<WindowsTargetPlatformVersion>$(WindowsSDKVersion)</WindowsTargetPlatformVersion>",
+      "source_occurrences": 1,
+      "matches_prior_count": true,
+      "patch_applied": false,
+      "wheel_application_verified": false
+    }
+  ],
+  "fresh_official_source_digests": [
+    {
+      "component": "libjpeg",
+      "api_url": "https://api.github.com/repos/libjpeg-turbo/libjpeg-turbo/releases/tags/3.1.4.1",
+      "local_sha256": "ecae8008e2cc9ade2f2c1bb9d5e6d4fb73e7c433866a056bd82980741571a022",
+      "matching_asset_count": 1,
+      "asset_url": "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.4.1/libjpeg-turbo-3.1.4.1.tar.gz",
+      "asset_digest": "sha256:ecae8008e2cc9ade2f2c1bb9d5e6d4fb73e7c433866a056bd82980741571a022",
+      "independent_digest_match": true
+    },
+    {
+      "component": "xz",
+      "api_url": "https://api.github.com/repos/tukaani-project/xz/releases/tags/v5.8.3",
+      "local_sha256": "3d3a1b973af218114f4f889bbaa2f4c037deaae0c8e815eec381c3d546b974a0",
+      "matching_asset_count": 1,
+      "asset_url": "https://github.com/tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.gz",
+      "asset_digest": "sha256:3d3a1b973af218114f4f889bbaa2f4c037deaae0c8e815eec381c3d546b974a0",
+      "independent_digest_match": true
+    },
+    {
+      "component": "harfbuzz",
+      "api_url": "https://api.github.com/repos/harfbuzz/harfbuzz/releases/tags/14.2.1",
+      "local_sha256": "a54a5d8e9380a41fbb762ce367bcbf7704792dfca0d93f1bbca86c5a57902e0e",
+      "matching_asset_count": 1,
+      "asset_url": "https://github.com/harfbuzz/harfbuzz/releases/download/14.2.1/harfbuzz-14.2.1.tar.xz",
+      "asset_digest": "sha256:a54a5d8e9380a41fbb762ce367bcbf7704792dfca0d93f1bbca86c5a57902e0e",
+      "independent_digest_match": true
+    }
+  ],
+  "qt_inline_followup": "QT-INLINE-WHEEL-REVIEW.draft.json"
+}

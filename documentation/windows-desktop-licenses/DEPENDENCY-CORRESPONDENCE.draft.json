@@ -1,0 +1,421 @@
+{
+  "schema_version": 1,
+  "status": "PREBUILD-DRAFT-NOT-APPROVED",
+  "distribution": "windows-desktop-x64",
+  "date": "2026-11-16",
+  "basis_commit": "584484a0f435d26528874bf1951ad432e89d30bb",
+  "scope": "Existing evidence reconciliation; no new archive verification, legal approval, build or tool execution.",
+  "dependencies": [
+    {
+      "name": "cffi",
+      "version": "2.1.1",
+      "input": {
+        "version": "2.1.1",
+        "filename": "cffi-2.1.1-cp312-cp312-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/d9/79/615cc094e2fb508cade7de88d3b4f6c4ec2bab695c97bce9153dc65aadf5/cffi-2.1.1-cp312-cp312-win_amd64.whl",
+        "sha256": "f53e442b08449d42821fa4a4fba000095af9f62742a500f978a9f557ec44339a"
+      },
+      "declared_license": "MIT-0",
+      "notice_files": [
+        {
+          "path": "cffi-2.1.1.dist-info/licenses/LICENSE",
+          "sha256": "5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63",
+          "bytes": 1123
+        }
+      ],
+      "source_references": [
+        "https://files.pythonhosted.org/packages/9e/ef/008a1939e372c06329a3fce4279c02f328488f3526744906eeec3da7ad5f/cffi-2.1.1.tar.gz"
+      ],
+      "source_alternative": null,
+      "source_patch_evidence": "公式sdistを再ハッシュ照合。Windows x64のlibffi_x86_x64全10ファイル・ソースヘッダー告知を記録。setup.pyのwin64.objリンクと同梱win64.asmを確認。",
+      "before_first_onedir": "x64同梱スナップショットの告知適用範囲（asm/object含む）と実wheelとの由来説明を確定。ARM64のlibffi版を転用しない。",
+      "reproducibility_research": "上流wheelの全コンパイラ/パッチ入力は未確定。",
+      "after_onedir": "実payloadへの収録有無・版・SHA-256・告知/対応ソースの対応を確認。入力にあることを収録済みとは扱わない。",
+      "followup_notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/eb997455c716__LICENSE"
+      ],
+      "followup_evidence": "SOURCE-NOTICE-FOLLOWUP.draft.json"
+    },
+    {
+      "name": "cryptography",
+      "version": "50.0.2",
+      "input": {
+        "version": "50.0.2",
+        "filename": "cryptography-50.0.2-cp311-abi3-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/9a/4f/adfc442765721292fff86d314ce385d3249d22db42295c0dd057727b60f3/cryptography-50.0.2-cp311-abi3-win_amd64.whl",
+        "sha256": "7afa5a6602a9f29af1f3a2965f831bae7c9d5d597b7cbb716d41ab3b7d89879c"
+      },
+      "declared_license": "Apache-2.0 OR BSD-3-Clause",
+      "notice_files": [
+        {
+          "path": "cryptography-50.0.2.dist-info/licenses/LICENSE",
+          "sha256": "3e0c7c091a948b82533ba98fd7cbb40432d6f1a9acbf85f5922d2f99a93ae6bb",
+          "bytes": 197
+        },
+        {
+          "path": "cryptography-50.0.2.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe",
+          "bytes": 11360
+        },
+        {
+          "path": "cryptography-50.0.2.dist-info/licenses/LICENSE.BSD",
+          "sha256": "602c4c7482de6479dd2e9793cda275e5e63d773dacd1eca689232ab7008fb4fb",
+          "bytes": 1532
+        }
+      ],
+      "source_references": [
+        "https://files.pythonhosted.org/packages/9d/af/182eb91b0df3fe75c4d9f26fe70684569566745f6ba7e5c9c73a862c5252/cryptography-50.0.2.tar.gz"
+      ],
+      "source_alternative": null,
+      "source_patch_evidence": "公式wheel/sdist再照合。registry32アーカイブ/原文告知を再ハッシュ対応。非registry7件をsdist内Cargo.tomlへ対応し、workspace由来0.50.2とApache-2.0 OR BSD-3-Clauseを解決。OpenSSL4.0.3原文/ソースを別系統で対応。",
+      "before_first_onedir": "収集した原文の最終告知への統合と実収録範囲の点検。SBOM一致を全ビルド条件や全依存のruntime収録の証明にしない。",
+      "reproducibility_research": "SBOMは全ビルド操作の完全証明ではない。全工具・生成設定の再現性は未確認。",
+      "after_onedir": "実payloadへの収録有無・版・SHA-256・告知/対応ソースの対応を確認。入力にあることを収録済みとは扱わない。",
+      "followup_notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/d9fa9cb85652__LICENSE",
+        "documentation/windows-desktop-licenses/source-notices-followup/e19dbcb3c3f7__LICENSE.APACHE",
+        "documentation/windows-desktop-licenses/source-notices-followup/b72c85c04f04__LICENSE.BSD"
+      ],
+      "followup_evidence": "SOURCE-NOTICE-FOLLOWUP.draft.json"
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "input": {
+        "version": "12.3.0",
+        "filename": "pillow-12.3.0-cp312-cp312-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/45/89/da2f7971a317f83d807fdd4065c0af40208e59e692cc43d315a71a0e96d1/pillow-12.3.0-cp312-cp312-win_amd64.whl",
+        "sha256": "a2b55dd6b2a4c4b7d87ffa56bdb33fdc5fdb9a462173861a7bc097f17d91cb09"
+      },
+      "declared_license": "MIT-CMU",
+      "notice_files": [
+        {
+          "path": "pillow-12.3.0.dist-info/licenses/LICENSE",
+          "sha256": "4f7866a74802c6326f81faff59a56546b6aec2b10b91973e0e9308de95e79857",
+          "bytes": 78016
+        }
+      ],
+      "source_references": [
+        "https://files.pythonhosted.org/packages/1c/3d/bb7fca845737cf9d7dbde16ed1843984665ff2e0a518f5db43e77ec540b9/pillow-12.3.0.tar.gz"
+      ],
+      "source_alternative": null,
+      "source_patch_evidence": "公式wheel/ソース229件の対応を確認。raqmパッチ反映結果は同梱ソース一致。LibTIFF4区間は文脈一致。AOM/dav1d文字列を静的確認。",
+      "before_first_onedir": "codec/推移的依存のソース・独立期待ハッシュ・原文告知の閉包と、実wheelに適用されたパッチの説明を完成させる。libimagequant非対応は最終payloadでも確認。",
+      "reproducibility_research": "publish証明の独立検証、取得不能ジョブログ、全compiler/生成設定とcodec機械語の完全対応は未確認。",
+      "after_onedir": "実payloadへの収録有無・版・SHA-256・告知/対応ソースの対応を確認。入力にあることを収録済みとは扱わない。",
+      "followup_notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/d5f5d01768c9__LICENSE"
+      ],
+      "followup_evidence": "SOURCE-NOTICE-FOLLOWUP.draft.json",
+      "qt_pillow_mupdf_followup": "QT-PILLOW-MUPDF-REVIEW.draft.json"
+    },
+    {
+      "name": "pycparser",
+      "version": "3.12",
+      "input": {
+        "version": "3.12",
+        "filename": "pycparser-3.12-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/b6/ae/315bbeee126a769cbde43cf4908acb4b40408d8bf8bbf334dd7368d8dadf/pycparser-3.12-py3-none-any.whl",
+        "sha256": "a076f3f489b39b43ed13563a1dafe42447445bec2e294154ec5c57fcdda4c85e"
+      },
+      "declared_license": "BSD-3-Clause",
+      "notice_files": [
+        {
+          "path": "pycparser-3.12.dist-info/licenses/LICENSE",
+          "sha256": "0a9e78156ae8b96caf1b4f11ac2df424b83de29736f9e757630548a6272fdf90",
+          "bytes": 1543
+        }
+      ],
+      "source_references": [
+        "https://files.pythonhosted.org/packages/cb/27/eeb9f307bf07060f3d9f9aa0fb8c15b01bdfded0a941e4b2719c7f94cacd/pycparser-3.12.tar.gz"
+      ],
+      "source_alternative": null,
+      "source_patch_evidence": "sdist参照とライセンス原文を既存台帳に保管。実入力版・RECORD照合の既存記録あり。",
+      "before_first_onedir": "ソース/告知の実保管先・SHA-256を最終一覧へ統合し、内包物を含む不足の有無を点検。",
+      "reproducibility_research": "上流wheelの全工具・生成条件とバイト一致は未確認。",
+      "after_onedir": "実payloadへの収録有無・版・SHA-256・告知/対応ソースの対応を確認。入力にあることを収録済みとは扱わない。",
+      "followup_notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/0b4a3de3ed30__LICENSE"
+      ],
+      "followup_evidence": "SOURCE-NOTICE-FOLLOWUP.draft.json"
+    },
+    {
+      "name": "pymupdf",
+      "version": "1.28.2",
+      "input": {
+        "version": "1.28.2",
+        "filename": "pymupdf-1.28.2-cp310-abi3-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/4a/61/d563bbccba262f9dd6d2d35ccb72593648184d886188efb12d9ce8f34dd6/pymupdf-1.28.2-cp310-abi3-win_amd64.whl",
+        "sha256": "ebd244918798502d7b4504c90410d1711a4d7675a32584ca30f1bab419ecbffe"
+      },
+      "declared_license": "Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License",
+      "notice_files": [
+        {
+          "path": "pymupdf-1.28.2.dist-info/COPYING",
+          "sha256": "40e60697600535eabfb5ae05f72829d88cfe8d02dd4792f5a754f6f51dabe55b",
+          "bytes": 64
+        }
+      ],
+      "source_references": [
+        "https://files.pythonhosted.org/packages/a3/fb/b6761fa2d5266f2cdb24c3b91f4023070ab7848381417678e7a289a1d52a/pymupdf-1.28.2.tar.gz"
+      ],
+      "source_alternative": null,
+      "source_patch_evidence": "PyMuPDFタグ/自己記録コミット一致。MuPDFソース本文と公式Git、18サブモジュールを照合。生成物9件の由来/経路を追跡。",
+      "before_first_onedir": "AGPL対応ソース一式（実サブモジュール・変更・ラッパー入力・ビルド手順）と第三者告知を整える。MuPDF tarの独立期待ハッシュ未確認はGit本文照合と区別して記録。",
+      "reproducibility_research": "実pipcl/packaging/libclang/SWIG工具実体・全環境は未確定。pipcl12は候補で確定値ではない。生成経路追跡は再生成一致ではない。",
+      "after_onedir": "実payloadへの収録有無・版・SHA-256・告知/対応ソースの対応を確認。入力にあることを収録済みとは扱わない。",
+      "followup_notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/fc1167c606ed__COPYING"
+      ],
+      "followup_evidence": "SOURCE-NOTICE-FOLLOWUP.draft.json",
+      "qt_pillow_mupdf_followup": "QT-PILLOW-MUPDF-REVIEW.draft.json"
+    },
+    {
+      "name": "pyside6",
+      "version": "6.11.2",
+      "input": {
+        "version": "6.11.2",
+        "filename": "pyside6-6.11.2-cp310-abi3-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/94/fe/4aea9d30300fff4cda9bb729c1363b9e1095a8544e0d6b57065465e16599/pyside6-6.11.2-cp310-abi3-win_amd64.whl",
+        "sha256": "3201d67e3c10be2eaedd3910ff0f02351eca7e88c95a291cde5e7f2f55ef207f"
+      },
+      "declared_license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "notice_files": [
+        {
+          "path": "pyside6-6.11.2.dist-info/licenses/LicenseRef-Qt-Commercial.txt",
+          "sha256": "4f54763ac0fe2abd8f7f8d8fe370a94a08ebf84786aa0b91045bd6628deb08a3",
+          "bytes": 470
+        }
+      ],
+      "source_references": [],
+      "source_alternative": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/",
+      "source_patch_evidence": "PySide/Shiboken共通ソースとQt6.11.2全ソースを取得。Qt全ソースは公式期待SHA-256一致。Qt attribution/ライセンス原文を保管。",
+      "before_first_onedir": "採用wheel・Qt各部品・追加パッチ/構成と対応ソース/第三者告知を結び付ける。不要モジュール除外実装済みだが実収録は生成後に確定。",
+      "reproducibility_research": "Qt/PySide wheelの全ビルド環境・正確な追加パッチとバイト再生成は未確認。",
+      "after_onedir": "実payloadへの収録有無・版・SHA-256・告知/対応ソースの対応を確認。入力にあることを収録済みとは扱わない。",
+      "followup_notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/0a93721dccde__LicenseRef-Qt-Commercial.txt"
+      ],
+      "followup_evidence": "SOURCE-NOTICE-FOLLOWUP.draft.json",
+      "qt_pillow_mupdf_followup": "QT-PILLOW-MUPDF-REVIEW.draft.json",
+      "qt_inline_wheel_followup": "QT-INLINE-WHEEL-REVIEW.draft.json",
+      "tika_pronom_followup": "TIKA-PRONOM-SCOPE.draft.json",
+      "tika_delivery_followup": "TIKA-DELIVERY-REVIEW.draft.json"
+    },
+    {
+      "name": "pyside6-addons",
+      "version": "6.11.2",
+      "input": {
+        "version": "6.11.2",
+        "filename": "pyside6_addons-6.11.2-cp310-abi3-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/fb/c1/08bf6594101b42fc88834009f1dac59a983c5b6805c62c5081f077d09b4a/pyside6_addons-6.11.2-cp310-abi3-win_amd64.whl",
+        "sha256": "f449ea4431da20e7b86752cca8d166f93434516fe417f981c27e5f8e1b554407"
+      },
+      "declared_license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "notice_files": [
+        {
+          "path": "pyside6_addons-6.11.2.dist-info/licenses/LicenseRef-Qt-Commercial.txt",
+          "sha256": "4f54763ac0fe2abd8f7f8d8fe370a94a08ebf84786aa0b91045bd6628deb08a3",
+          "bytes": 470
+        }
+      ],
+      "source_references": [],
+      "source_alternative": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/",
+      "source_patch_evidence": "PySide/Shiboken共通ソースとQt6.11.2全ソースを取得。Qt全ソースは公式期待SHA-256一致。Qt attribution/ライセンス原文を保管。",
+      "before_first_onedir": "採用wheel・Qt各部品・追加パッチ/構成と対応ソース/第三者告知を結び付ける。不要モジュール除外実装済みだが実収録は生成後に確定。",
+      "reproducibility_research": "Qt/PySide wheelの全ビルド環境・正確な追加パッチとバイト再生成は未確認。",
+      "after_onedir": "実payloadへの収録有無・版・SHA-256・告知/対応ソースの対応を確認。入力にあることを収録済みとは扱わない。",
+      "followup_notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/f2ead6c2e44b__LicenseRef-Qt-Commercial.txt"
+      ],
+      "followup_evidence": "SOURCE-NOTICE-FOLLOWUP.draft.json",
+      "qt_pillow_mupdf_followup": "QT-PILLOW-MUPDF-REVIEW.draft.json",
+      "qt_inline_wheel_followup": "QT-INLINE-WHEEL-REVIEW.draft.json",
+      "tika_pronom_followup": "TIKA-PRONOM-SCOPE.draft.json",
+      "tika_delivery_followup": "TIKA-DELIVERY-REVIEW.draft.json"
+    },
+    {
+      "name": "pyside6-essentials",
+      "version": "6.11.2",
+      "input": {
+        "version": "6.11.2",
+        "filename": "pyside6_essentials-6.11.2-cp310-abi3-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/dc/09/d2662684aee4d3f027ff9b1e965f22301bc28ffc5b7f167658508e4475dc/pyside6_essentials-6.11.2-cp310-abi3-win_amd64.whl",
+        "sha256": "c8a29def77032773a30879f7f24415b5395ad08592d147c170824ef4c735dfc1"
+      },
+      "declared_license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "notice_files": [
+        {
+          "path": "pyside6_essentials-6.11.2.dist-info/licenses/LicenseRef-Qt-Commercial.txt",
+          "sha256": "4f54763ac0fe2abd8f7f8d8fe370a94a08ebf84786aa0b91045bd6628deb08a3",
+          "bytes": 470
+        }
+      ],
+      "source_references": [],
+      "source_alternative": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/",
+      "source_patch_evidence": "PySide/Shiboken共通ソースとQt6.11.2全ソースを取得。Qt全ソースは公式期待SHA-256一致。Qt attribution/ライセンス原文を保管。",
+      "before_first_onedir": "採用wheel・Qt各部品・追加パッチ/構成と対応ソース/第三者告知を結び付ける。不要モジュール除外実装済みだが実収録は生成後に確定。",
+      "reproducibility_research": "Qt/PySide wheelの全ビルド環境・正確な追加パッチとバイト再生成は未確認。",
+      "after_onedir": "実payloadへの収録有無・版・SHA-256・告知/対応ソースの対応を確認。入力にあることを収録済みとは扱わない。",
+      "followup_notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/2b4cc1de4a90__LicenseRef-Qt-Commercial.txt"
+      ],
+      "followup_evidence": "SOURCE-NOTICE-FOLLOWUP.draft.json",
+      "qt_pillow_mupdf_followup": "QT-PILLOW-MUPDF-REVIEW.draft.json",
+      "qt_inline_wheel_followup": "QT-INLINE-WHEEL-REVIEW.draft.json",
+      "tika_pronom_followup": "TIKA-PRONOM-SCOPE.draft.json",
+      "tika_delivery_followup": "TIKA-DELIVERY-REVIEW.draft.json"
+    },
+    {
+      "name": "shiboken6",
+      "version": "6.11.2",
+      "input": {
+        "version": "6.11.2",
+        "filename": "shiboken6-6.11.2-cp310-abi3-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/ce/6b/fee1b4814317e4664e318644c9c007676c65a71e5b2b9d3ac4121a94dc0a/shiboken6-6.11.2-cp310-abi3-win_amd64.whl",
+        "sha256": "6ab0eba1c904455df621f9a6df3ca2bb896bab8670572d2bc4e37804ae91f19a"
+      },
+      "declared_license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "notice_files": [
+        {
+          "path": "shiboken6-6.11.2.dist-info/licenses/LicenseRef-Qt-Commercial.txt",
+          "sha256": "4f54763ac0fe2abd8f7f8d8fe370a94a08ebf84786aa0b91045bd6628deb08a3",
+          "bytes": 470
+        }
+      ],
+      "source_references": [],
+      "source_alternative": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/",
+      "source_patch_evidence": "PySide/Shiboken共通ソースとQt6.11.2全ソースを取得。Qt全ソースは公式期待SHA-256一致。Qt attribution/ライセンス原文を保管。",
+      "before_first_onedir": "採用wheel・Qt各部品・追加パッチ/構成と対応ソース/第三者告知を結び付ける。不要モジュール除外実装済みだが実収録は生成後に確定。",
+      "reproducibility_research": "Qt/PySide wheelの全ビルド環境・正確な追加パッチとバイト再生成は未確認。",
+      "after_onedir": "実payloadへの収録有無・版・SHA-256・告知/対応ソースの対応を確認。入力にあることを収録済みとは扱わない。",
+      "followup_notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/b8b729df2202__LicenseRef-Qt-Commercial.txt"
+      ],
+      "followup_evidence": "SOURCE-NOTICE-FOLLOWUP.draft.json",
+      "qt_pillow_mupdf_followup": "QT-PILLOW-MUPDF-REVIEW.draft.json",
+      "qt_inline_wheel_followup": "QT-INLINE-WHEEL-REVIEW.draft.json",
+      "tika_pronom_followup": "TIKA-PRONOM-SCOPE.draft.json",
+      "tika_delivery_followup": "TIKA-DELIVERY-REVIEW.draft.json"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "input": {
+        "version": "4.16.0",
+        "filename": "typing_extensions-4.16.0-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl",
+        "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+      },
+      "declared_license": "PSF-2.0",
+      "notice_files": [
+        {
+          "path": "typing_extensions-4.16.0.dist-info/licenses/LICENSE",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+          "bytes": 13936
+        }
+      ],
+      "source_references": [
+        "https://files.pythonhosted.org/packages/f6/cc/6253133b5bb138fc3306cebfbda2c520f545d36b5be2c7255cc528bb45d6/typing_extensions-4.16.0.tar.gz"
+      ],
+      "source_alternative": null,
+      "source_patch_evidence": "sdist参照とライセンス原文を既存台帳に保管。実入力版・RECORD照合の既存記録あり。",
+      "before_first_onedir": "ソース/告知の実保管先・SHA-256を最終一覧へ統合し、内包物を含む不足の有無を点検。",
+      "reproducibility_research": "上流wheelの全工具・生成条件とバイト一致は未確認。",
+      "after_onedir": "実payloadへの収録有無・版・SHA-256・告知/対応ソースの対応を確認。入力にあることを収録済みとは扱わない。",
+      "followup_notice_paths": [
+        "documentation/windows-desktop-licenses/source-notices-followup/ec424c932d73__LICENSE"
+      ],
+      "followup_evidence": "SOURCE-NOTICE-FOLLOWUP.draft.json"
+    },
+    {
+      "name": "winrt-runtime",
+      "version": "3.2.1",
+      "input": {
+        "version": "3.2.1",
+        "filename": "winrt_runtime-3.2.1-cp312-cp312-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/ca/a1/1d7248d5c62ccbea5f3e0da64ca4529ce99c639c3be2485b6ed709f5c740/winrt_runtime-3.2.1-cp312-cp312-win_amd64.whl",
+        "sha256": "06510db215d4f0dc45c00fbb1251c6544e91742a0ad928011db33b30677e1576"
+      },
+      "declared_license": "MIT",
+      "notice_files": [],
+      "source_references": [
+        "https://files.pythonhosted.org/packages/16/dd/acdd527c1d890c8f852cc2af644aa6c160974e66631289420aa871b05e65/winrt_runtime-3.2.1.tar.gz"
+      ],
+      "source_alternative": null,
+      "source_patch_evidence": "sdist参照とライセンス原文を既存台帳に保管。実入力版・RECORD照合の既存記録あり。",
+      "before_first_onedir": "ソース/告知の実保管先・SHA-256を最終一覧へ統合し、内包物を含む不足の有無を点検。",
+      "reproducibility_research": "上流wheelの全工具・生成条件とバイト一致は未確認。",
+      "after_onedir": "実payloadへの収録有無・版・SHA-256・告知/対応ソースの対応を確認。入力にあることを収録済みとは扱わない。",
+      "followup_notice_paths": [],
+      "followup_evidence": "SOURCE-NOTICE-FOLLOWUP.draft.json"
+    },
+    {
+      "name": "winrt-windows-foundation",
+      "version": "3.2.1",
+      "input": {
+        "version": "3.2.1",
+        "filename": "winrt_windows_foundation-3.2.1-cp312-cp312-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/9b/5e/b5059e4ece095351c496c9499783130c302d25e353c18031d5231b1b3b3c/winrt_windows_foundation-3.2.1-cp312-cp312-win_amd64.whl",
+        "sha256": "45550c5b6c2125cde495c409633e6b1ea5aa1677724e3b95eb8140bfccbe30c9"
+      },
+      "declared_license": "MIT",
+      "notice_files": [],
+      "source_references": [
+        "https://files.pythonhosted.org/packages/0c/55/098ce7ea0679efcc1298b269c48768f010b6c68f90c588f654ec874c8a74/winrt_windows_foundation-3.2.1.tar.gz"
+      ],
+      "source_alternative": null,
+      "source_patch_evidence": "sdist参照とライセンス原文を既存台帳に保管。実入力版・RECORD照合の既存記録あり。",
+      "before_first_onedir": "ソース/告知の実保管先・SHA-256を最終一覧へ統合し、内包物を含む不足の有無を点検。",
+      "reproducibility_research": "上流wheelの全工具・生成条件とバイト一致は未確認。",
+      "after_onedir": "実payloadへの収録有無・版・SHA-256・告知/対応ソースの対応を確認。入力にあることを収録済みとは扱わない。",
+      "followup_notice_paths": [],
+      "followup_evidence": "SOURCE-NOTICE-FOLLOWUP.draft.json"
+    },
+    {
+      "name": "winrt-windows-foundation-collections",
+      "version": "3.2.1",
+      "input": {
+        "version": "3.2.1",
+        "filename": "winrt_windows_foundation_collections-3.2.1-cp312-cp312-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/37/94/5b888713e472746635a382e523513ab1b8200af55c5b56bc70e1e4369115/winrt_windows_foundation_collections-3.2.1-cp312-cp312-win_amd64.whl",
+        "sha256": "550dfb8c82fe74d9e0728a2a16a9175cc9e34ca2b8ef758d69b2a398894b698b"
+      },
+      "declared_license": "MIT",
+      "notice_files": [],
+      "source_references": [
+        "https://files.pythonhosted.org/packages/ef/62/d21e3f1eeb8d47077887bbf0c3882c49277a84d8f98f7c12bda64d498a07/winrt_windows_foundation_collections-3.2.1.tar.gz"
+      ],
+      "source_alternative": null,
+      "source_patch_evidence": "sdist参照とライセンス原文を既存台帳に保管。実入力版・RECORD照合の既存記録あり。",
+      "before_first_onedir": "ソース/告知の実保管先・SHA-256を最終一覧へ統合し、内包物を含む不足の有無を点検。",
+      "reproducibility_research": "上流wheelの全工具・生成条件とバイト一致は未確認。",
+      "after_onedir": "実payloadへの収録有無・版・SHA-256・告知/対応ソースの対応を確認。入力にあることを収録済みとは扱わない。",
+      "followup_notice_paths": [],
+      "followup_evidence": "SOURCE-NOTICE-FOLLOWUP.draft.json"
+    },
+    {
+      "name": "winrt-windows-services-store",
+      "version": "3.2.1",
+      "input": {
+        "version": "3.2.1",
+        "filename": "winrt_windows_services_store-3.2.1-cp312-cp312-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/95/a8/ec70a32d055ba3631327880dc0351137ce91482f5d51eac5b6e5ec561201/winrt_windows_services_store-3.2.1-cp312-cp312-win_amd64.whl",
+        "sha256": "2b128843ee261ff59f4f4806ff9df586a80e4885abcd62194fe4e0656ef5f90c"
+      },
+      "declared_license": "MIT",
+      "notice_files": [],
+      "source_references": [
+        "https://files.pythonhosted.org/packages/e2/3f/26b5fc590183eb2e8da811ab26345a50e2d9393c621613b91a30346a3d99/winrt_windows_services_store-3.2.1.tar.gz"
+      ],
+      "source_alternative": null,
+      "source_patch_evidence": "sdist参照とライセンス原文を既存台帳に保管。実入力版・RECORD照合の既存記録あり。",
+      "before_first_onedir": "ソース/告知の実保管先・SHA-256を最終一覧へ統合し、内包物を含む不足の有無を点検。",
+      "reproducibility_research": "上流wheelの全工具・生成条件とバイト一致は未確認。",
+      "after_onedir": "実payloadへの収録有無・版・SHA-256・告知/対応ソースの対応を確認。入力にあることを収録済みとは扱わない。",
+      "followup_notice_paths": [],
+      "followup_evidence": "SOURCE-NOTICE-FOLLOWUP.draft.json"
+    }
+  ],
+  "uv_development": "discontinued"
+}

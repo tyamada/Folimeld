@@ -1,5 +1,5 @@
 """Desktop-only Qt collection policy. Never used by Store/uv specs."""
-from pathlib import PurePosixPath
+from pathlib import Path, PurePosixPath
 
 # Keep optional SVG/image and OpenGL support until native acceptance permits removal.
 ALLOWED_QT = frozenset({"Core", "Gui", "Widgets", "Svg", "SvgWidgets", "OpenGL", "OpenGLWidgets"})
@@ -48,6 +48,11 @@ def filter_qt_payload(binaries, datas, get_imports):
     """
     removed = []
     kept = []
+    resolved_in_toc = {
+        PurePosixPath(_path(row[0])).name
+        for row in binaries
+        if not forbidden(row[0]) and Path(row[1]).is_file()
+    }
     for row in binaries:
         name, source, kind = row
         if forbidden(name):
@@ -60,7 +65,7 @@ def filter_qt_payload(binaries, datas, get_imports):
             if base.startswith("qt6") and base.endswith(".dll"):
                 if base[3:-4] not in {x.lower() for x in ALLOWED_QT}:
                     denied.append(base)
-                elif not resolved:
+                elif not resolved and base not in resolved_in_toc:
                     raise ValueError(f"Unresolved Qt dependency: {name}: {base}")
         if denied:
             if "/plugins/" in "/" + _path(name):
@@ -79,4 +84,3 @@ def filter_qt_payload(binaries, datas, get_imports):
     if not required <= names:
         raise ValueError(f"Missing Desktop Qt payload: {sorted(required - names)}")
     return sorted(kept), sorted(filtered_data), sorted(removed, key=lambda row: row["path"])
-

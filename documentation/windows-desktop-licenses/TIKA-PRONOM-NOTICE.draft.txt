@@ -1,0 +1,90 @@
+DRAFT — NOT APPROVED FOR DISTRIBUTION
+
+PRONOM-derived MIME-type information in Apache Tika / Qt
+
+The Tika-derived MIME-type definitions supplied with Qt contain information
+adapted from PRONOM, maintained by The National Archives (UK).
+Source: PRONOM — The National Archives (UK)
+https://pronom.nationalarchives.gov.uk/
+
+Contains public sector information licensed under the Open Government Licence v3.0.
+https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+
+No endorsement of Folimeld or this reuse by The National Archives is implied.
+This attribution applies to the relevant PRONOM-derived information; it does
+not replace the licences of Folimeld, Qt, Apache Tika or other components.
+
+Apache Tika source / Qt modifications
+
+The upstream MIME definitions used by the inspected Qt source identify:
+Apache Tika commit c29724782854bb5a319f4a1940d0828a58ace3f9.
+Qt 6.11.2 processes these definitions into its supported MIME-data format,
+adds Qt-specific definitions, and changes or disables some matching rules.
+The original XML header, Apache-2.0 licence and relevant upstream NOTICE
+attributions must be retained in the final corresponding materials.
+
+Original Apache Tika NOTICE excerpts follow. The full original NOTICE is
+retained separately as source evidence; its unrelated Java component notices
+are not assertions that those components are included in Folimeld or Qt.
+
+Apache Tika
+Copyright 2021 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+IPTC Photo Metadata descriptions Copyright 2010 International Press Telecommunications Council.
+
+Tika-mimetypes.xml includes mimetype definitions that were adapted from the PRONOM Technical Registry
+by The National Archives (http://www.nationalarchives.gov.uk/PRONOM/Default.aspx). PRONOM is published
+under the Open Government License 3.0 (http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
+
+
+Additional MIME-information notice (fixed Tika core source licence)
+
+The following original notice applies to MIME type information identified by
+Tika's core subcomponent licence. It is retained separately from unrelated
+Java component terms and does not change Folimeld's application licence.
+
+MIME type information from file-4.26.tar.gz (http://www.darwinsys.com/file/)
+
+    Copyright (c) Ian F. Darwin 1986, 1987, 1989, 1990, 1991, 1992, 1994, 1995.
+    Software written by Ian F. Darwin and others;
+    maintained 1994- Christos Zoulas.
+
+    This software is not subject to any export provision of the United States
+    Department of Commerce, and may be exported to any country or planet.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions
+    are met:
+    1. Redistributions of source code must retain the above copyright
+       notice immediately at the beginning of the file, without modification,
+       this list of conditions, and the following disclaimer.
+    2. Redistributions in binary form must reproduce the above copyright
+       notice, this list of conditions and the following disclaimer in the
+       documentation and/or other materials provided with the distribution.
+
+    THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+    ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+    ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR
+    ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+    OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+    HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+    LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+    OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+    SUCH DAMAGE.
+
+IPTC scope clarification (draft)
+
+The fixed Tika source identifies July 2010 IPTC Photo Metadata descriptions
+in org/apache/tika/metadata/IPTC.java and Photoshop.java. Those Java files
+are not part of the five-file Qt MIME-data source subset prepared here.
+IPTC-branded NewsML/other MIME identifiers in the XML are not, by that name
+alone, evidence that the 2010 Photo Metadata descriptions are included.
+The original upstream acknowledgement is retained pending final scope review.
+The current IPTC standard's CC BY 4.0 licence is not asserted to relicense
+those historical descriptions. Full historical terms are kept as reference
+evidence, not imposed on Folimeld or on every MIME definition.

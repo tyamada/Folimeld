@@ -1,0 +1,14 @@
+--- a/src/raqm.c
++++ b/src/raqm.c
+@@ -36,7 +36,11 @@
+ #include <SheenBidi.h>
+ #endif
+ #else
++#ifdef HAVE_FRIBIDI_SYSTEM
+ #include <fribidi.h>
++#else
++#include "../fribidi-shim/fribidi.h"
++#endif
+ #endif
+ 
+ #include <hb.h>
