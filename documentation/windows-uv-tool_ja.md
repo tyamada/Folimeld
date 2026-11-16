@@ -39,20 +39,81 @@ python -m tools.uv_tool_build --output .\dist\uv-tool-release
 
 ## 3. インストールと起動手順
 
-GitHub Release から `.whl`、`requirements-windows-uv.lock`、`SHA256SUMS.txt` を取得し、SHA-256 を照合してから `uv tool install` を実行します。
+### 1. 事前準備
+
+Windows 11 x64（x86_64）とuv本体が必要です。通常権限のPowerShellで `uv --version` が動く状態にします。uv未導入の場合は以下で導入し、PowerShellを開き直してください。本プレビューはuv 0.13.8で検証しています。ARM64は対象外です。
+
+```powershell
+winget install --id=Astral.uv -e
+uv --version
+```
+
+**Python 3.12の事前手動インストールは不要です。** `--python 3.12` は、適合するPythonがない場合に標準設定のuvでCPython 3.12.xを取得します。自動取得が無効の場合や通信制限下では別途準備が必要です。Pythonのパッチ版を固定する指定ではありません。
+
+### 2. GitHubから入手するファイル
+
+次の**2ファイルを同じフォルダー**（例: Downloads）へ保存してください。
+
+1. [**folimeld-0.3.5-py3-none-any.whl**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/folimeld-0.3.5-py3-none-any.whl) — アプリ本体のWheel。
+2. [**requirements-windows-uv.lock**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/requirements-windows-uv.lock) — 依存14パッケージの版と配布wheelのSHA-256を記録した固定入力。
+
+### 3. 実行場所と保存先
+
+コマンドは**2ファイルを保存したフォルダー**で実行します。通常は `C:\Users\<ユーザー名>\Downloads` です。Downloadsを移動している場合や別の保存場所を使う場合は、以下の移動先を変更してください。
+
+ソース＋uv版の `install_uv.ps1` と異なり、カレントフォルダーに `.venv` は作成しません。
+
+- **ツール仮想環境**: `uv tool dir` の返す場所の `folimeld` 配下。既定例は `%APPDATA%\uv\data\tools\folimeld\`。
+- **起動コマンド**: `uv tool dir --bin` の返す場所の `folimeld.exe`（GUI）と `folimeld-console.exe`（診断用）。既定例は `%USERPROFILE%\.local\bin\`。
+- **設定・ログ**: `%LOCALAPPDATA%\Folimeld-UV-Tool\`。Store版・Desktop版・ソース＋uv版と分離します。
+
+保存先は環境変数等で変わるため、実際の場所を確認してください。
+
+```powershell
+uv tool dir
+uv tool dir --bin
+```
+
+**導入成功後は、ダウンロードしたWheelとlockを移動・削除しても導入済みアプリは動作します。** 再導入用に両ファイルとハッシュを保管することを推奨します。uv管理下の環境や使用中のPythonは削除しないでください。
+
+### 4. SHA-256照合と導入
 
 ```powershell
 $ErrorActionPreference = 'Stop'
-# 1. SHA-256 の確認
-Get-FileHash .\folimeld-0.3.5-py3-none-any.whl, .\requirements-windows-uv.lock -Algorithm SHA256
 
-# 2. uv tool install（CPython 3.12.x・ハッシュ付きロック指定・ソースビルド禁止）
+# 保存場所が異なる場合は変更
+Set-Location -LiteralPath (Join-Path $HOME 'Downloads')
+
+# SHA-256が一致しない場合は中止
+if ((Get-FileHash -LiteralPath .\folimeld-0.3.5-py3-none-any.whl -Algorithm SHA256).Hash -ne '759B2FE0052F1741427194E40104DB0AF65184041AD5BAD8BB5D2003874DBDAF') {
+    throw 'Wheel SHA-256 mismatch.'
+}
+if ((Get-FileHash -LiteralPath .\requirements-windows-uv.lock -Algorithm SHA256).Hash -ne '7E994B4C231536FB5C53D79959761BC426BD9FF9585B578165F1FD67EC19077F') {
+    throw 'Lock SHA-256 mismatch.'
+}
+
 uv tool install --python 3.12 --with-requirements .\requirements-windows-uv.lock --no-build .\folimeld-0.3.5-py3-none-any.whl
+if ($LASTEXITCODE -ne 0) { throw 'uv tool install failed.' }
 ```
 
-- **通常起動（GUI・コンソールなし）**: `folimeld`
-- **診断起動（標準エラー出力確認用）**: `folimeld-console`
-- **アンインストール**: `uv tool uninstall folimeld`（`%LOCALAPPDATA%\Folimeld-UV-Tool` の設定・ログは削除されません）
+### 5. 起動
+
+起動コマンドの保存先がPATHに含まれていれば、**どのフォルダーからでも**起動できます。
+
+```powershell
+# 通常起動（コンソールなしGUI）
+folimeld
+
+# 診断起動（コンソール出力）
+folimeld-console
+```
+
+> [!TIP]
+> `warning: ... is not on your PATH` と表示された場合は、`uv tool update-shell` を1回実行してPowerShellを開き直してください。このコマンドはユーザーのシェル/PATH設定を更新します。PC全体の実行ポリシー変更は不要です。
+
+アンインストールは `uv tool uninstall folimeld`（設定・ログは保持されます）。
+
+保存先とPython取得の詳細: [uv storage](https://docs.astral.sh/uv/reference/storage/) / [Installing Python](https://docs.astral.sh/uv/guides/install-python/).
 
 ## 4. 隔離環境での導入・実画面GUI・3ワーカー検証記録（2026-11-16）
 

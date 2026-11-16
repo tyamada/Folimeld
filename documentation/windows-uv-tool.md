@@ -39,20 +39,81 @@ Staged and published artifacts ([GitHub Release `windows-uv-tool-v0.3.5-preview.
 
 ## 3. Installation and Launch Procedure
 
-Download the `.whl`, `requirements-windows-uv.lock`, and `SHA256SUMS.txt` from the GitHub Release, verify their SHA-256 hashes, and install with `uv tool install`:
+### 1. Prerequisites
+
+Requires Windows 11 x64 (x86_64) and uv. Run `uv --version` in a non-administrator PowerShell session. If uv is not installed, install it below and reopen PowerShell. This preview was tested with uv 0.13.8; ARM64 is not supported.
+
+```powershell
+winget install --id=Astral.uv -e
+uv --version
+```
+
+**You do not need to install Python 3.12 manually beforehand.** With uv's default settings, `--python 3.12` downloads CPython 3.12.x if no suitable Python is available. Disabled automatic downloads or network restrictions require separate preparation. This option does not pin the Python patch version.
+
+### 2. Files to download from GitHub
+
+Save these **two files in the same folder**, such as Downloads:
+
+1. [**folimeld-0.3.5-py3-none-any.whl**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/folimeld-0.3.5-py3-none-any.whl) — the application Wheel.
+2. [**requirements-windows-uv.lock**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/requirements-windows-uv.lock) — pinned versions and distribution-wheel SHA-256 hashes for 14 dependencies.
+
+### 3. Working directory and installed locations
+
+Run commands **in the folder containing both downloads**, normally `C:\Users\<username>\Downloads`. Adjust the location below if Downloads has been relocated or you saved the files elsewhere.
+
+Unlike the source + uv edition's `install_uv.ps1`, this does not create a `.venv` in the current folder.
+
+- **Tool environment**: the `folimeld` subfolder of `uv tool dir`; a default example is `%APPDATA%\uv\data\tools\folimeld\`.
+- **Launch commands**: `folimeld.exe` (GUI) and `folimeld-console.exe` (diagnostics) in `uv tool dir --bin`; a default example is `%USERPROFILE%\.local\bin\`.
+- **Settings and logs**: `%LOCALAPPDATA%\Folimeld-UV-Tool\`, isolated from the Store, Desktop, and source + uv editions.
+
+Environment variables can override these locations. Check the actual directories:
+
+```powershell
+uv tool dir
+uv tool dir --bin
+```
+
+**After successful installation, moving or deleting the downloaded Wheel and lock does not prevent the installed app from running.** Keep both files and their hashes for reinstallation. Do not delete the uv-managed environment or the Python it uses.
+
+### 4. SHA-256 verification and installation
 
 ```powershell
 $ErrorActionPreference = 'Stop'
-# 1. Verify SHA-256 checksums
-Get-FileHash .\folimeld-0.3.5-py3-none-any.whl, .\requirements-windows-uv.lock -Algorithm SHA256
 
-# 2. Install into an isolated uv tool environment (CPython 3.12.x, hash-locked requirements, no source builds)
+# Adjust this if you saved the files elsewhere
+Set-Location -LiteralPath (Join-Path $HOME 'Downloads')
+
+# Stop if either SHA-256 does not match
+if ((Get-FileHash -LiteralPath .\folimeld-0.3.5-py3-none-any.whl -Algorithm SHA256).Hash -ne '759B2FE0052F1741427194E40104DB0AF65184041AD5BAD8BB5D2003874DBDAF') {
+    throw 'Wheel SHA-256 mismatch.'
+}
+if ((Get-FileHash -LiteralPath .\requirements-windows-uv.lock -Algorithm SHA256).Hash -ne '7E994B4C231536FB5C53D79959761BC426BD9FF9585B578165F1FD67EC19077F') {
+    throw 'Lock SHA-256 mismatch.'
+}
+
 uv tool install --python 3.12 --with-requirements .\requirements-windows-uv.lock --no-build .\folimeld-0.3.5-py3-none-any.whl
+if ($LASTEXITCODE -ne 0) { throw 'uv tool install failed.' }
 ```
 
-- **Standard launch (GUI without console)**: `folimeld`
-- **Diagnostic launch (console with stderr output)**: `folimeld-console`
-- **Uninstall**: `uv tool uninstall folimeld` (settings and logs under `%LOCALAPPDATA%\Folimeld-UV-Tool` are preserved)
+### 5. Launch
+
+Once the executable directory is on PATH, launch from **any folder**:
+
+```powershell
+# Standard GUI launch without a console
+folimeld
+
+# Diagnostic launch with console output
+folimeld-console
+```
+
+> [!TIP]
+> If you see `warning: ... is not on your PATH`, run `uv tool update-shell` once and reopen PowerShell. This updates your user shell/PATH settings; no machine-wide execution-policy change is needed.
+
+Uninstall with `uv tool uninstall folimeld` (settings and logs are preserved).
+
+Storage and Python download details: [uv storage](https://docs.astral.sh/uv/reference/storage/) / [Installing Python](https://docs.astral.sh/uv/guides/install-python/).
 
 ## 4. Isolated Installation, Real GUI, and 3-Worker Verification Record (2026-11-16)
 
