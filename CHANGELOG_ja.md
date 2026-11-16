@@ -4,6 +4,11 @@
 
 ## 未リリース
 
+- Windows 11 ARM64（Surface Pro 11等のCopilot+ PC / Snapdragon X Elite）向けに3つの試験公開パッケージ（ソース＋uv版、`uv tool install`版、PyInstaller onedir＋Inno Setup Desktopインストーラー版）を追加。
+  - Python Software Foundation（PSF）公式署名済み CPython 3.12.10 ARM64（`pythonarm64.3.12.10.nupkg`）およびARM64ネイティブ uv 0.13.8 を採用し、Windows 11 の Smart App Control（スマート アプリ コントロール: SAC）有効環境下で未署名バイナリのロードブロック通知を抑止・防止する構成を確立。
+  - `install_uv.ps1`、`launch_uv.py`、`folimeld.uv_tool_launcher`、`folimeld.desktop_profile`、`folimeld.uv_tool_profile`、`pyproject.toml`、`Folimeld-desktop.spec`、`tools.desktop_build`、`tools.desktop_compile`、`tools.uv_tool_build` をARM64ネイティブ（PE Machine `0xAA64`、ARM64 CRT 14.52.37029.0）へ両対応化。
+  - 単体テストスイートを拡充し、ARM64プロファイル受容・未署名WebPのSAC環境下スキップ安全処理を検証。
+
 - Windows 11 x86_64向けの`uv tool install`版（Pure Python Wheel / GitHub Releases配布）を追加。`pyproject.toml`、決定論的Wheel・対応ソースZIP生成と整合検査ツール（`tools.uv_tool_build`）、パッケージ内`_resources`解決（`folimeld.resources`）、専用プロファイル（`%LOCALAPPDATA%\Folimeld-UV-Tool`）、`Local\Folimeld-UV-Tool` MutexとCPython 3.12.xマイナー一致＋固定依存14件を検証する専用ランチャー（`folimeld` / `folimeld-console`）、日英手順書と単体テストを整備し、隔離環境での`uv tool install`導入と起動を確認。
 
 - Linux ARM64 strict Snap 0.3.4+fix1試験版を公開。固有の画像変換/保存/終了、同一候補再導入、制限状態、外側ライブラリの対応資料を確認。自動更新によるXorg中断を別記し、更新後の再試験に成功。

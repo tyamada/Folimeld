@@ -2,16 +2,22 @@
 [CmdletBinding()]
 param([string]$RecordRoot)
 $ErrorActionPreference = 'Stop'
-if (-not $IsWindows -or [Runtime.InteropServices.RuntimeInformation]::OSArchitecture -ne 'X64') {
-    throw 'Windows x64 is required.'
+$arch = [Runtime.InteropServices.RuntimeInformation]::OSArchitecture
+if (-not $IsWindows -or ($arch -ne 'X64' -and $arch -ne 'Arm64')) {
+    throw 'Windows x64 or ARM64 is required.'
 }
+$isArm64 = ($arch -eq 'Arm64')
 $root = [IO.Path]::GetFullPath($PSScriptRoot)
-$profileData = Get-Content -LiteralPath (Join-Path $root 'windows-uv-runtime.json') -Raw | ConvertFrom-Json
-$lockPath = Join-Path $root 'requirements-windows-uv.lock'
+$runtimeProfileName = if ($isArm64) { 'windows-arm64-uv-runtime.json' } else { 'windows-uv-runtime.json' }
+$lockFileName = if ($isArm64) { 'requirements-windows-arm64-uv.lock' } else { 'requirements-windows-uv.lock' }
+$expectedPlatform = if ($isArm64) { 'windows-arm64' } else { 'windows-x86_64' }
+
+$profileData = Get-Content -LiteralPath (Join-Path $root $runtimeProfileName) -Raw | ConvertFrom-Json
+$lockPath = Join-Path $root $lockFileName
 $lockText = [IO.File]::ReadAllText($lockPath).Replace("`r`n", "`n")
 $lockHash = [Convert]::ToHexString([Security.Cryptography.SHA256]::HashData([Text.Encoding]::UTF8.GetBytes($lockText))).ToLowerInvariant()
 if ($lockHash -cne $profileData.lock_sha256) { throw 'Lock hash mismatch.' }
-if ($profileData.schema_version -ne 1 -or $profileData.platform -cne 'windows-x86_64') { throw 'Unsupported runtime profile.' }
+if ($profileData.schema_version -ne 1 -or $profileData.platform -cne $expectedPlatform) { throw 'Unsupported runtime profile.' }
 $runtime = Join-Path $root '.uv-runtime'
 $venv = Join-Path $root '.venv'
 $shortcutPath = Join-Path $root 'Folimeld UV.lnk'
@@ -35,7 +41,7 @@ function Save-Record {
 }
 function Fetch-Verified($entry, [string]$destination) {
     $uri = [uri]$entry.url
-    if ($uri.Scheme -ne 'https' -or $uri.Host -ne 'github.com' -or $uri.UserInfo -or $uri.Query) { throw 'Unexpected download URL.' }
+    if ($uri.Scheme -ne 'https' -or ($uri.Host -ne 'github.com' -and $uri.Host -ne 'api.nuget.org') -or $uri.UserInfo -or $uri.Query) { throw 'Unexpected download URL.' }
     if ($entry.sha256 -notmatch '^[a-f0-9]{64}$') { throw 'Invalid archive hash.' }
     Invoke-WebRequest -Uri $uri.AbsoluteUri -OutFile $destination
     $actual = (Get-FileHash -LiteralPath $destination -Algorithm SHA256).Hash.ToLowerInvariant()
@@ -55,7 +61,8 @@ try {
     $downloads = Join-Path $runtime 'downloads'
     [void](New-Item -ItemType Directory -Path $downloads)
     $uvZip = Join-Path $downloads 'uv.zip'
-    $pythonArchive = Join-Path $downloads 'python.tar.gz'
+    $pythonArchiveName = if ($isArm64) { 'python.nupkg' } else { 'python.tar.gz' }
+    $pythonArchive = Join-Path $downloads $pythonArchiveName
     Fetch-Verified $profileData.uv $uvZip
     Fetch-Verified $profileData.python $pythonArchive
     $uvDirectory = Join-Path $runtime 'uv'
@@ -63,14 +70,20 @@ try {
     $uvExecutable = Join-Path $uvDirectory 'uv.exe'
     $pythonDirectory = Join-Path $runtime 'python'
     [void](New-Item -ItemType Directory -Path $pythonDirectory)
-    $tar = Join-Path $env:SystemRoot 'System32/tar.exe'
-    $entries = & $tar -tzf $pythonArchive
-    if ($LASTEXITCODE -ne 0) { throw 'Python archive listing failed.' }
-    foreach ($entry in $entries) {
-        if ($entry -match '(^[/\\]|^[A-Za-z]:|(^|[/\\])\.\.([/\\]|$))') { throw 'Unsafe Python archive path.' }
+    if ($isArm64) {
+        Expand-Archive -LiteralPath $pythonArchive -DestinationPath $pythonDirectory
+        $pythonExecutable = Join-Path $pythonDirectory 'tools/python.exe'
+        if (-not (Test-Path -LiteralPath $pythonExecutable)) { throw 'ARM64 Python executable missing after extraction.' }
+    } else {
+        $tar = Join-Path $env:SystemRoot 'System32/tar.exe'
+        $entries = & $tar -tzf $pythonArchive
+        if ($LASTEXITCODE -ne 0) { throw 'Python archive listing failed.' }
+        foreach ($entry in $entries) {
+            if ($entry -match '(^[/\\]|^[A-Za-z]:|(^|[/\\])\.\.([/\\]|$))') { throw 'Unsafe Python archive path.' }
+        }
+        Run-Recorded $tar @('-xzf', $pythonArchive, '-C', $pythonDirectory) 'python-extraction.log'
+        $pythonExecutable = Join-Path $pythonDirectory 'python/python.exe'
     }
-    Run-Recorded $tar @('-xzf', $pythonArchive, '-C', $pythonDirectory) 'python-extraction.log'
-    $pythonExecutable = Join-Path $pythonDirectory 'python/python.exe'
     Run-Recorded $uvExecutable @('--version') 'uv-version.log'
     if ((Get-Content -LiteralPath (Join-Path $recordDirectory 'uv-version.log') -Raw).Trim() -notmatch ('^uv ' + [regex]::Escape($profileData.uv.version) + '(\s|$)')) { throw 'uv version mismatch.' }
     $uvArguments = @('--no-config', '--no-python-downloads', '--cache-dir', (Join-Path $runtime 'cache'))

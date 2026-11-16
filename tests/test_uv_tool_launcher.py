@@ -88,3 +88,24 @@ def test_uv_tool_launcher_holds_and_closes_mutex(monkeypatch, existing):
     assert calls[0][2] == "Local\\Folimeld-UV-Tool"
     assert launches == ([] if existing else [{"distribution": "uv-tool"}])
     assert bool(messages) == existing
+
+
+def test_uv_tool_launcher_arm64_environment(tmp_path, monkeypatch):
+    profile = {
+        "schema_version": 1,
+        "platform": "windows-arm64",
+        "python": {"version": "3.12.10"},
+        "dependencies": {"example": "1.0"},
+    }
+    (tmp_path / "windows-arm64-uv-runtime.json").write_text(json.dumps(profile), encoding="utf-8")
+    monkeypatch.setattr(uv_tool_launcher.sys, "platform", "win32")
+    monkeypatch.setattr(uv_tool_launcher.sys, "version_info", (3, 12, 10))
+    monkeypatch.setattr(uv_tool_launcher.sys, "prefix", str(tmp_path / "tool-venv"))
+    monkeypatch.setattr(uv_tool_launcher.sys, "base_prefix", str(tmp_path / "base-python"))
+    monkeypatch.setattr(uv_tool_launcher.sys, "frozen", False, raising=False)
+    monkeypatch.setattr(uv_tool_launcher.struct, "calcsize", lambda _: 8)
+    monkeypatch.setattr(uv_tool_launcher.platform, "machine", lambda: "ARM64")
+    monkeypatch.setattr(uv_tool_launcher.platform, "python_implementation", lambda: "CPython")
+    monkeypatch.setattr(uv_tool_launcher, "is_packaged", lambda: False)
+    monkeypatch.setattr(uv_tool_launcher, "version", lambda _: "1.0")
+    uv_tool_launcher.validate_uv_tool_environment(tmp_path)

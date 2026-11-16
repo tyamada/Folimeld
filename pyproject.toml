@@ -14,7 +14,8 @@ authors = [
 ]
 dependencies = [
   "cffi==2.1.1",
-  "cryptography==50.0.2",
+  "cryptography==50.0.2 ; platform_machine != 'ARM64' and platform_machine != 'aarch64'",
+  "cryptography==46.0.3 ; platform_machine == 'ARM64' or platform_machine == 'aarch64'",
   "pillow==12.3.0",
   "pycparser==3.12",
   "pymupdf==1.28.2",
@@ -45,7 +46,9 @@ packages = ["folimeld"]
 [tool.hatch.build.targets.wheel.force-include]
 "LICENSE" = "folimeld/_resources/LICENSE"
 "windows-uv-runtime.json" = "folimeld/_resources/windows-uv-runtime.json"
+"windows-arm64-uv-runtime.json" = "folimeld/_resources/windows-arm64-uv-runtime.json"
 "locales" = "folimeld/_resources/locales"
 "assets/Folimeld.iconset/icon_256x256.png" = "folimeld/_resources/assets/Folimeld.iconset/icon_256x256.png"
 "assets/folimeld-supporter-maid.png" = "folimeld/_resources/assets/folimeld-supporter-maid.png"
 "documentation/windows-uv-licenses" = "folimeld/_resources/documentation/windows-uv-licenses"
+"documentation/windows-arm64-uv-licenses" = "folimeld/_resources/documentation/windows-arm64-uv-licenses"

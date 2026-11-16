@@ -29,8 +29,10 @@ ROOT_CONFIG_FILES = {
     "pyproject.toml",
     "requirements-windows-uv.in",
     "requirements-windows-uv.lock",
+    "requirements-windows-arm64-uv.lock",
     "ruff.toml",
     "windows-uv-runtime.json",
+    "windows-arm64-uv-runtime.json",
 }
 DOCUMENTATION_DIR = "documentation"
 

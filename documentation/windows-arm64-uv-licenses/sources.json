@@ -1,0 +1,485 @@
+{
+  "schema_version": 1,
+  "profile": "Windows ARM64 source + uv / CPython 3.12.10",
+  "prepared_date": "2026-11-16",
+  "distribution_scope": "Folimeld source and scripts only; Python, uv and wheels downloaded directly from upstream; no runtime/wheel redistribution",
+  "packages": [
+    {
+      "name": "cffi",
+      "version": "2.1.1",
+      "metadata_url": "https://pypi.org/pypi/cffi/2.1.1/json",
+      "wheel": {
+        "filename": "cffi-2.1.1-cp312-cp312-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/70/c6/d0ea84713fe46b243a436a18fcd47d639732747e21635c8a27191b06dc30/cffi-2.1.1-cp312-cp312-win_arm64.whl",
+        "size": 180093,
+        "digests": {
+          "blake2b_256": "70c6d0ea84713fe46b243a436a18fcd47d639732747e21635c8a27191b06dc30",
+          "md5": "ddcfe6849edb402fa782912f506c42b9",
+          "sha256": "7bde5e4cc5c10140859842b9d383af292b22639a4dffb725314baf45968cef80"
+        }
+      },
+      "sdists": [
+        {
+          "filename": "cffi-2.1.1.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/9e/ef/008a1939e372c06329a3fce4279c02f328488f3526744906eeec3da7ad5f/cffi-2.1.1.tar.gz",
+          "size": 530807,
+          "digests": {
+            "blake2b_256": "9eef008a1939e372c06329a3fce4279c02f328488f3526744906eeec3da7ad5f",
+            "md5": "32f0067c08d797dd28cef1544105caa3",
+            "sha256": "dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be"
+          }
+        }
+      ],
+      "license": "MIT-0",
+      "license_metadata": "MIT-0",
+      "source_verification": "PyPI version metadata and published source hash only; source archive contents not verified",
+      "source_alternative": null
+    },
+    {
+      "name": "cryptography",
+      "version": "46.0.3",
+      "metadata_url": "https://pypi.org/pypi/cryptography/46.0.3/json",
+      "wheel": {
+        "filename": "cryptography-46.0.3-cp311-abi3-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/2e/af/9b302da4c87b0beb9db4e756386a7c6c5b8003cd0e742277888d352ae91d/cryptography-46.0.3-cp311-abi3-win_arm64.whl",
+        "size": 2928007,
+        "digests": {
+          "blake2b_256": "2eaf9b302da4c87b0beb9db4e756386a7c6c5b8003cd0e742277888d352ae91d",
+          "md5": "d7ac63a2bf03226df31a4081251d33a6",
+          "sha256": "5d7f93296ee28f68447397bf5198428c9aeeab45705a55d53a6343455dcb2c3c"
+        }
+      },
+      "sdists": [
+        {
+          "filename": "cryptography-46.0.3.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/9f/33/c00162f49c0e2fe8064a62cb92b93e50c74a72bc370ab92f86112b33ff62/cryptography-46.0.3.tar.gz",
+          "size": 749258,
+          "digests": {
+            "blake2b_256": "9f33c00162f49c0e2fe8064a62cb92b93e50c74a72bc370ab92f86112b33ff62",
+            "md5": "862c7fe5edad3a4c7946c6a7c0e3db96",
+            "sha256": "a8b17438104fed022ce745b362294d9ce35b4c2e45c1d958ad4a4b019285f4a1"
+          }
+        }
+      ],
+      "license": "Apache-2.0 OR BSD-3-Clause",
+      "license_metadata": "Apache-2.0 OR BSD-3-Clause",
+      "source_verification": "PyPI version metadata and published source hash only; source archive contents not verified",
+      "source_alternative": null
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "metadata_url": "https://pypi.org/pypi/pillow/12.3.0/json",
+      "wheel": {
+        "filename": "pillow-12.3.0-cp312-cp312-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/de/47/4845a0a6c0dbf1db8456bd9fc791f13c5ced7ced20606d08a0aacfd25b49/pillow-12.3.0-cp312-cp312-win_arm64.whl",
+        "size": 2568267,
+        "digests": {
+          "blake2b_256": "de474845a0a6c0dbf1db8456bd9fc791f13c5ced7ced20606d08a0aacfd25b49",
+          "md5": "af252b5ab4a8c040f503bff83064d2b2",
+          "sha256": "331b624368d4f1d069149002f25f44bc61c8919ce8ddb3c45bdad8f6e2d89510"
+        }
+      },
+      "sdists": [
+        {
+          "filename": "pillow-12.3.0.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/1c/3d/bb7fca845737cf9d7dbde16ed1843984665ff2e0a518f5db43e77ec540b9/pillow-12.3.0.tar.gz",
+          "size": 47025035,
+          "digests": {
+            "blake2b_256": "1c3dbb7fca845737cf9d7dbde16ed1843984665ff2e0a518f5db43e77ec540b9",
+            "md5": "c714771477fa686ba789092cf84234c7",
+            "sha256": "3b8182a766685eaa002637e28b4ec8d6b18819a0c71f579bf0dbaa5830297cce"
+          }
+        }
+      ],
+      "license": "MIT-CMU",
+      "license_metadata": "MIT-CMU",
+      "source_verification": "PyPI version metadata and published source hash only; source archive contents not verified",
+      "source_alternative": null
+    },
+    {
+      "name": "pycparser",
+      "version": "3.12",
+      "metadata_url": "https://pypi.org/pypi/pycparser/3.12/json",
+      "wheel": {
+        "filename": "pycparser-3.12-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/b6/ae/315bbeee126a769cbde43cf4908acb4b40408d8bf8bbf334dd7368d8dadf/pycparser-3.12-py3-none-any.whl",
+        "size": 62600,
+        "digests": {
+          "blake2b_256": "b6ae315bbeee126a769cbde43cf4908acb4b40408d8bf8bbf334dd7368d8dadf",
+          "md5": "ebf4e3d1e0fa02252a54e60fb71988e5",
+          "sha256": "a076f3f489b39b43ed13563a1dafe42447445bec2e294154ec5c57fcdda4c85e"
+        }
+      },
+      "sdists": [
+        {
+          "filename": "pycparser-3.12.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/cb/27/eeb9f307bf07060f3d9f9aa0fb8c15b01bdfded0a941e4b2719c7f94cacd/pycparser-3.12.tar.gz",
+          "size": 158785,
+          "digests": {
+            "blake2b_256": "cb27eeb9f307bf07060f3d9f9aa0fb8c15b01bdfded0a941e4b2719c7f94cacd",
+            "md5": "cc06f1510f0304ad53f6b1c70b847ea3",
+            "sha256": "f03387877eab82ce01bbdfd0ba7252ee55a90b1c708d5129e2ce915475cf1db6"
+          }
+        }
+      ],
+      "license": "BSD-3-Clause",
+      "license_metadata": "BSD-3-Clause",
+      "source_verification": "PyPI version metadata and published source hash only; source archive contents not verified",
+      "source_alternative": null
+    },
+    {
+      "name": "pymupdf",
+      "version": "1.28.2",
+      "metadata_url": "https://pypi.org/pypi/pymupdf/1.28.2/json",
+      "wheel": {
+        "filename": "pymupdf-1.28.2-cp310-abi3-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/e2/93/08f404a1f0155fe24137cf2d3aabd3e2b4b08c62053ed89c60f2611be3e9/pymupdf-1.28.2-cp310-abi3-win_arm64.whl",
+        "size": 19759252,
+        "digests": {
+          "blake2b_256": "e29308f404a1f0155fe24137cf2d3aabd3e2b4b08c62053ed89c60f2611be3e9",
+          "md5": "9daafb88f47fe21209f7d42ff08691e8",
+          "sha256": "ffe91a24edc75c80da2a4b62f50fc0f54632d34fc8fe4cbc48e5c7ff07cf8fb4"
+        }
+      },
+      "sdists": [
+        {
+          "filename": "pymupdf-1.28.2.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/a3/fb/b6761fa2d5266f2cdb24c3b91f4023070ab7848381417678e7a289a1d52a/pymupdf-1.28.2.tar.gz",
+          "size": 87903557,
+          "digests": {
+            "blake2b_256": "a3fbb6761fa2d5266f2cdb24c3b91f4023070ab7848381417678e7a289a1d52a",
+            "md5": "ffd24ff2579b94e30151cf0e6ed95bcc",
+            "sha256": "5e0be7908a715aa20333caddd73f1d6f01e4cd0c26e869fa2dd0b7f344da2249"
+          }
+        }
+      ],
+      "license": "Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License",
+      "license_metadata": "Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License",
+      "source_verification": "PyPI version metadata and published source hash only; source archive contents not verified",
+      "source_alternative": null,
+      "mupdf_source": "https://github.com/ArtifexSoftware/mupdf/tree/1.28.2"
+    },
+    {
+      "name": "pyside6",
+      "version": "6.11.2",
+      "metadata_url": "https://pypi.org/pypi/pyside6/6.11.2/json",
+      "wheel": {
+        "filename": "pyside6-6.11.2-cp310-abi3-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/26/b0/8e2fb01e9ee15ad29fe10d0dd2d37f503e4aa3714c9fbb07aca380618de7/pyside6-6.11.2-cp310-abi3-win_arm64.whl",
+        "size": 561768,
+        "digests": {
+          "blake2b_256": "26b08e2fb01e9ee15ad29fe10d0dd2d37f503e4aa3714c9fbb07aca380618de7",
+          "md5": "3c6f29a00f4d86e7dbd4ace636da4a57",
+          "sha256": "0444ac71d0791a19bded35f6d9a94515941f23a6eb7098ca45a1b64a338be697"
+        }
+      },
+      "sdists": [],
+      "license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "license_metadata": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "source_verification": "Wheel metadata checked; source supplied separately by Qt; source archive contents not verified",
+      "source_alternative": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/"
+    },
+    {
+      "name": "pyside6-addons",
+      "version": "6.11.2",
+      "metadata_url": "https://pypi.org/pypi/pyside6-addons/6.11.2/json",
+      "wheel": {
+        "filename": "pyside6_addons-6.11.2-cp310-abi3-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/26/60/e4b7f09343e9f29e565f488fb44c4f1fe260db481ba2c08ad8a1a7d48216/pyside6_addons-6.11.2-cp310-abi3-win_arm64.whl",
+        "size": 35807245,
+        "digests": {
+          "blake2b_256": "2660e4b7f09343e9f29e565f488fb44c4f1fe260db481ba2c08ad8a1a7d48216",
+          "md5": "0eaf85c97b960da0bac633445861287d",
+          "sha256": "d5606af369484b862b4d5741cfc179e19d2b8819c3e04d210b8188e0c9f85988"
+        }
+      },
+      "sdists": [],
+      "license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "license_metadata": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "source_verification": "Wheel metadata checked; source supplied separately by Qt; source archive contents not verified",
+      "source_alternative": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/"
+    },
+    {
+      "name": "pyside6-essentials",
+      "version": "6.11.2",
+      "metadata_url": "https://pypi.org/pypi/pyside6-essentials/6.11.2/json",
+      "wheel": {
+        "filename": "pyside6_essentials-6.11.2-cp310-abi3-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/cd/87/4dd2a6468cea600da1fcf9c7f02bc248eeaa98cdc75658e48e669d95326a/pyside6_essentials-6.11.2-cp310-abi3-win_arm64.whl",
+        "size": 58125520,
+        "digests": {
+          "blake2b_256": "cd874dd2a6468cea600da1fcf9c7f02bc248eeaa98cdc75658e48e669d95326a",
+          "md5": "7ae20508d72874ac6e260a374af1ed32",
+          "sha256": "fadd75c5c20800d64dd0a586ea8cb337c5e630aa2246df0e5105738afa46e02c"
+        }
+      },
+      "sdists": [],
+      "license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "license_metadata": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "source_verification": "Wheel metadata checked; source supplied separately by Qt; source archive contents not verified",
+      "source_alternative": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/"
+    },
+    {
+      "name": "shiboken6",
+      "version": "6.11.2",
+      "metadata_url": "https://pypi.org/pypi/shiboken6/6.11.2/json",
+      "wheel": {
+        "filename": "shiboken6-6.11.2-cp310-abi3-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/4d/b5/80c4e5aafeb8ac777cf5a1becfe87ac7197c35051df00b5f7819787e09d5/shiboken6-6.11.2-cp310-abi3-win_arm64.whl",
+        "size": 1784669,
+        "digests": {
+          "blake2b_256": "4db580c4e5aafeb8ac777cf5a1becfe87ac7197c35051df00b5f7819787e09d5",
+          "md5": "3de8ac3e450fea622456814456e966af",
+          "sha256": "97c49432488df958f0308736f3d15b6915d8826fc380af17bb4b9ec5c4a5e81b"
+        }
+      },
+      "sdists": [],
+      "license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "license_metadata": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "source_verification": "Wheel metadata checked; source supplied separately by Qt; source archive contents not verified",
+      "source_alternative": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "metadata_url": "https://pypi.org/pypi/typing-extensions/4.16.0/json",
+      "wheel": {
+        "filename": "typing_extensions-4.16.0-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl",
+        "size": 45571,
+        "digests": {
+          "blake2b_256": "49d3b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80",
+          "md5": "aaa249e7f620bbcecbcbf2b7b11fbd12",
+          "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+        }
+      },
+      "sdists": [
+        {
+          "filename": "typing_extensions-4.16.0.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/f6/cc/6253133b5bb138fc3306cebfbda2c520f545d36b5be2c7255cc528bb45d6/typing_extensions-4.16.0.tar.gz",
+          "size": 113555,
+          "digests": {
+            "blake2b_256": "f6cc6253133b5bb138fc3306cebfbda2c520f545d36b5be2c7255cc528bb45d6",
+            "md5": "7758284b826ec6ca6b722e7891bbd10d",
+            "sha256": "dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5"
+          }
+        }
+      ],
+      "license": "PSF-2.0",
+      "license_metadata": "PSF-2.0",
+      "source_verification": "PyPI version metadata and published source hash only; source archive contents not verified",
+      "source_alternative": null
+    },
+    {
+      "name": "winrt-runtime",
+      "version": "3.2.1",
+      "metadata_url": "https://pypi.org/pypi/winrt-runtime/3.2.1/json",
+      "wheel": {
+        "filename": "winrt_runtime-3.2.1-cp312-cp312-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/8a/ae/6a205d8dafc79f7c242be7f940b1e0c1971fd64ab3079bda4b514aa3d714/winrt_runtime-3.2.1-cp312-cp312-win_arm64.whl",
+        "size": 415242,
+        "digests": {
+          "blake2b_256": "8aae6a205d8dafc79f7c242be7f940b1e0c1971fd64ab3079bda4b514aa3d714",
+          "md5": "40e2f0e6eecbb4979920f54d187559ec",
+          "sha256": "14562c29a087ccad38e379e585fef333e5c94166c807bdde67b508a6261aa195"
+        }
+      },
+      "sdists": [
+        {
+          "filename": "winrt_runtime-3.2.1.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/16/dd/acdd527c1d890c8f852cc2af644aa6c160974e66631289420aa871b05e65/winrt_runtime-3.2.1.tar.gz",
+          "size": 21721,
+          "digests": {
+            "blake2b_256": "16ddacdd527c1d890c8f852cc2af644aa6c160974e66631289420aa871b05e65",
+            "md5": "bb7d8218cad0fb1c10bec887f3d289be",
+            "sha256": "c8dca19e12b234ae6c3dadf1a4d0761b51e708457492c13beb666556958801ea"
+          }
+        }
+      ],
+      "license": "MIT",
+      "license_metadata": "MIT",
+      "source_verification": "PyPI version metadata and published source hash only; source archive contents not verified",
+      "source_alternative": null,
+      "upstream_source": "https://github.com/pywinrt/pywinrt/tree/v3.2.1"
+    },
+    {
+      "name": "winrt-windows-foundation",
+      "version": "3.2.1",
+      "metadata_url": "https://pypi.org/pypi/winrt-windows-foundation/3.2.1/json",
+      "wheel": {
+        "filename": "winrt_windows_foundation-3.2.1-cp312-cp312-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/a5/70/acbcb3ef07b1b67e2de4afab9176a5282cfd775afd073efe6828dfc65ace/winrt_windows_foundation-3.2.1-cp312-cp312-win_arm64.whl",
+        "size": 109671,
+        "digests": {
+          "blake2b_256": "a570acbcb3ef07b1b67e2de4afab9176a5282cfd775afd073efe6828dfc65ace",
+          "md5": "b7b4ea403de843d2960787f8b7e0aee0",
+          "sha256": "94f4661d71cb35ebc52be7af112f2eeabdfa02cb05e0243bf9d6bd2cafaa6f37"
+        }
+      },
+      "sdists": [
+        {
+          "filename": "winrt_windows_foundation-3.2.1.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/0c/55/098ce7ea0679efcc1298b269c48768f010b6c68f90c588f654ec874c8a74/winrt_windows_foundation-3.2.1.tar.gz",
+          "size": 30485,
+          "digests": {
+            "blake2b_256": "0c55098ce7ea0679efcc1298b269c48768f010b6c68f90c588f654ec874c8a74",
+            "md5": "8c83c9b115e2bfc57bebb616d632dba1",
+            "sha256": "ad2f1fcaa6c34672df45527d7c533731fdf65b67c4638c2b4aca949f6eec0656"
+          }
+        }
+      ],
+      "license": "MIT",
+      "license_metadata": "MIT",
+      "source_verification": "PyPI version metadata and published source hash only; source archive contents not verified",
+      "source_alternative": null,
+      "upstream_source": "https://github.com/pywinrt/pywinrt/tree/v3.2.1"
+    },
+    {
+      "name": "winrt-windows-foundation-collections",
+      "version": "3.2.1",
+      "metadata_url": "https://pypi.org/pypi/winrt-windows-foundation-collections/3.2.1/json",
+      "wheel": {
+        "filename": "winrt_windows_foundation_collections-3.2.1-cp312-cp312-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/5f/3c/829273622c9b37c67b97f187b92be318404f7d33db045e31d72b7d50f54c/winrt_windows_foundation_collections-3.2.1-cp312-cp312-win_arm64.whl",
+        "size": 58793,
+        "digests": {
+          "blake2b_256": "5f3c829273622c9b37c67b97f187b92be318404f7d33db045e31d72b7d50f54c",
+          "md5": "5461a19f95645dfd06dd0b1eb6531067",
+          "sha256": "810ad4bd11ab4a74fdbcd3ed33b597ef7c0b03af73fc9d7986c22bcf3bd24f84"
+        }
+      },
+      "sdists": [
+        {
+          "filename": "winrt_windows_foundation_collections-3.2.1.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/ef/62/d21e3f1eeb8d47077887bbf0c3882c49277a84d8f98f7c12bda64d498a07/winrt_windows_foundation_collections-3.2.1.tar.gz",
+          "size": 16043,
+          "digests": {
+            "blake2b_256": "ef62d21e3f1eeb8d47077887bbf0c3882c49277a84d8f98f7c12bda64d498a07",
+            "md5": "218ce841f42148f6e723e1bfa2da434e",
+            "sha256": "0eff1ad0d8d763ad17e9e7bbd0c26a62b27215016393c05b09b046d6503ae6d5"
+          }
+        }
+      ],
+      "license": "MIT",
+      "license_metadata": "MIT",
+      "source_verification": "PyPI version metadata and published source hash only; source archive contents not verified",
+      "source_alternative": null,
+      "upstream_source": "https://github.com/pywinrt/pywinrt/tree/v3.2.1"
+    },
+    {
+      "name": "winrt-windows-services-store",
+      "version": "3.2.1",
+      "metadata_url": "https://pypi.org/pypi/winrt-windows-services-store/3.2.1/json",
+      "wheel": {
+        "filename": "winrt_windows_services_store-3.2.1-cp312-cp312-win_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/91/24/d06c31b4f713d7a572dd80a628452b3d06c661baa698d9be1c6d135761de/winrt_windows_services_store-3.2.1-cp312-cp312-win_arm64.whl",
+        "size": 162337,
+        "digests": {
+          "blake2b_256": "9124d06c31b4f713d7a572dd80a628452b3d06c661baa698d9be1c6d135761de",
+          "md5": "06131fe5eeb018b84c9de3dcf166e30f",
+          "sha256": "0d82f24c3e02aefe208509119e3b2a87ec8fb0767bd17253cf8b0d9704228b81"
+        }
+      },
+      "sdists": [
+        {
+          "filename": "winrt_windows_services_store-3.2.1.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/e2/3f/26b5fc590183eb2e8da811ab26345a50e2d9393c621613b91a30346a3d99/winrt_windows_services_store-3.2.1.tar.gz",
+          "size": 26864,
+          "digests": {
+            "blake2b_256": "e23f26b5fc590183eb2e8da811ab26345a50e2d9393c621613b91a30346a3d99",
+            "md5": "0393fc5b682e84d52e78621c28c5e704",
+            "sha256": "eb04f60cc736d94324f2b9adba65a3030aa29150a2419232fa01b7cba15be2b0"
+          }
+        }
+      ],
+      "license": "MIT",
+      "license_metadata": "MIT",
+      "source_verification": "PyPI version metadata and published source hash only; source archive contents not verified",
+      "source_alternative": null,
+      "upstream_source": "https://github.com/pywinrt/pywinrt/tree/v3.2.1"
+    }
+  ],
+  "python": {
+    "version": "3.12.10",
+    "build": "psf-nuget-3.12.10",
+    "archive": "pythonarm64.3.12.10.nupkg",
+    "url": "https://api.nuget.org/v3-flatcontainer/pythonarm64/3.12.10/pythonarm64.3.12.10.nupkg",
+    "sha256": "e397423b13b1f1db294cd822b13a695b9f95193f2dc4572ff30dd5cd83b99c37",
+    "source": "https://github.com/python/cpython/tree/v3.12.10",
+    "build_source": "https://github.com/python/cpython/tree/v3.12.10/PC/layout",
+    "license": "PSF-2.0 plus historical/included-component terms",
+    "verification": "Downloaded NuGet archive hash, Python Software Foundation Authenticode signatures on all 35 PE binaries, and installed version checked"
+  },
+  "uv": {
+    "version": "0.13.8",
+    "url": "https://github.com/astral-sh/uv/releases/download/0.13.8/uv-aarch64-pc-windows-msvc.zip",
+    "sha256": "59e6d919bed1f72035e622a7c930058f08a8931c4c78ceaf9f56e7fb74dd2c48",
+    "source": "https://github.com/astral-sh/uv/tree/0.13.8",
+    "license": "Apache-2.0 OR MIT",
+    "selected_license": "MIT",
+    "verification": "Downloaded binary archive hash/version checked; pinned upstream license texts retrieved; Cargo source/build reproduction not checked"
+  },
+  "qt_sources": {
+    "pyside_shiboken": {
+      "url": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "bytes": 18053248,
+      "sha256": "cba47efbaad1bedd529725cbc14e21f156c7a19366f07b3edfbb076ffd7afdf8",
+      "verification": "Official source listing/checksum; archive not downloaded"
+    },
+    "qt": {
+      "version": "6.11.2",
+      "directory": "https://download.qt.io/archive/qt/6.11/6.11.2/single/",
+      "verification": "Official versioned listing; archive contents and binary-to-source build correspondence not verified"
+    }
+  },
+  "native_runtime_observations": {
+    "pymupdf_version": [
+      "1.28.2",
+      "1.28.2",
+      null
+    ],
+    "Pillow_components": {
+      "pil": "12.3.0",
+      "freetype2": "2.14.3",
+      "libjpeg_turbo": "3.1.4.1",
+      "zlib_ng": "2.3.3",
+      "jpg": "8.0",
+      "jpg_2000": "2.5.4",
+      "zlib": "1.3.1.zlib-ng",
+      "libtiff": "4.7.1"
+    },
+    "cryptography_openssl": "OpenSSL 3.5.4 30 Sep 2025",
+    "python_openssl": "OpenSSL 3.0.16 11 Feb 2025",
+    "python_sqlite": "3.49.1",
+    "python_zlib": "1.3.1"
+  },
+  "native_binary_sha256": {
+    "_cffi_backend.cp312-win_arm64.pyd": "f9779d17cfa132d9e62b1a12c619c693a8a5db825aa512c3dc6e00c413cdde63",
+    "_rust.pyd": "9601170762b223b4aab3c6f6be43a2fdda3a4fe130cdf176d7d759ad26551605"
+  },
+  "legacy_scope_note": "cryptography is pinned to 46.0.3 on Windows ARM64 because 46.0.3 is the latest upstream PyPI release providing an official win_arm64 binary wheel.",
+  "limitations": [
+    "Parent package licenses do not replace embedded-component licenses",
+    "Native wheel patches and complete build inputs not fully verified",
+    "No modified Qt replacement acceptance",
+    "No assertion that stock Qt Addons exclude GPL-only modules",
+    "No byte-identical rebuild claim"
+  ],
+  "notice_sha256": "0292e84f7474b9a5adcfd3f46772efe95f8b7c9f5df412e90477cc6b4016589f",
+  "retrieved_license_texts": {
+    "uv-MIT": {
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/0.13.8/LICENSE-MIT",
+      "sha256": "860e3d7a86b84e6a7012c7a635fc64df475cebc6cce34dfeb73a5982ec58176c"
+    },
+    "uv-Apache": {
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/0.13.8/LICENSE-APACHE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "PyWinRT": {
+      "url": "https://raw.githubusercontent.com/pywinrt/pywinrt/v3.2.1/LICENSE",
+      "sha256": "6e898069e8b3c6d8d23dc70ac7067cc2b7c9db14c36df873026758db82c0891d"
+    }
+  },
+  "runtime_lock_sha256": "b30019ec8bb3ddd9c15cebb093432cd309566a6792b3ebccde821964b5054b67"
+}

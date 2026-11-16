@@ -36,14 +36,21 @@ def test_desktop_settings_and_logs_are_separate(desktop):
     assert distribution.sponsors_available()
 
 
-@pytest.mark.parametrize("kind", ["source", "packaged", "arm", "other_os"])
+@pytest.mark.parametrize("kind", ["source", "packaged", "x86", "other_os"])
 def test_invalid_desktop_environment_creates_no_profile(desktop, monkeypatch, kind):
     if kind == "source": monkeypatch.setattr(desktop_profile.sys, "frozen", False)
     if kind == "packaged": monkeypatch.setattr(desktop_profile, "is_packaged", lambda: True)
-    if kind == "arm": monkeypatch.setattr(desktop_profile.platform, "machine", lambda: "ARM64")
+    if kind == "x86": monkeypatch.setattr(desktop_profile.platform, "machine", lambda: "x86")
     if kind == "other_os": monkeypatch.setattr(desktop_profile.sys, "platform", "darwin")
     with pytest.raises(RuntimeError): desktop_profile.activate_desktop_profile("0.3.5")
     assert not (desktop / "Folimeld-Desktop").exists()
+
+
+def test_arm64_desktop_environment_is_supported(desktop, monkeypatch):
+    monkeypatch.setattr(desktop_profile.platform, "machine", lambda: "ARM64")
+    logs = desktop_profile.activate_desktop_profile("0.3.5")
+    assert desktop_profile.desktop_profile_active()
+    assert logs.parent == desktop / "Folimeld-Desktop/logs/0.3.5"
 
 
 def test_profiles_cannot_be_combined(desktop, monkeypatch):

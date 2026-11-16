@@ -12,20 +12,31 @@ from .windows_integration import is_packaged
 
 
 def validate_uv_tool_environment(root: Path | None = None) -> None:
-    resolved_root = resource_root() if root is None else root
-    profile = json.loads((resolved_root / "windows-uv-runtime.json").read_text(encoding="utf-8"))
-    if profile.get("schema_version") != 1 or profile.get("platform") != "windows-x86_64":
-        raise RuntimeError("Invalid windows-uv-runtime.json profile.")
     if sys.platform != "win32" or struct.calcsize("P") != 8:
-        raise RuntimeError("This launcher requires Windows x64.")
-    if platform.machine().lower() not in {"amd64", "x86_64"}:
-        raise RuntimeError("A native x64 Python interpreter is required.")
+        raise RuntimeError("This launcher requires 64-bit Windows.")
+    machine = platform.machine().lower()
+    resolved_root = resource_root() if root is None else root
+    if machine in {"arm64", "aarch64"}:
+        profile_name = "windows-arm64-uv-runtime.json"
+        expected_platform = "windows-arm64"
+        if not (resolved_root / profile_name).exists() and (resolved_root / "windows-uv-runtime.json").exists():
+            profile_name = "windows-uv-runtime.json"
+            expected_platform = "windows-x86_64"
+    elif machine in {"amd64", "x86_64"}:
+        profile_name = "windows-uv-runtime.json"
+        expected_platform = "windows-x86_64"
+    else:
+        raise RuntimeError("A native x64 or arm64 Python interpreter is required.")
+
+    profile = json.loads((resolved_root / profile_name).read_text(encoding="utf-8"))
+    if profile.get("schema_version") != 1 or profile.get("platform") != expected_platform:
+        raise RuntimeError(f"Invalid {profile_name} profile.")
     if platform.python_implementation() != "CPython":
         raise RuntimeError("This launcher requires CPython.")
     expected_major_minor = tuple(int(part) for part in profile["python"]["version"].split(".")[:2])
     if tuple(sys.version_info[:2]) != expected_major_minor:
         raise RuntimeError(
-            f"Python {expected_major_minor[0]}.{expected_major_minor[1]}.x is required by windows-uv-runtime.json."
+            f"Python {expected_major_minor[0]}.{expected_major_minor[1]}.x is required by {profile_name}."
         )
     if sys.prefix == sys.base_prefix:
         raise RuntimeError("An isolated uv tool virtual environment is required.")

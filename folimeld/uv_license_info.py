@@ -8,10 +8,13 @@ import sys
 
 def uv_license_documents(root: Path) -> list[tuple[str, str]]:
     """Use the pinned uv inventory; never substitute a frozen build's notices."""
-    directory = root / 'documentation' / 'windows-uv-licenses'
+    import platform
+    is_arm64 = platform.machine().lower() in {'arm64', 'aarch64'}
+    directory = root / 'documentation' / 'windows-arm64-uv-licenses' if is_arm64 and (root / 'documentation' / 'windows-arm64-uv-licenses').exists() else root / 'documentation' / 'windows-uv-licenses'
+    profile_path = root / 'windows-arm64-uv-runtime.json' if is_arm64 and (root / 'windows-arm64-uv-runtime.json').exists() else root / 'windows-uv-runtime.json'
     ledger_text = (directory / 'sources.json').read_text(encoding='utf-8')
     ledger = json.loads(ledger_text)
-    profile = json.loads((root / 'windows-uv-runtime.json').read_text(encoding='utf-8'))
+    profile = json.loads(profile_path.read_text(encoding='utf-8'))
     packages = ledger['packages']
     pins = {item['name']: item['version'] for item in packages}
     if ledger['schema_version'] != 1 or len(pins) != len(packages) or pins != profile['dependencies']:

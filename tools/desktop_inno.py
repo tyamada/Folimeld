@@ -8,20 +8,27 @@ import subprocess
 
 PRIMARY_FILES = frozenset({"ISCC.exe", "ISCmplr.dll", "ISPP.dll", "Setup.e32", "Setup.e64",
                           "SetupCustomStyle.e32", "SetupCustomStyle.e64", "SetupLdr.e32", "SetupLdr.e64"})
-SETUP_POLICY = {"SetupArchitecture": "x86", "UseSetupLdr": "x86", "WizardStyle": "classic light",
-                "ArchitecturesAllowed": "x64os", "ArchitecturesInstallIn64BitMode": "x64os", "LicenseFile": '{#PayloadRoot}\\_internal\\licenses\\microsoft-runtime\\MICROSOFT-VC-RUNTIME-14.44-EN.original.rtf'}
+SETUP_POLICY_X64 = {"SetupArchitecture": "x86", "UseSetupLdr": "x86", "WizardStyle": "classic light",
+                    "ArchitecturesAllowed": "x64os", "ArchitecturesInstallIn64BitMode": "x64os", "LicenseFile": '{#PayloadRoot}\\_internal\\licenses\\microsoft-runtime\\MICROSOFT-VC-RUNTIME-14.44-EN.original.rtf'}
+SETUP_POLICY_ARM64 = {"SetupArchitecture": "x86", "UseSetupLdr": "x86", "WizardStyle": "classic light",
+                      "ArchitecturesAllowed": "arm64", "ArchitecturesInstallIn64BitMode": "arm64", "LicenseFile": '{#PayloadRoot}\\_internal\\licenses\\microsoft-runtime\\MICROSOFT-VC-RUNTIME-14.44-EN.original.rtf'}
+SETUP_POLICY = SETUP_POLICY_X64
 SELECTED_STUBS = ["Setup.e32", "SetupLdr.e32"]
 
 
-def load_inno_manifest(root: Path):
-    raw = (root / "packaging/windows/desktop-inno.json").read_bytes()
+def load_inno_manifest(root: Path, arch: str = "x64"):
+    manifest_name = "packaging/windows/desktop-arm64-inno.json" if arch == "arm64" else "packaging/windows/desktop-inno.json"
+    runtime_name = "packaging/windows/desktop-arm64-runtime.json" if arch == "arm64" else "packaging/windows/desktop-runtime.json"
+    expected_dist = f"windows-desktop-{arch}"
+    expected_policy = SETUP_POLICY_ARM64 if arch == "arm64" else SETUP_POLICY_X64
+    raw = (root / manifest_name).read_bytes()
     manifest = json.loads(raw)
-    profile = json.loads((root / "packaging/windows/desktop-runtime.json").read_bytes())
-    if (manifest.get("schema_version") != 1 or manifest.get("distribution") != "windows-desktop-x64"
+    profile = json.loads((root / runtime_name).read_bytes())
+    if (manifest.get("schema_version") != 1 or manifest.get("distribution") != expected_dist
             or manifest.get("engine_version") != "7.1.1"
             or manifest.get("source_installer_sha256") != profile["inno_compiler"]["sha256"]
             or set(manifest.get("primary_files", [])) != PRIMARY_FILES
-            or manifest.get("setup_policy") != SETUP_POLICY
+            or manifest.get("setup_policy") != expected_policy
             or manifest.get("selected_stubs") != SELECTED_STUBS
             or not PRIMARY_FILES <= manifest.get("files", {}).keys()):
         raise ValueError("Invalid Desktop Inno manifest.")
@@ -35,9 +42,10 @@ def load_inno_manifest(root: Path):
     return manifest, hashlib.sha256(raw).hexdigest()
 
 
-def verify_setup_policy(script: Path):
+def verify_setup_policy(script: Path, arch: str = "x64"):
     section = ""
     directives = {}
+    expected_policy = SETUP_POLICY_ARM64 if arch == "arm64" else SETUP_POLICY_X64
     for raw in script.read_text(encoding="utf-8-sig").splitlines():
         line = raw.strip()
         if not line or line.startswith((";", "//")):
@@ -56,10 +64,10 @@ def verify_setup_policy(script: Path):
         if name in directives:
             raise ValueError("Duplicate Inno Setup directive.")
         directives[name] = value
-    if (any(directives.get(k.lower()) != v for k, v in SETUP_POLICY.items())
+    if (any(directives.get(k.lower()) != v for k, v in expected_policy.items())
             or "wizardstylefile" in directives or "wizardstylefiledynamicdark" in directives):
         raise ValueError("Inno stub selection no longer matches the reviewed policy.")
-    return {name: directives[name.lower()] for name in SETUP_POLICY}
+    return {name: directives[name.lower()] for name in expected_policy}
 
 
 def _engine_version(root: Path):
@@ -72,8 +80,8 @@ def _engine_version(root: Path):
     return result.stdout.strip()
 
 
-def verify_inno_inputs(input_root: Path, manifest: dict, script: Path):
-    policy = verify_setup_policy(script)
+def verify_inno_inputs(input_root: Path, manifest: dict, script: Path, arch: str = "x64"):
+    policy = verify_setup_policy(script, arch=arch)
     root = input_root.resolve(strict=True)
     actual = set()
     for path in root.rglob("*"):

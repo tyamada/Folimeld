@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "distribution": "windows-desktop-arm64",
+  "version": "14.52.37029.0",
+  "source_kind": "official-vs-redist-desktop-arm64",
+  "files": {
+    "concrt140.dll": {
+      "sha256": "5a36fff29270b6bed8529cfaa9d4804895b03ef69c894f4520d8344ba6d0eb91",
+      "bytes": 824632
+    },
+    "msvcp140_1.dll": {
+      "sha256": "8a57e9e55018aa5252448409ea99ae04c6f3d52a4dae9afa36673a218b4a6976",
+      "bytes": 54584
+    },
+    "msvcp140_2.dll": {
+      "sha256": "0d2c83596f72f8bd7dcdb83624c97d46f4ee0b39ab187cbfde671799ba525498",
+      "bytes": 480056
+    },
+    "msvcp140_codecvt_ids.dll": {
+      "sha256": "34e5a61d2b7ed9ad5e97bcc395ba1985f2b4ad6f5f6241df2cec0e31dc729da0",
+      "bytes": 41312
+    },
+    "msvcp140.dll": {
+      "sha256": "a7e89c59986607f06e0e2089da757b928ab98374f6fa7e67126a1d54e0ed5d91",
+      "bytes": 1596768
+    },
+    "vcruntime140_1.dll": {
+      "sha256": "8aff83cdb6989d2ab849429c9b08d9af0623d7c403149a7d4393ac559a4d741e",
+      "bytes": 53600
+    },
+    "vcruntime140.dll": {
+      "sha256": "c600aff0ed497ae5c0e4e5cc515b31e0c694f01e893b1b1038441235a037f7f3",
+      "bytes": 249656
+    }
+  }
+}

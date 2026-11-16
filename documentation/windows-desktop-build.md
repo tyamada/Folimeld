@@ -116,3 +116,12 @@ This change does not create reviewed-files.json or establish that all redistribu
   - Verified installed `FolimeldDesktop.exe` opens a 3-page PDF passed via CLI, matches `DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2` (-4, DPI=144), rejects duplicate launch via `Local\Folimeld-Desktop` mutex with dialog and exit code 1, and exits cleanly with code 0.
   - Verified `unins000.exe` cleanly removes `versions\0.3.5.0` and the Start menu shortcut (exit code 0) while preserving user settings under `%LOCALAPPDATA%\Folimeld-Desktop`.
 - Published [GitHub Release `windows-desktop-v0.3.5.0-preview.1`](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) (Pre-release, matching commit `b0c2ff3`) with all 12 assets, and verified unauthenticated HTTPS redownload of all 12 files with matching byte sizes and SHA-256 hashes while preserving the existing `latest` Release.
+
+## Windows 11 ARM64 onedir Build, Inno Setup Compilation, and Smart App Control (2026-11-16)
+
+- Extended `tools.desktop_build --arch arm64` and `tools.desktop_compile --arch arm64` for Windows 11 ARM64 (such as Copilot+ PCs / Surface Pro 11).
+- Pinned and verified PSF official signed CPython 3.12.10 ARM64, PyInstaller 6.22.2 (PE Machine `0xAA64`), Inno Setup 7.1.1, and Microsoft VC++ 14.52.37029.0 ARM64 CRT (`concrt140.dll`, `msvcp140*.dll`, `vcruntime140.dll` as `0xAA64`, and exception compatibility `vcruntime140_1.dll` as `0x8664`).
+- Generated a 193-file onedir payload (PE Machine `0xAA64` native `FolimeldDesktop.exe`) via `tools.desktop_build --arch arm64`.
+- Created `payload-review.json` binding all 193 payload file SHA-256 hashes, then compiled `Folimeld-Desktop-0.3.5.0-arm64-setup.exe` (39,597,571 bytes, SHA-256: `d19db07cdd56d5a72c12879ca2bfb5e126ad7532e3f431e2c07413279727633c`) with Inno Setup 7.1.1 via `tools.desktop_compile --arch arm64 --compile`.
+- **Smart App Control Note**:
+  - On Windows 11 systems where Smart App Control is enforcing, unsigned binaries downloaded from the web are blocked by policy. The source+uv and uv tool editions use the PSF-signed Python interpreter and fully pass Smart App Control. For unsigned desktop installer EXEs, users can unblock the file in its Properties dialog or use the signed Python runner entry points.

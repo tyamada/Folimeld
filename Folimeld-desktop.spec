@@ -14,9 +14,10 @@ from PyInstaller.depend.bindepend import get_imports
 root = Path(SPECPATH)
 work_dir = Path(workpath)
 work_dir.mkdir(parents=True, exist_ok=True)
-crt_manifest, crt_manifest_hash = load_crt_manifest(root)
-legal = reviewed_legal_datas(Path(os.environ["FOLIMELD_DESKTOP_LEGAL_ROOT"]))
-runtime_terms = verify_runtime_terms(Path(os.environ["FOLIMELD_DESKTOP_LEGAL_ROOT"]))
+arch = os.environ.get("FOLIMELD_DESKTOP_ARCH", "x64")
+crt_manifest, crt_manifest_hash = load_crt_manifest(root, arch=arch)
+legal = reviewed_legal_datas(Path(os.environ["FOLIMELD_DESKTOP_LEGAL_ROOT"]), arch=arch)
+runtime_terms = verify_runtime_terms(Path(os.environ["FOLIMELD_DESKTOP_LEGAL_ROOT"]), arch=arch)
 (work_dir / "desktop-runtime-terms.json").write_text(
     json.dumps(runtime_terms, indent=2), encoding="utf-8")
 a = Analysis([str(root / "launch_desktop.py")], pathex=[str(root)], binaries=[],
@@ -31,7 +32,7 @@ a.binaries, a.datas, excluded = filter_qt_payload(a.binaries, a.datas, get_impor
 (work_dir / "desktop-qt-exclusions.json").write_text(
     json.dumps(excluded, indent=2), encoding="utf-8")
 a.binaries, a.datas, crt_record = normalize_crt_payload(
-    a.binaries, a.datas, Path(os.environ["FOLIMELD_DESKTOP_CRT_ROOT"]), crt_manifest)
+    a.binaries, a.datas, Path(os.environ["FOLIMELD_DESKTOP_CRT_ROOT"]), crt_manifest, arch=arch)
 crt_record["manifest_sha256"] = crt_manifest_hash
 (work_dir / "desktop-crt-inputs.json").write_text(
     json.dumps(crt_record, indent=2), encoding="utf-8")
@@ -48,4 +49,4 @@ crt_collected = verify_collected_crt(Path(coll.name), crt_manifest)
 (work_dir / "desktop-crt-collected.json").write_text(
     json.dumps(crt_collected, indent=2), encoding="utf-8")
 
-verify_runtime_terms(Path(coll.name) / "_internal/licenses", require_reviewed=False)
+verify_runtime_terms(Path(coll.name) / "_internal/licenses", require_reviewed=False, arch=arch)

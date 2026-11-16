@@ -8,7 +8,7 @@ RUNTIME_TERMS_SHA256 = "8099dc3cf9502c335da829e5c755948a12e3e6de490eb492a99deb67
 RUNTIME_TERMS_BYTES = 9235
 
 
-def verify_runtime_terms(root: Path, *, require_reviewed=True):
+def verify_runtime_terms(root: Path, *, require_reviewed=True, arch="x64"):
     root = root.resolve(strict=True)
     original = root / RUNTIME_TERMS_RELATIVE
     path = original.resolve(strict=True)
@@ -25,7 +25,8 @@ def verify_runtime_terms(root: Path, *, require_reviewed=True):
         raise ValueError("Original Microsoft Runtime terms hash/size mismatch.")
     if require_reviewed:
         manifest = json.loads((root / "reviewed-files.json").read_bytes())
-        if (manifest.get("distribution") != "windows-desktop-x64"
+        expected_dist = f"windows-desktop-{arch}"
+        if (manifest.get("distribution") != expected_dist
                 or manifest.get("files", {}).get(RUNTIME_TERMS_RELATIVE) != digest):
             raise ValueError("Microsoft Runtime terms must be included in the reviewed legal ledger.")
     return {"relative_path": RUNTIME_TERMS_RELATIVE, "sha256": digest,

@@ -20,13 +20,17 @@ def _is_crt(value):
             or name.startswith("api-ms-win-crt-"))
 
 
-def load_crt_manifest(repo_root: Path):
-    raw = (repo_root / "packaging/windows/desktop-crt.json").read_bytes()
+def load_crt_manifest(repo_root: Path, arch: str = "x64"):
+    manifest_name = "packaging/windows/desktop-arm64-crt.json" if arch == "arm64" else "packaging/windows/desktop-crt.json"
+    raw = (repo_root / manifest_name).read_bytes()
     manifest = json.loads(raw)
+    expected_dist = f"windows-desktop-{arch}"
+    expected_source_kind = f"official-vs-redist-desktop-{arch}"
+    expected_version = "14.52.37029.0" if arch == "arm64" else "14.44.35211.0"
     if (manifest.get("schema_version") != 1
-            or manifest.get("distribution") != "windows-desktop-x64"
-            or manifest.get("source_kind") != "official-vs-redist-desktop-x64"
-            or manifest.get("version") != "14.44.35211.0"
+            or manifest.get("distribution") != expected_dist
+            or manifest.get("source_kind") != expected_source_kind
+            or manifest.get("version") != expected_version
             or set(manifest.get("files", {})) != CRT_NAMES):
         raise ValueError("Invalid Desktop CRT manifest.")
     for entry in manifest["files"].values():
@@ -36,7 +40,7 @@ def load_crt_manifest(repo_root: Path):
     return manifest, hashlib.sha256(raw).hexdigest()
 
 
-def verify_crt_inputs(input_root: Path, manifest: dict):
+def verify_crt_inputs(input_root: Path, manifest: dict, arch: str = "x64"):
     if set(manifest.get("files", {})) != CRT_NAMES:
         raise ValueError("Invalid CRT file set.")
     root = input_root.resolve(strict=True)
@@ -46,6 +50,7 @@ def verify_crt_inputs(input_root: Path, manifest: dict):
         raise ValueError("CRT directory must contain exactly the seven approved files.")
     verified = {}
     for name, expected in manifest["files"].items():
+        expected_pe = (b"PE\0\0\x64\x86" if name == "vcruntime140_1.dll" else b"PE\0\0\x64\xaa") if arch == "arm64" else b"PE\0\0\x64\x86"
         path = (root / name).resolve(strict=True)
         if not path.is_relative_to(root) or not path.is_file():
             raise ValueError("CRT input escapes its dedicated directory.")
@@ -59,15 +64,15 @@ def verify_crt_inputs(input_root: Path, manifest: dict):
             pe = source.read(6)
         if (digest != expected["sha256"] or path.stat().st_size != expected["bytes"]):
             raise ValueError(f"CRT hash/size mismatch: {name}")
-        if pe != b"PE\0\0\x64\x86":
-            raise ValueError(f"CRT must be an x64 PE: {name}")
+        if pe != expected_pe:
+            raise ValueError(f"CRT must be an {arch} PE: {name}")
         verified[name] = {"path": str(path), "sha256": digest, "bytes": expected["bytes"]}
     return verified
 
 
-def normalize_crt_payload(binaries, datas, input_root: Path, manifest: dict):
+def normalize_crt_payload(binaries, datas, input_root: Path, manifest: dict, arch: str = "x64"):
     # Recheck immediately before collection, even if preflight already succeeded.
-    verified = verify_crt_inputs(input_root, manifest)
+    verified = verify_crt_inputs(input_root, manifest, arch=arch)
     removed = []
     retained = [[], []]
     for rows, target in zip((binaries, datas), retained):

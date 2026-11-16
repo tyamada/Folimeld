@@ -16,8 +16,8 @@ _settings_file: Path | None = None
 def validate_desktop_environment() -> None:
     if (sys.platform != "win32" or not getattr(sys, "frozen", False)
             or struct.calcsize("P") != 8
-            or is_packaged() or platform.machine().lower() not in {"amd64", "x86_64"}):
-        raise RuntimeError("Folimeld Desktop requires an unpackaged frozen Windows x64 process.")
+            or is_packaged() or platform.machine().lower() not in {"amd64", "x86_64", "arm64", "aarch64"}):
+        raise RuntimeError("Folimeld Desktop requires an unpackaged frozen 64-bit Windows process.")
 
 
 def activate_desktop_profile(version: str) -> Path:

@@ -44,19 +44,26 @@ def test_uv_tool_settings_and_logs_are_separate(uv_tool):
     assert distribution.sponsors_available()
 
 
-@pytest.mark.parametrize("kind", ["frozen", "packaged", "arm", "other_os"])
+@pytest.mark.parametrize("kind", ["frozen", "packaged", "x86", "other_os"])
 def test_invalid_uv_tool_environment_creates_no_profile(uv_tool, monkeypatch, kind):
     if kind == "frozen":
         monkeypatch.setattr(uv_tool_profile.sys, "frozen", True, raising=False)
     if kind == "packaged":
         monkeypatch.setattr(uv_tool_profile, "is_packaged", lambda: True)
-    if kind == "arm":
-        monkeypatch.setattr(uv_tool_profile.platform, "machine", lambda: "ARM64")
+    if kind == "x86":
+        monkeypatch.setattr(uv_tool_profile.platform, "machine", lambda: "x86")
     if kind == "other_os":
         monkeypatch.setattr(uv_tool_profile.sys, "platform", "linux")
     with pytest.raises(RuntimeError):
         uv_tool_profile.activate_uv_tool_profile("0.3.5")
     assert not (uv_tool / "Folimeld-UV-Tool").exists()
+
+
+def test_arm64_uv_tool_environment_is_supported(uv_tool, monkeypatch):
+    monkeypatch.setattr(uv_tool_profile.platform, "machine", lambda: "ARM64")
+    logs = uv_tool_profile.activate_uv_tool_profile("0.3.5")
+    assert uv_tool_profile.uv_tool_profile_active()
+    assert logs.parent == uv_tool / "Folimeld-UV-Tool/logs/0.3.5"
 
 
 def test_profiles_cannot_be_combined_with_uv_tool(uv_tool, monkeypatch):

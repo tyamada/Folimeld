@@ -19,11 +19,12 @@ from tools.desktop_inno import load_inno_manifest, verify_inno_inputs
 from tools.desktop_runtime_terms import verify_runtime_terms
 
 
-def reviewed_legal_datas(root: Path) -> list[tuple[str, str]]:
+def reviewed_legal_datas(root: Path, arch: str = "x64") -> list[tuple[str, str]]:
     manifest = json.loads((root / "reviewed-files.json").read_text(encoding="utf-8"))
     required = {"Installed-packages.txt", "THIRD-PARTY-NOTICES.txt", "DEPENDENCY-SOURCES.json"}
     files = manifest.get("files", {})
-    if manifest.get("distribution") != "windows-desktop-x64" or not required <= files.keys():
+    expected_dist = f"windows-desktop-{arch}"
+    if manifest.get("distribution") != expected_dist or not required <= files.keys():
         raise ValueError("Desktop-specific reviewed license/source records are required.")
     result = []
     for name, expected in sorted(files.items()):
@@ -65,11 +66,13 @@ def _validate_wheel_input(name: str, pin: str, wheel: dict, kind: str) -> None:
         raise ValueError(error)
 
 
-def verify_desktop_requirements(root: Path, profile: dict) -> dict[str, str]:
+def verify_desktop_requirements(root: Path, profile: dict, arch: str = "x64") -> dict[str, str]:
     """Accept only the two hash-locked direct-wheel lists; no pip execution."""
     verified = {}
-    for section, filename in (("wheels", "desktop-runtime-requirements.txt"),
-                              ("tool_wheels", "desktop-tools-requirements.txt")):
+    runtime_req = "desktop-arm64-runtime-requirements.txt" if arch == "arm64" else "desktop-runtime-requirements.txt"
+    tools_req = "desktop-arm64-tools-requirements.txt" if arch == "arm64" else "desktop-tools-requirements.txt"
+    for section, filename in (("wheels", runtime_req),
+                              ("tool_wheels", tools_req)):
         path = root / "packaging/windows" / filename
         raw = path.read_bytes()
         entries = {}
@@ -102,13 +105,16 @@ def verify_desktop_requirements(root: Path, profile: dict) -> dict[str, str]:
     return verified
 
 
-def load_desktop_inputs(root: Path) -> tuple[dict, dict, str]:
-    path = root / "packaging/windows/desktop-runtime.json"
+def load_desktop_inputs(root: Path, arch: str = "x64") -> tuple[dict, dict, str]:
+    manifest_name = "packaging/windows/desktop-arm64-runtime.json" if arch == "arm64" else "packaging/windows/desktop-runtime.json"
+    path = root / manifest_name
     data = path.read_bytes()
     profile = json.loads(data)
+    expected_dist = f"windows-desktop-{arch}"
+    expected_plat = "windows-arm64" if arch == "arm64" else "windows-x86_64"
     if (profile.get("schema_version") != 1
-            or profile.get("distribution") != "windows-desktop-x64"
-            or profile.get("platform") != "windows-x86_64"
+            or profile.get("distribution") != expected_dist
+            or profile.get("platform") != expected_plat
             or "uv" in profile):
         raise ValueError("Invalid Desktop fixed inputs.")
     if set(profile["wheels"]) != set(profile["dependencies"]):
@@ -119,7 +125,7 @@ def load_desktop_inputs(root: Path) -> tuple[dict, dict, str]:
         raise ValueError("Incomplete Desktop tool wheel ledger.")
     for name, pin in profile["build_tools"].items():
         _validate_wheel_input(name, pin, profile["tool_wheels"][name], "tool")
-    verify_desktop_requirements(root, profile)
+    verify_desktop_requirements(root, profile, arch=arch)
     pins = dict(profile["dependencies"], **profile["build_tools"])
     return profile, pins, hashlib.sha256(data).hexdigest()
 
@@ -154,25 +160,28 @@ def main() -> int:
     parser.add_argument("--input-root", type=Path, required=True)
     parser.add_argument("--crt-root", type=Path, required=True)
     parser.add_argument("--inno-root", type=Path, required=True)
+    parser.add_argument("--arch", choices=["x64", "arm64"], default="x64")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
+    expected_machine = {"arm64", "aarch64"} if args.arch == "arm64" else {"amd64", "x86_64"}
     if (sys.platform != "win32" or struct.calcsize("P") != 8
-            or platform.machine().lower() not in {"amd64", "x86_64"}):
-        raise RuntimeError("Build on Windows x64.")
-    profile, pins, profile_hash = load_desktop_inputs(root)
-    requirements_hashes = verify_desktop_requirements(root, profile)
+            or platform.machine().lower() not in expected_machine):
+        raise RuntimeError(f"Build on Windows {args.arch}.")
+    profile, pins, profile_hash = load_desktop_inputs(root, arch=args.arch)
+    requirements_hashes = verify_desktop_requirements(root, profile, arch=args.arch)
     if platform.python_version() != profile["python"]["version"]:
-        raise RuntimeError("Desktop build requires CPython 3.12.16.")
+        raise RuntimeError(f"Desktop build requires CPython {profile['python']['version']}.")
     for name, pin in pins.items():
         if version(name) != pin:
             raise RuntimeError(f"Build dependency drift: {name}")
     verified_archives = verify_desktop_archives(profile, args.input_root)
-    crt_manifest, crt_manifest_hash = load_crt_manifest(root)
-    crt_inputs = verify_crt_inputs(args.crt_root, crt_manifest)
-    inno_manifest, inno_manifest_hash = load_inno_manifest(root)
-    inno_inputs = verify_inno_inputs(args.inno_root, inno_manifest, root / "packaging/windows/Folimeld-desktop.iss")
-    reviewed_legal_datas(args.legal_root)
-    runtime_terms = verify_runtime_terms(args.legal_root)
+    crt_manifest, crt_manifest_hash = load_crt_manifest(root, arch=args.arch)
+    crt_inputs = verify_crt_inputs(args.crt_root, crt_manifest, arch=args.arch)
+    inno_manifest, inno_manifest_hash = load_inno_manifest(root, arch=args.arch)
+    iss_file = root / "packaging/windows/Folimeld-desktop-arm64.iss" if args.arch == "arm64" else root / "packaging/windows/Folimeld-desktop.iss"
+    inno_inputs = verify_inno_inputs(args.inno_root, inno_manifest, iss_file, arch=args.arch)
+    reviewed_legal_datas(args.legal_root, arch=args.arch)
+    runtime_terms = verify_runtime_terms(args.legal_root, arch=args.arch)
     if not args.version_info.is_file():
         raise FileNotFoundError(args.version_info)
     output = args.output.resolve()
@@ -181,6 +190,7 @@ def main() -> int:
     output.mkdir(parents=True)
     environment = build_environment(os.environ, executable=sys.executable,
         base_prefix=sys.base_prefix, git_executable=shutil.which("git"))
+    environment["FOLIMELD_DESKTOP_ARCH"] = args.arch
     environment["FOLIMELD_DESKTOP_CRT_ROOT"] = str(args.crt_root.resolve())
     environment["FOLIMELD_DESKTOP_LEGAL_ROOT"] = str(args.legal_root.resolve())
     environment["FOLIMELD_DESKTOP_VERSION_INFO"] = str(args.version_info.resolve())

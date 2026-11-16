@@ -1,8 +1,8 @@
-# Windows 11 x86_64 `uv tool install` 版（Pure Python Wheel）仕様・導入手順
+# Windows 11 x86_64／ARM64 `uv tool install` 版（Pure Python Wheel）仕様・導入手順
 
 [English](windows-uv-tool.md)
 
-Windows 11 x86_64 向けに GitHub Releases で配布する Pure Python Wheel（`folimeld-<version>-py3-none-any.whl`）を `uv tool install` で導入する配布形態の仕様と手順です。Microsoft Store 版を標準配布として維持し、既存の Desktop 版・ソース＋uv 版とも設定・ログ・起動入口を分離します。
+Windows 11 x86_64 および Windows 11 ARM64（Surface Pro 11等のCopilot+ PC）向けに GitHub Releases で配布する Pure Python Wheel（`folimeld-<version>-py3-none-any.whl`）を `uv tool install` で導入する配布形態の仕様と手順です。Microsoft Store 版を標準配布として維持し、既存の Desktop 版・ソース＋uv 版とも設定・ログ・起動入口を分離します。
 
 ## 1. Windows 各エディションとの区別
 
@@ -12,17 +12,21 @@ Windows 11 x86_64 向けに GitHub Releases で配布する Pure Python Wheel（
 | **設定保存先** | MSIX 仮想化レジストリ (`QSettings()`) | `%LOCALAPPDATA%\Folimeld-Desktop\settings\settings.ini` | `%LOCALAPPDATA%\Folimeld-UV\settings\settings.ini` | `%LOCALAPPDATA%\Folimeld-UV-Tool\settings\settings.ini` |
 | **ログ保存先** | `AppLocalDataLocation/logs/folimeld.log` (`strict=False`) | `%LOCALAPPDATA%\Folimeld-Desktop\logs\<版>\<起動ID>\folimeld.log` (`strict=True`) | `%LOCALAPPDATA%\Folimeld-UV\logs\<版>\<起動ID>\folimeld.log` (`strict=True`) | `%LOCALAPPDATA%\Folimeld-UV-Tool\logs\<版>\<起動ID>\folimeld.log` (`strict=True`) |
 | **Mutex** | なし | `Local\Folimeld-Desktop` | なし | `Local\Folimeld-UV-Tool` |
-| **環境検証** | `is_packaged() == True` | `win32` / `x64` / `frozen` / 非 MSIX | `win32` / `x64` / CPython 3.12.16（パッチ一致） / 非 frozen / 非 MSIX / 専用 `.venv` / lock SHA-256 & 依存14件一致 | `win32` / `x64` / **CPython 3.12.x（マイナー一致）** / 非 frozen / 非 MSIX / 仮想環境 (`sys.prefix != sys.base_prefix`) / **依存14件完全一致** |
+| **環境検証** | `is_packaged() == True` | `win32` / `x64`または`ARM64` / `frozen` / 非 MSIX | `win32` / `x64`または`ARM64` / CPython 3.12（パッチ一致） / 非 frozen / 非 MSIX / 専用 `.venv` / lock SHA-256 & 依存14件一致 | `win32` / `x64`または`ARM64` / **CPython 3.12.x（マイナー一致）** / 非 frozen / 非 MSIX / 仮想環境 (`sys.prefix != sys.base_prefix`) / **依存14件完全一致** |
 | **Sponsors / Store支援** | `StoreSupport` 有効、Sponsors 非表示 | `StoreSupport` 無効、Sponsors 表示 | `StoreSupport` 無効、Sponsors 表示 | `StoreSupport` 無効、Sponsors 表示 |
 | **Open With 登録** | MSIX マニフェスト | 非登録 | 非登録 | 非登録 |
 | **リソース解決** | `sys._MEIPASS` | `sys._MEIPASS` (`_internal/`) | リポジトリルート | パッケージ内 `folimeld/_resources/` |
 
 ## 2. ビルドと配布物のステージング
 
-`tools/uv_tool_build.py` は `pyproject.toml`、`folimeld/__init__.py`、`windows-uv-runtime.json`、`requirements-windows-uv.lock` の整合を検査した上で、決定論的な Pure Python Wheel と配布用ファイルを新しい出力ディレクトリへ生成します。
+`tools/uv_tool_build.py` は `pyproject.toml`、`folimeld/__init__.py`、ランタイムプロファイル（`windows-uv-runtime.json` または `windows-arm64-uv-runtime.json`）、ロックファイル（`requirements-windows-uv.lock` または `requirements-windows-arm64-uv.lock`）の整合を検査した上で、決定論的な Pure Python Wheel と配布用ファイルを新しい出力ディレクトリへ生成します。
 
 ```powershell
-python -m tools.uv_tool_build --output .\dist\uv-tool-release
+# x64 版ステージング
+python -m tools.uv_tool_build --output .\dist\uv-tool-release --arch x64
+
+# ARM64 版ステージング
+python -m tools.uv_tool_build --output .\dist\uv-tool-arm64-release --arch arm64
 ```
 
 生成される配布物（[公開 Release `windows-uv-tool-v0.3.5-preview.1`](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1) / コミット `7aee32a74fe51cf20657f8ff9fd2726790db43a9`）：

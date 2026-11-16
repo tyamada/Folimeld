@@ -46,6 +46,9 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | Windows 11 | x64 | Desktop インストーラー / 0.3.5.0（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) |
 | Windows 11 | x64 | ソース＋uv / 0.3.5（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) |
 | Windows 11 | x64 | uv tool install (Wheel) / 0.3.5（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1) |
+| Windows 11 | arm64 | Desktop インストーラー / 0.3.5.0（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1) |
+| Windows 11 | arm64 | ソース＋uv / 0.3.5（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.5-preview.1) |
+| Windows 11 | arm64 | uv tool install (Wheel) / 0.3.5（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.5-preview.1) |
 | macOS 15以降 | Apple Silicon（arm64） | Homebrew / 0.3.3（ソース配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.3) |
 | Ubuntu 24.04 | amd64 / arm64 | DEB・Snap / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
 | Debian 13 | amd64 / arm64 | DEB / 0.3.4 | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) |
@@ -228,6 +231,23 @@ if ((Get-FileHash -LiteralPath .\Folimeld-Desktop-0.3.5.0-x64-setup.exe -Algorit
     throw 'Installer SHA-256 mismatch. Stop without running it.'
 }
 ```
+
+### Windows 11 ARM64 向けプレビュー（Copilot+ PC / Snapdragon X Elite）
+
+Surface Pro 11等のWindows 11 ARM64向けに、3種類のプレビューパッケージを試験公開しています：
+
+1. [**Windows 11 ARM64 ソース＋uv版プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.5-preview.1)
+   - Python Software Foundation（PSF）公式署名済みのCPython 3.12.10 ARM64とARM64ネイティブuv 0.13.8を使用。`install_uv.ps1`で専用環境を構築して起動します。
+2. [**Windows 11 ARM64 uv tool install 版プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.5-preview.1)
+   - Pure Python Wheel（`folimeld-0.3.5-py3-none-any.whl`）とARM64専用ロックファイル（`requirements-windows-arm64-uv.lock`）により、`uv tool install`で導入します。
+3. [**Windows 11 ARM64 Desktop インストーラー版プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1)
+   - PyInstaller 6.22.2（ARM64ネイティブPE Machine `0xAA64`）＋Inno Setup 7.1.1によるGUIインストーラー（`Folimeld-Desktop-0.3.5.0-arm64-setup.exe`）。
+
+> [!NOTE]
+> **Windows 11 Smart App Control（スマート アプリ コントロール）に関するご案内**
+> Windows 11でSmart App Controlが有効（強制）な環境では、Webからダウンロードされた未署名バイナリに対してブロック通知が表示される場合があります。
+> - **ソース＋uv版** および **uv tool install版** は、有効なAuthenticode署名を持つPSF公式CPython 3.12.10ランタイムを使用するため、Smart App Controlのブロック通知を誘発せず安全に動作します。
+> - **Desktopインストーラー版（未署名EXE）** を実行する場合、Smart App Controlによって起動が制限されることがあります。その場合はファイルのプロパティで「許可する」を選択するか、署名済みPythonを使用するソース＋uv版またはuv tool install版をご利用ください。
 
 ### macOS版をHomebrewでインストール
 

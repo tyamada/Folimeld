@@ -16,8 +16,8 @@ _settings_file: Path | None = None
 def validate_uv_tool_runtime_context() -> None:
     if (sys.platform != "win32" or getattr(sys, "frozen", False)
             or struct.calcsize("P") != 8
-            or is_packaged() or platform.machine().lower() not in {"amd64", "x86_64"}):
-        raise RuntimeError("Folimeld uv tool requires an unpackaged unfrozen Windows x64 process.")
+            or is_packaged() or platform.machine().lower() not in {"amd64", "x86_64", "arm64", "aarch64"}):
+        raise RuntimeError("Folimeld uv tool requires an unpackaged unfrozen 64-bit Windows process.")
 
 
 def activate_uv_tool_profile(version: str) -> Path:

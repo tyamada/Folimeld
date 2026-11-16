@@ -1,8 +1,8 @@
-# Windows 11 x86_64 `uv tool install` Edition (Pure Python Wheel) Specification and Guide
+# Windows 11 x86_64 and ARM64 `uv tool install` Edition (Pure Python Wheel) Specification and Guide
 
 [日本語](windows-uv-tool_ja.md)
 
-This document describes the specification and installation procedure for the Pure Python Wheel (`folimeld-<version>-py3-none-any.whl`) distributed via GitHub Releases for Windows 11 x86_64 and installed with `uv tool install`. The Microsoft Store edition remains the standard Windows distribution, and this edition keeps its settings, logs, and entry points strictly isolated from the Store, Desktop, and source+uv editions.
+This document describes the specification and installation procedure for the Pure Python Wheel (`folimeld-<version>-py3-none-any.whl`) distributed via GitHub Releases for Windows 11 x86_64 and Windows 11 ARM64 (such as Copilot+ PCs / Surface Pro 11) and installed with `uv tool install`. The Microsoft Store edition remains the standard Windows distribution, and this edition keeps its settings, logs, and entry points strictly isolated from the Store, Desktop, and source+uv editions.
 
 ## 1. Distinction Across Windows Editions
 
@@ -12,17 +12,21 @@ This document describes the specification and installation procedure for the Pur
 | **Settings Path** | MSIX virtualized registry (`QSettings()`) | `%LOCALAPPDATA%\Folimeld-Desktop\settings\settings.ini` | `%LOCALAPPDATA%\Folimeld-UV\settings\settings.ini` | `%LOCALAPPDATA%\Folimeld-UV-Tool\settings\settings.ini` |
 | **Logs Path** | `AppLocalDataLocation/logs/folimeld.log` (`strict=False`) | `%LOCALAPPDATA%\Folimeld-Desktop\logs\<ver>\<session>\folimeld.log` (`strict=True`) | `%LOCALAPPDATA%\Folimeld-UV\logs\<ver>\<session>\folimeld.log` (`strict=True`) | `%LOCALAPPDATA%\Folimeld-UV-Tool\logs\<ver>\<session>\folimeld.log` (`strict=True`) |
 | **Mutex** | None | `Local\Folimeld-Desktop` | None | `Local\Folimeld-UV-Tool` |
-| **Environment Check** | `is_packaged() == True` | `win32` / `x64` / `frozen` / not MSIX | `win32` / `x64` / CPython 3.12.16 (exact patch) / unfrozen / not MSIX / dedicated `.venv` / lock SHA-256 & 14 exact deps | `win32` / `x64` / **CPython 3.12.x (minor match)** / unfrozen / not MSIX / virtual environment (`sys.prefix != sys.base_prefix`) / **14 exact deps** |
+| **Environment Check** | `is_packaged() == True` | `win32` / `x64` or `ARM64` / `frozen` / not MSIX | `win32` / `x64` or `ARM64` / CPython 3.12 (patch match) / unfrozen / not MSIX / dedicated `.venv` / lock SHA-256 & 14 exact deps | `win32` / `x64` or `ARM64` / **CPython 3.12.x (minor match)** / unfrozen / not MSIX / virtual environment (`sys.prefix != sys.base_prefix`) / **14 exact deps** |
 | **Sponsors / Store Support** | `StoreSupport` enabled, Sponsors hidden | `StoreSupport` disabled, Sponsors enabled | `StoreSupport` disabled, Sponsors enabled | `StoreSupport` disabled, Sponsors enabled |
 | **Open With Registration** | MSIX manifest | Skipped | Skipped | Skipped |
 | **Resource Resolution** | `sys._MEIPASS` | `sys._MEIPASS` (`_internal/`) | Repository root | Packaged `folimeld/_resources/` |
 
 ## 2. Building and Staging Release Artifacts
 
-`tools/uv_tool_build.py` verifies consistency across `pyproject.toml`, `folimeld/__init__.py`, `windows-uv-runtime.json`, and `requirements-windows-uv.lock`, then builds a deterministic Pure Python Wheel and stages companion files into a new output directory.
+`tools/uv_tool_build.py` verifies consistency across `pyproject.toml`, `folimeld/__init__.py`, runtime profile (`windows-uv-runtime.json` or `windows-arm64-uv-runtime.json`), and lock file (`requirements-windows-uv.lock` or `requirements-windows-arm64-uv.lock`), then builds a deterministic Pure Python Wheel and stages companion files into a new output directory.
 
 ```powershell
-python -m tools.uv_tool_build --output .\dist\uv-tool-release
+# x64 staging
+python -m tools.uv_tool_build --output .\dist\uv-tool-release --arch x64
+
+# ARM64 staging
+python -m tools.uv_tool_build --output .\dist\uv-tool-arm64-release --arch arm64
 ```
 
 Staged and published artifacts ([GitHub Release `windows-uv-tool-v0.3.5-preview.1`](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1) / commit `7aee32a74fe51cf20657f8ff9fd2726790db43a9`):

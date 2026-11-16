@@ -9,21 +9,32 @@ import sys
 
 
 def validate_environment(root: Path) -> None:
-    profile = json.loads((root / 'windows-uv-runtime.json').read_text(encoding='utf-8'))
-    lock_text = (root / 'requirements-windows-uv.lock').read_text(encoding='utf-8')
+    if sys.platform != 'win32' or struct.calcsize('P') != 8:
+        raise RuntimeError('This launcher requires 64-bit Windows.')
+    import platform
+    machine = platform.machine().lower()
+    if machine in {'arm64', 'aarch64'}:
+        runtime_name = 'windows-arm64-uv-runtime.json'
+        lock_name = 'requirements-windows-arm64-uv.lock'
+        if not (root / runtime_name).exists() and (root / 'windows-uv-runtime.json').exists():
+            runtime_name = 'windows-uv-runtime.json'
+            lock_name = 'requirements-windows-uv.lock'
+    elif machine in {'amd64', 'x86_64'}:
+        runtime_name = 'windows-uv-runtime.json'
+        lock_name = 'requirements-windows-uv.lock'
+    else:
+        raise RuntimeError('A native x64 or arm64 Python interpreter is required.')
+
+    profile = json.loads((root / runtime_name).read_text(encoding='utf-8'))
+    lock_text = (root / lock_name).read_text(encoding='utf-8')
     lock_hash = hashlib.sha256(lock_text.encode('utf-8')).hexdigest()
     if lock_hash != profile['lock_sha256']:
-        raise RuntimeError('The dependency lock differs from windows-uv-runtime.json.')
-    if sys.platform != 'win32' or struct.calcsize('P') != 8:
-        raise RuntimeError('This launcher requires Windows x64.')
-    import platform
-    if platform.machine().lower() not in {'amd64', 'x86_64'}:
-        raise RuntimeError('A native x64 Python interpreter is required.')
+        raise RuntimeError(f'The dependency lock differs from {runtime_name}.')
     if platform.python_implementation() != 'CPython':
         raise RuntimeError('This launcher requires CPython.')
     actual_python = '.'.join(map(str, sys.version_info[:3]))
     if actual_python != profile['python']['version']:
-        raise RuntimeError('Python version differs from windows-uv-runtime.json.')
+        raise RuntimeError(f'Python version differs from {runtime_name}.')
     if Path(sys.prefix).resolve() != (root / '.venv').resolve() or sys.prefix == sys.base_prefix:
         raise RuntimeError('Use this release directory\'s .venv Python interpreter.')
     from folimeld.windows_integration import is_packaged

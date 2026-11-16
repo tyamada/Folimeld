@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 from pathlib import Path, PurePosixPath
+import platform
 import re
 import struct
 import subprocess
@@ -68,7 +69,7 @@ def _x86_or_x64(path, machine):
 
 
 def verify_compile_inputs(repo, *, payload_root, payload_review, legal_root, inno_root,
-                          output, version, output_created=False):
+                          output, version, arch="x64", output_created=False):
     if (not re.fullmatch(r"[0-9]+(?:\.[0-9]+){3}", version)
             or any(int(x) > 65535 for x in version.split("."))):
         raise ValueError("Use a four-part numeric Desktop version.")
@@ -90,17 +91,23 @@ def verify_compile_inputs(repo, *, payload_root, payload_review, legal_root, inn
         raise ValueError("Installer output directory changed.")
     # Never create review records. Their contents must come from an actual review.
     review = json.loads(review_path.read_bytes())
-    if (review.get("schema_version") != 1 or review.get("distribution") != "windows-desktop-x64"
+    expected_dist = f"windows-desktop-{arch}"
+    if (review.get("schema_version") != 1 or review.get("distribution") != expected_dist
             or review.get("status") != "reviewed-for-desktop-compile" or review.get("version") != version):
         raise ValueError("An explicit matching Desktop payload review is required.")
-    reviewed_legal_datas(legal)
-    runtime_terms = verify_runtime_terms(legal)
+    reviewed_legal_datas(legal, arch=arch)
+    runtime_terms = verify_runtime_terms(legal, arch=arch)
     legal_manifest = legal / "reviewed-files.json"
+    inno_manifest_name = "packaging/windows/desktop-arm64-inno.json" if arch == "arm64" else "packaging/windows/desktop-inno.json"
+    crt_manifest_name = "packaging/windows/desktop-arm64-crt.json" if arch == "arm64" else "packaging/windows/desktop-crt.json"
+    runtime_manifest_name = "packaging/windows/desktop-arm64-runtime.json" if arch == "arm64" else "packaging/windows/desktop-runtime.json"
+    iss_file_name = "packaging/windows/Folimeld-desktop-arm64.iss" if arch == "arm64" else "packaging/windows/Folimeld-desktop.iss"
+
     bindings = {"legal_manifest_sha256": _sha(legal_manifest),
-                "inno_manifest_sha256": _sha(repo / "packaging/windows/desktop-inno.json"),
-                "crt_manifest_sha256": _sha(repo / "packaging/windows/desktop-crt.json"),
-                "runtime_manifest_sha256": _sha(repo / "packaging/windows/desktop-runtime.json"),
-                "setup_script_sha256": _sha(repo / "packaging/windows/Folimeld-desktop.iss")}
+                "inno_manifest_sha256": _sha(repo / inno_manifest_name),
+                "crt_manifest_sha256": _sha(repo / crt_manifest_name),
+                "runtime_manifest_sha256": _sha(repo / runtime_manifest_name),
+                "setup_script_sha256": _sha(repo / iss_file_name)}
     for name, actual in bindings.items():
         if _digest(review.get(name)) != actual:
             raise ValueError(f"Reviewed binding changed: {name}")
@@ -111,29 +118,31 @@ def verify_compile_inputs(repo, *, payload_root, payload_review, legal_root, inn
     required = {"FolimeldDesktop.exe", "_internal/python312.dll", "_internal/LICENSE"}
     if not required <= actual.keys() or actual["_internal/LICENSE"] != _sha(repo / "LICENSE"):
         raise ValueError("Missing Desktop runtime or application license.")
-    _x86_or_x64(payload / "FolimeldDesktop.exe", 0x8664)
+    exe_machine = 0xAA64 if arch == "arm64" else 0x8664
+    _x86_or_x64(payload / "FolimeldDesktop.exe", exe_machine)
     legal_files = json.loads(legal_manifest.read_bytes())["files"]
     packaged_legal = {"_internal/licenses/" + _relative(name): _digest(value)
                       for name, value in legal_files.items()}
     if {name: value for name, value in actual.items() if name.startswith("_internal/licenses/")} != packaged_legal:
         raise ValueError("Packaged legal files do not match reviewed legal inputs.")
-    crt_manifest, _ = load_crt_manifest(repo)
+    crt_manifest, _ = load_crt_manifest(repo, arch=arch)
     crt = verify_collected_crt(payload, crt_manifest)
     # Hash payload/legal inputs before any tool process, and recheck the whole tool tree.
-    inno_manifest, _ = load_inno_manifest(repo)
-    tools = verify_inno_inputs(inno, inno_manifest, repo / "packaging/windows/Folimeld-desktop.iss")
-    return {"version": version, "payload_root": str(payload), "legal_root": str(legal),
+    inno_manifest, _ = load_inno_manifest(repo, arch=arch)
+    tools = verify_inno_inputs(inno, inno_manifest, repo / iss_file_name, arch=arch)
+    return {"version": version, "arch": arch, "payload_root": str(payload), "legal_root": str(legal),
             "inno_root": str(inno), "output": str(destination), "bindings": bindings,
             "payload_review_sha256": _sha(review_path), "payload_files": actual,
             "crt": crt, "inno": tools, "runtime_terms": runtime_terms}
 
 
 def compiler_command(repo, state):
+    iss_file_name = "packaging/windows/Folimeld-desktop-arm64.iss" if state.get("arch") == "arm64" else "packaging/windows/Folimeld-desktop.iss"
     return [str(Path(state["inno_root"]) / "ISCC.exe"), "--no-ide-signtools",
             "--define=DesktopVersion=" + state["version"],
             "--define=PayloadRoot=" + _safe_argument(state["payload_root"]),
             "--define=OutputRoot=" + _safe_argument(state["output"]),
-            "--define=PayloadReviewed=1", str(repo / "packaging/windows/Folimeld-desktop.iss")]
+            "--define=PayloadReviewed=1", str(repo / iss_file_name)]
 
 
 def compile_reviewed(repo, **inputs):
@@ -162,7 +171,8 @@ def compile_reviewed(repo, **inputs):
         after = verify_compile_inputs(repo, output_created=True, **inputs)
         if after != before:
             raise ValueError("Compile inputs changed during ISCC execution.")
-        installer = destination / ("Folimeld-Desktop-" + before["version"] + "-x64-setup.exe")
+        installer_name = "Folimeld-Desktop-" + before["version"] + "-" + before.get("arch", "x64") + "-setup.exe"
+        installer = destination / installer_name
         if not installer.is_file() or installer.is_symlink() or not installer.resolve().is_relative_to(destination):
             raise ValueError("Expected installer is missing or linked.")
         if {p.name for p in destination.iterdir()} != {"compile-inputs.json", "iscc.log", installer.name}:
@@ -186,12 +196,14 @@ def main():
     for name in ("payload-root", "payload-review", "legal-root", "inno-root", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--version", required=True)
+    parser.add_argument("--arch", choices=["x64", "arm64"], default="x64")
     parser.add_argument("--compile", action="store_true")
     args = vars(parser.parse_args())
     compile_requested = args.pop("compile")
     repo = Path(__file__).resolve().parents[1]
-    if compile_requested and (sys.platform != "win32" or struct.calcsize("P") != 8):
-        parser.error("Compile only on Windows x64.")
+    expected_machine = {"arm64", "aarch64"} if args.get("arch") == "arm64" else {"amd64", "x86_64"}
+    if compile_requested and (sys.platform != "win32" or struct.calcsize("P") != 8 or platform.machine().lower() not in expected_machine):
+        parser.error(f"Compile only on Windows {args.get('arch')}.")
     result = compile_reviewed(repo, **args) if compile_requested else verify_compile_inputs(repo, **args)
     print(json.dumps(result, indent=2))
     return 0

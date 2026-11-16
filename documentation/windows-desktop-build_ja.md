@@ -116,3 +116,12 @@ reviewed-files.jsonは作成せず、再配布/利用者保護条件の全充足
   - 導入された `FolimeldDesktop.exe` での3ページPDF引数起動、メインウィンドウの `DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2` (-4, DPI=144) 一致、重複起動時の `Local\Folimeld-Desktop` ダイアログ表示と終了コード 1、正常終了（終了コード 0）を確認。
   - `unins000.exe` によるアンインストール成功（終了コード 0、`versions\0.3.5.0` とスタートメニューショートカットの削除、`%LOCALAPPDATA%\Folimeld-Desktop` 設定データの保持）を確認。
 - [GitHub Release `windows-desktop-v0.3.5.0-preview.1`](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1)（Pre-release、対応コミット `b0c2ff3`）として全12アセットを試験公開し、未認証 HTTPS による全12ファイルの再ダウンロードとサイズ・SHA-256 一致、既存 `latest` Release の不変を確認。
+
+## Windows 11 ARM64 向け onedir ビルド・Inno Setup コンパイル・Smart App Control対応（2026-11-16）
+
+- Windows 11 ARM64（Surface Pro 11等のCopilot+ PC）向けに、`tools.desktop_build --arch arm64` および `tools.desktop_compile --arch arm64` を拡張。
+- PSF公式署名済み CPython 3.12.10 ARM64、PyInstaller 6.22.2（PE Machine `0xAA64`）、Inno Setup 7.1.1、Microsoft VC++ 14.52.37029.0 ARM64 CRT（`concrt140.dll`、`msvcp140*.dll`、`vcruntime140.dll` は `0xAA64`、例外処理互換用 `vcruntime140_1.dll` は `0x8664`）を固定して検証。
+- `tools.desktop_build --arch arm64` により全193ファイルの onedir ペイロード（PE Machine `0xAA64` のネイティブ `FolimeldDesktop.exe`）を生成。
+- 全193ファイルの SHA-256 を結び付けた `payload-review.json` を作成し、`tools.desktop_compile --arch arm64 --compile` で Inno Setup 7.1.1 により `Folimeld-Desktop-0.3.5.0-arm64-setup.exe`（39,597,571 bytes、SHA-256: `d19db07cdd56d5a72c12879ca2bfb5e126ad7532e3f431e2c07413279727633c`）を生成。
+- **Smart App Control（スマート アプリ コントロール）に関する注意事項**:
+  - Windows 11 で Smart App Control が有効（強制）な環境下では、Web経由でダウンロードされた未署名バイナリはブロック通知対象となります。ソース＋uv版および uv tool 版は PSF公式署名済みの Python を使用するため Smart App Control を完全にパスします。未署名インストーラー EXE を実行する場合は、ファイルのプロパティで「許可する」のチェックを入れるか、署名済み Python 経由のランチャーを利用してください。

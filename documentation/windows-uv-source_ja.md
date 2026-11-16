@@ -1,18 +1,23 @@
-# Windows x64 ソース＋uv版プレビュー
+# Windows x64／ARM64 ソース＋uv版プレビュー
 
 公開済みプレビューの導入手順は以下を参照してください。後半の過去の確認用ZIP・未公開時点の記録は履歴であり、現在の公開ZIPのハッシュとは区別します。
 
 Microsoft Storeを標準配布として維持する。これは上級者向けの追加経路であり、
-Windows 11 x64のみを対象とする。開発PCで正規ランチャーの起動・文書操作・3ワーカー・再起動後の設定保持を確認済み。
+Windows 11 x64およびWindows 11 ARM64（Surface Pro 11等のCopilot+ PC）を対象とする。開発PCで正規ランチャーの起動・文書操作・3ワーカー・再起動後の設定保持を確認済み。
 本番Store版との併存と、別版への更新・旧版復帰は未確認。
 
 ## 固定する入力
 
+### Windows 11 x64版
 - CPython 3.12.16、python-build-standalone配布ビルド20261110。
 - uv 0.13.8。取得URLと公開SHA-256は`../windows-uv-runtime.json`を参照。
 - 実行依存14件は`../requirements-windows-uv.in`に固定。
 - `../requirements-windows-uv.lock`はWindows x64／CPython 3.12用のwheelハッシュのみを許可。
-  他OS・Python版で使わない。元のuv解決結果から対象wheelへハッシュを絞ったもの。
+
+### Windows 11 ARM64版
+- CPython 3.12.10、Python Software Foundation公式署名済みARM64 NuGetパッケージ（`pythonarm64.3.12.10.nupkg`）。すべてのバイナリがAuthenticode署名されており、Windows 11のSmart App Control（スマート アプリ コントロール）有効環境でもブロック通知を誘発しません。
+- uv 0.13.8（ARM64 Windows ネイティブバイナリ）。取得URLと公開SHA-256は`../windows-arm64-uv-runtime.json`を参照。
+- `../requirements-windows-arm64-uv.lock`はWindows ARM64／CPython 3.12用のwheelハッシュのみを許可。
 - インストール時は固定Python配布物の実物ハッシュを照合し、私有の版別runtimeへ展開する。
   Python版番号だけでは配布ビルドの証明にならない。導入台帳に取得物ハッシュを記録する。
 - 本体ソースのコミット・ZIPハッシュ・対応記録は配布候補作成時に確定する。

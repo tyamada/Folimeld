@@ -1,20 +1,26 @@
-# Windows x64 source + uv preview
+# Windows x64 and ARM64 source + uv preview
 
 Use the instructions below for the published preview. Later records about earlier test ZIPs and pre-publication status are historical and use different archive hashes.
 
 Microsoft Store remains the standard distribution. This additional route is for
-advanced users on Windows 11 x64. The developer PC has passed regular-launcher, document-operation, three-worker
+advanced users on Windows 11 x64 and Windows 11 ARM64 (such as Copilot+ PCs / Surface Pro 11). The developer PC has passed regular-launcher, document-operation, three-worker
 and settings-persistence checks. Production Store coexistence, cross-version
 updates and rollback remain unverified.
 
 ## Pinned inputs
 
+### Windows 11 x64
 - CPython 3.12.16, python-build-standalone build 20261110.
 - uv 0.13.8. URLs and published SHA-256 values: `../windows-uv-runtime.json`.
 - Fourteen runtime dependencies: `../requirements-windows-uv.in`.
 - `../requirements-windows-uv.lock` permits only the inspected Windows x64 /
   CPython 3.12 wheel hashes, narrowed from the original uv resolution. Do not use
   this lock on other platforms or Python versions.
+
+### Windows 11 ARM64
+- CPython 3.12.10, official Python Software Foundation signed ARM64 NuGet package (`pythonarm64.3.12.10.nupkg`). All binaries carry valid Authenticode signatures and do not trigger block notifications on Windows 11 systems with Smart App Control enabled.
+- uv 0.13.8 (ARM64 Windows native binary). URLs and published SHA-256 values: `../windows-arm64-uv-runtime.json`.
+- `../requirements-windows-arm64-uv.lock` permits only the inspected Windows ARM64 / CPython 3.12 wheel hashes.
 - At installation, verify the actual Python archive hash and extract it into a
   private, versioned runtime. The Python version number alone does not establish
   the distribution build. Record downloaded hashes in the installation ledger.

@@ -15,10 +15,12 @@ import zipfile
 REQUIRED_FORCE_INCLUDES = {
     "LICENSE": "folimeld/_resources/LICENSE",
     "windows-uv-runtime.json": "folimeld/_resources/windows-uv-runtime.json",
+    "windows-arm64-uv-runtime.json": "folimeld/_resources/windows-arm64-uv-runtime.json",
     "locales": "folimeld/_resources/locales",
     "assets/Folimeld.iconset/icon_256x256.png": "folimeld/_resources/assets/Folimeld.iconset/icon_256x256.png",
     "assets/folimeld-supporter-maid.png": "folimeld/_resources/assets/folimeld-supporter-maid.png",
     "documentation/windows-uv-licenses": "folimeld/_resources/documentation/windows-uv-licenses",
+    "documentation/windows-arm64-uv-licenses": "folimeld/_resources/documentation/windows-arm64-uv-licenses",
 }
 
 FIXED_ZIP_DATE_TIME = (2026, 1, 1, 0, 0, 0)
@@ -36,7 +38,7 @@ def _read_app_version(root: Path) -> str:
     return match.group(1)
 
 
-def validate_pyproject_sync(root: Path) -> dict:
+def validate_pyproject_sync(root: Path, arch: str = "x64") -> dict:
     """Validate pyproject.toml against runtime pins, lockfile, and app version."""
     pyproject_path = root / "pyproject.toml"
     data = tomllib.loads(pyproject_path.read_text(encoding="utf-8"))
@@ -53,15 +55,31 @@ def validate_pyproject_sync(root: Path) -> dict:
     if project.get("scripts") != {"folimeld-console": "folimeld.uv_tool_launcher:main"}:
         raise ValueError("Unexpected project.scripts in pyproject.toml.")
 
-    profile = json.loads((root / "windows-uv-runtime.json").read_text(encoding="utf-8"))
-    lock_text = (root / "requirements-windows-uv.lock").read_text(encoding="utf-8").replace("\r\n", "\n")
+    profile_name = "windows-arm64-uv-runtime.json" if arch == "arm64" else "windows-uv-runtime.json"
+    lock_name = "requirements-windows-arm64-uv.lock" if arch == "arm64" else "requirements-windows-uv.lock"
+
+    profile = json.loads((root / profile_name).read_text(encoding="utf-8"))
+    lock_text = (root / lock_name).read_text(encoding="utf-8").replace("\r\n", "\n")
     lock_hash = hashlib.sha256(lock_text.encode("utf-8")).hexdigest()
     if lock_hash != profile.get("lock_sha256"):
-        raise ValueError("requirements-windows-uv.lock hash differs from windows-uv-runtime.json.")
+        raise ValueError(f"{lock_name} hash differs from {profile_name}.")
 
     declared_deps = {}
     for item in project.get("dependencies", []):
-        match = re.fullmatch(r"([A-Za-z0-9][A-Za-z0-9_.-]*)==([^\s;]+)", item.strip())
+        raw = item.strip()
+        if ";" in raw:
+            dep_part, marker = raw.split(";", 1)
+            dep_part = dep_part.strip()
+            marker = marker.strip()
+            if arch == "arm64":
+                if "platform_machine == 'ARM64'" not in marker and "platform_machine == 'aarch64'" not in marker:
+                    continue
+            else:
+                if "platform_machine != 'ARM64'" not in marker:
+                    continue
+        else:
+            dep_part = raw
+        match = re.fullmatch(r"([A-Za-z0-9][A-Za-z0-9_.-]*)==([^\s;]+)", dep_part)
         if not match:
             raise ValueError(f"Dependency must be exact-pinned in pyproject.toml: {item}")
         name = _normalize_name(match.group(1))
@@ -71,7 +89,7 @@ def validate_pyproject_sync(root: Path) -> dict:
 
     expected_deps = {_normalize_name(k): v for k, v in profile["dependencies"].items()}
     if declared_deps != expected_deps:
-        raise ValueError("pyproject.toml dependencies differ from windows-uv-runtime.json.")
+        raise ValueError(f"pyproject.toml dependencies differ from {profile_name}.")
 
     wheel_target = data.get("tool", {}).get("hatch", {}).get("build", {}).get("targets", {}).get("wheel", {})
     if wheel_target.get("packages") != ["folimeld"]:
@@ -272,19 +290,39 @@ UV_TOOL_OWNED_PATHS = {
     "folimeld/resources.py",
     "folimeld/source_profile.py",
     "folimeld/support_dialog.py",
+    "folimeld/uv_license_info.py",
     "folimeld/uv_tool_launcher.py",
     "folimeld/uv_tool_profile.py",
+    "install_uv.ps1",
+    "launch_uv.py",
     "pyproject.toml",
+    "requirements-windows-arm64-uv.lock",
+    "windows-arm64-uv-runtime.json",
+    "packaging/windows/desktop-arm64-runtime.json",
+    "packaging/windows/desktop-arm64-runtime-requirements.txt",
+    "packaging/windows/desktop-arm64-tools-requirements.txt",
+    "packaging/windows/desktop-arm64-crt.json",
+    "packaging/windows/desktop-arm64-inno.json",
+    "packaging/windows/Folimeld-desktop-arm64.iss",
+    "tests/test_desktop_profile.py",
     "tests/test_distribution.py",
+    "tests/test_image_import.py",
     "tests/test_uv_tool_build.py",
     "tests/test_uv_tool_launcher.py",
     "tests/test_uv_tool_profile.py",
+    "tools/desktop_build.py",
+    "tools/desktop_compile.py",
+    "tools/desktop_crt.py",
+    "tools/desktop_inno.py",
+    "tools/desktop_runtime_terms.py",
     "tools/source_bundle.py",
     "tools/uv_tool_build.py",
 }
 
 
-def build_source_archive(root: Path, output_dir: Path, version: str) -> tuple[Path, Path, str | None]:
+def build_source_archive(
+    root: Path, output_dir: Path, version: str, arch: str = "x64"
+) -> tuple[Path, Path, str | None]:
     """Build a deterministic corresponding source ZIP and source-manifest.json."""
     from tools.source_bundle import DOCUMENTATION_DIR, ROOT_CONFIG_FILES, ROOT_SUFFIXES, SOURCE_DIRS, git, source_paths
 
@@ -334,7 +372,7 @@ def build_source_archive(root: Path, output_dir: Path, version: str) -> tuple[Pa
 
     manifest_data = {
         "schema_version": 1,
-        "distribution": "windows-uv-tool-x64",
+        "distribution": f"windows-uv-tool-{arch}",
         "version": version,
         "git_commit": git_commit,
         "files": files_manifest,
@@ -343,7 +381,7 @@ def build_source_archive(root: Path, output_dir: Path, version: str) -> tuple[Pa
     manifest_path = output_dir / "source-manifest.json"
     manifest_path.write_bytes(manifest_bytes)
 
-    zip_path = output_dir / f"Folimeld-{version}-windows-x64-uv-tool-source.zip"
+    zip_path = output_dir / f"Folimeld-{version}-windows-{arch}-uv-tool-source.zip"
     if zip_path.exists():
         raise FileExistsError(f"Refusing to overwrite existing source archive: {zip_path}")
 
@@ -362,7 +400,7 @@ def build_source_archive(root: Path, output_dir: Path, version: str) -> tuple[Pa
     return zip_path, manifest_path, git_commit
 
 
-def stage_release_artifacts(root: Path, output_dir: Path) -> dict:
+def stage_release_artifacts(root: Path, output_dir: Path, arch: str = "x64") -> dict:
     """Build the verified wheel and stage companion release files and SHA256SUMS.txt."""
     if output_dir.exists():
         raise FileExistsError(f"Output directory already exists: {output_dir}")
@@ -370,13 +408,13 @@ def stage_release_artifacts(root: Path, output_dir: Path) -> dict:
     wheel_path = build_pure_wheel(root, output_dir)
     wheel_info = verify_wheel(wheel_path, root)
     source_zip_path, source_manifest_path, git_commit = build_source_archive(
-        root, output_dir, wheel_info["version"]
+        root, output_dir, wheel_info["version"], arch=arch
     )
     source_zip_sha256 = hashlib.sha256(source_zip_path.read_bytes()).hexdigest()
     source_manifest_sha256 = hashlib.sha256(source_manifest_path.read_bytes()).hexdigest()
 
     association_lines = [
-        "distribution: windows-uv-tool-x64",
+        f"distribution: windows-uv-tool-{arch}",
         f"version: {wheel_info['version']}",
         f"git_commit: {git_commit or 'none'}",
         f"wheel: {wheel_path.name}",
@@ -389,11 +427,15 @@ def stage_release_artifacts(root: Path, output_dir: Path) -> dict:
     association_path = output_dir / "SOURCE-ASSOCIATION.txt"
     association_path.write_text("\n".join(association_lines) + "\n", encoding="utf-8")
 
+    lock_file = "requirements-windows-arm64-uv.lock" if arch == "arm64" else "requirements-windows-uv.lock"
+    runtime_file = "windows-arm64-uv-runtime.json" if arch == "arm64" else "windows-uv-runtime.json"
+    lic_dir = "windows-arm64-uv-licenses" if arch == "arm64" else "windows-uv-licenses"
+
     companions = {
-        "requirements-windows-uv.lock": root / "requirements-windows-uv.lock",
-        "windows-uv-runtime.json": root / "windows-uv-runtime.json",
-        "THIRD-PARTY-NOTICES.txt": root / "documentation" / "windows-uv-licenses" / "notices.txt",
-        "DEPENDENCY-SOURCES.json": root / "documentation" / "windows-uv-licenses" / "sources.json",
+        lock_file: root / lock_file,
+        runtime_file: root / runtime_file,
+        "THIRD-PARTY-NOTICES.txt": root / "documentation" / lic_dir / "notices.txt",
+        "DEPENDENCY-SOURCES.json": root / "documentation" / lic_dir / "sources.json",
     }
     artifacts = {
         wheel_path.name: {
@@ -431,7 +473,7 @@ def stage_release_artifacts(root: Path, output_dir: Path) -> dict:
 
     manifest = {
         "schema_version": 1,
-        "distribution": "windows-uv-tool-x64",
+        "distribution": f"windows-uv-tool-{arch}",
         "version": wheel_info["version"],
         "requires_python": ">=3.12,<3.13",
         "artifacts": artifacts,
@@ -445,9 +487,10 @@ def stage_release_artifacts(root: Path, output_dir: Path) -> dict:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--arch", choices=["x64", "arm64"], default="x64")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
-    stage_release_artifacts(root, args.output.resolve())
+    stage_release_artifacts(root, args.output.resolve(), arch=args.arch)
     return 0
 
 

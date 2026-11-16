@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "platform": "windows-arm64",
+  "python": {
+    "version": "3.12.10",
+    "build": "psf-nuget-3.12.10",
+    "archive": "pythonarm64.3.12.10.nupkg",
+    "url": "https://api.nuget.org/v3-flatcontainer/pythonarm64/3.12.10/pythonarm64.3.12.10.nupkg",
+    "sha256": "e397423b13b1f1db294cd822b13a695b9f95193f2dc4572ff30dd5cd83b99c37"
+  },
+  "uv": {
+    "version": "0.13.8",
+    "url": "https://github.com/astral-sh/uv/releases/download/0.13.8/uv-aarch64-pc-windows-msvc.zip",
+    "sha256": "59e6d919bed1f72035e622a7c930058f08a8931c4c78ceaf9f56e7fb74dd2c48"
+  },
+  "lock_sha256": "b30019ec8bb3ddd9c15cebb093432cd309566a6792b3ebccde821964b5054b67",
+  "dependencies": {
+    "cffi": "2.1.1",
+    "cryptography": "46.0.3",
+    "pillow": "12.3.0",
+    "pycparser": "3.12",
+    "pymupdf": "1.28.2",
+    "pyside6": "6.11.2",
+    "pyside6-addons": "6.11.2",
+    "pyside6-essentials": "6.11.2",
+    "shiboken6": "6.11.2",
+    "typing-extensions": "4.16.0",
+    "winrt-runtime": "3.2.1",
+    "winrt-windows-foundation": "3.2.1",
+    "winrt-windows-foundation-collections": "3.2.1",
+    "winrt-windows-services-store": "3.2.1"
+  }
+}
