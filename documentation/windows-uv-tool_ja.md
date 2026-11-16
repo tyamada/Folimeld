@@ -64,3 +64,4 @@ uv tool install --python 3.12 --with-requirements .\requirements-windows-uv.lock
 - `%LOCALAPPDATA%\Folimeld-UV-Tool\settings\settings.ini` への設定保存（サムネイルサイズ `144`・ボタン表示 `icon_text`）と再起動後の保持、セッションごとの独立ログディレクトリ生成を確認。
 - `Local\Folimeld-UV-Tool` Mutex 保持中に `folimeld-console.exe` を重複起動し、エラーダイアログ（`Folimeld uv tool`）と標準エラー出力を表示して終了コード `1` で拒否されることを確認。
 - 既存の `Folimeld-UV`・`Folimeld-Desktop` 設定ファイルおよび `HKCU\Software\Classes\Applications\Folimeld.exe` レジストリが前後で不変であることを確認。
+- 公開後の GitHub Release（`windows-uv-tool-v0.3.5-preview.1`）から全10添付ファイルを未認証 HTTPS で再ダウンロードしてサイズ・SHA-256 一致を確認し、再取得した `.whl` と `requirements-windows-uv.lock` を用いた `uv tool install` 導入、`uv tool uninstall folimeld` 実行時の実行ファイル削除と `%LOCALAPPDATA%\Folimeld-UV-Tool\settings\settings.ini` 保持を確認。
