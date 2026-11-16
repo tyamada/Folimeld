@@ -4,7 +4,7 @@
 
 ## 未リリース
 
-- Microsoft Store次期リリース（Submission 2 / パッケージ版 1.0.2.0）に向けて、Windows 11 ARM64ネイティブ対応の追加計画、PyInstaller spec（`Folimeld.spec`）のUPX無効化、日英のストア掲載文（新機能欄）および公開計画文書を整備。x64 および ARM64 実機環境にてStore向けネイティブMSIXパッケージ（`Folimeld_1.0.2.0_x64.msix`、`Folimeld_1.0.2.0_arm64.msix`）をビルドし、静的検査（`msix_preflight` 合格）およびソースバンドル関連付けを完了して公開計画書（`windows-store-release-plan_ja.md`）および受入試験表（`windows-store-acceptance_ja.md`）へ確定パッケージ情報を記録。無料アプリのみとして応援購入（アドオン）は無効を維持。
+- Microsoft Store次期リリース（Submission 2 / パッケージ版 1.0.2.0）に向けて、Windows 11 ARM64ネイティブ対応の追加計画、PyInstaller spec（`Folimeld.spec`）のUPX無効化、日英のストア掲載文（新機能欄）および公開計画文書を整備。x64 および ARM64 実機環境にてStore向けネイティブMSIXパッケージ（`Folimeld_1.0.2.0_x64.msix`、`Folimeld_1.0.2.0_arm64.msix`）をビルドし、静的検査（`msix_preflight` 合格）およびソースバンドル関連付けを完了して公開計画書（`windows-store-release-plan_ja.md`）および受入試験表（`windows-store-acceptance_ja.md`）へ確定パッケージ情報を記録。2026年11月16日にPartner Center（Submission 2）へ審査提出を完了。無料アプリのみとして応援購入（アドオン）は無効を維持。
 
 - Windows 11向けの3つのプレビューパッケージ（ソース＋uv版、`uv tool install`版、Desktopインストーラー版）について、x86_64とARM64共通の事前準備・ダウンロード・インストール・実行手順を統合・整理し、各アーキテクチャ別のハッシュ照合・Smart App Control対応案内を日英READMEおよびドキュメントに拡充。
 

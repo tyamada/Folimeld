@@ -661,7 +661,7 @@ Linux版では「ヘルプ → 開発を応援する…」に [GitHub Sponsors](
 
 ## TODO
 
-- Microsoft Store次期リリース（Submission 2 / 1.0.2.0: x64 + ARM64）の提出・審査、およびStore配信版1.0.1.0からの更新保持検証・実機受入検証を実施する。
+- Microsoft Store次期リリース（Submission 2 / 1.0.2.0: x64 + ARM64）の認定審査通過を待機し、公開後にStore配信版1.0.1.0からの更新保持検証・ARM64実機受入検証を実施する。
 
 ## 既知の問題点と制約
 

@@ -70,7 +70,7 @@ Submission 1はMicrosoft Storeの認定に合格しました。Folimeld 1.0.1.0�
 
 ## Store候補1.0.2.0の準備と受入計画（Submission 2: x64 & ARM64）
 
-Windows 11 ARM64 ネイティブ対応および大規模PDF機能強化を含む Submission 2（版番号 `1.0.2.0`）の受入計画です。
+Windows 11 ARM64 ネイティブ対応および大規模PDF機能強化を含む Submission 2（版番号 `1.0.2.0`）の受入計画です。2026年11月16日に Partner Center へ x64 および ARM64 の両パッケージを提出し、現在認定審査（Certification）中です。審査通過後に実際の Store 配信パッケージを用いて以下の受入試験を実施します。
 
 ### 候補パッケージと静的検査
 

@@ -70,7 +70,7 @@ The DPI check used `GetWindowDpiAwarenessContext` on the main window and compare
 
 ## Store candidate 1.0.2.0 preparation and acceptance plan (Submission 2: x64 & ARM64)
 
-Acceptance plan for Submission 2 (package version `1.0.2.0`), adding native Windows 11 ARM64 support and large PDF optimizations.
+Acceptance plan for Submission 2 (package version `1.0.2.0`), adding native Windows 11 ARM64 support and large PDF optimizations. Both x64 and ARM64 packages were submitted to Partner Center on 2026-11-16 and are currently in Certification review. The acceptance checklist below will be executed using the actual Store-delivered packages upon approval.
 
 ### Candidate packages and preflight status
 
