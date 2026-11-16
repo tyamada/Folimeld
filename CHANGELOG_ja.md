@@ -4,7 +4,7 @@
 
 ## 未リリース
 
-- Debian、Ubuntu、およびBSD（FreeBSD、NetBSD、OpenBSD）の各パッケージをFolimeld 0.3.5ベースへ更新する計画を策定し、決定論的ソーススナップショットの切り出しとビルドスクリプトの点検を開始。
+- Debian、Ubuntu、およびBSD（FreeBSD、NetBSD、OpenBSD）の各パッケージをFolimeld 0.3.5ベースへ更新する計画を策定。決定論的ソースコードスナップショットZIP（`Folimeld-source-e550bf65ec95b968ddce59592f3ef4fd9e297a88b9e2b7364413592244a14e8a.zip`）の確定と関連付け、FreeBSD（`0.3.5_1`）・NetBSD（`0.3.5`）・OpenBSD（`0.3.5`）のバージョン解決および依存ソース整合性テスト（`tests/test_bsd_packages.py`、`tests/test_freebsd_package.py`）を追加して全件パスを確認。WSL2環境にてUbuntu 24.04 amd64 DEBパッケージ（`folimeld_0.3.5_amd64.deb`、SHA-256: `5b64a696b69cdb7c9fada6e13cd100dd35d76470ecad1408800ee558c4362174`）をビルドし、Ubuntu 24.04 および Debian 13.6（Trixie）環境下にてoffscreen GUI初期化・PyMuPDF読み込み・実行ファイルの整合性を検証。日英の更新・ビルド手順書（`documentation/bsd-035-release-plan_ja.md`、`bsd-035-release-plan.md`）を整備。
 
 - Microsoft Store次期リリース（Submission 2 / パッケージ版 1.0.2.0）に向けて、Windows 11 ARM64ネイティブ対応の追加計画、PyInstaller spec（`Folimeld.spec`）のUPX無効化、日英のストア掲載文（新機能欄）および公開計画文書を整備。x64 および ARM64 実機環境にてStore向けネイティブMSIXパッケージ（`Folimeld_1.0.2.0_x64.msix`、`Folimeld_1.0.2.0_arm64.msix`）をビルドし、静的検査（`msix_preflight` 合格）およびソースバンドル関連付けを完了して公開計画書（`windows-store-release-plan_ja.md`）および受入試験表（`windows-store-acceptance_ja.md`）へ確定パッケージ情報を記録。2026年11月16日にPartner Center（Submission 2）へ審査提出を完了。無料アプリのみとして応援購入（アドオン）は無効を維持。
 

@@ -38,7 +38,7 @@ Windows版の **Folimeld 1.0.1.0（Windows 11 x64）** は、Microsoft Storeで�
 
 Ubuntu／Debian向けFolimeld 0.3.4を[GitHub Releases](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4)で公開しています。[Ubuntu/Debian/Kali amd64向け0.3.5 DEB試験版](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5)、[openSUSE Tumbleweed 20261110 amd64向け0.3.5試験版](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5)、[openSUSE Leap 16.1 amd64向け0.3.5試験版](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5)、[Fedora 44 amd64向け0.3.5試験版](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5)、[Fedora 45 amd64向け0.3.5試験版](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5)と[AlmaLinux 9 amd64向け0.3.5試験版](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5)も公開しています。
 
-Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビルド記録は[Linux版GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)から取得できます。FreeBSD版・NetBSD版・OpenBSD版は下記の専用Releaseで試験配布しています。[Linux版の移行計画と実施記録](documentation/linux-release-migration_ja.md)を参照してください。互換性のため従来のリポジトリ内のダウンロードURLも維持しています。
+Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビルド記録は[Linux版GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)から取得できます。FreeBSD版・NetBSD版・OpenBSD版は下記の専用Releaseで試験配布しています。Debian・UbuntuおよびBSD各環境の0.3.5向け更新・ビルド手順は[BSD・Linux 0.3.5更新・ビルド手順書](documentation/bsd-035-release-plan_ja.md)を参照してください。[Linux版の移行計画と実施記録](documentation/linux-release-migration_ja.md)も参照できます。互換性のため従来のリポジトリ内のダウンロードURLも維持しています。
 
 | OS | CPU | 配布形式・版 | 公開先 |
 | --- | --- | --- | --- |

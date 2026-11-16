@@ -147,3 +147,17 @@ python3 -m venv .venv-linux
 # 3. DEB パッケージの組み立て
 dpkg-deb --build build/deb/folimeld_0.3.5_amd64 dist/folimeld_0.3.5_amd64.deb
 ```
+
+### ビルド実績（WSL2 / Ubuntu 24.04）
+`./build_linux.sh deb` によりビルドを実行し、確定パッケージおよび関連付けマニフェストを生成済み：
+- パッケージ: `dist/ubuntu/folimeld_0.3.5_amd64.deb`
+- サイズ: 105,690,904 bytes
+- SHA-256: `5b64a696b69cdb7c9fada6e13cd100dd35d76470ecad1408800ee558c4362174`
+- 実行ファイル: `dist/folimeld`（SHA-256: `c799b852384f81839efcb79fa383a8ba3a6f8156d0d2b61501fb70803cd810b9`）
+- 関連付け記録: `dist/source/folimeld_0.3.5_amd64.deb-5b64a696b69cdb7c9fada6e13cd100dd35d76470ecad1408800ee558c4362174.json`
+
+### 受入確認結果
+- **Ubuntu 24.04.4 LTS (WSL2)**:
+  `QT_QPA_PLATFORM=offscreen timeout 5s dist/folimeld` にて、Qt GUI初期化、PyMuPDF/fitz読み込み、ウィンドウ生成およびイベントループ起動を正常確認（プロセス正常稼働）。
+- **Debian 13.6 Trixie (WSL2)**:
+  `libc6 (>= 2.39)` 依存を満たす環境（GLIBC 2.41）にて、同様に offscreen 起動、PyMuPDF/fitz読み込み、Qt GUIウィンドウ生成を確認（プロセス正常稼働）。
