@@ -1,0 +1,148 @@
+# BSD and Linux (Debian/Ubuntu) 0.3.5 Package Update and Build Guide
+
+[Japanese](bsd-035-release-plan_ja.md) | [English](bsd-035-release-plan.md)
+
+Procedures for building, verifying, and publishing packages incorporating Folimeld 0.3.5 features (encrypted Undo/Redo disk offloading, accelerated large PDF saves, image folder batch import, virtualized thumbnails, and GitHub Sponsors guidance).
+
+---
+
+## 1. Upstream Source Snapshot
+
+All platforms use the following captured source snapshot ZIP as their authoritative baseline:
+
+- **File**: `dist/source/Folimeld-source-e550bf65ec95b968ddce59592f3ef4fd9e297a88b9e2b7364413592244a14e8a.zip`
+- **SHA-256**: `E550BF65EC95B968DDCE59592F3EF4FD9E297A88B9E2B7364413592244A14E8A`
+- **Commit**: `5d4ed15` (or later `main`)
+
+---
+
+## 2. FreeBSD 15.1 (amd64 / aarch64)
+
+### Targets
+- Package: `folimeld-0.3.5_1.pkg`
+- Build record: `build-record.json`
+- Source: `Folimeld-source-e550bf65ec95b968ddce59592f3ef4fd9e297a88b9e2b7364413592244a14e8a.zip`
+
+### Build procedure
+Run on FreeBSD 15.1 (amd64 or aarch64).
+
+```sh
+# 1. Install build and runtime dependencies
+pkg install git python312 py312-pip py312-pyside6 py312-pillow py312-cryptography py312-psutil noto-sans-jp gmake swig pkgconf llvm19
+
+# 2. Build PyMuPDF 1.28.2 wheel (if not already prepared)
+sh tools/build_freebsd_pymupdf.sh
+# -> generates build/freebsd-pymupdf/wheels/pymupdf-1.28.2-*.whl
+
+# 3. Build 0.3.5 package
+python3.12 tools/build_freebsd_package.py \
+  --source dist/source/Folimeld-source-e550bf65ec95b968ddce59592f3ef4fd9e297a88b9e2b7364413592244a14e8a.zip \
+  --wheel build/freebsd-pymupdf/wheels/pymupdf-1.28.2-cp312-cp312-freebsd_*.whl \
+  --output dist/freebsd
+```
+
+### Acceptance verification
+```sh
+pkg install python312 py312-pyside6 py312-pillow py312-cryptography py312-psutil noto-sans-jp
+pkg add ./dist/freebsd/folimeld-0.3.5_1.pkg
+
+# Launch test
+folimeld
+```
+- Confirm "Help → Sponsor Development..." menu appears and opens GitHub Sponsors.
+- Verify PDF opening, rotation, large document saving, and image import.
+
+---
+
+## 3. NetBSD 11.1 (amd64 / aarch64)
+
+### Targets
+- Package: `folimeld-0.3.5.tgz`
+- Build record: `build-record.json`
+
+### Build procedure
+Run on NetBSD 11.1.
+
+```sh
+# 1. Install pkgsrc dependencies
+/usr/pkg/sbin/pkg_add py312-pip llvm clang cmake ninja-build bash gmake swig4 pkgconf
+/usr/pkg/sbin/pkg_add python312 qt6-qtbase qt6-qtsvg qt6-qtimageformats \
+  qt6-qttranslations py312-Pillow py312-cryptography py312-psutil gettext-lib noto-cjk-fonts
+
+# 2. Prepare native prefix
+sh tools/build_netbsd_native.sh
+
+# 3. Build 0.3.5 package
+python3.12 tools/build_netbsd_package.py \
+  --source dist/source/Folimeld-source-e550bf65ec95b968ddce59592f3ef4fd9e297a88b9e2b7364413592244a14e8a.zip \
+  --native-prefix .venv-netbsd \
+  --dependency-sources /path/to/dependency_sources \
+  --output dist/netbsd
+```
+
+### Acceptance verification
+```sh
+/usr/pkg/sbin/pkg_add ./dist/netbsd/folimeld-0.3.5.tgz
+/usr/pkg/bin/folimeld
+```
+
+---
+
+## 4. OpenBSD 8.0 (amd64 / arm64)
+
+### Targets
+- Package: `folimeld-0.3.5.tgz` (signed)
+- Private dependency: `folimeld-mupdf-1.28.2.tgz`
+- Signature: `SHA256SUMS.txt.sig`
+
+### Build and signing procedure
+Run on OpenBSD 8.0 with Python 3.14.
+
+```sh
+# 1. Build private MuPDF wheel (if not prepared)
+sh tools/build_openbsd_native.sh /path/to/dependency_sources /tmp/work /tmp/out
+
+# 2. Build 0.3.5 ports packages
+python3.14 tools/build_openbsd_package.py \
+  --source dist/source/Folimeld-source-e550bf65ec95b968ddce59592f3ef4fd9e297a88b9e2b7364413592244a14e8a.zip \
+  --wheel /tmp/out/pymupdf-1.28.2-*.whl \
+  --dependency-sources /path/to/dependency_sources \
+  --output dist/openbsd \
+  --work /tmp/pkgwork
+
+# 3. Sign with signify
+cd dist/openbsd
+sha256 -r folimeld-0.3.5.tgz folimeld-mupdf-1.28.2.tgz > SHA256SUMS.txt
+signify -S -s /etc/signify/folimeld-80-pkg.sec -m SHA256SUMS.txt -x SHA256SUMS.txt.sig
+```
+
+### Acceptance verification
+```sh
+signify -V -p packaging/openbsd/folimeld-80-pkg.pub -m SHA256SUMS.txt -x SHA256SUMS.txt.sig
+pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.5.tgz
+folimeld
+```
+
+---
+
+## 5. Ubuntu 24.04 / Debian 13 (amd64 / arm64)
+
+### Targets
+- DEB: `folimeld_0.3.5_amd64.deb`, `folimeld_0.3.5_arm64.deb`
+- Snap: `folimeld_0.3.5_amd64.snap`, `folimeld_0.3.5_arm64.snap`
+
+### Build procedure
+Run on Ubuntu 24.04 / Debian 13 (or WSL2 / Docker).
+
+```sh
+# 1. Install dependencies
+sudo apt update && sudo apt install -y python3 python3-pip python3-venv pyinstaller libegl1 libgl1 libxkbcommon-x11-0 libxcb-cursor0
+
+# 2. Build executable with PyInstaller
+python3 -m venv .venv-linux
+.venv-linux/bin/pip install -r requirements.txt -c constraints-release.txt pyinstaller
+.venv-linux/bin/pyinstaller --noconfirm Folimeld-linux.spec
+
+# 3. Assemble DEB package
+dpkg-deb --build build/deb/folimeld_0.3.5_amd64 dist/folimeld_0.3.5_amd64.deb
+```
