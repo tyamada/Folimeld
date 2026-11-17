@@ -8,13 +8,30 @@ if [ "$(uname -s)" != Linux ]; then
   echo 'Run this script on Ubuntu 24.04 (or in a matching build environment).' >&2
   exit 1
 fi
-command -v snapcraft >/dev/null
+if [ -d /snap/bin ] && [[ ":$PATH:" != *":/snap/bin:"* ]]; then
+  export PATH="$PATH:/snap/bin"
+fi
+command -v snapcraft >/dev/null || {
+  echo 'snapcraft not found in PATH' >&2
+  exit 1
+}
 if [ ! -x dist/folimeld ]; then
   echo 'Run bash build_linux.sh first to create dist/folimeld.' >&2
   exit 1
 fi
 
-VERSION="$(python3 -c 'from folimeld import __version__; print(__version__)')"
+if [ -z "${FOLIMELD_LINUX_VENV:-}" ]; then
+  if [ -d "$HOME/.venv-folimeld-linux" ]; then
+    FOLIMELD_LINUX_VENV="$HOME/.venv-folimeld-linux"
+  else
+    FOLIMELD_LINUX_VENV="$SCRIPT_DIR/.venv-linux"
+  fi
+fi
+BUILD_PYTHON="${FOLIMELD_LINUX_VENV}/bin/python"
+if [ ! -x "$BUILD_PYTHON" ]; then
+  BUILD_PYTHON="python3"
+fi
+VERSION="$("$BUILD_PYTHON" -c 'from folimeld import __version__; print(__version__)')"
 ARCH="$(dpkg --print-architecture)"
 OUTPUT_DIR="$SCRIPT_DIR/releases/ubuntu"
 mkdir -p "$OUTPUT_DIR"

@@ -53,6 +53,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | Ubuntu 24.04.5 / Debian 13.7（ARM64 VMのXorgで検証） | arm64 | DEB / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5) |
 | Ubuntu 24.04.5（ARM64 VMのXorgで検証） | arm64 | strict Snap / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5) |
 | Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3（WSL2／WSLgで検証） | amd64 | DEB / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) |
+| Ubuntu 24.04.5（WSL2／WSLgで検証） | amd64 | strict Snap / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.5) |
 | openSUSE Tumbleweed 20261110（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) |
 | openSUSE Leap 16.1（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5) |
 | openSUSE Tumbleweed 20261111（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5) |
@@ -407,6 +408,14 @@ sudo apt install ./folimeld_0.3.5_arm64.deb
 
 ```bash
 sudo snap install --dangerous ./folimeld_0.3.5_arm64.snap
+```
+
+### Ubuntu amd64 strict Snap 0.3.5試験版
+
+[**0.3.5 amd64 strict Snap**](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.5)を公開しました。Ubuntu 24.04.5 LTS amd64（WSL2 / WSLg）環境にて、core24 ベースの strict Snap パッケージのビルド・更新導入・デスクトップ拡張機能および各プラグ接続、offscreen での起動・動作確認を完了しています。[検証・制約](documentation/linux-snap-amd64-035-validation_ja.md)。
+
+```bash
+sudo snap install --dangerous ./folimeld_0.3.5_amd64.snap
 ```
 
 ### Ubuntu ARM64 strict Snap修正試験版

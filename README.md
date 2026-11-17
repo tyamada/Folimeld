@@ -53,6 +53,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | Ubuntu 24.04.5 / Debian 13.7 (verified with Xorg in ARM64 VMs) | arm64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5) |
 | Ubuntu 24.04.5 (verified with Xorg in an ARM64 VM) | arm64 | strict Snap / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5) |
 | Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3 (verified on WSL2/WSLg) | amd64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) |
+| Ubuntu 24.04.5 (verified on WSL2/WSLg) | amd64 | strict Snap / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.5) |
 | openSUSE Tumbleweed 20261110 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) |
 | openSUSE Leap 16.1 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5) |
 | openSUSE Tumbleweed 20261111 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5) |
@@ -407,6 +408,14 @@ sudo apt install ./folimeld_0.3.5_arm64.deb
 
 ```bash
 sudo snap install --dangerous ./folimeld_0.3.5_arm64.snap
+```
+
+### Ubuntu amd64 strict Snap 0.3.5 preview
+
+Published the [**0.3.5 amd64 strict Snap**](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.5). Built and verified under Ubuntu 24.04.5 LTS amd64 (WSL2 / WSLg) with core24 base, strict confinement, GNOME extensions, active interface plug connections, and offscreen GUI execution. See the [verification details](documentation/linux-snap-amd64-035-validation.md).
+
+```bash
+sudo snap install --dangerous ./folimeld_0.3.5_amd64.snap
 ```
 
 ### Ubuntu ARM64 strict Snap fix preview

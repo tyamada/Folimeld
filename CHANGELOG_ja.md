@@ -4,6 +4,8 @@
 
 ## 未リリース
 
+- Ubuntu amd64 strict Snap 0.3.5 パッケージを公開: Ubuntu 24.04.5 LTS amd64 環境にて core24 ベースの `folimeld_0.3.5_amd64.snap`（SHA-256: `ff71a176dba771542998b5bf48f7d89e9d118f34c937c620de897af0e4dc4570`）をビルドし、`snap install --dangerous` による更新導入、各種インターフェース接続（GNOME 拡張、Wayland、X11、OpenGL、Home 等）およびオフスクリーン GUI 起動を確認。日英の検証文書（`documentation/linux-snap-amd64-035-validation_ja.md`、`linux-snap-amd64-035-validation.md`）と検証レコードを整備。
+
 - READMEのダウンロード一覧表から旧版となったUbuntuおよびDebian 0.3.4の記載を整理し、最新の0.3.5配布行へ一本化。
 
 - macOS Homebrew版を 0.3.5 に更新: Python 3.14環境、ランチャー `launch_homebrew.py` を経由した配布元識別子（`homebrew`）の伝達と「ヘルプ → 開発を応援する…」メニューの有効化、5.7 MBの軽量ソースアーカイブ生成、`brew install --build-from-source tyamada/tap/folimeld` および `brew test tyamada/tap/folimeld` による動作確認・アンインストール検証を完了。

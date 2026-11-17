@@ -1,0 +1,31 @@
+{
+  "date_jst": "2026-11-17",
+  "package": "folimeld_0.3.5_amd64.snap",
+  "size": 106164224,
+  "sha256": "ff71a176dba771542998b5bf48f7d89e9d118f34c937c620de897af0e4dc4570",
+  "executable_sha256": "65852198ae2282b8b49e52e4bd3583b0ee131e287a52aa73368f03c2817a47aa",
+  "source": {
+    "git_commit": "d3dbdf667455156de41ec67abcf9fa28ed4b509d",
+    "source_archive": "Folimeld-source-a7683298b15e7326d100b54e0c1083e7fc12af3b5e3d19d329cfc417032ee545.zip",
+    "source_sha256": "a7683298b15e7326d100b54e0c1083e7fc12af3b5e3d19d329cfc417032ee545",
+    "association": "packaging script supplied executable; verify package contents before publication"
+  },
+  "acceptance": {
+    "os": "Ubuntu 24.04.5 LTS amd64",
+    "environment": "WSL2 (Noble Numbat), UID1000",
+    "version_update": "0.3.2 x1 -> 0.3.5 x2",
+    "confinement": {
+      "declared": "strict",
+      "base": "core24",
+      "grade": "stable",
+      "extensions": ["gnome"],
+      "plugs": ["home", "removable-media", "opengl"]
+    },
+    "gui_execution": {
+      "platform": "offscreen",
+      "fitz_loaded": true,
+      "qt_initialized": true,
+      "exit_code": 0
+    }
+  }
+}

@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+- Publish Ubuntu amd64 strict Snap 0.3.5 package: Built core24-based `folimeld_0.3.5_amd64.snap` (SHA-256: `ff71a176dba771542998b5bf48f7d89e9d118f34c937c620de897af0e4dc4570`) on Ubuntu 24.04.5 LTS amd64, verifying `snap install --dangerous` update installation, active interface plug connections (GNOME extensions, Wayland, X11, OpenGL, Home), and offscreen GUI execution. Provided bilingual verification records (`documentation/linux-snap-amd64-035-validation_ja.md`, `linux-snap-amd64-035-validation.md`) and JSON verification record.
+
 - Cleaned up superseded Ubuntu and Debian 0.3.4 entries from the README downloads table in favor of 0.3.5 release rows.
 
 - Update macOS Homebrew formula to 0.3.5: Support Python 3.14 environment, add `launch_homebrew.py` launcher passing distribution identifier (`homebrew`) to enable the "Help -> Support Development..." action, generate lean 5.7 MB source archive, and complete verification for `brew install --build-from-source tyamada/tap/folimeld`, `brew test tyamada/tap/folimeld`, and clean uninstallation.
