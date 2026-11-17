@@ -2,13 +2,13 @@
 
 [English](openbsd-install.md) | [日本語](openbsd-install_ja.md)
 
-The commands and build instructions on this page target amd64. For arm64, use the [installation instructions](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.3/INSTALL.txt) in the [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.3), which also contains matching source, SHA-256 checksums, and verification records.
+The commands and build instructions on this page target amd64. For arm64, use the [installation instructions](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.5/INSTALL.txt) in the [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.5), which also contains matching source, SHA-256 checksums, and verification records.
 
-Targets OpenBSD 8.0 / amd64, Python 3.14, and an X11 desktop. This is a Folimeld preview, not an official OpenBSD package. Assets belong to the [OpenBSD Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3).
+Targets OpenBSD 8.0 / amd64, Python 3.14, and an X11 desktop. This is a Folimeld preview, not an official OpenBSD package. Assets belong to the [OpenBSD Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.5). See also the [0.3.5 guide](bsd-035-release-plan.md).
 
 ## Installing packages
 
-Download `folimeld-0.3.3.tgz`, `folimeld-mupdf-1.28.2.tgz`, `folimeld-80-pkg.pub`, `SHA256SUMS.txt`, and `SHA256SUMS.txt.sig` into one directory. Compare the second line of the key with the [repository public key](../packaging/openbsd/folimeld-80-pkg.pub):
+Download `folimeld-0.3.5.tgz`, `folimeld-mupdf-1.28.2.tgz`, `folimeld-80-pkg.pub`, `SHA256SUMS.txt`, and `SHA256SUMS.txt.sig` into one directory. Compare the second line of the key with the [repository public key](../packaging/openbsd/folimeld-80-pkg.pub):
 
 ```text
 RWSM2obNrKjUbNGU8itgBN/nGVFG95tTaBrcV9pO8dTLQvihQtAdPkIy
@@ -18,14 +18,14 @@ As a regular user, verify the signature and compare the `sha256 -r` results with
 
 ```sh
 signify -V -p folimeld-80-pkg.pub -m SHA256SUMS.txt -x SHA256SUMS.txt.sig
-sha256 -r folimeld-0.3.3.tgz folimeld-mupdf-1.28.2.tgz
+sha256 -r folimeld-0.3.5.tgz folimeld-mupdf-1.28.2.tgz
 ```
 
 Configure an X11 desktop and `/etc/installurl` for official OpenBSD 8.0 packages. Run as root, using a root shell if `doas` is not configured:
 
 ```sh
 install -m 644 folimeld-80-pkg.pub /etc/signify/folimeld-80-pkg.pub
-pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.3.tgz
+pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.5.tgz
 ```
 
 Use signed packages without options that allow unsigned packages. Python, PySide6/Qt, Pillow, cryptography, psutil, gettext-runtime, and Japanese fonts are official dependencies. Network access and free disk space are required.

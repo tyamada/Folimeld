@@ -2,21 +2,21 @@
 
 [English](netbsd-install.md) | [日本語](netbsd-install_ja.md)
 
-このページのコマンドとビルド手順はamd64向けです。aarch64版は[専用Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.3)の[導入手順](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.3/INSTALL_ja.txt)を使用してください。対応ソース・SHA-256・検証記録も同じReleaseに掲載しています。
+このページのコマンドとビルド手順はamd64向けです。aarch64版は[専用Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.5)の[導入手順](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.5/INSTALL_ja.txt)を使用してください。対応ソース・SHA-256・検証記録も同じReleaseに掲載しています。
 
-対象はNetBSD 11.1 / amd64、Python 3.12、X11デスクトップ。Folimeld独自の試験配布パッケージであり、NetBSD公式パッケージではない。[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3)からパッケージ・対応ソース・依存ソース・SHA-256一覧を取得する。
+対象はNetBSD 11.1 / amd64、Python 3.12、X11デスクトップ。Folimeld独自の試験配布パッケージであり、NetBSD公式パッケージではない。[GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.5)からパッケージ・対応ソース・依存ソース・SHA-256一覧を取得する。
 
-確認範囲は[パッケージ検証記録](netbsd-package-verification_ja.md)を参照。
+確認範囲は[パッケージ検証記録](netbsd-package-verification_ja.md)および[0.3.5手順書](bsd-035-release-plan_ja.md)を参照。
 
 ## パッケージの導入
 
-配布候補は `dist/netbsd/`。対応ソースZIP、依存ライブラリのソース、パッチ、ビルド記録、ライセンス、`SHA256SUMS.txt` を併せて保存する。`sha256 -r folimeld-0.3.3.tgz` の結果をチェックサム一覧の同名ファイルと照合する。
+配布候補は `dist/netbsd/`。対応ソースZIP、依存ライブラリのソース、パッチ、ビルド記録、ライセンス、`SHA256SUMS.txt` を併せて保存する。`sha256 -r folimeld-0.3.5.tgz` の結果をチェックサム一覧の同名ファイルと照合する。
 
 X11とデスクトップを構成したNetBSDで、rootとして実行する。依存は検証時と同じpkgsrcリポジトリから導入する。既存の別系列の依存と混在させない。
 
 ```sh
 export PKG_PATH=https://cdn.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/11.0_2026Q3/All
-/usr/pkg/sbin/pkg_add ./folimeld-0.3.3.tgz
+/usr/pkg/sbin/pkg_add ./folimeld-0.3.5.tgz
 ```
 
 一般ユーザーで起動する。

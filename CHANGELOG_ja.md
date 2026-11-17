@@ -4,6 +4,8 @@
 
 ## 未リリース
 
+- FreeBSD 15.1、NetBSD 11.1、OpenBSD 8.0 の amd64 版 0.3.5 パッケージを公開: それぞれ `folimeld-0.3.5_1.pkg`（FreeBSD 15.1 amd64）、`folimeld-0.3.5.tgz`（NetBSD 11.1 amd64）、`folimeld-0.3.5.tgz` および `folimeld-mupdf-1.28.2.tgz`（OpenBSD 8.0 amd64、Signify署名付き）の各配布Releaseを公開し、日英のインストール手順書（`documentation/freebsd-install*.md`、`netbsd-install*.md`、`openbsd-install*.md`）およびREADMEのダウンロード表を更新・同期。
+
 - Ubuntu amd64 strict Snap 0.3.5 パッケージを公開: Ubuntu 24.04.5 LTS amd64 環境にて core24 ベースの `folimeld_0.3.5_amd64.snap`（SHA-256: `ff71a176dba771542998b5bf48f7d89e9d118f34c937c620de897af0e4dc4570`）をビルドし、`snap install --dangerous` による更新導入、各種インターフェース接続（GNOME 拡張、Wayland、X11、OpenGL、Home 等）およびオフスクリーン GUI 起動を確認。日英の検証文書（`documentation/linux-snap-amd64-035-validation_ja.md`、`linux-snap-amd64-035-validation.md`）と検証レコードを整備。
 
 - READMEのダウンロード一覧表から旧版となったUbuntuおよびDebian 0.3.4の記載を整理し、最新の0.3.5配布行へ一本化。

@@ -2,21 +2,21 @@
 
 [English](netbsd-install.md) | [日本語](netbsd-install_ja.md)
 
-The commands and build instructions on this page target amd64. For aarch64, use the [installation instructions](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.3/INSTALL.txt) in the [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.3), which also contains matching source, SHA-256 checksums, and verification records.
+The commands and build instructions on this page target amd64. For aarch64, use the [installation instructions](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.5/INSTALL.txt) in the [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.5), which also contains matching source, SHA-256 checksums, and verification records.
 
-Targets NetBSD 11.1 / amd64, Python 3.12, and an X11 desktop. This is a Folimeld preview package, not an official NetBSD package. Obtain the package, matching source, dependency sources, and SHA-256 list from the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3).
+Targets NetBSD 11.1 / amd64, Python 3.12, and an X11 desktop. This is a Folimeld preview package, not an official NetBSD package. Obtain the package, matching source, dependency sources, and SHA-256 list from the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.5).
 
-See the [package verification record](netbsd-package-verification_ja.md) for the tested scope.
+See the [package verification record](netbsd-package-verification_ja.md) and [0.3.5 guide](bsd-035-release-plan.md) for the tested scope.
 
 ## Installing the package
 
-Release candidates are stored in `dist/netbsd/`. Keep the matching source ZIP, dependency sources, patches, build record, licenses, and `SHA256SUMS.txt` together. Compare `sha256 -r folimeld-0.3.3.tgz` with the entry for that file in the checksum list.
+Release candidates are stored in `dist/netbsd/`. Keep the matching source ZIP, dependency sources, patches, build record, licenses, and `SHA256SUMS.txt` together. Compare `sha256 -r folimeld-0.3.5.tgz` with the entry for that file in the checksum list.
 
 Run as root on NetBSD with X11 and a desktop configured. Use the tested pkgsrc repository for dependencies. Do not mix dependencies from different repository branches.
 
 ```sh
 export PKG_PATH=https://cdn.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/11.0_2026Q3/All
-/usr/pkg/sbin/pkg_add ./folimeld-0.3.3.tgz
+/usr/pkg/sbin/pkg_add ./folimeld-0.3.5.tgz
 ```
 
 Launch as a regular user.

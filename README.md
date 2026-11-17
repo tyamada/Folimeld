@@ -36,7 +36,9 @@ Each BSD preview has its own target OS version, CPU, and verification record. Se
 
 **Folimeld 1.0.1.0 for Windows 11 (x64)** is available for free on the Microsoft Store in Japan and the United States. [Microsoft Store (Japan)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [Microsoft Store (United States)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
 
-Folimeld 0.3.4 for Ubuntu/Debian is available on [GitHub Releases](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4). Separate 0.3.5 previews are available for [Ubuntu/Debian/Kali amd64 DEB](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5), [openSUSE Tumbleweed 20261110 amd64](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5), [openSUSE Leap 16.1 amd64](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5), [Fedora 44 amd64](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5), [Fedora 45 amd64](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) and [AlmaLinux 9 amd64](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5).
+**All Linux editions, including older versions such as 0.3.3 and 0.3.4, are prereleases (test distributions); they are not promoted to stable releases or Latest.** See the [Linux publication policy and checklist](documentation/linux-prerelease-policy.md). Windows, macOS and BSD classifications are unchanged.
+
+Folimeld 0.3.4 for Ubuntu/Debian is available as a prerelease on [GitHub Releases](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4). Separate 0.3.5 previews are available for [Ubuntu/Debian/Kali amd64 DEB](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5), [openSUSE Tumbleweed 20261110 amd64](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5), [openSUSE Leap 16.1 amd64](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5), [Fedora 44 amd64](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5), [Fedora 45 amd64](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) and [AlmaLinux 9 amd64](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5).
 
 Linux 0.3.3 packages, matching source ZIPs, checksums and build records are available in the [Linux GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3). FreeBSD, NetBSD, and OpenBSD previews are distributed through their dedicated Releases below. For instructions on updating and building 0.3.5 packages across Debian, Ubuntu, and BSD platforms, see the [BSD and Linux 0.3.5 build and update guide](documentation/bsd-035-release-plan.md). See also the [Linux migration plan and implementation record](documentation/linux-release-migration.md). Existing repository download URLs remain available for compatibility.
 
@@ -53,7 +55,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | Ubuntu 24.04.5 / Debian 13.7 (verified with Xorg in ARM64 VMs) | arm64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5) |
 | Ubuntu 24.04.5 (verified with Xorg in an ARM64 VM) | arm64 | strict Snap / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5) |
 | Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3 (verified on WSL2/WSLg) | amd64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) |
-| Ubuntu 24.04.5 (verified on WSL2/WSLg) | amd64 | strict Snap / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.5) |
+| Ubuntu 24.04.5 (WSL2/WSLg verification record) | amd64 | strict Snap / 0.3.5 (candidate; publication unconfirmed) | [Verification record](documentation/linux-snap-amd64-035-validation.md) |
 | openSUSE Tumbleweed 20261110 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) |
 | openSUSE Leap 16.1 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5) |
 | openSUSE Tumbleweed 20261111 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5) |
@@ -65,11 +67,11 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | Fedora 45 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) |
 | AlmaLinux 9.8 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5) |
 | AlmaLinux 9.8 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5) |
-| FreeBSD 15.1 | amd64 | pkg / 0.3.3_1 (preview, 0.3.5_1 build verified) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3) · [0.3.5 guide](documentation/bsd-035-release-plan.md) |
+| FreeBSD 15.1 | amd64 | pkg / 0.3.5_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.5_1) |
 | FreeBSD 15.1 | aarch64 | pkg / 0.3.5_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.5_1) |
-| NetBSD 11.1 | amd64 | tgz / 0.3.3 (preview, 0.3.5 build verified) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3) · [0.3.5 guide](documentation/bsd-035-release-plan.md) |
+| NetBSD 11.1 | amd64 | tgz / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.5) |
 | NetBSD 11.1 | aarch64 | tgz / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.5) |
-| OpenBSD 8.0 | amd64 | Signed tgz / 0.3.3 (preview, 0.3.5 build verified) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3) · [0.3.5 guide](documentation/bsd-035-release-plan.md) |
+| OpenBSD 8.0 | amd64 | Signed tgz / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.5) |
 | OpenBSD 8.0 | arm64 | Signed tgz / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.5) |
 
 Versions in the table are specific to each distribution channel. The Windows Store edition is available in Japan and the United States. Linux 0.3.3 downloads for Ubuntu 22.04 or later and older installation instructions remain below. BSD ARM64 packages use the name `aarch64` on FreeBSD and NetBSD, and `arm64` on OpenBSD.
@@ -410,13 +412,9 @@ sudo apt install ./folimeld_0.3.5_arm64.deb
 sudo snap install --dangerous ./folimeld_0.3.5_arm64.snap
 ```
 
-### Ubuntu amd64 strict Snap 0.3.5 preview
+### Ubuntu amd64 strict Snap 0.3.5 candidate (publication unconfirmed)
 
-Published the [**0.3.5 amd64 strict Snap**](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.5). Built and verified under Ubuntu 24.04.5 LTS amd64 (WSL2 / WSLg) with core24 base, strict confinement, GNOME extensions, active interface plug connections, and offscreen GUI execution. See the [verification details](documentation/linux-snap-amd64-035-validation.md).
-
-```bash
-sudo snap install --dangerous ./folimeld_0.3.5_amd64.snap
-```
+A [build and verification record](documentation/linux-snap-amd64-035-validation.md) exists for the 0.3.5 amd64 strict Snap. However, the public API returned HTTP 404 for the proposed `linux-snap-amd64-v0.3.5` Release on 2026-11-17, so public availability could not be confirmed. Preserve the historical verification record; do not describe this candidate as published. The [existing 0.3.4 test distribution](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.4) remains available.
 
 ### Ubuntu ARM64 strict Snap fix preview
 
@@ -566,12 +564,12 @@ PDF editing, Save As, reopening, Japanese input, upgrades between candidates, an
 
 ### FreeBSD source, package, and installation
 
-**0.3.3 / package revision 1** for FreeBSD 15.1 / amd64 is available as a preview in the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3). This is not an official FreeBSD package. Installation, GUI launch, saving, removal, and reinstallation have been verified. Build and acceptance verification for the Folimeld 0.3.5 baseline package (**0.3.5 / package revision 1**, `folimeld-0.3.5_1.pkg`) has also been completed; see the [BSD and Linux 0.3.5 build and update guide](documentation/bsd-035-release-plan.md) for procedures and verified hashes.
+**0.3.5 / package revision 1** for FreeBSD 15.1 / amd64 is available as a preview in the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.5_1). This is not an official FreeBSD package. Installation, GUI launch, saving, removal, and reinstallation have been verified. See the [BSD and Linux 0.3.5 build and update guide](documentation/bsd-035-release-plan.md) for procedures and verified hashes.
 
-- [Download the amd64 pkg](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/folimeld-0.3.3_1.pkg)
-- [Matching source ZIP for this pkg](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/Folimeld-source-9ceb5ec75dcd3ddb60bb66f0b6996da5e700cf4400bd89b31808f5250b19f23b.zip)
-- [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/SHA256SUMS.txt)
-- [Dependency sources, wheel, and build records](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3)
+- [Download the amd64 pkg](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.5_1/folimeld-0.3.5_1.pkg)
+- [Matching source ZIP for this pkg](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.5_1/Folimeld-source-e550bf65ec95b968ddce59592f3ef4fd9e297a88b9e2b7364413592244a14e8a.zip)
+- [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.5_1/SHA256SUMS.txt)
+- [Dependency sources, wheel, and build records](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.5_1)
 
 See the [installation and build instructions](documentation/freebsd-install.md) and [package verification record (Japanese)](documentation/freebsd-package-verification_ja.md). Use the matching source ZIP above when rebuilding this package.
 
@@ -579,7 +577,7 @@ On FreeBSD with a configured graphical desktop, run the following as root after 
 
 ```sh
 pkg install python312 py312-pyside6 py312-pillow py312-cryptography py312-psutil noto-sans-jp
-pkg add ./folimeld-0.3.3_1.pkg
+pkg add ./folimeld-0.3.5_1.pkg
 ```
 
 Run `folimeld` or `folimeld /path/to/file.pdf` as a regular user. To uninstall, run `pkg delete folimeld` as root. PyMuPDF/MuPDF 1.28.2, which fixes the form-loading crash, is bundled in the application's private directory without replacing system PyMuPDF. This amd64 package was verified on FreeBSD 15.1 / amd64. See the [GUI verification](documentation/freebsd-gui-verification_ja.md) and [image import, save failure, and load tests](documentation/freebsd-extended-verification_ja.md) (Japanese).
@@ -593,13 +591,13 @@ The release also includes matching source and SHA-256 checksums. The package was
 
 ### NetBSD source, package, and installation
 
-The NetBSD 11.1 / amd64 [package `folimeld-0.3.3.tgz`](https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/folimeld-0.3.3.tgz) and [matching source, dependency sources, and build record](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.3) are available as a preview release. Build and acceptance verification for the Folimeld 0.3.5 baseline package (`folimeld-0.3.5.tgz`) has also been completed; see the [BSD and Linux 0.3.5 build and update guide](documentation/bsd-035-release-plan.md). Compare `sha256 -r folimeld-0.3.3.tgz` with the [SHA-256 list](https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.3/SHA256SUMS.txt). PySide6/shiboken6 and PyMuPDF/MuPDF are bundled privately; Python, Qt, and other dependencies use official packages. See the [installation and source build instructions](documentation/netbsd-install.md).
+The NetBSD 11.1 / amd64 [package `folimeld-0.3.5.tgz`](https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.5/folimeld-0.3.5.tgz) and [matching source, dependency sources, and build record](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.5) are available as a preview release. See the [BSD and Linux 0.3.5 build and update guide](documentation/bsd-035-release-plan.md) for procedures and verified hashes. Compare `sha256 -r folimeld-0.3.5.tgz` with the [SHA-256 list](https://github.com/tyamada/Folimeld/releases/download/netbsd-v0.3.5/SHA256SUMS.txt). PySide6/shiboken6 and PyMuPDF/MuPDF are bundled privately; Python, Qt, and other dependencies use official packages. See the [installation and source build instructions](documentation/netbsd-install.md).
 
 After obtaining the package, run as root on NetBSD with an X11 desktop configured.
 
 ```sh
 export PKG_PATH=https://cdn.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/11.0_2026Q3/All
-/usr/pkg/sbin/pkg_add ./folimeld-0.3.3.tgz
+/usr/pkg/sbin/pkg_add ./folimeld-0.3.5.tgz
 ```
 
 Run `/usr/pkg/bin/folimeld` or `/usr/pkg/bin/folimeld /path/to/file.pdf` as a regular user. Remove as root with `/usr/pkg/sbin/pkg_delete folimeld`. These commands target amd64. For aarch64, use the dedicated instructions below.
@@ -611,22 +609,22 @@ Run `/usr/pkg/bin/folimeld` or `/usr/pkg/bin/folimeld /path/to/file.pdf` as a re
 
 ### OpenBSD source, packages, and installation
 
-The [application package](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-0.3.3.tgz), [private MuPDF dependency](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/folimeld-mupdf-1.28.2.tgz), and [matching source, dependency sources, and build records](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3) for OpenBSD 8.0 / amd64 are available as a preview. These are not official OpenBSD packages. Build, signify signing, and acceptance verification for the Folimeld 0.3.5 baseline package (`folimeld-0.3.5.tgz`) and private MuPDF dependency (`folimeld-mupdf-1.28.2.tgz`) have also been completed; see the [BSD and Linux 0.3.5 build and update guide](documentation/bsd-035-release-plan.md).
+The [application package](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.5/folimeld-0.3.5.tgz), [private MuPDF dependency](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.5/folimeld-mupdf-1.28.2.tgz), and [matching source, dependency sources, and build records](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.5) for OpenBSD 8.0 / amd64 are available as a preview. These are not official OpenBSD packages. See the [BSD and Linux 0.3.5 build and update guide](documentation/bsd-035-release-plan.md) for procedures and verified hashes.
 
-The [matching application source ZIP](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/Folimeld-source-f67bd8d6672b4e7377126bfc24e1c7d7661004d454693a3cd1fe622b02e75be9.zip) and [SHA-256 list](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.3/SHA256SUMS.txt) are also available.
+The [matching application source ZIP](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.5/Folimeld-source-e550bf65ec95b968ddce59592f3ef4fd9e297a88b9e2b7364413592244a14e8a.zip) and [SHA-256 list](https://github.com/tyamada/Folimeld/releases/download/openbsd-v0.3.5/SHA256SUMS.txt) are also available.
 
 Download both packages, `folimeld-80-pkg.pub`, `SHA256SUMS.txt`, and `SHA256SUMS.txt.sig` from the Release. Follow the [public-key verification, installation, and source build instructions](documentation/openbsd-install.md), then verify the signature and compare package SHA-256 hashes as a regular user.
 
 ```sh
 signify -V -p folimeld-80-pkg.pub -m SHA256SUMS.txt -x SHA256SUMS.txt.sig
-sha256 -r folimeld-0.3.3.tgz folimeld-mupdf-1.28.2.tgz
+sha256 -r folimeld-0.3.5.tgz folimeld-mupdf-1.28.2.tgz
 ```
 
 On a system configured with an X11 desktop and official OpenBSD 8.0 package sources, run as root. Official dependencies including Python and PySide6/Qt are also installed.
 
 ```sh
 install -m 644 folimeld-80-pkg.pub /etc/signify/folimeld-80-pkg.pub
-pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.3.tgz
+pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.5.tgz
 ```
 
 Run `folimeld` or `folimeld /path/to/file.pdf` as a regular user. Remove as root with `pkg_delete folimeld`, then `pkg_delete folimeld-mupdf` if the private dependency is no longer needed. System PyMuPDF is not replaced. The amd64 packages above were verified in a VM with 1 vCPU and 16 GiB of RAM.

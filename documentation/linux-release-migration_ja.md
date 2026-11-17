@@ -2,6 +2,8 @@
 
 [日本語](linux-release-migration_ja.md) | [English](linux-release-migration.md)
 
+> **現行Linux方針（2026-11-17）**：旧版もすべてプレリリース（試験配布）です。新規公開は`prerelease=true`・Latestにしない指定を必須とし、[Linux公開チェックリスト](linux-prerelease-policy_ja.md)を適用します。以下の過去記録・スナップショット・他OSの分類は変更しません。
+
 実施日: 2026-11-04。[linux-v0.3.3](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3)を公開し、検証済みの17資材を添付しました。全資材をダウンロードし直してSHA-256とサイズが一致することを確認済みです。Windows・macOSバイナリは含めていません。既存ファイルの削除と履歴の書き換えは行っていません。
 
 ## 配布方針

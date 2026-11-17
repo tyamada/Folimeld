@@ -2,21 +2,21 @@
 
 [English](freebsd-install.md) | [日本語](freebsd-install_ja.md)
 
-The commands and build instructions on this page target amd64. For aarch64, use the [installation instructions](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.3_1/INSTALL.txt) in the [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.3_1), which also contains matching source, SHA-256 checksums, and verification records.
+The commands and build instructions on this page target amd64. For aarch64, use the [installation instructions](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.5_1/INSTALL.txt) in the [dedicated Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.5_1), which also contains matching source, SHA-256 checksums, and verification records.
 
-Target: FreeBSD 15.1 / amd64, Python 3.12, and a graphical desktop. A preview is available in the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.3). This is not an official FreeBSD Ports package.
+Target: FreeBSD 15.1 / amd64, Python 3.12, and a graphical desktop. A preview is available in the [GitHub Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.5_1). This is not an official FreeBSD Ports package.
 
-Package creation, installation in a clean chroot, GUI launch, image conversion, saving, removal, and reinstallation have been verified. See the [verification record (Japanese)](freebsd-package-verification_ja.md).
+Package creation, installation in a clean chroot, GUI launch, image conversion, saving, removal, and reinstallation have been verified. See the [verification record (Japanese)](freebsd-package-verification_ja.md) and [0.3.5 guide](bsd-035-release-plan.md).
 
 ## Installing the package
 
-Download the [package](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/folimeld-0.3.3_1.pkg) and [checksums](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/SHA256SUMS.txt) from the Release. The [matching source ZIP](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/Folimeld-source-9ceb5ec75dcd3ddb60bb66f0b6996da5e700cf4400bd89b31808f5250b19f23b.zip), `build-record.json`, and PyMuPDF/MuPDF source archives are attached to the same Release. Compare `sha256 -r folimeld-0.3.3_1.pkg` with the entry for that file in the checksum list. Check the other distribution files in the same way. Local build outputs remain in `dist/freebsd/`; files organized for publication are retained in `build/freebsd-release/`.
+Download the [package](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.5_1/folimeld-0.3.5_1.pkg) and [checksums](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.5_1/SHA256SUMS.txt) from the Release. The [matching source ZIP](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.5_1/Folimeld-source-e550bf65ec95b968ddce59592f3ef4fd9e297a88b9e2b7364413592244a14e8a.zip), `build-record.json`, and PyMuPDF/MuPDF source archives are attached to the same Release. Compare `sha256 -r folimeld-0.3.5_1.pkg` with the entry for that file in the checksum list. Check the other distribution files in the same way. Local build outputs remain in `dist/freebsd/`; files organized for publication are retained in `build/freebsd-release/`.
 
 Install dependencies first as root. Do not rely on `pkg add` for a local file to fetch missing dependencies from the official repository.
 
 ```sh
 pkg install python312 py312-pyside6 py312-pillow py312-cryptography py312-psutil noto-sans-jp
-pkg add ./folimeld-0.3.3_1.pkg
+pkg add ./folimeld-0.3.5_1.pkg
 ```
 
 Launch as a regular user:
@@ -66,6 +66,6 @@ python3.12 tools/build_freebsd_package.py \
 
 Building the package does not require root. The builder verifies the source manifest and records dependency names, versions, and origins, plus SHA-256 hashes of the source ZIP, wheel, and package. Installed files are owned by root:wheel. The package version appends `_1` to the application version as the FreeBSD package revision.
 
-Corresponding sources for bundled native code are [PyMuPDF 1.28.2](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/pymupdf-1.28.2.tar.gz), [MuPDF 1.28.2](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.3/mupdf-1.28.2-source.tar.gz), and `packaging/freebsd/pymupdf-1.28.2-freebsd.patch` in the matching source ZIP. They have been verified against the fixed hashes in the build script. External official dependency packages are not bundled.
+Corresponding sources for bundled native code are [PyMuPDF 1.28.2](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.5_1/pymupdf-1.28.2.tar.gz), [MuPDF 1.28.2](https://github.com/tyamada/Folimeld/releases/download/freebsd-v0.3.5_1/mupdf-1.28.2-source.tar.gz), and `packaging/freebsd/pymupdf-1.28.2-freebsd.patch` in the matching source ZIP. They have been verified against the fixed hashes in the build script. External official dependency packages are not bundled.
 
 References: official FreeBSD pkg [pkg-create(8)](https://github.com/freebsd/pkg/blob/main/docs/pkg-create.8) and [pkg-add(8)](https://github.com/freebsd/pkg/blob/main/docs/pkg-add.8).

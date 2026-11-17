@@ -1,5 +1,7 @@
 # Linux amd64追加対応とWindowsストレージ運用計画
 
+> **現行方針（2026-11-17）**：Linuxは旧版もすべてプレリリース（試験配布）です。[公開チェックリスト](linux-prerelease-policy_ja.md)に従い、新規公開でPre-releaseを明示しLatestへ昇格させません。以下の「安定版」「未公開」等は各時点の記録として保持します。Kali amd64 0.3.5は[Ubuntu/Debian/Kali共通DEB](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5)です。
+
 2026-11-13 DEB続行: Ubuntu24.04から共通amd64 DEB 0.3.5を生成。Ubuntu24.04.4・Debian13.6・KaliRolling2026.3で更新・削除再導入・一般ユーザー起動・日本語PDF回転/Undoを確認。Ubuntuでは保存編集と最小chrootも成功。[公開前レビュー](linux-deb-amd64-publication-review_ja.md)と12添付約2.22GBを確定し、自動承認レビューの指摘に従ってDEB固有の公開承認を依頼した。まだ公開・push・X案内は実施していない。
 
 2026-11-13公開完了: ユーザーの確定12添付・専用ブランチ/タグへの明示承認後、[Linux DEB amd64 0.3.5を公開](linux-deb-amd64-publication-result_ja.md)。12添付の公開後照合・ソースpush・[X案内](https://x.com/tyamada22/status/2121026291403256241)を完了した。今回の既存許可環境の候補はFedora44/45・AlmaLinux9・Leap16.1・Tumbleweed20261110・Ubuntu/Debian/Kali用DEBまで公開済み。安定版0.3.4/Snap/ARM64、元作業ツリーの版・実装変更を保持。新規ディストリビューションやSnap/ARM64への追加拡大は未実施。通常デスクトップやDEBのIME等の未再試験は各公開制約に保持した。

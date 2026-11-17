@@ -2,13 +2,13 @@
 
 [English](openbsd-install.md) | [日本語](openbsd-install_ja.md)
 
-このページのコマンドとビルド手順はamd64向けです。arm64版は[専用Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.3)の[導入手順](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.3/INSTALL_ja.txt)を使用してください。対応ソース・SHA-256・検証記録も同じReleaseに掲載しています。
+このページのコマンドとビルド手順はamd64向けです。arm64版は[専用Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.5)の[導入手順](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.5/INSTALL_ja.txt)を使用してください。対応ソース・SHA-256・検証記録も同じReleaseに掲載しています。
 
-対象はOpenBSD 8.0 / amd64、Python 3.14、X11デスクトップ。Folimeld独自の試験配布であり、OpenBSD公式パッケージではない。配布先は[OpenBSD Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.3)。
+対象はOpenBSD 8.0 / amd64、Python 3.14、X11デスクトップ。Folimeld独自の試験配布であり、OpenBSD公式パッケージではない。配布先は[OpenBSD Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.5)。[0.3.5手順書](bsd-035-release-plan_ja.md)も参照。
 
 ## パッケージの導入
 
-Releaseから `folimeld-0.3.3.tgz`、`folimeld-mupdf-1.28.2.tgz`、`folimeld-80-pkg.pub`、`SHA256SUMS.txt`、`SHA256SUMS.txt.sig` を同じフォルダーへ保存する。公開鍵の2行目を、[リポジトリの公開鍵](../packaging/openbsd/folimeld-80-pkg.pub)と照合する。
+Releaseから `folimeld-0.3.5.tgz`、`folimeld-mupdf-1.28.2.tgz`、`folimeld-80-pkg.pub`、`SHA256SUMS.txt`、`SHA256SUMS.txt.sig` を同じフォルダーへ保存する。公開鍵の2行目を、[リポジトリの公開鍵](../packaging/openbsd/folimeld-80-pkg.pub)と照合する。
 
 ```text
 RWSM2obNrKjUbNGU8itgBN/nGVFG95tTaBrcV9pO8dTLQvihQtAdPkIy
@@ -18,14 +18,14 @@ RWSM2obNrKjUbNGU8itgBN/nGVFG95tTaBrcV9pO8dTLQvihQtAdPkIy
 
 ```sh
 signify -V -p folimeld-80-pkg.pub -m SHA256SUMS.txt -x SHA256SUMS.txt.sig
-sha256 -r folimeld-0.3.3.tgz folimeld-mupdf-1.28.2.tgz
+sha256 -r folimeld-0.3.5.tgz folimeld-mupdf-1.28.2.tgz
 ```
 
 X11デスクトップを構成し、OpenBSD 8.0の公式パッケージを取得できる `/etc/installurl` を設定する。次をrootで実行する。`doas` が未設定ならrootのシェルを使用する。
 
 ```sh
 install -m 644 folimeld-80-pkg.pub /etc/signify/folimeld-80-pkg.pub
-pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.3.tgz
+pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.5.tgz
 ```
 
 署名付きパッケージを使用し、未署名を許可するオプションは指定しない。Python、PySide6/Qt、Pillow、cryptography、psutil、gettext-runtime、日本語フォントは公式依存として導入する。ネットワークと空き容量が必要。

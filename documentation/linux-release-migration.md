@@ -2,6 +2,8 @@
 
 [日本語](linux-release-migration_ja.md) | [English](linux-release-migration.md)
 
+> **Current Linux policy (2026-11-17):** all versions, including older releases, are prereleases (test distributions). New publication requires `prerelease=true` and not Latest; apply the [Linux publication checklist](linux-prerelease-policy.md). Historical records, snapshots and other OS classifications below remain unchanged.
+
 Completed: 2026-11-04. [linux-v0.3.3](https://github.com/tyamada/Folimeld/releases/tag/linux-v0.3.3) is public with 17 verified assets. All assets were downloaded again and matched their original SHA-256 hashes and sizes. No Windows/macOS binaries are included. Existing files and Git history have not been deleted or rewritten.
 
 ## Distribution policy

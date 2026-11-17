@@ -2,6 +2,8 @@
 
 [Japanese](bsd-035-release-plan_ja.md) | [English](bsd-035-release-plan.md)
 
+> **Current Linux policy (2026-11-17):** all versions, including older releases, are prereleases (test distributions). New publication requires `prerelease=true` and not Latest; apply the [Linux publication checklist](linux-prerelease-policy.md). Historical records, snapshots and other OS classifications below remain unchanged.
+
 Procedures for building, verifying, and publishing packages incorporating Folimeld 0.3.5 features (encrypted Undo/Redo disk offloading, accelerated large PDF saves, image folder batch import, virtualized thumbnails, and GitHub Sponsors guidance).
 
 ---

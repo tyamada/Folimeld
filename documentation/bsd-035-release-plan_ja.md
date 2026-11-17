@@ -2,6 +2,8 @@
 
 [日本語](bsd-035-release-plan_ja.md) | [English](bsd-035-release-plan.md)
 
+> **現行Linux方針（2026-11-17）**：旧版もすべてプレリリース（試験配布）です。新規公開は`prerelease=true`・Latestにしない指定を必須とし、[Linux公開チェックリスト](linux-prerelease-policy_ja.md)を適用します。以下の過去記録・スナップショット・他OSの分類は変更しません。
+
 Folimeld 0.3.5（暗号化 Undo/Redo 履歴のディスク退避、大規模 PDF 保存高速化、画像フォルダー一括取り込み、サムネイル仮想化、GitHub Sponsors 案内）を適用した各 OS 向けパッケージの生成・受入検証・公開手順です。
 
 ---
