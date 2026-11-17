@@ -1,9 +1,7 @@
 import ast
 from pathlib import Path
-import pytest
 
 from folimeld import __version__
-from tools.build_freebsd_package import extract as freebsd_extract
 from tools.build_netbsd_package import DEPENDENCY_SOURCES as NETBSD_DEPS
 from tools.build_openbsd_package import DEPENDENCY_SOURCES as OPENBSD_DEPS
 
