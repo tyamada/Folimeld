@@ -52,7 +52,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | macOS 15 or later | Apple Silicon (arm64) | Homebrew / 0.3.5 (source) | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.5) |
 | Ubuntu 24.04.5 / Debian 13.7 (verified with Xorg in ARM64 VMs) | arm64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5) |
 | Ubuntu 24.04.5 (verified with Xorg in an ARM64 VM) | arm64 | strict Snap / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5) |
-| Ubuntu 24.04.4 / Debian 13.6 / Kali Rolling 2026.3 (verified on WSL2/WSLg) | amd64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) |
+| Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3 (verified on WSL2/WSLg) | amd64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) |
 | openSUSE Tumbleweed 20261110 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) |
 | openSUSE Leap 16.1 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5) |
 | openSUSE Tumbleweed 20261111 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5) |
@@ -387,7 +387,7 @@ sudo apt install ./folimeld_0.3.3_arm64.deb
 sudo snap install --dangerous ./folimeld_0.3.3_arm64.snap
 ```
 
-Debian 13 uses the same deb package as Ubuntu. If a minimal installation displays `Fontconfig error: Cannot load default config file`, run `sudo apt install fontconfig-config`. PDF display, page movement, rotation, saving, and reopening have been verified on Debian 13.6 amd64 (WSL2 / WSLg, X11). See the [Debian verification record](documentation/debian-wsl-verification_ja.md) (in Japanese) for details. Installation of the deb package and startup with a PDF have also been verified on arm64 (WSL2).
+Debian 13 uses the same deb package as Ubuntu. If a minimal installation displays `Fontconfig error: Cannot load default config file`, run `sudo apt install fontconfig-config`. PDF display, page movement, rotation, saving, and reopening have been verified on Debian 13.6 and 13.7 amd64 (WSL2 / WSLg, X11). See the [Debian verification record](documentation/debian-wsl-verification_ja.md) (in Japanese) for details. Installation of the deb package and startup with a PDF have also been verified on arm64 (WSL2).
 
 ### Ubuntu/Debian ARM64 DEB 0.3.5 preview
 
@@ -415,7 +415,7 @@ sudo snap install --dangerous ./folimeld_0.3.5_arm64.snap
 
 ### Ubuntu / Debian / Kali amd64 DEB preview
 
-**Folimeld 0.3.5**, published on November 13, 2026 (Japan time), is an amd64 DEB preview built on Ubuntu 24.04 and verified in dedicated Ubuntu 24.04.4, Debian 13.6, and Kali Rolling 2026.3 WSL2/WSLg environments. Existing 0.3.4 DEB/Snap and ARM64 downloads remain available. glibc 2.39 or newer is required, along with the official universe repository on Ubuntu.
+**Folimeld 0.3.5**, published on November 13, 2026 (Japan time), is an amd64 DEB preview built on Ubuntu 24.04 and verified in dedicated Ubuntu 24.04.4/24.04.5, Debian 13.6/13.7, and Kali Rolling 2026.3 WSL2/WSLg environments. Existing 0.3.4 DEB/Snap and ARM64 downloads remain available. glibc 2.39 or newer is required, along with the official universe repository on Ubuntu.
 
 - [amd64 DEB](https://github.com/tyamada/Folimeld/releases/download/linux-deb-amd64-v0.3.5/folimeld_0.3.5_amd64.deb)
 - [SHA256SUMS.txt](https://github.com/tyamada/Folimeld/releases/download/linux-deb-amd64-v0.3.5/SHA256SUMS.txt)
@@ -427,7 +427,7 @@ sudo apt install --no-install-recommends ./folimeld_0.3.5_amd64.deb
 folimeld
 ```
 
-All three environments passed updating from their existing versions, removal/reinstallation, regular-user startup, preservation of existing test PDFs/settings, Japanese PDF display, immediate thumbnail rotation, and undo. Ubuntu additionally passed redo, page movement, blank-page insertion/deletion, Japanese/space filename saving and reopening, and offscreen startup in a minimal chroot without development dependencies, Python, or recommended CJK fonts. Conventional desktops, ARM64, other OS versions, and future rolling updates remain unverified. Post-publication checks on Ubuntu 24.04.4 additionally verified Mozc Japanese conversion, GIO association, encrypted-PDF editing/saving and reauthentication, and image import/saving. These additional features were not retested on Debian/Kali. See the [additional verification record](documentation/linux-deb-amd64-extended-verification_ja.md). The package is unsigned. See the [bilingual notes](documentation/linux-deb-amd64-publication-body.md) and [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5).
+All three environments passed updating from their existing versions, removal/reinstallation, regular-user startup, preservation of existing test PDFs/settings, Japanese PDF display, immediate thumbnail rotation, and undo. Ubuntu additionally passed redo, page movement, blank-page insertion/deletion, Japanese/space filename saving and reopening, and offscreen startup in a minimal chroot without development dependencies, Python, or recommended CJK fonts. Conventional desktops, ARM64, other OS versions, and future rolling updates remain unverified. Post-publication checks on Ubuntu 24.04.4/24.04.5 additionally verified Mozc Japanese conversion, GIO association, encrypted-PDF editing/saving and reauthentication, image import/saving, and startup on Debian 13.7. See the [additional verification record](documentation/linux-deb-amd64-extended-verification_ja.md). The package is unsigned. See the [bilingual notes](documentation/linux-deb-amd64-publication-body.md) and [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5).
 
 ### openSUSE Tumbleweed 20261110 amd64 preview
 

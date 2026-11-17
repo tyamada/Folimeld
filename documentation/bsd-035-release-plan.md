@@ -177,7 +177,7 @@ Built via `./build_linux.sh deb` with verified package and association manifest 
 - Association record: `dist/source/folimeld_0.3.5_amd64.deb-5b64a696b69cdb7c9fada6e13cd100dd35d76470ecad1408800ee558c4362174.json`
 
 ### Acceptance test results
-- **Ubuntu 24.04.4 LTS (WSL2)**:
-  `QT_QPA_PLATFORM=offscreen timeout 5s dist/folimeld` verified successful Qt GUI initialization, PyMuPDF/fitz loading, window creation, and event loop entry (cleanly running).
-- **Debian 13.6 Trixie (WSL2)**:
-  Verified under Debian 13.6 fulfilling `libc6 (>= 2.39)` dependency (GLIBC 2.41), running successfully offscreen with Qt GUI window initialization and PyMuPDF/fitz loading.
+- **Ubuntu 24.04.4 LTS / 24.04.5 LTS (WSL2)**:
+  `QT_QPA_PLATFORM=offscreen timeout 4s /usr/bin/folimeld` verified successful Qt GUI initialization, PyMuPDF/fitz loading, window creation, and event loop entry (cleanly running).
+- **Debian 13.6 / 13.7 Trixie (WSL2)**:
+  Verified under Debian 13.6 and updated 13.7 fulfilling `libc6 (>= 2.39)` dependency (GLIBC 2.41), running successfully offscreen with Qt GUI window initialization and PyMuPDF/fitz loading.

@@ -178,7 +178,7 @@ dpkg-deb --build build/deb/folimeld_0.3.5_amd64 dist/folimeld_0.3.5_amd64.deb
 - 関連付け記録: `dist/source/folimeld_0.3.5_amd64.deb-5b64a696b69cdb7c9fada6e13cd100dd35d76470ecad1408800ee558c4362174.json`
 
 ### 受入確認結果
-- **Ubuntu 24.04.4 LTS (WSL2)**:
-  `QT_QPA_PLATFORM=offscreen timeout 5s dist/folimeld` にて、Qt GUI初期化、PyMuPDF/fitz読み込み、ウィンドウ生成およびイベントループ起動を正常確認（プロセス正常稼働）。
-- **Debian 13.6 Trixie (WSL2)**:
-  `libc6 (>= 2.39)` 依存を満たす環境（GLIBC 2.41）にて、同様に offscreen 起動、PyMuPDF/fitz読み込み、Qt GUIウィンドウ生成を確認（プロセス正常稼働）。
+- **Ubuntu 24.04.4 LTS / 24.04.5 LTS (WSL2)**:
+  `QT_QPA_PLATFORM=offscreen timeout 4s /usr/bin/folimeld` にて、Qt GUI初期化、PyMuPDF/fitz読み込み、ウィンドウ生成およびイベントループ起動を正常確認（プロセス正常稼働・正常終了）。
+- **Debian 13.6 / 13.7 Trixie (WSL2)**:
+  `libc6 (>= 2.39)` 依存を満たす環境（GLIBC 2.41）にて、同様に offscreen 起動、PyMuPDF/fitz読み込み、Qt GUIウィンドウ生成を確認（プロセス正常稼働・正常終了）。
