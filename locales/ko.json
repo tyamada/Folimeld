@@ -1,4 +1,6 @@
 {
+  "close_pdf": "닫기",
+  "empty_document": "PDF를 열거나 이미지 폴더에서 PDF를 만드세요.",
   "button_display": "버튼 표시",
   "button_display_icon_text": "아이콘 + 텍스트",
   "button_display_icon": "아이콘",

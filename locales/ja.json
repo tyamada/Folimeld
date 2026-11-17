@@ -1,4 +1,6 @@
 {
+  "close_pdf": "閉じる",
+  "empty_document": "PDFを開くか、画像フォルダからPDFを作成してください。",
   "button_display": "ボタン表示",
   "button_display_icon_text": "アイコン＋テキスト",
   "button_display_icon": "アイコン",

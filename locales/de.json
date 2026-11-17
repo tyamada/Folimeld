@@ -1,4 +1,6 @@
 {
+  "close_pdf": "Schließen",
+  "empty_document": "Öffnen Sie eine PDF oder erstellen Sie eine PDF aus einem Bilderordner.",
   "button_display": "Schaltflächenanzeige",
   "button_display_icon_text": "Symbol + Text",
   "button_display_icon": "Symbol",

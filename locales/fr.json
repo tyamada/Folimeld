@@ -1,4 +1,6 @@
 {
+  "close_pdf": "Fermer",
+  "empty_document": "Ouvrez un PDF ou créez-en un depuis un dossier d’images.",
   "button_display": "Affichage des boutons",
   "button_display_icon_text": "Icône + texte",
   "button_display_icon": "Icône",

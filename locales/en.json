@@ -1,4 +1,6 @@
 {
+  "close_pdf": "Close",
+  "empty_document": "Open a PDF or create a PDF from an image folder.",
   "button_display": "Button display",
   "button_display_icon_text": "Icon + text",
   "button_display_icon": "Icon",

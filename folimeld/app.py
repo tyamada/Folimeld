@@ -8,7 +8,8 @@ from .distribution import sponsors_available
 from PySide6.QtCore import QStandardPaths, QTimer, Qt
 from PySide6.QtGui import QAction, QCloseEvent, QIcon, QKeySequence, QTransform
 from PySide6.QtWidgets import (QApplication, QFileDialog, QMainWindow, QMessageBox,
-                               QInputDialog, QLineEdit, QToolBar, QStyle)
+                               QInputDialog, QLineEdit, QToolBar, QStyle,
+                               QDialog, QLabel, QPushButton, QVBoxLayout)
 
 from . import __version__
 from .dialogs import PropertiesDialog
@@ -61,6 +62,8 @@ class MainWindow(QMainWindow):
         self.support_dialog = None
         self.sponsors_dialog = None
         self.help_dialog = None
+        self.empty_dialog = None
+        self._empty_prompt_scheduled = False
         self._build_ui()
         if self.support:
             self.support.changed.connect(self._update_support)
@@ -87,6 +90,7 @@ class MainWindow(QMainWindow):
         settings_menu = menu.addMenu(self.tr_("settings"))
         help_menu = menu.addMenu(self.tr_("help"))
         self.open_action = self._action("open", self.open_pdf, "Ctrl+O")
+        self.close_pdf_action = self._action("close_pdf", self.close_pdf, "Ctrl+W")
         self.save_action = self._action("save", self.save, "Ctrl+S")
         self.save_as_action = self._action("save_as", self.save_as, "Ctrl+Shift+S")
         self.undo_action = self._action("undo", self.undo)
@@ -109,7 +113,9 @@ class MainWindow(QMainWindow):
         self.remove_password_action = self._action("remove_password", self.remove_password)
         for action in (self.open_action, self.save_action, self.save_as_action):
             file_menu.addAction(action)
-        file_menu.addAction(self._action("import_images", self.import_image_folder))
+        self.import_images_action = self._action("import_images", self.import_image_folder)
+        file_menu.addAction(self.import_images_action)
+        file_menu.addAction(self.close_pdf_action)
         file_menu.addSeparator()
         file_menu.addAction(self.set_password_action)
         file_menu.addAction(self.remove_password_action)
@@ -152,6 +158,7 @@ class MainWindow(QMainWindow):
         toolbar.setToolButtonStyle(BUTTON_STYLES[self.button_display])
         icons = {
             "open": "SP_DialogOpenButton", "save": "SP_DialogSaveButton",
+            "close_pdf": "SP_DialogCloseButton",
             "undo": "SP_ArrowBack", "redo": "SP_ArrowForward",
             "insert": "SP_FileDialogNewFolder", "insert_blank": "SP_FileIcon",
             "delete": "SP_TrashIcon", "move_up": "SP_ArrowUp",
@@ -167,7 +174,7 @@ class MainWindow(QMainWindow):
             action.setIcon(icon)
             action.setToolTip(action.text())
         self.addToolBar(toolbar)
-        for action in (self.open_action, self.save_action, self.undo_action, self.redo_action, self.insert_action, self.insert_blank_action,
+        for action in (self.open_action, self.close_pdf_action, self.save_action, self.undo_action, self.redo_action, self.insert_action, self.insert_blank_action,
                        self.delete_action,
                        self.up_action,
                        self.down_action, self.left_action, self.right_action):
@@ -201,7 +208,7 @@ class MainWindow(QMainWindow):
         self.undo_action.setEnabled(self.model.can_undo)
         self.redo_action.setEnabled(self.model.can_redo)
         enabled = self.model.loaded
-        for action in (self.save_action, self.save_as_action, self.insert_action,
+        for action in (self.close_pdf_action, self.save_action, self.save_as_action, self.insert_action,
                        self.properties_action, self.right_binding_action,
                        self.right_binding_cover_action, self.up_action, self.down_action,
                        self.left_action, self.right_action, self.set_password_action):
@@ -209,9 +216,51 @@ class MainWindow(QMainWindow):
         self.insert_blank_action.setEnabled(enabled and bool(self.selected_rows()))
         self.delete_action.setEnabled(enabled and bool(self.selected_rows()))
         self.remove_password_action.setEnabled(enabled and self.model.password_protected)
+        if enabled and self.empty_dialog is not None:
+            self.empty_dialog.hide()
         name = self.model.path.name if self.model.path else self.tr_("untitled")
         dirty = " *" if self.model.dirty else ""
         self.setWindowTitle(f"{name}{dirty} — {self.tr_('app_name')}")
+
+    def showEvent(self, event) -> None:
+        super().showEvent(event)
+        if not self._empty_prompt_scheduled:
+            self._empty_prompt_scheduled = True
+            QTimer.singleShot(0, self.show_empty_dialog)
+
+    def show_empty_dialog(self) -> None:
+        """Offer entry points without blocking any of the main window's menus."""
+        if self.model.loaded or not self.isVisible():
+            return
+        if self.empty_dialog is None:
+            dialog = QDialog(self)
+            dialog.setWindowModality(Qt.WindowModality.NonModal)
+            dialog.setWindowTitle(self.tr_("app_name"))
+            layout = QVBoxLayout(dialog)
+            layout.addWidget(QLabel(self.tr_("empty_document"), dialog))
+            self.empty_open_button = QPushButton(self.tr_("open"), dialog)
+            self.empty_import_button = QPushButton(self.tr_("import_images"), dialog)
+            self.empty_close_button = QPushButton(self.tr_("close_pdf"), dialog)
+            self.empty_open_button.clicked.connect(lambda: self.open_pdf())
+            self.empty_import_button.clicked.connect(lambda: self.import_image_folder())
+            self.empty_close_button.clicked.connect(dialog.reject)
+            for button in (self.empty_open_button, self.empty_import_button,
+                           self.empty_close_button):
+                layout.addWidget(button)
+            self.empty_dialog = dialog
+        self.empty_dialog.show()
+
+    def close_pdf(self) -> None:
+        """Close the current PDF, leaving the application and its menus usable."""
+        if not self.model.loaded or not self.confirm_discard():
+            return
+        self.thumbnails.clear()
+        self.model.close()
+        self.pages.clear()
+        self.thumbnails.resume()
+        self.update_state()
+        self.statusBar().showMessage(self.tr_("ready"))
+        self.show_empty_dialog()
 
     def confirm_discard(self) -> bool:
         if self._saving:
@@ -553,6 +602,8 @@ class MainWindow(QMainWindow):
 
     def closeEvent(self, event: QCloseEvent) -> None:
         if self.confirm_discard():
+            if self.empty_dialog is not None:
+                self.empty_dialog.hide()
             self.thumbnails.clear()
             self.model.close(); event.accept()
         else: event.ignore()

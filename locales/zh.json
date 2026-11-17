@@ -1,4 +1,6 @@
 {
+  "close_pdf": "关闭",
+  "empty_document": "打开PDF或从图片文件夹创建PDF。",
   "button_display": "按钮显示",
   "button_display_icon_text": "图标＋文字",
   "button_display_icon": "图标",

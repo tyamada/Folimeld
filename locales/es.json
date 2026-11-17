@@ -1,4 +1,6 @@
 {
+  "close_pdf": "Cerrar",
+  "empty_document": "Abra un PDF o cree uno desde una carpeta de imágenes.",
   "button_display": "Visualización de botones",
   "button_display_icon_text": "Icono + texto",
   "button_display_icon": "Icono",
