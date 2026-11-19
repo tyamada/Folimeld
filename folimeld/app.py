@@ -62,6 +62,7 @@ class MainWindow(QMainWindow):
         self.support_dialog = None
         self.sponsors_dialog = None
         self.help_dialog = None
+        self.sample_dialog = None
         self.empty_dialog = None
         self._empty_prompt_scheduled = False
         self._build_ui()
@@ -115,6 +116,8 @@ class MainWindow(QMainWindow):
             file_menu.addAction(action)
         self.import_images_action = self._action("import_images", self.import_image_folder)
         file_menu.addAction(self.import_images_action)
+        self.samples_action = self._action("samples", self.show_samples)
+        file_menu.addAction(self.samples_action)
         file_menu.addAction(self.close_pdf_action)
         file_menu.addSeparator()
         file_menu.addAction(self.set_password_action)
@@ -240,15 +243,28 @@ class MainWindow(QMainWindow):
             layout.addWidget(QLabel(self.tr_("empty_document"), dialog))
             self.empty_open_button = QPushButton(self.tr_("open"), dialog)
             self.empty_import_button = QPushButton(self.tr_("import_images"), dialog)
+            self.empty_samples_button = QPushButton(self.tr_("samples"), dialog)
+            self.empty_samples_button.clicked.connect(self.show_samples)
             self.empty_close_button = QPushButton(self.tr_("close_pdf"), dialog)
             self.empty_open_button.clicked.connect(lambda: self.open_pdf())
             self.empty_import_button.clicked.connect(lambda: self.import_image_folder())
             self.empty_close_button.clicked.connect(dialog.reject)
             for button in (self.empty_open_button, self.empty_import_button,
-                           self.empty_close_button):
+                           self.empty_samples_button, self.empty_close_button):
                 layout.addWidget(button)
             self.empty_dialog = dialog
         self.empty_dialog.show()
+
+    def show_samples(self) -> None:
+        from .sample_dialog import SampleDialog
+        if self.sample_dialog is None:
+            self.sample_dialog = SampleDialog(self.tr_, self, language=self.i18n.language)
+            self.sample_dialog.selected.connect(self.open_path)
+        self.sample_dialog.show()
+        self.sample_dialog.raise_()
+        self.sample_dialog.activateWindow()
+        if not self.sample_dialog.loaded and self.sample_dialog.worker is None:
+            self.sample_dialog.refresh_catalogue()
 
     def close_pdf(self) -> None:
         """Close the current PDF, leaving the application and its menus usable."""
@@ -601,7 +617,15 @@ class MainWindow(QMainWindow):
         QMessageBox.critical(self, self.tr_("error"), str(error))
 
     def closeEvent(self, event: QCloseEvent) -> None:
+        if self.sample_dialog is not None and self.sample_dialog.worker is not None:
+            self.sample_dialog.cancel_work()
+            self.sample_dialog.worker.finished.connect(
+                self.close, Qt.ConnectionType.SingleShotConnection)
+            event.ignore()
+            return
         if self.confirm_discard():
+            if self.sample_dialog is not None:
+                self.sample_dialog.close()
             if self.empty_dialog is not None:
                 self.empty_dialog.hide()
             self.thumbnails.clear()
