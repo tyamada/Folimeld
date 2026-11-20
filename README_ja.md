@@ -4,6 +4,8 @@
 
 [ホームページ](https://tyamada.github.io/Folimeld/index_ja.html)
 
+漫画サンプルPDFは[サンプルPDF集約ページ](https://tyamada.github.io/manga-prompt-kit/samples/ja/)から話数・言語を選んで取得できます。作者：こまいろ日和 / Komairo Hiyori、CC BY 4.0。PDFの配布先は集約ページの固定GitHub Releaseであり、このリポジトリではありません。
+
 ![Folimeld icon](assets/Folimeld.iconset/icon_128x128.png)
 
 Folimeld は、PDF のページを見ながら並べ替え、回転、挿入、削除できるデスクトップアプリです。Windows、macOS、Ubuntu、Debianで利用でき、openSUSE・Fedora・AlmaLinux・FreeBSD・NetBSD・OpenBSD向けにも試験配布しています。編集するファイルを外部サービスへ送信せず、ローカル環境で処理します。

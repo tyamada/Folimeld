@@ -1,15 +1,24 @@
 from pathlib import Path
+import argparse,sys
 import hashlib,json,subprocess,platform
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+from tools.sample_inputs import add_input_arguments,resolve_sample_input
 import pymupdf as fitz
-root=Path('/home/folimeld/Folimeld');p=root/'build/openbsd-verification'
+parser=argparse.ArgumentParser(description='Verify existing OpenBSD GUI outputs; missing inputs fail explicitly.')
+add_input_arguments(parser)
+parser.add_argument('--root',type=Path,default=Path(__file__).resolve().parents[2])
+parser.add_argument('--results-dir',type=Path)
+args=parser.parse_args()
+root=args.root;p=args.results_dir or root/'build/openbsd-verification'
+source_path=resolve_sample_input(input_dir=args.input_dir,cache_dir=args.cache_dir,download=args.download)
 def open_pdf(name,password=None):
  d=fitz.open(p/name)
  if password:assert d.authenticate(password)
  return d
 def streams(d):return [hashlib.sha256(b''.join(d.xref_stream(x) for x in q.get_contents())).hexdigest() for q in d]
 def widgets(d):return [(w.field_name,w.field_type,w.field_value,w.field_flags,w.choice_values,list(w.rect)) for w in d[0].widgets()]
-source=fitz.open(root/'testdata/tameshibu_episode3_ja.pdf')
-src_hash=hashlib.sha256((root/'testdata/tameshibu_episode3_ja.pdf').read_bytes()).hexdigest()
+source=fitz.open(source_path)
+src_hash=hashlib.sha256(source_path.read_bytes()).hexdigest()
 assert src_hash=='4abfe0f4a028bbac280c7629cd64c72e5df1faac8348695e0277dfc5a9154558'
 core=open_pdf('gui-manual-after.pdf');order=[streams(source).index(x)+1 for x in streams(core)]
 assert order==[2,1,3,4,5,6,7,8] and [q.rotation for q in core]==[0,90,0,0,0,0,0,0]
@@ -34,7 +43,7 @@ history_source=open_pdf('history-images-100.pdf');history=open_pdf('gui-history-
 for i in [0,96,99]:assert history[i].get_pixmap().samples==history_source[i].get_pixmap().samples
 def large_tmp(name):
  out=[]
- for line in Path('/home/folimeld/'+name).read_text().splitlines():
+ for line in (root.parent/name).read_text().splitlines():
   fields=line.split()
   if '/tmp' in fields and fields[-1].isdigit() and int(fields[-1])>1024*1024:out.append(int(fields[-1]))
  return out

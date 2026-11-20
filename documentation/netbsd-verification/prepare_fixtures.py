@@ -1,17 +1,26 @@
 """Create disposable inputs for the NetBSD GUI verification."""
+import argparse
+import sys
 import hashlib
 import json
 from pathlib import Path
 import shutil
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from tools.sample_inputs import add_input_arguments, resolve_sample_input
 
 import pymupdf as fitz
 from PIL import Image, ImageDraw
 
 
 def main():
-    out = Path("build/netbsd-verification")
+    parser = argparse.ArgumentParser(description=__doc__)
+    add_input_arguments(parser)
+    parser.add_argument("--output", type=Path, default=Path("build/netbsd-verification"))
+    args = parser.parse_args()
+    source = resolve_sample_input(input_dir=args.input_dir, cache_dir=args.cache_dir, download=args.download)
+    out = args.output
     out.mkdir(parents=True, exist_ok=True)
-    source = Path("testdata/tameshibu_episode3_ja.pdf")
     shutil.copyfile(source, out / "source.pdf")
     with fitz.open() as document:
         page = document.new_page()

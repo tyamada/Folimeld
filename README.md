@@ -4,6 +4,8 @@
 
 [Homepage](https://tyamada.github.io/Folimeld/)
 
+Download sample manga PDFs by episode and language from the [sample PDF catalogue](https://tyamada.github.io/manga-prompt-kit/samples/en/). Author: Komairo Hiyori / こまいろ日和; CC BY 4.0. PDFs are hosted by the catalogue’s fixed GitHub Release, not this repository.
+
 ![Folimeld icon](assets/Folimeld.iconset/icon_128x128.png)
 
 Folimeld is a desktop application for visually rearranging, rotating, inserting, and deleting PDF pages. It is available for Windows, macOS, Ubuntu, and Debian, with preview releases for openSUSE, Fedora, AlmaLinux, FreeBSD, NetBSD, and OpenBSD. Files are processed locally without sending them to external services.
