@@ -6,7 +6,7 @@ from threading import Event
 from unittest.mock import patch
 
 import pytest
-from PySide6.QtWidgets import QApplication, QMessageBox
+from PySide6.QtWidgets import QApplication
 
 from folimeld import sample_catalogue as samples
 from folimeld.sample_catalogue_data import BUNDLED_CATALOGUE
@@ -233,7 +233,6 @@ def test_selected_download_cancellation_never_emits_open_path(tmp_path):
     from time import monotonic
     from folimeld.sample_dialog import SampleDialog
     from folimeld.i18n import I18n
-    from PySide6.QtCore import Qt
     item=entry()
     dialog=SampleDialog(I18n().tr,root=tmp_path)
     captured=[]
