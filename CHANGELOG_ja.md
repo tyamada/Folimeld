@@ -80,6 +80,13 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.7 Linux / BSD amd64 試験配布（全10ターゲット） - 2026-11-22
+
+- 確定コミット `01501d7125419007420f2adb1cd503969684dacb`（ブランチ `release/linux-bsd-amd64-0.3.7`）を基点に、Linux / BSD amd64（x86_64）全10ターゲットを Pre-release として公開し、既存 `latest`（`macos-source-v0.3.5`）および旧 0.3.5 系・ARM64 配布物を維持。全10 Release の全42アセットを未認証 HTTPS で再取得し、サイズ・SHA-256 の一致を確認。
+  - **Linux DEB / strict Snap**: [`linux-deb-amd64-v0.3.7`](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.7)（Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3 の各 Test WSL2 で更新導入・offscreen 起動を確認）、[`linux-snap-amd64-v0.3.7`](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.7)（Ubuntu 24.04.5 で `snap install --dangerous`・offscreen 起動を確認）。
+  - **Linux RPM**: [`opensuse-tumbleweed20261110-amd64-v0.3.7`](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.7)、[`opensuse-leap161-amd64-v0.3.7`](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.7)、[`fedora44-amd64-v0.3.7`](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.7)、[`fedora45-amd64-v0.3.7`](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.7)、[`almalinux9-amd64-v0.3.7`](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.7)（各ディストリビューションの専用 Test WSL2 で導入・offscreen 起動を確認）。
+  - **BSD**: [`freebsd-v0.3.7_1`](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.7_1)（FreeBSD 15.1 VM で `pkg add -f`・offscreen 起動を確認）、[`netbsd-v0.3.7`](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.7)（NetBSD 11.1 VM で `pkg_add -u`・offscreen 起動を確認）、[`openbsd-v0.3.7`](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.7)（OpenBSD 8.0 VM で Signify 署名付与・`signify -V` 検証・`pkg_add -r`・offscreen 起動を確認）。
+
 ## 0.3.7.0 Windows x64 Desktop インストーラー版プレビュー / 0.3.7 ソース＋uv版プレビュー - 2026-11-22
 
 - 確定コミット `6841276fa3de03b039076c91cf947c8198c757df`（ブランチ `release/windows-x64-0.3.7-preview.1`）を基点に、[Windows 11 x64 Desktop インストーラー版 0.3.7.0 プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1)（12ファイル）および [Windows 11 x64 ソース＋uv版 0.3.7 プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.7-preview.1)（4ファイル）を Pre-release として公開し、既存 `latest`（`macos-source-v0.3.5`）および旧 0.3.5 系配布物を維持。公開先から未認証 HTTPS で全16ファイルを再取得し、サイズ・SHA-256の一致を確認。

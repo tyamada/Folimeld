@@ -56,24 +56,24 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | macOS 15 or later | Apple Silicon (arm64) | Homebrew / 0.3.5 (source) | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.5) |
 | Ubuntu 24.04.5 / Debian 13.7 (verified with Xorg in ARM64 VMs) | arm64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5) |
 | Ubuntu 24.04.5 (verified with Xorg in an ARM64 VM) | arm64 | strict Snap / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5) |
-| Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3 (verified on WSL2/WSLg) | amd64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) |
-| Ubuntu 24.04.5 (verified on WSL2/WSLg) | amd64 | strict Snap / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.5) |
-| openSUSE Tumbleweed 20261110 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) |
+| Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3 (verified on WSL2/WSLg) | amd64 | DEB / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.7) |
+| Ubuntu 24.04.5 (verified on WSL2/WSLg) | amd64 | strict Snap / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.7) |
+| openSUSE Tumbleweed 20261110 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.7-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.7) |
 | openSUSE Leap 16.1 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5) |
 | openSUSE Tumbleweed 20261111 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5) |
 | Kali 2026.3 / kali-last-snapshot (verified with Xorg in an ARM64 VM) | arm64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5) |
-| openSUSE Leap 16.1 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5) |
+| openSUSE Leap 16.1 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.7-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.7) |
 | Fedora 44 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.5) |
-| Fedora 44 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5) |
+| Fedora 44 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.7-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.7) |
 | Fedora 45 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-arm64-v0.3.5) |
-| Fedora 45 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) |
+| Fedora 45 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.7-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.7) |
 | AlmaLinux 9.8 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5) |
-| AlmaLinux 9.8 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.5-5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5) |
-| FreeBSD 15.1 | amd64 | pkg / 0.3.5_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.5_1) |
+| AlmaLinux 9.8 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.7-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.7) |
+| FreeBSD 15.1 | amd64 | pkg / 0.3.7_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.7_1) |
 | FreeBSD 15.1 | aarch64 | pkg / 0.3.5_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.5_1) |
-| NetBSD 11.1 | amd64 | tgz / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.5) |
+| NetBSD 11.1 | amd64 | tgz / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.7) |
 | NetBSD 11.1 | aarch64 | tgz / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.5) |
-| OpenBSD 8.0 | amd64 | Signed tgz / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.5) |
+| OpenBSD 8.0 | amd64 | Signed tgz / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.7) |
 | OpenBSD 8.0 | arm64 | Signed tgz / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.5) |
 
 Versions in the table are specific to each distribution channel. The Windows Store edition is available in Japan and the United States. Linux 0.3.3 downloads for Ubuntu 22.04 or later and older installation instructions remain below. BSD ARM64 packages use the name `aarch64` on FreeBSD and NetBSD, and `arm64` on OpenBSD.

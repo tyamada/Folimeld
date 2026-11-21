@@ -56,24 +56,24 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | macOS 15以降 | Apple Silicon（arm64） | Homebrew / 0.3.5（ソース配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.5) |
 | Ubuntu 24.04.5 / Debian 13.7（ARM64 VMのXorgで検証） | arm64 | DEB / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5) |
 | Ubuntu 24.04.5（ARM64 VMのXorgで検証） | arm64 | strict Snap / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5) |
-| Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3（WSL2／WSLgで検証） | amd64 | DEB / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5) |
-| Ubuntu 24.04.5（WSL2／WSLgで検証） | amd64 | strict Snap / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.5) |
-| openSUSE Tumbleweed 20261110（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.5) |
+| Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3（WSL2／WSLgで検証） | amd64 | DEB / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.7) |
+| Ubuntu 24.04.5（WSL2／WSLgで検証） | amd64 | strict Snap / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.7) |
+| openSUSE Tumbleweed 20261110（WSL2／WSLgで検証） | amd64 | RPM / 0.3.7-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.7) |
 | openSUSE Leap 16.1（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5) |
 | openSUSE Tumbleweed 20261111（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5) |
 | Kali 2026.3 / kali-last-snapshot（ARM64 VMのXorgで検証） | arm64 | DEB / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5) |
-| openSUSE Leap 16.1（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.5) |
+| openSUSE Leap 16.1（WSL2／WSLgで検証） | amd64 | RPM / 0.3.7-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.7) |
 | Fedora 44（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.5) |
-| Fedora 44（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.5) |
+| Fedora 44（WSL2／WSLgで検証） | amd64 | RPM / 0.3.7-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.7) |
 | Fedora 45（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-arm64-v0.3.5) |
-| Fedora 45（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.5) |
+| Fedora 45（WSL2／WSLgで検証） | amd64 | RPM / 0.3.7-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.7) |
 | AlmaLinux 9.8（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5) |
-| AlmaLinux 9.8（WSL2／WSLgで検証） | amd64 | RPM / 0.3.5-5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.5) |
-| FreeBSD 15.1 | amd64 | pkg / 0.3.5_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.5_1) |
+| AlmaLinux 9.8（WSL2／WSLgで検証） | amd64 | RPM / 0.3.7-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.7) |
+| FreeBSD 15.1 | amd64 | pkg / 0.3.7_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.7_1) |
 | FreeBSD 15.1 | aarch64 | pkg / 0.3.5_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.5_1) |
-| NetBSD 11.1 | amd64 | tgz / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.5) |
+| NetBSD 11.1 | amd64 | tgz / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.7) |
 | NetBSD 11.1 | aarch64 | tgz / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.5) |
-| OpenBSD 8.0 | amd64 | 署名付き tgz / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.5) |
+| OpenBSD 8.0 | amd64 | 署名付き tgz / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.7) |
 | OpenBSD 8.0 | arm64 | 署名付き tgz / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.5) |
 
 表の版番号は各配布先の版です。WindowsのStore版は日本・米国で提供しています。Linux 0.3.3（Ubuntu 22.04以降）の配布物と旧版の導入手順も下記に掲載しています。BSDのARM64は、FreeBSD・NetBSDで`aarch64`、OpenBSDで`arm64`と表記します。
