@@ -16,7 +16,7 @@ PyInstaller onedir plus Inno Setup requires no user-installed Python, uv or Powe
 
 ## User installation and launch guide
 
-Instructions for the per-user installer [Folimeld 0.3.5.0 Windows x64 Desktop preview](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) and [Folimeld 0.3.5.0 Windows ARM64 Desktop preview](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1), requiring no pre-installed Python, uv, or PowerShell.
+Instructions for the per-user installer [Folimeld 0.3.7.0 Windows x64 Desktop preview](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1) and [Folimeld 0.3.5.0 Windows ARM64 Desktop preview](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1), requiring no pre-installed Python, uv, or PowerShell. Earlier x64 [0.3.5.0 preview](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) remains available.
 
 ### 1. Prerequisites
 
@@ -29,7 +29,7 @@ Instructions for the per-user installer [Folimeld 0.3.5.0 Windows x64 Desktop pr
 
 Download the installer matching your PC's architecture from GitHub Releases (typically saved to `$HOME\Downloads`):
 
-- **x64 edition**: [**Folimeld-Desktop-0.3.5.0-x64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-x64-setup.exe) (~47.9 MB, SHA-256: `ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3`)
+- **x64 edition**: [**Folimeld-Desktop-0.3.7.0-x64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/Folimeld-Desktop-0.3.7.0-x64-setup.exe) (~47.6 MiB, SHA-256: `61FACDA4B930738AF3839472750D7913790003BC10BA89C8626AE33A1ECE4A01`)
 - **ARM64 edition**: [**Folimeld-Desktop-0.3.5.0-arm64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-arm64-setup.exe) (~37.7 MB, SHA-256: `D19DB07CDD56D5A72C12879CA2BFB5E126AD7532E3F431E2C07413279727633C`)
 
 ### 3. SHA-256 verification and installation steps
@@ -44,8 +44,8 @@ Download the installer matching your PC's architecture from GitHub Releases (typ
        $file = '.\Folimeld-Desktop-0.3.5.0-arm64-setup.exe'
        $expected = 'D19DB07CDD56D5A72C12879CA2BFB5E126AD7532E3F431E2C07413279727633C'
    } else {
-       $file = '.\Folimeld-Desktop-0.3.5.0-x64-setup.exe'
-       $expected = 'ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3'
+       $file = '.\Folimeld-Desktop-0.3.7.0-x64-setup.exe'
+       $expected = '61FACDA4B930738AF3839472750D7913790003BC10BA89C8626AE33A1ECE4A01'
    }
 
    if ((Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash -ne $expected) {
@@ -61,7 +61,7 @@ Download the installer matching your PC's architecture from GitHub Releases (typ
    > - To avoid block notifications entirely, use the Authenticode-signed Python distributions: source + uv preview or uv tool install preview.
 3. **Setup wizard steps**:
    - **License agreement**: The displayed English license terms apply solely to the bundled Microsoft Visual C++ Runtime (x64: `14.44.35211.0` / ARM64: `14.52.37029.0`). Select "I accept the agreement" and click "Next".
-   - **Destination**: Installs per-user without elevation to `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0`. Click "Next" to accept the default.
+   - **Destination**: Installs per-user without elevation to `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\<version>` (x64: `0.3.7.0` / ARM64: `0.3.5.0`). Click "Next" to accept the default.
    - **Additional tasks**: Optionally select "Create a desktop shortcut" and click "Install" to complete setup (the app does not automatically launch upon exit).
 
 ### 4. Launch and data storage
@@ -186,3 +186,10 @@ This change does not create reviewed-files.json or establish that all redistribu
 - Created `payload-review.json` binding all 193 payload file SHA-256 hashes, then compiled `Folimeld-Desktop-0.3.5.0-arm64-setup.exe` (39,597,571 bytes, SHA-256: `d19db07cdd56d5a72c12879ca2bfb5e126ad7532e3f431e2c07413279727633c`) with Inno Setup 7.1.1 via `tools.desktop_compile --arch arm64 --compile`.
 - **Smart App Control Note**:
   - On Windows 11 systems where Smart App Control is enforcing, unsigned binaries downloaded from the web are blocked by policy. The source+uv and uv tool editions use the PSF-signed Python interpreter and fully pass Smart App Control. For unsigned desktop installer EXEs, users can unblock the file in its Properties dialog or use the signed Python runner entry points.
+
+## 0.3.7.0 Windows x64 Desktop Build, Acceptance, and Publication (2026-11-22)
+
+- Built a 201-file onedir payload from commit `6841276fa3de03b039076c91cf947c8198c757df` (`release/windows-x64-0.3.7-preview.1`) via `tools.desktop_build` in the dedicated CPython 3.12.16 environment.
+- Created `payload-review.json` binding all 201 payload file SHA-256 hashes and the 5 pinned manifests, then compiled `Folimeld-Desktop-0.3.7.0-x64-setup.exe` (49,946,245 bytes, SHA-256: `61facda4b930738af3839472750d7913790003bc10ba89c8626ae33a1ece4a01`) with Inno Setup 7.1.1 via `tools.desktop_compile --compile`.
+- Completed acceptance verification: installer rejection while `Local\Folimeld-Desktop` mutex is held (exit code 1), non-elevated fresh install with all 201 payload files matching `payload-review.json` SHA-256, same-version overwrite refusal (exit code 7), frozen `FolimeldDesktop.exe` launch / duplicate-launch rejection (exit code 1) / clean exit (exit code 0), and `unins000.exe` removal preserving `%LOCALAPPDATA%\Folimeld-Desktop`.
+- Published [GitHub Release `windows-desktop-v0.3.7.0-preview.1`](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1) (Pre-release) with all 12 assets and verified unauthenticated HTTPS redownload of all 12 files with matching sizes and SHA-256 hashes while preserving `latest` (`macos-source-v0.3.5`) and existing 0.3.5.0 downloads.

@@ -46,7 +46,7 @@ Use the following instructions for user installation on Windows 11 x64 and Windo
 
 Download the archive matching your PC's architecture from GitHub Releases (typically saved to `$HOME\Downloads`):
 
-- **x64 edition**: [**Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip) (Release: [windows-uv-v0.3.5-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1), SHA-256: `8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA`)
+- **x64 edition**: [**Folimeld-0.3.7-windows-x64-uv-source-6841276-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.7-preview.1/Folimeld-0.3.7-windows-x64-uv-source-6841276-candidate1.zip) (Release: [windows-uv-v0.3.7-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.7-preview.1), SHA-256: `1B1C91F5E9346CD5C4E66D9A9353C3E79D970F349C35DF18ABD3E25055449747`)
 - **ARM64 edition**: [**Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.5-preview.1/Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip) (Release: [windows-uv-arm64-v0.3.5-preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.5-preview.1), SHA-256: `F362A5431D89FC633C852149E0ECD219C22BDAAD07A92229CF7193DBF5E56B72`)
 
 ### 3. Extraction and installation (SHA-256 verification and unblocking the unsigned installer)
@@ -60,16 +60,17 @@ $ErrorActionPreference = 'Stop'
 if ([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture -match 'Arm64') {
     $zip = Join-Path $HOME 'Downloads\Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip'
     $expected = 'F362A5431D89FC633C852149E0ECD219C22BDAAD07A92229CF7193DBF5E56B72'
+    $destination = Join-Path $HOME 'Folimeld-uv-0.3.5'
 } else {
-    $zip = Join-Path $HOME 'Downloads\Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip'
-    $expected = '8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA'
+    $zip = Join-Path $HOME 'Downloads\Folimeld-0.3.7-windows-x64-uv-source-6841276-candidate1.zip'
+    $expected = '1B1C91F5E9346CD5C4E66D9A9353C3E79D970F349C35DF18ABD3E25055449747'
+    $destination = Join-Path $HOME 'Folimeld-uv-0.3.7'
 }
 
 if ((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash -ne $expected) {
     throw 'ZIP SHA-256 mismatch. Stop without extracting or running it.'
 }
 
-$destination = Join-Path $HOME 'Folimeld-uv-0.3.5'
 if (Test-Path -LiteralPath $destination) {
     throw 'Destination already exists. Choose a new dedicated folder.'
 }

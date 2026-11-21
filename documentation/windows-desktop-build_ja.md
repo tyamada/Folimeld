@@ -16,7 +16,7 @@ Python/uv/PowerShellを利用者へ要求しないPyInstaller onedir＋Inno Setu
 
 ## 利用者向け導入・起動手順
 
-Python・uv・PowerShellの事前導入を不要としたユーザー単位インストーラー [Folimeld 0.3.5.0 Windows x64 Desktop プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) および [Folimeld 0.3.5.0 Windows ARM64 Desktop プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1) の手順です。
+Python・uv・PowerShellの事前導入を不要としたユーザー単位インストーラー [Folimeld 0.3.7.0 Windows x64 Desktop プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1) および [Folimeld 0.3.5.0 Windows ARM64 Desktop プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1) の手順です。旧x64 [0.3.5.0プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) も引き続き入手できます。
 
 ### 1. 事前準備
 
@@ -29,7 +29,7 @@ Python・uv・PowerShellの事前導入を不要としたユーザー単位イ�
 
 ご利用のPCのアーキテクチャに応じたインストーラーをGitHub Releasesからダウンロードします（例: `$HOME\Downloads`）：
 
-- **x64版**: [**Folimeld-Desktop-0.3.5.0-x64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-x64-setup.exe)（約47.9 MB、SHA-256: `ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3`）
+- **x64版**: [**Folimeld-Desktop-0.3.7.0-x64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/Folimeld-Desktop-0.3.7.0-x64-setup.exe)（約47.6 MiB、SHA-256: `61FACDA4B930738AF3839472750D7913790003BC10BA89C8626AE33A1ECE4A01`）
 - **ARM64版**: [**Folimeld-Desktop-0.3.5.0-arm64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-arm64-setup.exe)（約37.7 MB、SHA-256: `D19DB07CDD56D5A72C12879CA2BFB5E126AD7532E3F431E2C07413279727633C`）
 
 ### 3. SHA-256照合とインストール手順
@@ -44,8 +44,8 @@ Python・uv・PowerShellの事前導入を不要としたユーザー単位イ�
        $file = '.\Folimeld-Desktop-0.3.5.0-arm64-setup.exe'
        $expected = 'D19DB07CDD56D5A72C12879CA2BFB5E126AD7532E3F431E2C07413279727633C'
    } else {
-       $file = '.\Folimeld-Desktop-0.3.5.0-x64-setup.exe'
-       $expected = 'ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3'
+       $file = '.\Folimeld-Desktop-0.3.7.0-x64-setup.exe'
+       $expected = '61FACDA4B930738AF3839472750D7913790003BC10BA89C8626AE33A1ECE4A01'
    }
 
    if ((Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash -ne $expected) {
@@ -61,7 +61,7 @@ Python・uv・PowerShellの事前導入を不要としたユーザー単位イ�
    > - ブロック通知を完全に回避したい場合は、PSF公式署名済みCPythonを使用するソース＋uv版またはuv tool install版をご利用ください。
 3. **ウィザードの進行**:
    - **同意画面**: 表示される英語原文ライセンスは同梱の Microsoft Visual C++ Runtime（x64: `14.44.35211.0` / ARM64: `14.52.37029.0`）のみに適用されます。「同意する」を選択して「次へ」をクリックします。
-   - **インストール先**: 既定では管理者不要の `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0` へ導入されます。通常はそのまま「次へ」をクリックします。
+   - **インストール先**: 既定では管理者不要の `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\<版>`（x64: `0.3.7.0` / ARM64: `0.3.5.0`）へ導入されます。通常はそのまま「次へ」をクリックします。
    - **追加タスク**: 必要に応じてデスクトップショートカット作成を選択し、「インストール」をクリックして完了させます（終了時の自動起動はしません）。
 
 ### 4. 起動とデータ保存先
@@ -186,3 +186,10 @@ reviewed-files.jsonは作成せず、再配布/利用者保護条件の全充足
 - 全193ファイルの SHA-256 を結び付けた `payload-review.json` を作成し、`tools.desktop_compile --arch arm64 --compile` で Inno Setup 7.1.1 により `Folimeld-Desktop-0.3.5.0-arm64-setup.exe`（39,597,571 bytes、SHA-256: `d19db07cdd56d5a72c12879ca2bfb5e126ad7532e3f431e2c07413279727633c`）を生成。
 - **Smart App Control（スマート アプリ コントロール）に関する注意事項**:
   - Windows 11 で Smart App Control が有効（強制）な環境下では、Web経由でダウンロードされた未署名バイナリはブロック通知対象となります。ソース＋uv版および uv tool 版は PSF公式署名済みの Python を使用するため Smart App Control を完全にパスします。未署名インストーラー EXE を実行する場合は、ファイルのプロパティで「許可する」のチェックを入れるか、署名済み Python 経由のランチャーを利用してください。
+
+## 0.3.7.0 Windows x64 Desktop ビルド・実機受入・公開（2026-11-22）
+
+- 確定コミット `6841276fa3de03b039076c91cf947c8198c757df`（ブランチ `release/windows-x64-0.3.7-preview.1`）から、専用 CPython 3.12.16 環境で `tools.desktop_build` を実行し、全201ファイルの onedir ペイロードを生成。
+- 全201ファイルの SHA-256 と5つの固定マニフェストを結び付けた `payload-review.json` を作成し、`tools.desktop_compile --compile` で Inno Setup 7.1.1 により `Folimeld-Desktop-0.3.7.0-x64-setup.exe`（49,946,245 bytes、SHA-256: `61facda4b930738af3839472750d7913790003bc10ba89c8626ae33a1ece4a01`）を生成。
+- 実機受入検証にて、`Local\Folimeld-Desktop` Mutex 保持中の導入拒否（終了コード 1）、通常権限新規導入と全201ファイルの SHA-256 完全一致、同一版上書き拒否（終了コード 7）、凍結 `FolimeldDesktop.exe` の起動・重複起動拒否（終了コード 1）・正常終了（終了コード 0）、`unins000.exe` による削除と `%LOCALAPPDATA%\Folimeld-Desktop` 設定保持を確認。
+- [GitHub Release `windows-desktop-v0.3.7.0-preview.1`](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1)（Pre-release）として全12アセットを公開し、未認証 HTTPS による全12ファイルの再ダウンロードとサイズ・SHA-256 一致、既存 `latest`（`macos-source-v0.3.5`）および旧 0.3.5.0 Release の保持を確認。
