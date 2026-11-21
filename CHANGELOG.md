@@ -80,6 +80,13 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.7 preview.1 Windows x64 uv tool install preview - 2026-11-21
+
+- Publish the [Windows 11 x64 uv tool install edition 0.3.7 preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1) as a Pre-release, preserving Latest and existing 0.3.5/0.3.6 downloads. Redownload all ten public assets, including the Wheel, corresponding source, manifests, dependency lock and notices, and verify their sizes and SHA-256.
+- Add one-book-at-a-time sample manga PDF downloads through “Open sample PDF…” in the File menu or empty-document prompt. Include a language filter defaulting to the app/system language, newest-first (default)/episode-one-first ordering, and copyright/CC BY 4.0 attribution. Verify downloaded PDFs with SHA-256 and open separate working copies. PDFs are not bundled; the first download requires internet access. Verified originals can be reused offline.
+- Verify installation into a fresh isolated uv tool environment, GUI launch, online catalogue retrieval, one Japanese manga download/verification, eight-page display, Save As, reopen and exit. Fresh three-worker PID observation, upgrade/rollback, Store coexistence, mixed DPI and ARM64 remain unverified for this candidate.
+- Continue recommending Microsoft Store for everyday use. Store version 1.0.1.0 does not include this download feature; this is not a Store update. ARM64 uv tool install guidance remains on the existing 0.3.5 release.
+
 ## 0.3.5.0 Windows x64 Desktop installer preview - 2026-11-16
 
 - Publish the [Windows 11 x64 Desktop installer preview](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) (PyInstaller onedir + Inno Setup 7.1.1) as a Pre-release while preserving `latest`. Distribute 12 assets (Setup EXE, matching source ZIP, payload review ledger, internal source manifest, commit association, Installed-packages, third-party notices, dependency sources ledger, English/Japanese CRT user notices, compile result, and SHA256SUMS) and verify public redownload sizes and SHA-256 hashes for all 12 files.

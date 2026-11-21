@@ -80,6 +80,13 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.7 preview.1 Windows x64 uv tool install 版プレビュー - 2026-11-21
+
+- [Windows 11 x64 uv tool install版0.3.7 preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1)をPre-releaseとして公開し、Latestと既存の0.3.5／0.3.6配布物を維持。Wheel、対応ソース、台帳、依存ロック、告知など全10ファイルを公開先から再取得し、サイズ・SHA-256の一致を確認。
+- ファイルメニューまたはPDF未読込時の案内の「サンプルPDFを開く…」から、サンプルPDFマンガを1冊ずつ取得する機能を追加。言語フィルター（初期値はアプリ／システム言語）、最新話から（既定）／1話からの表示順、著作権・CC BY 4.0表示に対応。取得したPDFのSHA-256を検証し、別の編集用コピーを開く。PDF本体は同梱せず、初回取得には通信が必要。検証済み原本はオフラインでも再利用できる。
+- 新規の隔離uv tool環境への導入、GUI起動、オンライン一覧、日本語マンガ1冊の取得・検証、8ページ表示・別名保存・再読込・終了を確認。今回の候補での3ワーカー実機PID観測、更新／旧版復帰、Store併存、複数倍率、ARM64は未確認。
+- 通常利用にはMicrosoft Store版を引き続き推奨。Store版1.0.1.0にはこの取得機能は含まれず、今回の公開はStore版の更新ではない。ARM64のuv tool install版は既存0.3.5の案内を維持。
+
 ## 0.3.5.0 Windows x64 Desktop インストーラー版プレビュー - 2026-11-16
 
 - Windows 11 x64向けの[Desktopインストーラー版プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1)（PyInstaller onedir + Inno Setup 7.1.1）をPre-releaseとして公開（既存latestは保持）。Setup EXE・対応ソースZIP・ペイロード台帳・内部ソース台帳・コミット対応記録・第三者告知・依存ソース台帳・CRT利用者告知（日英）・SHA-256一覧の計12ファイルを配布し、公開後の全12添付の再取得とサイズ・SHA-256一致を確認。
