@@ -76,6 +76,33 @@ Windows 11 x64 に加え、Windows 11 ARM64（Surface Pro 11 等の Copilot+ PC 
     -Store -StoreConfig .\build\store-config.json -Architecture arm64
   ```
 
+## Submission 3（Folimeld 1.0.3.0: アプリ版 0.3.7 反映 / x64 + ARM64）の公開計画
+
+Folimeld 0.3.7 の新機能（「サンプルPDFを開く…」「PDFを閉じる」・未読込時モードレス案内）を反映した次期アップデート（Submission 3）の計画です。
+
+- **版番号**: パッケージ版 `1.0.3.0`（前回提出 `1.0.2.0` より大きい4要素版）、アプリ表示版 `0.3.7`
+- **対象アーキテクチャ**: `x64`（`0x8664`）および `arm64`（`0xAA64`）
+- **配布形態・価格**: 完全無料（応援購入・アドオン登録および GitHub Sponsors メニューは無効／非表示を維持）
+- **反映される 0.3.7 新機能**:
+  - 「ファイル → サンプルPDFを開く…」および PDF 未読込時の案内からのサンプルPDFマンガ取得（言語フィルター、最新話／1話順、CC BY 4.0 表示、SHA-256 検証、検証済み原本のオフライン再利用、編集用作業コピーの展開）
+  - 「ファイル → 閉じる（PDFを閉じる）」操作と未読込時のモードレス案内
+- **審査・プライバシー整合性**:
+  - 編集対象のユーザー PDF・画像は外部送信せずローカル処理する原則を維持。
+  - 利用者が明示的に「サンプルPDFを開く…」を実行した場合のみ、固定 HTTPS（GitHub リリース）からカタログおよび指定サンプル PDF を取得する旨をプライバシーポリシー・Store 掲載文・審査メモへ明記する。
+- **スクリーンショット素材**:
+  - ドキュメント・Web サイト・Store 掲載用スクリーンショットは `testdata/tameshibu_episode1_2_en.pdf`（CC BY 4.0、作者：こまいろ日和 / Komairo Hiyori）のコピーを使用して日英それぞれ撮影する（詳細は[スクリーンショット撮影計画](windows-store-screenshot-plan_ja.md)を参照）。
+- **ビルド・事前検査コマンド**:
+  ```powershell
+  powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
+    -Store -StoreConfig .\build\store-config.json -Architecture x64 `
+    -PreviousPackage .\dist\Folimeld_1.0.2.0_x64.msix
+
+  powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
+    -Store -StoreConfig .\build\store-config.json -Architecture arm64 `
+    -PreviousPackage .\dist\Folimeld_1.0.2.0_arm64.msix
+  ```
+- **対応ソース公開**: 認定・公開後にタグ `windows-store-v1.0.3.0` として対応ソース ZIP・`SHA256SUMS.txt`・`source-association.json` を公開する。
+
 ## 公式資料
 
 - [提出方式の比較](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/choose-distribution-path)

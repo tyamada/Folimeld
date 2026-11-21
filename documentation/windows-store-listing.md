@@ -42,6 +42,14 @@ Copy each feature's text into Partner Center without the Markdown bullet.
 - Native performance on Windows 11 ARM64 (Copilot+ PCs)
 <!-- /store:features -->
 
+## What's new in this version (Submission 3 / 1.0.3.0 / App 0.3.7)
+
+<!-- store:whats_new_1_0_3_0 -->
+- Added “File -> Open sample PDF…” and an empty-document prompt to download sample manga PDFs (CC BY 4.0) one book at a time, with language filtering, episode ordering, SHA-256 verification, and offline reuse of verified originals.
+- Added a PDF close action (“File -> Close”) and modeless empty-document guidance.
+- Your own PDFs and images continue to be processed strictly locally and are never uploaded (network requests occur only when you explicitly download a sample PDF from the fixed public release).
+<!-- /store:whats_new_1_0_3_0 -->
+
 ## What's new in this version (Submission 2 / 1.0.2.0)
 
 <!-- store:whats_new -->

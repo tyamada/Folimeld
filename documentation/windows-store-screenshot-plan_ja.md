@@ -2,17 +2,18 @@
 
 [日本語](windows-store-screenshot-plan_ja.md) | [English](windows-store-screenshot-plan.md)
 
-状態：計画のみ。撮影・掲載は未実施です。試験用Dynabookの到着後、通常動作を確認してから日英それぞれの画面を撮影します。設定の言語変更後はアプリを再起動します。初回は5枚ずつを目標にします。
+状態：0.3.7（Submission 3 / 1.0.3.0）向けに更新済み。日英それぞれの画面を `testdata/tameshibu_episode1_2_en.pdf`（作者：こまいろ日和 / Komairo Hiyori、CC BY 4.0）を用いて撮影します。設定の言語変更後はアプリを再起動します。6枚ずつを目標にします。
 
 | 順番・ファイル名 | 撮影する状態 | 日本語キャプション | 英語キャプション |
 | --- | --- | --- | --- |
-| 01-overview.png | 生成した3ページPDFを開き、全体のサムネイルとツールバーを表示 | ページを見ながらPDFを整理 | Organize PDF pages visually |
-| 02-page-editing.png | コピーしたPDFで複数選択と回転・並べ替えの結果を表示 | 複数ページを選んで移動・回転 | Move and rotate selected pages |
+| 01-overview.png | `testdata/tameshibu_episode1_2_en.pdf` のコピーを開き、全体のサムネイルとツールバーを表示 | ページを見ながらPDFを整理 | Organize PDF pages visually |
+| 02-page-editing.png | `testdata/tameshibu_episode1_2_en.pdf` のコピーで複数選択と回転・並べ替えの結果を表示 | 複数ページを選んで移動・回転 | Move and rotate selected pages |
 | 03-image-import.png | 画像フォルダー取り込み画面で順序・ページサイズの選択を表示 | 画像フォルダーからPDFを作成 | Create a PDF from an image folder |
 | 04-properties.png | 文書のプロパティの詳細タブを表示 | PDFのレイアウトと綴じ方向を設定 | Adjust PDF layout and binding direction |
 | 05-password.png | 閲覧パスワード設定画面。入力値は空欄またはマスク表示 | PDFを開くためのパスワードを設定 | Set a password for opening a PDF |
+| 06-sample-download.png | 「サンプルPDFを開く…」ダイアログで言語フィルター・話数順・CC BY 4.0 表示を表示 | サンプルPDFマンガを選んで取得 | Download sample manga PDFs |
 
-素材は試験用ZIPの生成データをコピーして使用します。`testdata/`のマンガ、第三者の文書、個人ファイル、購入者情報は掲載素材に使いません。画像取り込みには`fixtures/`を指定し、PNG・JPEG・TIFFを選択します。PDFファイルは画像一覧の対象外です。
+PDF 素材は `testdata/tameshibu_episode1_2_en.pdf`（CC BY 4.0、作者：こまいろ日和 / Komairo Hiyori）のコピーを使用します。第三者の無許諾文書、個人ファイル、購入者情報は掲載素材に使いません。画像取り込みには試験用画像フォルダーを指定し、PNG・JPEG・TIFFを選択します。PDFファイルは画像一覧の対象外です。
 
 ## 撮影条件と保存先
 

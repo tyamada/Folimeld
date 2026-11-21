@@ -2,17 +2,18 @@
 
 [日本語](windows-store-screenshot-plan_ja.md) | [English](windows-store-screenshot-plan.md)
 
-Status: planning only; no captures or uploads yet. After the test Dynabook arrives and normal operation passes, capture Japanese and English interfaces separately. Restart the app after changing its language. Aim for five images per language initially.
+Status: updated for 0.3.7 (Submission 3 / 1.0.3.0). Capture Japanese and English interfaces separately using copies of `testdata/tameshibu_episode1_2_en.pdf` (author: Komairo Hiyori, CC BY 4.0). Restart the app after changing its language. Aim for six images per language.
 
 | Order / filename | State to capture | Japanese caption | English caption |
 | --- | --- | --- | --- |
-| 01-overview.png | Open the generated three-page PDF; show thumbnails and toolbar | ページを見ながらPDFを整理 | Organize PDF pages visually |
-| 02-page-editing.png | Show multiple selection and rotation/reordering results on a PDF copy | 複数ページを選んで移動・回転 | Move and rotate selected pages |
+| 01-overview.png | Open a copy of `testdata/tameshibu_episode1_2_en.pdf`; show thumbnails and toolbar | ページを見ながらPDFを整理 | Organize PDF pages visually |
+| 02-page-editing.png | Show multiple selection and rotation/reordering results on a copy of `testdata/tameshibu_episode1_2_en.pdf` | 複数ページを選んで移動・回転 | Move and rotate selected pages |
 | 03-image-import.png | Image-folder dialog with order and page-size choices visible | 画像フォルダーからPDFを作成 | Create a PDF from an image folder |
 | 04-properties.png | Document properties, Details tab | PDFのレイアウトと綴じ方向を設定 | Adjust PDF layout and binding direction |
 | 05-password.png | PDF opening-password settings; input empty or masked | PDFを開くためのパスワードを設定 | Set a password for opening a PDF |
+| 06-sample-download.png | “Open sample PDF…” dialog showing language filter, episode order, and CC BY 4.0 attribution | サンプルPDFマンガを選んで取得 | Download sample manga PDFs |
 
-Use copies of the generated test ZIP fixtures. Do not use manga under `testdata/`, third-party documents, personal files or purchaser information. Select `fixtures/` for image import and use its PNG/JPEG/TIFF files; PDFs are excluded from the image list.
+Use copies of `testdata/tameshibu_episode1_2_en.pdf` (CC BY 4.0, Komairo Hiyori) as the PDF fixture for documentation, website, and Store screenshots. Do not use unlicensed third-party documents, personal files, or purchaser information. Select a test image folder for image import and use its PNG/JPEG/TIFF files; PDFs are excluded from the image list.
 
 ## Capture conditions and storage
 

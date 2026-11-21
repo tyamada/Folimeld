@@ -76,6 +76,33 @@ Plan for the next update (Submission 2) adding native Windows 11 ARM64 support (
     -Store -StoreConfig .\build\store-config.json -Architecture arm64
   ```
 
+## Submission 3 release plan (Folimeld 1.0.3.0: app 0.3.7 / x64 + ARM64)
+
+Plan for the next update (Submission 3) bringing Folimeld 0.3.7 features (“Open sample PDF…”, PDF close action, and modeless empty-document prompt) to Microsoft Store.
+
+- **Versions**: MSIX package version `1.0.3.0` (greater than `1.0.2.0`), application version `0.3.7`.
+- **Target architectures**: `x64` (`0x8664`) and `arm64` (`0xAA64`).
+- **Pricing & distribution**: 100% Free (in-app supporter add-ons and GitHub Sponsors menu remain disabled/hidden).
+- **New 0.3.7 features**:
+  - On-demand sample manga PDF downloads via “File -> Open sample PDF…” and the empty-document prompt (language filter, newest-first / episode-one-first order, CC BY 4.0 attribution, SHA-256 verification, offline reuse of verified originals, editable working copies).
+  - “File -> Close” PDF close action and modeless empty-document guidance.
+- **Privacy & certification alignment**:
+  - User PDFs and images remain strictly local and are never uploaded.
+  - Clarify in the privacy policy, Store listing, and submission notes that HTTPS requests occur only when the user explicitly opens “Open sample PDF…” to fetch the fixed public catalogue and selected sample PDF from GitHub Releases.
+- **Screenshot fixture**:
+  - Capture documentation, website, and Store screenshots in Japanese and English using copies of `testdata/tameshibu_episode1_2_en.pdf` (CC BY 4.0, Komairo Hiyori); see the [screenshot capture plan](windows-store-screenshot-plan.md).
+- **Build and preflight commands**:
+  ```powershell
+  powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
+    -Store -StoreConfig .\build\store-config.json -Architecture x64 `
+    -PreviousPackage .\dist\Folimeld_1.0.2.0_x64.msix
+
+  powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
+    -Store -StoreConfig .\build\store-config.json -Architecture arm64 `
+    -PreviousPackage .\dist\Folimeld_1.0.2.0_arm64.msix
+  ```
+- **Corresponding source publication**: After certification and publication, publish matching source ZIP, `SHA256SUMS.txt`, and `source-association.json` under tag `windows-store-v1.0.3.0`.
+
 ## Official references
 
 - [Distribution path comparison](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/choose-distribution-path)
