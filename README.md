@@ -49,7 +49,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | Windows 11 | x64 | Microsoft Store / 1.0.1.0 | [Matching source](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.1.0) |
 | Windows 11 | x64 | Desktop installer / 0.3.5.0 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) |
 | Windows 11 | x64 | Source + uv / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) |
-| Windows 11 | x64 | uv tool install (Wheel) / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1) |
+| Windows 11 | x64 | uv tool install (Wheel) / 0.3.7 preview.1 (prerelease) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1) |
 | Windows 11 | arm64 | Desktop installer / 0.3.5.0 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1) |
 | Windows 11 | arm64 | Source + uv / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.5-preview.1) |
 | Windows 11 | arm64 | uv tool install (Wheel) / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.5-preview.1) |
@@ -171,9 +171,16 @@ A hash mismatch stops before extraction or execution. The verified ZIP is extrac
 
 ### Windows 11 uv tool install preview (Pure Python Wheel / x64 and ARM64)
 
-[**Folimeld 0.3.5 Windows x64 uv tool install preview**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1) and [**Folimeld 0.3.5 Windows ARM64 uv tool install preview**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.5-preview.1) are available as additional distribution channels separate from the Microsoft Store edition, the Desktop edition, and the source + uv preview. They install a Pure Python Wheel (`folimeld-0.3.5-py3-none-any.whl`) distributed via GitHub Releases into an isolated `uv tool` environment. See the [uv tool install specification and guide](documentation/windows-uv-tool.md) for details.
+[**Folimeld 0.3.7 preview.1 Windows x64 uv tool install preview**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1) and [**Folimeld 0.3.5 Windows ARM64 uv tool install preview**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.5-preview.1) are available as additional distribution channels separate from the Microsoft Store edition, the Desktop edition, and the source + uv preview. They install a Pure Python Wheel (`folimeld-<version>-py3-none-any.whl`) distributed via GitHub Releases into an isolated `uv tool` environment. See the [uv tool install specification and guide](documentation/windows-uv-tool.md) for details.
 
-- **x64 edition**: [Pure Python Wheel](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/folimeld-0.3.5-py3-none-any.whl) · [Dependency lock](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/requirements-windows-uv.lock) · [Runtime profile](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/windows-uv-runtime.json) · [Matching source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/Folimeld-0.3.5-windows-x64-uv-tool-source.zip) · [Internal manifest](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/source-manifest.json) · [Source commit association](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/SOURCE-ASSOCIATION.txt) · [Third-party notices](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/THIRD-PARTY-NOTICES.txt) · [Dependency sources ledger](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/DEPENDENCY-SOURCES.json) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/SHA256SUMS.txt)
+**x64 0.3.7 preview.1 (published November 21, 2026)** can download one sample manga PDF at a time through “Open sample PDF…” in the File menu or the empty-document prompt. It includes a language filter defaulting to the app/system language, newest-first/episode-one-first ordering, and copyright/CC BY 4.0 attribution. Downloads are SHA-256 verified and opened as separate working copies. PDFs are not bundled; the first download requires internet access. You can also [open the sample PDF catalogue in your browser](https://tyamada.github.io/manga-prompt-kit/samples/en/).
+
+Microsoft Store remains recommended for everyday use. **Store version 1.0.1.0 does not include this download feature; this release is not a Store update.** ARM64 guidance remains on 0.3.5. For x64 0.3.7, fresh installation, online catalogue retrieval, one Japanese manga download/verification, eight-page display, Save As, reopen and exit were checked. All ten public assets were redownloaded and matched their sizes and SHA-256. Fresh three-worker PID observation, upgrade/rollback, Store coexistence, mixed DPI and ARM64 remain unverified for this candidate.
+
+Earlier x64 [0.3.5 preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1) and [0.3.6 preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.6-preview.1) remain available. The linked uv tool specification/guide includes older 0.3.5 records; use this section or the 0.3.7 Release for x64 0.3.7 filenames, hashes and installation commands.
+
+
+- **x64 edition**: [Pure Python Wheel](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/folimeld-0.3.7-py3-none-any.whl) · [Dependency lock](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/requirements-windows-uv.lock) · [Runtime profile](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/windows-uv-runtime.json) · [Matching source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/Folimeld-0.3.7-windows-x64-uv-tool-source.zip) · [Internal manifest](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/source-manifest.json) · [Source commit association](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/SOURCE-ASSOCIATION.txt) · [Third-party notices](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/THIRD-PARTY-NOTICES.txt) · [Dependency sources ledger](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/DEPENDENCY-SOURCES.json) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/SHA256SUMS.txt)
 - **ARM64 edition**: [Pure Python Wheel](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/folimeld-0.3.5-py3-none-any.whl) · [Dependency lock](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/requirements-windows-arm64-uv.lock) · [Runtime profile](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/windows-arm64-uv-runtime.json) · [Matching source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/Folimeld-0.3.5-windows-arm64-uv-tool-source.zip) · [Internal manifest](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/source-manifest.json) · [Source commit association](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/SOURCE-ASSOCIATION.txt) · [Third-party notices](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/THIRD-PARTY-NOTICES.txt) · [Dependency sources ledger](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/DEPENDENCY-SOURCES.json) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/SHA256SUMS.txt)
 - Requires CPython 3.12.x (minor version match) and exact versions of all fourteen runtime dependencies (hash-verified via lock file).
 - Stores settings and logs under `%LOCALAPPDATA%/Folimeld-UV-Tool` without modifying Store, Desktop (`Folimeld-Desktop`), or source + uv (`Folimeld-UV`) profiles or Explorer file associations. Uses the `Local\Folimeld-UV-Tool` mutex for single-instance protection.
@@ -194,11 +201,11 @@ uv --version
 
 Save these **two files in the same folder**, such as Downloads:
 
-1. **folimeld-0.3.5-py3-none-any.whl** — the application Pure Python Wheel.
-   - x64 Release: [folimeld-0.3.5-py3-none-any.whl](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/folimeld-0.3.5-py3-none-any.whl) (SHA-256: `759B2FE0052F1741427194E40104DB0AF65184041AD5BAD8BB5D2003874DBDAF`)
+1. **Application Pure Python Wheel** — `folimeld-0.3.7-py3-none-any.whl` for x64; `folimeld-0.3.5-py3-none-any.whl` for ARM64.
+   - x64 Release: [folimeld-0.3.7-py3-none-any.whl](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/folimeld-0.3.7-py3-none-any.whl) (SHA-256: `9438F033436BDB1B73A1B377934BB1F88F1ED2109948F71C81BC30D8083C5E21`)
    - ARM64 Release: [folimeld-0.3.5-py3-none-any.whl](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/folimeld-0.3.5-py3-none-any.whl) (SHA-256: `FF06269C5BFC4A53B7BF5B673B48B3CC267744F757F771E29619785CD1150B4E`)
 2. **Dependency lockfile** — pinned versions and distribution-wheel SHA-256 hashes for 14 dependencies for your architecture.
-   - For x64: [**requirements-windows-uv.lock**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/requirements-windows-uv.lock) (SHA-256: `7E994B4C231536FB5C53D79959761BC426BD9FF9585B578165F1FD67EC19077F`)
+   - For x64: [**requirements-windows-uv.lock**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/requirements-windows-uv.lock) (SHA-256: `7E994B4C231536FB5C53D79959761BC426BD9FF9585B578165F1FD67EC19077F`)
    - For ARM64: [**requirements-windows-arm64-uv.lock**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/requirements-windows-arm64-uv.lock) (SHA-256: `B30019EC8BB3DDD9C15CEBB093432CD309566A6792B3EBCCDE821964B5054B67`)
 
 #### 3. Working directory and installed locations
@@ -222,6 +229,8 @@ uv tool dir --bin
 
 #### 4. SHA-256 verification and installation
 
+The following is for a fresh installation. Settings/logs are shared with earlier uv tool editions. These commands do not force an update of an existing installation; upgrade/rollback acceptance is unverified. Keep existing settings, Wheel and lock for recovery.
+
 ```powershell
 $ErrorActionPreference = 'Stop'
 
@@ -238,13 +247,13 @@ if ([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture -ma
     }
     uv tool install --python 3.12 --with-requirements .\requirements-windows-arm64-uv.lock --no-build .\folimeld-0.3.5-py3-none-any.whl
 } else {
-    if ((Get-FileHash -LiteralPath .\folimeld-0.3.5-py3-none-any.whl -Algorithm SHA256).Hash -ne '759B2FE0052F1741427194E40104DB0AF65184041AD5BAD8BB5D2003874DBDAF') {
+    if ((Get-FileHash -LiteralPath .\folimeld-0.3.7-py3-none-any.whl -Algorithm SHA256).Hash -ne '9438F033436BDB1B73A1B377934BB1F88F1ED2109948F71C81BC30D8083C5E21') {
         throw 'Wheel SHA-256 mismatch.'
     }
     if ((Get-FileHash -LiteralPath .\requirements-windows-uv.lock -Algorithm SHA256).Hash -ne '7E994B4C231536FB5C53D79959761BC426BD9FF9585B578165F1FD67EC19077F') {
         throw 'Lock SHA-256 mismatch.'
     }
-    uv tool install --python 3.12 --with-requirements .\requirements-windows-uv.lock --no-build .\folimeld-0.3.5-py3-none-any.whl
+    uv tool install --python 3.12 --with-requirements .\requirements-windows-uv.lock --no-build .\folimeld-0.3.7-py3-none-any.whl
 }
 
 if ($LASTEXITCODE -ne 0) { throw 'uv tool install failed.' }

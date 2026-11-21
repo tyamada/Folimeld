@@ -49,7 +49,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | Windows 11 | x64 | Microsoft Store / 1.0.1.0 | [対応ソース](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.1.0) |
 | Windows 11 | x64 | Desktop インストーラー / 0.3.5.0（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) |
 | Windows 11 | x64 | ソース＋uv / 0.3.5（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) |
-| Windows 11 | x64 | uv tool install (Wheel) / 0.3.5（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1) |
+| Windows 11 | x64 | uv tool install (Wheel) / 0.3.7 preview.1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1) |
 | Windows 11 | arm64 | Desktop インストーラー / 0.3.5.0（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1) |
 | Windows 11 | arm64 | ソース＋uv / 0.3.5（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.5-preview.1) |
 | Windows 11 | arm64 | uv tool install (Wheel) / 0.3.5（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.5-preview.1) |
@@ -171,9 +171,16 @@ SHA-256不一致では展開・実行せず停止します。照合したZIPを�
 
 ### Windows 11 uv tool install 版プレビュー（Pure Python Wheel / x64・ARM64）
 
-[**Folimeld 0.3.5 Windows x64 uv tool install 版プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1) および [**Folimeld 0.3.5 Windows ARM64 uv tool install 版プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.5-preview.1) を、Microsoft Store版・Desktop版・既存のソース＋uv版とは独立した追加経路として公開しています。GitHub Releasesで配布するPure Python Wheel（`folimeld-0.3.5-py3-none-any.whl`）を`uv tool install`で隔離ツール環境へ導入します。詳細は[uv tool install版仕様・導入手順](documentation/windows-uv-tool_ja.md)を参照してください。
+[**Folimeld 0.3.7 preview.1 Windows x64 uv tool install 版プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1) および [**Folimeld 0.3.5 Windows ARM64 uv tool install 版プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.5-preview.1) を、Microsoft Store版・Desktop版・既存のソース＋uv版とは独立した追加経路として公開しています。GitHub Releasesで配布するPure Python Wheel（`folimeld-<version>-py3-none-any.whl`）を`uv tool install`で隔離ツール環境へ導入します。詳細は[uv tool install版仕様・導入手順](documentation/windows-uv-tool_ja.md)を参照してください。
 
-- **x64版**: [Pure Python Wheel](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/folimeld-0.3.5-py3-none-any.whl) · [依存ロック](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/requirements-windows-uv.lock) · [ランタイム定義](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/windows-uv-runtime.json) · [対応ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/Folimeld-0.3.5-windows-x64-uv-tool-source.zip) · [内部台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/source-manifest.json) · [コミット対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/SOURCE-ASSOCIATION.txt) · [第三者告知](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/THIRD-PARTY-NOTICES.txt) · [依存ソース台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/DEPENDENCY-SOURCES.json) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/SHA256SUMS.txt)
+**x64 0.3.7 preview.1（2026年11月21日公開）** は、ファイルメニューまたはPDF未読込時の案内の「サンプルPDFを開く…」から、サンプルPDFマンガを1冊ずつ取得できます。言語フィルター（初期値はアプリ／システム言語）、最新話から／1話からの表示順、著作権・CC BY 4.0の表示に対応し、取得したPDFのSHA-256を検証して編集用の作業コピーを開きます。PDF本体は同梱せず、初回取得には通信が必要です。[ブラウザーでサンプルPDF集約ページを開く](https://tyamada.github.io/manga-prompt-kit/samples/ja/)こともできます。
+
+通常利用には引き続きMicrosoft Store版を推奨します。**Store版1.0.1.0にはこの取得機能は含まれず、今回の公開はStore版の更新ではありません。** ARM64の案内は0.3.5のままです。x64 0.3.7では新規導入・オンライン一覧・日本語マンガ1冊の取得／検証・8ページ表示・別名保存・再読込・終了を確認し、公開10ファイルのサイズ・SHA-256も再取得して照合済みです。新候補での3ワーカー実機PID観測、更新／旧版復帰、Store版との併存、複数倍率、ARM64は未確認です。
+
+旧x64 [0.3.5 preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1) と [0.3.6 preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.6-preview.1) も引き続き入手できます。リンク先のuv tool版仕様・導入手順には旧0.3.5の記録が含まれるため、x64 0.3.7のファイル名・ハッシュ・導入コマンドは本節または0.3.7のReleaseを参照してください。
+
+
+- **x64版**: [Pure Python Wheel](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/folimeld-0.3.7-py3-none-any.whl) · [依存ロック](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/requirements-windows-uv.lock) · [ランタイム定義](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/windows-uv-runtime.json) · [対応ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/Folimeld-0.3.7-windows-x64-uv-tool-source.zip) · [内部台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/source-manifest.json) · [コミット対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/SOURCE-ASSOCIATION.txt) · [第三者告知](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/THIRD-PARTY-NOTICES.txt) · [依存ソース台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/DEPENDENCY-SOURCES.json) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/SHA256SUMS.txt)
 - **ARM64版**: [Pure Python Wheel](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/folimeld-0.3.5-py3-none-any.whl) · [依存ロック](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/requirements-windows-arm64-uv.lock) · [ランタイム定義](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/windows-arm64-uv-runtime.json) · [対応ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/Folimeld-0.3.5-windows-arm64-uv-tool-source.zip) · [内部台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/source-manifest.json) · [コミット対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/SOURCE-ASSOCIATION.txt) · [第三者告知](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/THIRD-PARTY-NOTICES.txt) · [依存ソース台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/DEPENDENCY-SOURCES.json) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/SHA256SUMS.txt)
 - CPython 3.12.x（マイナー一致）と固定ランタイム依存14件（ロックファイルのSHA-256ハッシュ照合付き）を要求します。
 - 設定とログは`%LOCALAPPDATA%/Folimeld-UV-Tool`へ保存し、Store版・Desktop版（`Folimeld-Desktop`）・ソース＋uv版（`Folimeld-UV`）の設定やレジストリ関連付けを変更しません。多重起動防止には`Local\Folimeld-UV-Tool` Mutexを使用します。
@@ -194,11 +201,11 @@ uv --version
 
 次の**2ファイルを同じフォルダー**（例: Downloads）へ保存してください。
 
-1. **folimeld-0.3.5-py3-none-any.whl** — アプリ本体のPure Python Wheel。
-   - x64 Release: [folimeld-0.3.5-py3-none-any.whl](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/folimeld-0.3.5-py3-none-any.whl)（SHA-256: `759B2FE0052F1741427194E40104DB0AF65184041AD5BAD8BB5D2003874DBDAF`）
+1. **アプリ本体のPure Python Wheel** — x64は `folimeld-0.3.7-py3-none-any.whl`、ARM64は `folimeld-0.3.5-py3-none-any.whl`。
+   - x64 Release: [folimeld-0.3.7-py3-none-any.whl](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/folimeld-0.3.7-py3-none-any.whl)（SHA-256: `9438F033436BDB1B73A1B377934BB1F88F1ED2109948F71C81BC30D8083C5E21`）
    - ARM64 Release: [folimeld-0.3.5-py3-none-any.whl](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/folimeld-0.3.5-py3-none-any.whl)（SHA-256: `FF06269C5BFC4A53B7BF5B673B48B3CC267744F757F771E29619785CD1150B4E`）
 2. **依存ロックファイル** — 依存14パッケージの版と各アーキテクチャ用wheelのSHA-256を記録した固定入力。
-   - x64用: [**requirements-windows-uv.lock**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.5-preview.1/requirements-windows-uv.lock)（SHA-256: `7E994B4C231536FB5C53D79959761BC426BD9FF9585B578165F1FD67EC19077F`）
+   - x64用: [**requirements-windows-uv.lock**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/requirements-windows-uv.lock)（SHA-256: `7E994B4C231536FB5C53D79959761BC426BD9FF9585B578165F1FD67EC19077F`）
    - ARM64用: [**requirements-windows-arm64-uv.lock**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/requirements-windows-arm64-uv.lock)（SHA-256: `B30019EC8BB3DDD9C15CEBB093432CD309566A6792B3EBCCDE821964B5054B67`）
 
 #### 3. 実行場所と保存先
@@ -222,6 +229,8 @@ uv tool dir --bin
 
 #### 4. SHA-256照合と導入
 
+以下は新規導入用です。旧uv tool版とは設定・ログを共有します。既存導入を強制更新する手順ではなく、更新・旧版復帰の受入確認は未実施です。既存の設定・Wheel・lockは復帰用に保管してください。
+
 ```powershell
 $ErrorActionPreference = 'Stop'
 
@@ -238,13 +247,13 @@ if ([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture -ma
     }
     uv tool install --python 3.12 --with-requirements .\requirements-windows-arm64-uv.lock --no-build .\folimeld-0.3.5-py3-none-any.whl
 } else {
-    if ((Get-FileHash -LiteralPath .\folimeld-0.3.5-py3-none-any.whl -Algorithm SHA256).Hash -ne '759B2FE0052F1741427194E40104DB0AF65184041AD5BAD8BB5D2003874DBDAF') {
+    if ((Get-FileHash -LiteralPath .\folimeld-0.3.7-py3-none-any.whl -Algorithm SHA256).Hash -ne '9438F033436BDB1B73A1B377934BB1F88F1ED2109948F71C81BC30D8083C5E21') {
         throw 'Wheel SHA-256 mismatch.'
     }
     if ((Get-FileHash -LiteralPath .\requirements-windows-uv.lock -Algorithm SHA256).Hash -ne '7E994B4C231536FB5C53D79959761BC426BD9FF9585B578165F1FD67EC19077F') {
         throw 'Lock SHA-256 mismatch.'
     }
-    uv tool install --python 3.12 --with-requirements .\requirements-windows-uv.lock --no-build .\folimeld-0.3.5-py3-none-any.whl
+    uv tool install --python 3.12 --with-requirements .\requirements-windows-uv.lock --no-build .\folimeld-0.3.7-py3-none-any.whl
 }
 
 if ($LASTEXITCODE -ne 0) { throw 'uv tool install failed.' }
