@@ -80,6 +80,14 @@
 - サムネイルを再利用し、表示範囲を優先して少数ずつ描画。回転時は対象ページのみ再描画
 - Undo・Redo履歴のPDFデータに合計128 MiBの上限を設定し、古い履歴から削除
 
+## 0.3.7.0 Windows x64 Desktop インストーラー版プレビュー / 0.3.7 ソース＋uv版プレビュー - 2026-11-22
+
+- 確定コミット `6841276fa3de03b039076c91cf947c8198c757df`（ブランチ `release/windows-x64-0.3.7-preview.1`）を基点に、[Windows 11 x64 Desktop インストーラー版 0.3.7.0 プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1)（12ファイル）および [Windows 11 x64 ソース＋uv版 0.3.7 プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.7-preview.1)（4ファイル）を Pre-release として公開し、既存 `latest`（`macos-source-v0.3.5`）および旧 0.3.5 系配布物を維持。公開先から未認証 HTTPS で全16ファイルを再取得し、サイズ・SHA-256の一致を確認。
+- 0.3.5 以降に追加された「PDFを閉じる」操作・未読込時案内、および「ファイル → サンプルPDFを開く…」からのサンプルPDFマンガ1冊ずつのオンライン取得・SHA-256検証・作業コピー展開機能を両配布経路へ反映。
+- Desktop インストーラー版 0.3.7.0 では、`Local\Folimeld-Desktop` Mutex 保持中の導入拒否（終了コード 1）、通常権限新規導入と全201ファイルの `payload-review.json` との SHA-256 一致、同一版上書き拒否（終了コード 7）、凍結 `FolimeldDesktop.exe` の起動・重複起動拒否（終了コード 1）・正常終了（終了コード 0）、`unins000.exe` による削除と設定データ保持を確認。
+- ソース＋uv版 0.3.7 では、ZIP の SHA-256 照合・新規専用フォルダー展開、`install_uv.ps1` による固定環境（CPython 3.12.16・uv 0.13.8・依存14件）の導入・`uv pip check`・ショートカット生成、オンラインサンプルカタログ取得・日本語マンガ1冊のダウンロード／SHA-256検証・PDF保存再読込、`launch_uv.py` での GUI 起動とログ出力を確認。
+- 3ワーカー実機 PID 観測、旧版（0.3.5 / 0.3.5.0）からの更新・復帰、本番 Store 版との併存、複数倍率・複数モニター移動、ARM64 は未確認。Store 版 1.0.1.0 への更新ではない。
+
 ## 0.3.7 preview.1 Windows x64 uv tool install 版プレビュー - 2026-11-21
 
 - [Windows 11 x64 uv tool install版0.3.7 preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1)をPre-releaseとして公開し、Latestと既存の0.3.5／0.3.6配布物を維持。Wheel、対応ソース、台帳、依存ロック、告知など全10ファイルを公開先から再取得し、サイズ・SHA-256の一致を確認。

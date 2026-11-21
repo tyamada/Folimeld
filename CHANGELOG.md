@@ -80,6 +80,14 @@
 - Reuse thumbnails and render them in small batches, prioritizing the visible area; rerender only affected pages after rotation
 - Limit PDF data in Undo and Redo history to a combined 128 MiB, removing older history first
 
+## 0.3.7.0 Windows x64 Desktop installer preview / 0.3.7 source + uv preview - 2026-11-22
+
+- Publish the [Windows 11 x64 Desktop installer preview 0.3.7.0](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1) (12 assets) and [Windows 11 x64 source + uv preview 0.3.7](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.7-preview.1) (4 assets) from commit `6841276fa3de03b039076c91cf947c8198c757df` (`release/windows-x64-0.3.7-preview.1`) as Pre-releases while preserving `latest` (`macos-source-v0.3.5`) and existing 0.3.5 downloads. Redownload all 16 public assets over unauthenticated HTTPS and verify exact byte sizes and SHA-256 hashes.
+- Bring post-0.3.5 changes to both distribution channels, including the PDF close action, modeless empty-document prompt, and on-demand sample manga PDF downloads (“Open sample PDF…”) with SHA-256 verification and editable working copies.
+- For Desktop installer 0.3.7.0, verify installer blocking while `Local\Folimeld-Desktop` mutex is held (exit code 1), non-elevated fresh install with all 201 payload files matching `payload-review.json` SHA-256, same-version overwrite refusal (exit code 7), frozen `FolimeldDesktop.exe` launch / duplicate-launch rejection (exit code 1) / clean exit (exit code 0), and `unins000.exe` removal preserving `%LOCALAPPDATA%\Folimeld-Desktop`.
+- For source + uv 0.3.7, verify ZIP SHA-256 check, fresh extraction, `install_uv.ps1` setup with pinned CPython 3.12.16 / uv 0.13.8 / 14 dependencies and `uv pip check`, online sample catalogue retrieval and verified Japanese manga PDF download/save/reopen, GUI launch via `launch_uv.py`, and isolated logging.
+- Live three-worker PID observation, upgrade/rollback from 0.3.5 / 0.3.5.0, coexistence with production Microsoft Store install, multi-DPI/multi-monitor scaling, and ARM64 remain unverified. This is not an update to Microsoft Store 1.0.1.0.
+
 ## 0.3.7 preview.1 Windows x64 uv tool install preview - 2026-11-21
 
 - Publish the [Windows 11 x64 uv tool install edition 0.3.7 preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1) as a Pre-release, preserving Latest and existing 0.3.5/0.3.6 downloads. Redownload all ten public assets, including the Wheel, corresponding source, manifests, dependency lock and notices, and verify their sizes and SHA-256.

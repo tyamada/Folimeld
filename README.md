@@ -47,8 +47,8 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | OS | CPU | Distribution and version | Release |
 | --- | --- | --- | --- |
 | Windows 11 | x64 | Microsoft Store / 1.0.1.0 | [Matching source](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.1.0) |
-| Windows 11 | x64 | Desktop installer / 0.3.5.0 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) |
-| Windows 11 | x64 | Source + uv / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) |
+| Windows 11 | x64 | Desktop installer / 0.3.7.0 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1) |
+| Windows 11 | x64 | Source + uv / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.7-preview.1) |
 | Windows 11 | x64 | uv tool install (Wheel) / 0.3.7 preview.1 (prerelease) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1) |
 | Windows 11 | arm64 | Desktop installer / 0.3.5.0 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1) |
 | Windows 11 | arm64 | Source + uv / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.5-preview.1) |
@@ -91,9 +91,9 @@ The standard Windows 11 distribution channel is Microsoft Store. See the [develo
 
 ### Windows 11 source + uv preview (x64 / ARM64)
 
-[**Folimeld 0.3.5 Windows x64 uv preview**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) and [**Folimeld 0.3.5 Windows ARM64 uv preview**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.5-preview.1) are available as additional distribution channels. Microsoft Store remains the standard Windows distribution channel. This preview is not an MSIX or standalone EXE.
+[**Folimeld 0.3.7 Windows x64 uv preview**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.7-preview.1) and [**Folimeld 0.3.5 Windows ARM64 uv preview**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.5-preview.1) are available as additional distribution channels. Microsoft Store remains the standard Windows distribution channel. This preview is not an MSIX or standalone EXE. Earlier x64 [0.3.5 preview](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) remains available.
 
-- **x64 edition**: [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip) · [Internal manifest](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/source-manifest.json) · [Source commit association](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/SOURCE-ASSOCIATION.txt) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/SHA256SUMS.txt)
+- **x64 edition**: [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.7-preview.1/Folimeld-0.3.7-windows-x64-uv-source-6841276-candidate1.zip) · [Internal manifest](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.7-preview.1/source-manifest.json) · [Source commit association](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.7-preview.1/SOURCE-ASSOCIATION.txt) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.7-preview.1/SHA256SUMS.txt)
 - **ARM64 edition**: [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.5-preview.1/Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip) · [Internal manifest](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.5-preview.1/source-manifest.json) · [Source commit association](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.5-preview.1/SOURCE-ASSOCIATION.txt) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.5-preview.1/SHA256SUMS.txt)
 - Uses dedicated `.venv` and `.uv-runtime` directories in the installation folder, with settings and logs saved separately under `%LOCALAPPDATA%\Folimeld-UV`. See the Release notes and included [uv installation guide](documentation/windows-uv-source.md) for details and licensing information.
 
@@ -113,12 +113,12 @@ The standard Windows 11 distribution channel is Microsoft Store. See the [develo
 
 Download the source ZIP matching your PC's architecture (x64 or ARM64) from GitHub Releases (typically saved to `$HOME\Downloads`):
 
-- **x64 edition**: [**Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.5-preview.1/Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip) (SHA-256: `8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA`)
+- **x64 edition**: [**Folimeld-0.3.7-windows-x64-uv-source-6841276-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.7-preview.1/Folimeld-0.3.7-windows-x64-uv-source-6841276-candidate1.zip) (SHA-256: `1B1C91F5E9346CD5C4E66D9A9353C3E79D970F349C35DF18ABD3E25055449747`)
 - **ARM64 edition**: [**Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.5-preview.1/Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip) (SHA-256: `F362A5431D89FC633C852149E0ECD219C22BDAAD07A92229CF7193DBF5E56B72`)
 
 #### 3. Extraction and installation (SHA-256 verification and unblocking the script)
 
-Run in non-elevated PowerShell 7.2 or later. Verify the SHA-256 hash of the downloaded ZIP and extract into a new dedicated folder (e.g. `$HOME\Folimeld-uv-0.3.5`).
+Run in non-elevated PowerShell 7.2 or later. Verify the SHA-256 hash of the downloaded ZIP and extract into a new dedicated folder (e.g. `$HOME\Folimeld-uv-0.3.7`).
 
 ```powershell
 $ErrorActionPreference = 'Stop'
@@ -127,9 +127,11 @@ $ErrorActionPreference = 'Stop'
 if ([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture -match 'Arm64') {
     $zip = Join-Path $HOME 'Downloads\Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip'
     $expected = 'F362A5431D89FC633C852149E0ECD219C22BDAAD07A92229CF7193DBF5E56B72'
+    $destination = Join-Path $HOME 'Folimeld-uv-0.3.5'
 } else {
-    $zip = Join-Path $HOME 'Downloads\Folimeld-0.3.5-windows-x64-uv-source-1475b48-candidate1.zip'
-    $expected = '8B651224221505B4CA6F0F48ECC13989C33573DE4501ACE3A9BA960C2EBB86BA'
+    $zip = Join-Path $HOME 'Downloads\Folimeld-0.3.7-windows-x64-uv-source-6841276-candidate1.zip'
+    $expected = '1B1C91F5E9346CD5C4E66D9A9353C3E79D970F349C35DF18ABD3E25055449747'
+    $destination = Join-Path $HOME 'Folimeld-uv-0.3.7'
 }
 
 # 1. SHA-256 verification
@@ -138,7 +140,6 @@ if ((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash -ne $expected) {
 }
 
 # 2. Extract into dedicated folder
-$destination = Join-Path $HOME 'Folimeld-uv-0.3.5'
 if (Test-Path -LiteralPath $destination) {
     throw 'Destination already exists. Choose a new dedicated folder.'
 }
@@ -278,9 +279,9 @@ To uninstall, run `uv tool uninstall folimeld` (settings and logs are preserved)
 
 ### Windows 11 Desktop installer preview (PyInstaller onedir + Inno Setup / x64 and ARM64)
 
-[**Folimeld 0.3.5.0 Windows x64 Desktop preview**](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) and [**Folimeld 0.3.5.0 Windows ARM64 Desktop preview**](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1) are available as per-user installers that require no pre-installed Python, uv, or PowerShell. The Microsoft Store edition remains the standard Windows distribution channel, and this edition keeps its install directory, settings, logs, and mutex strictly separate from the Store, source + uv, and `uv tool install` editions. See the [Desktop build specification and verification record](documentation/windows-desktop-build.md) and [per-version source guide](documentation/windows-desktop-sources.md) for details.
+[**Folimeld 0.3.7.0 Windows x64 Desktop preview**](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1) and [**Folimeld 0.3.5.0 Windows ARM64 Desktop preview**](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1) are available as per-user installers that require no pre-installed Python, uv, or PowerShell. The Microsoft Store edition remains the standard Windows distribution channel, and this edition keeps its install directory, settings, logs, and mutex strictly separate from the Store, source + uv, and `uv tool install` editions. Earlier x64 [0.3.5.0 preview](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) remains available. See the [Desktop build specification and verification record](documentation/windows-desktop-build.md) and [per-version source guide](documentation/windows-desktop-sources.md) for details.
 
-- **x64 edition**: [Setup EXE](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-x64-setup.exe) · [Matching source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-0.3.5.0-windows-x64-desktop-source.zip) · [Payload ledger](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/payload-review.json) · [Internal source manifest](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/source-manifest.json) · [Source commit association](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/SOURCE-ASSOCIATION.txt) · [Third-party notices](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/THIRD-PARTY-NOTICES.txt) · [Dependency sources ledger](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/DEPENDENCY-SOURCES.json) · [CRT user notice](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/CRT-USER-NOTICE.txt) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/SHA256SUMS.txt)
+- **x64 edition**: [Setup EXE](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/Folimeld-Desktop-0.3.7.0-x64-setup.exe) · [Matching source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/Folimeld-0.3.7.0-windows-x64-desktop-source.zip) · [Payload ledger](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/payload-review.json) · [Internal source manifest](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/source-manifest.json) · [Source commit association](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/SOURCE-ASSOCIATION.txt) · [Third-party notices](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/THIRD-PARTY-NOTICES.txt) · [Dependency sources ledger](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/DEPENDENCY-SOURCES.json) · [CRT user notice](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/CRT-USER-NOTICE.txt) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/SHA256SUMS.txt)
 - **ARM64 edition**: [Setup EXE](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-arm64-setup.exe) · [Matching source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/Folimeld-0.3.5.0-windows-arm64-desktop-source.zip) · [Payload ledger](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/payload-review.json) · [Internal source manifest](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/source-manifest.json) · [Source commit association](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/SOURCE-ASSOCIATION.txt) · [Third-party notices](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/THIRD-PARTY-NOTICES.txt) · [Dependency sources ledger](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/DEPENDENCY-SOURCES.json) · [CRT user notice](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/CRT-USER-NOTICE.txt) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/SHA256SUMS.txt)
 
 #### 1. Prerequisites
@@ -295,7 +296,7 @@ To uninstall, run `uv tool uninstall folimeld` (settings and logs are preserved)
 
 Download the installer matching your PC's architecture from GitHub Releases (typically saved to `$HOME\Downloads`):
 
-- **x64 edition**: [**Folimeld-Desktop-0.3.5.0-x64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-x64-setup.exe) (~47.9 MB, SHA-256: `ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3`)
+- **x64 edition**: [**Folimeld-Desktop-0.3.7.0-x64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/Folimeld-Desktop-0.3.7.0-x64-setup.exe) (~47.6 MiB, SHA-256: `61FACDA4B930738AF3839472750D7913790003BC10BA89C8626AE33A1ECE4A01`)
 - **ARM64 edition**: [**Folimeld-Desktop-0.3.5.0-arm64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-arm64-setup.exe) (~37.7 MB, SHA-256: `D19DB07CDD56D5A72C12879CA2BFB5E126AD7532E3F431E2C07413279727633C`)
 
 #### 3. SHA-256 verification and installation steps
@@ -310,8 +311,8 @@ Download the installer matching your PC's architecture from GitHub Releases (typ
        $file = '.\Folimeld-Desktop-0.3.5.0-arm64-setup.exe'
        $expected = 'D19DB07CDD56D5A72C12879CA2BFB5E126AD7532E3F431E2C07413279727633C'
    } else {
-       $file = '.\Folimeld-Desktop-0.3.5.0-x64-setup.exe'
-       $expected = 'ADBE1B0E983F1DFA9BD62D5782EE173AE47E5F625F3BABD24B55CC0B5E6386C3'
+       $file = '.\Folimeld-Desktop-0.3.7.0-x64-setup.exe'
+       $expected = '61FACDA4B930738AF3839472750D7913790003BC10BA89C8626AE33A1ECE4A01'
    }
 
    if ((Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash -ne $expected) {
@@ -327,14 +328,14 @@ Download the installer matching your PC's architecture from GitHub Releases (typ
    > - To avoid block notifications entirely, use the Authenticode-signed Python distributions: **[source + uv preview](#windows-11-source--uv-preview-x64--arm64)** or **[uv tool install preview](#windows-11-uv-tool-install-preview-pure-python-wheel--x64-and-arm64)**.
 3. **Setup wizard steps**:
    - **License agreement**: The displayed English license terms apply solely to the bundled Microsoft Visual C++ Runtime (x64: `14.44.35211.0` / ARM64: `14.52.37029.0`). Select "I accept the agreement" and click "Next" (Folimeld itself is licensed under AGPL-3.0, and open-source notices are stored under `_internal\licenses\`).
-   - **Destination**: Installs per-user without elevation to `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0`. Click "Next" to accept the default.
+   - **Destination**: Installs per-user without elevation to `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\<version>` (x64: `0.3.7.0` / ARM64: `0.3.5.0`). Click "Next" to accept the default.
    - **Additional tasks**: Optionally select "Create a desktop shortcut" and click "Install" to complete setup (the app does not automatically launch upon exit).
 
 #### 4. Launch and data storage
 
 - **How to launch**:
   - In the Start Menu, open the "**Folimeld Desktop**" group and click "**Folimeld Desktop**" (or use the desktop shortcut if created).
-  - Executable path: `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\0.3.5.0\FolimeldDesktop.exe`
+  - Executable path: `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\<version>\FolimeldDesktop.exe`
 - **Settings and log location**:
   - Settings: `%LOCALAPPDATA%\Folimeld-Desktop\settings\settings.ini`
   - Logs: `%LOCALAPPDATA%\Folimeld-Desktop\logs\<version>\<launch-id>\folimeld.log`
