@@ -3,48 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Visual PDF page editor for Windows, macOS, Ubuntu and Debian, with BSD previews.">
-  <title>Folimeld — Visual PDF editor</title>
-  <style>
-    :root { color-scheme: light dark; }
-    body {
-      margin: 0;
-      background: light-dark(#f7f9f8, #131916);
-      color: light-dark(#1c2b22, #edf4ef);
-      font: 1rem/1.75 system-ui, sans-serif;
-    }
-    main { max-width: 52rem; margin: 0 auto; padding: 3rem 1.25rem; }
-    h1 { font-size: clamp(2.5rem, 8vw, 4rem); line-height: 1.1; margin: 1.5rem 0; }
-    h2 { font-size: 1.5rem; line-height: 1.3; }
-    a { color: light-dark(#176345, #92d9b5); text-underline-offset: .2em; }
-    a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
-    nav, .links { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; }
-    section { margin-top: 3rem; }
-    .links { padding: 0; list-style: none; }
-    footer { margin-top: 3rem; border-top: 1px solid light-dark(#cbd7cf, #415548); padding-top: 1.25rem; }
-  </style>
+  <meta name="description" content="Arrange your PDF, page by page.">
+  <title>Folimeld — Folimeld</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="canonical" href="https://tyamada.github.io/Folimeld/index.html">
+  <link rel="alternate" hreflang="en" href="https://tyamada.github.io/Folimeld/index.html">
+  <link rel="alternate" hreflang="ja" href="https://tyamada.github.io/Folimeld/index_ja.html">
 </head>
 <body>
-  <main>
-    <nav aria-label="Language">
-      <a href="index.html" lang="en" hreflang="en" aria-current="page">English</a>
-      <a href="index_ja.html" lang="ja" hreflang="ja">日本語</a>
-    </nav>
+<a class="skip" href="#content">Skip to content</a>
+<main id="content">
+  <nav aria-label="Navigation and language">
+    <a class="home" href="index.html">Folimeld / Home</a>
+    <a href="index.html" lang="en" hreflang="en" aria-current="page">English</a>
+    <a href="index_ja.html" lang="ja" hreflang="ja">日本語</a>
+  </nav>
+  <header>
+    <img class="hero-icon" src="assets/icon.png" alt="" width="128" height="128">
+    <p class="eyebrow">FOLIMELD · PDF PAGE EDITOR</p>
     <h1>Folimeld</h1>
-    <section id="en" lang="en" aria-labelledby="en-title">
-      <h2 id="en-title">Edit PDFs with visual page previews</h2>
-      <p>A desktop app for rearranging, rotating, inserting, and deleting PDF pages. PDFs and images are processed on your device without being sent to external services.</p>
-      <p>Available for Windows, macOS, Ubuntu, and Debian, with preview releases for FreeBSD, NetBSD, and OpenBSD.</p>
-      <p>See the English guide for supported OS versions, CPUs, package formats, installation, and launch instructions. Source archives and SHA-256 checksums are available in each Release.</p>
-      <ul class="links">
-        <li><a href="https://github.com/tyamada/Folimeld/blob/main/README.md">English guide and downloads</a></li>
-        <li><a href="https://github.com/tyamada/Folimeld/releases">GitHub Releases</a></li>
-        <li><a href="https://tyamada.github.io/manga-prompt-kit/samples/en/">Sample manga PDFs — choose episode and language</a></li>
-      </ul>
-    </section>
-    <footer>
-      <a href="privacy/#en">Windows privacy policy</a>
-    </footer>
-  </main>
+    <p class="lede">Arrange your PDF, page by page.</p>
+  </header>
+  <section id="en"><h2>Edit PDFs with visual page previews</h2><p>Rearrange, rotate, insert and delete PDF pages, or create PDFs from image folders, on your device. Choose your operating system and distribution channel.</p></section><section class="callout"><h2>For everyday Windows use: Microsoft Store</h2><p>Published version 1.0.1.0 for x64. Free to install, with updates delivered by Microsoft Store. This is separate from GitHub preview editions.</p><a class="button" href="microsoft-store/index.html">Store edition: overview, download & support</a></section><section><h2>Find your operating system</h2><div class="grid"><article class="card"><h3><a href="windows/index.html">Windows</a></h3><p>Windows 11 · Microsoft Store and preview editions</p></article><article class="card"><h3><a href="macos/index.html">macOS</a></h3><p>macOS 15 or later · Apple Silicon · Homebrew</p></article><article class="card"><h3><a href="ubuntu/index.html">Ubuntu</a></h3><p>Ubuntu 24.04 · DEB and strict Snap previews</p></article><article class="card"><h3><a href="debian/index.html">Debian</a></h3><p>Debian 13 · DEB previews</p></article><article class="card"><h3><a href="kali/index.html">Kali Linux</a></h3><p>Kali Rolling 2026.3 / ARM64 last-snapshot · DEB previews</p></article><article class="card"><h3><a href="opensuse/index.html">openSUSE</a></h3><p>Tumbleweed and Leap 16.1 · RPM previews</p></article><article class="card"><h3><a href="fedora/index.html">Fedora</a></h3><p>Fedora 44 / 45 · RPM previews</p></article><article class="card"><h3><a href="almalinux/index.html">AlmaLinux</a></h3><p>AlmaLinux 9.8 · RPM previews</p></article><article class="card"><h3><a href="freebsd/index.html">FreeBSD</a></h3><p>FreeBSD 15.1 · unofficial pkg previews</p></article><article class="card"><h3><a href="netbsd/index.html">NetBSD</a></h3><p>NetBSD 11.1 · unofficial tgz previews</p></article><article class="card"><h3><a href="openbsd/index.html">OpenBSD</a></h3><p>OpenBSD 8.0 · unofficial signed tgz previews</p></article></div></section><section><h2>Choose an edition</h2><p>All Linux releases, including older versions, are prereleases. BSD packages and GitHub-distributed Windows editions are also previews. Validation scope differs by OS and CPU. macOS is distributed through Homebrew.</p></section><section><h2>Guides and samples</h2><ul><li><a href="https://github.com/tyamada/Folimeld/blob/main/README.md">Read installation, launch and limitation details</a></li><li><a href="https://github.com/tyamada/Folimeld/releases">All releases, older editions, corresponding source &amp; SHA-256</a></li><li><a href="https://tyamada.github.io/manga-prompt-kit/samples/en/">Sample manga PDFs: choose an episode and language</a></li></ul></section>
+  <footer>
+    <p>© Takuma Yamada · <a href="https://github.com/tyamada/Folimeld">GitHub / source code</a> · <a href="mailto:tyamada.support@gmail.com">Contact</a></p>
+    <p><a href="privacy/#en">Microsoft Store edition privacy policy</a> · <a href="microsoft-store/index.html#support">Store edition support</a></p>
+    <p class="small">Distribution information checked November 21, 2026. Consult each distribution page for current requirements and downloads.</p>
+  </footer>
+</main>
 </body>
 </html>
