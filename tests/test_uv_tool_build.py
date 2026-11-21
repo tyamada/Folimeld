@@ -63,7 +63,7 @@ def test_stage_release_artifacts_creates_manifest_and_checksums(tmp_path):
     assert manifest["distribution"] == "windows-uv-tool-x64"
     assert (stage_dir / "SHA256SUMS.txt").is_file()
     assert (stage_dir / "uv-tool-release-manifest.json").is_file()
-    assert (stage_dir / "Folimeld-0.3.5-windows-x64-uv-tool-source.zip").is_file()
+    assert (stage_dir / f"Folimeld-{manifest['version']}-windows-x64-uv-tool-source.zip").is_file()
     assert (stage_dir / "source-manifest.json").is_file()
     assert (stage_dir / "SOURCE-ASSOCIATION.txt").is_file()
     assert (stage_dir / "requirements-windows-uv.lock").is_file()
@@ -75,5 +75,5 @@ def test_stage_release_artifacts_creates_manifest_and_checksums(tmp_path):
     stage_arm64 = tmp_path / "release-arm64"
     manifest_arm64 = uv_tool_build.stage_release_artifacts(root, stage_arm64, arch="arm64")
     assert manifest_arm64["distribution"] == "windows-uv-tool-arm64"
-    assert (stage_arm64 / "Folimeld-0.3.5-windows-arm64-uv-tool-source.zip").is_file()
+    assert (stage_arm64 / f"Folimeld-{manifest_arm64['version']}-windows-arm64-uv-tool-source.zip").is_file()
     assert (stage_arm64 / "requirements-windows-arm64-uv.lock").is_file()
