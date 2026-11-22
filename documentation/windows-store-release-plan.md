@@ -76,11 +76,11 @@ Plan for the next update (Submission 2) adding native Windows 11 ARM64 support (
     -Store -StoreConfig .\build\store-config.json -Architecture arm64
   ```
 
-## Submission 3 release plan (Folimeld 1.0.3.0: app 0.3.7 / x64 + ARM64)
+## Submission 3 release plan (Folimeld 1.0.4.0: app 0.3.7 / x64 + ARM64)
 
-Plan for the next update (Submission 3) bringing Folimeld 0.3.7 features (“Open sample PDF…”, PDF close action, and modeless empty-document prompt) to Microsoft Store.
+Plan for the next update (Submission 3) bringing Folimeld 0.3.7 features (“Open sample PDF…”, PDF close action, and modeless empty-document prompt) to Microsoft Store. Because `1.0.3.0` (x64) was already used in an existing package flight (`Folimeld 1.0.3.0 x64 Thumbnail Fix`), the MSIX package version is incremented to `1.0.4.0` to satisfy Partner Center's unique package full name requirement.
 
-- **Versions**: MSIX package version `1.0.3.0` (greater than `1.0.2.0`), application version `0.3.7`.
+- **Versions**: MSIX package version `1.0.4.0` (greater than `1.0.2.0` and prior flight `1.0.3.0`), application version `0.3.7`.
 - **Target architectures**: `x64` (`0x8664`) and `arm64` (`0xAA64`).
 - **Pricing & distribution**: 100% Free (in-app supporter add-ons and GitHub Sponsors menu remain disabled/hidden).
 - **New 0.3.7 features**:
@@ -92,9 +92,9 @@ Plan for the next update (Submission 3) bringing Folimeld 0.3.7 features (“Ope
 - **Screenshot fixture**:
   - Captured Japanese and English screenshots for documentation, the website, and Store listings using copies of `testdata/tameshibu_episode1_2_en.pdf` (CC BY 4.0, Komairo Hiyori) (`build/store-listing/screenshots/ja-JP/` and `en-US/` 01–06, plus `documentation/screenshots/`; see the [screenshot capture plan](windows-store-screenshot-plan.md)).
 - **Build & preparation status (as of 2026-11-22)**:
-  - Finalized release branch `release/windows-store-v1.0.3.0` (commit `d21ec64eee8e33567a12c222069d4350051e96dc`, app version `0.3.7`) and updated `docs/privacy/index.html` to document on-demand HTTPS sample PDF downloads.
-  - Built and preflight-verified `dist/Folimeld_1.0.3.0_x64.msix` (78,990,289 bytes / ~75.3 MiB, SHA-256: `9017C3BBDDCD3F332D60D482E84434447A17D0E43416B6A899D1A375445894DC`, PE Machine `0x8664`, static checks passed in `build/msix-preflight/store/x64/preflight.json`). Corresponding source ZIP: `dist/source/Folimeld-source-ed842cf28552a7712d7ceb3dce1a5b86e6ac990b8dc3765489f0e681624df4cb.zip`; association JSON: `dist/source/Folimeld_1.0.3.0_x64.msix-9017c3bbddcd3f332d60d482e84434447a17d0e43416b6a899d1a375445894dc.json`.
-  - Built and preflight-verified `dist/Folimeld_1.0.3.0_arm64.msix` (62,377,132 bytes / ~59.5 MiB, SHA-256: `2ECD780F5F075EEC9CE657C70A66A3A476A91B98986070F0BFB0936A65D60AD7`, PE Machine `0xAA64`, static checks passed in `build/msix-preflight/store/arm64/preflight.json`) on ARM64 hardware. Association JSON: `dist/source/Folimeld_1.0.3.0_arm64.msix-2ecd780f5f075eec9ce657c70a66a3a476a91b98986070f0bfb0936a65d60ad7.json`. Both packages are ready for Partner Center (Submission 3).
+  - Finalized release branch `release/windows-store-v1.0.4.0` (commit `8f6b47c`, app version `0.3.7`) and updated `docs/privacy/index.html` to document on-demand HTTPS sample PDF downloads.
+  - Built and preflight-verified `dist/Folimeld_1.0.4.0_x64.msix` (78,990,624 bytes / ~75.3 MiB, SHA-256: `CD081C96BC0838BFE1B65E59814F29DFF31957D34119F3AF1BE51357A670B6A9`, PE Machine `0x8664`, static checks passed in `build/msix-preflight/store/x64/preflight.json`). Corresponding source ZIP: `dist/source/Folimeld-source-2fee6f48a3bc5c09ec6e80c142d593c6b2781abc0ad9794912749a80a847450e.zip`; association JSON: `dist/source/Folimeld_1.0.4.0_x64.msix-cd081c96bc0838bfe1b65e59814f29dff31957d34119f3af1be51357a670b6a9.json`.
+  - `dist/Folimeld_1.0.4.0_arm64.msix` is awaiting native rebuild on Windows 11 ARM64 hardware from `release/windows-store-v1.0.4.0` with `package_version: "1.0.4.0"`. Once both `1.0.4.0` packages are ready, upload them together to Partner Center (Submission 3).
 - **Build and preflight commands**:
   ```powershell
   powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
@@ -105,7 +105,7 @@ Plan for the next update (Submission 3) bringing Folimeld 0.3.7 features (“Ope
     -Store -StoreConfig .\build\store-config.json -Architecture arm64 `
     -PreviousPackage .\dist\Folimeld_1.0.2.0_arm64.msix
   ```
-- **Corresponding source publication**: After certification and publication, publish matching source ZIP, `SHA256SUMS.txt`, and `source-association.json` under tag `windows-store-v1.0.3.0`.
+- **Corresponding source publication**: After certification and publication, publish matching source ZIP, `SHA256SUMS.txt`, and `source-association.json` under tag `windows-store-v1.0.4.0`.
 
 ## Official references
 
