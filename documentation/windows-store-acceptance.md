@@ -96,3 +96,31 @@ Acceptance plan for Submission 2 (package version `1.0.2.0`), adding native Wind
 | Encrypted Undo/Redo disk spooling | Both | Spool to AES-256-GCM encrypted temporary storage when memory exceeds 128 MiB; restore and secure wipe | Unit tests passed, awaiting hardware |
 | Bulk image import | Both | PDF generation from image import dialog, reordering, rotation, and temp file cleanup | Unit tests passed, awaiting hardware |
 | Free-app-only policy | Both | Supporter add-on menus are omitted; all functionality is available free of charge | Verified |
+
+## Store candidate 1.0.3.0 preparation and acceptance plan (Submission 3: app 0.3.7 / x64 & ARM64)
+
+Candidate record and acceptance plan for Submission 3 (package version `1.0.3.0`, application display version `0.3.7`), incorporating Folimeld 0.3.7 features (“Open sample PDF…”, PDF close action, and modeless empty-document guidance). The x64 candidate was built and preflight-verified on 2026-11-22 from `release/windows-store-v1.0.3.0` (commit `d21ec64eee8e33567a12c222069d4350051e96dc`). The ARM64 candidate will be recorded after native build on Windows 11 ARM64 hardware from the same commit.
+
+### Candidate packages and preflight status
+
+| Property | x64 candidate | ARM64 candidate |
+| --- | --- | --- |
+| Package file | `dist/Folimeld_1.0.3.0_x64.msix` (78,990,289 bytes) | Pending (native ARM64 build) |
+| Package Identity | `TakumaYamada.Folimeld` | `TakumaYamada.Folimeld` |
+| Package Publisher | `CN=B897C2D7-6B65-499A-A779-BF572E2D81ED` | `CN=B897C2D7-6B65-499A-A779-BF572E2D81ED` |
+| Package Family Name | `TakumaYamada.Folimeld_hn3600vb3j7rp` | `TakumaYamada.Folimeld_hn3600vb3j7rp` |
+| Version / App version | `1.0.3.0` / `0.3.7` | `1.0.3.0` / `0.3.7` |
+| Target CPU (PE Machine) | `x64` (`0x8664`) | `arm64` (`0xAA64`) |
+| Package SHA-256 | `9017C3BBDDCD3F332D60D482E84434447A17D0E43416B6A899D1A375445894DC` | Pending |
+| Preflight (`msix_preflight`) | Passed (`build/msix-preflight/store/x64/preflight.json`) | Pending |
+| Source association | `dist/source/Folimeld_1.0.3.0_x64.msix-9017c3bbddcd3f332d60d482e84434447a17d0e43416b6a899d1a375445894dc.json` | Pending |
+
+### Submission 3 acceptance checklist
+
+| Check | Scope | Required behavior and evidence | Status |
+| --- | --- | --- | --- |
+| Upgrade from previous version | Both | Install `1.0.3.0` over signed `1.0.1.0` or `1.0.2.0`; verify settings, history, and PDF file associations are preserved | Pending |
+| Sample PDF download (online) | Both | Open “File -> Open sample PDF…” inside MSIX container; verify language filter, ordering, CC BY 4.0 attribution, SHA-256 verification, and working-copy extraction | Pending |
+| Sample PDF reuse (offline) | Both | Re-open a previously verified sample while offline; verify edits and Save As do not modify the cached original | Pending |
+| Close PDF & empty-document prompt | Both | Close an open PDF via “File -> Close”; verify the modeless empty-document prompt appears and launches sample PDF or file selection | Pending |
+| Free-app-only & no Sponsors UI | Both | Confirm in-app supporter purchases and GitHub Sponsors menus remain hidden and all features work free of charge | Pending |

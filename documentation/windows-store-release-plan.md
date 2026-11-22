@@ -90,7 +90,11 @@ Plan for the next update (Submission 3) bringing Folimeld 0.3.7 features (“Ope
   - User PDFs and images remain strictly local and are never uploaded.
   - Clarify in the privacy policy, Store listing, and submission notes that HTTPS requests occur only when the user explicitly opens “Open sample PDF…” to fetch the fixed public catalogue and selected sample PDF from GitHub Releases.
 - **Screenshot fixture**:
-  - Capture documentation, website, and Store screenshots in Japanese and English using copies of `testdata/tameshibu_episode1_2_en.pdf` (CC BY 4.0, Komairo Hiyori); see the [screenshot capture plan](windows-store-screenshot-plan.md).
+  - Captured Japanese and English screenshots for documentation, the website, and Store listings using copies of `testdata/tameshibu_episode1_2_en.pdf` (CC BY 4.0, Komairo Hiyori) (`build/store-listing/screenshots/ja-JP/` and `en-US/` 01–06, plus `documentation/screenshots/`; see the [screenshot capture plan](windows-store-screenshot-plan.md)).
+- **Build & preparation status (as of 2026-11-22)**:
+  - Finalized release branch `release/windows-store-v1.0.3.0` (commit `d21ec64eee8e33567a12c222069d4350051e96dc`, app version `0.3.7`) and updated `docs/privacy/index.html` to document on-demand HTTPS sample PDF downloads.
+  - Built and preflight-verified `dist/Folimeld_1.0.3.0_x64.msix` (78,990,289 bytes / ~75.3 MiB, SHA-256: `9017C3BBDDCD3F332D60D482E84434447A17D0E43416B6A899D1A375445894DC`, PE Machine `0x8664`, static checks passed in `build/msix-preflight/store/x64/preflight.json`). Corresponding source ZIP: `dist/source/Folimeld-source-ed842cf28552a7712d7ceb3dce1a5b86e6ac990b8dc3765489f0e681624df4cb.zip`; association JSON: `dist/source/Folimeld_1.0.3.0_x64.msix-9017c3bbddcd3f332d60d482e84434447a17d0e43416b6a899d1a375445894dc.json`.
+  - `dist/Folimeld_1.0.3.0_arm64.msix` is pending native build on Windows 11 ARM64 hardware from the same `release/windows-store-v1.0.3.0` branch. Both packages will be uploaded together in Partner Center (Submission 3).
 - **Build and preflight commands**:
   ```powershell
   powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `

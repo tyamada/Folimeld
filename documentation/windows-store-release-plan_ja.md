@@ -90,7 +90,11 @@ Folimeld 0.3.7 の新機能（「サンプルPDFを開く…」「PDFを閉じ�
   - 編集対象のユーザー PDF・画像は外部送信せずローカル処理する原則を維持。
   - 利用者が明示的に「サンプルPDFを開く…」を実行した場合のみ、固定 HTTPS（GitHub リリース）からカタログおよび指定サンプル PDF を取得する旨をプライバシーポリシー・Store 掲載文・審査メモへ明記する。
 - **スクリーンショット素材**:
-  - ドキュメント・Web サイト・Store 掲載用スクリーンショットは `testdata/tameshibu_episode1_2_en.pdf`（CC BY 4.0、作者：こまいろ日和 / Komairo Hiyori）のコピーを使用して日英それぞれ撮影する（詳細は[スクリーンショット撮影計画](windows-store-screenshot-plan_ja.md)を参照）。
+  - ドキュメント・Web サイト・Store 掲載用スクリーンショットは `testdata/tameshibu_episode1_2_en.pdf`（CC BY 4.0、作者：こまいろ日和 / Komairo Hiyori）のコピーを使用して日英それぞれ撮影済み（`build/store-listing/screenshots/ja-JP/`・`en-US/` 01〜06 および `documentation/screenshots/`。詳細は[スクリーンショット撮影計画](windows-store-screenshot-plan_ja.md)を参照）。
+- **ビルド・準備状況（2026-11-22 時点）**:
+  - リリース用ブランチ `release/windows-store-v1.0.3.0`（コミット `d21ec64eee8e33567a12c222069d4350051e96dc`、アプリ版 `0.3.7`）を確定し、`docs/privacy/index.html` にサンプルPDF取得時の通信仕様を反映済み。
+  - `dist/Folimeld_1.0.3.0_x64.msix`（78,990,289 bytes / 約 75.3 MiB、SHA-256: `9017C3BBDDCD3F332D60D482E84434447A17D0E43416B6A899D1A375445894DC`、PE Machine `0x8664`、静的検査 `build/msix-preflight/store/x64/preflight.json` 合格）を生成済み。対応ソース ZIP は `dist/source/Folimeld-source-ed842cf28552a7712d7ceb3dce1a5b86e6ac990b8dc3765489f0e681624df4cb.zip`、関連付け JSON は `dist/source/Folimeld_1.0.3.0_x64.msix-9017c3bbddcd3f332d60d482e84434447a17d0e43416b6a899d1a375445894dc.json`。
+  - `dist/Folimeld_1.0.3.0_arm64.msix` は ARM64 実機上で同一ブランチ `release/windows-store-v1.0.3.0` からネイティブビルド予定。両パッケージ揃い次第、Partner Center（Submission 3）へ提出する。
 - **ビルド・事前検査コマンド**:
   ```powershell
   powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
