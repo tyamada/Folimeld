@@ -23,3 +23,8 @@
 - Translate all added or changed entries and remove translations of deleted entries. Keep version numbers, dates, section order, paths, commands, and factual content consistent.
 - Preserve the language-switch links in both files. If you change shared factual content in `CHANGELOG.md`, update `CHANGELOG_ja.md` as well. English-only wording corrections do not require a Japanese change.
 - Before finishing, review both files for semantic consistency and check that their relative links resolve. These instructions govern agent edits; they do not install a background translation service for manual edits.
+
+## Push, CI, and release announcements
+
+- After pushing commits to GitHub, check the triggered GitHub Actions CI runs and resolve any CI errors before finishing the task.
+- When publishing a package or release, confirm that the pushed release and its published packages are live and verified, then post a release announcement to X (`@tyamada22`).
