@@ -94,7 +94,7 @@ Plan for the next update (Submission 3) bringing Folimeld 0.3.7 features (“Ope
 - **Build & preparation status (as of 2026-11-22)**:
   - Finalized release branch `release/windows-store-v1.0.4.0` (commit `8f6b47c`, app version `0.3.7`) and updated `docs/privacy/index.html` to document on-demand HTTPS sample PDF downloads.
   - Built and preflight-verified `dist/Folimeld_1.0.4.0_x64.msix` (78,990,624 bytes / ~75.3 MiB, SHA-256: `CD081C96BC0838BFE1B65E59814F29DFF31957D34119F3AF1BE51357A670B6A9`, PE Machine `0x8664`, static checks passed in `build/msix-preflight/store/x64/preflight.json`). Corresponding source ZIP: `dist/source/Folimeld-source-2fee6f48a3bc5c09ec6e80c142d593c6b2781abc0ad9794912749a80a847450e.zip`; association JSON: `dist/source/Folimeld_1.0.4.0_x64.msix-cd081c96bc0838bfe1b65e59814f29dff31957d34119f3af1be51357a670b6a9.json`.
-  - `dist/Folimeld_1.0.4.0_arm64.msix` is awaiting native rebuild on Windows 11 ARM64 hardware from `release/windows-store-v1.0.4.0` with `package_version: "1.0.4.0"`. Once both `1.0.4.0` packages are ready, upload them together to Partner Center (Submission 3).
+  - Built and preflight-verified `dist/Folimeld_1.0.4.0_arm64.msix` (62,377,071 bytes / ~59.5 MiB, SHA-256: `9597D6F142A4520680BB1C943EC5ABA951549448CB8ADC30728A69379DAF7364`, PE Machine `0xAA64`, static checks passed in `build/msix-preflight/store/arm64/preflight.json`) on ARM64 hardware. Association JSON: `dist/source/Folimeld_1.0.4.0_arm64.msix-9597d6f142a4520680bb1c943ec5aba951549448cb8adc30728a69379daf7364.json`. Both `1.0.4.0` packages are ready for Partner Center (Submission 3).
 - **Build and preflight commands**:
   ```powershell
   powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `

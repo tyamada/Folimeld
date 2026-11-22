@@ -99,21 +99,21 @@ Windows 11 ARM64 ネイティブ対応および大規模PDF機能強化を含む
 
 ## Store候補1.0.4.0の準備と受入計画（Submission 3: アプリ版 0.3.7 / x64 & ARM64）
 
-Folimeld 0.3.7 の新機能（「サンプルPDFを開く…」「PDFを閉じる」・未読込時のモードレス案内）を反映した Submission 3（パッケージ版 `1.0.4.0`、アプリ表示版 `0.3.7`）の候補記録および受入計画です。既存のパッケージフライト（`Folimeld 1.0.3.0 x64 Thumbnail Fix`）との重複を避けるため `1.0.4.0` へ繰り上げ、x64 候補は 2026年11月22日に `release/windows-store-v1.0.4.0`（コミット `8f6b47c`）から生成・静的検査を完了しました。ARM64 候補は ARM64 実機で `1.0.4.0` を再ビルド後に追記します。
+Folimeld 0.3.7 の新機能（「サンプルPDFを開く…」「PDFを閉じる」・未読込時のモードレス案内）を反映した Submission 3（パッケージ版 `1.0.4.0`、アプリ表示版 `0.3.7`）の候補記録および受入計画です。既存のパッケージフライト（`Folimeld 1.0.3.0 x64 Thumbnail Fix`）との重複を避けるため `1.0.4.0` へ繰り上げ、x64 候補および ARM64 候補はいずれも 2026年11月22日に `release/windows-store-v1.0.4.0`（コミット `8f6b47c`）から生成・静的検査を完了しました。
 
 ### 候補パッケージと静的検査
 
 | 項目 | x64 候補 | ARM64 候補 |
 | --- | --- | --- |
-| パッケージファイル | `dist/Folimeld_1.0.4.0_x64.msix`（78,990,624 bytes） | 未生成（ARM64 実機で `1.0.4.0` 再ビルド待ち） |
+| パッケージファイル | `dist/Folimeld_1.0.4.0_x64.msix`（78,990,624 bytes） | `dist/Folimeld_1.0.4.0_arm64.msix`（62,377,071 bytes） |
 | パッケージ Identity | `TakumaYamada.Folimeld` | `TakumaYamada.Folimeld` |
 | パッケージ Publisher | `CN=B897C2D7-6B65-499A-A779-BF572E2D81ED` | `CN=B897C2D7-6B65-499A-A779-BF572E2D81ED` |
 | パッケージ Family Name | `TakumaYamada.Folimeld_hn3600vb3j7rp` | `TakumaYamada.Folimeld_hn3600vb3j7rp` |
 | 版番号 / アプリ表示版 | `1.0.4.0` / `0.3.7` | `1.0.4.0` / `0.3.7` |
 | 対象CPU (PE Machine) | `x64` (`0x8664`) | `arm64` (`0xAA64`) |
-| パッケージ SHA-256 | `CD081C96BC0838BFE1B65E59814F29DFF31957D34119F3AF1BE51357A670B6A9` | 未生成 |
-| 静的検査 (`msix_preflight`) | 合格 (`build/msix-preflight/store/x64/preflight.json`) | 未実施 |
-| ソースバンドル関連付け | `dist/source/Folimeld_1.0.4.0_x64.msix-cd081c96bc0838bfe1b65e59814f29dff31957d34119f3af1be51357a670b6a9.json` | 未生成 |
+| パッケージ SHA-256 | `CD081C96BC0838BFE1B65E59814F29DFF31957D34119F3AF1BE51357A670B6A9` | `9597D6F142A4520680BB1C943EC5ABA951549448CB8ADC30728A69379DAF7364` |
+| 静的検査 (`msix_preflight`) | 合格 (`build/msix-preflight/store/x64/preflight.json`) | 合格 (`build/msix-preflight/store/arm64/preflight.json`) |
+| ソースバンドル関連付け | `dist/source/Folimeld_1.0.4.0_x64.msix-cd081c96bc0838bfe1b65e59814f29dff31957d34119f3af1be51357a670b6a9.json` | `dist/source/Folimeld_1.0.4.0_arm64.msix-9597d6f142a4520680bb1c943ec5aba951549448cb8adc30728a69379daf7364.json` |
 
 ### Submission 3 受入確認項目
 

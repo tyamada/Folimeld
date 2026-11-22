@@ -4,7 +4,7 @@
 
 ## 未リリース
 
-- Microsoft Store 次期リリース（Submission 3 / パッケージ版 1.0.3.0、アプリ版 0.3.7）に向けて、x64 および ARM64 実機環境にて Store 向けネイティブ MSIX パッケージ（`Folimeld_1.0.3.0_x64.msix`、`Folimeld_1.0.3.0_arm64.msix`）をビルドし、静的検査（`msix_preflight` 合格）およびソースバンドル関連付けを完了。公開計画書（`windows-store-release-plan_ja.md`）および受入試験表（`windows-store-acceptance_ja.md`）へ両パッケージのハッシュを記録し、日英スクリーンショットおよびプライバシーポリシー（`docs/privacy/index.html`）を更新。
+- Microsoft Store 次期リリース（Submission 3 / パッケージ版 1.0.4.0、アプリ版 0.3.7）に向けて、x64 および ARM64 実機環境にて Store 向けネイティブ MSIX パッケージ（`Folimeld_1.0.4.0_x64.msix`、`Folimeld_1.0.4.0_arm64.msix`）をビルドし、静的検査（`msix_preflight` 合格）およびソースバンドル関連付けを完了。公開計画書（`windows-store-release-plan_ja.md`）および受入試験表（`windows-store-acceptance_ja.md`）へ両パッケージのハッシュを記録し、日英スクリーンショットおよびプライバシーポリシー（`docs/privacy/index.html`）を更新。
 
 - FreeBSD 15.1、NetBSD 11.1、OpenBSD 8.0 の amd64 版 0.3.5 パッケージを公開: それぞれ `folimeld-0.3.5_1.pkg`（FreeBSD 15.1 amd64）、`folimeld-0.3.5.tgz`（NetBSD 11.1 amd64）、`folimeld-0.3.5.tgz` および `folimeld-mupdf-1.28.2.tgz`（OpenBSD 8.0 amd64、Signify署名付き）の各配布Releaseを公開し、日英のインストール手順書（`documentation/freebsd-install*.md`、`netbsd-install*.md`、`openbsd-install*.md`）およびREADMEのダウンロード表を更新・同期。
 
