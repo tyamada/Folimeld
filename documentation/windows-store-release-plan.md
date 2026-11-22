@@ -91,6 +91,9 @@ Plan for the next update (Submission 3) bringing Folimeld 0.3.7 features (“Ope
   - Clarify in the privacy policy, Store listing, and submission notes that HTTPS requests occur only when the user explicitly opens “Open sample PDF…” to fetch the fixed public catalogue and selected sample PDF from GitHub Releases.
 - **Screenshot fixture**:
   - Capture documentation, website, and Store screenshots in Japanese and English using copies of `testdata/tameshibu_episode1_2_en.pdf` (CC BY 4.0, Komairo Hiyori); see the [screenshot capture plan](windows-store-screenshot-plan.md).
+- **Package assets (built and preflight verified)**:
+  - `dist/Folimeld_1.0.3.0_x64.msix` (to be generated in x86 PC environment)
+  - `dist/Folimeld_1.0.3.0_arm64.msix` (~62.9 MB, SHA-256: `2ECD780F5F075EEC9CE657C70A66A3A476A91B98986070F0BFB0936A65D60AD7`, PE Machine `0xAA64`, preflight passed)
 - **Build and preflight commands**:
   ```powershell
   powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `

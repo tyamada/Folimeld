@@ -91,6 +91,9 @@ Folimeld 0.3.7 の新機能（「サンプルPDFを開く…」「PDFを閉じ�
   - 利用者が明示的に「サンプルPDFを開く…」を実行した場合のみ、固定 HTTPS（GitHub リリース）からカタログおよび指定サンプル PDF を取得する旨をプライバシーポリシー・Store 掲載文・審査メモへ明記する。
 - **スクリーンショット素材**:
   - ドキュメント・Web サイト・Store 掲載用スクリーンショットは `testdata/tameshibu_episode1_2_en.pdf`（CC BY 4.0、作者：こまいろ日和 / Komairo Hiyori）のコピーを使用して日英それぞれ撮影する（詳細は[スクリーンショット撮影計画](windows-store-screenshot-plan_ja.md)を参照）。
+- **パッケージ構成（生成・静的検査）**:
+  - `dist/Folimeld_1.0.3.0_x64.msix`（x86 PC 環境で生成予定）
+  - `dist/Folimeld_1.0.3.0_arm64.msix`（約 62.9 MB、SHA-256: `2ECD780F5F075EEC9CE657C70A66A3A476A91B98986070F0BFB0936A65D60AD7`、PE Machine `0xAA64`、静的検査合格）
 - **ビルド・事前検査コマンド**:
   ```powershell
   powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
