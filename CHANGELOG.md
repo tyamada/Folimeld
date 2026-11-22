@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+- For the upcoming Microsoft Store release (Submission 3 / package version 1.0.3.0, app version 0.3.7), built native Store MSIX packages on x64 and ARM64 hardware (`Folimeld_1.0.3.0_x64.msix`, `Folimeld_1.0.3.0_arm64.msix`), passed static checks (`msix_preflight`), completed source bundle association, recorded both candidate package hashes in the release plan (`windows-store-release-plan.md`) and acceptance checklist (`windows-store-acceptance.md`), and updated bilingual screenshots and the privacy policy (`docs/privacy/index.html`).
+
 - Publish 0.3.5 amd64 packages for FreeBSD 15.1, NetBSD 11.1, and OpenBSD 8.0: Published preview Releases for `folimeld-0.3.5_1.pkg` (FreeBSD 15.1 amd64), `folimeld-0.3.5.tgz` (NetBSD 11.1 amd64), and `folimeld-0.3.5.tgz` with `folimeld-mupdf-1.28.2.tgz` (OpenBSD 8.0 amd64, signed with Signify). Synchronized English and Japanese installation guides (`documentation/freebsd-install*.md`, `netbsd-install*.md`, `openbsd-install*.md`) and README download tables.
 
 - Publish Ubuntu amd64 strict Snap 0.3.5 package: Built core24-based `folimeld_0.3.5_amd64.snap` (SHA-256: `ff71a176dba771542998b5bf48f7d89e9d118f34c937c620de897af0e4dc4570`) on Ubuntu 24.04.5 LTS amd64, verifying `snap install --dangerous` update installation, active interface plug connections (GNOME extensions, Wayland, X11, OpenGL, Home), and offscreen GUI execution. Provided bilingual verification records (`documentation/linux-snap-amd64-035-validation_ja.md`, `linux-snap-amd64-035-validation.md`) and JSON verification record.

@@ -99,21 +99,21 @@ Acceptance plan for Submission 2 (package version `1.0.2.0`), adding native Wind
 
 ## Store candidate 1.0.3.0 preparation and acceptance plan (Submission 3: app 0.3.7 / x64 & ARM64)
 
-Candidate record and acceptance plan for Submission 3 (package version `1.0.3.0`, application display version `0.3.7`), incorporating Folimeld 0.3.7 features (“Open sample PDF…”, PDF close action, and modeless empty-document guidance). The x64 candidate was built and preflight-verified on 2026-11-22 from `release/windows-store-v1.0.3.0` (commit `d21ec64eee8e33567a12c222069d4350051e96dc`). The ARM64 candidate will be recorded after native build on Windows 11 ARM64 hardware from the same commit.
+Candidate record and acceptance plan for Submission 3 (package version `1.0.3.0`, application display version `0.3.7`), incorporating Folimeld 0.3.7 features (“Open sample PDF…”, PDF close action, and modeless empty-document guidance). Both x64 and ARM64 candidates were built and preflight-verified on 2026-11-22 from `release/windows-store-v1.0.3.0` (commit `d21ec64eee8e33567a12c222069d4350051e96dc`).
 
 ### Candidate packages and preflight status
 
 | Property | x64 candidate | ARM64 candidate |
 | --- | --- | --- |
-| Package file | `dist/Folimeld_1.0.3.0_x64.msix` (78,990,289 bytes) | Pending (native ARM64 build) |
+| Package file | `dist/Folimeld_1.0.3.0_x64.msix` (78,990,289 bytes) | `dist/Folimeld_1.0.3.0_arm64.msix` (62,377,132 bytes) |
 | Package Identity | `TakumaYamada.Folimeld` | `TakumaYamada.Folimeld` |
 | Package Publisher | `CN=B897C2D7-6B65-499A-A779-BF572E2D81ED` | `CN=B897C2D7-6B65-499A-A779-BF572E2D81ED` |
 | Package Family Name | `TakumaYamada.Folimeld_hn3600vb3j7rp` | `TakumaYamada.Folimeld_hn3600vb3j7rp` |
 | Version / App version | `1.0.3.0` / `0.3.7` | `1.0.3.0` / `0.3.7` |
 | Target CPU (PE Machine) | `x64` (`0x8664`) | `arm64` (`0xAA64`) |
-| Package SHA-256 | `9017C3BBDDCD3F332D60D482E84434447A17D0E43416B6A899D1A375445894DC` | Pending |
-| Preflight (`msix_preflight`) | Passed (`build/msix-preflight/store/x64/preflight.json`) | Pending |
-| Source association | `dist/source/Folimeld_1.0.3.0_x64.msix-9017c3bbddcd3f332d60d482e84434447a17d0e43416b6a899d1a375445894dc.json` | Pending |
+| Package SHA-256 | `9017C3BBDDCD3F332D60D482E84434447A17D0E43416B6A899D1A375445894DC` | `2ECD780F5F075EEC9CE657C70A66A3A476A91B98986070F0BFB0936A65D60AD7` |
+| Preflight (`msix_preflight`) | Passed (`build/msix-preflight/store/x64/preflight.json`) | Passed (`build/msix-preflight/store/arm64/preflight.json`) |
+| Source association | `dist/source/Folimeld_1.0.3.0_x64.msix-9017c3bbddcd3f332d60d482e84434447a17d0e43416b6a899d1a375445894dc.json` | `dist/source/Folimeld_1.0.3.0_arm64.msix-2ecd780f5f075eec9ce657c70a66a3a476a91b98986070f0bfb0936a65d60ad7.json` |
 
 ### Submission 3 acceptance checklist
 

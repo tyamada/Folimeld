@@ -94,7 +94,7 @@ Folimeld 0.3.7 の新機能（「サンプルPDFを開く…」「PDFを閉じ�
 - **ビルド・準備状況（2026-11-22 時点）**:
   - リリース用ブランチ `release/windows-store-v1.0.3.0`（コミット `d21ec64eee8e33567a12c222069d4350051e96dc`、アプリ版 `0.3.7`）を確定し、`docs/privacy/index.html` にサンプルPDF取得時の通信仕様を反映済み。
   - `dist/Folimeld_1.0.3.0_x64.msix`（78,990,289 bytes / 約 75.3 MiB、SHA-256: `9017C3BBDDCD3F332D60D482E84434447A17D0E43416B6A899D1A375445894DC`、PE Machine `0x8664`、静的検査 `build/msix-preflight/store/x64/preflight.json` 合格）を生成済み。対応ソース ZIP は `dist/source/Folimeld-source-ed842cf28552a7712d7ceb3dce1a5b86e6ac990b8dc3765489f0e681624df4cb.zip`、関連付け JSON は `dist/source/Folimeld_1.0.3.0_x64.msix-9017c3bbddcd3f332d60d482e84434447a17d0e43416b6a899d1a375445894dc.json`。
-  - `dist/Folimeld_1.0.3.0_arm64.msix` は ARM64 実機上で同一ブランチ `release/windows-store-v1.0.3.0` からネイティブビルド予定。両パッケージ揃い次第、Partner Center（Submission 3）へ提出する。
+  - `dist/Folimeld_1.0.3.0_arm64.msix`（62,377,132 bytes / 約 59.5 MiB、SHA-256: `2ECD780F5F075EEC9CE657C70A66A3A476A91B98986070F0BFB0936A65D60AD7`、PE Machine `0xAA64`、静的検査 `build/msix-preflight/store/arm64/preflight.json` 合格）を ARM64 実機で生成済み。関連付け JSON は `dist/source/Folimeld_1.0.3.0_arm64.msix-2ecd780f5f075eec9ce657c70a66a3a476a91b98986070f0bfb0936a65d60ad7.json`。両パッケージ揃っており、Partner Center（Submission 3）へ提出可能。
 - **ビルド・事前検査コマンド**:
   ```powershell
   powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
