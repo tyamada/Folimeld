@@ -4,6 +4,12 @@
 
 ## 未リリース
 
+- Windows 11 ARM64（Surface Pro 11等のCopilot+ PC / Snapdragon X Elite）向けに、Folimeld 0.3.7（Desktop版 0.3.7.0）の3つのプレビューパッケージをGitHub Releasesに公開:
+  - **ソース＋uv版（0.3.7）**: `windows-uv-arm64-v0.3.7-preview.1`（`Folimeld-0.3.7-windows-arm64-uv-source-bc5c14d-candidate1.zip`、SHA-256: `59CEA1C9B1BAD141B706EDBC4333558DD52DDBEB658D15D1A19DEE00C5CE5CC3`）。PSF公式署名済み CPython 3.12.10 ARM64 と uv 0.13.8 aarch64 を自動取得・検証し、Smart App Control（SAC）環境下でも安全に動作。
+  - **uv tool install版（0.3.7）**: `windows-uv-tool-arm64-v0.3.7-preview.1`（Pure Python Wheel `folimeld-0.3.7-py3-none-any.whl`、SHA-256: `6404BD488860565051D6D8596934EDBAC8C07B746845D05E29C16D41D912726B`）。CPython 3.12.x 隔離ツール環境で固定依存14件（`requirements-windows-arm64-uv.lock`）と共に導入・実行。
+  - **Desktopインストーラー版（0.3.7.0）**: `windows-desktop-arm64-v0.3.7.0-preview.1`（`Folimeld-Desktop-0.3.7.0-arm64-setup.exe`、約37.8 MB、SHA-256: `EA58DB0103BBCF94E9118B45914F3E6292EEA03E08FAFC254DDDFA258DFCCC36`）。Python・uv事前導入不要のARM64ネイティブ（PE Machine `0xAA64`、ARM64 CRT 14.52.37029.0）ユーザー単位インストーラー。
+  - 日英README、ダウンロード案内、内部台帳、SHA-256一覧、コミット対応記録を同期。
+
 - Microsoft Store 次期リリース（Submission 3 / パッケージ版 1.0.3.0、アプリ版 0.3.7）に向けて、x64 および ARM64 実機環境にて Store 向けネイティブ MSIX パッケージ（`Folimeld_1.0.3.0_x64.msix`、`Folimeld_1.0.3.0_arm64.msix`）をビルドし、静的検査（`msix_preflight` 合格）およびソースバンドル関連付けを完了。公開計画書（`windows-store-release-plan_ja.md`）および受入試験表（`windows-store-acceptance_ja.md`）へ両パッケージのハッシュを記録し、日英スクリーンショットおよびプライバシーポリシー（`docs/privacy/index.html`）を更新。
 
 - FreeBSD 15.1、NetBSD 11.1、OpenBSD 8.0 の amd64 版 0.3.5 パッケージを公開: それぞれ `folimeld-0.3.5_1.pkg`（FreeBSD 15.1 amd64）、`folimeld-0.3.5.tgz`（NetBSD 11.1 amd64）、`folimeld-0.3.5.tgz` および `folimeld-mupdf-1.28.2.tgz`（OpenBSD 8.0 amd64、Signify署名付き）の各配布Releaseを公開し、日英のインストール手順書（`documentation/freebsd-install*.md`、`netbsd-install*.md`、`openbsd-install*.md`）およびREADMEのダウンロード表を更新・同期。

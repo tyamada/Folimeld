@@ -4,6 +4,12 @@
 
 ## Unreleased
 
+- Published three Windows 11 ARM64 (Copilot+ PC / Snapdragon X Elite) preview packages for Folimeld 0.3.7 (Desktop 0.3.7.0) to GitHub Releases:
+  - **Source + uv preview (0.3.7)**: `windows-uv-arm64-v0.3.7-preview.1` (`Folimeld-0.3.7-windows-arm64-uv-source-bc5c14d-candidate1.zip`, SHA-256: `59CEA1C9B1BAD141B706EDBC4333558DD52DDBEB658D15D1A19DEE00C5CE5CC3`). Automatically retrieves and validates PSF-signed CPython 3.12.10 ARM64 and uv 0.13.8 aarch64, operating safely under Smart App Control (SAC).
+  - **uv tool install preview (0.3.7)**: `windows-uv-tool-arm64-v0.3.7-preview.1` (Pure Python Wheel `folimeld-0.3.7-py3-none-any.whl`, SHA-256: `6404BD488860565051D6D8596934EDBAC8C07B746845D05E29C16D41D912726B`). Installs and runs in an isolated `uv tool` CPython 3.12.x environment with 14 pinned dependencies (`requirements-windows-arm64-uv.lock`).
+  - **Desktop installer preview (0.3.7.0)**: `windows-desktop-arm64-v0.3.7.0-preview.1` (`Folimeld-Desktop-0.3.7.0-arm64-setup.exe`, ~37.8 MB, SHA-256: `EA58DB0103BBCF94E9118B45914F3E6292EEA03E08FAFC254DDDFA258DFCCC36`). ARM64 native (PE Machine `0xAA64`, ARM64 CRT 14.52.37029.0) per-user installer requiring no pre-installed Python or uv.
+  - Synchronized bilingual READMEs, download guides, internal manifests, SHA-256 checksums, and source association ledgers.
+
 - For the upcoming Microsoft Store release (Submission 3 / package version 1.0.3.0, app version 0.3.7), built native Store MSIX packages on x64 and ARM64 hardware (`Folimeld_1.0.3.0_x64.msix`, `Folimeld_1.0.3.0_arm64.msix`), passed static checks (`msix_preflight`), completed source bundle association, recorded both candidate package hashes in the release plan (`windows-store-release-plan.md`) and acceptance checklist (`windows-store-acceptance.md`), and updated bilingual screenshots and the privacy policy (`docs/privacy/index.html`).
 
 - Publish 0.3.5 amd64 packages for FreeBSD 15.1, NetBSD 11.1, and OpenBSD 8.0: Published preview Releases for `folimeld-0.3.5_1.pkg` (FreeBSD 15.1 amd64), `folimeld-0.3.5.tgz` (NetBSD 11.1 amd64), and `folimeld-0.3.5.tgz` with `folimeld-mupdf-1.28.2.tgz` (OpenBSD 8.0 amd64, signed with Signify). Synchronized English and Japanese installation guides (`documentation/freebsd-install*.md`, `netbsd-install*.md`, `openbsd-install*.md`) and README download tables.
