@@ -99,7 +99,7 @@ Acceptance plan for Submission 2 (package version `1.0.2.0`), adding native Wind
 
 ## Store candidate 1.0.4.0 preparation and acceptance plan (Submission 3: app 0.3.7 / x64 & ARM64)
 
-Candidate record and acceptance plan for Submission 3 (package version `1.0.4.0`, application display version `0.3.7`), incorporating Folimeld 0.3.7 features (“Open sample PDF…”, PDF close action, and modeless empty-document guidance). Package version was incremented to `1.0.4.0` to avoid colliding with the existing package flight (`Folimeld 1.0.3.0 x64 Thumbnail Fix`). Both x64 and ARM64 candidates were built and preflight-verified on 2026-11-22 from `release/windows-store-v1.0.4.0` (commit `8f6b47c`).
+Candidate record and acceptance plan for Submission 3 (package version `1.0.4.0`, application display version `0.3.7`), incorporating Folimeld 0.3.7 features (“Open sample PDF…”, PDF close action, and modeless empty-document guidance). Package version was incremented to `1.0.4.0` to avoid colliding with the existing package flight (`Folimeld 1.0.3.0 x64 Thumbnail Fix`). Both x64 and ARM64 candidates were built and preflight-verified on 2026-11-22 from `release/windows-store-v1.0.4.0` (commit `8f6b47c`) and submitted to Partner Center (Submission 3 / ID `1152921505702470707`) on the same day (currently in Certification review).
 
 ### Candidate packages and preflight status
 

@@ -94,7 +94,8 @@ Folimeld 0.3.7 の新機能（「サンプルPDFを開く…」「PDFを閉じ�
 - **ビルド・準備状況（2026-11-22 時点）**:
   - リリース用ブランチ `release/windows-store-v1.0.4.0`（コミット `8f6b47c`、アプリ版 `0.3.7`）を確定し、`docs/privacy/index.html` にサンプルPDF取得時の通信仕様を反映済み。
   - `dist/Folimeld_1.0.4.0_x64.msix`（78,990,624 bytes / 約 75.3 MiB、SHA-256: `CD081C96BC0838BFE1B65E59814F29DFF31957D34119F3AF1BE51357A670B6A9`、PE Machine `0x8664`、静的検査 `build/msix-preflight/store/x64/preflight.json` 合格）を生成済み。対応ソース ZIP は `dist/source/Folimeld-source-2fee6f48a3bc5c09ec6e80c142d593c6b2781abc0ad9794912749a80a847450e.zip`、関連付け JSON は `dist/source/Folimeld_1.0.4.0_x64.msix-cd081c96bc0838bfe1b65e59814f29dff31957d34119f3af1be51357a670b6a9.json`。
-  - `dist/Folimeld_1.0.4.0_arm64.msix`（62,377,071 bytes / 約 59.5 MiB、SHA-256: `9597D6F142A4520680BB1C943EC5ABA951549448CB8ADC30728A69379DAF7364`、PE Machine `0xAA64`、静的検査 `build/msix-preflight/store/arm64/preflight.json` 合格）を ARM64 実機で生成済み。関連付け JSON は `dist/source/Folimeld_1.0.4.0_arm64.msix-9597d6f142a4520680bb1c943ec5aba951549448cb8adc30728a69379daf7364.json`。両パッケージ揃っており、Partner Center（Submission 3）へアップロード可能。
+  - `dist/Folimeld_1.0.4.0_arm64.msix`（62,377,071 bytes / 約 59.5 MiB、SHA-256: `9597D6F142A4520680BB1C943EC5ABA951549448CB8ADC30728A69379DAF7364`、PE Machine `0xAA64`、静的検査 `build/msix-preflight/store/arm64/preflight.json` 合格）を ARM64 実機で生成済み。関連付け JSON は `dist/source/Folimeld_1.0.4.0_arm64.msix-9597d6f142a4520680bb1c943ec5aba951549448cb8adc30728a69379daf7364.json`。
+  - **申請状況**: 2026年11月22日に Partner Center（Submission 3 / ID `1152921505702470707`）へ両パッケージ（x64・ARM64）、日英ストア掲載文・スクリーンショット各 6 枚、審査メモを提出完了。現在認定審査（Pre-processing / Certification）中。手動公開設定のため、審査合格後に「Publish now」で公開予定。
 - **ビルド・事前検査コマンド**:
   ```powershell
   powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
