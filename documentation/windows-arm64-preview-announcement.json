@@ -1,14 +1,14 @@
 {
   "account": "tyamada22",
-  "url": "https://x.com/tyamada22/status/2122258997466317031",
-  "displayed_at_jst": "2026-11-16 18:22",
-  "text": "FolimeldのWindows 11 ARM64版を試験公開しました！\n・Desktopインストーラー版\n・ソース＋uv版\n・uv tool install（Wheel）版\n\nDesktop版は未署名です。導入手順・対応ソース・SHA-256は各Releaseへ。\nhttps://github.com/tyamada/Folimeld/releases\n#Folimeld #Windows11 #ARM64",
+  "url": "https://x.com/tyamada22/status/2124355328750055795",
+  "displayed_at_jst": "2026-11-22 13:12",
+  "text": "FolimeldのWindows 11 ARM64版 0.3.7プレビューを公開しました！\n・Desktopインストーラー版（0.3.7.0）\n・ソース＋uv版\n・uv tool install（Wheel）版\n\nDesktop版は未署名です。導入手順・対応ソース・SHA-256は各Releaseへ。\nhttps://github.com/tyamada/Folimeld/releases\n#Folimeld #Windows11 #ARM64",
   "release_url": "https://github.com/tyamada/Folimeld/releases",
   "target_releases": [
-    "https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.5-preview.1",
-    "https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.5-preview.1",
-    "https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1"
+    "https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.7-preview.1",
+    "https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.7-preview.1",
+    "https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.7.0-preview.1"
   ],
-  "reference_post": "https://x.com/tyamada22/status/2122192436277735626",
+  "reference_post": "https://x.com/tyamada22/status/2122258997466317031",
   "public_text_release_card_and_timestamp_verified": true
 }

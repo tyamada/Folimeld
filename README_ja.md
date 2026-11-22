@@ -50,9 +50,9 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | Windows 11 | x64 | Desktop インストーラー / 0.3.7.0（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1) |
 | Windows 11 | x64 | ソース＋uv / 0.3.7（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.7-preview.1) |
 | Windows 11 | x64 | uv tool install (Wheel) / 0.3.7 preview.1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1) |
-| Windows 11 | arm64 | Desktop インストーラー / 0.3.5.0（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1) |
-| Windows 11 | arm64 | ソース＋uv / 0.3.5（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.5-preview.1) |
-| Windows 11 | arm64 | uv tool install (Wheel) / 0.3.5（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.5-preview.1) |
+| Windows 11 | arm64 | Desktop インストーラー / 0.3.7.0（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.7.0-preview.1) |
+| Windows 11 | arm64 | ソース＋uv / 0.3.7（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.7-preview.1) |
+| Windows 11 | arm64 | uv tool install (Wheel) / 0.3.7 preview.1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.7-preview.1) |
 | macOS 15以降 | Apple Silicon（arm64） | Homebrew / 0.3.7（ソース配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.7) |
 | Ubuntu 24.04.5 / Debian 13.7（ARM64 VMで検証） | arm64 | DEB / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.7) |
 | Ubuntu 24.04.5（ARM64 VMでビルド） | arm64 | strict Snap / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.7) |
@@ -91,10 +91,10 @@ Windows 11版の標準配布経路はMicrosoft Storeです。Store向けMSIXの�
 
 ### Windows 11 ソース＋uv版プレビュー（x64 / ARM64）
 
-[**Folimeld 0.3.7 Windows x64 uv版プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.7-preview.1) および [**Folimeld 0.3.5 Windows ARM64 uv版プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.5-preview.1) を追加の配布経路として公開しています。Microsoft Store配布は引き続き標準のWindows配布経路です。このプレビューはMSIXや単独EXEではありません。旧x64 [0.3.5プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) も引き続き入手できます。
+[**Folimeld 0.3.7 Windows x64 uv版プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.7-preview.1) および [**Folimeld 0.3.7 Windows ARM64 uv版プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.7-preview.1) を追加の配布経路として公開しています。Microsoft Store配布は引き続き標準のWindows配布経路です。このプレビューはMSIXや単独EXEではありません。旧x64 [0.3.5プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.5-preview.1) や旧ARM64 [0.3.5プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.5-preview.1) も引き続き入手できます。
 
 - **x64版**: [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.7-preview.1/Folimeld-0.3.7-windows-x64-uv-source-6841276-candidate1.zip) · [内部台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.7-preview.1/source-manifest.json) · [コミット対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.7-preview.1/SOURCE-ASSOCIATION.txt) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.7-preview.1/SHA256SUMS.txt)
-- **ARM64版**: [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.5-preview.1/Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip) · [内部台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.5-preview.1/source-manifest.json) · [コミット対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.5-preview.1/SOURCE-ASSOCIATION.txt) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.5-preview.1/SHA256SUMS.txt)
+- **ARM64版**: [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.7-preview.1/Folimeld-0.3.7-windows-arm64-uv-source-bc5c14d-candidate1.zip) · [内部台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.7-preview.1/source-manifest.json) · [コミット対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.7-preview.1/SOURCE-ASSOCIATION.txt) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.7-preview.1/SHA256SUMS.txt)
 - 専用フォルダーの `.venv` と `.uv-runtime` を使用し、設定・ログは `%LOCALAPPDATA%\Folimeld-UV` へ分離保存されます。詳細とライセンス情報は各Release本文と[同梱手順書](documentation/windows-uv-source_ja.md)を参照してください。
 
 #### 1. 事前準備
@@ -114,7 +114,7 @@ Windows 11版の標準配布経路はMicrosoft Storeです。Store向けMSIXの�
 ご利用のPCのアーキテクチャ（x64 または ARM64）に応じたZIPアーカイブをダウンロードします（例: `$HOME\Downloads`）：
 
 - **x64版**: [**Folimeld-0.3.7-windows-x64-uv-source-6841276-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-v0.3.7-preview.1/Folimeld-0.3.7-windows-x64-uv-source-6841276-candidate1.zip)（SHA-256: `1B1C91F5E9346CD5C4E66D9A9353C3E79D970F349C35DF18ABD3E25055449747`）
-- **ARM64版**: [**Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.5-preview.1/Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip)（SHA-256: `F362A5431D89FC633C852149E0ECD219C22BDAAD07A92229CF7193DBF5E56B72`）
+- **ARM64版**: [**Folimeld-0.3.7-windows-arm64-uv-source-bc5c14d-candidate1.zip**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-arm64-v0.3.7-preview.1/Folimeld-0.3.7-windows-arm64-uv-source-bc5c14d-candidate1.zip)（SHA-256: `59CEA1C9B1BAD141B706EDBC4333558DD52DDBEB658D15D1A19DEE00C5CE5CC3`）
 
 #### 3. 展開場所とインストール（SHA-256照合と未署名スクリプトのブロック解除）
 
@@ -125,9 +125,9 @@ $ErrorActionPreference = 'Stop'
 
 # アーキテクチャに応じたファイルと期待ハッシュを選択
 if ([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture -match 'Arm64') {
-    $zip = Join-Path $HOME 'Downloads\Folimeld-0.3.5-windows-arm64-uv-source-454735d-candidate1.zip'
-    $expected = 'F362A5431D89FC633C852149E0ECD219C22BDAAD07A92229CF7193DBF5E56B72'
-    $destination = Join-Path $HOME 'Folimeld-uv-0.3.5'
+    $zip = Join-Path $HOME 'Downloads\Folimeld-0.3.7-windows-arm64-uv-source-bc5c14d-candidate1.zip'
+    $expected = '59CEA1C9B1BAD141B706EDBC4333558DD52DDBEB658D15D1A19DEE00C5CE5CC3'
+    $destination = Join-Path $HOME 'Folimeld-uv-0.3.7'
 } else {
     $zip = Join-Path $HOME 'Downloads\Folimeld-0.3.7-windows-x64-uv-source-6841276-candidate1.zip'
     $expected = '1B1C91F5E9346CD5C4E66D9A9353C3E79D970F349C35DF18ABD3E25055449747'
@@ -172,17 +172,17 @@ SHA-256不一致では展開・実行せず停止します。照合したZIPを�
 
 ### Windows 11 uv tool install 版プレビュー（Pure Python Wheel / x64・ARM64）
 
-[**Folimeld 0.3.7 preview.1 Windows x64 uv tool install 版プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1) および [**Folimeld 0.3.5 Windows ARM64 uv tool install 版プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.5-preview.1) を、Microsoft Store版・Desktop版・既存のソース＋uv版とは独立した追加経路として公開しています。GitHub Releasesで配布するPure Python Wheel（`folimeld-<version>-py3-none-any.whl`）を`uv tool install`で隔離ツール環境へ導入します。詳細は[uv tool install版仕様・導入手順](documentation/windows-uv-tool_ja.md)を参照してください。
+[**Folimeld 0.3.7 preview.1 Windows x64 uv tool install 版プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1) および [**Folimeld 0.3.7 preview.1 Windows ARM64 uv tool install 版プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.7-preview.1) を、Microsoft Store版・Desktop版・既存のソース＋uv版とは独立した追加経路として公開しています。GitHub Releasesで配布するPure Python Wheel（`folimeld-<version>-py3-none-any.whl`）を`uv tool install`で隔離ツール環境へ導入します。詳細は[uv tool install版仕様・導入手順](documentation/windows-uv-tool_ja.md)を参照してください。
 
-**x64 0.3.7 preview.1（2026年11月21日公開）** は、ファイルメニューまたはPDF未読込時の案内の「サンプルPDFを開く…」から、サンプルPDFマンガを1冊ずつ取得できます。言語フィルター（初期値はアプリ／システム言語）、最新話から／1話からの表示順、著作権・CC BY 4.0の表示に対応し、取得したPDFのSHA-256を検証して編集用の作業コピーを開きます。PDF本体は同梱せず、初回取得には通信が必要です。[ブラウザーでサンプルPDF集約ページを開く](https://tyamada.github.io/manga-prompt-kit/samples/ja/)こともできます。
+**0.3.7 preview.1（2026年11月公開）** は、ファイルメニューまたはPDF未読込時の案内の「サンプルPDFを開く…」から、サンプルPDFマンガを1冊ずつ取得できます。言語フィルター（初期値はアプリ／システム言語）、最新話から／1話からの表示順、著作権・CC BY 4.0の表示に対応し、取得したPDFのSHA-256を検証して編集用の作業コピーを開きます。PDF本体は同梱せず、初回取得には通信が必要です。[ブラウザーでサンプルPDF集約ページを開く](https://tyamada.github.io/manga-prompt-kit/samples/ja/)こともできます。
 
-通常利用には引き続きMicrosoft Store版を推奨します。**Store版1.0.1.0にはこの取得機能は含まれず、今回の公開はStore版の更新ではありません。** ARM64の案内は0.3.5のままです。x64 0.3.7では新規導入・オンライン一覧・日本語マンガ1冊の取得／検証・8ページ表示・別名保存・再読込・終了を確認し、公開10ファイルのサイズ・SHA-256も再取得して照合済みです。新候補での3ワーカー実機PID観測、更新／旧版復帰、Store版との併存、複数倍率、ARM64は未確認です。
+通常利用には引き続きMicrosoft Store版を推奨します。**Store版1.0.1.0にはこの取得機能は含まれず、今回の公開はStore版の更新ではありません。** x64およびARM64 0.3.7では新規導入・オンライン一覧・日本語マンガ1冊の取得／検証・8ページ表示・別名保存・再読込・終了を確認し、公開ファイルのサイズ・SHA-256も再取得して照合済みです。新候補での3ワーカー実機PID観測、更新／旧版復帰、Store版との併存、複数倍率は未確認です。
 
-旧x64 [0.3.5 preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1) と [0.3.6 preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.6-preview.1) も引き続き入手できます。リンク先のuv tool版仕様・導入手順には旧0.3.5の記録が含まれるため、x64 0.3.7のファイル名・ハッシュ・導入コマンドは本節または0.3.7のReleaseを参照してください。
+旧x64 [0.3.5 preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.5-preview.1) と [0.3.6 preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.6-preview.1)、旧ARM64 [0.3.5 preview.1](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.5-preview.1) も引き続き入手できます。リンク先のuv tool版仕様・導入手順には旧0.3.5の記録が含まれるため、0.3.7のファイル名・ハッシュ・導入コマンドは本節または0.3.7のReleaseを参照してください。
 
 
 - **x64版**: [Pure Python Wheel](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/folimeld-0.3.7-py3-none-any.whl) · [依存ロック](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/requirements-windows-uv.lock) · [ランタイム定義](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/windows-uv-runtime.json) · [対応ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/Folimeld-0.3.7-windows-x64-uv-tool-source.zip) · [内部台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/source-manifest.json) · [コミット対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/SOURCE-ASSOCIATION.txt) · [第三者告知](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/THIRD-PARTY-NOTICES.txt) · [依存ソース台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/DEPENDENCY-SOURCES.json) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/SHA256SUMS.txt)
-- **ARM64版**: [Pure Python Wheel](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/folimeld-0.3.5-py3-none-any.whl) · [依存ロック](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/requirements-windows-arm64-uv.lock) · [ランタイム定義](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/windows-arm64-uv-runtime.json) · [対応ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/Folimeld-0.3.5-windows-arm64-uv-tool-source.zip) · [内部台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/source-manifest.json) · [コミット対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/SOURCE-ASSOCIATION.txt) · [第三者告知](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/THIRD-PARTY-NOTICES.txt) · [依存ソース台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/DEPENDENCY-SOURCES.json) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/SHA256SUMS.txt)
+- **ARM64版**: [Pure Python Wheel](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.7-preview.1/folimeld-0.3.7-py3-none-any.whl) · [依存ロック](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.7-preview.1/requirements-windows-arm64-uv.lock) · [ランタイム定義](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.7-preview.1/windows-arm64-uv-runtime.json) · [対応ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.7-preview.1/Folimeld-0.3.7-windows-arm64-uv-tool-source.zip) · [内部台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.7-preview.1/source-manifest.json) · [コミット対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.7-preview.1/SOURCE-ASSOCIATION.txt) · [第三者告知](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.7-preview.1/THIRD-PARTY-NOTICES.txt) · [依存ソース台帳](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.7-preview.1/DEPENDENCY-SOURCES.json) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.7-preview.1/SHA256SUMS.txt)
 - CPython 3.12.x（マイナー一致）と固定ランタイム依存14件（ロックファイルのSHA-256ハッシュ照合付き）を要求します。
 - 設定とログは`%LOCALAPPDATA%/Folimeld-UV-Tool`へ保存し、Store版・Desktop版（`Folimeld-Desktop`）・ソース＋uv版（`Folimeld-UV`）の設定やレジストリ関連付けを変更しません。多重起動防止には`Local\Folimeld-UV-Tool` Mutexを使用します。
 
@@ -202,12 +202,12 @@ uv --version
 
 次の**2ファイルを同じフォルダー**（例: Downloads）へ保存してください。
 
-1. **アプリ本体のPure Python Wheel** — x64は `folimeld-0.3.7-py3-none-any.whl`、ARM64は `folimeld-0.3.5-py3-none-any.whl`。
+1. **アプリ本体のPure Python Wheel** — x64・ARM64ともに `folimeld-0.3.7-py3-none-any.whl`。
    - x64 Release: [folimeld-0.3.7-py3-none-any.whl](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/folimeld-0.3.7-py3-none-any.whl)（SHA-256: `9438F033436BDB1B73A1B377934BB1F88F1ED2109948F71C81BC30D8083C5E21`）
-   - ARM64 Release: [folimeld-0.3.5-py3-none-any.whl](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/folimeld-0.3.5-py3-none-any.whl)（SHA-256: `FF06269C5BFC4A53B7BF5B673B48B3CC267744F757F771E29619785CD1150B4E`）
+   - ARM64 Release: [folimeld-0.3.7-py3-none-any.whl](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.7-preview.1/folimeld-0.3.7-py3-none-any.whl)（SHA-256: `6404BD488860565051D6D8596934EDBAC8C07B746845D05E29C16D41D912726B`）
 2. **依存ロックファイル** — 依存14パッケージの版と各アーキテクチャ用wheelのSHA-256を記録した固定入力。
    - x64用: [**requirements-windows-uv.lock**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-v0.3.7-preview.1/requirements-windows-uv.lock)（SHA-256: `7E994B4C231536FB5C53D79959761BC426BD9FF9585B578165F1FD67EC19077F`）
-   - ARM64用: [**requirements-windows-arm64-uv.lock**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.5-preview.1/requirements-windows-arm64-uv.lock)（SHA-256: `B30019EC8BB3DDD9C15CEBB093432CD309566A6792B3EBCCDE821964B5054B67`）
+   - ARM64用: [**requirements-windows-arm64-uv.lock**](https://github.com/tyamada/Folimeld/releases/download/windows-uv-tool-arm64-v0.3.7-preview.1/requirements-windows-arm64-uv.lock)（SHA-256: `B30019EC8BB3DDD9C15CEBB093432CD309566A6792B3EBCCDE821964B5054B67`）
 
 #### 3. 実行場所と保存先
 
@@ -240,13 +240,13 @@ Set-Location -LiteralPath (Join-Path $HOME 'Downloads')
 
 # アーキテクチャに応じたSHA-256照合と導入
 if ([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture -match 'Arm64') {
-    if ((Get-FileHash -LiteralPath .\folimeld-0.3.5-py3-none-any.whl -Algorithm SHA256).Hash -ne 'FF06269C5BFC4A53B7BF5B673B48B3CC267744F757F771E29619785CD1150B4E') {
+    if ((Get-FileHash -LiteralPath .\folimeld-0.3.7-py3-none-any.whl -Algorithm SHA256).Hash -ne '6404BD488860565051D6D8596934EDBAC8C07B746845D05E29C16D41D912726B') {
         throw 'Wheel SHA-256 mismatch.'
     }
     if ((Get-FileHash -LiteralPath .\requirements-windows-arm64-uv.lock -Algorithm SHA256).Hash -ne 'B30019EC8BB3DDD9C15CEBB093432CD309566A6792B3EBCCDE821964B5054B67') {
         throw 'Lock SHA-256 mismatch.'
     }
-    uv tool install --python 3.12 --with-requirements .\requirements-windows-arm64-uv.lock --no-build .\folimeld-0.3.5-py3-none-any.whl
+    uv tool install --python 3.12 --with-requirements .\requirements-windows-arm64-uv.lock --no-build .\folimeld-0.3.7-py3-none-any.whl
 } else {
     if ((Get-FileHash -LiteralPath .\folimeld-0.3.7-py3-none-any.whl -Algorithm SHA256).Hash -ne '9438F033436BDB1B73A1B377934BB1F88F1ED2109948F71C81BC30D8083C5E21') {
         throw 'Wheel SHA-256 mismatch.'
@@ -279,10 +279,10 @@ folimeld-console
 
 ### Windows 11 Desktop インストーラー版プレビュー（PyInstaller onedir + Inno Setup / x64・ARM64）
 
-Python・uv・PowerShellの事前導入を不要としたユーザー単位インストーラー [**Folimeld 0.3.7.0 Windows x64 Desktop プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1) および [**Folimeld 0.3.5.0 Windows ARM64 Desktop プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1) を試験公開しています。Microsoft Store配布は引き続き標準のWindows配布経路として維持し、Store版・ソース＋uv版・`uv tool install`版とは導入先・設定・ログ・Mutexを分離しています。旧x64 [0.3.5.0プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) も引き続き入手できます。詳細は[Desktop版仕様・検証記録](documentation/windows-desktop-build_ja.md)と[版別ソース案内](documentation/windows-desktop-sources_ja.md)を参照してください。
+Python・uv・PowerShellの事前導入を不要としたユーザー単位インストーラー [**Folimeld 0.3.7.0 Windows x64 Desktop プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1) および [**Folimeld 0.3.7.0 Windows ARM64 Desktop プレビュー**](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.7.0-preview.1) を試験公開しています。Microsoft Store配布は引き続き標準のWindows配布経路として維持し、Store版・ソース＋uv版・`uv tool install`版とは導入先・設定・ログ・Mutexを分離しています。旧x64 [0.3.5.0プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.5.0-preview.1) や旧ARM64 [0.3.5.0プレビュー](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1) も引き続き入手できます。詳細は[Desktop版仕様・検証記録](documentation/windows-desktop-build_ja.md)と[版別ソース案内](documentation/windows-desktop-sources_ja.md)を参照してください。
 
 - **x64版**: [Setup EXE](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/Folimeld-Desktop-0.3.7.0-x64-setup.exe) · [対応ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/Folimeld-0.3.7.0-windows-x64-desktop-source.zip) · [ペイロード台帳](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/payload-review.json) · [内部ソース台帳](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/source-manifest.json) · [コミット対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/SOURCE-ASSOCIATION.txt) · [第三者告知](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/THIRD-PARTY-NOTICES.txt) · [依存ソース台帳](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/DEPENDENCY-SOURCES.json) · [CRT利用者告知](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/CRT-USER-NOTICE_ja.txt) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/SHA256SUMS.txt)
-- **ARM64版**: [Setup EXE](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-arm64-setup.exe) · [対応ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/Folimeld-0.3.5.0-windows-arm64-desktop-source.zip) · [ペイロード台帳](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/payload-review.json) · [内部ソース台帳](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/source-manifest.json) · [コミット対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/SOURCE-ASSOCIATION.txt) · [第三者告知](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/THIRD-PARTY-NOTICES.txt) · [依存ソース台帳](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/DEPENDENCY-SOURCES.json) · [CRT利用者告知](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/CRT-USER-NOTICE_ja.txt) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/SHA256SUMS.txt)
+- **ARM64版**: [Setup EXE](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.7.0-preview.1/Folimeld-Desktop-0.3.7.0-arm64-setup.exe) · [対応ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.7.0-preview.1/Folimeld-0.3.7.0-windows-arm64-desktop-source.zip) · [ペイロード台帳](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.7.0-preview.1/payload-review.json) · [内部ソース台帳](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.7.0-preview.1/source-manifest.json) · [コミット対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.7.0-preview.1/SOURCE-ASSOCIATION.txt) · [第三者告知](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.7.0-preview.1/THIRD-PARTY-NOTICES.txt) · [依存ソース台帳](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.7.0-preview.1/DEPENDENCY-SOURCES.json) · [CRT利用者告知](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.7.0-preview.1/CRT-USER-NOTICE_ja.txt) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.7.0-preview.1/SHA256SUMS.txt)
 
 #### 1. 事前準備
 
@@ -297,7 +297,7 @@ Python・uv・PowerShellの事前導入を不要としたユーザー単位イ�
 ご利用のPCのアーキテクチャに応じたインストーラーをダウンロードします（例: `$HOME\Downloads`）：
 
 - **x64版**: [**Folimeld-Desktop-0.3.7.0-x64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-v0.3.7.0-preview.1/Folimeld-Desktop-0.3.7.0-x64-setup.exe)（約47.6 MiB、SHA-256: `61FACDA4B930738AF3839472750D7913790003BC10BA89C8626AE33A1ECE4A01`）
-- **ARM64版**: [**Folimeld-Desktop-0.3.5.0-arm64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.5.0-preview.1/Folimeld-Desktop-0.3.5.0-arm64-setup.exe)（約37.7 MB、SHA-256: `D19DB07CDD56D5A72C12879CA2BFB5E126AD7532E3F431E2C07413279727633C`）
+- **ARM64版**: [**Folimeld-Desktop-0.3.7.0-arm64-setup.exe**](https://github.com/tyamada/Folimeld/releases/download/windows-desktop-arm64-v0.3.7.0-preview.1/Folimeld-Desktop-0.3.7.0-arm64-setup.exe)（約37.8 MB、SHA-256: `EA58DB0103BBCF94E9118B45914F3E6292EEA03E08FAFC254DDDFA258DFCCC36`）
 
 #### 3. SHA-256照合とインストール手順
 
@@ -308,8 +308,8 @@ Python・uv・PowerShellの事前導入を不要としたユーザー単位イ�
    Set-Location -LiteralPath (Join-Path $HOME 'Downloads')
 
    if ([System.Runtime.InteropServices.RuntimeInformation]::ProcessArchitecture -match 'Arm64') {
-       $file = '.\Folimeld-Desktop-0.3.5.0-arm64-setup.exe'
-       $expected = 'D19DB07CDD56D5A72C12879CA2BFB5E126AD7532E3F431E2C07413279727633C'
+       $file = '.\Folimeld-Desktop-0.3.7.0-arm64-setup.exe'
+       $expected = 'EA58DB0103BBCF94E9118B45914F3E6292EEA03E08FAFC254DDDFA258DFCCC36'
    } else {
        $file = '.\Folimeld-Desktop-0.3.7.0-x64-setup.exe'
        $expected = '61FACDA4B930738AF3839472750D7913790003BC10BA89C8626AE33A1ECE4A01'
@@ -328,7 +328,7 @@ Python・uv・PowerShellの事前導入を不要としたユーザー単位イ�
    > - ブロック通知を完全に回避したい場合は、PSF公式署名済みCPythonを使用する **[ソース＋uv版](#windows-11-ソースuv版プレビューx64--arm64)** または **[uv tool install版](#windows-11-uv-tool-install-版プレビューpure-python-wheel--x64arm64)** をご利用ください。
 3. **ウィザードの進行**:
    - **同意画面**: 表示される英語原文ライセンスは同梱の Microsoft Visual C++ Runtime（x64: `14.44.35211.0` / ARM64: `14.52.37029.0`）のみに適用されます。「同意する」を選択して「次へ」をクリックします（Folimeld本体はAGPL-3.0、各OSSの告知は導入後の `_internal\licenses\` に収録）。
-   - **インストール先**: 既定では管理者不要の `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\<版>`（x64: `0.3.7.0` / ARM64: `0.3.5.0`）へ導入されます。通常はそのまま「次へ」をクリックします。
+   - **インストール先**: 既定では管理者不要の `%LOCALAPPDATA%\Programs\Folimeld-Desktop\versions\<版>`（x64: `0.3.7.0` / ARM64: `0.3.7.0`）へ導入されます。通常はそのまま「次へ」をクリックします。
    - **追加タスク**: 必要に応じてデスクトップショートカット作成を選択し、「インストール」をクリックして完了させます（終了時の自動起動はしません）。
 
 #### 4. 起動とデータ保存先
@@ -406,7 +406,7 @@ Debian 13ではUbuntu版と同じdebパッケージを使用します。最小�
 
 ### Ubuntu／Debian ARM64 DEB 0.3.5試験版
 
-[**0.3.5 ARM64 DEB**](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5)を公開しました。Ubuntu 24.04.5／Debian 13.7 ARM64の一般ユーザーXorgで回転・Undo/Redo・移動・白紙挿入/削除・別名保存・日本語名の再読込・画像変換/保存・正常終了、削除再導入と文書/設定保持を今回確認。保存PDFの内部照合、ARM64の409テスト合格（9 skip）、最小Ubuntu環境での起動、同一VMの別ビルド先でDEBのバイト一致も確認しています。961ソース入力と210 AArch64実体の対応資料、全16添付の公開後再ダウンロード照合を提供します。日本語IME・Wayland・実機ARM・暗号化/フォームGUIは今回未再試験。既存公開物とlatestは保持しています。[検証・制約](documentation/linux-deb-arm64-035-validation_ja.md)。
+[**0.3.7 ARM64 DEB**](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.7)を公開しました（[検証記録](documentation/linux-arm64-037-verification.txt)）。旧版 [**0.3.5 ARM64 DEB**](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5) も引き続き入手できます。Ubuntu 24.04.5／Debian 13.7 ARM64の一般ユーザーXorgで回転・Undo/Redo・移動・白紙挿入/削除・別名保存・日本語名の再読込・画像変換/保存・正常終了、削除再導入と文書/設定保持を今回確認。保存PDFの内部照合、ARM64の409テスト合格（9 skip）、最小Ubuntu環境での起動、同一VMの別ビルド先でDEBのバイト一致も確認しています。961ソース入力と210 AArch64実体の対応資料、全16添付の公開後再ダウンロード照合を提供します。日本語IME・Wayland・実機ARM・暗号化/フォームGUIは今回未再試験。既存公開物とlatestは保持しています。[検証・制約](documentation/linux-deb-arm64-035-validation_ja.md)。
 
 ```bash
 sudo apt install ./folimeld_0.3.5_arm64.deb
@@ -418,7 +418,7 @@ sudo apt install ./folimeld_0.3.5_arm64.deb
 
 ### Ubuntu ARM64 strict Snap 0.3.5試験版
 
-[**0.3.5 ARM64 strict Snap**](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5)を公開しました。Ubuntu24.04.5 ARM64の一般ユーザーXorgで主要PDF編集・保存・日本語名再読込・画像変換/保存・正常終了、旧版更新と同一候補再導入・文書/設定保持を確認。実行中と再導入後のAppArmor enforce・Seccomp2、通常文書の読込成功と合成の隠しホーム/未接続媒体への読込拒否も記録しました。同一VMの別ビルド先でSnap一致、968ソース入力と内部210/外側11 AArch64実体の対応、全16添付の公開後再取得を照合済みです。Snap Store署名のないGitHub配布で、外部content/base Snapをsnapdから取得します。完全削除再導入・IME・Wayland・実機ARM等は今回未検証。[検証・制約](documentation/linux-snap-arm64-035-validation_ja.md)。
+[**0.3.7 ARM64 strict Snap**](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.7)を公開しました（[検証記録](documentation/linux-arm64-037-verification.txt)）。旧版 [**0.3.5 ARM64 strict Snap**](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5) も引き続き入手できます。Ubuntu24.04.5 ARM64の一般ユーザーXorgで主要PDF編集・保存・日本語名再読込・画像変換/保存・正常終了、旧版更新と同一候補再導入・文書/設定保持を確認。実行中と再導入後のAppArmor enforce・Seccomp2、通常文書の読込成功と合成の隠しホーム/未接続媒体への読込拒否も記録しました。同一VMの別ビルド先でSnap一致、968ソース入力と内部210/外側11 AArch64実体の対応、全16添付の公開後再取得を照合済みです。Snap Store署名のないGitHub配布で、外部content/base Snapをsnapdから取得します。完全削除再導入・IME・Wayland・実機ARM等は今回未検証。[検証・制約](documentation/linux-snap-arm64-035-validation_ja.md)。
 
 ```bash
 sudo snap install --dangerous ./folimeld_0.3.5_arm64.snap
