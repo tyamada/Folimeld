@@ -24,7 +24,18 @@
 - Preserve the language-switch links in both files. If you change shared factual content in `CHANGELOG.md`, update `CHANGELOG_ja.md` as well. English-only wording corrections do not require a Japanese change.
 - Before finishing, review both files for semantic consistency and check that their relative links resolve. These instructions govern agent edits; they do not install a background translation service for manual edits.
 
-## Push, CI, and release announcements
+## GitHub Actions CI resolution on push
 
-- After pushing commits to GitHub, check the triggered GitHub Actions CI runs and resolve any CI errors before finishing the task.
-- When publishing a package or release, confirm that the pushed release and its published packages are live and verified, then post a release announcement to X (`@tyamada22`).
+- Whenever you push commits to GitHub, verify that the GitHub Actions CI runs (`Checks`) succeed for the pushed branch.
+- If any CI jobs or workflow checks fail (e.g., `ruff`, `mypy`, `pytest`), investigate the failure reasons, fix the errors, and push the resolution until CI passes.
+- Run tests and static checks locally before pushing whenever modifying code, tests, dependencies, or configuration to prevent CI failures.
+
+## Publication announcements on X (tyamada22)
+
+- After pushing, once package publication has been confirmed (e.g., GitHub Releases, Microsoft Store, or distribution package releases), post a publication announcement on X (`tyamada22`).
+- Refer to previous release announcement posts for structure, tone, version information, and release links.
+
+## Built MSIX package storage on Google Drive
+
+- Built MSIX packages are not committed or pushed to GitHub repository branches.
+- Upload generated MSIX packages (e.g., `dist/Folimeld_*.msix`) to Google Drive (`fuzzykaren@gmail.com`) for distribution, testing, and submission.
