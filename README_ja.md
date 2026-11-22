@@ -1,5 +1,7 @@
 # Folimeld
 
+公開状況・X案内の確認結果（2026-11-23）は[公開準備記録](documentation/publication-status-20261123_ja.md)を参照してください。既存の保留事項は維持しています。
+
 [English](README.md) | [日本語](README_ja.md)
 
 [ホームページ](https://tyamada.github.io/Folimeld/index_ja.html)

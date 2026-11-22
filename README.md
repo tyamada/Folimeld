@@ -1,5 +1,7 @@
 # Folimeld
 
+See the [publication and X announcement record (Japanese)](documentation/publication-status-20261123_ja.md) for the November 23, 2026 checks. Existing pending work remains pending.
+
 [English](README.md) | [日本語](README_ja.md)
 
 [Homepage](https://tyamada.github.io/Folimeld/)
