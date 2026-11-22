@@ -1,0 +1,12 @@
+OS: Ubuntu 24.04 aarch64 (Linux 6.8.0-147-generic, glibc 2.39)
+Python: 3.12.3 (PyInstaller 6.22.2)
+Source ZIP: Folimeld-source-f63ea6dffbeb2c2068bf18128dec04e10a0b588f8bfaa5073c2beb6e8961af4b.zip
+DEB package: folimeld_0.3.7_arm64.deb (SHA-256: f45283f39085a0c5c727d468bbb50ba6cdf448c33d9e700b7057f56698ca8c4d)
+Snap package: folimeld_0.3.7_arm64.snap (SHA-256: 2cf1d04142fd8c5f668fd5d1c685103c3d64be811690a2dd07cc64021de1449e)
+
+Verification:
+- Built standalone onefile binary via PyInstaller 6.22.2 with Folimeld-linux.spec
+- Packed folimeld_0.3.7_arm64.deb via dpkg-deb --root-owner-group
+- Packed folimeld_0.3.7_arm64.snap (core24 strict confinement) via mksquashfs
+- Verified DEB installation (`dpkg -i`, `dpkg-query` -> `folimeld 0.3.7 arm64`)
+- Verified offscreen GUI launch (`QT_QPA_PLATFORM=offscreen /usr/bin/folimeld` -> DEB_LAUNCH_OK)

@@ -4,6 +4,14 @@
 
 ## Unreleased
 
+- Updated and published 0.3.7 packages for macOS Homebrew, ARM64 BSDs (FreeBSD 15.1 aarch64, NetBSD 11.1 aarch64, OpenBSD 8.0 arm64), and Ubuntu / Debian ARM64 (DEB and strict Snap):
+  - **macOS Homebrew (`macos-source-v0.3.7`)**: Published `folimeld-0.3.7-source.tar.gz` and updated `Formula/folimeld.rb` in `tyamada/homebrew-tap` to 0.3.7. Verified `brew install --build-from-source`, `brew test`, `pip check`, and active Sponsors menu with `distribution="homebrew"` ([verification record](documentation/macos-homebrew-037-verification.txt)).
+  - **FreeBSD 15.1 aarch64 (`freebsd-aarch64-v0.3.7_1`)**: Built and published `folimeld-0.3.7_1.pkg`; verified `pkg add -f`, offscreen GUI launch, PyMuPDF 1.28.2, and active Sponsors menu ([verification record](documentation/freebsd-151-aarch64-037-verification.txt)).
+  - **OpenBSD 8.0 arm64 (`openbsd-aarch64-v0.3.7`)**: Built, Signify-signed, and published `folimeld-0.3.7.tgz` and `folimeld-mupdf-1.28.2.tgz`; verified signature-checked `pkg_add`, offscreen GUI launch, and active Sponsors menu ([verification record](documentation/openbsd-80-arm64-037-verification.txt)).
+  - **NetBSD 11.1 aarch64 (`netbsd-aarch64-v0.3.7`)**: Built and published `folimeld-0.3.7.tgz`; verified `/usr/pkg/sbin/pkg_add -u`, offscreen GUI launch, and active Sponsors menu ([verification record](documentation/netbsd-111-aarch64-037-verification.txt)).
+  - **Ubuntu / Debian ARM64 (`linux-deb-arm64-v0.3.7` / `linux-snap-arm64-v0.3.7`)**: Built and published `folimeld_0.3.7_arm64.deb` and `folimeld_0.3.7_arm64.snap` on an Ubuntu 24.04 ARM64 VM; verified DEB installation and offscreen startup ([verification record](documentation/linux-arm64-037-verification.txt)).
+  - Synchronized version numbers and release links across bilingual READMEs (`README_ja.md` / `README.md`) and GitHub Pages (`docs/`).
+
 - For the upcoming Microsoft Store release (Submission 3 / package version 1.0.4.0, app version 0.3.7), built native Store MSIX packages on x64 and ARM64 hardware (`Folimeld_1.0.4.0_x64.msix`, `Folimeld_1.0.4.0_arm64.msix`), passed static checks (`msix_preflight`), completed source bundle association, recorded both candidate package hashes in the release plan (`windows-store-release-plan.md`) and acceptance checklist (`windows-store-acceptance.md`), updated bilingual screenshots and the privacy policy (`docs/privacy/index.html`), and submitted Submission 3 to Partner Center for Certification review on 2026-11-22.
 
 - Publish 0.3.5 amd64 packages for FreeBSD 15.1, NetBSD 11.1, and OpenBSD 8.0: Published preview Releases for `folimeld-0.3.5_1.pkg` (FreeBSD 15.1 amd64), `folimeld-0.3.5.tgz` (NetBSD 11.1 amd64), and `folimeld-0.3.5.tgz` with `folimeld-mupdf-1.28.2.tgz` (OpenBSD 8.0 amd64, signed with Signify). Synchronized English and Japanese installation guides (`documentation/freebsd-install*.md`, `netbsd-install*.md`, `openbsd-install*.md`) and README download tables.

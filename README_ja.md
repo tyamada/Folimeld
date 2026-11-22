@@ -53,9 +53,9 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | Windows 11 | arm64 | Desktop インストーラー / 0.3.5.0（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.5.0-preview.1) |
 | Windows 11 | arm64 | ソース＋uv / 0.3.5（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.5-preview.1) |
 | Windows 11 | arm64 | uv tool install (Wheel) / 0.3.5（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.5-preview.1) |
-| macOS 15以降 | Apple Silicon（arm64） | Homebrew / 0.3.5（ソース配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.5) |
-| Ubuntu 24.04.5 / Debian 13.7（ARM64 VMのXorgで検証） | arm64 | DEB / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5) |
-| Ubuntu 24.04.5（ARM64 VMのXorgで検証） | arm64 | strict Snap / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.5) |
+| macOS 15以降 | Apple Silicon（arm64） | Homebrew / 0.3.7（ソース配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.7) |
+| Ubuntu 24.04.5 / Debian 13.7（ARM64 VMで検証） | arm64 | DEB / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.7) |
+| Ubuntu 24.04.5（ARM64 VMでビルド） | arm64 | strict Snap / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.7) |
 | Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3（WSL2／WSLgで検証） | amd64 | DEB / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.7) |
 | Ubuntu 24.04.5（WSL2／WSLgで検証） | amd64 | strict Snap / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.7) |
 | openSUSE Tumbleweed 20261110（WSL2／WSLgで検証） | amd64 | RPM / 0.3.7-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.7) |
@@ -70,11 +70,11 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | AlmaLinux 9.8（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5) |
 | AlmaLinux 9.8（WSL2／WSLgで検証） | amd64 | RPM / 0.3.7-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.7) |
 | FreeBSD 15.1 | amd64 | pkg / 0.3.7_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.7_1) |
-| FreeBSD 15.1 | aarch64 | pkg / 0.3.5_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.5_1) |
+| FreeBSD 15.1 | aarch64 | pkg / 0.3.7_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.7_1) |
 | NetBSD 11.1 | amd64 | tgz / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.7) |
-| NetBSD 11.1 | aarch64 | tgz / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.5) |
+| NetBSD 11.1 | aarch64 | tgz / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.7) |
 | OpenBSD 8.0 | amd64 | 署名付き tgz / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.7) |
-| OpenBSD 8.0 | arm64 | 署名付き tgz / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.5) |
+| OpenBSD 8.0 | arm64 | 署名付き tgz / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.7) |
 
 表の版番号は各配布先の版です。WindowsのStore版は日本・米国で提供しています。Linux 0.3.3（Ubuntu 22.04以降）の配布物と旧版の導入手順も下記に掲載しています。BSDのARM64は、FreeBSD・NetBSDで`aarch64`、OpenBSDで`arm64`と表記します。
 
@@ -346,7 +346,7 @@ Python・uv・PowerShellの事前導入を不要としたユーザー単位イ�
 
 ### macOS版をHomebrewでインストール
 
-Folimeld 0.3.5のHomebrew配布は、**Apple Silicon（arm64）搭載のMacでmacOS 15 Sequoia以降**が対象です。Homebrewを導入した環境で、ターミナルから次を実行します。
+Folimeld 0.3.7のHomebrew配布は、**Apple Silicon（arm64）搭載のMacでmacOS 15 Sequoia以降**が対象です。Homebrewを導入した環境で、ターミナルから次を実行します。
 
 ```sh
 brew install --build-from-source tyamada/tap/folimeld
@@ -355,7 +355,7 @@ folimeld
 
 HomebrewがPython 3.14とアプリ専用の依存環境を用意し、`launch_homebrew.py` 経由でSponsorsメニューが有効化された状態で `folimeld` のPDF編集画面が開きます。
 
-[macOS版0.3.5のGitHub Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.5)から[ソースアーカイブ](https://github.com/tyamada/Folimeld/releases/download/macos-source-v0.3.5/folimeld-0.3.5-source.tar.gz)と[SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/macos-source-v0.3.5/SHA256SUMS.txt)を取得できます。
+[macOS版0.3.7のGitHub Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.7)から[ソースアーカイブ](https://github.com/tyamada/Folimeld/releases/download/macos-source-v0.3.7/folimeld-0.3.7-source.tar.gz)と[SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/macos-source-v0.3.7/SHA256SUMS.txt)を取得できます。
 
 ### Ubuntu / Debian版を直接ダウンロード
 
@@ -598,10 +598,10 @@ pkg add ./folimeld-0.3.5_1.pkg
 
 一般ユーザーで `folimeld` または `folimeld /path/to/file.pdf` を実行します。削除はrootで `pkg delete folimeld`。フォーム読み込みの不具合を修正したPyMuPDF/MuPDF 1.28.2をアプリ専用領域に同梱し、システムのPyMuPDFは置き換えません。このamd64パッケージはFreeBSD 15.1 / amd64で検証しました。[GUI検証](documentation/freebsd-gui-verification_ja.md)と[画像取り込み・保存失敗・負荷試験](documentation/freebsd-extended-verification_ja.md)の記録も参照してください。
 
-**FreeBSD 15.1 / aarch64** 向けの **0.3.5 / パッケージ改訂1** は、[ARM64試験配布](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.5_1)から取得できます。
+**FreeBSD 15.1 / aarch64** 向けの **0.3.7 / パッケージ改訂1** は、[ARM64試験配布](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.7_1)から取得できます。
 
-- [aarch64版pkg](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.5_1/folimeld-0.3.5_1.pkg)
-- [aarch64版の導入手順](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.5_1/INSTALL_ja.txt)
+- [aarch64版pkg](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.7_1/folimeld-0.3.7_1.pkg)
+- [aarch64版の導入手順](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.7_1/INSTALL_ja.txt)
 
 リリースには対応ソースとSHA-256チェックサムも掲載しています。MacBook Air M5上のQEMU（HVF）でFreeBSD 15.1 / aarch64を起動し、Xorgデスクトップでパッケージを検証しました。
 
@@ -618,10 +618,10 @@ export PKG_PATH=https://cdn.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/11.0_20
 
 一般ユーザーで `/usr/pkg/bin/folimeld` または `/usr/pkg/bin/folimeld /path/to/file.pdf` を実行します。削除はrootで `/usr/pkg/sbin/pkg_delete folimeld`。このコマンド例はamd64版が対象です。aarch64版は次の専用手順を参照してください。
 
-**NetBSD 11.1 / aarch64** 向けの **0.3.5** は、[ARM64試験配布](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.5)から取得できます。
+**NetBSD 11.1 / aarch64** 向けの **0.3.7** は、[ARM64試験配布](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.7)から取得できます。
 
-- [aarch64版tgz](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.5/folimeld-0.3.5.tgz)
-- [aarch64版の導入手順](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.5/INSTALL_ja.txt)
+- [aarch64版tgz](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.7/folimeld-0.3.7.tgz)
+- [aarch64版の導入手順](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.7/INSTALL_ja.txt)
 
 ### OpenBSD版のソース・パッケージ・インストール
 
@@ -645,11 +645,11 @@ pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.5.tgz
 
 一般ユーザーで `folimeld` または `folimeld /path/to/file.pdf` を実行します。削除はrootで `pkg_delete folimeld`、専用依存も不要なら `pkg_delete folimeld-mupdf`。システムのPyMuPDFは置き換えません。上記のamd64版は1 vCPU・16 GiBのVMで検証しました。
 
-**OpenBSD 8.0 / arm64** 向けの **0.3.5** は、[ARM64試験配布](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.5)から取得できます。本体と専用MuPDFはamd64版と同じ公開鍵で署名しています。
+**OpenBSD 8.0 / arm64** 向けの **0.3.7** は、[ARM64試験配布](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.7)から取得できます。本体と専用MuPDFはamd64版と同じ公開鍵で署名しています。
 
-- [arm64版本体](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.5/folimeld-0.3.5.tgz)
-- [arm64版専用MuPDF](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.5/folimeld-mupdf-1.28.2.tgz)
-- [arm64版の署名照合と導入手順](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.5/INSTALL_ja.txt)
+- [arm64版本体](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.7/folimeld-0.3.7.tgz)
+- [arm64版専用MuPDF](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.7/folimeld-mupdf-1.28.2.tgz)
+- [arm64版の署名照合と導入手順](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.7/INSTALL_ja.txt)
 
 ## 基本的な使い方
 

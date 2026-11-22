@@ -4,6 +4,14 @@
 
 ## 未リリース
 
+- macOS Homebrew、ARM64 BSD 3種（FreeBSD 15.1 aarch64 / NetBSD 11.1 aarch64 / OpenBSD 8.0 arm64）、および Ubuntu / Debian ARM64（DEB / strict Snap）のパッケージを 0.3.7 ベースへ更新・公開:
+  - **macOS Homebrew (`macos-source-v0.3.7`)**: `folimeld-0.3.7-source.tar.gz` を公開し、`tyamada/homebrew-tap` の `Formula/folimeld.rb` を 0.3.7 へ更新。`brew install --build-from-source`、`brew test`、`pip check`、および `distribution="homebrew"` での Sponsors メニュー有効化を検証（[検証記録](documentation/macos-homebrew-037-verification.txt)）。
+  - **FreeBSD 15.1 aarch64 (`freebsd-aarch64-v0.3.7_1`)**: `folimeld-0.3.7_1.pkg` をビルド・公開し、`pkg add -f`・オフスクリーン起動・PyMuPDF 1.28.2・Sponsors メニュー有効化を確認（[検証記録](documentation/freebsd-151-aarch64-037-verification.txt)）。
+  - **OpenBSD 8.0 arm64 (`openbsd-aarch64-v0.3.7`)**: `folimeld-0.3.7.tgz` および `folimeld-mupdf-1.28.2.tgz` をビルド・Signify 署名して公開し、署名検証有効での `pkg_add`・オフスクリーン起動・Sponsors メニュー有効化を確認（[検証記録](documentation/openbsd-80-arm64-037-verification.txt)）。
+  - **NetBSD 11.1 aarch64 (`netbsd-aarch64-v0.3.7`)**: `folimeld-0.3.7.tgz` をビルド・公開し、`/usr/pkg/sbin/pkg_add -u`・オフスクリーン起動・Sponsors メニュー有効化を確認（[検証記録](documentation/netbsd-111-aarch64-037-verification.txt)）。
+  - **Ubuntu / Debian ARM64 (`linux-deb-arm64-v0.3.7` / `linux-snap-arm64-v0.3.7`)**: Ubuntu 24.04 ARM64 VM 上で `folimeld_0.3.7_arm64.deb` および `folimeld_0.3.7_arm64.snap` をビルド・公開し、DEB 導入とオフスクリーン起動を確認（[検証記録](documentation/linux-arm64-037-verification.txt)）。
+  - 日英 README（`README_ja.md` / `README.md`）および GitHub Pages（`docs/`）の該当リンクと版番号を 0.3.7 へ同期。
+
 - Microsoft Store 次期リリース（Submission 3 / パッケージ版 1.0.4.0、アプリ版 0.3.7）に向けて、x64 および ARM64 実機環境にて Store 向けネイティブ MSIX パッケージ（`Folimeld_1.0.4.0_x64.msix`、`Folimeld_1.0.4.0_arm64.msix`）をビルドし、静的検査（`msix_preflight` 合格）およびソースバンドル関連付けを完了。公開計画書（`windows-store-release-plan_ja.md`）および受入試験表（`windows-store-acceptance_ja.md`）へ両パッケージのハッシュを記録し、日英スクリーンショットおよびプライバシーポリシー（`docs/privacy/index.html`）を更新して、2026年11月22日に Partner Center（Submission 3）へ認定審査提出を完了。
 
 - FreeBSD 15.1、NetBSD 11.1、OpenBSD 8.0 の amd64 版 0.3.5 パッケージを公開: それぞれ `folimeld-0.3.5_1.pkg`（FreeBSD 15.1 amd64）、`folimeld-0.3.5.tgz`（NetBSD 11.1 amd64）、`folimeld-0.3.5.tgz` および `folimeld-mupdf-1.28.2.tgz`（OpenBSD 8.0 amd64、Signify署名付き）の各配布Releaseを公開し、日英のインストール手順書（`documentation/freebsd-install*.md`、`netbsd-install*.md`、`openbsd-install*.md`）およびREADMEのダウンロード表を更新・同期。

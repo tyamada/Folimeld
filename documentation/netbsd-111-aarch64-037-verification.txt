@@ -1,0 +1,12 @@
+OS: NetBSD 11.1 (GENERIC64) evbarm / aarch64
+Python: 3.12.14
+PySide6: 6.11.2
+MuPDF / PyMuPDF: 1.28.2
+Package: folimeld-0.3.7.tgz (SHA-256: ca895b6b0ba80fbeed51818886e4cfcd60bf6b0799f249a1e4adc4dac173c965)
+Source ZIP: Folimeld-source-f63ea6dffbeb2c2068bf18128dec04e10a0b588f8bfaa5073c2beb6e8961af4b.zip
+
+Verification:
+- Clean package build with tools/build_netbsd_package.py (MACHINE_ARCH=aarch64, OS_VERSION=11.1)
+- Package installation with `/usr/pkg/sbin/pkg_add -u folimeld-0.3.7.tgz`
+- Offscreen GUI execution verified: NETBSD_VERSION=0.3.7, NETBSD_MUPDF=1.28.2
+- Sponsors menu action verified active: NETBSD_SPONSORS=True
