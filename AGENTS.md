@@ -26,5 +26,5 @@
 
 ## Push, CI, and release announcements
 
-- After pushing commits to GitHub, check the triggered GitHub Actions CI runs and resolve any CI errors before finishing the task.
-- When publishing a package or release, confirm that the pushed release and its published packages are live and verified, then post a release announcement to X (`@tyamada22`).
+- When pushing commits to GitHub, monitor the triggered GitHub Actions CI runs and resolve any CI errors before finishing the task.
+- When publishing a package or release, confirm that the pushed release and its published packages are live and publicly verified, then post a release announcement to X (tyamada22 / `@tyamada22`).
