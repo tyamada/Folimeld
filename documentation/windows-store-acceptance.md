@@ -97,29 +97,29 @@ Acceptance plan for Submission 2 (package version `1.0.2.0`), adding native Wind
 | Bulk image import | Both | PDF generation from image import dialog, reordering, rotation, and temp file cleanup | Unit tests passed, awaiting hardware |
 | Free-app-only policy | Both | Supporter add-on menus are omitted; all functionality is available free of charge | Verified |
 
-## Store candidate 1.0.3.0 preparation and acceptance plan (Submission 3: x64 & ARM64)
+## Store candidate 1.0.4.0 preparation and acceptance plan (Submission 3: x64 & ARM64)
 
-Acceptance plan for Submission 3 (package version `1.0.3.0`), incorporating Folimeld 0.3.7 features (on-demand sample PDF downloads, close action, etc.).
+Acceptance plan for Submission 3 (package version `1.0.4.0`), incorporating Folimeld 0.3.7 features (on-demand sample PDF downloads, close action, etc.). The package version was incremented from the originally planned 1.0.3.0 to `1.0.4.0` while maintaining identical specifications due to a Store package validation rejection on the x86 1.0.3.0 MSIX package.
 
 ### Candidate packages and preflight status
 
 | Property | x64 candidate | ARM64 candidate |
 | --- | --- | --- |
-| Package file | `dist/Folimeld_1.0.3.0_x64.msix` | `dist/Folimeld_1.0.3.0_arm64.msix` |
+| Package file | `dist/Folimeld_1.0.4.0_x64.msix` | `dist/Folimeld_1.0.4.0_arm64.msix` |
 | Package Identity | `TakumaYamada.Folimeld` | `TakumaYamada.Folimeld` |
 | Package Publisher | `CN=B897C2D7-6B65-499A-A779-BF572E2D81ED` | `CN=B897C2D7-6B65-499A-A779-BF572E2D81ED` |
 | Package Family Name | `TakumaYamada.Folimeld_hn3600vb3j7rp` | `TakumaYamada.Folimeld_hn3600vb3j7rp` |
-| Version | `1.0.3.0` | `1.0.3.0` |
+| Version | `1.0.4.0` | `1.0.4.0` |
 | Target CPU (PE Machine) | `x64` (`0x8664`) | `arm64` (`0xAA64`) |
-| Package SHA-256 | Pending (build on x86 PC environment) | `2ECD780F5F075EEC9CE657C70A66A3A476A91B98986070F0BFB0936A65D60AD7` |
+| Package SHA-256 | Pending (build on x86 PC environment) | `9597D6F142A4520680BB1C943EC5ABA951549448CB8ADC30728A69379DAF7364` |
 | Preflight (`msix_preflight`) | Pending | Passed (`build/msix-preflight/store/arm64/preflight.json`) |
-| Source association | Generated upon package creation | `dist/source/Folimeld_1.0.3.0_arm64.msix-2ecd780f5f075eec9ce657c70a66a3a476a91b98986070f0bfb0936a65d60ad7.json` |
+| Source association | Generated upon package creation | `dist/source/Folimeld_1.0.4.0_arm64.msix-9597d6f142a4520680bb1c943ec5aba951549448cb8adc30728a69379daf7364.json` |
 
 ### Submission 3 acceptance checklist
 
 | Check | Scope | Required behavior and evidence | Status |
 | --- | --- | --- | --- |
-| Upgrade test from 1.0.2.0 | Both | Install 1.0.3.0 over signed 1.0.2.0; verify settings, history, and PDF file associations are preserved | Pending |
+| Upgrade test from 1.0.2.0 | Both | Install 1.0.4.0 over signed 1.0.2.0; verify settings, history, and PDF file associations are preserved | Pending |
 | ARM64 hardware install & launch | ARM64 | Native launch, exit, and UI interaction on Copilot+ PC (Snapdragon X Elite, etc.) Windows 11 ARM64 | Pending |
 | Sample PDF download | Both | Verify sample manga PDF fetch, display, and editing via "File -> Open sample PDF..." over HTTPS | Unit tests passed, awaiting hardware |
 | Close PDF action | Both | Verify "File -> Close" safely closes active document and returns to modeless empty state | Unit tests passed, awaiting hardware |

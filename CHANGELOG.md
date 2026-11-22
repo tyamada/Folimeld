@@ -4,7 +4,7 @@
 
 ## Unreleased
 
-- For the upcoming Microsoft Store release (Submission 3 / package version 1.0.3.0, app version 0.3.7), built the native Store MSIX package on ARM64 hardware (`Folimeld_1.0.3.0_arm64.msix`, PE Machine `0xAA64`), passed static checks (`msix_preflight`), completed source bundle association, and recorded candidate package hashes in the release plan (`windows-store-release-plan.md`) and acceptance checklist (`windows-store-acceptance.md`).
+- For the upcoming Microsoft Store release (Submission 3 / package version 1.0.4.0, app version 0.3.7), bumped the package version to 1.0.4.0 while keeping identical specifications following Store rejection of the 1.0.3.0 package, built the native Store MSIX package on ARM64 hardware (`Folimeld_1.0.4.0_arm64.msix`, PE Machine `0xAA64`), passed static checks (`msix_preflight`), completed source bundle association, and recorded candidate package hashes in the release plan (`windows-store-release-plan.md`) and acceptance checklist (`windows-store-acceptance.md`).
 
 - Publish 0.3.5 amd64 packages for FreeBSD 15.1, NetBSD 11.1, and OpenBSD 8.0: Published preview Releases for `folimeld-0.3.5_1.pkg` (FreeBSD 15.1 amd64), `folimeld-0.3.5.tgz` (NetBSD 11.1 amd64), and `folimeld-0.3.5.tgz` with `folimeld-mupdf-1.28.2.tgz` (OpenBSD 8.0 amd64, signed with Signify). Synchronized English and Japanese installation guides (`documentation/freebsd-install*.md`, `netbsd-install*.md`, `openbsd-install*.md`) and README download tables.
 

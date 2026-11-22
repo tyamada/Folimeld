@@ -97,29 +97,29 @@ Windows 11 ARM64 ネイティブ対応および大規模PDF機能強化を含む
 | 画像フォルダー一括取り込み | 両方 | 画像一括取り込みダイアログからの PDF 作成、並び替え、回転、一時ファイル削除を確認 | 単体テスト合格、実機確認待ち |
 | 完全無料アプリ維持 | 両方 | アプリ内購入メニューが表示されず、全機能が無料で利用できることを確認 | 確認済み |
 
-## Store候補1.0.3.0の準備と受入計画（Submission 3: x64 & ARM64）
+## Store候補1.0.4.0の準備と受入計画（Submission 3: x64 & ARM64）
 
-Folimeld 0.3.7 の新機能（サンプルPDF取得・閉じる操作等）を反映した Submission 3（版番号 `1.0.3.0`）の受入計画です。
+Folimeld 0.3.7 の新機能（サンプルPDF取得・閉じる操作等）を反映した Submission 3（版番号 `1.0.4.0`）の受入計画です。なお、当初予定していた 1.0.3.0 は Store 側で x86 MSIX パッケージの受付エラーが発生したため、同一仕様のまま版番号を `1.0.4.0` に引き上げています。
 
 ### 候補パッケージと静的検査
 
 | 項目 | x64 候補 | ARM64 候補 |
 | --- | --- | --- |
-| パッケージファイル | `dist/Folimeld_1.0.3.0_x64.msix` | `dist/Folimeld_1.0.3.0_arm64.msix` |
+| パッケージファイル | `dist/Folimeld_1.0.4.0_x64.msix` | `dist/Folimeld_1.0.4.0_arm64.msix` |
 | パッケージ Identity | `TakumaYamada.Folimeld` | `TakumaYamada.Folimeld` |
 | パッケージ Publisher | `CN=B897C2D7-6B65-499A-A779-BF572E2D81ED` | `CN=B897C2D7-6B65-499A-A779-BF572E2D81ED` |
 | パッケージ Family Name | `TakumaYamada.Folimeld_hn3600vb3j7rp` | `TakumaYamada.Folimeld_hn3600vb3j7rp` |
-| 版番号 | `1.0.3.0` | `1.0.3.0` |
+| 版番号 | `1.0.4.0` | `1.0.4.0` |
 | 対象CPU (PE Machine) | `x64` (`0x8664`) | `arm64` (`0xAA64`) |
-| パッケージ SHA-256 | 未生成（x86 PC 環境でビルド） | `2ECD780F5F075EEC9CE657C70A66A3A476A91B98986070F0BFB0936A65D60AD7` |
+| パッケージ SHA-256 | 未生成（x86 PC 環境でビルド） | `9597D6F142A4520680BB1C943EC5ABA951549448CB8ADC30728A69379DAF7364` |
 | 静的検査 (`msix_preflight`) | 未実施 | 合格 (`build/msix-preflight/store/arm64/preflight.json`) |
-| ソースバンドル関連付け | パッケージ生成時に記録 | `dist/source/Folimeld_1.0.3.0_arm64.msix-2ecd780f5f075eec9ce657c70a66a3a476a91b98986070f0bfb0936a65d60ad7.json` |
+| ソースバンドル関連付け | パッケージ生成時に記録 | `dist/source/Folimeld_1.0.4.0_arm64.msix-9597d6f142a4520680bb1c943ec5aba951549448cb8adc30728a69379daf7364.json` |
 
 ### Submission 3 受入確認項目
 
 | 確認項目 | 対象 | 必要な動作と確認内容 | 状況 |
 | --- | --- | --- | --- |
-| 1.0.2.0 からの更新試験 | 両方 | 署名済み 1.0.2.0 導入環境に 1.0.3.0 を更新導入。設定値、履歴、PDF 関連付けが正常に引き継がれることを確認 | 未実施 |
+| 1.0.2.0 からの更新試験 | 両方 | 署名済み 1.0.2.0 導入環境に 1.0.4.0 を更新導入。設定値、履歴、PDF 関連付けが正常に引き継がれることを確認 | 未実施 |
 | ARM64 実機導入・起動 | ARM64 | Copilot+ PC（Snapdragon X Elite 等）の Windows 11 ARM64 でのネイティブ起動、正常終了、UI 操作の確認 | 未実施 |
 | サンプルPDF取得 | 両方 | 「ファイル → サンプルPDFを開く…」から固定 HTTPS 経由でサンプルマンガ PDF を取得・表示・編集できることを確認 | 単体テスト合格、実機確認待ち |
 | PDF を閉じる操作 | 両方 | 「ファイル → 閉じる」で編集中の PDF を安全に閉じ、未読込時のモードレス案内画面に戻ることを確認 | 単体テスト合格、実機確認待ち |

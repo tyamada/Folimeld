@@ -92,19 +92,19 @@ Plan for the next update (Submission 3) bringing Folimeld 0.3.7 features (“Ope
 - **Screenshot fixture**:
   - Capture documentation, website, and Store screenshots in Japanese and English using copies of `testdata/tameshibu_episode1_2_en.pdf` (CC BY 4.0, Komairo Hiyori); see the [screenshot capture plan](windows-store-screenshot-plan.md).
 - **Package assets (built and preflight verified)**:
-  - `dist/Folimeld_1.0.3.0_x64.msix` (to be generated in x86 PC environment)
-  - `dist/Folimeld_1.0.3.0_arm64.msix` (~62.9 MB, SHA-256: `2ECD780F5F075EEC9CE657C70A66A3A476A91B98986070F0BFB0936A65D60AD7`, PE Machine `0xAA64`, preflight passed)
+  - `dist/Folimeld_1.0.4.0_x64.msix` (to be generated in x86 PC environment)
+  - `dist/Folimeld_1.0.4.0_arm64.msix` (~62.9 MB, SHA-256: `9597D6F142A4520680BB1C943EC5ABA951549448CB8ADC30728A69379DAF7364`, PE Machine `0xAA64`, preflight passed)
 - **Build and preflight commands**:
   ```powershell
   powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
     -Store -StoreConfig .\build\store-config.json -Architecture x64 `
-    -PreviousPackage .\dist\Folimeld_1.0.2.0_x64.msix
+    -PreviousPackage .\dist\Folimeld_1.0.3.0_x64.msix
 
   powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
     -Store -StoreConfig .\build\store-config.json -Architecture arm64 `
-    -PreviousPackage .\dist\Folimeld_1.0.2.0_arm64.msix
+    -PreviousPackage .\dist\Folimeld_1.0.3.0_arm64.msix
   ```
-- **Corresponding source publication**: After certification and publication, publish matching source ZIP, `SHA256SUMS.txt`, and `source-association.json` under tag `windows-store-v1.0.3.0`.
+- **Corresponding source publication**: After certification and publication, publish matching source ZIP, `SHA256SUMS.txt`, and `source-association.json` under tag `windows-store-v1.0.4.0`.
 
 ## Official references
 

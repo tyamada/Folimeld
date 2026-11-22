@@ -4,7 +4,7 @@
 
 ## 未リリース
 
-- Microsoft Store次期リリース（Submission 3 / パッケージ版 1.0.3.0、アプリ版 0.3.7）に向けて、ARM64実機環境にてStore向けネイティブMSIXパッケージ（`Folimeld_1.0.3.0_arm64.msix`、PE Machine `0xAA64`）をビルドし、静的検査（`msix_preflight` 合格）およびソースバンドル関連付けを完了して公開計画書（`windows-store-release-plan_ja.md`）および受入試験表（`windows-store-acceptance_ja.md`）へハッシュを記録。
+- Microsoft Store次期リリース（Submission 3 / パッケージ版 1.0.4.0、アプリ版 0.3.7）に向けて、Store側での1.0.3.0受付エラーを受けて同一仕様のままパッケージ版番号を1.0.4.0に引き上げ、ARM64実機環境にてStore向けネイティブMSIXパッケージ（`Folimeld_1.0.4.0_arm64.msix`、PE Machine `0xAA64`）をビルド。静的検査（`msix_preflight` 合格）およびソースバンドル関連付けを完了して公開計画書（`windows-store-release-plan_ja.md`）および受入試験表（`windows-store-acceptance_ja.md`）へハッシュを記録。
 
 - FreeBSD 15.1、NetBSD 11.1、OpenBSD 8.0 の amd64 版 0.3.5 パッケージを公開: それぞれ `folimeld-0.3.5_1.pkg`（FreeBSD 15.1 amd64）、`folimeld-0.3.5.tgz`（NetBSD 11.1 amd64）、`folimeld-0.3.5.tgz` および `folimeld-mupdf-1.28.2.tgz`（OpenBSD 8.0 amd64、Signify署名付き）の各配布Releaseを公開し、日英のインストール手順書（`documentation/freebsd-install*.md`、`netbsd-install*.md`、`openbsd-install*.md`）およびREADMEのダウンロード表を更新・同期。
 
