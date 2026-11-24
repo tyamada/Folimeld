@@ -8,11 +8,11 @@ This feature is **exclusive to the Microsoft Store (MSIX) edition**. Non-Store b
 
 Aligned with App Store and Google Play, Folimeld offers **three one-time Durable tiers (Bronze / Silver / Gold)** with **Forever** product lifetime:
 
-| Tier | Product ID (`OFFER_TOKEN`) | Japanese title (`ja-JP`) | English title (`en-US`) | Base price (USD) | Japan market price (JPY) |
-| --- | --- | --- | --- | --- | --- |
-| **Bronze** | `folimeld.supporter.bronze` | **Folimeld サポーターバッジ（ブロンズ）** | **Folimeld Supporter Badge (Bronze)** | **\$1.99** | **¥200** |
-| **Silver** | `folimeld.supporter.silver` | **Folimeld サポーターバッジ（シルバー）** | **Folimeld Supporter Badge (Silver)** | **\$4.99** | **¥500** |
-| **Gold** | `folimeld.supporter.gold` | **Folimeld サポーターバッジ（ゴールド）** | **Folimeld Supporter Badge (Gold)** | **\$9.99** | **¥1,000** |
+| Tier | Store ID | Product ID (`OFFER_TOKEN`) | Japanese title (`ja-JP`) | English title (`en-US`) | Base price (USD) | Japan market price (JPY) |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Bronze** | `9NJRQ70XV17C` | `folimeld.supporter.bronze` | **Folimeld サポーターバッジ（ブロンズ）** | **Folimeld Supporter Badge (Bronze)** | **\$1.99** | **¥200** |
+| **Silver** | `9ND5X26S71X8` | `folimeld.supporter.silver` | **Folimeld サポーターバッジ（シルバー）** | **Folimeld Supporter Badge (Silver)** | **\$4.99** | **¥500** |
+| **Gold** | `9PH1DTBHSHZN` | `folimeld.supporter.gold` | **Folimeld サポーターバッジ（ゴールド）** | **Folimeld Supporter Badge (Gold)** | **\$9.99** | **¥1,000** |
 
 - Product IDs are defined in `SUPPORTER_TIERS` inside [folimeld/store_support.py](../folimeld/store_support.py).
 - Configure the USD base price tiers in Partner Center and override the Japan market price to **¥200 / ¥500 / ¥1,000**.

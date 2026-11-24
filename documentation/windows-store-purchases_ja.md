@@ -8,11 +8,11 @@
 
 App Store・Google Play と共通の **Bronze / Silver / Gold の 3 ティア構成** です。すべて有効期限なし（Forever）の 1 回限り買い切り商品（Durable）として登録します。
 
-| ティア | Product ID (`OFFER_TOKEN`) | 日本語商品名 (`ja-JP`) | 英語商品名 (`en-US`) | 基準価格 (USD) | 日本市場価格 (JPY) |
-| --- | --- | --- | --- | --- | --- |
-| **Bronze** | `folimeld.supporter.bronze` | **Folimeld サポーターバッジ（ブロンズ）** | **Folimeld Supporter Badge (Bronze)** | **\$1.99** | **¥200** |
-| **Silver** | `folimeld.supporter.silver` | **Folimeld サポーターバッジ（シルバー）** | **Folimeld Supporter Badge (Silver)** | **\$4.99** | **¥500** |
-| **Gold** | `folimeld.supporter.gold` | **Folimeld サポーターバッジ（ゴールド）** | **Folimeld Supporter Badge (Gold)** | **\$9.99** | **¥1,000** |
+| ティア | Store ID | Product ID (`OFFER_TOKEN`) | 日本語商品名 (`ja-JP`) | 英語商品名 (`en-US`) | 基準価格 (USD) | 日本市場価格 (JPY) |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Bronze** | `9NJRQ70XV17C` | `folimeld.supporter.bronze` | **Folimeld サポーターバッジ（ブロンズ）** | **Folimeld Supporter Badge (Bronze)** | **\$1.99** | **¥200** |
+| **Silver** | `9ND5X26S71X8` | `folimeld.supporter.silver` | **Folimeld サポーターバッジ（シルバー）** | **Folimeld Supporter Badge (Silver)** | **\$4.99** | **¥500** |
+| **Gold** | `9PH1DTBHSHZN` | `folimeld.supporter.gold` | **Folimeld サポーターバッジ（ゴールド）** | **Folimeld Supporter Badge (Gold)** | **\$9.99** | **¥1,000** |
 
 - Product ID は [folimeld/store_support.py](../folimeld/store_support.py) の `SUPPORTER_TIERS` に定義しています。
 - 基準価格（USD）を設定した上で、Partner Center の市場別価格設定から日本（Japan）の価格を **¥200 / ¥500 / ¥1,000** へ指定します。
