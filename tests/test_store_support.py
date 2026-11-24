@@ -95,5 +95,39 @@ def test_non_store_build_has_no_purchase_menu():
     with patch('folimeld.app.is_packaged', return_value=False):
         window = MainWindow()
         assert window.support is None
+        assert window.supporter_badge is None
         assert not hasattr(window, 'support_action')
+        window.close()
+
+
+def test_store_build_supporter_badge_visibility_and_about():
+    from folimeld.app import MainWindow
+    _app = QApplication.instance() or QApplication([])
+    with patch('folimeld.app.is_packaged', return_value=True), \
+         patch('folimeld.store_support.StoreSupport.refresh'):
+        window = MainWindow()
+        assert window.support is not None
+        assert window.supporter_badge is not None
+        assert window.supporter_badge.isHidden()
+
+        window.support.owned = True
+        window.support.changed.emit()
+        assert not window.supporter_badge.isHidden()
+        assert not window.support_action.icon().isNull()
+
+        with patch('folimeld.app.QMessageBox') as mock_box:
+            window.about()
+            mock_box.return_value.setIconPixmap.assert_called_once()
+            mock_box.return_value.exec.assert_called_once()
+            mock_box.about.assert_not_called()
+
+        window.support.owned = False
+        window.support.changed.emit()
+        assert window.supporter_badge.isHidden()
+
+        with patch('folimeld.app.QMessageBox.about') as mock_about:
+            window.about()
+            mock_about.assert_called_once()
+
+        window.support.timer.stop()
         window.close()

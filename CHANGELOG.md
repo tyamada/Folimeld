@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+- Enhanced the Microsoft Store (MSIX)-only one-time in-app purchase "Folimeld Supporter Badge" (Durable / `folimeld.supporter` / \$2.99 USD) to display a permanent supporter badge in the status bar, supporter icon and thank-you message in the About dialog, and updated Help menu item; synchronized all 8 locales (`locales/*.json`), added UI unit tests (`tests/test_store_support.py`), and updated bilingual specifications (`documentation/windows-store-purchases_ja.md`, `windows-store-purchases.md`).
+
 - Updated and published 0.3.7 packages for macOS Homebrew, ARM64 BSDs (FreeBSD 15.1 aarch64, NetBSD 11.1 aarch64, OpenBSD 8.0 arm64), and Ubuntu / Debian ARM64 (DEB and strict Snap):
   - **macOS Homebrew (`macos-source-v0.3.7`)**: Published `folimeld-0.3.7-source.tar.gz` and updated `Formula/folimeld.rb` in `tyamada/homebrew-tap` to 0.3.7. Verified `brew install --build-from-source`, `brew test`, `pip check`, and active Sponsors menu with `distribution="homebrew"` ([verification record](documentation/macos-homebrew-037-verification.txt)).
   - **FreeBSD 15.1 aarch64 (`freebsd-aarch64-v0.3.7_1`)**: Built and published `folimeld-0.3.7_1.pkg`; verified `pkg add -f`, offscreen GUI launch, PyMuPDF 1.28.2, and active Sponsors menu ([verification record](documentation/freebsd-151-aarch64-037-verification.txt)).

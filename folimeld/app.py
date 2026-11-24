@@ -5,10 +5,10 @@ from pathlib import Path
 from .source_profile import application_settings
 from .distribution import sponsors_available
 
-from PySide6.QtCore import QStandardPaths, QTimer, Qt
+from PySide6.QtCore import QSize, QStandardPaths, QTimer, Qt
 from PySide6.QtGui import QAction, QCloseEvent, QIcon, QKeySequence, QTransform
 from PySide6.QtWidgets import (QApplication, QFileDialog, QMainWindow, QMessageBox,
-                               QInputDialog, QLineEdit, QToolBar, QStyle,
+                               QInputDialog, QLineEdit, QToolBar, QToolButton, QStyle,
                                QDialog, QLabel, QPushButton, QVBoxLayout)
 
 from . import __version__
@@ -187,6 +187,21 @@ class MainWindow(QMainWindow):
                        self.right_binding_cover_action):
             toolbar.addAction(action)
         self.statusBar().showMessage(self.tr_("ready"))
+        self.supporter_badge: QToolButton | None = None
+        if self.support:
+            badge = QToolButton(self)
+            badge.setObjectName("supporter_badge")
+            badge.setAutoRaise(True)
+            badge.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
+            badge.setIcon(supporter_icon())
+            badge.setIconSize(QSize(18, 18))
+            badge.setText(self.tr_("supporter_badge"))
+            badge.setToolTip(self.tr_("support_thanks"))
+            badge.setAccessibleName(self.tr_("supporter_badge"))
+            badge.clicked.connect(self.show_support)
+            badge.hide()
+            self.statusBar().addPermanentWidget(badge)
+            self.supporter_badge = badge
 
     def show_sponsors(self):
         if self.sponsors_dialog is None:
@@ -196,8 +211,13 @@ class MainWindow(QMainWindow):
         self.sponsors_dialog.activateWindow()
 
     def _update_support(self):
-        self.support_action.setText(self.tr_("supporter" if self.support.owned else "support_title"))
-        self.support_action.setIcon(supporter_icon() if self.support.owned else QIcon())
+        if not self.support:
+            return
+        owned = self.support.owned
+        self.support_action.setText(self.tr_("supporter" if owned else "support_title"))
+        self.support_action.setIcon(supporter_icon() if owned else QIcon())
+        if self.supporter_badge is not None:
+            self.supporter_badge.setVisible(owned)
 
     def show_support(self):
         if self.support_dialog is None:
@@ -580,6 +600,14 @@ class MainWindow(QMainWindow):
     def about(self) -> None:
         text = self.tr_("version_text", version=__version__)
         text += "\n\nCopyright (C) 2026 Takuma Yamada"
+        if self.support and self.support.owned:
+            box = QMessageBox(self)
+            box.setWindowTitle(self.tr_("version_info"))
+            box.setIconPixmap(supporter_icon().pixmap(64, 64))
+            box.setText(f"{text}\n\n{self.tr_('supporter_badge')} — {self.tr_('support_thanks')}")
+            box.setStandardButtons(QMessageBox.StandardButton.Ok)
+            box.exec()
+            return
         QMessageBox.about(self, self.tr_("version_info"), text)
 
     def show_licenses(self) -> None:

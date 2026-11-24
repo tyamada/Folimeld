@@ -4,6 +4,8 @@
 
 ## 未リリース
 
+- Microsoft Store（MSIX）版限定の1回限りアプリ内購入「Folimeld サポーターバッジ」（Durable / `folimeld.supporter` / \$2.99 USD）に向けて、購入後のサポーターバッジ表示をステータスバー右端・バージョン情報（About）ダイアログ・ヘルプメニューへ拡張し、全 8 言語の文言（`locales/*.json`）・単体テスト（`tests/test_store_support.py`）・日英仕様書（`documentation/windows-store-purchases_ja.md` / `windows-store-purchases.md`）を整備。
+
 - macOS Homebrew、ARM64 BSD 3種（FreeBSD 15.1 aarch64 / NetBSD 11.1 aarch64 / OpenBSD 8.0 arm64）、および Ubuntu / Debian ARM64（DEB / strict Snap）のパッケージを 0.3.7 ベースへ更新・公開:
   - **macOS Homebrew (`macos-source-v0.3.7`)**: `folimeld-0.3.7-source.tar.gz` を公開し、`tyamada/homebrew-tap` の `Formula/folimeld.rb` を 0.3.7 へ更新。`brew install --build-from-source`、`brew test`、`pip check`、および `distribution="homebrew"` での Sponsors メニュー有効化を検証（[検証記録](documentation/macos-homebrew-037-verification.txt)）。
   - **FreeBSD 15.1 aarch64 (`freebsd-aarch64-v0.3.7_1`)**: `folimeld-0.3.7_1.pkg` をビルド・公開し、`pkg add -f`・オフスクリーン起動・PyMuPDF 1.28.2・Sponsors メニュー有効化を確認（[検証記録](documentation/freebsd-151-aarch64-037-verification.txt)）。
