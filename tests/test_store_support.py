@@ -4,7 +4,7 @@ from unittest.mock import Mock, patch
 import pytest
 from PySide6.QtWidgets import QApplication, QWidget
 from folimeld.store_support import OFFER_TOKENS, StoreSupport
-from folimeld.support_dialog import SupportDialog
+from folimeld.support_dialog import SupportDialog, supporter_icon
 
 
 @pytest.fixture
@@ -170,3 +170,11 @@ def test_store_build_supporter_badge_tiers_and_about():
 
         window.support.timer.stop()
         window.close()
+
+
+@pytest.mark.parametrize('tier', ['bronze', 'silver', 'gold'])
+def test_tier_badge_icons_load(tier):
+    _app = QApplication.instance() or QApplication([])
+    icon = supporter_icon(tier)
+    assert not icon.isNull()
+    assert not icon.pixmap(32, 32).isNull()

@@ -1,6 +1,6 @@
-from PySide6.QtCore import Qt, QUrl
+from PySide6.QtCore import QSize, Qt, QUrl
 from PySide6.QtGui import QDesktopServices, QIcon
-from PySide6.QtWidgets import QDialog, QLabel, QPushButton, QVBoxLayout
+from PySide6.QtWidgets import QDialog, QHBoxLayout, QLabel, QPushButton, QVBoxLayout
 
 from .store_support import TIER_ORDER
 
@@ -11,6 +11,12 @@ TIER_COLORS = {
     "bronze": ("#CD7F32", "#FFF7F0", "#7A4414"),
     "silver": ("#9EA7B3", "#F4F6F9", "#3D4652"),
     "gold": ("#D4AF37", "#FFFBF0", "#7A5B00"),
+}
+
+TIER_ICON_FILES = {
+    "bronze": "tip_bronze.png",
+    "silver": "tip_silver.png",
+    "gold": "tip_gold.png",
 }
 
 
@@ -38,10 +44,14 @@ class SponsorsDialog(QDialog):
         self.error.setVisible(not QDesktopServices.openUrl(QUrl(SPONSORS_URL)))
 
 
-def supporter_icon():
-    """Load the supporter artwork from source or bundled assets."""
+def supporter_icon(tier: str | None = None) -> QIcon:
+    """Load the tier-specific badge artwork from source or bundled assets."""
     from .resources import resource_root
     root = resource_root()
+    if tier in TIER_ICON_FILES:
+        path = root / "assets" / "tip-icon" / TIER_ICON_FILES[tier]
+        if path.is_file():
+            return QIcon(str(path))
     return QIcon(str(root / "assets" / "folimeld-supporter-maid.png"))
 
 
@@ -67,11 +77,15 @@ class SupportDialog(QDialog):
         self.setWindowTitle(tr("support_title"))
         self.setMinimumWidth(420)
         layout = QVBoxLayout(self)
-        preview = QLabel()
-        preview.setPixmap(supporter_icon().pixmap(64, 64))
-        preview.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        preview.setAccessibleName(tr("supporter"))
-        layout.addWidget(preview)
+        previews = QHBoxLayout()
+        previews.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        for tier in TIER_ORDER:
+            preview = QLabel()
+            preview.setPixmap(supporter_icon(tier).pixmap(56, 56))
+            preview.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            preview.setAccessibleName(tr(f"supporter_badge_{tier}"))
+            previews.addWidget(preview)
+        layout.addLayout(previews)
         description = QLabel(tr("support_description"))
         description.setWordWrap(True)
         layout.addWidget(description)
@@ -82,6 +96,8 @@ class SupportDialog(QDialog):
         for tier in TIER_ORDER:
             button = QPushButton()
             button.setObjectName(f"buy_{tier}")
+            button.setIcon(supporter_icon(tier))
+            button.setIconSize(QSize(24, 24))
             button.clicked.connect(lambda checked=False, t=tier: service.purchase(t))
             layout.addWidget(button)
             self.buy_buttons[tier] = button

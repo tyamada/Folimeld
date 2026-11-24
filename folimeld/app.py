@@ -215,14 +215,16 @@ class MainWindow(QMainWindow):
             return
         tier = self.support.highest_tier
         if tier:
+            icon = supporter_icon(tier)
             self.support_action.setText(self.tr_(f"supporter_{tier}"))
-            self.support_action.setIcon(supporter_icon())
+            self.support_action.setIcon(icon)
         else:
             self.support_action.setText(self.tr_("support_title"))
             self.support_action.setIcon(QIcon())
         if self.supporter_badge is not None:
             if tier:
                 badge_text = self.tr_(f"supporter_badge_{tier}")
+                self.supporter_badge.setIcon(supporter_icon(tier))
                 self.supporter_badge.setText(badge_text)
                 self.supporter_badge.setAccessibleName(badge_text)
                 self.supporter_badge.setStyleSheet(supporter_badge_style(tier))
@@ -615,7 +617,7 @@ class MainWindow(QMainWindow):
         if tier:
             box = QMessageBox(self)
             box.setWindowTitle(self.tr_("version_info"))
-            box.setIconPixmap(supporter_icon().pixmap(64, 64))
+            box.setIconPixmap(supporter_icon(tier).pixmap(64, 64))
             badge_text = self.tr_(f"supporter_badge_{tier}")
             box.setText(f"{text}\n\n{badge_text} — {self.tr_('support_thanks')}")
             box.setStandardButtons(QMessageBox.StandardButton.Ok)
