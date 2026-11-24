@@ -59,7 +59,7 @@ Plan for the next update (Submission 2) adding native Windows 11 ARM64 support (
   - Undo/Redo history disk spooling (AES-256-GCM encrypted temp storage up to 1 GiB).
   - Virtualized thumbnail rendering (smooth scrolling for documents with 1,000+ pages).
   - Batch PDF creation from image folders (PNG, JPEG, TIFF, BMP, WebP).
-- **Submission status**: Submitted both packages (x64 and ARM64) to Partner Center (Submission 2) on 2026-11-16. Currently in Certification review.
+- **Submission status**: Submitted both packages (x64 and ARM64) to Partner Center (Submission 2) on 2026-11-16; passed certification and published (updated 2026-11-21). Corresponding source published on GitHub Releases under tag [`windows-store-v1.0.2.0`](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.2.0).
 - **Package assets (built, preflight verified, and submitted)**:
   - `dist/Folimeld_1.0.2.0_x64.msix` (~76.4 MB, SHA-256: `86E1617340093A4F0BC2DDFBCCC15FA5A0B97E3DE5ED229A93415B54F391C421`, PE Machine `0x8664`, preflight passed)
   - `dist/Folimeld_1.0.2.0_arm64.msix` (~62.9 MB, SHA-256: `6BC0890A56E9AD028F91770167EBE7C3DDE2BD187CD0628BB9914D03B6A516CE`, PE Machine `0xAA64`, preflight passed)
@@ -95,7 +95,7 @@ Plan for the next update (Submission 3) bringing Folimeld 0.3.7 features (“Ope
   - Finalized release branch `release/windows-store-v1.0.4.0` (commit `8f6b47c`, app version `0.3.7`) and updated `docs/privacy/index.html` to document on-demand HTTPS sample PDF downloads.
   - Built and preflight-verified `dist/Folimeld_1.0.4.0_x64.msix` (78,990,624 bytes / ~75.3 MiB, SHA-256: `CD081C96BC0838BFE1B65E59814F29DFF31957D34119F3AF1BE51357A670B6A9`, PE Machine `0x8664`, static checks passed in `build/msix-preflight/store/x64/preflight.json`). Corresponding source ZIP: `dist/source/Folimeld-source-2fee6f48a3bc5c09ec6e80c142d593c6b2781abc0ad9794912749a80a847450e.zip`; association JSON: `dist/source/Folimeld_1.0.4.0_x64.msix-cd081c96bc0838bfe1b65e59814f29dff31957d34119f3af1be51357a670b6a9.json`.
   - Built and preflight-verified `dist/Folimeld_1.0.4.0_arm64.msix` (62,377,071 bytes / ~59.5 MiB, SHA-256: `9597D6F142A4520680BB1C943EC5ABA951549448CB8ADC30728A69379DAF7364`, PE Machine `0xAA64`, static checks passed in `build/msix-preflight/store/arm64/preflight.json`) on ARM64 hardware. Association JSON: `dist/source/Folimeld_1.0.4.0_arm64.msix-9597d6f142a4520680bb1c943ec5aba951549448cb8adc30728a69379daf7364.json`.
-  - **Submission status**: Submitted both `1.0.4.0` packages (x64 and ARM64), updated bilingual listings and 12 screenshots, and certification notes to Partner Center (Submission 3 / ID `1152921505702470707`) on 2026-11-22. Currently in Pre-processing / Certification (manual publishing configured via "Publish now" after certification passes).
+  - **Submission & publication status**: Submitted both `1.0.4.0` packages (x64 and ARM64), updated bilingual listings and 12 screenshots, and certification notes to Partner Center (Submission 3 / ID `1152921505702470707`) on 2026-11-22 with automatic publishing enabled. Passed certification and confirmed live (`1.0.4.0` x64 & ARM64) on Microsoft Store (verified 2026-11-24).
 - **Build and preflight commands**:
   ```powershell
   powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
@@ -106,7 +106,7 @@ Plan for the next update (Submission 3) bringing Folimeld 0.3.7 features (“Ope
     -Store -StoreConfig .\build\store-config.json -Architecture arm64 `
     -PreviousPackage .\dist\Folimeld_1.0.2.0_arm64.msix
   ```
-- **Corresponding source publication**: After certification and publication, publish matching source ZIP, `SHA256SUMS.txt`, and `source-association.json` under tag `windows-store-v1.0.4.0`.
+- **Corresponding source publication**: Published matching source ZIP, `SHA256SUMS.txt`, and `source-association.json` on GitHub Releases under tag [`windows-store-v1.0.4.0`](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.4.0).
 
 ## Official references
 

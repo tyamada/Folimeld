@@ -59,7 +59,7 @@ Windows 11 x64 に加え、Windows 11 ARM64（Surface Pro 11 等の Copilot+ PC 
   - Undo/Redo 履歴のディスク退避（AES-256-GCM 暗号化、最大 1 GiB）
   - サムネイル仮想化（1,000 ページ超の文書でもメモリ浪費を防ぐ表示最適化）
   - 画像フォルダー一括取り込み（PNG, JPEG, TIFF, BMP, WebP の PDF 化）
-- **申請状況**: 2026年11月16日に Partner Center（Submission 2）へ両パッケージ（x64 および ARM64）を提出完了。現在認定審査（Certification）中。
+- **申請状況**: 2026年11月16日に Partner Center（Submission 2）へ両パッケージ（x64 および ARM64）を提出し、認定合格・公開完了（2026年11月21日更新）。対応ソースは GitHub Releases タグ [`windows-store-v1.0.2.0`](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.2.0) にて公開済み。
 - **パッケージ構成（生成・静的検査完了・提出済み）**:
   - `dist/Folimeld_1.0.2.0_x64.msix`（約 76.4 MB、SHA-256: `86E1617340093A4F0BC2DDFBCCC15FA5A0B97E3DE5ED229A93415B54F391C421`、PE Machine `0x8664`、静的検査合格）
   - `dist/Folimeld_1.0.2.0_arm64.msix`（約 62.9 MB、SHA-256: `6BC0890A56E9AD028F91770167EBE7C3DDE2BD187CD0628BB9914D03B6A516CE`、PE Machine `0xAA64`、静的検査合格）
@@ -95,7 +95,7 @@ Folimeld 0.3.7 の新機能（「サンプルPDFを開く…」「PDFを閉じ�
   - リリース用ブランチ `release/windows-store-v1.0.4.0`（コミット `8f6b47c`、アプリ版 `0.3.7`）を確定し、`docs/privacy/index.html` にサンプルPDF取得時の通信仕様を反映済み。
   - `dist/Folimeld_1.0.4.0_x64.msix`（78,990,624 bytes / 約 75.3 MiB、SHA-256: `CD081C96BC0838BFE1B65E59814F29DFF31957D34119F3AF1BE51357A670B6A9`、PE Machine `0x8664`、静的検査 `build/msix-preflight/store/x64/preflight.json` 合格）を生成済み。対応ソース ZIP は `dist/source/Folimeld-source-2fee6f48a3bc5c09ec6e80c142d593c6b2781abc0ad9794912749a80a847450e.zip`、関連付け JSON は `dist/source/Folimeld_1.0.4.0_x64.msix-cd081c96bc0838bfe1b65e59814f29dff31957d34119f3af1be51357a670b6a9.json`。
   - `dist/Folimeld_1.0.4.0_arm64.msix`（62,377,071 bytes / 約 59.5 MiB、SHA-256: `9597D6F142A4520680BB1C943EC5ABA951549448CB8ADC30728A69379DAF7364`、PE Machine `0xAA64`、静的検査 `build/msix-preflight/store/arm64/preflight.json` 合格）を ARM64 実機で生成済み。関連付け JSON は `dist/source/Folimeld_1.0.4.0_arm64.msix-9597d6f142a4520680bb1c943ec5aba951549448cb8adc30728a69379daf7364.json`。
-  - **申請状況**: 2026年11月22日に Partner Center（Submission 3 / ID `1152921505702470707`）へ両パッケージ（x64・ARM64）、日英ストア掲載文・スクリーンショット各 6 枚、審査メモを提出完了。現在認定審査（Pre-processing / Certification）中。手動公開設定のため、審査合格後に「Publish now」で公開予定。
+  - **申請・公開状況**: 2026年11月22日に Partner Center（Submission 3 / ID `1152921505702470707`）へ両パッケージ（x64・ARM64）、日英ストア掲載文・スクリーンショット各 6 枚、審査メモを提出し、自動公開設定へ変更。認定合格後、Microsoft Store にて `1.0.4.0`（x64・ARM64）の公開を確認済み（2026年11月24日確認）。
 - **ビルド・事前検査コマンド**:
   ```powershell
   powershell -NoProfile -ExecutionPolicy Bypass -File .\build_msix.ps1 `
@@ -106,7 +106,7 @@ Folimeld 0.3.7 の新機能（「サンプルPDFを開く…」「PDFを閉じ�
     -Store -StoreConfig .\build\store-config.json -Architecture arm64 `
     -PreviousPackage .\dist\Folimeld_1.0.2.0_arm64.msix
   ```
-- **対応ソース公開**: 認定・公開後にタグ `windows-store-v1.0.4.0` として対応ソース ZIP・`SHA256SUMS.txt`・`source-association.json` を公開する。
+- **対応ソース公開**: GitHub Releases タグ [`windows-store-v1.0.4.0`](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.4.0) にて対応ソース ZIP・`SHA256SUMS.txt`・`source-association.json` を公開済み。
 
 ## 公式資料
 

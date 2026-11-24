@@ -34,3 +34,9 @@
 - Do not push built MSIX packages to the `Folimeld` GitHub repository.
 - Save built MSIX packages to `../work/Folimeld/dist/` (`Downloads/source/work/Folimeld/dist/`).
 - Obtain built MSIX packages stored under `Downloads/source/work/Folimeld/dist/` (cloned from `https://github.com/tyamada/work.git` into `Downloads/source/work`). Pull the latest changes in `Downloads/source/work` before copying or verifying MSIX packages.
+
+## Microsoft Store corresponding source releases
+
+- For every released Microsoft Store version, publish its corresponding source code on GitHub Releases under tag `windows-store-v<package_version>` (e.g., `windows-store-v1.0.2.0`).
+- Attach the matching source ZIP, `SHA256SUMS.txt`, and `source-association.json` (recording the submitted x64/ARM64 MSIX hashes, executable hashes, and source archive hash). Do not attach built `.msix` binaries to GitHub Releases.
+- Keep `make_latest: false` (or preserve the intended `latest` release) unless explicitly updating the repository's primary release, and verify public unauthenticated HTTPS downloads after publishing.
