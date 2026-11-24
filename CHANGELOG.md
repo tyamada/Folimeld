@@ -4,7 +4,7 @@
 
 ## Unreleased
 
-- Enhanced the Microsoft Store (MSIX)-only one-time in-app purchase "Folimeld Supporter Badge" (Durable / `folimeld.supporter` / \$2.99 USD) to display a permanent supporter badge in the status bar, supporter icon and thank-you message in the About dialog, and updated Help menu item; synchronized all 8 locales (`locales/*.json`), added UI unit tests (`tests/test_store_support.py`), and updated bilingual specifications (`documentation/windows-store-purchases_ja.md`, `windows-store-purchases.md`).
+- Extended the Microsoft Store (MSIX)-only one-time in-app purchase "Folimeld Supporter Badge" to three Durable tiers (Bronze `folimeld.supporter.bronze` \$1.99 / ¥200, Silver `folimeld.supporter.silver` \$4.99 / ¥500, Gold `folimeld.supporter.gold` \$9.99 / ¥1,000), displaying tier-styled permanent status bar badges, About dialog badges, and Help menu items for the highest owned tier; synchronized all 8 locales (`locales/*.json`), unit tests (`tests/test_store_support.py`), and bilingual specifications (`documentation/windows-store-purchases_ja.md`, `windows-store-purchases.md`).
 
 - Updated and published 0.3.7 packages for macOS Homebrew, ARM64 BSDs (FreeBSD 15.1 aarch64, NetBSD 11.1 aarch64, OpenBSD 8.0 arm64), and Ubuntu / Debian ARM64 (DEB and strict Snap):
   - **macOS Homebrew (`macos-source-v0.3.7`)**: Published `folimeld-0.3.7-source.tar.gz` and updated `Formula/folimeld.rb` in `tyamada/homebrew-tap` to 0.3.7. Verified `brew install --build-from-source`, `brew test`, `pip check`, and active Sponsors menu with `distribution="homebrew"` ([verification record](documentation/macos-homebrew-037-verification.txt)).

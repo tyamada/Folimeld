@@ -4,7 +4,7 @@
 
 ## 未リリース
 
-- Microsoft Store（MSIX）版限定の1回限りアプリ内購入「Folimeld サポーターバッジ」（Durable / `folimeld.supporter` / \$2.99 USD）に向けて、購入後のサポーターバッジ表示をステータスバー右端・バージョン情報（About）ダイアログ・ヘルプメニューへ拡張し、全 8 言語の文言（`locales/*.json`）・単体テスト（`tests/test_store_support.py`）・日英仕様書（`documentation/windows-store-purchases_ja.md` / `windows-store-purchases.md`）を整備。
+- Microsoft Store（MSIX）版限定の1回限りアプリ内購入「Folimeld サポーターバッジ」を 3 ティア構成（Bronze `folimeld.supporter.bronze` \$1.99 / ¥200、Silver `folimeld.supporter.silver` \$4.99 / ¥500、Gold `folimeld.supporter.gold` \$9.99 / ¥1,000、いずれも Durable / 永続）へ拡張し、最上位所有ティアに応じたランク別カラーのステータスバー常設バッジ・バージョン情報（About）ダイアログ表示・ヘルプメニュー表示を実装。全 8 言語の文言（`locales/*.json`）・単体テスト（`tests/test_store_support.py`）・日英仕様書（`documentation/windows-store-purchases_ja.md` / `windows-store-purchases.md`）を同期。
 
 - macOS Homebrew、ARM64 BSD 3種（FreeBSD 15.1 aarch64 / NetBSD 11.1 aarch64 / OpenBSD 8.0 arm64）、および Ubuntu / Debian ARM64（DEB / strict Snap）のパッケージを 0.3.7 ベースへ更新・公開:
   - **macOS Homebrew (`macos-source-v0.3.7`)**: `folimeld-0.3.7-source.tar.gz` を公開し、`tyamada/homebrew-tap` の `Formula/folimeld.rb` を 0.3.7 へ更新。`brew install --build-from-source`、`brew test`、`pip check`、および `distribution="homebrew"` での Sponsors メニュー有効化を検証（[検証記録](documentation/macos-homebrew-037-verification.txt)）。

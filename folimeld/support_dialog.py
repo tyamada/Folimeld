@@ -2,8 +2,16 @@ from PySide6.QtCore import Qt, QUrl
 from PySide6.QtGui import QDesktopServices, QIcon
 from PySide6.QtWidgets import QDialog, QLabel, QPushButton, QVBoxLayout
 
+from .store_support import TIER_ORDER
+
 
 SPONSORS_URL = "https://github.com/sponsors/tyamada"
+
+TIER_COLORS = {
+    "bronze": ("#CD7F32", "#FFF7F0", "#7A4414"),
+    "silver": ("#9EA7B3", "#F4F6F9", "#3D4652"),
+    "gold": ("#D4AF37", "#FFFBF0", "#7A5B00"),
+}
 
 
 class SponsorsDialog(QDialog):
@@ -37,12 +45,27 @@ def supporter_icon():
     return QIcon(str(root / "assets" / "folimeld-supporter-maid.png"))
 
 
+def supporter_badge_style(tier: str) -> str:
+    """Return a status-bar badge stylesheet tailored to the supporter tier."""
+    border, bg, fg = TIER_COLORS.get(tier, TIER_COLORS["bronze"])
+    return (
+        f"QToolButton#supporter_badge {{"
+        f" border: 1px solid {border};"
+        f" border-radius: 10px;"
+        f" background-color: {bg};"
+        f" color: {fg};"
+        f" padding: 1px 8px;"
+        f" font-weight: 600;"
+        f" }}"
+    )
+
+
 class SupportDialog(QDialog):
     def __init__(self, service, tr, parent):
         super().__init__(parent)
         self.service, self.tr = service, tr
         self.setWindowTitle(tr("support_title"))
-        self.setMinimumWidth(380)
+        self.setMinimumWidth(420)
         layout = QVBoxLayout(self)
         preview = QLabel()
         preview.setPixmap(supporter_icon().pixmap(64, 64))
@@ -55,9 +78,13 @@ class SupportDialog(QDialog):
         self.status = QLabel()
         self.status.setWordWrap(True)
         layout.addWidget(self.status)
-        self.buy = QPushButton()
-        self.buy.clicked.connect(service.purchase)
-        layout.addWidget(self.buy)
+        self.buy_buttons: dict[str, QPushButton] = {}
+        for tier in TIER_ORDER:
+            button = QPushButton()
+            button.setObjectName(f"buy_{tier}")
+            button.clicked.connect(lambda checked=False, t=tier: service.purchase(t))
+            layout.addWidget(button)
+            self.buy_buttons[tier] = button
         self.refresh_button = QPushButton(tr("support_refresh"))
         self.refresh_button.clicked.connect(service.refresh)
         layout.addWidget(self.refresh_button)
@@ -70,8 +97,16 @@ class SupportDialog(QDialog):
     def render(self):
         service = self.service
         self.status.setText(self.tr(service.message))
-        price = service.product.price.formatted_price if service.product else ""
-        self.buy.setText(self.tr("support_buy", price=price))
-        self.buy.setVisible(not service.owned)
-        self.buy.setEnabled(not service.busy and service.product is not None)
+        for tier, button in self.buy_buttons.items():
+            tier_label = self.tr(f"supporter_tier_{tier}")
+            if tier in service.owned_tiers:
+                button.setText(self.tr("support_owned_tier", tier=tier_label, owned=self.tr("support_owned")))
+                button.setEnabled(False)
+            elif tier in service.products:
+                price = service.products[tier].price.formatted_price
+                button.setText(self.tr("support_buy_tier", tier=tier_label, price=price))
+                button.setEnabled(not service.busy)
+            else:
+                button.setText(tier_label)
+                button.setEnabled(False)
         self.refresh_button.setEnabled(not service.busy)

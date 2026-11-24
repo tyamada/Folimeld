@@ -25,7 +25,7 @@ from .thumbnails import ThumbnailController
 from .widgets import THUMBNAIL_SIZES, ThumbnailList
 from .windows_integration import register_open_with, is_packaged
 from .store_support import StoreSupport
-from .support_dialog import SponsorsDialog, SupportDialog, supporter_icon
+from .support_dialog import SponsorsDialog, SupportDialog, supporter_badge_style, supporter_icon
 from .license_info import SOURCE_URL, license_documents
 
 
@@ -213,11 +213,22 @@ class MainWindow(QMainWindow):
     def _update_support(self):
         if not self.support:
             return
-        owned = self.support.owned
-        self.support_action.setText(self.tr_("supporter" if owned else "support_title"))
-        self.support_action.setIcon(supporter_icon() if owned else QIcon())
+        tier = self.support.highest_tier
+        if tier:
+            self.support_action.setText(self.tr_(f"supporter_{tier}"))
+            self.support_action.setIcon(supporter_icon())
+        else:
+            self.support_action.setText(self.tr_("support_title"))
+            self.support_action.setIcon(QIcon())
         if self.supporter_badge is not None:
-            self.supporter_badge.setVisible(owned)
+            if tier:
+                badge_text = self.tr_(f"supporter_badge_{tier}")
+                self.supporter_badge.setText(badge_text)
+                self.supporter_badge.setAccessibleName(badge_text)
+                self.supporter_badge.setStyleSheet(supporter_badge_style(tier))
+                self.supporter_badge.setVisible(True)
+            else:
+                self.supporter_badge.setVisible(False)
 
     def show_support(self):
         if self.support_dialog is None:
@@ -600,11 +611,13 @@ class MainWindow(QMainWindow):
     def about(self) -> None:
         text = self.tr_("version_text", version=__version__)
         text += "\n\nCopyright (C) 2026 Takuma Yamada"
-        if self.support and self.support.owned:
+        tier = self.support.highest_tier if self.support else None
+        if tier:
             box = QMessageBox(self)
             box.setWindowTitle(self.tr_("version_info"))
             box.setIconPixmap(supporter_icon().pixmap(64, 64))
-            box.setText(f"{text}\n\n{self.tr_('supporter_badge')} — {self.tr_('support_thanks')}")
+            badge_text = self.tr_(f"supporter_badge_{tier}")
+            box.setText(f"{text}\n\n{badge_text} — {self.tr_('support_thanks')}")
             box.setStandardButtons(QMessageBox.StandardButton.Ok)
             box.exec()
             return
