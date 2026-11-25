@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+- Expanded East Asia localization for South Korea, Taiwan, Hong Kong, and Macao: added Traditional Chinese locale (`locales/zh_TW.json` / `繁體中文`) with automatic OS/Qt locale routing for `zh_TW`, `zh_HK`, `zh_MO`, and `zh_Hant` in `folimeld/i18n.py`, completed all 37 missing password and sample-PDF keys in `locales/ko.json` and `locales/zh.json` aligned with `MihirakiPDFUtility_Android` / `MihirakiPDFViewer_Android` terminology, added unit tests (`tests/test_i18n.py`), and added Korean (`#ko`) and Traditional Chinese (`#zh-Hant`) sections to `docs/privacy/index.html`.
+
 - Added a Microsoft Store (MSIX)-only update check (`folimeld/store_update.py`): checks Windows' built-in `StoreContext.get_app_and_optional_store_package_updates_async()` on startup, displays an "Update" button in the status bar only when a newer Store package is available, and opens Folimeld's Microsoft Store product page (`ms-windows-store://pdp/?ProductId=9P5X2JFZRJC3`) when clicked; synchronized all 8 locales, added unit tests (`tests/test_store_update.py`), and updated the privacy policy (`docs/privacy/index.html`).
 
 - Extended the Microsoft Store (MSIX)-only one-time in-app purchase "Folimeld Supporter Badge" to three Durable tiers (Bronze `folimeld.supporter.bronze` \$1.99 / ¥200, Silver `folimeld.supporter.silver` \$4.99 / ¥500, Gold `folimeld.supporter.gold` \$9.99 / ¥1,000), displaying tier-styled permanent status bar badges, About dialog badges, and Help menu items for the highest owned tier; synchronized all 8 locales (`locales/*.json`), unit tests (`tests/test_store_support.py`), and bilingual specifications (`documentation/windows-store-purchases_ja.md`, `windows-store-purchases.md`).

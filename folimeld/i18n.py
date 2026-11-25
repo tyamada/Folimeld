@@ -9,14 +9,15 @@ from PySide6.QtCore import QLibraryInfo, QLocale, QTranslator
 
 
 LANGUAGES = {
-    "ja": "日本語", "en": "English", "zh": "简体中文", "ko": "한국어",
-    "de": "Deutsch", "fr": "Français", "es": "Español", "pt": "Português",
+    "ja": "日本語", "en": "English", "zh": "简体中文", "zh_TW": "繁體中文",
+    "ko": "한국어", "de": "Deutsch", "fr": "Français", "es": "Español", "pt": "Português",
 }
 
 STANDARD_BUTTON_LABELS = {
     "ja": {"discard": "保存しない", "cancel": "キャンセル"},
     "en": {"discard": "Discard", "cancel": "Cancel"},
     "zh": {"discard": "不保存", "cancel": "取消"},
+    "zh_TW": {"discard": "不儲存", "cancel": "取消"},
     "ko": {"discard": "저장 안 함", "cancel": "취소"},
     "de": {"discard": "Nicht speichern", "cancel": "Abbrechen"},
     "fr": {"discard": "Ne pas enregistrer", "cancel": "Annuler"},
@@ -24,7 +25,23 @@ STANDARD_BUTTON_LABELS = {
     "pt": {"discard": "Não guardar", "cancel": "Cancelar"},
 }
 
-QT_LANGUAGE_CODES = {"zh": "zh_CN", "pt": "pt_BR"}
+QT_LANGUAGE_CODES = {"zh": "zh_CN", "zh_TW": "zh_TW", "pt": "pt_BR"}
+
+TRADITIONAL_CHINESE_SUBTAGS = {"tw", "hk", "mo", "hant"}
+
+
+def normalize_locale_code(raw: str) -> str:
+    """Map an OS or Qt locale string (e.g. zh_TW, zh-HK, ko_KR) to a Folimeld language key."""
+    if not raw:
+        return "en"
+    parts = [p.lower() for p in raw.replace("-", "_").split("_") if p]
+    if not parts or parts[0] in {"c", "posix"}:
+        return "en"
+    if parts[0] == "zh":
+        if any(sub in TRADITIONAL_CHINESE_SUBTAGS for sub in parts[1:]):
+            return "zh_TW"
+        return "zh"
+    return parts[0]
 
 
 def install_qt_translator(app, language: str) -> QTranslator:
@@ -55,16 +72,12 @@ class I18n:
             try:
                 language_id = ctypes.windll.kernel32.GetUserDefaultUILanguage()
                 windows_name = locale.windows_locale.get(language_id, "")
-                code = windows_name.split("_")[0].lower()
-                if code and code not in {"c", "posix"}:
-                    return code
+                if windows_name:
+                    return normalize_locale_code(windows_name)
             except (AttributeError, OSError):
                 pass
 
-        code = QLocale.system().name().split("_")[0].lower()
-        if code and code not in {"c", "posix"}:
-            return code
-        return "en"
+        return normalize_locale_code(QLocale.system().name())
 
     def load(self, language: str) -> None:
         from .resources import resource_root
