@@ -120,5 +120,7 @@
   "supporter_gold": "서포터 (골드)…",
   "support_owned": "구매 완료",
   "support_buy_tier": "{tier} 구매 — {price}",
-  "support_owned_tier": "{tier} — {owned}"
+  "support_owned_tier": "{tier} — {owned}",
+  "store_update_available": "업데이트",
+  "store_update_tooltip": "Microsoft Store에 업데이트가 있습니다. 클릭하여 스토어 페이지를 엽니다."
 }

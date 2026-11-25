@@ -25,6 +25,7 @@ from .thumbnails import ThumbnailController
 from .widgets import THUMBNAIL_SIZES, ThumbnailList
 from .windows_integration import register_open_with, is_packaged
 from .store_support import StoreSupport
+from .store_update import StoreUpdateChecker, open_store_product_page, store_update_button_style
 from .support_dialog import SponsorsDialog, SupportDialog, supporter_badge_style, supporter_icon
 from .license_info import SOURCE_URL, license_documents
 
@@ -59,6 +60,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.pages)
         self.resize(1100, 760)
         self.support = StoreSupport(self) if is_packaged() else None
+        self.store_update = StoreUpdateChecker(self) if is_packaged() else None
         self.support_dialog = None
         self.sponsors_dialog = None
         self.help_dialog = None
@@ -69,6 +71,9 @@ class MainWindow(QMainWindow):
         if self.support:
             self.support.changed.connect(self._update_support)
             QTimer.singleShot(0, self.support.refresh)
+        if self.store_update:
+            self.store_update.changed.connect(self._update_store_update_ui)
+            QTimer.singleShot(0, self.store_update.check)
         self.pages.itemSelectionChanged.connect(self.update_state)
         self.update_state()
 
@@ -202,6 +207,26 @@ class MainWindow(QMainWindow):
             badge.hide()
             self.statusBar().addPermanentWidget(badge)
             self.supporter_badge = badge
+        self.store_update_button: QToolButton | None = None
+        if self.store_update:
+            update_btn = QToolButton(self)
+            update_btn.setObjectName("store_update_button")
+            update_btn.setAutoRaise(True)
+            update_btn.setText(self.tr_("store_update_available"))
+            update_btn.setToolTip(self.tr_("store_update_tooltip"))
+            update_btn.setAccessibleName(self.tr_("store_update_available"))
+            update_btn.setStyleSheet(store_update_button_style())
+            update_btn.clicked.connect(self.open_store_update)
+            update_btn.hide()
+            self.statusBar().addPermanentWidget(update_btn)
+            self.store_update_button = update_btn
+
+    def _update_store_update_ui(self) -> None:
+        if self.store_update_button is not None and self.store_update is not None:
+            self.store_update_button.setVisible(self.store_update.update_available)
+
+    def open_store_update(self) -> None:
+        open_store_product_page()
 
     def show_sponsors(self):
         if self.sponsors_dialog is None:

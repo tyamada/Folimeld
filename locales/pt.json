@@ -120,5 +120,7 @@
   "supporter_gold": "Apoiador (Ouro)…",
   "support_owned": "Adquirido",
   "support_buy_tier": "Comprar {tier} — {price}",
-  "support_owned_tier": "{tier} — {owned}"
+  "support_owned_tier": "{tier} — {owned}",
+  "store_update_available": "Atualizar",
+  "store_update_tooltip": "Há uma atualização disponível na Microsoft Store. Clique para abrir a página da loja."
 }

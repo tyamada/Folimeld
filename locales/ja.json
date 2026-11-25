@@ -157,5 +157,7 @@
   "supporter_gold": "サポーター（ゴールド）…",
   "support_owned": "購入済み",
   "support_buy_tier": "{tier} を購入 — {price}",
-  "support_owned_tier": "{tier} — {owned}"
+  "support_owned_tier": "{tier} — {owned}",
+  "store_update_available": "更新する",
+  "store_update_tooltip": "Microsoft Store で更新版が公開されています。クリックして商品ページを開きます。"
 }

@@ -138,7 +138,8 @@ def test_store_build_supporter_badge_tiers_and_about():
     from folimeld.app import MainWindow
     _app = QApplication.instance() or QApplication([])
     with patch('folimeld.app.is_packaged', return_value=True), \
-         patch('folimeld.store_support.StoreSupport.refresh'):
+         patch('folimeld.store_support.StoreSupport.refresh'), \
+         patch('folimeld.store_update.StoreUpdateChecker.check'):
         window = MainWindow()
         assert window.support is not None
         assert window.supporter_badge is not None

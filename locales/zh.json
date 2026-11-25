@@ -120,5 +120,7 @@
   "supporter_gold": "支持者（黄金）…",
   "support_owned": "已购买",
   "support_buy_tier": "购买 {tier} — {price}",
-  "support_owned_tier": "{tier} — {owned}"
+  "support_owned_tier": "{tier} — {owned}",
+  "store_update_available": "更新",
+  "store_update_tooltip": "Microsoft Store 中有可用更新。点击打开商店页面。"
 }

@@ -4,6 +4,8 @@
 
 ## 未リリース
 
+- Microsoft Store（MSIX）版限定の更新確認機能（`folimeld/store_update.py`）を追加: 起動時に Windows 標準の `StoreContext.get_app_and_optional_store_package_updates_async()` で Microsoft Store の更新版有無を確認し、更新版がある場合のみステータスバー右端へ「更新する」ボタンを表示してクリック時に Microsoft Store の商品ページ（`ms-windows-store://pdp/?ProductId=9P5X2JFZRJC3`）を開くよう実装。全 8 言語の文言・単体テスト（`tests/test_store_update.py`）・プライバシーポリシー（`docs/privacy/index.html`）を更新。
+
 - Microsoft Store（MSIX）版限定の1回限りアプリ内購入「Folimeld サポーターバッジ」を 3 ティア構成（Bronze `folimeld.supporter.bronze` \$1.99 / ¥200、Silver `folimeld.supporter.silver` \$4.99 / ¥500、Gold `folimeld.supporter.gold` \$9.99 / ¥1,000、いずれも Durable / 永続）へ拡張し、最上位所有ティアに応じたランク別カラーのステータスバー常設バッジ・バージョン情報（About）ダイアログ表示・ヘルプメニュー表示を実装。全 8 言語の文言（`locales/*.json`）・単体テスト（`tests/test_store_support.py`）・日英仕様書（`documentation/windows-store-purchases_ja.md` / `windows-store-purchases.md`）を同期。
 
 - macOS Homebrew、ARM64 BSD 3種（FreeBSD 15.1 aarch64 / NetBSD 11.1 aarch64 / OpenBSD 8.0 arm64）、および Ubuntu / Debian ARM64（DEB / strict Snap）のパッケージを 0.3.7 ベースへ更新・公開:

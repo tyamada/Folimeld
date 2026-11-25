@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+- Added a Microsoft Store (MSIX)-only update check (`folimeld/store_update.py`): checks Windows' built-in `StoreContext.get_app_and_optional_store_package_updates_async()` on startup, displays an "Update" button in the status bar only when a newer Store package is available, and opens Folimeld's Microsoft Store product page (`ms-windows-store://pdp/?ProductId=9P5X2JFZRJC3`) when clicked; synchronized all 8 locales, added unit tests (`tests/test_store_update.py`), and updated the privacy policy (`docs/privacy/index.html`).
+
 - Extended the Microsoft Store (MSIX)-only one-time in-app purchase "Folimeld Supporter Badge" to three Durable tiers (Bronze `folimeld.supporter.bronze` \$1.99 / ¥200, Silver `folimeld.supporter.silver` \$4.99 / ¥500, Gold `folimeld.supporter.gold` \$9.99 / ¥1,000), displaying tier-styled permanent status bar badges, About dialog badges, and Help menu items for the highest owned tier; synchronized all 8 locales (`locales/*.json`), unit tests (`tests/test_store_support.py`), and bilingual specifications (`documentation/windows-store-purchases_ja.md`, `windows-store-purchases.md`).
 
 - Updated and published 0.3.7 packages for macOS Homebrew, ARM64 BSDs (FreeBSD 15.1 aarch64, NetBSD 11.1 aarch64, OpenBSD 8.0 arm64), and Ubuntu / Debian ARM64 (DEB and strict Snap):
