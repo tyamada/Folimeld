@@ -14,16 +14,16 @@ Aligned with App Store and Google Play, Folimeld offers **three one-time Durable
 | **Silver** | `9ND5X26S71X8` | `folimeld.supporter.silver` | **Folimeld サポーターバッジ（シルバー）** | **Folimeld Supporter Badge (Silver)** | **Folimeld 서포터 배지 (실버)** | **Folimeld 支持者徽章（銀級）** |
 | **Gold** | `9PH1DTBHSHZN` | `folimeld.supporter.gold` | **Folimeld サポーターバッジ（ゴールド）** | **Folimeld Supporter Badge (Gold)** | **Folimeld 서포터 배지 (골드)** | **Folimeld 支持者徽章（金級）** |
 
-### Regional market pricing (aligned with `MihirakiPDFViewer_Android` regional pricing)
+### Regional market pricing (configured Partner Center tiers, aligned with `MihirakiPDFViewer_Android`)
 
-| Market | Currency | Bronze | Silver | Gold |
-| --- | --- | --- | --- | --- |
-| United States (base / default) | USD | **\$1.99** | **\$4.99** | **\$9.99** |
-| Japan | JPY | **¥200** | **¥500** | **¥1,000** |
-| South Korea | KRW | **₩1,900** | **₩4,900** | **₩9,900** |
-| Taiwan | TWD | **NT\$60** | **NT\$150** | **NT\$300** |
-| Hong Kong SAR | HKD | **HK\$15** | **HK\$39** | **HK\$79** |
-| Macao SAR | MOP | **MOP 16** | **MOP 40** | **MOP 80** |
+| Market | Currency | Bronze | Silver | Gold | Notes (Partner Center tiers) |
+| --- | --- | --- | --- | --- | --- |
+| United States (base / default) | USD | **\$1.99** | **\$4.99** | **\$9.99** | Base price |
+| Japan | JPY | **¥200** | **¥500** | **¥1,000** | Exact tier match |
+| South Korea | KRW | **₩1,900** | **₩4,900** | **₩9,900** | Exact tier match |
+| Taiwan | TWD | **NT\$59** | **NT\$149** | **NT\$299** | Closest available tiers to 60 / 150 / 300 |
+| Hong Kong SAR | HKD | **HK\$15** | **HK\$39** | **HK\$78** | Closest available tier to 79 (77 / 78 / 81) |
+| Macao SAR | USD | **\$1.99** | **\$4.99** | **\$9.99** | Partner Center bills Macao SAR in USD (no MOP tier) |
 
 - Product IDs are defined in `SUPPORTER_TIERS` inside [folimeld/store_support.py](../folimeld/store_support.py).
 - Configure the USD base price tiers in Partner Center and apply market-specific overrides for Japan, South Korea, Taiwan, Hong Kong SAR, and Macao SAR (if a market tier in Partner Center differs slightly, select the closest tier and record the exact configured amount).

@@ -14,16 +14,16 @@ App Store・Google Play と共通の **Bronze / Silver / Gold の 3 ティア構
 | **Silver** | `9ND5X26S71X8` | `folimeld.supporter.silver` | **Folimeld サポーターバッジ（シルバー）** | **Folimeld Supporter Badge (Silver)** | **Folimeld 서포터 배지 (실버)** | **Folimeld 支持者徽章（銀級）** |
 | **Gold** | `9PH1DTBHSHZN` | `folimeld.supporter.gold` | **Folimeld サポーターバッジ（ゴールド）** | **Folimeld Supporter Badge (Gold)** | **Folimeld 서포터 배지 (골드)** | **Folimeld 支持者徽章（金級）** |
 
-### 地域別価格設定（`MihirakiPDFViewer_Android` 地域価格表準拠）
+### 地域別価格設定（Partner Center 実設定値・`MihirakiPDFViewer_Android` 地域価格表準拠）
 
-| 地域 | 通貨 | Bronze | Silver | Gold |
-| --- | --- | --- | --- | --- |
-| 米国（基準・その他市場） | USD | **\$1.99** | **\$4.99** | **\$9.99** |
-| 日本 | JPY | **¥200** | **¥500** | **¥1,000** |
-| 韓国 | KRW | **₩1,900** | **₩4,900** | **₩9,900** |
-| 台湾 | TWD | **NT\$60** | **NT\$150** | **NT\$300** |
-| 香港 | HKD | **HK\$15** | **HK\$39** | **HK\$79** |
-| マカオ | MOP | **MOP 16** | **MOP 40** | **MOP 80** |
+| 地域 | 通貨 | Bronze | Silver | Gold | 備考（Partner Center ティア） |
+| --- | --- | --- | --- | --- | --- |
+| 米国（基準・その他市場） | USD | **\$1.99** | **\$4.99** | **\$9.99** | 基準価格 |
+| 日本 | JPY | **¥200** | **¥500** | **¥1,000** | 希望額と一致 |
+| 韓国 | KRW | **₩1,900** | **₩4,900** | **₩9,900** | 希望額と一致 |
+| 台湾 | TWD | **NT\$59** | **NT\$149** | **NT\$299** | 60 / 150 / 300 に最も近い規定ティア |
+| 香港 | HKD | **HK\$15** | **HK\$39** | **HK\$78** | 79 に最も近い規定ティア（77 / 78 / 81） |
+| マカオ | USD | **\$1.99** | **\$4.99** | **\$9.99** | Partner Center 上は USD 課金市場（MOP 非対応） |
 
 - Product ID は [folimeld/store_support.py](../folimeld/store_support.py) の `SUPPORTER_TIERS` に定義しています。
 - 基準価格（USD）を設定した上で、Partner Center の市場別価格設定から日本・韓国・台湾・香港・マカオの個別価格を指定します（Partner Center の通貨ティア制約により端数が異なる場合は最も近いティアを選択し、実設定値を記録します）。
