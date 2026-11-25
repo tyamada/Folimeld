@@ -8,14 +8,25 @@ This feature is **exclusive to the Microsoft Store (MSIX) edition**. Non-Store b
 
 Aligned with App Store and Google Play, Folimeld offers **three one-time Durable tiers (Bronze / Silver / Gold)** with **Forever** product lifetime:
 
-| Tier | Store ID | Product ID (`OFFER_TOKEN`) | Japanese title (`ja-JP`) | English title (`en-US`) | Base price (USD) | Japan market price (JPY) |
+| Tier | Store ID | Product ID (`OFFER_TOKEN`) | Japanese (`ja-JP`) | English (`en-US`) | Korean (`ko-KR`) | Traditional Chinese (`zh-TW` / `zh-HK` / `zh-MO`) |
 | --- | --- | --- | --- | --- | --- | --- |
-| **Bronze** | `9NJRQ70XV17C` | `folimeld.supporter.bronze` | **Folimeld サポーターバッジ（ブロンズ）** | **Folimeld Supporter Badge (Bronze)** | **\$1.99** | **¥200** |
-| **Silver** | `9ND5X26S71X8` | `folimeld.supporter.silver` | **Folimeld サポーターバッジ（シルバー）** | **Folimeld Supporter Badge (Silver)** | **\$4.99** | **¥500** |
-| **Gold** | `9PH1DTBHSHZN` | `folimeld.supporter.gold` | **Folimeld サポーターバッジ（ゴールド）** | **Folimeld Supporter Badge (Gold)** | **\$9.99** | **¥1,000** |
+| **Bronze** | `9NJRQ70XV17C` | `folimeld.supporter.bronze` | **Folimeld サポーターバッジ（ブロンズ）** | **Folimeld Supporter Badge (Bronze)** | **Folimeld 서포터 배지 (브론즈)** | **Folimeld 支持者徽章（銅級）** |
+| **Silver** | `9ND5X26S71X8` | `folimeld.supporter.silver` | **Folimeld サポーターバッジ（シルバー）** | **Folimeld Supporter Badge (Silver)** | **Folimeld 서포터 배지 (실버)** | **Folimeld 支持者徽章（銀級）** |
+| **Gold** | `9PH1DTBHSHZN` | `folimeld.supporter.gold` | **Folimeld サポーターバッジ（ゴールド）** | **Folimeld Supporter Badge (Gold)** | **Folimeld 서포터 배지 (골드)** | **Folimeld 支持者徽章（金級）** |
+
+### Regional market pricing (aligned with `MihirakiPDFViewer_Android` regional pricing)
+
+| Market | Currency | Bronze | Silver | Gold |
+| --- | --- | --- | --- | --- |
+| United States (base / default) | USD | **\$1.99** | **\$4.99** | **\$9.99** |
+| Japan | JPY | **¥200** | **¥500** | **¥1,000** |
+| South Korea | KRW | **₩1,900** | **₩4,900** | **₩9,900** |
+| Taiwan | TWD | **NT\$60** | **NT\$150** | **NT\$300** |
+| Hong Kong SAR | HKD | **HK\$15** | **HK\$39** | **HK\$79** |
+| Macao SAR | MOP | **MOP 16** | **MOP 40** | **MOP 80** |
 
 - Product IDs are defined in `SUPPORTER_TIERS` inside [folimeld/store_support.py](../folimeld/store_support.py).
-- Configure the USD base price tiers in Partner Center and override the Japan market price to **¥200 / ¥500 / ¥1,000**.
+- Configure the USD base price tiers in Partner Center and apply market-specific overrides for Japan, South Korea, Taiwan, Hong Kong SAR, and Macao SAR (if a market tier in Partner Center differs slightly, select the closest tier and record the exact configured amount).
 
 ### In-app cosmetic changes after purchase (Store edition only)
 
