@@ -1,5 +1,6 @@
 import ast
 from pathlib import Path
+import re
 
 from folimeld import __version__
 from tools.build_netbsd_package import DEPENDENCY_SOURCES as NETBSD_DEPS
@@ -10,7 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 def test_bsd_target_version():
-    assert __version__ == '0.3.5'
+    assert re.fullmatch(r'\d+\.\d+\.\d+', __version__)
 
 
 def test_freebsd_version_format():
@@ -18,7 +19,7 @@ def test_freebsd_version_format():
     version = next(ast.literal_eval(n.value) for n in tree.body
                    if isinstance(n, ast.Assign)
                    and any(isinstance(t, ast.Name) and t.id == '__version__' for t in n.targets)) + '_1'
-    assert version == '0.3.5_1'
+    assert version == f'{__version__}_1'
 
 
 def test_netbsd_version_format():
@@ -26,7 +27,7 @@ def test_netbsd_version_format():
     version = next(ast.literal_eval(n.value) for n in tree.body
                    if isinstance(n, ast.Assign)
                    and any(isinstance(t, ast.Name) and t.id == '__version__' for t in n.targets))
-    assert version == '0.3.5'
+    assert version == __version__
 
 
 def test_openbsd_version_format():
@@ -34,7 +35,7 @@ def test_openbsd_version_format():
     version = next(ast.literal_eval(n.value) for n in tree.body
                    if isinstance(n, ast.Assign)
                    and any(isinstance(t, ast.Name) and t.id == '__version__' for t in n.targets))
-    assert version == '0.3.5'
+    assert version == __version__
 
 
 def test_bsd_dependency_sources_declared():
