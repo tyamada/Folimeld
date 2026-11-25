@@ -108,6 +108,18 @@ Folimeld 0.3.7 の新機能（「サンプルPDFを開く…」「PDFを閉じ�
   ```
 - **対応ソース公開**: GitHub Releases タグ [`windows-store-v1.0.4.0`](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.4.0) にて対応ソース ZIP・`SHA256SUMS.txt`・`source-association.json` を公開済み。
 
+## Submission 4（Folimeld 1.0.5.0: アプリ版 0.3.8 / Store 更新確認＋3 ティア サポーターバッジ UI）の公開記録
+
+- **版番号**: パッケージ版 `1.0.5.0`、アプリ表示版 `0.3.8`（ブランチ `release/windows-store-v1.0.5.0`、コミット `9ef9c1e44edac9d47a84b6386ee703304684fa29`）
+- **対象アーキテクチャ**: `x64`（`0x8664`）および `arm64`（`0xAA64`）
+- **主な新機能（Store 版限定）**:
+  - Windows 標準の `StoreContext.get_app_and_optional_store_package_updates_async()` による起動時更新確認と、更新版がある場合のステータスバー「更新する」ボタン（クリックで `ms-windows-store://pdp/?ProductId=9P5X2JFZRJC3` を開く）
+  - 3 ティア サポーターバッジ UI（Bronze / Silver / Gold、`assets/tip-icon/` 同梱）
+- **提出・公開状況**: 2026年11月25日に Partner Center（Submission 4 / ID `1152921505702500801`）へ x64・ARM64 両パッケージを提出し、同日認定合格・自動公開を確認済み。
+  - `Folimeld_1.0.5.0_x64.msix`（83,404,506 bytes、SHA-256: `B430CBBA5C144E8F1FBC99302BA0B8AE4C8F580E923942D1689EFEE0CCBF6FDF`）
+  - `Folimeld_1.0.5.0_arm64.msix`（66,785,943 bytes、SHA-256: `C5E9C8F2394EC1600EE4B69A5762FC6582A62575E120D1D8CC4511C41297F0EE`）
+- **対応ソース公開**: GitHub Releases タグ [`windows-store-v1.0.5.0`](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.5.0) にて対応ソース ZIP・`SHA256SUMS.txt`・`source-association.json` を公開済み。
+
 ## 公式資料
 
 - [提出方式の比較](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/choose-distribution-path)

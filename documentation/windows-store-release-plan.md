@@ -108,6 +108,18 @@ Plan for the next update (Submission 3) bringing Folimeld 0.3.7 features (“Ope
   ```
 - **Corresponding source publication**: Published matching source ZIP, `SHA256SUMS.txt`, and `source-association.json` on GitHub Releases under tag [`windows-store-v1.0.4.0`](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.4.0).
 
+## Submission 4 publication record (Folimeld 1.0.5.0: app 0.3.8 / Store update check + 3-tier Supporter Badge UI)
+
+- **Versions**: MSIX package version `1.0.5.0`, application version `0.3.8` (branch `release/windows-store-v1.0.5.0`, commit `9ef9c1e44edac9d47a84b6386ee703304684fa29`).
+- **Target architectures**: `x64` (`0x8664`) and `arm64` (`0xAA64`).
+- **New Store-only features**:
+  - Startup update check via Windows' built-in `StoreContext.get_app_and_optional_store_package_updates_async()`, displaying a status bar "Update" button that opens `ms-windows-store://pdp/?ProductId=9P5X2JFZRJC3` when a newer Store package is available.
+  - 3-tier Supporter Badge UI (Bronze / Silver / Gold, bundling `assets/tip-icon/`).
+- **Submission & publication status**: Submitted both x64 and ARM64 packages to Partner Center (Submission 4 / ID `1152921505702500801`) on 2026-11-25; passed certification and confirmed live on Microsoft Store the same day.
+  - `Folimeld_1.0.5.0_x64.msix` (83,404,506 bytes, SHA-256: `B430CBBA5C144E8F1FBC99302BA0B8AE4C8F580E923942D1689EFEE0CCBF6FDF`)
+  - `Folimeld_1.0.5.0_arm64.msix` (66,785,943 bytes, SHA-256: `C5E9C8F2394EC1600EE4B69A5762FC6582A62575E120D1D8CC4511C41297F0EE`)
+- **Corresponding source publication**: Published matching source ZIP, `SHA256SUMS.txt`, and `source-association.json` on GitHub Releases under tag [`windows-store-v1.0.5.0`](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.5.0).
+
 ## Official references
 
 - [Distribution path comparison](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/choose-distribution-path)
