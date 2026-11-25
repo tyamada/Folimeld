@@ -38,7 +38,7 @@ BSDの各配布物は、対象のOS版・CPUと検証記録に対応していま
 
 ## ダウンロード
 
-Windows版の **Folimeld 1.0.1.0（Windows 11 x64）** は、Microsoft Storeで日本と米国に公開しています。無料で入手できます。 [日本のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [米国のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
+Windows版の **Folimeld 1.0.4.0（Windows 11 x64／ARM64）** は、Microsoft Storeで日本と米国に公開しています。無料で入手できます。 [日本のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [米国のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
 
 **Linux版は旧版（0.3.3・0.3.4を含む）もすべてプレリリース（試験配布）です。安定版やLatestへ昇格させません。** [Linux公開方針とチェックリスト](documentation/linux-prerelease-policy_ja.md)を参照してください。Windows・macOS・BSDの分類は変更しません。
 
@@ -48,7 +48,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 
 | OS | CPU | 配布形式・版 | 公開先 |
 | --- | --- | --- | --- |
-| Windows 11 | x64 | Microsoft Store / 1.0.1.0 | [対応ソース](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.1.0) |
+| Windows 11 | x64 / ARM64 | Microsoft Store / 1.0.4.0 | [対応ソース・補足台帳](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.4.0) |
 | Windows 11 | x64 | Desktop インストーラー / 0.3.7.0（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1) |
 | Windows 11 | x64 | ソース＋uv / 0.3.7（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.7-preview.1) |
 | Windows 11 | x64 | uv tool install (Wheel) / 0.3.7 preview.1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1) |
@@ -87,7 +87,8 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 
 - **Microsoft Storeからインストール** — 上の日本または米国の掲載リンクを開き、Microsoft Storeで「入手」または「インストール」を選びます。完了後、スタートメニューからFolimeldを起動します。
 - **ソースを取得** — [公開リポジトリのmain](https://github.com/tyamada/Folimeld/tree/main)の「Code → Download ZIP」またはGitから、Windows用コードとビルドスクリプトを取得できます。
-- **Store版1.0.1.0 x64の対応ソース** — [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt) · [提出物との対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json)。公開用ZIPでは文書3件を公開向けに整理し、アプリコードとビルド用ファイルは提出時のソースと同一です。
+- **Store版1.0.4.0 x64／ARM64の対応ソース** — [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.4.0) · [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/Folimeld-1.0.4.0-windows-source.zip) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/SHA256SUMS.txt) · [提出物との対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/source-association.json) · [補足台帳](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/source-manifest-supplement.json)。対応記録には両CPUのMSIX・実行ファイルとソースZIPのSHA-256を記載しています。ソースZIPは変更せず、元の内部台帳にない2ファイルを補足台帳に記録しています。第三者依存ライブラリのソースアーカイブはこのZIPに含まれません。
+- **旧Store版1.0.1.0 x64の対応ソース** — [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt) · [提出物との対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json)。公開用ZIPでは文書3件を公開向けに整理し、アプリコードとビルド用ファイルは提出時のソースと同一です。
 
 Windows 11版の標準配布経路はMicrosoft Storeです。Store向けMSIXの開発手順は[開発ガイド](DEVELOPMENT_ja.md)を参照してください。
 
@@ -684,13 +685,13 @@ Folimeld 0.3.5では、この案内をFreeBSD・NetBSD・OpenBSD、専用ラン�
 
 ## TODO
 
-- Microsoft Store次期リリース（Submission 2 / 1.0.2.0: x64 + ARM64）の認定審査通過を待機し、公開後にStore配信版1.0.1.0からの更新保持検証・ARM64実機受入検証を実施する。
+- Store版1.0.4.0（x64／ARM64）は公開済みです。Store配信版1.0.1.0から現行版への更新保持検証と、現行ARM64版の実機受入検証は今後の確認事項です。
 - Debian、Ubuntu、BSD（FreeBSD、NetBSD、OpenBSD）の各パッケージを0.3.5ベースに更新し、検証およびリリースを準備する。
 
 ## 既知の問題点と制約
 
-- Microsoft Storeで配信中の1.0.1.0はWindows 11 x64向けです。ARM64ネイティブのStore配信版は未提供です。
-- Store配信版のメインウィンドウはPer-Monitor V2を確認済みです。150％・200％での表示と操作は未検証です。
+- Microsoft Store版1.0.4.0はWindows 11 x64／ARM64向けです。公開パッケージ情報の確認と、各CPU実機での導入・更新検証は区別しています。
+- Store配信版1.0.1.0のメインウィンドウはPer-Monitor V2を確認済みです。150％・200％での表示と操作は未検証です。
 - 旧開発ビルドのローカルWACKではDPI警告（TEST92）と任意検査のFAIL（TEST88）が出ました。旧DPI警告の原因と、Store認定でのTEST92・TEST88・`runFullTrust` の個別判定は未確認です。Store版1.0.1.0は提出全体として認定に合格しています。[受入記録](documentation/windows-store-acceptance_ja.md)
 
 ## 開発・コントリビューション

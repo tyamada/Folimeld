@@ -38,7 +38,7 @@ Each BSD preview has its own target OS version, CPU, and verification record. Se
 
 ## Downloads
 
-**Folimeld 1.0.1.0 for Windows 11 (x64)** is available for free on the Microsoft Store in Japan and the United States. [Microsoft Store (Japan)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [Microsoft Store (United States)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
+**Folimeld 1.0.4.0 for Windows 11 (x64 / ARM64)** is available for free on the Microsoft Store in Japan and the United States. [Microsoft Store (Japan)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [Microsoft Store (United States)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
 
 **All Linux editions, including older versions such as 0.3.3 and 0.3.4, are prereleases (test distributions); they are not promoted to stable releases or Latest.** See the [Linux publication policy and checklist](documentation/linux-prerelease-policy.md). Windows, macOS and BSD classifications are unchanged.
 
@@ -48,7 +48,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 
 | OS | CPU | Distribution and version | Release |
 | --- | --- | --- | --- |
-| Windows 11 | x64 | Microsoft Store / 1.0.1.0 | [Matching source](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.1.0) |
+| Windows 11 | x64 / ARM64 | Microsoft Store / 1.0.4.0 | [Matching source and supplemental manifest](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.4.0) |
 | Windows 11 | x64 | Desktop installer / 0.3.7.0 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1) |
 | Windows 11 | x64 | Source + uv / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.7-preview.1) |
 | Windows 11 | x64 | uv tool install (Wheel) / 0.3.7 preview.1 (prerelease) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1) |
@@ -87,7 +87,8 @@ Versions in the table are specific to each distribution channel. The Windows Sto
 
 - **Install from the Microsoft Store** — Open the Japan or United States listing above, then select **Get** or **Install** in the Microsoft Store. Launch Folimeld from the Start menu when installation completes.
 - **Get the source** — Use **Code → Download ZIP** or Git to get the Windows code and build scripts from the [public main branch](https://github.com/tyamada/Folimeld/tree/main).
-- **Source for Store version 1.0.1.0 x64** — [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt) · [Submission association record](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json). Three documentation files were revised for publication. The application source and build files match the submitted build's source snapshot.
+- **Source for Store version 1.0.4.0 x64 / ARM64** — [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.4.0) · [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/Folimeld-1.0.4.0-windows-source.zip) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/SHA256SUMS.txt) · [Submission association record](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/source-association.json) · [Supplemental manifest](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/source-manifest-supplement.json). The association record lists SHA-256 hashes for the MSIX packages and executables of both CPUs and the source ZIP. The source ZIP is unchanged; the supplement records two files omitted from its original internal manifest. Third-party dependency source archives are not included in this ZIP.
+- **Source for earlier Store version 1.0.1.0 x64** — [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt) · [Submission association record](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json). Three documentation files were revised for publication. The application source and build files match the submitted build's source snapshot.
 
 The standard Windows 11 distribution channel is Microsoft Store. See the [development guide](DEVELOPMENT.md) for the Store MSIX workflow.
 
@@ -684,13 +685,13 @@ In Folimeld 0.3.5, this guidance is also enabled on FreeBSD, NetBSD and OpenBSD,
 
 ## TODO
 
-- Await Microsoft Store certification for Submission 2 (1.0.2.0: x64 + ARM64 dual architecture), and complete upgrade retention verification from Store 1.0.1.0 and native ARM64 hardware acceptance upon publication.
+- Store version 1.0.4.0 (x64 / ARM64) is published. Upgrade retention from Store version 1.0.1.0 to the current version and hardware acceptance of the current ARM64 version remain to be checked.
 - Update Debian, Ubuntu, and BSD (FreeBSD, NetBSD, OpenBSD) packages to the 0.3.5 baseline, and prepare verification and releases.
 
 ## Known issues and limitations
 
-- Microsoft Store version 1.0.1.0 targets Windows 11 x64. A native ARM64 Store package is pending.
-- The main window of the Store-delivered build was confirmed to use Per-Monitor V2. Visual layout and operation at 150% and 200% scaling remain untested.
+- Microsoft Store version 1.0.4.0 targets Windows 11 x64 / ARM64. Checking published package information is separate from installation and upgrade validation on hardware for each CPU.
+- The main window of Store version 1.0.1.0 was confirmed to use Per-Monitor V2. Visual layout and operation at 150% and 200% scaling remain untested.
 - Earlier local WACK runs on development builds reported a DPI warning (TEST92) and an optional test failure (TEST88). The cause of the earlier DPI warning and the individual Store certification outcomes for TEST92, TEST88 and `runFullTrust` remain unconfirmed. Store version 1.0.1.0 passed certification overall. [Acceptance record](documentation/windows-store-acceptance.md)
 
 ## Development and contributions
