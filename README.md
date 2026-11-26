@@ -38,7 +38,9 @@ Each BSD preview has its own target OS version, CPU, and verification record. Se
 
 ## Downloads
 
-**Folimeld 1.0.4.0 for Windows 11 (x64 / ARM64)** is available for free on the Microsoft Store in Japan and the United States. [Microsoft Store (Japan)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [Microsoft Store (United States)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
+The Japanese and US Microsoft Store listings were checked. Both show November 26, 2026 as the last update and announce German, Spanish, French and Portuguese translations and expanded worldwide availability. [Microsoft Store (Japan)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [Microsoft Store (United States)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
+
+The published corresponding-source Release targets Store version 1.0.7.0 (app 0.3.10, x64 / ARM64). The Store web listings do not display a numeric package version or CPU list. The currently delivered package version and CPUs, completion of worldwide rollout, and installation or upgrades on each CPU were not verified in this check.
 
 **All Linux editions, including older versions such as 0.3.3 and 0.3.4, are prereleases (test distributions); they are not promoted to stable releases or Latest.** See the [Linux publication policy and checklist](documentation/linux-prerelease-policy.md). Windows, macOS and BSD classifications are unchanged.
 
@@ -48,7 +50,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 
 | OS | CPU | Distribution and version | Release |
 | --- | --- | --- | --- |
-| Windows 11 | x64 / ARM64 | Microsoft Store / 1.0.4.0 | [Matching source and supplemental manifest](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.4.0) |
+| Windows 11 | x64 / ARM64 (source Release) | Microsoft Store / delivered version unverified | [Corresponding source for Store 1.0.7.0 (as described in the Release)](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.7.0) |
 | Windows 11 | x64 | Desktop installer / 0.3.7.0 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1) |
 | Windows 11 | x64 | Source + uv / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.7-preview.1) |
 | Windows 11 | x64 | uv tool install (Wheel) / 0.3.7 preview.1 (prerelease) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1) |
@@ -87,7 +89,8 @@ Versions in the table are specific to each distribution channel. The Windows Sto
 
 - **Install from the Microsoft Store** — Open the Japan or United States listing above, then select **Get** or **Install** in the Microsoft Store. Launch Folimeld from the Start menu when installation completes.
 - **Get the source** — Use **Code → Download ZIP** or Git to get the Windows code and build scripts from the [public main branch](https://github.com/tyamada/Folimeld/tree/main).
-- **Source for Store version 1.0.4.0 x64 / ARM64** — [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.4.0) · [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/Folimeld-1.0.4.0-windows-source.zip) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/SHA256SUMS.txt) · [Submission association record](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/source-association.json) · [Supplemental manifest](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/source-manifest-supplement.json). The association record lists SHA-256 hashes for the MSIX packages and executables of both CPUs and the source ZIP. The source ZIP is unchanged; the supplement records two files omitted from its original internal manifest. Third-party dependency source archives are not included in this ZIP.
+- **Corresponding source for Store 1.0.7.0 (as described in the Release)** — [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.7.0) · [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.7.0/Folimeld-1.0.7.0-windows-source.zip) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.7.0/SHA256SUMS.txt) · [Submission association record](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.7.0/source-association.json). The association record lists SHA-256 hashes for both submitted MSIX packages and the source ZIP, but omits the ARM64 executable hash. The ZIP excludes third-party dependency source archives. Distinguish it from the source archives GitHub generates automatically from the tag.
+- **Source for earlier Store version 1.0.4.0 x64 / ARM64** — [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.4.0) · [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/Folimeld-1.0.4.0-windows-source.zip) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/SHA256SUMS.txt) · [Submission association record](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/source-association.json) · [Supplemental manifest](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/source-manifest-supplement.json). The association record lists SHA-256 hashes for the MSIX packages and executables of both CPUs and the source ZIP. The source ZIP is unchanged; the supplement records two files omitted from its original internal manifest. Third-party dependency source archives are not included in this ZIP.
 - **Source for earlier Store version 1.0.1.0 x64** — [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt) · [Submission association record](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json). Three documentation files were revised for publication. The application source and build files match the submitted build's source snapshot.
 
 The standard Windows 11 distribution channel is Microsoft Store. See the [development guide](DEVELOPMENT.md) for the Store MSIX workflow.
@@ -685,12 +688,12 @@ In Folimeld 0.3.5, this guidance is also enabled on FreeBSD, NetBSD and OpenBSD,
 
 ## TODO
 
-- Store version 1.0.4.0 (x64 / ARM64) is published. Upgrade retention from Store version 1.0.1.0 to the current version and hardware acceptance of the current ARM64 version remain to be checked.
+- Confirm the currently delivered Store package version and CPUs, upgrade retention from 1.0.1.0, and hardware acceptance coverage for each CPU.
 - Update Debian, Ubuntu, and BSD (FreeBSD, NetBSD, OpenBSD) packages to the 0.3.5 baseline, and prepare verification and releases.
 
 ## Known issues and limitations
 
-- Microsoft Store version 1.0.4.0 targets Windows 11 x64 / ARM64. Checking published package information is separate from installation and upgrade validation on hardware for each CPU.
+- The published corresponding-source Release targets Store version 1.0.7.0 (app 0.3.10, x64 / ARM64). The Store web listings do not display a numeric package version or CPU list. The currently delivered package version and CPUs, completion of worldwide rollout, and installation or upgrades on each CPU were not verified in this check.
 - The main window of Store version 1.0.1.0 was confirmed to use Per-Monitor V2. Visual layout and operation at 150% and 200% scaling remain untested.
 - Earlier local WACK runs on development builds reported a DPI warning (TEST92) and an optional test failure (TEST88). The cause of the earlier DPI warning and the individual Store certification outcomes for TEST92, TEST88 and `runFullTrust` remain unconfirmed. Store version 1.0.1.0 passed certification overall. [Acceptance record](documentation/windows-store-acceptance.md)
 
