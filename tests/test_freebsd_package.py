@@ -3,6 +3,7 @@ from zipfile import ZipFile, ZipInfo
 
 import pytest
 
+from folimeld import __version__
 from tools.build_freebsd_package import extract
 
 
@@ -35,5 +36,5 @@ def test_freebsd_version_resolution():
     version = next(ast.literal_eval(node.value) for node in tree.body
                    if isinstance(node, ast.Assign)
                    and any(isinstance(t, ast.Name) and t.id == '__version__' for t in node.targets)) + '_1'
-    assert version == '0.3.5_1'
+    assert version == f'{__version__}_1'
 
