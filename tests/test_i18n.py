@@ -57,14 +57,13 @@ class SystemLanguageTests(unittest.TestCase):
                 self.assertTrue(data["delete"])
                 self.assertTrue(data["cannot_delete_all"])
 
-    def test_east_asia_locales_are_complete(self):
+    def test_all_locales_are_complete(self):
         locales = Path(__file__).resolve().parent.parent / "locales"
         en = json.loads((locales / "en.json").read_text(encoding="utf-8"))
         ja = json.loads((locales / "ja.json").read_text(encoding="utf-8"))
         required = set(en) | set(ja)
-        for code in ("ja", "en", "ko", "zh", "zh_TW"):
+        for code in LANGUAGES:
             with self.subTest(language=code):
-                self.assertIn(code, LANGUAGES)
                 data = json.loads((locales / f"{code}.json").read_text(encoding="utf-8"))
                 missing = sorted(required - set(data))
                 self.assertEqual(missing, [])
