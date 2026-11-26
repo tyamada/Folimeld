@@ -133,6 +133,20 @@ Folimeld 0.3.7 の新機能（「サンプルPDFを開く…」「PDFを閉じ�
   - `Folimeld_1.0.6.0_arm64.msix`（66,791,132 bytes、SHA-256: `B60AAEB3D39DBB526A3DDAA337B4D66BA8F9CBE955794E9C8FC370602AED65BE`）
 - **対応ソース公開**: GitHub Releases タグ [`windows-store-v1.0.6.0`](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.6.0) にて対応ソース ZIP・`SHA256SUMS.txt`・`source-association.json` を公開済み。
 
+## Submission 6（Folimeld 1.0.7.0: アプリ版 0.3.10 / 全世界公開・全 9 言語完備）の公開記録
+
+- **版番号**: パッケージ版 `1.0.7.0`、アプリ表示版 `0.3.10`（ブランチ `release/windows-store-v1.0.7.0`、コミット `d66230e610417af82cd09dea9c38de993580f6d3`）
+- **対象アーキテクチャ**: `x64`（`0x8664`）および `arm64`（`0xAA64`）
+- **配信地域**: **All worldwide markets（240 マーケット）** へ拡大。
+- **主な新機能・ローカライズ**:
+  - ドイツ語（`de`）・スペイン語（`es`）・フランス語（`fr`）・ポルトガル語（`pt`）の未翻訳 39 キーをすべて補完し、同梱全 9 言語を 163/163 キー完備。
+  - Microsoft Store 掲載文・スクリーンショット（各 6 枚）をドイツ語・スペイン語・フランス語・ポルトガル語・簡体字中国語に追加（全 9 言語）。
+  - プライバシーポリシー（`docs/privacy/index.html`）を全 9 言語対応へ拡張。
+- **提出・公開状況**: 2026年11月26日に Partner Center（Submission 6 / ID `1152921505702511094`）へ x64・ARM64 両パッケージを提出し、同日認定合格・全世界公開を確認済み。
+  - `Folimeld_1.0.7.0_x64.msix`（83,411,436 bytes、SHA-256: `82D599B72031AA215AD5674F6FA79753FBC1AE3ADF8A4E73981C07D7A807DC1E`）
+  - `Folimeld_1.0.7.0_arm64.msix`（66,795,426 bytes、SHA-256: `0502E60513C419EA92FD932EE94B94E70EE9DC249C6B3E29E3AC876B2838E2E7`）
+- **対応ソース公開**: GitHub Releases タグ [`windows-store-v1.0.7.0`](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.7.0) にて対応ソース ZIP・`SHA256SUMS.txt`・`source-association.json` を公開済み。
+
 ## 公式資料
 
 - [提出方式の比較](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/choose-distribution-path)

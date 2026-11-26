@@ -133,6 +133,20 @@ Plan for the next update (Submission 3) bringing Folimeld 0.3.7 features (“Ope
   - `Folimeld_1.0.6.0_arm64.msix` (66,791,132 bytes, SHA-256: `B60AAEB3D39DBB526A3DDAA337B4D66BA8F9CBE955794E9C8FC370602AED65BE`)
 - **Corresponding source publication**: Published matching source ZIP, `SHA256SUMS.txt`, and `source-association.json` on GitHub Releases under tag [`windows-store-v1.0.6.0`](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.6.0).
 
+## Submission 6 publication record (Folimeld 1.0.7.0: app 0.3.10 / Worldwide release & all 9 languages complete)
+
+- **Versions**: MSIX package version `1.0.7.0`, application version `0.3.10` (branch `release/windows-store-v1.0.7.0`, commit `d66230e610417af82cd09dea9c38de993580f6d3`).
+- **Target architectures**: `x64` (`0x8664`) and `arm64` (`0xAA64`).
+- **Markets**: Expanded to **All worldwide markets (240 markets)**.
+- **Localization & Store listing updates**:
+  - Completed all 39 remaining keys for German (`de`), Spanish (`es`), French (`fr`), and Portuguese (`pt`), bringing all 9 bundled languages to 163/163 keys.
+  - Added German, Spanish, French, Portuguese, and Simplified Chinese Store listings and screenshots (6 each), for 9 localized Store listings in total.
+  - Expanded the published privacy policy (`docs/privacy/index.html`) to all 9 languages.
+- **Submission & publication status**: Submitted both x64 and ARM64 packages to Partner Center (Submission 6 / ID `1152921505702511094`) on 2026-11-26; passed certification and confirmed live worldwide (JP, US, DE, FR, BR verified) the same day.
+  - `Folimeld_1.0.7.0_x64.msix` (83,411,436 bytes, SHA-256: `82D599B72031AA215AD5674F6FA79753FBC1AE3ADF8A4E73981C07D7A807DC1E`)
+  - `Folimeld_1.0.7.0_arm64.msix` (66,795,426 bytes, SHA-256: `0502E60513C419EA92FD932EE94B94E70EE9DC249C6B3E29E3AC876B2838E2E7`)
+- **Corresponding source publication**: Published matching source ZIP, `SHA256SUMS.txt`, and `source-association.json` on GitHub Releases under tag [`windows-store-v1.0.7.0`](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.7.0).
+
 ## Official references
 
 - [Distribution path comparison](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/choose-distribution-path)
