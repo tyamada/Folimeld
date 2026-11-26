@@ -120,6 +120,19 @@ Plan for the next update (Submission 3) bringing Folimeld 0.3.7 features (“Ope
   - `Folimeld_1.0.5.0_arm64.msix` (66,785,943 bytes, SHA-256: `C5E9C8F2394EC1600EE4B69A5762FC6582A62575E120D1D8CC4511C41297F0EE`)
 - **Corresponding source publication**: Published matching source ZIP, `SHA256SUMS.txt`, and `source-association.json` on GitHub Releases under tag [`windows-store-v1.0.5.0`](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.5.0).
 
+## Submission 5 publication record (Folimeld 1.0.6.0: app 0.3.9 / East Asia expansion: Korea, Taiwan, Hong Kong, Macao)
+
+- **Versions**: MSIX package version `1.0.6.0`, application version `0.3.9` (branch `release/windows-store-v1.0.6.0`, commit `c4a748c9ebbb08b0431626f2da17b065e14ccf19`).
+- **Target architectures**: `x64` (`0x8664`) and `arm64` (`0xAA64`).
+- **Markets (6 markets)**: Expanded distribution to South Korea, Taiwan, Hong Kong SAR, and Macao SAR alongside Japan and the United States.
+- **Localization & Store listing updates**:
+  - Added Traditional Chinese (`zh_TW` with automatic routing for `zh-TW` / `zh-HK` / `zh-MO` / `zh-Hant`) and completed Korean (`ko`) and Simplified Chinese (`zh`) translations.
+  - Added Korean (`ko-KR`) and Traditional Chinese (`zh-Hant`) Store listings and screenshots (6 each).
+- **Submission & publication status**: Submitted both x64 and ARM64 packages to Partner Center (Submission 5 / ID `1152921505702503922`) on 2026-11-25; passed certification and confirmed live across JP, KR, TW, HK, and MO on 2026-11-26.
+  - `Folimeld_1.0.6.0_x64.msix` (83,410,681 bytes, SHA-256: `C872EAAADE28CF3329795DFD4902E47096A9CAE3EA3919373AA510227587AA1D`)
+  - `Folimeld_1.0.6.0_arm64.msix` (66,791,132 bytes, SHA-256: `B60AAEB3D39DBB526A3DDAA337B4D66BA8F9CBE955794E9C8FC370602AED65BE`)
+- **Corresponding source publication**: Published matching source ZIP, `SHA256SUMS.txt`, and `source-association.json` on GitHub Releases under tag [`windows-store-v1.0.6.0`](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.6.0).
+
 ## Official references
 
 - [Distribution path comparison](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/choose-distribution-path)
