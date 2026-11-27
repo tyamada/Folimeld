@@ -43,6 +43,11 @@
   <content_rating type="oars-1.1" />
 
   <releases>
+    <release version="0.3.11" date="2026-11-28">
+      <description>
+        <p>Localized sample attribution links and updated trial Flatpak package.</p>
+      </description>
+    </release>
     <release version="0.3.10" date="2026-11-27">
       <description>
         <p>Trial Flatpak package for Linux with all 9 bundled UI languages complete.</p>
