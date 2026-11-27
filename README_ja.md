@@ -63,6 +63,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3（WSL2／WSLgで検証） | amd64 | DEB / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.7) |
 | Ubuntu 24.04.5（WSL2／WSLgで検証） | amd64 | strict Snap / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.7) |
 | Linux 汎用（Flatpak / Freedesktop 25.08、WSL2／WSLg の Wayland・X11 で検証） | amd64 | Flatpak / 0.3.10（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-flatpak-amd64-v0.3.10) |
+| Arch Linux（WSL2／WSLg の Wayland・X11 で検証） | x86_64 (`any`) | pacman / PKGBUILD / 0.3.10-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-arch-x86_64-v0.3.10) |
 | openSUSE Tumbleweed 20261110（WSL2／WSLgで検証） | amd64 | RPM / 0.3.7-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.7) |
 | openSUSE Leap 16.1（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5) |
 | openSUSE Tumbleweed 20261111（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5) |
