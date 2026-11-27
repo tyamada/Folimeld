@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.tyamada.Folimeld</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>AGPL-3.0-only</project_license>
+
+  <name>Folimeld</name>
+  <summary>Edit and organize PDF pages locally</summary>
+  <summary xml:lang="ja">PDFページをローカルで直感的に整理・編集</summary>
+
+  <developer id="io.github.tyamada">
+    <name>Takuma Yamada</name>
+  </developer>
+
+  <description>
+    <p>
+      Folimeld is a desktop application for organizing PDF pages using thumbnail previews.
+      Reorder, rotate, insert, and delete pages, create new PDFs from image folders, and
+      edit document properties and viewing passwords. All files are processed locally on
+      your device.
+    </p>
+    <p xml:lang="ja">
+      Folimeld は PDF のページをサムネイルで確認しながら並べ替え・回転・挿入・削除できるデスクトップアプリです。
+      画像フォルダからの PDF 作成、文書プロパティや閲覧パスワードの編集に対応し、すべての処理はローカル端末内で完結します。
+    </p>
+  </description>
+
+  <launchable type="desktop-id">io.github.tyamada.Folimeld.desktop</launchable>
+
+  <url type="homepage">https://tyamada.github.io/Folimeld/</url>
+  <url type="bugtracker">https://github.com/tyamada/Folimeld/issues</url>
+  <url type="vcs-browser">https://github.com/tyamada/Folimeld</url>
+
+  <categories>
+    <category>Office</category>
+    <category>Graphics</category>
+  </categories>
+
+  <provides>
+    <binary>folimeld</binary>
+  </provides>
+
+  <content_rating type="oars-1.1" />
+
+  <releases>
+    <release version="0.3.10" date="2026-11-27">
+      <description>
+        <p>Trial Flatpak package for Linux with all 9 bundled UI languages complete.</p>
+      </description>
+    </release>
+  </releases>
+</component>

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+export PYTHONPATH="/app/share/folimeld${PYTHONPATH:+:$PYTHONPATH}"
+exec python3 /app/share/folimeld/main.py "$@"

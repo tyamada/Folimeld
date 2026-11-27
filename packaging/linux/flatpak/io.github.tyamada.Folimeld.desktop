@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Folimeld
+Comment=Edit and organize PDF pages
+Comment[ja]=PDFページをサムネイルで並べ替え・回転・挿入・削除
+Exec=folimeld %f
+Icon=io.github.tyamada.Folimeld
+Terminal=false
+Categories=Office;Graphics;
+MimeType=application/pdf;
+StartupWMClass=Folimeld
