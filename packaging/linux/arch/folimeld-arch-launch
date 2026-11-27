@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+
+export PYTHONPATH="/usr/share/folimeld${PYTHONPATH:+:$PYTHONPATH}"
+exec python3 /usr/share/folimeld/main.py "$@"

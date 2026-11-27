@@ -62,6 +62,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | Ubuntu 24.04.5 (built in an ARM64 VM) | arm64 | strict Snap / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.7) |
 | Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3 (verified on WSL2/WSLg) | amd64 | DEB / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.7) |
 | Ubuntu 24.04.5 (verified on WSL2/WSLg) | amd64 | strict Snap / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.7) |
+| Linux (Flatpak / Freedesktop 25.08, verified on Wayland & X11 in WSL2/WSLg) | amd64 | Flatpak / 0.3.10 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-flatpak-amd64-v0.3.10) |
 | openSUSE Tumbleweed 20261110 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.7-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.7) |
 | openSUSE Leap 16.1 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5) |
 | openSUSE Tumbleweed 20261111 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5) |

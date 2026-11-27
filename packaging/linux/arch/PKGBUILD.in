@@ -1,0 +1,41 @@
+# Maintainer: Takuma Yamada <tyamada.support@gmail.com>
+pkgname=folimeld
+pkgver=@VERSION@
+pkgrel=1
+pkgdesc="Edit and organize PDF pages locally with thumbnail previews"
+arch=('any')
+url="https://tyamada.github.io/Folimeld/"
+license=('AGPL-3.0-only')
+depends=(
+  'python'
+  'pyside6'
+  'python-pymupdf'
+  'python-pillow'
+  'python-cryptography'
+  'hicolor-icon-theme'
+)
+optdepends=(
+  'qt6-wayland: native Wayland support'
+)
+source=("@SOURCE_URL@")
+sha256sums=('@SOURCE_SHA256@')
+
+package() {
+  cd "${srcdir}/Folimeld-${pkgver}"
+
+  install -dm755 "${pkgdir}/usr/share/folimeld"
+  cp -a folimeld locales assets main.py LICENSE "${pkgdir}/usr/share/folimeld/"
+  if [ -d licenses ]; then
+    cp -a licenses "${pkgdir}/usr/share/folimeld/"
+  fi
+  find "${pkgdir}/usr/share/folimeld" -name '__pycache__' -type d -exec rm -rf {} +
+
+  install -Dm755 packaging/linux/arch/folimeld-arch-launch "${pkgdir}/usr/bin/folimeld"
+  install -Dm644 packaging/linux/folimeld.desktop "${pkgdir}/usr/share/applications/folimeld.desktop"
+  install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+
+  for sz in 16 32 64 128 256 512; do
+    install -Dm644 "assets/Folimeld.iconset/icon_${sz}x${sz}.png" \
+      "${pkgdir}/usr/share/icons/hicolor/${sz}x${sz}/apps/folimeld.png"
+  done
+}
