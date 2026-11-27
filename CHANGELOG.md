@@ -4,6 +4,11 @@
 
 ## Unreleased
 
+- Published Linux ARM64 trial releases for Flatpak and Arch Linux ARM 0.3.10:
+  - **Flatpak ARM64 (`linux-flatpak-arm64-v0.3.10`)**: Built and installed `folimeld_0.3.10_arm64.flatpak` (SHA-256: `052eb92a18e1274aac32c770a7f74474271e3936cc69f3e075282bedef8a0cf9`) on an Ubuntu 24.04 ARM64 VM (Freedesktop 25.08 / Python 3.13 / aarch64). Verified launch, all 9 locales, 8-page PDF rotation, AES-256 password-encrypted save/reopen, image-to-PDF conversion, and active Sponsors menu inside the Flatpak sandbox ([verification record](documentation/linux-flatpak-arm64-0310-verification.txt)).
+  - **Arch Linux ARM aarch64 (`linux-arch-aarch64-v0.3.10`)**: Built and installed `folimeld-0.3.10-1-any.pkg.tar.xz` (SHA-256: `6db1ca127c4034e931d154b92144f185dc3f4634676fbafaa5c9ffc0e6907e66`) in an Arch Linux ARM aarch64 environment (Python 3.14.10 / PyMuPDF 2.1) via `pacman -U`. Verified all 9 locales, 8-page PDF rotation, AES-256 password-encrypted save/reopen, image-to-PDF conversion, and active Sponsors menu ([verification record](documentation/linux-arch-aarch64-0310-verification.txt)).
+  - Added both trial releases to the bilingual README download tables (`README_ja.md` / `README.md`).
+
 - Expanded East Asia localization for South Korea, Taiwan, Hong Kong, and Macao: added Traditional Chinese locale (`locales/zh_TW.json` / `繁體中文`) with automatic OS/Qt locale routing for `zh_TW`, `zh_HK`, `zh_MO`, and `zh_Hant` in `folimeld/i18n.py`, completed all 37 missing password and sample-PDF keys in `locales/ko.json` and `locales/zh.json` aligned with `MihirakiPDFUtility_Android` / `MihirakiPDFViewer_Android` terminology, added unit tests (`tests/test_i18n.py`), and added Korean (`#ko`) and Traditional Chinese (`#zh-Hant`) sections to `docs/privacy/index.html`.
 
 - Added a Microsoft Store (MSIX)-only update check (`folimeld/store_update.py`): checks Windows' built-in `StoreContext.get_app_and_optional_store_package_updates_async()` on startup, displays an "Update" button in the status bar only when a newer Store package is available, and opens Folimeld's Microsoft Store product page (`ms-windows-store://pdp/?ProductId=9P5X2JFZRJC3`) when clicked; synchronized all 8 locales, added unit tests (`tests/test_store_update.py`), and updated the privacy policy (`docs/privacy/index.html`).

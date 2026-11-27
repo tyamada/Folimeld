@@ -1,0 +1,17 @@
+OS: Ubuntu 24.04 aarch64 (QEMU/HVF) + Flatpak (org.freedesktop.Platform/aarch64/25.08, Python 3.13)
+App ID: io.github.tyamada.Folimeld
+Bundle: folimeld_0.3.10_arm64.flatpak (SHA-256: 052eb92a18e1274aac32c770a7f74474271e3936cc69f3e075282bedef8a0cf9)
+Source ZIP: Folimeld-0.3.10-linux-flatpak-arm64-source.zip (SHA-256: c2b07f73b96957f4de4fc39912a0823f795500614fa5e32007d9ada05e233632)
+Base commit: 7b4347a599337f951d387dc2c9d434316891c58c (version 0.3.10)
+
+Verification:
+- appstreamcli validate --no-net & desktop-file-validate: PASSED
+- Built with FOLIMELD_FLATPAK_VERSION=0.3.10 ./build_flatpak.sh (aarch64 wheels: PySide6_Essentials 6.11.2, shiboken6 6.11.2, PyMuPDF 1.28.2, Pillow 12.3.0, cryptography 50.0.2, cffi 2.1.1, pycparser 3.12)
+- Installed via `flatpak install --user -y folimeld_0.3.10_arm64.flatpak`
+- Verified inside Flatpak sandbox (QT_QPA_PLATFORM=offscreen):
+  - FLATPAK_VERSION: 0.3.10
+  - FLATPAK_MUPDF: 1.28.2
+  - FLATPAK_LOCALES: 9 ['de', 'en', 'es', 'fr', 'ja', 'ko', 'pt', 'zh', 'zh_TW']
+  - 8-page PDF creation, rotation, AES-256 password-encrypted save & reopen: PASSED
+  - Image-to-PDF conversion: PASSED
+  - FLATPAK_SPONSORS: True

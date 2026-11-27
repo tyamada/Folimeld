@@ -1,0 +1,18 @@
+OS: Arch Linux ARM (aarch64, systemd-nspawn on Ubuntu 24.04 ARM64 QEMU/HVF VM)
+Python: 3.14.10
+PyMuPDF: 2.1
+Package: folimeld-0.3.10-1-any.pkg.tar.xz (SHA-256: 6db1ca127c4034e931d154b92144f185dc3f4634676fbafaa5c9ffc0e6907e66)
+Source archive: Folimeld-0.3.10-linux-arch-aarch64-source.tar.gz (SHA-256: 66ea8613e81bd3032e034ca31d759fce9218f39c76569430463a3811b920a0ef)
+Base commit: 7b4347a599337f951d387dc2c9d434316891c58c (version 0.3.10)
+
+Verification:
+- Built via `FOLIMELD_ARCH_VERSION=0.3.10 ./build_arch.sh` inside Arch Linux ARM aarch64
+- Installed via `pacman -U --noconfirm folimeld-0.3.10-1-any.pkg.tar.xz` with official Arch Linux ARM repo dependencies (python, pyside6, python-pymupdf, python-pillow, python-cryptography, hicolor-icon-theme)
+- Verified as regular user `alarm` (`QT_QPA_PLATFORM=offscreen`):
+  - ARCH_VERSION: 0.3.10
+  - ARCH_PYTHON: 3.14.10
+  - ARCH_MUPDF: 2.1
+  - ARCH_LOCALES: 9
+  - 8-page PDF creation, rotation, AES-256 password-encrypted save & reopen: PASSED
+  - Image-to-PDF conversion: PASSED
+  - ARCH_SPONSORS: True

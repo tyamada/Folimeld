@@ -4,6 +4,11 @@
 
 ## 未リリース
 
+- Linux ARM64 向けの Flatpak および Arch Linux ARM 0.3.10 試験配布パッケージを公開:
+  - **Flatpak ARM64 (`linux-flatpak-arm64-v0.3.10`)**: Ubuntu 24.04 ARM64 VM（Freedesktop 25.08 / Python 3.13 / aarch64）上で `folimeld_0.3.10_arm64.flatpak`（SHA-256: `052eb92a18e1274aac32c770a7f74474271e3936cc69f3e075282bedef8a0cf9`）をビルド・導入し、サンドボックス内（`QT_QPA_PLATFORM=offscreen`）での起動・全 9 言語読込・8 ページ PDF 回転／AES-256 暗号化保存再読込・画像 PDF 化・Sponsors メニュー有効化を確認（[検証記録](documentation/linux-flatpak-arm64-0310-verification.txt)）。
+  - **Arch Linux ARM aarch64 (`linux-arch-aarch64-v0.3.10`)**: Arch Linux ARM aarch64 環境（Python 3.14.10 / PyMuPDF 2.1）で `folimeld-0.3.10-1-any.pkg.tar.xz`（SHA-256: `6db1ca127c4034e931d154b92144f185dc3f4634676fbafaa5c9ffc0e6907e66`）をビルド・`pacman -U` 導入し、全 9 言語読込・8 ページ PDF 回転／AES-256 暗号化保存再読込・画像 PDF 化・Sponsors メニュー有効化を確認（[検証記録](documentation/linux-arch-aarch64-0310-verification.txt)）。
+  - 日英 README（`README_ja.md` / `README.md`）のダウンロード表へ両リリースを追加。
+
 - 韓国・台湾・香港・マカオ展開に向けた多言語対応を強化: 繁体字中国語ロケール（`locales/zh_TW.json` / `繁體中文`）を新規追加し、`folimeld/i18n.py` で `zh_TW` / `zh_HK` / `zh_MO` / `zh_Hant` を繁体字へ自動判定するよう改善。韓国語（`locales/ko.json`）および簡体字中国語（`locales/zh.json`）の未翻訳 37 キー（パスワード・サンプル PDF 関連）を `MihirakiPDFUtility_Android` / `MihirakiPDFViewer_Android` と用語統一して補完し、単体テスト（`tests/test_i18n.py`）およびプライバシーポリシー（`docs/privacy/index.html` の `#ko` / `#zh-Hant`）を追加。
 
 - Microsoft Store（MSIX）版限定の更新確認機能（`folimeld/store_update.py`）を追加: 起動時に Windows 標準の `StoreContext.get_app_and_optional_store_package_updates_async()` で Microsoft Store の更新版有無を確認し、更新版がある場合のみステータスバー右端へ「更新する」ボタンを表示してクリック時に Microsoft Store の商品ページ（`ms-windows-store://pdp/?ProductId=9P5X2JFZRJC3`）を開くよう実装。全 8 言語の文言・単体テスト（`tests/test_store_update.py`）・プライバシーポリシー（`docs/privacy/index.html`）を更新。
