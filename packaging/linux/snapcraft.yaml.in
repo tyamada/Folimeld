@@ -13,7 +13,7 @@ apps:
   folimeld:
     command: bin/folimeld-launch
     extensions: [gnome]
-    plugs: [home, removable-media, opengl]
+    plugs: [home, removable-media, opengl, network]
 
 parts:
   folimeld:

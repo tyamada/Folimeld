@@ -12,6 +12,20 @@ READMEの日英両方に、旧版を含むLinux全体が試験配布であるこ
 
 Kali amd64 0.3.5は、[Ubuntu/Debian/Kali共通DEB](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5)です。Kali専用タグがないことを未公開の理由にしません。ARM64の[Kali専用Release](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5)とは別です。
 
+### Folimeld 0.3.11 Linux arm64試験版
+
+各Releaseにパッケージ、対応ソース、ライセンス通知、`SHA256SUMS.txt`を掲載しています。対象OSのarm64 VMで、日本語の「ためし部」第4話の一覧更新、取得、8ページ読込、オフライン再読込を確認しました。
+
+| OS | CPU | 配布形式・版 | Release |
+| --- | --- | --- | --- |
+| Ubuntu 24.04.5 | arm64 | strict Snap / 0.3.11（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.11) |
+| Kali 2026.3 | arm64 | DEB / 0.3.11（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.11) |
+| openSUSE Leap 16.1 | arm64 | RPM / 0.3.11-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.11) |
+| openSUSE Tumbleweed 20261111 | arm64 | RPM / 0.3.11-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.11) |
+| Fedora 44 | arm64 | RPM / 0.3.11-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.11) |
+| Fedora 45 | arm64 | RPM / 0.3.11-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-arm64-v0.3.11) |
+| AlmaLinux 9.8 | arm64 | RPM / 0.3.11-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.11) |
+
 ## 今後のLinux公開：すべての経路で指定する条件
 
 以下は、別途公開が許可された場合に使う手順です。この文書の追加だけでは作成・編集・公開を実行しません。

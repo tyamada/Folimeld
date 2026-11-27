@@ -58,6 +58,13 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | Windows 11 | arm64 | Source + uv / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.7-preview.1) |
 | Windows 11 | arm64 | uv tool install (Wheel) / 0.3.7 preview.1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.7-preview.1) |
 | macOS 15 or later | Apple Silicon (arm64) | Homebrew / 0.3.7 (source) | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.7) |
+| Ubuntu 24.04.5 | arm64 | strict Snap / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.11) |
+| Kali 2026.3 | arm64 | DEB / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.11) |
+| openSUSE Leap 16.1 | arm64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.11) |
+| openSUSE Tumbleweed 20261111 | arm64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.11) |
+| Fedora 44 | arm64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.11) |
+| Fedora 45 | arm64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-arm64-v0.3.11) |
+| AlmaLinux 9.8 | arm64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.11) |
 | Ubuntu 24.04.5 / Debian 13.7 (verified in an ARM64 VM) | arm64 | DEB / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.7) |
 | Ubuntu 24.04.5 (built in an ARM64 VM) | arm64 | strict Snap / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.7) |
 | Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3 (verified on WSL2/WSLg) | amd64 | DEB / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.7) |

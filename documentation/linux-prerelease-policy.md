@@ -12,6 +12,20 @@ Both READMEs must describe all Linux versions as test distributions. Read each R
 
 Kali amd64 0.3.5 uses the [shared Ubuntu/Debian/Kali DEB](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.5). The absence of a Kali-specific amd64 tag does not mean it is unpublished. It is separate from the [Kali ARM64 Release](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5).
 
+### Folimeld 0.3.11 Linux arm64 previews
+
+Each Release provides the package, corresponding source, license notices, and `SHA256SUMS.txt`. On an arm64 VM for each target OS, we verified that the sample list refreshes, the Japanese Episode 4 of Tameshibu downloads and opens all eight pages, and the downloaded PDF reopens offline.
+
+| OS | CPU | Distribution and version | Release |
+| --- | --- | --- | --- |
+| Ubuntu 24.04.5 | arm64 | strict Snap / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.11) |
+| Kali 2026.3 | arm64 | DEB / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.11) |
+| openSUSE Leap 16.1 | arm64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.11) |
+| openSUSE Tumbleweed 20261111 | arm64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.11) |
+| Fedora 44 | arm64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.11) |
+| Fedora 45 | arm64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-arm64-v0.3.11) |
+| AlmaLinux 9.8 | arm64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.11) |
+
 ## Future Linux publication: required settings on every route
 
 These instructions apply only after separate publication authorization. Adding this document does not execute creation, editing or publication.
