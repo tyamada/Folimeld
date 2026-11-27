@@ -11,6 +11,20 @@ from .sample_catalogue import (AUTHOR, SOURCE_PAGE_URL, LICENSE_URL, Cancelled,
                                load_catalogue, download_sample, working_copy)
 
 
+def sample_source_page(language: str | None) -> str:
+    """Use only known published language pages; never interpolate arbitrary input."""
+    locale = (language or '').replace('_', '-').lower()
+    chinese = {'zh': 'zh-Hans', 'zh-cn': 'zh-Hans', 'zh-sg': 'zh-Hans',
+               'zh-hans': 'zh-Hans', 'zh-tw': 'zh-Hant', 'zh-hk': 'zh-Hant',
+               'zh-hant': 'zh-Hant'}
+    page = chinese.get(locale)
+    if page is None:
+        base = locale.split('-')[0]
+        page = base if base in {'ja', 'en', 'ko', 'de', 'fr', 'es', 'pt',
+                               'vi', 'fil', 'ne', 'id', 'it'} else ''
+    return SOURCE_PAGE_URL + page + '/' if page else SOURCE_PAGE_URL
+
+
 class SampleWorker(QThread):
     result = Signal(object)
     failed = Signal(str)
@@ -107,7 +121,8 @@ class SampleDialog(QDialog):
         self.license_notice = QLabel(
             escape(tr('sample_license')) + ' <a href="' + LICENSE_URL +
             '">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>' +
-            ' · <a href="' + SOURCE_PAGE_URL + '">' + escape(tr('sample_source')) + '</a>')
+            ' · <a href="' + sample_source_page(
+                self.preferred_language or QLocale.system().name()) + '">' + escape(tr('sample_source')) + '</a>')
         self.license_notice.setOpenExternalLinks(True)
         self.license_notice.setWordWrap(True)
         layout.addWidget(self.license_notice)

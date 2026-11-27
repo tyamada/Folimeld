@@ -350,3 +350,65 @@ def test_main_window_passes_active_app_language():
         window.show_samples()
     assert window.sample_dialog.preferred_language=='en'
     window.close()
+
+
+@pytest.mark.parametrize('language,page', [
+    ('ja','ja/'),('en-US','en/'),('zh','zh-Hans/'),('zh_TW','zh-Hant/'),
+    ('zh-Hant','zh-Hant/'),('ko','ko/'),('de','de/'),('fr','fr/'),
+    ('es','es/'),('pt_PT','pt/'),('unsupported',''),(None,''),
+    ('https://unapproved.example',''),
+])
+def test_sample_source_page_uses_published_language_or_selector(language,page):
+    from folimeld.sample_dialog import sample_source_page
+    assert sample_source_page(language)==samples.SOURCE_PAGE_URL+page
+
+
+@pytest.mark.parametrize('language,page', [('ja','ja/'),('en','en/'),('unsupported','')])
+def test_source_footer_keeps_language_page_and_license(tmp_path,language,page):
+    from folimeld.sample_dialog import SampleDialog
+    from folimeld.i18n import I18n
+    translator=I18n();translator.load('en' if language=='en' else 'ja')
+    dialog=SampleDialog(translator.tr,root=tmp_path,language=language)
+    assert f'href="{samples.SOURCE_PAGE_URL+page}"' in dialog.license_notice.text()
+    assert samples.LICENSE_URL in dialog.license_notice.text()
+    assert 'manga-pdf-20261103-v1' not in dialog.license_notice.text()
+    dialog.close()
+
+
+def test_new_episode_from_another_release_replaces_old_cache(tmp_path):
+    old=samples.parse_catalogue(BUNDLED_CATALOGUE.encode())
+    fourth=copy.deepcopy(next(e for e in old if e['sample_id']=='ep1_ja'))
+    fourth.update(sample_id='ep4_ja',episode=4,title='Episode 4 fixture',
+                  filename='tameshibu_episode4_ja.pdf',
+                  new_download_url='https://github.com/tyamada/manga-prompt-kit/releases/download/manga-pdf-20261127-ep4-ja-v1/tameshibu_episode4_ja.pdf')
+    payload=json.dumps({'schema_version':1,'fixed_tag':'manga-pdf-20261103-v1',
+                        'entries':old+[fourth]}).encode()
+    (tmp_path/'catalogue-v1.json').write_text(BUNDLED_CATALOGUE,encoding='utf8')
+    with patch.object(samples,'_read_catalogue',return_value=payload):
+        updated,source=samples.load_catalogue(tmp_path,Event())
+    assert source=='online' and len(updated)==52
+    assert next(e for e in updated if e['sample_id']=='ep4_ja')['new_download_url']==fourth['new_download_url']
+    with patch.object(samples,'_read_catalogue',side_effect=OSError('offline')):
+        cached,source=samples.load_catalogue(tmp_path,Event())
+    assert source=='cached' and len(cached)==52
+
+
+def test_episode_four_remains_visible_with_language_and_order_controls(tmp_path):
+    from folimeld.sample_dialog import SampleDialog
+    from PySide6.QtCore import Qt
+    entries=samples.parse_catalogue(BUNDLED_CATALOGUE.encode())
+    fourth=copy.deepcopy(next(e for e in entries if e['sample_id']=='ep1_ja'))
+    fourth.update(sample_id='ep4_ja',episode=4,title='Episode 4 fixture')
+    dialog=SampleDialog(lambda key,**kw:key,root=tmp_path,language='ja')
+    dialog.entries=entries+[fourth];dialog._update_languages();dialog._render_entries()
+    def ids():
+        return [dialog.tree.topLevelItem(i).data(0,Qt.ItemDataRole.UserRole)['sample_id']
+                for i in range(dialog.tree.topLevelItemCount())]
+    assert ids()==['ep4_ja','ep3_ja','ep2_ja','ep1_ja']
+    dialog.episode_order.setCurrentIndex(dialog.episode_order.findData('first'))
+    assert ids()==['ep1_ja','ep2_ja','ep3_ja','ep4_ja']
+    dialog.language_filter.setCurrentIndex(dialog.language_filter.findData('en'))
+    assert 'ep4_ja' not in ids()
+    dialog.language_filter.setCurrentIndex(dialog.language_filter.findData(''))
+    assert len(ids())==52 and 'ep4_ja' in ids()
+    dialog.close()
