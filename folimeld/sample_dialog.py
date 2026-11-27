@@ -7,7 +7,7 @@ from PySide6.QtCore import QLocale, QThread, Signal, QStandardPaths, Qt
 from PySide6.QtWidgets import (QDialog, QVBoxLayout, QHBoxLayout, QLabel,
                               QPushButton, QTreeWidget, QTreeWidgetItem, QProgressBar, QComboBox)
 
-from .sample_catalogue import (AUTHOR, RELEASE_URL, LICENSE_URL, Cancelled,
+from .sample_catalogue import (AUTHOR, SOURCE_PAGE_URL, LICENSE_URL, Cancelled,
                                load_catalogue, download_sample, working_copy)
 
 
@@ -107,7 +107,7 @@ class SampleDialog(QDialog):
         self.license_notice = QLabel(
             escape(tr('sample_license')) + ' <a href="' + LICENSE_URL +
             '">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>' +
-            ' · <a href="' + RELEASE_URL + '">' + escape(tr('sample_source')) + '</a>')
+            ' · <a href="' + SOURCE_PAGE_URL + '">' + escape(tr('sample_source')) + '</a>')
         self.license_notice.setOpenExternalLinks(True)
         self.license_notice.setWordWrap(True)
         layout.addWidget(self.license_notice)

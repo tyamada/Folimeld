@@ -275,7 +275,7 @@ def test_language_default_order_and_footer(tmp_path,language,expected):
     assert 'ライセンス' in dialog.license_notice.text()
     assert 'CC BY 4.0' in dialog.license_notice.text()
     assert samples.LICENSE_URL in dialog.license_notice.text()
-    assert samples.RELEASE_URL in dialog.license_notice.text()
+    assert samples.SOURCE_PAGE_URL in dialog.license_notice.text()
     assert dialog.license_notice.openExternalLinks()
     dialog.close()
 

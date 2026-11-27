@@ -14,7 +14,8 @@ from uuid import uuid4
 from .sample_catalogue_data import BUNDLED_CATALOGUE
 
 CATALOGUE_URL = 'https://raw.githubusercontent.com/tyamada/manga-prompt-kit/main/releases/pdf-manifest.json'
-RELEASE_URL = 'https://github.com/tyamada/manga-prompt-kit/releases/tag/manga-pdf-20261103-v1'
+# Stable multilingual source page covering books published across release tags.
+SOURCE_PAGE_URL = 'https://tyamada.github.io/manga-prompt-kit/samples/'
 LICENSE_URL = 'https://creativecommons.org/licenses/by/4.0/'
 AUTHOR = 'こまいろ日和 / Komairo Hiyori'
 MAX_CATALOGUE_BYTES = 2 * 1024 * 1024
