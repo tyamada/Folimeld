@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "candidate-not-built",
+  "source_base_commit": "f273bc615b7eae3d73f19f13f7447dfe59af5294",
+  "app_version": "0.3.11",
+  "architectures": [
+    "x64",
+    "arm64"
+  ],
+  "store": {
+    "package_version": "1.0.8.0",
+    "identity_name": "TakumaYamada.Folimeld",
+    "publisher": "CN=B897C2D7-6B65-499A-A779-BF572E2D81ED",
+    "previous_package_version": "1.0.7.0"
+  },
+  "desktop": {
+    "package_version": "0.3.11.0",
+    "release_label": "preview.1"
+  },
+  "uv_source": {
+    "version": "0.3.11",
+    "release_label": "preview.1"
+  },
+  "uv_tool": {
+    "version": "0.3.11",
+    "release_label": "preview.1"
+  }
+}
