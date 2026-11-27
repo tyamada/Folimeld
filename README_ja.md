@@ -689,7 +689,7 @@ Folimeld 0.3.5では、この案内をFreeBSD・NetBSD・OpenBSD、専用ラン�
 ## TODO
 
 - 現在配信中のStoreパッケージ版・CPUと、1.0.1.0からの更新保持・各CPU実機での受入範囲を確認する。
-- Debian、Ubuntu、BSD（FreeBSD、NetBSD、OpenBSD）の各パッケージを0.3.5ベースに更新し、検証およびリリースを準備する。
+- Linux・BSDでは0.3.7系（FreeBSDは0.3.7_1）の試験配布を公開済みです。0.3.5系が残るOS・CPUの更新要否と、各配布物の未確認事項を整理する。OS・CPU間で検証結果を流用せず、Linux版は旧版を含めプレリリースの方針を維持する。
 
 ## 既知の問題点と制約
 

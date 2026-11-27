@@ -689,7 +689,7 @@ In Folimeld 0.3.5, this guidance is also enabled on FreeBSD, NetBSD and OpenBSD,
 ## TODO
 
 - Confirm the currently delivered Store package version and CPUs, upgrade retention from 1.0.1.0, and hardware acceptance coverage for each CPU.
-- Update Debian, Ubuntu, and BSD (FreeBSD, NetBSD, OpenBSD) packages to the 0.3.5 baseline, and prepare verification and releases.
+- Linux and BSD 0.3.7-series previews (0.3.7_1 for FreeBSD) are published. Review whether OS/CPU combinations still on 0.3.5 need updates, and track unverified areas for each artifact. Do not transfer validation results between OS/CPU combinations; keep all Linux releases, including older versions, classified as prereleases.
 
 ## Known issues and limitations
 
