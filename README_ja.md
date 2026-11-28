@@ -84,11 +84,11 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | Fedora 45（WSL2／WSLgで検証） | amd64 | RPM / 0.3.7-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.7) |
 | AlmaLinux 9.8（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5) |
 | AlmaLinux 9.8（WSL2／WSLgで検証） | amd64 | RPM / 0.3.11-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.11) |
-| FreeBSD 15.1 | amd64 | pkg / 0.3.7_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.7_1) |
+| FreeBSD 15.1 | amd64 | pkg / 0.3.11_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.11_1) |
 | FreeBSD 15.1 | aarch64 | pkg / 0.3.7_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.7_1) |
-| NetBSD 11.1 | amd64 | tgz / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.7) |
+| NetBSD 11.1 | amd64 | tgz / 0.3.11（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.11) |
 | NetBSD 11.1 | aarch64 | tgz / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.7) |
-| OpenBSD 8.0 | amd64 | 署名付き tgz / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.7) |
+| OpenBSD 8.0 | amd64 | 署名付き tgz / 0.3.11（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.11) |
 | OpenBSD 8.0 | arm64 | 署名付き tgz / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.7) |
 
 表の版番号は各配布先の版です。WindowsのStore版は日本・米国で提供しています。Linux 0.3.3（Ubuntu 22.04以降）の配布物と旧版の導入手順も下記に掲載しています。BSDのARM64は、FreeBSD・NetBSDで`aarch64`、OpenBSDで`arm64`と表記します。

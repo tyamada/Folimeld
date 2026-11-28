@@ -84,11 +84,11 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | Fedora 45 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.7-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.7) |
 | AlmaLinux 9.8 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5) |
 | AlmaLinux 9.8 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.11) |
-| FreeBSD 15.1 | amd64 | pkg / 0.3.7_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.7_1) |
+| FreeBSD 15.1 | amd64 | pkg / 0.3.11_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.11_1) |
 | FreeBSD 15.1 | aarch64 | pkg / 0.3.7_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.7_1) |
-| NetBSD 11.1 | amd64 | tgz / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.7) |
+| NetBSD 11.1 | amd64 | tgz / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.11) |
 | NetBSD 11.1 | aarch64 | tgz / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.7) |
-| OpenBSD 8.0 | amd64 | Signed tgz / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.7) |
+| OpenBSD 8.0 | amd64 | Signed tgz / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.11) |
 | OpenBSD 8.0 | arm64 | Signed tgz / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.7) |
 
 Versions in the table are specific to each distribution channel. The Windows Store edition is available in Japan and the United States. Linux 0.3.3 downloads for Ubuntu 22.04 or later and older installation instructions remain below. BSD ARM64 packages use the name `aarch64` on FreeBSD and NetBSD, and `arm64` on OpenBSD.
