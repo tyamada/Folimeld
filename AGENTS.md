@@ -28,6 +28,7 @@
 
 - When pushing commits to GitHub, monitor the triggered GitHub Actions CI runs and resolve any CI errors before finishing the task.
 - When publishing a package or release, confirm that the pushed release and its published packages are live and publicly verified, then post a release announcement to X (tyamada22 / `@tyamada22`).
+- When a new Folimeld version is confirmed live on Microsoft Store, post an announcement from X `@tyamada22` with the verified version and the public Store listing URL. Confirm that Partner Center shows the matching submission under Store presence and that the public listing opens. Check for an existing announcement for the same Store version before posting, and record the post URL after verifying it. A GitHub corresponding-source release or certification approval alone does not trigger a Store announcement.
 
 ## Built MSIX package storage and retrieval
 
