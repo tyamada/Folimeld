@@ -24,10 +24,26 @@ def package_name(version, revision, release, arch):
     return f"folimeld-{version}-{revision}.alma{release.replace('.', '_')}.{arch}.rpm"
 
 
+def _os_release():
+    if hasattr(platform, "freedesktop_os_release"):
+        return platform.freedesktop_os_release()
+    data = {}
+    for path in ("/etc/os-release", "/usr/lib/os-release"):
+        if os.path.exists(path):
+            with open(path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        k, v = line.split("=", 1)
+                        data[k.strip()] = v.strip().strip("\"'")
+            break
+    return data
+
+
 def context(root):
     if platform.system() != "Linux":
         raise ValueError("AlmaLinux RPM packaging must run on Linux")
-    release = platform.freedesktop_os_release()
+    release = _os_release()
     version = release.get("VERSION_ID", "")
     if release.get("ID") != "almalinux" or not re.fullmatch(r"9(?:\.[0-9]+)?", version):
         raise ValueError("This recipe targets AlmaLinux 9 only")

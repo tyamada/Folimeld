@@ -38,9 +38,9 @@ Each BSD preview has its own target OS version, CPU, and verification record. Se
 
 ## Downloads
 
-The Japanese and US Microsoft Store listings were checked. Both show November 26, 2026 as the last update and announce German, Spanish, French and Portuguese translations and expanded worldwide availability. [Microsoft Store (Japan)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [Microsoft Store (United States)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
+The Japanese and US Microsoft Store listings were checked. [Microsoft Store (Japan)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [Microsoft Store (United States)](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
 
-The published corresponding-source Release targets Store version 1.0.7.0 (app 0.3.10, x64 / ARM64). The Store web listings do not display a numeric package version or CPU list. The currently delivered package version and CPUs, completion of worldwide rollout, and installation or upgrades on each CPU were not verified in this check.
+Folimeld 1.0.8.0 (app 0.3.11, x64 / ARM64) is available on Microsoft Store. Partner Center confirmed publication of Submission 7. The Store web listings do not display a numeric package version or CPU list. Worldwide rollout and installation or upgrades on each CPU remain unverified.
 
 **All Linux editions, including older versions such as 0.3.3 and 0.3.4, are prereleases (test distributions); they are not promoted to stable releases or Latest.** See the [Linux publication policy and checklist](documentation/linux-prerelease-policy.md). Windows, macOS and BSD classifications are unchanged.
 
@@ -50,7 +50,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 
 | OS | CPU | Distribution and version | Release |
 | --- | --- | --- | --- |
-| Windows 11 | x64 / ARM64 (source Release) | Microsoft Store / delivered version unverified | [Corresponding source for Store 1.0.7.0 (as described in the Release)](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.7.0) |
+| Windows 11 | x64 / ARM64 | Microsoft Store 1.0.8.0 | [Corresponding source for Store 1.0.8.0 (as described in the Release)](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.8.0) |
 | Windows 11 | x64 | Desktop installer / 0.3.7.0 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1) |
 | Windows 11 | x64 | Source + uv / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.7-preview.1) |
 | Windows 11 | x64 | uv tool install (Wheel) / 0.3.7 preview.1 (prerelease) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1) |
@@ -67,23 +67,23 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | AlmaLinux 9.8 | arm64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.11) |
 | Ubuntu 24.04.5 / Debian 13.7 (verified in an ARM64 VM) | arm64 | DEB / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.7) |
 | Ubuntu 24.04.5 (built in an ARM64 VM) | arm64 | strict Snap / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.7) |
-| Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3 (verified on WSL2/WSLg) | amd64 | DEB / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.7) |
+| Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3 (verified on WSL2/WSLg) | amd64 | DEB / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.11) |
 | Ubuntu 24.04.5 (verified on WSL2/WSLg) | amd64 | strict Snap / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.7) |
 | Linux (Flatpak / Freedesktop 25.08, verified on Wayland & X11 in WSL2/WSLg) | amd64 | Flatpak / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-flatpak-amd64-v0.3.11) |
 | Linux (Flatpak / Freedesktop 25.08, verified in an Ubuntu 24.04 ARM64 VM) | arm64 | Flatpak / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-flatpak-arm64-v0.3.11) |
 | Arch Linux (verified on Wayland & X11 in WSL2/WSLg) | x86_64 (`any`) | pacman / PKGBUILD / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-arch-x86_64-v0.3.11) |
 | Arch Linux ARM (verified in an aarch64 environment) | aarch64 (`any`) | pacman / PKGBUILD / 0.3.10-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-arch-aarch64-v0.3.10) |
-| openSUSE Tumbleweed 20261110 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.7-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.7) |
+| openSUSE Tumbleweed 20261110 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-amd64-v0.3.11) |
 | openSUSE Leap 16.1 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5) |
 | openSUSE Tumbleweed 20261111 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5) |
 | Kali 2026.3 / kali-last-snapshot (verified with Xorg in an ARM64 VM) | arm64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5) |
-| openSUSE Leap 16.1 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.7-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.7) |
+| openSUSE Leap 16.1 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.11) |
 | Fedora 44 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.5) |
-| Fedora 44 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.7-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.7) |
+| Fedora 44 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.11) |
 | Fedora 45 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-arm64-v0.3.5) |
 | Fedora 45 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.7-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.7) |
 | AlmaLinux 9.8 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5) |
-| AlmaLinux 9.8 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.7-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.7) |
+| AlmaLinux 9.8 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.11) |
 | FreeBSD 15.1 | amd64 | pkg / 0.3.7_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.7_1) |
 | FreeBSD 15.1 | aarch64 | pkg / 0.3.7_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.7_1) |
 | NetBSD 11.1 | amd64 | tgz / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.7) |
@@ -100,7 +100,7 @@ Versions in the table are specific to each distribution channel. The Windows Sto
 
 - **Install from the Microsoft Store** — Open the Japan or United States listing above, then select **Get** or **Install** in the Microsoft Store. Launch Folimeld from the Start menu when installation completes.
 - **Get the source** — Use **Code → Download ZIP** or Git to get the Windows code and build scripts from the [public main branch](https://github.com/tyamada/Folimeld/tree/main).
-- **Corresponding source for Store 1.0.7.0 (as described in the Release)** — [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.7.0) · [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.7.0/Folimeld-1.0.7.0-windows-source.zip) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.7.0/SHA256SUMS.txt) · [Submission association record](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.7.0/source-association.json). The association record lists SHA-256 hashes for the submitted MSIX packages and executables for both x64 and ARM64, and for the source ZIP. The ZIP excludes third-party dependency source archives. Distinguish it from the source archives GitHub generates automatically from the tag.
+- **Corresponding source for Store 1.0.8.0 (as described in the Release)** — [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.8.0) · [x64 source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.8.0/Folimeld-1.0.8.0-windows-x64-source.zip) · [ARM64 source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.8.0/Folimeld-1.0.8.0-windows-arm64-source.zip) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.8.0/SHA256SUMS.txt) · [Submission association record](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.8.0/source-association.json). The association record lists SHA-256 hashes for the submitted MSIX packages and executables for both x64 and ARM64, and for both source ZIPs. The ZIPs exclude third-party dependency source archives. Distinguish it from the source archives GitHub generates automatically from the tag.
 - **Source for earlier Store version 1.0.4.0 x64 / ARM64** — [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.4.0) · [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/Folimeld-1.0.4.0-windows-source.zip) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/SHA256SUMS.txt) · [Submission association record](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/source-association.json) · [Supplemental manifest](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/source-manifest-supplement.json). The association record lists SHA-256 hashes for the MSIX packages and executables of both CPUs and the source ZIP. The source ZIP is unchanged; the supplement records two files omitted from its original internal manifest. Third-party dependency source archives are not included in this ZIP.
 - **Source for earlier Store version 1.0.1.0 x64** — [Source ZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) · [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt) · [Submission association record](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json). Three documentation files were revised for publication. The application source and build files match the submitted build's source snapshot.
 
@@ -704,7 +704,7 @@ In Folimeld 0.3.5, this guidance is also enabled on FreeBSD, NetBSD and OpenBSD,
 
 ## Known issues and limitations
 
-- The published corresponding-source Release targets Store version 1.0.7.0 (app 0.3.10, x64 / ARM64). The Store web listings do not display a numeric package version or CPU list. The currently delivered package version and CPUs, completion of worldwide rollout, and installation or upgrades on each CPU were not verified in this check.
+- Folimeld 1.0.8.0 (app 0.3.11, x64 / ARM64) is available on Microsoft Store. Partner Center confirmed publication of Submission 7. The Store web listings do not display a numeric package version or CPU list. Worldwide rollout and installation or upgrades on each CPU remain unverified.
 - The main window of Store version 1.0.1.0 was confirmed to use Per-Monitor V2. Visual layout and operation at 150% and 200% scaling remain untested.
 - Earlier local WACK runs on development builds reported a DPI warning (TEST92) and an optional test failure (TEST88). The cause of the earlier DPI warning and the individual Store certification outcomes for TEST92, TEST88 and `runFullTrust` remain unconfirmed. Store version 1.0.1.0 passed certification overall. [Acceptance record](documentation/windows-store-acceptance.md)
 

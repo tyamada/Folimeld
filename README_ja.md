@@ -38,9 +38,9 @@ BSDの各配布物は、対象のOS版・CPUと検証記録に対応していま
 
 ## ダウンロード
 
-Microsoft Storeの日本・米国の掲載を確認しています。最終更新日は2026年11月26日で、ドイツ語・スペイン語・フランス語・ポルトガル語の翻訳追加と全世界への配信拡大が案内されています。 [日本のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [米国のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
+Microsoft Storeの日本・米国の掲載を確認しています。 [日本のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=ja-JP&gl=JP) · [米国のMicrosoft Store](https://apps.microsoft.com/detail/9P5X2JFZRJC3?hl=en-US&gl=US)
 
-公開中の対応ソースReleaseはStore版1.0.7.0（アプリ0.3.10、x64／ARM64）を対象としています。StoreのWeb掲載には数値版・CPU一覧が表示されず、現在配信されるパッケージ版・CPU、全市場への配信完了、各CPUでの導入・更新は今回未確認です。
+Folimeld 1.0.8.0（アプリ0.3.11、x64／ARM64）はMicrosoft Storeで公開済みです。Partner CenterでSubmission 7の配信完了を確認しました。StoreのWeb掲載には数値版・CPU一覧が表示されません。全市場への配信完了と各CPUでの導入・更新は未確認です。
 
 **Linux版は旧版（0.3.3・0.3.4を含む）もすべてプレリリース（試験配布）です。安定版やLatestへ昇格させません。** [Linux公開方針とチェックリスト](documentation/linux-prerelease-policy_ja.md)を参照してください。Windows・macOS・BSDの分類は変更しません。
 
@@ -50,7 +50,7 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 
 | OS | CPU | 配布形式・版 | 公開先 |
 | --- | --- | --- | --- |
-| Windows 11 | x64 / ARM64（対応ソース記載） | Microsoft Store / 掲載版は未確認 | [Store版1.0.7.0の対応ソース（Release記載）](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.7.0) |
+| Windows 11 | x64 / ARM64 | Microsoft Store 1.0.8.0 | [Store版1.0.8.0の対応ソース（Release記載）](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.8.0) |
 | Windows 11 | x64 | Desktop インストーラー / 0.3.7.0（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-v0.3.7.0-preview.1) |
 | Windows 11 | x64 | ソース＋uv / 0.3.7（プレビュー） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-v0.3.7-preview.1) |
 | Windows 11 | x64 | uv tool install (Wheel) / 0.3.7 preview.1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-v0.3.7-preview.1) |
@@ -67,23 +67,23 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 | AlmaLinux 9.8 | arm64 | RPM / 0.3.11-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.11) |
 | Ubuntu 24.04.5 / Debian 13.7（ARM64 VMで検証） | arm64 | DEB / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.7) |
 | Ubuntu 24.04.5（ARM64 VMでビルド） | arm64 | strict Snap / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.7) |
-| Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3（WSL2／WSLgで検証） | amd64 | DEB / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.7) |
+| Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3（WSL2／WSLgで検証） | amd64 | DEB / 0.3.11（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.11) |
 | Ubuntu 24.04.5（WSL2／WSLgで検証） | amd64 | strict Snap / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.7) |
 | Linux 汎用（Flatpak / Freedesktop 25.08、WSL2／WSLg の Wayland・X11 で検証） | amd64 | Flatpak / 0.3.11（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-flatpak-amd64-v0.3.11) |
 | Linux 汎用（Flatpak / Freedesktop 25.08、Ubuntu 24.04 ARM64 VM で検証） | arm64 | Flatpak / 0.3.11（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-flatpak-arm64-v0.3.11) |
 | Arch Linux（WSL2／WSLg の Wayland・X11 で検証） | x86_64 (`any`) | pacman / PKGBUILD / 0.3.11-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-arch-x86_64-v0.3.11) |
 | Arch Linux ARM（aarch64 環境で検証） | aarch64 (`any`) | pacman / PKGBUILD / 0.3.10-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-arch-aarch64-v0.3.10) |
-| openSUSE Tumbleweed 20261110（WSL2／WSLgで検証） | amd64 | RPM / 0.3.7-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed20261110-amd64-v0.3.7) |
+| openSUSE Tumbleweed 20261110（WSL2／WSLgで検証） | amd64 | RPM / 0.3.11-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-amd64-v0.3.11) |
 | openSUSE Leap 16.1（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5) |
 | openSUSE Tumbleweed 20261111（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5) |
 | Kali 2026.3 / kali-last-snapshot（ARM64 VMのXorgで検証） | arm64 | DEB / 0.3.5（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5) |
-| openSUSE Leap 16.1（WSL2／WSLgで検証） | amd64 | RPM / 0.3.7-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.7) |
+| openSUSE Leap 16.1（WSL2／WSLgで検証） | amd64 | RPM / 0.3.11-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.11) |
 | Fedora 44（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.5) |
-| Fedora 44（WSL2／WSLgで検証） | amd64 | RPM / 0.3.7-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.7) |
+| Fedora 44（WSL2／WSLgで検証） | amd64 | RPM / 0.3.11-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.11) |
 | Fedora 45（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-arm64-v0.3.5) |
 | Fedora 45（WSL2／WSLgで検証） | amd64 | RPM / 0.3.7-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.7) |
 | AlmaLinux 9.8（ARM64 VMのXorgで検証） | arm64 | RPM / 0.3.5-2（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5) |
-| AlmaLinux 9.8（WSL2／WSLgで検証） | amd64 | RPM / 0.3.7-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.7) |
+| AlmaLinux 9.8（WSL2／WSLgで検証） | amd64 | RPM / 0.3.11-1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.11) |
 | FreeBSD 15.1 | amd64 | pkg / 0.3.7_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.7_1) |
 | FreeBSD 15.1 | aarch64 | pkg / 0.3.7_1（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.7_1) |
 | NetBSD 11.1 | amd64 | tgz / 0.3.7（試験配布） | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.7) |
@@ -100,8 +100,8 @@ Linux 0.3.3のパッケージ、対応ソースZIP、チェックサム、ビル
 
 - **Microsoft Storeからインストール** — 上の日本または米国の掲載リンクを開き、Microsoft Storeで「入手」または「インストール」を選びます。完了後、スタートメニューからFolimeldを起動します。
 - **ソースを取得** — [公開リポジトリのmain](https://github.com/tyamada/Folimeld/tree/main)の「Code → Download ZIP」またはGitから、Windows用コードとビルドスクリプトを取得できます。
-- **Store版1.0.7.0の対応ソース（Release記載）** — [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.7.0) · [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.7.0/Folimeld-1.0.7.0-windows-source.zip) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.7.0/SHA256SUMS.txt) · [提出物との対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.7.0/source-association.json)。対応記録にはx64・ARM64両CPUの提出MSIX・実行ファイルとソースZIPのSHA-256が記載されています。第三者依存ライブラリのソースアーカイブはこのZIPに含まれません。GitHubがタグから自動生成するソースアーカイブとは区別してください。
-- **旧Store版1.0.4.0 x64／ARM64の対応ソース** — [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.4.0) · [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/Folimeld-1.0.4.0-windows-source.zip) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/SHA256SUMS.txt) · [提出物との対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/source-association.json) · [補足台帳](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/source-manifest-supplement.json)。対応記録には両CPUのMSIX・実行ファイルとソースZIPのSHA-256を記載しています。ソースZIPは変更せず、元の内部台帳にない2ファイルを補足台帳に記録しています。第三者依存ライブラリのソースアーカイブはこのZIPに含まれません。
+- **Store版1.0.8.0の対応ソース（Release記載）** — [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.8.0) · [x64 ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.8.0/Folimeld-1.0.8.0-windows-x64-source.zip) · [ARM64 ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.8.0/Folimeld-1.0.8.0-windows-arm64-source.zip) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.8.0/SHA256SUMS.txt) · [提出物との対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.8.0/source-association.json)。対応記録にはx64・ARM64両CPUの提出MSIX・実行ファイルと両ソースZIPのSHA-256が記載されています。第三者依存ライブラリのソースアーカイブはこれらのZIPに含まれません。GitHubがタグから自動生成するソースアーカイブとは区別してください。
+- **旧Store版1.0.4.0 x64／ARM64の対応ソース** — [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-store-v1.0.4.0) · [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/Folimeld-1.0.4.0-windows-source.zip) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/SHA256SUMS.txt) · [提出物との対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/source-association.json) · [補足台帳](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.4.0/source-manifest-supplement.json)。対応記録には両CPUのMSIX・実行ファイルと両ソースZIPのSHA-256を記載しています。ソースZIPは変更せず、元の内部台帳にない2ファイルを補足台帳に記録しています。第三者依存ライブラリのソースアーカイブはこれらのZIPに含まれません。
 - **旧Store版1.0.1.0 x64の対応ソース** — [ソースZIP](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/Folimeld-1.0.1.0-windows-x64-source.zip) · [SHA-256一覧](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/SHA256SUMS.txt) · [提出物との対応記録](https://github.com/tyamada/Folimeld/releases/download/windows-store-v1.0.1.0/source-association.json)。公開用ZIPでは文書3件を公開向けに整理し、アプリコードとビルド用ファイルは提出時のソースと同一です。
 
 Windows 11版の標準配布経路はMicrosoft Storeです。Store向けMSIXの開発手順は[開発ガイド](DEVELOPMENT_ja.md)を参照してください。
@@ -704,7 +704,7 @@ Folimeld 0.3.5では、この案内をFreeBSD・NetBSD・OpenBSD、専用ラン�
 
 ## 既知の問題点と制約
 
-- 公開中の対応ソースReleaseはStore版1.0.7.0（アプリ0.3.10、x64／ARM64）を対象としています。StoreのWeb掲載には数値版・CPU一覧が表示されず、現在配信されるパッケージ版・CPU、全市場への配信完了、各CPUでの導入・更新は今回未確認です。
+- Folimeld 1.0.8.0（アプリ0.3.11、x64／ARM64）はMicrosoft Storeで公開済みです。Partner CenterでSubmission 7の配信完了を確認しました。StoreのWeb掲載には数値版・CPU一覧が表示されません。全市場への配信完了と各CPUでの導入・更新は未確認です。
 - Store配信版1.0.1.0のメインウィンドウはPer-Monitor V2を確認済みです。150％・200％での表示と操作は未検証です。
 - 旧開発ビルドのローカルWACKではDPI警告（TEST92）と任意検査のFAIL（TEST88）が出ました。旧DPI警告の原因と、Store認定でのTEST92・TEST88・`runFullTrust` の個別判定は未確認です。Store版1.0.1.0は提出全体として認定に合格しています。[受入記録](documentation/windows-store-acceptance_ja.md)
 
