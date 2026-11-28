@@ -1,0 +1,14 @@
+OS: macOS 15+ Apple Silicon (arm64)
+Formula: tyamada/tap/folimeld (0.3.11)
+Source archive: folimeld-0.3.11-source.tar.gz (9.9 MB, SHA-256: 82758338b774f596a1bd66cd2809a6e4854cc97ff99985ed9416d4a8a4e8deea)
+Source commit: 06986b4558c55822bc55142c100fb4ea5f01d439
+Python: 3.14 (Homebrew python@3.14)
+Tap commit: bb311c2 (tyamada/homebrew-tap)
+
+Verification:
+- GitHub Release macos-source-v0.3.11 created and archive checksum verified
+- brew install --build-from-source tyamada/tap/folimeld: PASSED
+- brew test tyamada/tap/folimeld: PASSED
+- pip check: No broken requirements found
+- Offscreen MainWindow launch with distribution="homebrew": VERSION=0.3.11, SPONSORS_AVAILABLE=True, SPONSORS_ACTION=True
+- Clean uninstall via brew uninstall folimeld: PASSED

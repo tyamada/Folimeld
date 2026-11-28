@@ -57,7 +57,7 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | Windows 11 | arm64 | Desktop installer / 0.3.7.0 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-desktop-arm64-v0.3.7.0-preview.1) |
 | Windows 11 | arm64 | Source + uv / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-arm64-v0.3.7-preview.1) |
 | Windows 11 | arm64 | uv tool install (Wheel) / 0.3.7 preview.1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/windows-uv-tool-arm64-v0.3.7-preview.1) |
-| macOS 15 or later | Apple Silicon (arm64) | Homebrew / 0.3.7 (source) | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.7) |
+| macOS 15 or later | Apple Silicon (arm64) | Homebrew / 0.3.11 (source) | [Release](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.11) |
 | Ubuntu 24.04.5 | arm64 | strict Snap / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.11) |
 | Kali 2026.3 | arm64 | DEB / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.11) |
 | openSUSE Leap 16.1 | arm64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.11) |
@@ -65,31 +65,24 @@ Linux 0.3.3 packages, matching source ZIPs, checksums and build records are avai
 | Fedora 44 | arm64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.11) |
 | Fedora 45 | arm64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-arm64-v0.3.11) |
 | AlmaLinux 9.8 | arm64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.11) |
-| Ubuntu 24.04.5 / Debian 13.7 (verified in an ARM64 VM) | arm64 | DEB / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.7) |
-| Ubuntu 24.04.5 (built in an ARM64 VM) | arm64 | strict Snap / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-arm64-v0.3.7) |
+| Ubuntu 24.04.5 / Debian 13.7 (verified in an ARM64 VM) | arm64 | DEB / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.11) |
 | Ubuntu 24.04.5 / Debian 13.7 / Kali Rolling 2026.3 (verified on WSL2/WSLg) | amd64 | DEB / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-amd64-v0.3.11) |
 | Ubuntu 24.04.5 (verified on WSL2/WSLg) | amd64 | strict Snap / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-snap-amd64-v0.3.7) |
 | Linux (Flatpak / Freedesktop 25.08, verified on Wayland & X11 in WSL2/WSLg) | amd64 | Flatpak / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-flatpak-amd64-v0.3.11) |
 | Linux (Flatpak / Freedesktop 25.08, verified in an Ubuntu 24.04 ARM64 VM) | arm64 | Flatpak / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-flatpak-arm64-v0.3.11) |
 | Arch Linux (verified on Wayland & X11 in WSL2/WSLg) | x86_64 (`any`) | pacman / PKGBUILD / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-arch-x86_64-v0.3.11) |
-| Arch Linux ARM (verified in an aarch64 environment) | aarch64 (`any`) | pacman / PKGBUILD / 0.3.10-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-arch-aarch64-v0.3.10) |
+| Arch Linux ARM (verified in an aarch64 environment) | aarch64 (`any`) | pacman / PKGBUILD / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/linux-arch-aarch64-v0.3.11) |
 | openSUSE Tumbleweed 20261110 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-amd64-v0.3.11) |
-| openSUSE Leap 16.1 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-arm64-v0.3.5) |
-| openSUSE Tumbleweed 20261111 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-tumbleweed-arm64-v0.3.5) |
-| Kali 2026.3 / kali-last-snapshot (verified with Xorg in an ARM64 VM) | arm64 | DEB / 0.3.5 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/kali-arm64-v0.3.5) |
 | openSUSE Leap 16.1 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/opensuse-leap161-amd64-v0.3.11) |
-| Fedora 44 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-arm64-v0.3.5) |
 | Fedora 44 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora44-amd64-v0.3.11) |
-| Fedora 45 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-arm64-v0.3.5) |
 | Fedora 45 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.7-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/fedora45-amd64-v0.3.7) |
-| AlmaLinux 9.8 (verified with Xorg in an ARM64 VM) | arm64 | RPM / 0.3.5-2 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-arm64-v0.3.5) |
 | AlmaLinux 9.8 (verified on WSL2/WSLg) | amd64 | RPM / 0.3.11-1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/almalinux9-amd64-v0.3.11) |
 | FreeBSD 15.1 | amd64 | pkg / 0.3.11_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-v0.3.11_1) |
-| FreeBSD 15.1 | aarch64 | pkg / 0.3.7_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.7_1) |
+| FreeBSD 15.1 | aarch64 | pkg / 0.3.11_1 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.11_1) |
 | NetBSD 11.1 | amd64 | tgz / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-v0.3.11) |
-| NetBSD 11.1 | aarch64 | tgz / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.7) |
+| NetBSD 11.1 | aarch64 | tgz / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.11) |
 | OpenBSD 8.0 | amd64 | Signed tgz / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-v0.3.11) |
-| OpenBSD 8.0 | arm64 | Signed tgz / 0.3.7 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.7) |
+| OpenBSD 8.0 | arm64 | Signed tgz / 0.3.11 (preview) | [Release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.11) |
 
 Versions in the table are specific to each distribution channel. The Windows Store edition is available in Japan and the United States. Linux 0.3.3 downloads for Ubuntu 22.04 or later and older installation instructions remain below. BSD ARM64 packages use the name `aarch64` on FreeBSD and NetBSD, and `arm64` on OpenBSD.
 
@@ -372,7 +365,7 @@ folimeld
 
 Homebrew sets up Python 3.14 and an isolated environment for the app's dependencies. The `folimeld` command launches via `launch_homebrew.py` with the Sponsors menu enabled.
 
-The [Folimeld 0.3.7 GitHub Release for macOS](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.7) includes the [source archive](https://github.com/tyamada/Folimeld/releases/download/macos-source-v0.3.7/folimeld-0.3.7-source.tar.gz) and [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/macos-source-v0.3.7/SHA256SUMS.txt).
+The [Folimeld 0.3.11 GitHub Release for macOS](https://github.com/tyamada/Folimeld/releases/tag/macos-source-v0.3.11) includes the [source archive](https://github.com/tyamada/Folimeld/releases/download/macos-source-v0.3.11/folimeld-0.3.11-source.tar.gz) and [SHA-256 checksums](https://github.com/tyamada/Folimeld/releases/download/macos-source-v0.3.11/SHA256SUMS.txt).
 
 ### Direct downloads for Ubuntu / Debian
 
@@ -423,7 +416,7 @@ Debian 13 uses the same deb package as Ubuntu. If a minimal installation display
 
 ### Ubuntu/Debian ARM64 DEB 0.3.5 preview
 
-[**0.3.7 ARM64 DEB**](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.7) is available ([verification record](documentation/linux-arm64-037-verification.txt)). Previous [**0.3.5 ARM64 DEB**](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5) remains available. Fresh regular-user Xorg checks on Ubuntu 24.04.5 / Debian 13.7 ARM64 covered rotation, undo/redo, movement, blank insertion/deletion, Save As, Japanese-path reopening, image conversion/save, clean exit, removal/reinstallation and document/settings preservation. Saved PDF internals, 409 passing ARM64 tests (9 skipped), minimal-Ubuntu startup and byte-identical DEBs from separate build roots on the same VM were verified. Matching materials for 961 source inputs and 210 AArch64 files, plus post-publication redownload verification of all 16 assets, are provided. Japanese IME, Wayland, physical ARM hardware and encryption/forms GUI were not retested. Existing downloads and latest remain unchanged. [Verification and limitations (Japanese)](documentation/linux-deb-arm64-035-validation_ja.md).
+[**0.3.11 ARM64 DEB**](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.11) is available ([verification record](documentation/linux-arm64-0311-verification.txt)). Previous [**0.3.7 ARM64 DEB**](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.7) and [**0.3.5 ARM64 DEB**](https://github.com/tyamada/Folimeld/releases/tag/linux-deb-arm64-v0.3.5) remain available. Fresh regular-user Xorg checks on Ubuntu 24.04.5 / Debian 13.7 ARM64 covered rotation, undo/redo, movement, blank insertion/deletion, Save As, Japanese-path reopening, image conversion/save, clean exit, removal/reinstallation and document/settings preservation. Saved PDF internals, 409 passing ARM64 tests (9 skipped), minimal-Ubuntu startup and byte-identical DEBs from separate build roots on the same VM were verified. Matching materials for 961 source inputs and 210 AArch64 files, plus post-publication redownload verification of all 16 assets, are provided. Japanese IME, Wayland, physical ARM hardware and encryption/forms GUI were not retested. Existing downloads and latest remain unchanged. [Verification and limitations (Japanese)](documentation/linux-deb-arm64-035-validation_ja.md).
 
 ```bash
 sudo apt install ./folimeld_0.3.5_arm64.deb
@@ -615,10 +608,10 @@ pkg add ./folimeld-0.3.5_1.pkg
 
 Run `folimeld` or `folimeld /path/to/file.pdf` as a regular user. To uninstall, run `pkg delete folimeld` as root. PyMuPDF/MuPDF 1.28.2, which fixes the form-loading crash, is bundled in the application's private directory without replacing system PyMuPDF. This amd64 package was verified on FreeBSD 15.1 / amd64. See the [GUI verification](documentation/freebsd-gui-verification_ja.md) and [image import, save failure, and load tests](documentation/freebsd-extended-verification_ja.md) (Japanese).
 
-**0.3.7 / package revision 1** for **FreeBSD 15.1 / aarch64** is available in the [ARM64 preview release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.7_1).
+**0.3.11 / package revision 1** for **FreeBSD 15.1 / aarch64** is available in the [ARM64 preview release](https://github.com/tyamada/Folimeld/releases/tag/freebsd-aarch64-v0.3.11_1).
 
-- [aarch64 pkg](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.7_1/folimeld-0.3.7_1.pkg)
-- [aarch64 installation instructions](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.7_1/INSTALL.txt)
+- [aarch64 pkg](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.11_1/folimeld-0.3.11_1.pkg)
+- [aarch64 installation instructions](https://github.com/tyamada/Folimeld/releases/download/freebsd-aarch64-v0.3.11_1/INSTALL.txt)
 
 The release also includes matching source and SHA-256 checksums. The package was tested on FreeBSD 15.1 / aarch64 in an Xorg desktop session under QEMU with HVF on a MacBook Air M5.
 
@@ -635,10 +628,10 @@ export PKG_PATH=https://cdn.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/11.0_20
 
 Run `/usr/pkg/bin/folimeld` or `/usr/pkg/bin/folimeld /path/to/file.pdf` as a regular user. Remove as root with `/usr/pkg/sbin/pkg_delete folimeld`. These commands target amd64. For aarch64, use the dedicated instructions below.
 
-**0.3.7** for **NetBSD 11.1 / aarch64** is available in the [ARM64 preview release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.7).
+**0.3.11** for **NetBSD 11.1 / aarch64** is available in the [ARM64 preview release](https://github.com/tyamada/Folimeld/releases/tag/netbsd-aarch64-v0.3.11).
 
-- [aarch64 tgz](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.7/folimeld-0.3.7.tgz)
-- [aarch64 installation instructions](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.7/INSTALL.txt)
+- [aarch64 tgz](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.11/folimeld-0.3.11.tgz)
+- [aarch64 installation instructions](https://github.com/tyamada/Folimeld/releases/download/netbsd-aarch64-v0.3.11/INSTALL.txt)
 
 ### OpenBSD source, packages, and installation
 
@@ -662,11 +655,11 @@ pkg_add ./folimeld-mupdf-1.28.2.tgz ./folimeld-0.3.5.tgz
 
 Run `folimeld` or `folimeld /path/to/file.pdf` as a regular user. Remove as root with `pkg_delete folimeld`, then `pkg_delete folimeld-mupdf` if the private dependency is no longer needed. System PyMuPDF is not replaced. The amd64 packages above were verified in a VM with 1 vCPU and 16 GiB of RAM.
 
-**0.3.7** for **OpenBSD 8.0 / arm64** is available in the [ARM64 preview release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.7). The application and private MuPDF packages use the same signing key as the amd64 release.
+**0.3.11** for **OpenBSD 8.0 / arm64** is available in the [ARM64 preview release](https://github.com/tyamada/Folimeld/releases/tag/openbsd-aarch64-v0.3.11). The application and private MuPDF packages use the same signing key as the amd64 release.
 
-- [arm64 application package](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.7/folimeld-0.3.7.tgz)
-- [arm64 private MuPDF package](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.7/folimeld-mupdf-1.28.2.tgz)
-- [arm64 signature verification and installation](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.7/INSTALL.txt)
+- [arm64 application package](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.11/folimeld-0.3.11.tgz)
+- [arm64 private MuPDF package](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.11/folimeld-mupdf-1.28.2.tgz)
+- [arm64 signature verification and installation](https://github.com/tyamada/Folimeld/releases/download/openbsd-aarch64-v0.3.11/INSTALL.txt)
 
 ## Basic usage
 

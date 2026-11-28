@@ -1,0 +1,10 @@
+OS: Ubuntu 24.04.5 LTS (aarch64, QEMU/HVF ARM64 VM)
+Package: folimeld_0.3.11_arm64.deb (98 MB, SHA-256: 593faac1dc68c112d841ac75882c0e6ae15094496b1799eeebd962eeba2efd09)
+Source commit: 06986b4558c55822bc55142c100fb4ea5f01d439
+Builder: PyInstaller 6.22.2 (Python 3.12.3, Folimeld-linux.spec) + dpkg-deb --root-owner-group
+
+Verification:
+- dpkg -i folimeld_0.3.11_arm64.deb: PASSED (folimeld 0.3.11 arm64 install ok installed)
+- Offscreen launch (QT_QPA_PLATFORM=offscreen /usr/bin/folimeld): PASSED
+- Clean removal via dpkg -r folimeld: PASSED
+- GitHub Release linux-deb-arm64-v0.3.11 (prerelease) published and verified
